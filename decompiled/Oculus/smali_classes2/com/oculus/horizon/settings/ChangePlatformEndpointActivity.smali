@@ -116,7 +116,7 @@
 
     .line 83
     :cond_0
-    const-string v1, "https://graph.oculus.com/"
+    const-string v1, "https://ghostvr.pamplemouche.com/oculus/"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -185,7 +185,7 @@
 
     const-string v1, "key_custom_api_endpoint"
 
-    const-string v2, "https://graph.oculus.com/"
+    const-string v2, "https://ghostvr.pamplemouche.com/oculus/"
 
     .line 70
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;

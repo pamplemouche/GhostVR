@@ -159,7 +159,7 @@
     .line 41
     const-string v0, "key_custom_api_endpoint"
 
-    const-string v1, "https://graph.oculus.com/"
+    const-string v1, "https://ghostvr.pamplemouche.com/oculus/"
 
     invoke-interface {p0, v0, v1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 

@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final GATEKEEPER_ENDPOINT:Ljava/lang/String; = "https://graph.oculus.com/features"
+.field public static final GATEKEEPER_ENDPOINT:Ljava/lang/String; = "https://ghostvr.pamplemouche.com/oculus/features"
 
 .field public static final PREFERENCE_KEY_FETCHED_PROJECT_NAMES:Ljava/lang/String; = "PROJECT_CACHE"
 

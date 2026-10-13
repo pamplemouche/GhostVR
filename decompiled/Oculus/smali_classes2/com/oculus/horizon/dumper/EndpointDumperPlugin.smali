@@ -93,7 +93,7 @@
 
     const/4 v2, 0x0
 
-    const-string v3, "https://graph.oculus.com/"
+    const-string v3, "https://ghostvr.pamplemouche.com/oculus/"
 
     aput-object v3, v1, v2
 
@@ -262,7 +262,7 @@
 
     aput-object v2, v1, v4
 
-    const-string v2, "https://graph.oculus.com/"
+    const-string v2, "https://ghostvr.pamplemouche.com/oculus/"
 
     aput-object v2, v1, v5
 

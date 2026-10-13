@@ -6,7 +6,7 @@
 # static fields
 .field private static final FACEBOOK_WIDEVINE_PROXY:Ljava/lang/String; = "https://www.facebook.com/video/drm/"
 
-.field private static final VENUES_WIDEVINE_PROXY:Ljava/lang/String; = "https://graph.oculus.com/"
+.field private static final VENUES_WIDEVINE_PROXY:Ljava/lang/String; = "https://ghostvr.pamplemouche.com/oculus/"
 
 
 # direct methods
@@ -133,7 +133,7 @@
     iget-object v0, p0, Lcom/oculus/video/drm/OculusHttpMediaDrmCallback;->defaultLicenseUrl:Ljava/lang/String;
 
     :cond_1
-    const-string v1, "https://graph.oculus.com/"
+    const-string v1, "https://ghostvr.pamplemouche.com/oculus/"
 
     .line 38
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z

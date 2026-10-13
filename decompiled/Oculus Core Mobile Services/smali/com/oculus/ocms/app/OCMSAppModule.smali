@@ -293,7 +293,7 @@
 
     .prologue
     .line 26
-    const-string v0, "https://graph.oculus.com/"
+    const-string v0, "https://ghostvr.pamplemouche.com/oculus/"
 
     return-object v0
 .end method

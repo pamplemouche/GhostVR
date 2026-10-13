@@ -9,7 +9,7 @@
 # static fields
 .field public static final CTA_CLICK:Ljava/lang/String; = "CTA_CLICK"
 
-.field public static final ENDPOINT:Ljava/lang/String; = "https://graph.oculus.com/graphql"
+.field public static final ENDPOINT:Ljava/lang/String; = "https://ghostvr.pamplemouche.com/oculus/graphql"
 
 .field public static final INPUT:Ljava/lang/String; = "{  \"input\": {  \"client_mutation_id\": \"%s\",  \"feedback\": \"%s\",  \"story_infos\": [      %s    ]  }}"
 
@@ -490,7 +490,7 @@
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "https://graph.oculus.com/graphql?access_token="
+    const-string v2, "https://ghostvr.pamplemouche.com/oculus/graphql?access_token="
 
     invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -11,7 +11,7 @@
 
 .field public static final CACHE_LIFE:J = 0x1388L
 
-.field public static final ENDPOINT:Ljava/lang/String; = "https://graph.oculus.com/graphql"
+.field public static final ENDPOINT:Ljava/lang/String; = "https://ghostvr.pamplemouche.com/oculus/graphql"
 
 .field public static final LOCK:Ljava/lang/Object;
 
@@ -241,7 +241,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "https://graph.oculus.com/graphql?access_token="
+    const-string v1, "https://ghostvr.pamplemouche.com/oculus/graphql?access_token="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
