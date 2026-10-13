@@ -1,0 +1,68 @@
+name: Decompile Gear VR Package
+
+on:
+  workflow_dispatch:
+    inputs:
+      zip_url:
+        description: "URL du fichier ZIP d'APKs"
+        required: true
+        default: 'https://vault.gearvr.net/Oculus/Oculus_Install_Files.zip'
+
+permissions:
+  contents: write
+
+jobs:
+  decompile-zip:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout du dépôt
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configuration de Java JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Installation d'Apktool
+        run: |
+          sudo apt-get update && sudo apt-get install -y unzip
+          mkdir -p bin
+          APKTOOL_VERSION="2.9.3"
+          curl -sL https://github.com/iBotPeaches/Apktool/releases/download/v${APKTOOL_VERSION}/apktool_${APKTOOL_VERSION}.jar -o bin/apktool.jar
+          echo '#!/bin/sh' > bin/apktool
+          echo 'exec java -jar "$0/../apktool.jar" "$@"' >> bin/apktool
+          chmod +x bin/apktool bin/apktool.jar
+          echo "$GITHUB_WORKSPACE/bin" >> $GITHUB_PATH
+
+      - name: Téléchargement et extraction du fichier ZIP
+        run: |
+          mkdir -p temp_zip temp_apks
+          curl -sL "${{ github.event.inputs.zip_url }}" -o temp_zip/oculus_pack.zip
+          unzip -o temp_zip/oculus_pack.zip -d temp_apks/
+
+      - name: Décompilation automatique de tous les APKs
+        run: |
+          mkdir -p decompiled
+          find temp_apks -type f -name "*.apk" | while read -r apk_file; do
+            filename=$(basename "$apk_file" .apk)
+            echo "--------------------------------------------------"
+            echo "Décompilation de : $filename"
+            echo "--------------------------------------------------"
+            apktool d "$apk_file" -o "decompiled/$filename" -f
+          done
+
+      - name: Nettoyage des fichiers temporaires
+        run: |
+          rm -rf temp_zip temp_apks
+
+      - name: Commit et Push des dossiers décompilés
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add decompiled/
+          git commit -m "chore: décompilation automatique des APKs Oculus" || echo "Aucun changement à commiter"
+          git push
