@@ -1,7 +1,9 @@
 name = "ghostvr-backend"
 main = "src/index.js"
-compatibility_date = "2024-01-01"
+compatibility_date = "2026-10-13"
 
 routes = [
   { pattern = "ghostvr.pamplemouche.com/*", zone_name = "pamplemouche.com" }
 ]
+
+assets = {directory = "./public"}
