@@ -30,13 +30,12 @@ jobs:
       - name: Installation d'Apktool
         run: |
           sudo apt-get update && sudo apt-get install -y unzip
-          mkdir -p bin
           APKTOOL_VERSION="2.9.3"
-          curl -sL https://github.com/iBotPeaches/Apktool/releases/download/v${APKTOOL_VERSION}/apktool_${APKTOOL_VERSION}.jar -o bin/apktool.jar
-          echo '#!/bin/sh' > bin/apktool
-          echo 'exec java -jar "$0/../apktool.jar" "$@"' >> bin/apktool
-          chmod +x bin/apktool bin/apktool.jar
-          echo "$GITHUB_WORKSPACE/bin" >> $GITHUB_PATH
+          sudo curl -sL "https://github.com/iBotPeaches/Apktool/releases/download/v${APKTOOL_VERSION}/apktool_${APKTOOL_VERSION}.jar" -o /usr/local/bin/apktool.jar
+          sudo chmod +r /usr/local/bin/apktool.jar
+          echo '#!/bin/sh' | sudo tee /usr/local/bin/apktool
+          echo 'exec java -jar /usr/local/bin/apktool.jar "$@"' | sudo tee -a /usr/local/bin/apktool
+          sudo chmod +x /usr/local/bin/apktool
 
       - name: Téléchargement et extraction du fichier ZIP
         run: |
