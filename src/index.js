@@ -4,6 +4,7 @@ export default {
     const path = url.pathname;
 
     const headers = {
+      "Content-Type": "application/json; charset=utf-8",
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
       "Access-Control-Allow-Headers": "*"
@@ -13,20 +14,21 @@ export default {
       return new Response(null, { status: 204, headers });
     }
 
-    console.log(`[${request.method}] Path: ${path} | Query: ${url.search}`);
+    console.log(`[${request.method}] ${path}${url.search}`);
 
-    // Gestion spécifique de la page des Conditions d'utilisation (TOS)
+    // Réponse JSON spécifique pour la vérification des TOS
     if (path.includes("/tos")) {
       return new Response(
-        "<!DOCTYPE html><html><body><h1>GhostVR Terms of Service</h1><p>OK</p></body></html>",
-        {
-          status: 200,
-          headers: { ...headers, "Content-Type": "text/html; charset=utf-8" }
-        }
+        JSON.stringify({
+          is_tos_accepted: true,
+          terms_of_service: { id: "1", text: "OK" },
+          success: true
+        }),
+        { status: 200, headers }
       );
     }
 
-    // Réponse d'authentification par défaut pour l'API
+    // Réponse d'authentification globale
     const responsePayload = {
       access_token: "OC|100000000000000|ghostvr_token",
       session_key: "ghostvr_session",
@@ -49,9 +51,6 @@ export default {
       }
     };
 
-    return new Response(JSON.stringify(responsePayload), {
-      status: 200,
-      headers: { ...headers, "Content-Type": "application/json; charset=utf-8" }
-    });
+    return new Response(JSON.stringify(responsePayload), { status: 200, headers });
   }
 };
