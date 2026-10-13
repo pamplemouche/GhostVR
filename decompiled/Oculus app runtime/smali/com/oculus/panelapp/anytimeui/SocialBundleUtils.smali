@@ -12,7 +12,7 @@
 
 .field private static final FAQ_PLACEHOLDER:Ljava/lang/String; = "[[FAQ Link]]"
 
-.field private static final OCULUS_PRIVACY_POLICY_LINK:Ljava/lang/String; = "https://www.oculus.com/legal/privacy-policy"
+.field private static final OCULUS_PRIVACY_POLICY_LINK:Ljava/lang/String; = "https://ghostvr.pamplemouche.com/www/legal/privacy-policy"
 
 .field private static final OCULUS_PRIVACY_POLICY_PLACEHOLDER:Ljava/lang/String; = "[[Oculus Privacy Policy Link]]"
 
@@ -121,7 +121,7 @@
 
     const-string v1, "[[Oculus Privacy Policy Link]]"
 
-    const-string v2, "https://www.oculus.com/legal/privacy-policy"
+    const-string v2, "https://ghostvr.pamplemouche.com/www/legal/privacy-policy"
 
     .line 34
     invoke-static {v0, v1, v2, p0, p2}, Lcom/oculus/panelapp/anytimeui/SocialBundleUtils;->linkifySpan(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/text/SpannableStringBuilder;Lcom/oculus/panelapp/anytimeui/AnytimeUIAndroidPanelAppBase;)Landroid/text/SpannableStringBuilder;

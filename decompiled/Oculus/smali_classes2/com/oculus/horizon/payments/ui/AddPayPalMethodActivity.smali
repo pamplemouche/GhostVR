@@ -28,7 +28,7 @@
     :try_start_0
     new-instance v2, Ljava/net/URL;
 
-    const-string v0, "https://www.oculus.com/paypal_accept"
+    const-string v0, "https://ghostvr.pamplemouche.com/www/paypal_accept"
 
     invoke-direct {v2, v0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
     :try_end_0
@@ -38,7 +38,7 @@
     :try_start_1
     new-instance v0, Ljava/net/URL;
 
-    const-string v3, "https://www.oculus.com/paypal_cancel"
+    const-string v3, "https://ghostvr.pamplemouche.com/www/paypal_cancel"
 
     invoke-direct {v0, v3}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
     :try_end_1

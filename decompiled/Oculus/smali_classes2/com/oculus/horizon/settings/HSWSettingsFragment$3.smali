@@ -38,7 +38,7 @@
 
     .prologue
     .line 136
-    const-string v0, "https://www.oculus.com/legal/health-and-safety-warnings/"
+    const-string v0, "https://ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings/"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 

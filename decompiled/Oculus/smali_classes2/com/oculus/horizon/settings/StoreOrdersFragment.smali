@@ -524,7 +524,7 @@
 
     move-result-object v6
 
-    const-string v7, "https://www.oculus.com/legal/return-policy"
+    const-string v7, "https://ghostvr.pamplemouche.com/www/legal/return-policy"
 
     .line 279
     invoke-static {v7}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;

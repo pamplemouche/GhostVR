@@ -146,7 +146,7 @@
     invoke-direct {v0}, Lcom/oculus/horizon/settings/LegalWebViewFragment;-><init>()V
 
     .line 89
-    const-string v1, "https://www.oculus.com/legal/terms-of-service/"
+    const-string v1, "https://ghostvr.pamplemouche.com/www/legal/terms-of-service/"
 
     sget-object v2, Lcom/oculus/horizon/settings/LegalNoticesFragment$LegalNoticesPagerAdapter;->TOS_TRACKING_VIEW:Lcom/oculus/horizon/logging/TrackingViews$View;
 
