@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GhostVR Studio — Dashboard & Monitor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- En-tête Liquid Glass -->
+  <header>
+    <div class="brand">
+      <div class="brand-logo">G</div>
+      <div class="brand-title">GhostVR Studio</div>
+    </div>
+    <nav>
+      <button class="nav-btn active" data-tab="overview">Vue d'ensemble</button>
+      <button class="nav-btn" data-tab="logs">Moniteur Logs</button>
+      <button class="nav-btn" data-tab="json">Éditeur JSON</button>
+      <button class="nav-btn" data-tab="worker">Code Worker</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Vue d'ensemble -->
+    <div id="overview" class="tab-content active">
+      <div class="stats-grid">
+        <div class="stat-box">
+          <div class="stat-label">Statut du Worker</div>
+          <div class="stat-value">
+            <span class="badge-status"><div class="pulse-dot"></div> Actif</span>
+          </div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Domaine Proxy</div>
+          <div class="stat-value highlight">ghostvr.pamplemouche.com</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Endpoints Supportés</div>
+          <div class="stat-value">4/4</div>
+        </div>
+      </div>
+
+      <div class="glass-card">
+        <div class="card-title">Architecture d'Interception DNS</div>
+        <p class="description">
+          Le Galaxy S6 Edge transmet ses requêtes réseau vers <code>graph.facebook.com</code> et <code>graph.oculus.com</code>.
+          <strong>personalDNSfilter</strong> redirige les requêtes vers l'infrastructure Cloudflare, qui applique le script Worker <strong>ghostvr</strong> pour authentifier l'application.
+        </p>
+      </div>
+    </div>
+
+    <!-- Moniteur de Logs -->
+    <div id="logs" class="tab-content">
+      <div class="glass-card">
+        <div class="card-title">Flux de requêtes en temps réel</div>
+        <div class="toolbar">
+          <input type="text" id="logFilter" class="input-search" placeholder="Filtrer (/tos, /user_checks, /graphql)...">
+          <button class="btn-action" id="btnSimulate">Simuler un test</button>
+          <button class="btn-action btn-danger" id="btnClear">Vider</button>
+        </div>
+        <div class="log-container" id="logContainer"></div>
+      </div>
+    </div>
+
+    <!-- Éditeur JSON -->
+    <div id="json" class="tab-content">
+      <div class="glass-card">
+        <div class="card-title">Payload JSON d'Authentification</div>
+        <p class="description">Structure JSON transmise à l'application Oculus :</p>
+        <textarea id="jsonEditor">{
+  "access_token": "OC|100000000000000|ghostvr_token",
+  "session_key": "ghostvr_session",
+  "uid": "100000000000000",
+  "user_id": "100000000000000",
+  "is_tos_accepted": true,
+  "data": {
+    "viewer": {
+      "user": {
+        "id": "100000000000000",
+        "name": "GhostVR User",
+        "is_tos_accepted": true
+      }
+    }
+  }
+}</textarea>
+        <div style="margin-top: 12px; display: flex; gap: 12px;">
+          <button class="btn-action" id="btnValidateJson">Valider la syntaxe</button>
+          <span id="jsonStatus" class="status-msg"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Code Worker -->
+    <div id="worker" class="tab-content">
+      <div class="glass-card">
+        <div class="card-title">Script Cloudflare Worker (src/index.js)</div>
+        <div class="toolbar">
+          <button class="btn-action" id="btnCopyWorker">Copier le code</button>
+        </div>
+        <textarea id="workerCode" readonly style="height: 360px;"></textarea>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
