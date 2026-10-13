@@ -1,0 +1,30 @@
+.class public Lcom/oculus/horizon/events/api/Event$Image;
+.super Ljava/lang/Object;
+.source "Event.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/oculus/horizon/events/api/Event;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "Image"
+.end annotation
+
+
+# instance fields
+.field public uri:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 34
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?nuxBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/nux360_toolbar" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/nux_container_padding" android:paddingTop="?actionBarSize" android:paddingRight="@dimen/nux_container_padding" android:paddingBottom="@dimen/nux_container_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="@dimen/nux_activity_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.drawee.view.SimpleDraweeView android:id="@id/avatar" android:layout_width="@dimen/nux_fblogin_avatar" android:layout_height="@dimen/nux_fblogin_avatar" app:failureImage="@drawable/no_profile_image_large_active" app:placeholderImage="@drawable/no_profile_image_large_active" style="@style/Oculus.Social.Avatar" />
+            <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/nux_fblogin_edit_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/TextAppearance" android:id="@id/create_account_name" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textAppearance="@style/TextAppearance.Summary.Small" android:id="@id/edit_profile" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nux_fblogin_create_account_edit_profile" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@id/edit_username_layout" android:paddingLeft="@dimen/nux_edit_padding" android:paddingTop="@dimen/nux_edit_padding" android:paddingRight="@dimen/nux_edit_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_fblogin_has_account_margin" style="?textInputLayoutStyle">
+            <com.google.android.material.textfield.TextInputEditText android:id="@id/edit_username" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/nux_fblogin_create_account_username_label" android:imeOptions="actionNext" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView android:textAppearance="@style/Facebook.TextAppearance.Secondary.Small" android:gravity="center" android:id="@id/has_account" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/nux_fblogin_create_account_has_account" />
+        <TextView android:textAppearance="@style/TextAppearance.Summary.Small" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_text_padding" android:text="@string/nux_fblogin_create_account_friends_message" />
+        <com.oculus.horizon.widget.ProgressButton android:id="@id/create_and_continue_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_text_padding" android:text="@string/nux_fblogin_create_account_create_button" style="@style/RoundButton.WhiteOnBlue" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textColor="@color/oculus_black_4" android:gravity="center" android:paddingLeft="@dimen/common_horizontal_padding" android:paddingRight="@dimen/common_horizontal_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/social_no_blocked_users" style="@style/TextAppearance"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

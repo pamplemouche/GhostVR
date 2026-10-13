@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@color/oculus_black_10" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="120.0dip" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/headset_illustration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/add_friends_icon" />
+        <TextView android:textSize="14.0sp" android:gravity="center" android:layout_gravity="center" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="35.0dip" android:text="@string/social_no_friends_text" android:lineSpacingExtra="2.0sp" />
+    </LinearLayout>
+    <TextView android:layout_gravity="bottom|center" android:id="@id/continue_button" android:layout_width="fill_parent" android:layout_marginLeft="@dimen/nux_common_padding" android:layout_marginRight="@dimen/nux_common_padding" android:layout_marginBottom="@dimen/nux_common_padding" android:text="@string/roadblock_find_friends_cta" android:drawableLeft="@drawable/fbconnect_facebook_logo_black" style="@style/RoundButton.BlackOnWhite" />
+</LinearLayout>

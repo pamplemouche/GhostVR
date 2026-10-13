@@ -1,0 +1,334 @@
+.class Lcom/facebook/rti/common/analytics/defaultlogger/AnalyticsStorage;
+.super Ljava/lang/Object;
+.source "AnalyticsStorage.java"
+
+
+# instance fields
+.field private final mDirectory:Ljava/io/File;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 1
+
+    .prologue
+    .line 25
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 26
+    invoke-static {p1, p2}, Lcom/facebook/rti/common/analytics/AnalyticsUtil;->getAnalyticsDirectory(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/facebook/rti/common/analytics/defaultlogger/AnalyticsStorage;->mDirectory:Ljava/io/File;
+
+    .line 27
+    return-void
+.end method
+
+.method private ensureDirectory()V
+    .locals 2
+
+    .prologue
+    .line 75
+    iget-object v0, p0, Lcom/facebook/rti/common/analytics/defaultlogger/AnalyticsStorage;->mDirectory:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 76
+    iget-object v0, p0, Lcom/facebook/rti/common/analytics/defaultlogger/AnalyticsStorage;->mDirectory:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 77
+    const-string v0, "AnalyticsStorage"
+
+    const-string v1, "Unable to open analytics storage."
+
+    invoke-static {v0, v1}, Lcom/facebook/debug/log/BLog;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 80
+    :cond_0
+    return-void
+.end method
+
+.method private static getBatchFilename(Lcom/facebook/rti/common/analytics/defaultlogger/AnalyticsSession;)Ljava/lang/String;
+    .locals 4
+
+    .prologue
+    .line 83
+    const-string v0, "%s_%d.batch"
+
+    const/4 v1, 0x2
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    .line 84
+    invoke-virtual {p0}, Lcom/facebook/rti/common/analytics/defaultlogger/AnalyticsSession;->getSessionId()Ljava/util/UUID;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/util/UUID;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p0}, Lcom/facebook/rti/common/analytics/defaultlogger/AnalyticsSession;->getSequence()I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v1, v2
+
+    .line 83
+    invoke-static {v0, v1}, Lcom/facebook/rti/common/util/StringUtil;->formatStrLocaleSafe(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public store(Lcom/facebook/rti/common/analytics/defaultlogger/AnalyticsSession;)V
+    .locals 6
+
+    .prologue
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    .line 30
+    invoke-direct {p0}, Lcom/facebook/rti/common/analytics/defaultlogger/AnalyticsStorage;->ensureDirectory()V
+
+    .line 32
+    new-instance v1, Ljava/io/File;
+
+    iget-object v0, p0, Lcom/facebook/rti/common/analytics/defaultlogger/AnalyticsStorage;->mDirectory:Ljava/io/File;
+
+    invoke-static {p1}, Lcom/facebook/rti/common/analytics/defaultlogger/AnalyticsStorage;->getBatchFilename(Lcom/facebook/rti/common/analytics/defaultlogger/AnalyticsSession;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    .line 34
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 35
+    const-string v0, "AnalyticsStorage"
+
+    const-string v2, "Duplicate file %s"
+
+    invoke-static {v0, v2, v1}, Lcom/facebook/debug/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 36
+    invoke-virtual {v1}, Ljava/io/File;->delete()Z
+
+    move-result v0
+
+    .line 37
+    if-nez v0, :cond_0
+
+    .line 38
+    const-string v0, "AnalyticsStorage"
+
+    const-string v2, "File %s was not deleted"
+
+    new-array v3, v4, [Ljava/lang/Object;
+
+    aput-object v1, v3, v5
+
+    invoke-static {v0, v2, v3}, Lcom/facebook/debug/log/BLog;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 41
+    :cond_0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    invoke-virtual {p1, v2, v3}, Lcom/facebook/rti/common/analytics/defaultlogger/AnalyticsSession;->setTime(J)V
+
+    .line 44
+    :try_start_0
+    new-instance v2, Ljava/io/FileOutputStream;
+
+    invoke-direct {v2, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 51
+    :try_start_1
+    new-instance v1, Ljava/io/OutputStreamWriter;
+
+    const-string v0, "UTF8"
+
+    invoke-direct {v1, v2, v0}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_1 .. :try_end_1} :catch_1
+
+    .line 62
+    :try_start_2
+    invoke-virtual {p1}, Lcom/facebook/rti/common/analytics/defaultlogger/AnalyticsSession;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_4
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 67
+    :try_start_3
+    invoke-virtual {v1}, Ljava/io/Writer;->close()V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_3
+
+    .line 72
+    :goto_0
+    return-void
+
+    .line 45
+    :catch_0
+    move-exception v0
+
+    .line 46
+    const-string v2, "AnalyticsStorage"
+
+    const-string v3, "Batch file creation failed %s"
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    aput-object v1, v4, v5
+
+    invoke-static {v2, v0, v3, v4}, Lcom/facebook/debug/log/BLog;->w(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 52
+    :catch_1
+    move-exception v0
+
+    .line 53
+    const-string v1, "AnalyticsStorage"
+
+    const-string v3, "UTF8 encoding is not supported"
+
+    invoke-static {v1, v0, v3}, Lcom/facebook/debug/log/BLog;->w(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;)V
+
+    .line 55
+    :try_start_4
+    invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
+
+    goto :goto_0
+
+    .line 56
+    :catch_2
+    move-exception v0
+
+    .line 57
+    const-string v1, "AnalyticsStorage"
+
+    const-string v2, "failed to close output stream"
+
+    invoke-static {v1, v0, v2}, Lcom/facebook/debug/log/BLog;->w(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 68
+    :catch_3
+    move-exception v0
+
+    .line 69
+    const-string v1, "AnalyticsStorage"
+
+    const-string v2, "failed to close writer"
+
+    invoke-static {v1, v0, v2}, Lcom/facebook/debug/log/BLog;->w(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 63
+    :catch_4
+    move-exception v0
+
+    .line 64
+    :try_start_5
+    const-string v2, "AnalyticsStorage"
+
+    const-string v3, "failed to write session to file"
+
+    invoke-static {v2, v0, v3}, Lcom/facebook/debug/log/BLog;->w(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;)V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    .line 67
+    :try_start_6
+    invoke-virtual {v1}, Ljava/io/Writer;->close()V
+    :try_end_6
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_5
+
+    goto :goto_0
+
+    .line 68
+    :catch_5
+    move-exception v0
+
+    .line 69
+    const-string v1, "AnalyticsStorage"
+
+    const-string v2, "failed to close writer"
+
+    invoke-static {v1, v0, v2}, Lcom/facebook/debug/log/BLog;->w(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 66
+    :catchall_0
+    move-exception v0
+
+    .line 67
+    :try_start_7
+    invoke-virtual {v1}, Ljava/io/Writer;->close()V
+    :try_end_7
+    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_6
+
+    .line 70
+    :goto_1
+    throw v0
+
+    .line 68
+    :catch_6
+    move-exception v1
+
+    .line 69
+    const-string v2, "AnalyticsStorage"
+
+    const-string v3, "failed to close writer"
+
+    invoke-static {v2, v1, v3}, Lcom/facebook/debug/log/BLog;->w(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;)V
+
+    goto :goto_1
+.end method

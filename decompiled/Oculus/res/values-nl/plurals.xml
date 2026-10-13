@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="app_with_iap_count">
+        <item quantity="other">"met %1$d IAP's"</item>
+        <item quantity="one">met 1 IAP</item>
+    </plurals>
+    <plurals name="app_with_iap_header_count">
+        <item quantity="other">"%1$d IAP's voor %2$s"</item>
+        <item quantity="one">%1$d IAP voor %2$s</item>
+    </plurals>
+    <plurals name="bundle_pdp_item_count">
+        <item quantity="other">%1$d ervaringen</item>
+        <item quantity="one">1 ervaring</item>
+    </plurals>
+    <plurals name="pdp_controller_required">
+        <item quantity="other">Een van de volgende controllers is vereist</item>
+        <item quantity="one">Vereist</item>
+    </plurals>
+    <plurals name="store_countdown_days">
+        <item quantity="other">%1$s dagen</item>
+        <item quantity="one">1 dag</item>
+    </plurals>
+</resources>

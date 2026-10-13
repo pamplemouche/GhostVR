@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioButton android:id="@id/radio_button" android:background="@null" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="16.0dip" />
+    <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401c4" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toEndOf="@id/radio_button" />
+    <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401c2" android:id="@id/description" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/title" android:layout_alignStart="@id/title" />
+</merge>

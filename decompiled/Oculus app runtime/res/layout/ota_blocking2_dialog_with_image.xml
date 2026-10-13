@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.dialogs.OTABlocking2Dialog android:id="@id/ota_blocking2_dialog_with_image" style="@style/OTABlockingDialogContainerMain"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/OTABlockingDialogContainerLeft">
+        <TextView android:text="@string/ota_blocking2_dialog_title" style="@style/OTABlockingDialogTitleText" />
+        <TextView android:text="@string/ota_blocking2_dialog_description" style="@style/OTABlockingDialogDescriptionText" />
+    </LinearLayout>
+    <ImageView style="@style/OTABlockingDialogHeroImage" />
+</com.oculus.panelapp.anytimeui.dialogs.OTABlocking2Dialog>

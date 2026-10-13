@@ -1,0 +1,150 @@
+.class public Lxw0;
+.super Ljava/lang/Object;
+.source "PG"
+
+
+# instance fields
+.field public final a:Landroid/app/Dialog;
+
+.field public final b:Landroid/view/ViewGroup;
+
+.field public final c:I
+
+.field public d:Z
+
+
+# direct methods
+.method public constructor <init>(Landroid/app/Activity;Landroid/content/DialogInterface$OnDismissListener;)V
+    .locals 3
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    new-instance v0, Landroid/widget/FrameLayout;
+
+    invoke-direct {v0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lxw0;->b:Landroid/view/ViewGroup;
+
+    .line 3
+    invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f060106
+
+    .line 4
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v1
+
+    .line 5
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setBackgroundColor(I)V
+
+    .line 6
+    new-instance v0, LiM0;
+
+    const v1, 0x7f1400f0
+
+    invoke-direct {v0, p1, v1}, LiM0;-><init>(Landroid/app/Activity;I)V
+
+    iput-object v0, p0, Lxw0;->a:Landroid/app/Dialog;
+
+    .line 7
+    invoke-virtual {v0, p2}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+
+    .line 8
+    iget-object p2, p0, Lxw0;->a:Landroid/app/Dialog;
+
+    iget-object v0, p0, Lxw0;->b:Landroid/view/ViewGroup;
+
+    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v2, -0x1
+
+    invoke-direct {v1, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p2, v0, v1}, Landroid/app/Dialog;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 9
+    iget-object p2, p0, Lxw0;->a:Landroid/app/Dialog;
+
+    invoke-virtual {p2}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object p2
+
+    const/16 v0, 0x11
+
+    .line 10
+    invoke-virtual {p2, v0}, Landroid/view/Window;->setGravity(I)V
+
+    .line 11
+    invoke-virtual {p2, v2, v2}, Landroid/view/Window;->setLayout(II)V
+
+    .line 12
+    new-instance v0, Landroid/graphics/drawable/ColorDrawable;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+
+    invoke-virtual {p2, v0}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 13
+    invoke-static {p2}, Lxw0;->a(Landroid/view/Window;)V
+
+    .line 14
+    invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    const p2, 0x7f070257
+
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    iput p1, p0, Lxw0;->c:I
+
+    return-void
+.end method
+
+.method public static a(Landroid/view/Window;)V
+    .locals 2
+
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1a
+
+    if-ge v0, v1, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getRootView()Landroid/view/View;
+
+    move-result-object v0
+
+    .line 3
+    invoke-virtual {p0}, Landroid/view/Window;->getStatusBarColor()I
+
+    move-result p0
+
+    invoke-static {p0}, LAO0;->d(I)Z
+
+    move-result p0
+
+    xor-int/lit8 p0, p0, 0x1
+
+    .line 4
+    invoke-static {v0, p0}, LdT;->a(Landroid/view/View;Z)V
+
+    return-void
+.end method

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="sequentially"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <objectAnimator android:duration="1000" android:valueFrom="@color/APKTOOL_DUMMYVAL_0x7f060084" android:valueTo="@color/APKTOOL_DUMMYVAL_0x7f060084" android:propertyName="fillColor" />
+    <objectAnimator android:duration="300" android:valueFrom="@color/APKTOOL_DUMMYVAL_0x7f0600d5" android:valueTo="@color/APKTOOL_DUMMYVAL_0x7f0600d5" android:propertyName="fillColor" />
+    <objectAnimator android:duration="2350" android:valueFrom="@color/APKTOOL_DUMMYVAL_0x7f0600d5" android:valueTo="@color/APKTOOL_DUMMYVAL_0x7f0600d5" android:propertyName="fillColor" />
+    <objectAnimator android:duration="300" android:valueFrom="@color/APKTOOL_DUMMYVAL_0x7f060084" android:valueTo="@color/APKTOOL_DUMMYVAL_0x7f060084" android:propertyName="fillColor" />
+</set>

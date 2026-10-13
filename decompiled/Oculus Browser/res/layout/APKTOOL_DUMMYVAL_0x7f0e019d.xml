@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" style="@style/APKTOOL_DUMMYVAL_0x7f140003"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_width="32.0dip" android:layout_height="32.0dip" android:indeterminate="true" />
+    <TextView android:textSize="16.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/APKTOOL_DUMMYVAL_0x7f130582" android:layout_marginStart="16.0dip" />
+</LinearLayout>

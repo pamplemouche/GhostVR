@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="17.0sp" android:gravity="bottom" android:layout_width="wrap_content" android:layout_height="0.0dip" android:text="@string/social_search" android:layout_weight="1.0" />
+    <TextView android:textColor="@color/oculus_black_4" android:gravity="center|top" android:paddingLeft="50.0dip" android:paddingRight="50.0dip" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_marginTop="22.0dip" android:text="@string/social_no_friends_text" android:layout_weight="1.0" android:lineSpacingExtra="3.0dip" style="@style/TextAppearance" />
+    <Button android:gravity="center" android:layout_gravity="bottom" android:id="@id/find_friends_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="32.0dip" android:text="@string/social_find_friends_now" />
+</LinearLayout>

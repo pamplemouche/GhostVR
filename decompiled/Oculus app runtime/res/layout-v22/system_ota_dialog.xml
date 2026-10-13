@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.dialogs.SystemOTADialog android:gravity="top" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vrshell="http://schemas.android.com/apk/res-auto">
+    <com.oculus.vrshell.panels.views.SystemDialog android:id="@id/system_dialog" android:layout_height="wrap_content" vrshell:icon="@drawable/ic_system_dialog_warning" style="@style/SystemDialog">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/dialog_title" android:visibility="gone" android:layout_marginTop="10.0px" android:layout_marginBottom="10.0px" android:text="@string/dialog_system_ota_failure_title" style="@style/SystemDialogTitleText" />
+            <TextView android:id="@id/dialog_text" android:visibility="gone" android:layout_marginLeft="8.0px" android:layout_marginTop="10.0px" android:layout_marginRight="8.0px" android:layout_marginBottom="10.0px" android:text="@string/dialog_system_ota_update_instructions" android:textAlignment="center" android:breakStrategy="simple" style="@style/SystemDialogContentText" />
+            <TextView android:id="@id/dialog_message" android:textAlignment="center" style="@style/SystemDialogContentText" />
+            <com.oculus.vrshell.panels.views.ShellButton android:id="@id/dialog_button" android:paddingTop="10.0px" android:paddingBottom="10.0px" android:layout_width="fill_parent" android:layout_marginLeft="54.0px" android:layout_marginRight="54.0px" android:text="@string/dialog_system_ota_acknowledge" style="@style/ButtonPrimary" />
+        </LinearLayout>
+    </com.oculus.vrshell.panels.views.SystemDialog>
+</com.oculus.panelapp.anytimeui.dialogs.SystemOTADialog>

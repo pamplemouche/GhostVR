@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="app_with_iap_count">
+        <item quantity="other">"con %1$d acquisti nell'app"</item>
+        <item quantity="one">"con 1 acquisto nell'app"</item>
+    </plurals>
+    <plurals name="app_with_iap_header_count">
+        <item quantity="other">"%1$d acquisti nell'app per %2$s"</item>
+        <item quantity="one">"%1$d acquisto nell'app per %2$s"</item>
+    </plurals>
+    <plurals name="bundle_pdp_item_count">
+        <item quantity="other">%1$d esperienze</item>
+        <item quantity="one">1 esperienza</item>
+    </plurals>
+    <plurals name="pdp_controller_required">
+        <item quantity="other">Richiede uno dei due</item>
+        <item quantity="one">Richiede</item>
+    </plurals>
+    <plurals name="store_countdown_days">
+        <item quantity="other">%1$s giorni</item>
+        <item quantity="one">1 giorno</item>
+    </plurals>
+</resources>

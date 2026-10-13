@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/APKTOOL_DUMMYVAL_0x7f130649" android:key="user_category" />
+    <org.chromium.chrome.browser.preferences.sync.SignInPreference android:title="@string/APKTOOL_DUMMYVAL_0x7f13058c" android:key="sign_in" />
+    <org.chromium.chrome.browser.preferences.ChromeBasePreference android:title="@string/APKTOOL_DUMMYVAL_0x7f1303ab" android:key="manage_your_google_account" />
+    <PreferenceCategory android:title="@string/APKTOOL_DUMMYVAL_0x7f1305c8" android:key="sync_category">
+        <Preference android:layout="@layout/APKTOOL_DUMMYVAL_0x7f0e0022" android:key="sync_error_card" />
+        <Preference android:layout="@layout/APKTOOL_DUMMYVAL_0x7f0e0022" android:title="@string/APKTOOL_DUMMYVAL_0x7f1305d9" android:key="sync_disabled_by_administrator" />
+        <org.chromium.chrome.browser.preferences.ChromeSwitchPreference android:persistent="false" android:title="@string/APKTOOL_DUMMYVAL_0x7f1305f0" android:key="sync_requested" />
+        <org.chromium.chrome.browser.preferences.ChromeBasePreference android:title="@string/APKTOOL_DUMMYVAL_0x7f1303aa" android:key="manage_sync" android:fragment="org.chromium.chrome.browser.preferences.sync.ManageSyncPreferences" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/APKTOOL_DUMMYVAL_0x7f130571" android:key="services_category">
+        <org.chromium.chrome.browser.preferences.ChromeSwitchPreference android:persistent="false" android:title="@string/APKTOOL_DUMMYVAL_0x7f130153" android:key="search_suggestions" android:summary="@string/APKTOOL_DUMMYVAL_0x7f130152" />
+        <org.chromium.chrome.browser.preferences.ChromeSwitchPreference android:persistent="false" android:title="@string/APKTOOL_DUMMYVAL_0x7f130409" android:key="navigation_error" android:summary="@string/APKTOOL_DUMMYVAL_0x7f130408" />
+        <org.chromium.chrome.browser.preferences.ChromeSwitchPreference android:persistent="false" android:title="@string/APKTOOL_DUMMYVAL_0x7f130540" android:key="safe_browsing" android:summary="@string/APKTOOL_DUMMYVAL_0x7f13053f" />
+        <org.chromium.chrome.browser.preferences.ChromeSwitchPreference android:persistent="false" android:title="@string/APKTOOL_DUMMYVAL_0x7f130493" android:key="password_leak_detection" />
+        <org.chromium.chrome.browser.preferences.ChromeSwitchPreference android:persistent="false" android:title="@string/APKTOOL_DUMMYVAL_0x7f13053e" android:key="safe_browsing_scout_reporting" android:summary="@string/APKTOOL_DUMMYVAL_0x7f13053d" />
+        <org.chromium.chrome.browser.preferences.ChromeSwitchPreference android:persistent="false" android:title="@string/APKTOOL_DUMMYVAL_0x7f13063c" android:key="usage_and_crash_reports" android:summary="@string/APKTOOL_DUMMYVAL_0x7f13063b" />
+        <org.chromium.chrome.browser.preferences.ChromeSwitchPreference android:persistent="false" android:title="@string/APKTOOL_DUMMYVAL_0x7f130639" android:key="url_keyed_anonymized_data" android:summary="@string/APKTOOL_DUMMYVAL_0x7f130638" />
+        <org.chromium.chrome.browser.preferences.ChromeBasePreference android:title="@string/APKTOOL_DUMMYVAL_0x7f13025f" android:key="contextual_search" android:fragment="org.chromium.chrome.browser.preferences.privacy.ContextualSearchPreferenceFragment" />
+    </PreferenceCategory>
+</PreferenceScreen>

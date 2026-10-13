@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/social_header_padding_horizontal" android:paddingTop="@dimen/social_header_padding_top" android:paddingRight="@dimen/social_header_padding_horizontal" android:paddingBottom="@dimen/social_header_padding_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/social_header_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="10.0sp" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="bottom|center|left" android:id="@id/notifications" android:background="@drawable/social_notification_icon" android:layout_width="@dimen/social_notification_size_in_header" android:layout_height="@dimen/social_notification_size_in_header" android:layout_marginRight="13.0dip" android:layout_marginBottom="2.0dip" />
+    <TextView android:textSize="14.0sp" android:layout_gravity="bottom|center|left" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="sans-serif-medium" />
+    <TextView android:textSize="14.0sp" android:textColor="@color/oculus_black_4" android:layout_gravity="bottom|center|left" android:id="@id/count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" />
+</LinearLayout>

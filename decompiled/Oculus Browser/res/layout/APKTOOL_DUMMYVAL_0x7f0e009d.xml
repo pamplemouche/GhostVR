@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.download.home.list.view.AspectRatioFrameLayout android:background="@color/APKTOOL_DUMMYVAL_0x7f06011f" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.chrome.browser.download.home.list.view.AsyncImageView android:layout_gravity="center" android:id="@id/thumbnail" android:background="@color/APKTOOL_DUMMYVAL_0x7f06010f" android:layout_width="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" app:APKTOOL_DUMMYVAL_0x7f040159="100.0%" style="@style/APKTOOL_DUMMYVAL_0x7f14000b" />
+    <org.chromium.chrome.browser.download.home.view.SelectionView android:id="@id/selection" style="@style/APKTOOL_DUMMYVAL_0x7f1400f2" />
+</org.chromium.chrome.browser.download.home.list.view.AspectRatioFrameLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/oculus_gray" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/image" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/common_horizontal_padding" android:paddingRight="@dimen/common_horizontal_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@style/TextAppearance.Title.Large" android:layout_gravity="center_horizontal" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/common_horizontal_padding" />
+        <TextView android:textAppearance="@style/TextAppearance" android:gravity="center_horizontal" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginRight="@dimen/common_horizontal_padding" android:layout_marginBottom="@dimen/common_vertical_padding" />
+        <Button android:layout_gravity="center" android:id="@id/action" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/common_vertical_padding" />
+        <TextView android:textColor="@color/oculus_blue" android:layout_gravity="center_horizontal" android:id="@id/skip_pairing" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/common_vertical_padding" android:text="@string/bluetooth_skip_pairing" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/progress_panel" android:background="@android:color/white" android:paddingLeft="@dimen/common_horizontal_padding" android:paddingTop="@dimen/common_vertical_padding" android:paddingRight="@dimen/common_horizontal_padding" android:paddingBottom="@dimen/common_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:progressBarStyleSmall" />
+        <TextView android:textAppearance="@style/TextAppearance.Body.Medium" android:id="@id/progress_text" android:paddingLeft="@dimen/common_horizontal_padding" android:paddingRight="@dimen/common_horizontal_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <TextView android:textAppearance="@style/TextAppearance.Body.Medium" android:id="@id/progress_value" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

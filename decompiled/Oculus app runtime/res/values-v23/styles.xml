@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="IPDAdjustDialogText">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:textColor">@color/oc_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:breakStrategy">balanced</item>
+    </style>
+    <style name="OTABlockingDialogParentText">
+        <item name="android:textColor">@color/oc_white</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">36.0dip</item>
+        <item name="android:layout_marginRight">36.0dip</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:breakStrategy">balanced</item>
+    </style>
+    <style name="SystemDialogContentText">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:textColor">@color/oc_gray_d</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:breakStrategy">simple</item>
+    </style>
+    <style name="TooltipText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:background">@drawable/tooltip_body</item>
+        <item name="android:paddingLeft">12.0dip</item>
+        <item name="android:paddingTop">6.0dip</item>
+        <item name="android:paddingRight">12.0dip</item>
+        <item name="android:paddingBottom">6.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:color">@color/oc_white</item>
+        <item name="android:lineSpacingExtra">2.0sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:breakStrategy">balanced</item>
+    </style>
+</resources>

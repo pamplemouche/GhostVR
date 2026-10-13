@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" style="?store_productImageStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/genre_selector" android:paddingLeft="@dimen/store_browse_all_top_nav_padding_left" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Oculus.Widget.Store.FilterDropdown">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/store_genre_selector_title" style="@style/Oculus.Widget.Store.FilterDescription" />
+        <TextView android:ellipsize="end" android:id="@id/genre_selector_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/store_genre_selector_all" android:maxLines="1" style="@style/TextAppearance.FilterDropdown" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/price_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Oculus.Widget.Store.FilterDropdown">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/store_price_selector_title" style="@style/Oculus.Widget.Store.FilterDescription" />
+        <TextView android:ellipsize="end" android:id="@id/price_selector_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/store_price_selector_all" android:maxLines="1" style="@style/TextAppearance.FilterDropdown" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/controller_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Oculus.Widget.Store.FilterDropdown">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/store_controller_selector_title" style="@style/Oculus.Widget.Store.FilterDescription" />
+        <TextView android:ellipsize="end" android:id="@id/controller_selector_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/store_controller_selector_all" android:maxLines="1" style="@style/TextAppearance.FilterDropdown" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/sort_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Oculus.Widget.Store.FilterDropdown">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/store_sort_selector_title" style="@style/Oculus.Widget.Store.FilterDescription" />
+        <TextView android:ellipsize="end" android:id="@id/sort_selector_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/store_sort_selector_release_date_desc" android:maxLines="1" style="@style/TextAppearance.FilterDropdown" />
+    </LinearLayout>
+</LinearLayout>

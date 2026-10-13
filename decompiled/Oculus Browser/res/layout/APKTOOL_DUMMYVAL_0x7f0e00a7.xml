@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:gravity="center" android:id="@id/empty_container" android:padding="@dimen/APKTOOL_DUMMYVAL_0x7f070074" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/APKTOOL_DUMMYVAL_0x7f07029c" android:layout_marginEnd="@dimen/APKTOOL_DUMMYVAL_0x7f07029c" style="@style/APKTOOL_DUMMYVAL_0x7f1400de">
+        <org.chromium.ui.widget.TextViewWithLeading android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401b7" android:id="@id/empty" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="center" app:APKTOOL_DUMMYVAL_0x7f040169="@dimen/APKTOOL_DUMMYVAL_0x7f0702f9" />
+    </FrameLayout>
+    <org.chromium.chrome.browser.ui.widget.LoadingView android:layout_gravity="center" android:id="@id/loading" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

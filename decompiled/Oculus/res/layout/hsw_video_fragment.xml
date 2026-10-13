@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/oculus_gray" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/intro_section" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/video_thumbnail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/hsw_video_preview" />
+        <TextView android:textAppearance="@style/TextAppearance" android:id="@id/video_intro_description" android:padding="@dimen/hsw_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hsw_video_intro_description" />
+        <TextView android:textAppearance="@style/TextAppearance" android:id="@id/video_description_friend_reminder" android:padding="@dimen/hsw_item_padding" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="@string/hsw_video_description_friend_reminder" android:layout_weight="1.0" />
+        <Button android:id="@id/video_play_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/hsw_item_margin" android:text="@string/hsw_video_play_button" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/content_section" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <VideoView android:id="@id/video" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="vertical" android:id="@id/warnings_section" android:padding="@dimen/hsw_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="@style/TextAppearance.Body.Medium" android:id="@id/video_warnings_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hsw_video_warnings_title" />
+            <TextView android:textAppearance="@style/TextAppearance.Small" android:id="@id/video_warnings_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hsw_video_warnings_description" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/surroundings_section" android:padding="@dimen/hsw_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="@style/TextAppearance.Body.Medium" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hsw_video_surroundings_title" />
+            <TextView android:textAppearance="@style/TextAppearance.Small" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hsw_video_surroundings_description" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/children_section" android:padding="@dimen/hsw_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="@style/TextAppearance.Body.Medium" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hsw_video_children_title" />
+            <TextView android:textAppearance="@style/TextAppearance.Small" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hsw_video_children_description" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/comfort_section" android:padding="@dimen/hsw_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="@style/TextAppearance.Body.Medium" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hsw_video_comfort_title" />
+            <TextView android:textAppearance="@style/TextAppearance.Small" android:id="@id/video_comfort_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hsw_video_comfort_description" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/confirm_section" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/confirmation_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/oculus_logo" />
+        <TextView android:textAppearance="@style/TextAppearance" android:id="@id/video_confirmation_notice" android:padding="@dimen/hsw_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hsw_video_confirmation_notice" />
+        <TextView android:textAppearance="@style/TextAppearance" android:id="@id/video_confirmation_find_video" android:padding="@dimen/hsw_item_padding" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="@string/hsw_video_confirmation_find_video" android:layout_weight="1.0" />
+        <Button android:id="@id/video_confirmation_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/hsw_item_margin" android:text="@string/hsw_video_confirmation_button" />
+        <TextView android:textAppearance="@style/TextAppearance" android:gravity="center_horizontal" android:id="@id/video_decline_link" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/hsw_item_margin" android:text="@string/hsw_video_decline_link" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="APKTOOL_DUMMYVAL_0x7f1400ae" parent="@style/APKTOOL_DUMMYVAL_0x7f1400af">
+        <item name="APKTOOL_DUMMYVAL_0x7f04003b">18.659973dip</item>
+        <item name="APKTOOL_DUMMYVAL_0x7f0400d2">24.0dip</item>
+        <item name="APKTOOL_DUMMYVAL_0x7f04011c">3.3299866dip</item>
+    </style>
+</resources>

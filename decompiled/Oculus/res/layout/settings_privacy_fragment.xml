@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="?settingsPageBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/content_frame" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Oculus.Widget.GrayDividers" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_blocked_users_label" style="@style/Oculus.Widget.Light.Setting.Label" />
+        <TextView android:id="@id/blocked_users" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_blocked_users_item" android:drawableRight="@drawable/right_arrow_black" style="@style/Oculus.Widget.Light.Setting" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?lineDividerDecorationDrawable" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_advanced_other_label" style="@style/Oculus.Widget.Light.Setting.Label" />
+    <com.oculus.horizon.widget.SwitchSetting android:id="@id/auto_update" android:layout_width="fill_parent" android:layout_height="wrap_content" app:subtitle="@string/oxygen_setting_auto_updates_description" app:title="@string/oxygen_setting_auto_updates_title" style="@style/Oculus.Widget.Light.Setting" />
+    <com.oculus.horizon.widget.SwitchSetting android:id="@id/notification_update_available" android:layout_width="fill_parent" android:layout_height="wrap_content" app:subtitle="@string/oxygen_setting_notification_update_available_description" app:title="@string/oxygen_setting_notification_update_available_title" style="@style/Oculus.Widget.Light.Setting" />
+    <com.oculus.horizon.widget.SwitchSetting android:id="@id/notification_update_installed" android:layout_width="fill_parent" android:layout_height="wrap_content" app:subtitle="@string/oxygen_setting_notification_update_installed_description" app:title="@string/oxygen_setting_notification_update_installed_title" style="@style/Oculus.Widget.Light.Setting" />
+    <com.oculus.horizon.widget.SwitchSetting android:id="@id/public_test_channel" android:layout_width="fill_parent" android:layout_height="wrap_content" app:subtitle="@string/oxygen_setting_public_test_channel_description" app:title="@string/oxygen_setting_public_test_channel_title" style="@style/Oculus.Widget.Light.Setting" />
+</LinearLayout>

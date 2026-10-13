@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/common_horizontal_padding" android:paddingTop="@dimen/common_vertical_padding" android:paddingRight="@dimen/common_horizontal_padding" android:paddingBottom="@dimen/common_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/refunds_paragraph_padding" android:text="@string/commerce_request_refund_reason_explanation" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/refunds_paragraph_padding" android:text="@string/commerce_request_refund_reason_learn_more" />
+        <TextView android:id="@id/learn_more_links" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.oculus.horizon.widget.CustomEditText android:id="@id/refund_reason_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/common_vertical_padding" android:hint="@string/commerce_request_refund_reason_hint" android:inputType="text" style="?editTextFieldStyle" />
+        <com.oculus.horizon.widget.CustomEditText android:id="@id/comments" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/commerce_request_refund_comments_hint" android:lines="1" android:inputType="textAutoCorrect|textCapSentences|textMultiLine" style="?editTextFieldStyle" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/oculus_red" android:gravity="start|center|top" android:id="@id/refund_reason_error_message" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/common_vertical_padding" android:text="@string/commerce_request_refund_reason_error" />
+        <com.oculus.horizon.widget.ProgressButton android:id="@id/request_refund_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/common_vertical_padding" android:text="@string/commerce_request_refund" />
+    </LinearLayout>
+</ScrollView>

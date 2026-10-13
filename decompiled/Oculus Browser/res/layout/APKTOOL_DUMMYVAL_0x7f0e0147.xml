@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/password_entry_viewer_interactive" android:layout_width="fill_parent" android:layout_height="wrap_content" android:title="@string/APKTOOL_DUMMYVAL_0x7f130484" android:paddingStart="15.0dip">
+            <TextView android:layout_marginTop="15.0dip" android:text="@string/APKTOOL_DUMMYVAL_0x7f130483" style="@style/APKTOOL_DUMMYVAL_0x7f140120" />
+            <include android:id="@id/url_row" layout="@layout/APKTOOL_DUMMYVAL_0x7f0e0148" />
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e017e" />
+</FrameLayout>

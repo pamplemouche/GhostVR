@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oculus.horizon.widget.CustomToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:ellipsize="end" android:gravity="center" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginTop="@dimen/common_vertical_padding" android:layout_marginRight="@dimen/common_horizontal_padding" android:layout_marginBottom="@dimen/common_vertical_padding" android:text="@string/settings_change_platform_description" android:maxLines="3" android:lineSpacingExtra="5.0sp" />
+    <com.google.android.material.textfield.TextInputLayout android:id="@id/new_platform_endpoint" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginRight="@dimen/common_horizontal_padding" style="?textInputLayoutStyle">
+        <androidx.appcompat.widget.AppCompatEditText android:layout_width="fill_parent" android:layout_height="fill_parent" android:inputType="textUri" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.oculus.horizon.widget.ProgressButton android:id="@id/save_button" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginRight="@dimen/common_horizontal_padding" android:layout_marginBottom="@dimen/common_vertical_padding" android:text="@string/common_save" />
+</LinearLayout>

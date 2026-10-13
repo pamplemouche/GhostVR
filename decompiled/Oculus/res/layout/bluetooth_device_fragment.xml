@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/oculus_gray" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@drawable/gray_line_divider" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/TextAppearance.Title.Small.2" android:gravity="center_vertical" android:paddingLeft="@dimen/common_horizontal_padding" android:paddingRight="@dimen/common_horizontal_padding" android:layout_width="fill_parent" android:layout_height="@dimen/common_title_small_2_height" android:text="@string/bluetooth_device_title" />
+    <TextView android:id="@id/device_battery" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawableLeft="@drawable/bluetooth_device_battery" style="@style/Oculus.Widget.Light.Setting" />
+    <TextView android:id="@id/device_address" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawableLeft="@drawable/bluetooth_device_info" style="@style/Oculus.Widget.Light.Setting" />
+    <TextView android:id="@id/device_version" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawableLeft="@drawable/bluetooth_device_info" style="@style/Oculus.Widget.Light.Setting" />
+    <TextView android:id="@id/update" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bluetooth_device_update" android:drawableLeft="@drawable/bluetooth_device_update" android:drawableRight="@drawable/right_arrow_black" style="@style/Oculus.Widget.Light.Setting" />
+</LinearLayout>

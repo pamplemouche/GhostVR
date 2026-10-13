@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="APKTOOL_DUMMYVAL_0x7f14022b" parent="@style/APKTOOL_DUMMYVAL_0x7f140229" />
+    <style name="APKTOOL_DUMMYVAL_0x7f14022c" parent="@style/APKTOOL_DUMMYVAL_0x7f140229" />
+    <style name="APKTOOL_DUMMYVAL_0x7f14022d" parent="@style/APKTOOL_DUMMYVAL_0x7f140232" />
+    <style name="APKTOOL_DUMMYVAL_0x7f14022e" parent="@style/APKTOOL_DUMMYVAL_0x7f140233" />
+    <style name="APKTOOL_DUMMYVAL_0x7f14022f" parent="@style/APKTOOL_DUMMYVAL_0x7f140234" />
+    <style name="APKTOOL_DUMMYVAL_0x7f140230" parent="@style/APKTOOL_DUMMYVAL_0x7f140235" />
+    <style name="APKTOOL_DUMMYVAL_0x7f140231" parent="@style/APKTOOL_DUMMYVAL_0x7f14023d" />
+</resources>

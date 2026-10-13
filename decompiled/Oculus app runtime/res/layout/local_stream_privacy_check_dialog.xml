@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.dialogs.localstream.LocalStreamPrivacyCheckDialog android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vrshell="http://schemas.android.com/apk/res-auto">
+    <com.oculus.vrshell.panels.views.SystemDialogStandardLayout android:id="@id/local_stream_privacy_check_dialog_layout" vrshell:acceptText="@string/local_stream_privacy_check_dialog_button_allow" vrshell:cancelText="@string/local_stream_privacy_check_dialog_button_deny" vrshell:contentText="@string/local_stream_privacy_check_dialog_description" vrshell:customLayout="@layout/local_stream_privacy_check_disable_warning" vrshell:icon="@drawable/ic_system_dialog_warning" vrshell:titleText="@string/local_stream_privacy_check_dialog_title" style="@style/SystemDialog" />
+</com.oculus.panelapp.anytimeui.dialogs.localstream.LocalStreamPrivacyCheckDialog>

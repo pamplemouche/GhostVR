@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f140212" android:id="@id/password_entry_viewer_row_data" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_weight="1.0" />
+    <org.chromium.ui.widget.ChromeImageButton android:layout_gravity="end" android:id="@id/password_entry_viewer_copy" android:background="?APKTOOL_DUMMYVAL_0x7f0401e7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f130479" android:layout_marginEnd="15.0dip" app:APKTOOL_DUMMYVAL_0x7f040256="@color/APKTOOL_DUMMYVAL_0x7f060169" style="?android:buttonStyleSmall" />
+</LinearLayout>

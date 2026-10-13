@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?nuxBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/nux360_toolbar" />
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/nux_container_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?actionBarSize">
+        <TextView android:textAppearance="@style/Nux.TextAppearance.Secondary" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/nux_single_field_offset" />
+        <Button android:layout_gravity="bottom" android:id="@id/return_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_single_field_offset" android:text="@string/login_approvals_return_to_login_button" />
+    </LinearLayout>
+</FrameLayout>

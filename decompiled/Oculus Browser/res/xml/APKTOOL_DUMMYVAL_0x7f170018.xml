@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.chrome.browser.preferences.website.SiteSettingsPreference android:icon="@drawable/APKTOOL_DUMMYVAL_0x7f0802bb" android:title="@string/APKTOOL_DUMMYVAL_0x7f13013d" android:key="all_sites" android:fragment="org.chromium.chrome.browser.preferences.website.SingleCategoryPreferences" app:APKTOOL_DUMMYVAL_0x7f040137="@color/APKTOOL_DUMMYVAL_0x7f060079" />
+    <org.chromium.chrome.browser.preferences.website.SiteSettingsPreference android:key="cookies" android:fragment="org.chromium.chrome.browser.preferences.website.SingleCategoryPreferences" />
+    <org.chromium.chrome.browser.preferences.website.SiteSettingsPreference android:key="device_location" android:fragment="org.chromium.chrome.browser.preferences.website.SingleCategoryPreferences" />
+    <org.chromium.chrome.browser.preferences.website.SiteSettingsPreference android:key="camera" android:fragment="org.chromium.chrome.browser.preferences.website.SingleCategoryPreferences" />
+    <org.chromium.chrome.browser.preferences.website.SiteSettingsPreference android:key="microphone" android:fragment="org.chromium.chrome.browser.preferences.website.SingleCategoryPreferences" />
+    <org.chromium.chrome.browser.preferences.website.SiteSettingsPreference android:key="sensors" android:fragment="org.chromium.chrome.browser.preferences.website.SingleCategoryPreferences" />
+    <org.chromium.chrome.browser.preferences.website.SiteSettingsPreference android:key="notifications" android:fragment="org.chromium.chrome.browser.preferences.website.SingleCategoryPreferences" />
+    <org.chromium.chrome.browser.preferences.website.SiteSettingsPreference android:key="javascript" android:fragment="org.chromium.chrome.browser.preferences.website.SingleCategoryPreferences" />
+    <org.chromium.chrome.browser.preferences.website.SiteSettingsPreference android:key="popups" android:fragment="org.chromium.chrome.browser.preferences.website.SingleCategoryPreferences" />
+    <org.chromium.chrome.browser.preferences.website.SiteSettingsPreference android:key="ads" android:fragment="org.chromium.chrome.browser.preferences.website.SingleCategoryPreferences" />
+    <org.chromium.chrome.browser.preferences.website.SiteSettingsPreference android:key="background_sync" android:fragment="org.chromium.chrome.browser.preferences.website.SingleCategoryPreferences" />
+    <org.chromium.chrome.browser.preferences.website.SiteSettingsPreference android:key="automatic_downloads" android:fragment="org.chromium.chrome.browser.preferences.website.SingleCategoryPreferences" />
+    <org.chromium.chrome.browser.preferences.website.SiteSettingsPreference android:key="protected_content" android:fragment="org.chromium.chrome.browser.preferences.website.SingleCategoryPreferences" />
+    <org.chromium.chrome.browser.preferences.website.SiteSettingsPreference android:key="autoplay" android:fragment="org.chromium.chrome.browser.preferences.website.SingleCategoryPreferences" />
+    <org.chromium.chrome.browser.preferences.website.SiteSettingsPreference android:icon="@drawable/APKTOOL_DUMMYVAL_0x7f0802be" android:title="@string/APKTOOL_DUMMYVAL_0x7f1303b3" android:key="media" android:fragment="org.chromium.chrome.browser.preferences.website.SiteSettingsPreferences" app:APKTOOL_DUMMYVAL_0x7f040137="@color/APKTOOL_DUMMYVAL_0x7f060079" />
+    <org.chromium.chrome.browser.preferences.website.SiteSettingsPreference android:key="sound" android:fragment="org.chromium.chrome.browser.preferences.website.SingleCategoryPreferences" />
+    <org.chromium.chrome.browser.preferences.website.SiteSettingsPreference android:icon="@drawable/APKTOOL_DUMMYVAL_0x7f0802c0" android:title="@string/APKTOOL_DUMMYVAL_0x7f1306a3" android:key="use_storage" android:fragment="org.chromium.chrome.browser.preferences.website.SingleCategoryPreferences" app:APKTOOL_DUMMYVAL_0x7f040137="@color/APKTOOL_DUMMYVAL_0x7f060079" />
+    <org.chromium.chrome.browser.preferences.website.SiteSettingsPreference android:key="usb" android:fragment="org.chromium.chrome.browser.preferences.website.SingleCategoryPreferences" />
+    <org.chromium.chrome.browser.preferences.website.SiteSettingsPreference android:key="clipboard" android:fragment="org.chromium.chrome.browser.preferences.website.SingleCategoryPreferences" />
+    <org.chromium.chrome.browser.preferences.website.SiteSettingsPreference android:key="bluetooth_scanning" android:fragment="org.chromium.chrome.browser.preferences.website.SingleCategoryPreferences" />
+</PreferenceScreen>

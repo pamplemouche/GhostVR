@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/set_default" android:title="@string/commerce_set_default_payment_method_text" />
+    <item android:id="@id/balance_detail" android:title="@string/commerce_balance_detail_method_text" />
+    <item android:id="@id/remove" android:title="@string/commerce_remove_payment_method_text" />
+</menu>

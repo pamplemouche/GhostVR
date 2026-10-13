@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.dialogs.EnterpriseCertificateExpiringWarningDialog android:id="@id/enterprise_certificate_expiring_warning_dialog" style="@style/EnterpriseDialogStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vrshell="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center|top" android:layout_gravity="center|top" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:text="@string/certificate_expiring_warning_title" style="@style/EnterpriseDialogTitleStyle" />
+        <TextView android:id="@id/enterprise_certificate_expiring_warning_text" android:layout_marginTop="20.0dip" android:text="@string/certificate_expiring_warning_text_uncertain" style="@style/EnterpriseDialogBodyTextStyle" />
+    </LinearLayout>
+</com.oculus.panelapp.anytimeui.dialogs.EnterpriseCertificateExpiringWarningDialog>

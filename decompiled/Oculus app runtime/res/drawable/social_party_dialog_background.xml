@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="36.0px">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/oc_gray_1" />
+            <corners android:radius="@dimen/home_dialog_corner_radius" />
+        </shape>
+    </item>
+    <item android:gravity="center|top" android:top="2.0px">
+        <shape android:shape="oval">
+            <size android:height="68.0px" android:width="68.0px" />
+            <solid android:color="@color/oc_gray_1" />
+        </shape>
+    </item>
+    <item android:gravity="center|top">
+        <shape android:layout_width="fill_parent" android:layout_height="fill_parent" android:shape="ring" android:useLevel="false" android:innerRadius="32.0px" android:thickness="4.0px">
+            <solid android:color="@color/oc_gray_d" />
+            <size android:height="@dimen/social_icon_height" android:width="@dimen/social_icon_width" />
+        </shape>
+    </item>
+    <item android:gravity="center_horizontal" android:id="@id/system_dialog_header_icon" android:height="@dimen/social_icon_height" android:width="@dimen/social_icon_width" android:drawable="@drawable/ic_system_dialog_warning" />
+</layer-list>

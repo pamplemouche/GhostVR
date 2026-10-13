@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.download.DownloadLocationCustomView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f140003">
+        <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401b7" android:id="@id/subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <org.chromium.ui.widget.ChromeImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:APKTOOL_DUMMYVAL_0x7f0401fb="@drawable/APKTOOL_DUMMYVAL_0x7f080121" app:APKTOOL_DUMMYVAL_0x7f040256="@color/APKTOOL_DUMMYVAL_0x7f060079" style="@style/APKTOOL_DUMMYVAL_0x7f14010c" />
+            <org.chromium.chrome.browser.ui.widget.text.AlertDialogEditText android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401c4" android:id="@id/file_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <org.chromium.ui.widget.ChromeImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f08013c" app:APKTOOL_DUMMYVAL_0x7f040256="@color/APKTOOL_DUMMYVAL_0x7f060079" style="@style/APKTOOL_DUMMYVAL_0x7f14010c" />
+            <Spinner android:id="@id/file_location" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@android:style/Widget.EditText" />
+        </LinearLayout>
+        <CheckBox android:id="@id/show_again_checkbox" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/APKTOOL_DUMMYVAL_0x7f1302af" android:layout_marginStart="-5.0dip" style="@style/APKTOOL_DUMMYVAL_0x7f1401be" />
+    </LinearLayout>
+</org.chromium.chrome.browser.download.DownloadLocationCustomView>

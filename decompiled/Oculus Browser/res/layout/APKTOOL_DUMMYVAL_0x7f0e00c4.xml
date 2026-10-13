@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/more_button" style="@style/APKTOOL_DUMMYVAL_0x7f1400fa"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:layout_gravity="center" android:id="@id/action_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/APKTOOL_DUMMYVAL_0x7f1303e9" style="@style/APKTOOL_DUMMYVAL_0x7f1400fc" />
+    <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e00c6" />
+</FrameLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abc_action_bar_home_description">Siirry etusivulle</string>
+    <string name="abc_action_bar_up_description">Siirry ylös</string>
+    <string name="abc_action_menu_overflow_description">Lisäasetukset</string>
+    <string name="abc_action_mode_done">Valmis</string>
+    <string name="abc_activity_chooser_view_see_all">Näytä kaikki</string>
+    <string name="abc_activitychooserview_choose_application">Valitse sovellus</string>
+    <string name="abc_capital_off">POIS PÄÄLTÄ</string>
+    <string name="abc_capital_on">PÄÄLLÄ</string>
+    <string name="abc_menu_function_shortcut_label">Fn+</string>
+    <string name="abc_menu_shift_shortcut_label">Vaihto+</string>
+    <string name="abc_menu_space_shortcut_label">välilyönti</string>
+    <string name="abc_prepend_shortcut_label">Valikko+</string>
+    <string name="abc_search_hint">Haku…</string>
+    <string name="abc_searchview_description_clear">Tyhjennä kysely</string>
+    <string name="abc_searchview_description_query">Hakukysely</string>
+    <string name="abc_searchview_description_search">Haku</string>
+    <string name="abc_searchview_description_submit">Lähetä kysely</string>
+    <string name="abc_searchview_description_voice">Puhehaku</string>
+    <string name="abc_shareactionprovider_share_with">Jaa…</string>
+    <string name="abc_shareactionprovider_share_with_application">Jaa: %s</string>
+    <string name="abc_toolbar_collapse_description">Tiivistä</string>
+    <string name="notifications_download_canceled_message">Kohteen %1$s lataus peruutettiin</string>
+    <string name="notifications_download_canceled_title">Lataus peruutettu</string>
+    <string name="notifications_download_failed_message">Sovellusta %1$s ei voi ladata.</string>
+    <string name="notifications_download_failed_title">Lataus epäonnistui</string>
+    <string name="notifications_download_in_progress_message">Ladataan %1$s…</string>
+    <string name="notifications_downloading_and_installing_apps">Ladataan ja asennetaan sovelluksia…</string>
+    <string name="notifications_head_install_failed_message">Asennus epäonnistui</string>
+    <string name="notifications_head_installed_message">Asennettu</string>
+    <string name="notifications_head_installing_message">Asennetaan</string>
+    <string name="notifications_install_failed_message">Sovellusta %1$s ei voi asentaa.</string>
+    <string name="notifications_install_failed_title">Asennus epäonnistui</string>
+    <string name="notifications_install_in_progress_message">Asennetaan %1$s…</string>
+    <string name="notifications_install_in_progress_title">Asennus käynnissä</string>
+    <string name="notifications_install_succeeded_message">%1$s asennettiin kirjastoosi.</string>
+    <string name="notifications_install_succeeded_title">Asennus valmis</string>
+    <string name="notifications_progress_of_download_message">%1$d %%</string>
+    <string name="notifications_update_succeeded_message">%1$s päivitettiin.</string>
+    <string name="notifications_update_succeeded_title">Päivitys onnistui</string>
+    <string name="obb_display_title">%1$s (laajennustiedosto)</string>
+    <string name="search_menu_title">Haku</string>
+</resources>

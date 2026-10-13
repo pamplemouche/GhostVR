@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:sharedUserId="com.oculus.uid" android:sharedUserLabel="@string/common_oculus" package="com.oculus.horizon">
+    <permission android:name="com.oculus.horizon.permission.ACCESS" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.oculus.horizon.permission.ACCESS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+    <uses-permission-sdk-23 android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <permission android:name="com.oculus.antipiracy.REQUEST_DEVELOPER_STATUS" android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.oculus.horizon.auth"/>
+    <permission android:name="com.oculus.horizon.auth" android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="com.oculus.horizon.auth"/>
+    <permission android:name="com.oculus.permission.SYSTEM_PLATFORM_SDK" android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="com.oculus.permission.PLAY_AUDIO_BACKGROUND"/>
+    <uses-permission android:name="com.oculus.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.oculus.permission.GET_WINDOW_LAYOUT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="com.samsung.android.app.vr.input.service.receiver.RECV_PERMISSION"/>
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <permission android:name="com.oculus.horizon.FBCONNECT_CONTENT_PROVIDER_WRITE_ACCESS" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.oculus.horizon.FBCONNECT_CONTENT_PROVIDER_READ_ACCESS" android:protectionLevel="normal"/>
+    <permission android:label="@string/linked_accounts_read_permission" android:name="com.oculus.horizon.LINKED_ACCOUNTS_READ_PERMISSION"/>
+    <permission android:name="com.oculus.horizon.LINKED_ACCOUNTS_WRITE_PERMISSION"/>
+    <uses-permission android:name="com.samsung.android.hmt.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.samsung.android.hmt.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.oculus.permission.COLOCATION_API_WRITE_MAP"/>
+    <uses-permission android:name="com.oculus.permission.COLOCATION_API_READ_MAP"/>
+    <uses-permission android:name="com.oculus.permission.COLOCATION_API_GET_MAP_UUID"/>
+    <uses-permission android:name="com.oculus.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.oculus.permission.COLLECT_SYSTEM_LOGS"/>
+    <permission android:name="com.oculus.installer.PROXY_INSTALL" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.oculus.installer.PROXY_INSTALL"/>
+    <application allowBackup="false" android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="false" android:icon="@drawable/app_icon" android:label="@string/common_oculus" android:name="com.oculus.horizon.HorizonApplication" android:theme="@style/Theme.Light.NoActionBar">
+        <meta-data android:name="com.facebook.build_rule" android:value="oculus-horizon-release_armv7_release_fbsign"/>
+        <meta-data android:name="com.facebook.package_type" android:value="release"/>
+        <meta-data android:name="com.facebook.build_time" android:value="1586868148000L"/>
+        <meta-data android:name="com.facebook.versioncontrol.branch" android:value="master"/>
+        <meta-data android:name="com.facebook.versioncontrol.revision" android:value="MASTER"/>
+        <meta-data android:name="android.max_aspect" android:value="2.1"/>
+        <meta-data android:name="com.oculus.horizon.screencapture.capability" android:value="3"/>
+        <meta-data android:name="com.oculus.use_restricted_memory" android:value="true"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <service android:exported="false" android:name="com.facebook.analytics2.logger.LollipopUploadService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.facebook.analytics2.logger.AlarmBasedUploadService"/>
+        <receiver android:enabled="false" android:exported="false" android:name="com.facebook.oxygen.preloads.sdk.firstparty.settings.TosAcceptedFlag"/>
+        <service android:exported="true" android:name="com.oculus.antipiracy.AntiPiracyIntentService" android:permission="com.oculus.antipiracy.REQUEST_DEVELOPER_STATUS"/>
+        <service android:exported="false" android:name="com.oculus.antipiracy.AntiPiracyJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:name="com.oculus.appmanager.downloader.OculusDownloadManagerReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.oculus.appmanager.downloader.OculusDownloadService"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.oculus.appmanager.installer.boot.InstallerServiceBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.oculus.appmanager.installer.notification.InstallerNotificationService"/>
+        <service android:name="com.oculus.appmanager.installer.service.InstallerService"/>
+        <service android:exported="false" android:name="com.oculus.appmanager.installer.service.ConsistencyJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.oculus.appmanager.uninstaller.receivers.UninstallBroadcastReceiver"/>
+        <receiver android:name="com.oculus.auth.receiver.AuthBroadcastReceiver" android:permission="com.oculus.horizon.auth">
+            <intent-filter>
+                <action android:name="com.oculus.auth.BROADCAST_LOGIN"/>
+                <action android:name="com.oculus.auth.BROADCAST_LOGOUT"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.oculus.auth.receiver.LoginHandlersService">
+            <intent-filter>
+                <action android:name="com.oculus.auth.BROADCAST_LOGIN"/>
+                <action android:name="com.oculus.auth.BROADCAST_LOGOUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.oculus.auth.service.AuthService2"/>
+        <service android:exported="true" android:name="com.oculus.auth.service.AuthService">
+            <intent-filter>
+                <action android:name="com.oculus.auth.ACTION_LOGIN_API"/>
+                <action android:name="com.oculus.auth.ACTION_LOGIN_WITH_FB_AUTH"/>
+                <action android:name="com.oculus.auth.ACTION_STATUS"/>
+                <action android:name="com.oculus.auth.ACTION_LOGOUT"/>
+                <action android:name="com.oculus.auth.ACTION_FETCH_TWO_FACTOR_METHODS"/>
+                <action android:name="com.oculus.auth.ACTION_SEND_TWO_FACTOR_CODE"/>
+                <action android:name="com.oculus.auth.ACTION_VERIFY_LOGIN"/>
+                <action android:name="com.oculus.auth.ACTION_VERIFY_PIN"/>
+                <action android:name="com.oculus.auth.ACTION_RESEND_LOGIN_APPROVAL_CODE"/>
+                <action android:name="com.oculus.auth.ACTION_FB_LOGIN"/>
+                <action android:name="com.oculus.auth.ACTION_FB_VERIFY_LOGIN_APPROVALS_CODE"/>
+                <action android:name="com.oculus.auth.ACTION_FB_CHECK_MACHINE_APPROVAL"/>
+                <action android:name="com.oculus.auth.ACTION_FB_MACHINE_APPROVAL_LOGIN"/>
+                <action android:name="com.oculus.auth.ACTION_FB_RESEND_SMS"/>
+                <action android:name="com.oculus.auth.ACTION_LINK_FB_ACCOUNT"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.oculus.auth.service.AuthServicePermissionProtected" android:permission="com.oculus.horizon.auth">
+            <intent-filter>
+                <action android:name="com.oculus.auth.ACTION_LOGIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.oculus.autoupdates.AutoUpdateJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="com.oculus.cache.library.service.LibraryDBCacheUpdaterService"/>
+        <receiver android:exported="true" android:name="com.oculus.common.packagescache.PackagesCacheReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.oculus.config.mobileconfigservice.MobileConfigService"/>
+        <service android:exported="true" android:name="com.oculus.config.service.GkService"/>
+        <service android:exported="true" android:name="com.oculus.config.updater.ConfigUpdaterJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.oculus.durableiap.DurableIAPJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <meta-data android:name="com.oculus.ocms.fbpermission.LIBRARY_PROVIDER" android:value=""/>
+        <meta-data android:name="com.oculus.ocms.fbpermission.MESSENGER_SERVICE_PROVIDER" android:value=""/>
+        <meta-data android:name="com.samsung.android.vr.application.mode" android:value="vr_dual"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:launchMode="singleTask" android:name="com.oculus.horizon.main.StartActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Start" android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.oculus.horizon.ACTION_LOGIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.oculus.horizon.ACTION_INSTALL_APPS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.oculus.horizon.ACTION_FORCED_UPDATE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:exported="true" android:name="com.oculus.horizon.StartActivity" android:targetActivity="com.oculus.horizon.main.StartActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:launchMode="singleTask" android:name="com.oculus.horizon.obe.YouAreReadyActivity" android:screenOrientation="portrait" android:theme="@style/Theme.YouAreReady" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:launchMode="singleTask" android:name="com.oculus.horizon.main.MainActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:name="com.oculus.horizon.settings.PINSettingsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Light.NoActionBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:name="com.oculus.horizon.settings.ChangePlatformEndpointActivity" android:screenOrientation="portrait" android:theme="@style/Theme.NoActionBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:name="com.oculus.horizon.settings.ConfirmPasswordSettingsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Light.NoActionBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:name="com.oculus.horizon.settings.SaveInternalDataActivity" android:screenOrientation="portrait" android:theme="@style/Theme.NoActionBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:name="com.oculus.horizon.roadblock.ui.UserRoadblockIntroActivity" android:screenOrientation="portrait" android:theme="@style/Theme.NoActionBar" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:name="com.oculus.horizon.roadblock.ui.UserRoadBlockSetPINActivity" android:screenOrientation="portrait" android:theme="@style/Theme.NoActionBar" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:name="com.oculus.horizon.roadblock.ui.UserRoadblockMainActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Nux" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:exported="false" android:name="com.oculus.horizon.payments.ui.UserUnlockStoreWithPaymentMethodActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Nux" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:name="com.oculus.horizon.payments.ui.AddPaymentMethodActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Light.NoActionBar.Settings" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="com.oculus.horizon.ACTION_ADD_PAYMENT_METHOD"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:name="com.oculus.horizon.payments.ui.ConfirmPINActivity" android:screenOrientation="portrait" android:theme="@style/Theme.NoActionBar" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:exported="false" android:name="com.oculus.horizon.payments.ui.PurchaseActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Translucent.NoTitleBar" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:name="com.oculus.horizon.payments.ui.PurchaseSummaryActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:exported="false" android:name="com.oculus.horizon.payments.ui.SpecialOfferActivatedActivity" android:screenOrientation="portrait" android:theme="@style/Theme.NoActionBar" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:name="com.oculus.horizon.payments.ui.AddPayPalMethodActivity" android:screenOrientation="portrait" android:theme="@style/Theme.NoActionBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|screenSize" android:name="com.oculus.horizon.pdp.gallery.FullscreenGalleryActivity" android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:name="com.oculus.horizon.nux360.NuxLegalNoticesActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|screenSize" android:exported="false" android:name="com.oculus.horizon.feed.FullScreenVideoPlayerActivity" android:theme="@style/Theme.NoActionBar" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:name="com.oculus.horizon.rageshake.BugReportActivity" android:screenOrientation="portrait" android:theme="@style/Theme.NoActionBar" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name="com.oculus.horizon.deeplinking.DeepLinkResponseHandler" android:theme="@android:style/Theme.Translucent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:host="link" android:scheme="oculus.store"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="www.oculus.com"/>
+                <data android:host="www2.oculus.com"/>
+                <data android:pathPrefix="/experiences/gear-vr/"/>
+                <data android:pathPrefix="/experiences/event/"/>
+                <data android:pathPrefix="/experiences/section/gear-vr/"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:name="com.oculus.horizon.fbconnectui.FBConnectActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.oculus.horizon.fbconnect.action.LINK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.oculus.horizon.category.protocol.20160302"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.oculus.horizon.downloader.receivers.DownloadNotificationClickedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.oculus.horizon.chromecast.PresentationService"/>
+        <receiver android:name="com.oculus.horizon.receivers.AppUpgradeEventReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.oculus.horizon.receivers.AUINotificationReceiver">
+            <intent-filter>
+                <action android:name="com.oculus.horizon.AUI_NOTIFICATION_CTA"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.oculus.horizon.ACCEPT_PARTY_INVITE"/>
+                <data android:host="party" android:path="/join" android:scheme="oculus.store"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.oculus.horizon.notifications.legacy.OnNotificationsActionService"/>
+        <service android:exported="false" android:name="com.oculus.horizon.legacy.social.MeManagerJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="true" android:name="com.oculus.horizon.abuse_prevention.VideoUploaderCleanerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:enabled="true" android:exported="true" android:name="com.oculus.horizon.abuse_prevention.VideoUploaderService"/>
+        <provider android:authorities="com.oculus.horizon.abuse_prevention.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.oculus.horizon.abuse_prevention.AbuseReportFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <receiver android:exported="true" android:name="com.oculus.horizon.abuse_prevention.FileReceiver">
+            <intent-filter>
+                <action android:name="com.oculus.horizon.abuse_prevention.ACTION_REQUEST_EVIDENCE_VIDEO"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:exported="false" android:name="com.oculus.horizon.appmanager.ui.InstallPermissionsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:exported="true" android:name="com.oculus.horizon.bluetooth.BluetoothActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="com.oculus.horizon.settings.BLUETOOTH_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <receiver android:exported="true" android:name="com.oculus.horizon.bluetooth.BluetoothReceiver">
+            <intent-filter>
+                <action android:name="com.samsung.android.app.vr.input.service.receiver.action.BLUETOOTH_FWUPDATE_NOTI"/>
+                <action android:name="com.samsung.android.action.BLUETOOTH_DEVICE"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.oculus.horizon.bluetooth.UpdateService"/>
+        <service android:exported="true" android:name="com.oculus.horizon.cloudstorage2.CloudStorageIntentService"/>
+        <service android:exported="false" android:name="com.oculus.horizon.cloudstorage2.CloudStorageBackgroundService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/common_oculus" android:name="com.facebook.FacebookActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <provider android:authorities="com.oculus.horizon.fbconnect" android:exported="true" android:name="com.oculus.horizon.fbconnect.FBConnectContentProvider" android:readPermission="com.oculus.horizon.FBCONNECT_CONTENT_PROVIDER_READ_ACCESS" android:writePermission="com.oculus.horizon.FBCONNECT_CONTENT_PROVIDER_WRITE_ACCESS"/>
+        <receiver android:exported="true" android:name="com.oculus.horizon.fbconnect.FBConnectReceiver">
+            <intent-filter>
+                <action android:name="com.oculus.fbconnect.UPDATE_CURRENT_FACEBOOK_ACCOUNT"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:exported="false" android:launchMode="singleTask" android:name="com.oculus.horizon.intro.IntroActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <provider android:authorities="com.oculus.horizon.cache" android:exported="false" android:name="com.oculus.horizon.library.cache.LibraryDBCacheContentProvider"/>
+        <provider android:authorities="com.oculus.horizon.linkedaccounts" android:exported="true" android:name="com.oculus.horizon.linkedaccounts.provider.LinkedAccountsContentProvider" android:readPermission="com.oculus.horizon.LINKED_ACCOUNTS_READ_PERMISSION" android:writePermission="com.oculus.horizon.LINKED_ACCOUNTS_WRITE_PERMISSION"/>
+        <meta-data android:name="com.oculus.horizon.fbpermission.PARTY_CALLS_CONTENT_PROVIDER" android:value=""/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:launchMode="singleTask" android:name="com.oculus.horizon.livestreaming.PartyCallActivity" android:screenOrientation="portrait" android:theme="@style/Theme.PartyCall" exported="false"/>
+        <service android:exported="false" android:name="com.oculus.horizon.notifications.receivers.NotificationReceiver"/>
+        <receiver android:exported="true" android:name="com.oculus.horizon.notifications.receivers.OculusFbnsCallbackReceiver">
+            <intent-filter>
+                <category android:name="com.oculus.horizon"/>
+                <action android:name="com.facebook.rti.fbns.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:launchMode="singleTask" android:name="com.oculus.horizon.nux360.Nux360Activity" android:screenOrientation="portrait" android:theme="@style/Theme.Nux360"/>
+        <receiver android:exported="true" android:name="com.oculus.horizon.platform.PanelPresenceReceiver">
+            <intent-filter>
+                <action android:name="com.oculus.horizon.SET_NEW_PANEL_ACTIVE"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.oculus.horizon" android:exported="true" android:name="com.oculus.horizon.provider.ProfileContentProvider"/>
+        <provider android:authorities="com.oculus.horizon.gatekeeper" android:exported="true" android:name="com.oculus.horizon.provider.GatekeeperContentProvider"/>
+        <provider android:authorities="com.oculus.horizon.livestreaming" android:exported="true" android:name="com.oculus.horizon.provider.PartyCallsContentProvider"/>
+        <provider android:authorities="com.oculus.horizon.friendlist" android:exported="true" android:name="com.oculus.horizon.provider.FriendListContentProvider"/>
+        <provider android:authorities="com.oculus.horizon.platformsdk" android:exported="true" android:name="com.oculus.horizon.provider.OVRPlatformContentProvider"/>
+        <receiver android:exported="true" android:name="com.facebook.rti.push.service.MqttSystemBroadcastReceiver" android:process=":fbns">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+        <service android:label="NotificationService" android:name="com.facebook.rti.push.service.FbnsService" android:process=":fbns"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:exported="false" android:name="com.oculus.horizon.react.OculusReactActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Light.NoActionBar" android:windowSoftInputMode="adjustResize"/>
+        <service android:enabled="true" android:exported="false" android:name="com.oculus.horizon.remotewipe.RemoteWipeService"/>
+        <service android:exported="true" android:name="com.oculus.horizon.service.OVRService"/>
+        <service android:exported="true" android:name="com.oculus.horizon.service.SDKLoggingService"/>
+        <service android:exported="true" android:name="com.oculus.horizon.service_media.OVRMediaService"/>
+        <service android:exported="false" android:name="com.oculus.horizon.shortcut.ShortcutInstallerService"/>
+        <activity android:exported="true" android:name="com.oculus.horizon.shortcut.ShortcutActivity" android:theme="@android:style/Theme.Translucent">
+            <intent-filter>
+                <action android:name="com.oculus.horizon.action.OPEN_SHORTCUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <service android:allowBackup="false" android:exported="false" android:name="com.oculus.horizon.spatialai.SpatialAIService"/>
+        <provider android:authorities="com.oculus.horizon.sso" android:exported="true" android:name="com.oculus.horizon.sso.SsoContentProvider"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:exported="false" android:name="com.oculus.horizon.tos.TermsOfServiceActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenSize" android:exported="false" android:launchMode="singleTask" android:name="com.oculus.horizon.twofac.SecuredActionActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Light.NoActionBar"/>
+        <provider android:authorities="com.oculus.horizon.gallery_picker" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+        </provider>
+        <service android:exported="true" android:name="com.oculus.horizon.vr_lifecycle.VRLifecycleJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:name="com.oculus.horizon.vr_lifecycle.VRLifecycleStartUpBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.oculus.horizon.vrbugreporter.BugReporterService" android:permission="com.oculus.permission.SUBMIT_BUG_REPORT"/>
+        <service android:exported="true" android:name="com.oculus.horizon.vrbugreporter.BugReporterUploaderService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="true" android:name="com.oculus.horizon.vrbugreporter.BugReporterCleanerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.oculus.installer.service.InstallerServiceUriProxy"/>
+        <provider android:authorities="com.oculus.library" android:exported="true" android:name="com.oculus.library.provider.AppProvider"/>
+        <service android:exported="true" android:name="com.oculus.library.proxy.InstallerProxyService" android:permission="com.oculus.installer.PROXY_INSTALL"/>
+        <provider android:authorities="com.oculus.horizon.installer.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.oculus.library.proxy.contract.InstallerProxyFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/installer_file_provider_paths"/>
+        </provider>
+        <receiver android:exported="true" android:name="com.oculus.library.receivers.LibrarySDCardStatusChangeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE"/>
+                <action android:name="android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.oculus.standalone.StandaloneSetupJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="true" android:name="com.oculus.standalone.PreloadInstallerBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.oculus.preloader.INSTALL_COMPLETE"/>
+                <action android:name="com.oculus.preloader.ALL_INSTALLS_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

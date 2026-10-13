@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.appmenu.AppMenuIconRowFooter android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View style="@style/APKTOOL_DUMMYVAL_0x7f140103" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/menu_items" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeightSmall">
+        <org.chromium.ui.widget.ChromeImageButton android:id="@id/forward_menu_id" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f0800a0" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f1300e7" style="@style/APKTOOL_DUMMYVAL_0x7f14011c" />
+        <org.chromium.ui.widget.ChromeImageButton android:id="@id/bookmark_this_page_id" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f0800a7" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f1300e6" style="@style/APKTOOL_DUMMYVAL_0x7f14011c" />
+        <org.chromium.ui.widget.ChromeImageButton android:id="@id/offline_page_id" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f08013a" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f1302e0" style="@style/APKTOOL_DUMMYVAL_0x7f14011c" />
+        <org.chromium.ui.widget.ChromeImageButton android:id="@id/info_menu_id" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f0800a1" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f1300e8" style="@style/APKTOOL_DUMMYVAL_0x7f14011c" />
+        <org.chromium.ui.widget.ChromeImageButton android:id="@id/reload_menu_id" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f1300d3" style="@style/APKTOOL_DUMMYVAL_0x7f14011c" />
+    </LinearLayout>
+</org.chromium.chrome.browser.appmenu.AppMenuIconRowFooter>

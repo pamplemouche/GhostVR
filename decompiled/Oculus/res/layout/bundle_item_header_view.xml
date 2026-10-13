@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/TextAppearance.Title" android:id="@id/bundle_item_header_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginTop="@dimen/pdp_vertical_padding_small" android:layout_marginRight="@dimen/common_horizontal_padding" />
+    <include android:layout_width="wrap_content" android:layout_height="1.0dip" android:layout_marginTop="@dimen/pdp_vertical_padding_small" layout="@layout/divider_horizontal_with_theme" />
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/APKTOOL_DUMMYVAL_0x7f13013d"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.chrome.browser.preferences.ChromeSwitchPreference android:key="binary_toggle" android:defaultValue="true" />
+    <org.chromium.chrome.browser.preferences.website.TriStateSiteSettingsPreference android:key="tri_state_toggle" />
+    <org.chromium.chrome.browser.preferences.ChromeBaseCheckBoxPreference android:persistent="false" android:title="@string/APKTOOL_DUMMYVAL_0x7f13018f" android:key="third_party_cookies" android:summary="@string/APKTOOL_DUMMYVAL_0x7f13018e" android:defaultValue="true" />
+    <org.chromium.chrome.browser.preferences.ChromeBaseCheckBoxPreference android:title="@string/APKTOOL_DUMMYVAL_0x7f1302f5" android:key="notifications_vibrate" android:summary="@string/APKTOOL_DUMMYVAL_0x7f1302f4" android:defaultValue="true" />
+    <org.chromium.chrome.browser.preferences.LearnMorePreference android:background="?android:listDivider" android:key="protected_content_learn_more" app:APKTOOL_DUMMYVAL_0x7f040120="@string/APKTOOL_DUMMYVAL_0x7f130337" />
+    <org.chromium.chrome.browser.preferences.ExpandablePreferenceGroup android:key="managed_group" />
+    <org.chromium.chrome.browser.preferences.ExpandablePreferenceGroup android:key="blocked_group" />
+    <org.chromium.chrome.browser.preferences.ExpandablePreferenceGroup android:key="allowed_group" />
+</PreferenceScreen>

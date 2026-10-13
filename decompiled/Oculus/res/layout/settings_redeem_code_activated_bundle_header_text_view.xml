@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/common_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/divider_horizontal_with_theme" />
+    <TextView android:id="@id/header_text_view" android:paddingLeft="@dimen/common_horizontal_padding" android:paddingTop="@dimen/common_vertical_padding" android:paddingRight="@dimen/common_horizontal_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawableEnd="@drawable/bundle_selection_arrow" style="@style/TextAppearance.Body.Medium" />
+    <TextView android:textSize="@dimen/store_horizontal_item_description_text_size" android:ellipsize="end" android:id="@id/description_text_view" android:paddingLeft="@dimen/common_horizontal_padding" android:paddingTop="@dimen/store_description_text_view_top_padding" android:paddingRight="@dimen/common_horizontal_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" />
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@null" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f1300f9" style="@style/APKTOOL_DUMMYVAL_0x7f1400d6"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.ui.widget.ChromeImageView android:id="@id/ss_home_button" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f080162" style="@style/APKTOOL_DUMMYVAL_0x7f140173" />
+    <TextView android:id="@id/ss_home_button_label" android:visibility="visible" android:text="@string/APKTOOL_DUMMYVAL_0x7f1300f9" style="@style/APKTOOL_DUMMYVAL_0x7f1400d7" />
+</LinearLayout>

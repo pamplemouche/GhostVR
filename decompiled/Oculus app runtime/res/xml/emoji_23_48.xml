@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard custom:horizontalGap="1.0px" custom:keyHeight="48.0px" custom:keyTextColor="@color/keyboard_key_text" custom:keyTextSize="26.0px" custom:keyToHighlight="@xml/emoji_20_48" custom:keyWidth="48.0px" custom:verticalGap="1.0px" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <Row>
+        <Key custom:keyLabel="🇲🇶" custom:keyOutputText="🇲🇶" />
+        <Key custom:keyLabel="🇲🇹" custom:keyOutputText="🇲🇹" />
+        <Key custom:keyLabel="🇲🇼" custom:keyOutputText="🇲🇼" />
+        <Key custom:keyLabel="🇲🇿" custom:keyOutputText="🇲🇿" />
+        <Key custom:keyLabel="🇳🇪" custom:keyOutputText="🇳🇪" />
+        <Key custom:keyLabel="🇳🇮" custom:keyOutputText="🇳🇮" />
+        <Key custom:keyLabel="🇳🇵" custom:keyOutputText="🇳🇵" />
+        <Key custom:keyLabel="🇳🇿" custom:keyOutputText="🇳🇿" />
+        <Key custom:keyLabel="🇵🇪" custom:keyOutputText="🇵🇪" />
+        <Key custom:keyLabel="🇵🇭" custom:keyOutputText="🇵🇭" />
+        <Key custom:keyLabel="🇵🇲" custom:keyOutputText="🇵🇲" />
+        <Key custom:keyLabel="🇵🇸" custom:keyOutputText="🇵🇸" />
+        <Key custom:keyLabel="🇵🇾" custom:keyOutputText="🇵🇾" />
+        <Key custom:keyLabel="🇷🇴" custom:keyOutputText="🇷🇴" />
+        <Key custom:keyLabel="🇷🇼" custom:keyOutputText="🇷🇼" />
+        <Key custom:keyLabel="🇸🇨" custom:keyOutputText="🇸🇨" />
+        <Key custom:keyLabel="🇸🇬" custom:keyOutputText="🇸🇬" />
+        <Key custom:keyLabel="🇸🇯" custom:keyOutputText="🇸🇯" />
+        <Key custom:keyLabel="🇸🇲" custom:keyOutputText="🇸🇲" />
+        <Key custom:keyLabel="🇸🇷" custom:keyOutputText="🇸🇷" />
+        <Key custom:codes="-4" custom:horizontalGap="0.0px" custom:keyEdgeFlags="right" custom:keyIcon="@drawable/dismiss" />
+    </Row>
+    <Row>
+        <Key custom:keyLabel="🇲🇷" custom:keyOutputText="🇲🇷" />
+        <Key custom:keyLabel="🇲🇺" custom:keyOutputText="🇲🇺" />
+        <Key custom:keyLabel="🇲🇽" custom:keyOutputText="🇲🇽" />
+        <Key custom:keyLabel="🇳🇦" custom:keyOutputText="🇳🇦" />
+        <Key custom:keyLabel="🇳🇫" custom:keyOutputText="🇳🇫" />
+        <Key custom:keyLabel="🇳🇱" custom:keyOutputText="🇳🇱" />
+        <Key custom:keyLabel="🇳🇷" custom:keyOutputText="🇳🇷" />
+        <Key custom:keyLabel="🇴🇲" custom:keyOutputText="🇴🇲" />
+        <Key custom:keyLabel="🇵🇫" custom:keyOutputText="🇵🇫" />
+        <Key custom:keyLabel="🇵🇰" custom:keyOutputText="🇵🇰" />
+        <Key custom:keyLabel="🇵🇳" custom:keyOutputText="🇵🇳" />
+        <Key custom:keyLabel="🇵🇹" custom:keyOutputText="🇵🇹" />
+        <Key custom:keyLabel="🇶🇦" custom:keyOutputText="🇶🇦" />
+        <Key custom:keyLabel="🇷🇸" custom:keyOutputText="🇷🇸" />
+        <Key custom:keyLabel="🇸🇦" custom:keyOutputText="🇸🇦" />
+        <Key custom:keyLabel="🇸🇩" custom:keyOutputText="🇸🇩" />
+        <Key custom:keyLabel="🇸🇭" custom:keyOutputText="🇸🇭" />
+        <Key custom:keyLabel="🇸🇰" custom:keyOutputText="🇸🇰" />
+        <Key custom:keyLabel="🇸🇳" custom:keyOutputText="🇸🇳" />
+        <Key custom:keyLabel="🇸🇸" custom:keyOutputText="🇸🇸" />
+        <Key custom:codes="-5" custom:horizontalGap="0.0px" custom:isRepeatable="true" custom:keyIcon="@drawable/backspace_48_48" />
+    </Row>
+    <Row>
+        <Key custom:keyLabel="🇲🇸" custom:keyOutputText="🇲🇸" />
+        <Key custom:keyLabel="🇲🇻" custom:keyOutputText="🇲🇻" />
+        <Key custom:keyLabel="🇲🇾" custom:keyOutputText="🇲🇾" />
+        <Key custom:keyLabel="🇳🇨" custom:keyOutputText="🇳🇨" />
+        <Key custom:keyLabel="🇳🇬" custom:keyOutputText="🇳🇬" />
+        <Key custom:keyLabel="🇳🇴" custom:keyOutputText="🇳🇴" />
+        <Key custom:keyLabel="🇳🇺" custom:keyOutputText="🇳🇺" />
+        <Key custom:keyLabel="🇵🇦" custom:keyOutputText="🇵🇦" />
+        <Key custom:keyLabel="🇵🇬" custom:keyOutputText="🇵🇬" />
+        <Key custom:keyLabel="🇵🇱" custom:keyOutputText="🇵🇱" />
+        <Key custom:keyLabel="🇵🇷" custom:keyOutputText="🇵🇷" />
+        <Key custom:keyLabel="🇵🇼" custom:keyOutputText="🇵🇼" />
+        <Key custom:keyLabel="🇷🇪" custom:keyOutputText="🇷🇪" />
+        <Key custom:keyLabel="🇷🇺" custom:keyOutputText="🇷🇺" />
+        <Key custom:keyLabel="🇸🇧" custom:keyOutputText="🇸🇧" />
+        <Key custom:keyLabel="🇸🇪" custom:keyOutputText="🇸🇪" />
+        <Key custom:keyLabel="🇸🇮" custom:keyOutputText="🇸🇮" />
+        <Key custom:keyLabel="🇸🇱" custom:keyOutputText="🇸🇱" />
+        <Key custom:keyLabel="🇸🇴" custom:keyOutputText="🇸🇴" />
+        <Key custom:keyLabel="🇸🇹" custom:keyOutputText="🇸🇹" />
+        <Key custom:codes="-2" custom:horizontalGap="0.0px" custom:keyHeight="97.0px" custom:keyLabel="GO" />
+    </Row>
+    <Row>
+        <Key custom:codes="-7" custom:keyIcon="@drawable/keyboard_48_48" />
+        <Key custom:codes="-3" custom:keyIcon="@drawable/back_48_48" custom:keyboard="@xml/emoji_22_48" />
+        <Key custom:codes="-3" custom:keyIcon="@drawable/forward_48_48" custom:keyboard="@xml/emoji_24_48" />
+        <Key custom:codes="-3" custom:keyIcon="@drawable/group_0_96_48" custom:keyWidth="103.0px" custom:keyboard="@xml/emoji_0_48" />
+        <Key custom:codes="-3" custom:keyIcon="@drawable/group_1_96_48" custom:keyWidth="103.0px" custom:keyboard="@xml/emoji_6_48" />
+        <Key custom:codes="-3" custom:keyIcon="@drawable/group_2_96_48" custom:keyWidth="103.0px" custom:keyboard="@xml/emoji_8_48" />
+        <Key custom:codes="-3" custom:keyIcon="@drawable/group_3_96_48" custom:keyWidth="103.0px" custom:keyboard="@xml/emoji_9_48" />
+        <Key custom:codes="-3" custom:keyIcon="@drawable/group_4_96_48" custom:keyWidth="103.0px" custom:keyboard="@xml/emoji_13_48" />
+        <Key custom:codes="-3" custom:keyIcon="@drawable/group_5_96_48" custom:keyWidth="103.0px" custom:keyboard="@xml/emoji_14_48" />
+        <Key custom:codes="-3" custom:keyIcon="@drawable/group_6_96_48" custom:keyWidth="103.0px" custom:keyboard="@xml/emoji_16_48" />
+        <Key custom:codes="-3" custom:keyIcon="@drawable/group_7_96_48" custom:keyWidth="104.0px" custom:keyboard="@xml/emoji_20_48" />
+    </Row>
+</Keyboard>

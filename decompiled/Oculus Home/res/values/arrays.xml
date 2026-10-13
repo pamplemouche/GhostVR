@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="main">
+        <item>name:#main</item>
+    </string-array>
+    <array name="oculus_vrshell_layers">
+        <item>@array/videos_behind_main</item>
+        <item>@array/main</item>
+        <item>@array/videos</item>
+        <item>@array/playerui</item>
+    </array>
+    <string-array name="playerui">
+        <item>name:playerui</item>
+    </string-array>
+    <string-array name="videos">
+        <item>name:videos</item>
+    </string-array>
+    <string-array name="videos_behind_main">
+        <item>name:videos_behind_main</item>
+    </string-array>
+</resources>

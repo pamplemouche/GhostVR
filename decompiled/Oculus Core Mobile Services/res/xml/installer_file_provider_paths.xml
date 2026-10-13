@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xsi:noNamespaceSchemaLocation="../../../../../../i18n/hack/fbtstrings.xsd" xsi:schemaLocation="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <files-path name="apks" path="apk_to_install" />
+</paths>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:orderingFromXml="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference android:title="Tracing" android:key="tracing" android:fragment="org.chromium.chrome.browser.preferences.developer.TracingPreferences" />
+    <org.chromium.chrome.browser.preferences.TextMessagePreference android:enabled="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:title="Hint: You can also enable Developer options on Beta/Stable channels by tapping the Chrome version in &quot;Settings > About Chrome&quot; multiple times." android:key="beta_stable_hint" app:APKTOOL_DUMMYVAL_0x7f040028="false" app:APKTOOL_DUMMYVAL_0x7f04002a="false" />
+</PreferenceScreen>

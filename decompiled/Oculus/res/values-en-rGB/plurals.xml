@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="bundle_pdp_item_count">
+        <item quantity="other">%1$d experiences</item>
+        <item quantity="one">1 experience</item>
+    </plurals>
+    <plurals name="pdp_controller_required">
+        <item quantity="other">Requires either</item>
+        <item quantity="one">Requires</item>
+    </plurals>
+</resources>

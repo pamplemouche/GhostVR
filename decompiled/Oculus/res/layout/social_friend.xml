@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?pressableTextWithBackgroundStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_gravity="center_vertical" android:layout_width="@dimen/social_avatar_big" android:layout_height="@dimen/social_avatar_big" android:layout_marginLeft="16.0dip">
+        <com.facebook.drawee.view.SimpleDraweeView android:layout_gravity="center" android:id="@id/avatar" android:layout_width="@dimen/social_avatar_big" android:layout_height="@dimen/social_avatar_big" style="@style/Oculus.Social.Avatar" />
+        <com.facebook.drawee.view.SimpleDraweeView android:layout_gravity="bottom|center|left" android:id="@id/status_icon" android:layout_width="10.0dip" android:layout_height="10.0dip" />
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="14.0sp" android:ellipsize="end" android:id="@id/name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="sans-serif-medium" />
+        <TextView android:textSize="14.0sp" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/alias" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:drawablePadding="9.0dip" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/oculus_black_4" android:ellipsize="end" android:id="@id/status" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/facebook_friend_indicator" android:paddingLeft="18.0dip" android:visibility="gone" android:layout_width="@dimen/social_friend_facebook_indicator_size" android:layout_height="@dimen/social_friend_facebook_indicator_size" android:src="@drawable/social_facebook_friend_icon" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/options" android:paddingLeft="18.0dip" android:paddingTop="@dimen/social_friend_context_button_padding_vertical" android:paddingRight="24.0dip" android:paddingBottom="@dimen/social_friend_context_button_padding_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/social_more_icon" />
+</LinearLayout>

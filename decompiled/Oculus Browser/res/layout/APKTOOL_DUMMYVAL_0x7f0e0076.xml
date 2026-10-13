@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton android:paddingTop="@dimen/APKTOOL_DUMMYVAL_0x7f0700ac" android:paddingBottom="@dimen/APKTOOL_DUMMYVAL_0x7f0700ac" android:layout_width="wrap_content" android:scaleType="centerInside" android:adjustViewBounds="true" android:maxWidth="@dimen/APKTOOL_DUMMYVAL_0x7f0700ab" style="@style/APKTOOL_DUMMYVAL_0x7f140294"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

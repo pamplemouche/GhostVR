@@ -1,0 +1,295 @@
+.class public Lcom/oculus/appmanager/info/ApkUpdateInfoContract;
+.super Ljava/lang/Object;
+.source "ApkUpdateInfoContract.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/oculus/appmanager/info/ApkUpdateInfoContract$ApkUpdateTable;,
+        Lcom/oculus/appmanager/info/ApkUpdateInfoContract$Column;,
+        Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;,
+        Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateType;,
+        Lcom/oculus/appmanager/info/ApkUpdateInfoContract$IntegerBasedEnum;
+    }
+.end annotation
+
+
+# static fields
+.field public static final EXTRA_ASSET_REQUIRED_FILENAME:Ljava/lang/String; = "asset_req_filename"
+
+.field public static final EXTRA_CANCELED_BY:Ljava/lang/String; = "canceled_by"
+
+.field public static final EXTRA_CREATED_TIMESTAMP:Ljava/lang/String; = "created_ts"
+
+.field public static final EXTRA_DEPENDENT_START_BY:Ljava/lang/String; = "dependency_started_by"
+
+.field public static final EXTRA_DOWNLOADED_EXTERNAL_FILE:Ljava/lang/String; = "download_local_file"
+
+.field public static final EXTRA_DOWNLOADED_SIZE:Ljava/lang/String; = "download_size"
+
+.field public static final EXTRA_DOWNLOADING_EXTERNAL_FILE:Ljava/lang/String; = "downloading_external_file"
+
+.field public static final EXTRA_DOWNLOAD_ID:Ljava/lang/String; = "download_id"
+
+.field public static final EXTRA_DOWNLOAD_NOTIF_SENT:Ljava/lang/String; = "download_success_notification_sent"
+
+.field public static final EXTRA_DOWNLOAD_PENDING_DURATION_SECONDS:Ljava/lang/String; = "download_pending_duration"
+
+.field public static final EXTRA_DOWNLOAD_REASON:Ljava/lang/String; = "download_reason"
+
+.field public static final EXTRA_DOWNLOAD_RUNNING_DURATION_SECONDS:Ljava/lang/String; = "download_running_duration"
+
+.field public static final EXTRA_DOWNLOAD_SCHEDULED_TIME_MS:Ljava/lang/String; = "download_scheduled_time"
+
+.field public static final EXTRA_DOWNLOAD_START_TIME_MS:Ljava/lang/String; = "download_start_time"
+
+.field public static final EXTRA_DOWNLOAD_STATUS:Ljava/lang/String; = "download_status"
+
+.field public static final EXTRA_ERROR_CODE:Ljava/lang/String; = "error_code"
+
+.field public static final EXTRA_EXTERNAL_PATCHED_FILE:Ljava/lang/String; = "patch_external_file"
+
+.field public static final EXTRA_FAILED_CATEGORY:Ljava/lang/String; = "failed_category"
+
+.field public static final EXTRA_FAILED_DESCR:Ljava/lang/String; = "failed_descr"
+
+.field public static final EXTRA_FAILED_STATE:Ljava/lang/String; = "failed_state"
+
+.field public static final EXTRA_FAILURE_CODE:Ljava/lang/String; = "failure_code"
+
+.field public static final EXTRA_FUTURE_ID:Ljava/lang/String; = "future_id"
+
+.field public static final EXTRA_FUTURE_PID:Ljava/lang/String; = "future_pid"
+
+.field public static final EXTRA_INSTALLATION_DURATION_MS:Ljava/lang/String; = "install_duration_ms"
+
+.field public static final EXTRA_INSTALLATION_START_TIME_MS:Ljava/lang/String; = "install_start_time_ms"
+
+.field public static final EXTRA_INSTALL_BACKUP_PATH:Ljava/lang/String; = "install_backup_path"
+
+.field public static final EXTRA_INSTALL_PREP_PATH:Ljava/lang/String; = "install_preparation_path"
+
+.field public static final EXTRA_IS_REQUIRED_ASSET:Ljava/lang/String; = "is_required_asset"
+
+.field public static final EXTRA_IS_RETRY_OF:Ljava/lang/String; = "is_retry_of"
+
+.field public static final EXTRA_PATCH_FAILURE_FALLBACK_CHECKSUM:Ljava/lang/String; = "patch_failure_fallback_checksum"
+
+.field public static final EXTRA_PATCH_FAILURE_FALLBACK_SIZE:Ljava/lang/String; = "patch_failure_fallback_size"
+
+.field public static final EXTRA_PATCH_FAILURE_FALLBACK_URI:Ljava/lang/String; = "patch_failure_fallback_url"
+
+.field public static final EXTRA_RECOVERY_TRIES:Ljava/lang/String; = "recovery_tries"
+
+.field public static final EXTRA_RETRIED_AS_ID:Ljava/lang/String; = "retry_id"
+
+.field public static final EXTRA_SANDBOXED_FILE:Ljava/lang/String; = "sandboxed_local_file"
+
+.field public static final EXTRA_STACK_TRACE:Ljava/lang/String; = "stack_trace"
+
+.field public static final EXTRA_STATE:Ljava/lang/String; = "state"
+
+.field public static final EXTRA_STATE_TIMESTAMP:Ljava/lang/String; = "state_ts"
+
+.field public static final EXTRA_TRANSITIVE_FAILURE:Ljava/lang/String; = "failed_transitive"
+
+.field public static final EXTRA_UPDATE_PAYLOAD_SIZE:Ljava/lang/String; = "payload_size"
+
+.field public static final EXTRA_UUID:Ljava/lang/String; = "uuid"
+
+.field public static final INVALID_FAILURE_CODE:I = -0x1
+
+.field public static final INVALID_FUTURE_ID:J = -0x1L
+
+.field public static final INVALID_FUTURE_PID:I = -0x1
+
+.field public static final INVALID_TIME:J = -0x1L
+
+.field public static final INVALID_UPDATE_ID:J = -0x1L
+
+.field public static final STATE_CANCELED:I = 0x40200
+
+.field public static final STATE_DELETING:I = 0x20070
+
+.field public static final STATE_DOWNLOADED:I = 0xa0030
+
+.field public static final STATE_DOWNLOADING:I = 0xa0020
+
+.field public static final STATE_FAILED:I = 0x40300
+
+.field public static final STATE_INSTALLING:I = 0x20060
+
+.field public static final STATE_NEW:I = 0x90001
+
+.field public static final STATE_QUEUED_DOWNLOAD:I = 0xa0010
+
+.field public static final STATE_RETRIED:I = 0x40400
+
+.field public static final STATE_SUCCESS:I = 0x40100
+
+.field public static final STATE_TYPE_CANCELABLE:I = 0x80000
+
+.field public static final STATE_TYPE_FINAL:I = 0x40000
+
+.field public static final STATE_TYPE_INITIAL:I = 0x10000
+
+.field public static final STATE_TYPE_MASK:I = -0x10000
+
+.field public static final STATE_TYPE_TRANSIENT:I = 0x20000
+
+.field public static final STATE_UNINSTALLING:I = 0x20500
+
+.field public static final STATE_VERIFIED:I = 0xa0050
+
+.field public static final STATE_VERIFYING:I = 0xa0040
+
+.field public static final UNKNOWN_DOWNLOAD_SIZE:J = -0x1L
+
+.field public static final UPDATE_FULL_APK:I = 0x120000
+
+.field public static final UPDATE_FULL_ASSET:I = 0x140000
+
+.field public static final UPDATE_FULL_OBB:I = 0x110000
+
+.field public static final UPDATE_PATCH_APK:I = 0x220000
+
+.field public static final UPDATE_PATCH_ASSET:I = 0x240000
+
+.field public static final UPDATE_PATCH_OBB:I = 0x210000
+
+.field public static final UPDATE_TYPE_APK:I = 0x20000
+
+.field public static final UPDATE_TYPE_ASSET:I = 0x40000
+
+.field public static final UPDATE_TYPE_FULL:I = 0x100000
+
+.field public static final UPDATE_TYPE_MASK:I = -0x10000
+
+.field public static final UPDATE_TYPE_OBB:I = 0x10000
+
+.field public static final UPDATE_TYPE_PATCH:I = 0x200000
+
+.field public static final UPDATE_TYPE_UNINSTALL:I = 0x400000
+
+.field public static final VERSION_NOT_INSTALLED:I = -0x80000000
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 9
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method static synthetic access$000(Ljava/lang/Class;I)Ljava/lang/Enum;
+    .locals 1
+    .param p0, "x0"    # Ljava/lang/Class;
+    .param p1, "x1"    # I
+
+    .prologue
+    .line 9
+    invoke-static {p0, p1}, Lcom/oculus/appmanager/info/ApkUpdateInfoContract;->fromEnumInt(Ljava/lang/Class;I)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method private static fromEnumInt(Ljava/lang/Class;I)Ljava/lang/Enum;
+    .locals 5
+    .param p1, "code"    # I
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Enum;",
+            ":",
+            "Lcom/oculus/appmanager/info/ApkUpdateInfoContract$IntegerBasedEnum;",
+            ">(",
+            "Ljava/lang/Class",
+            "<TT;>;I)TT;"
+        }
+    .end annotation
+
+    .prologue
+    .line 441
+    .local p0, "enumClass":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
+    invoke-virtual {p0}, Ljava/lang/Class;->getEnumConstants()[Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [Ljava/lang/Enum;
+
+    array-length v4, v1
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    if-ge v3, v4, :cond_1
+
+    aget-object v0, v1, v3
+
+    .local v0, "value":Ljava/lang/Enum;, "TT;"
+    move-object v2, v0
+
+    .line 442
+    check-cast v2, Lcom/oculus/appmanager/info/ApkUpdateInfoContract$IntegerBasedEnum;
+
+    invoke-interface {v2}, Lcom/oculus/appmanager/info/ApkUpdateInfoContract$IntegerBasedEnum;->asInt()I
+
+    move-result v2
+
+    if-ne v2, p1, :cond_0
+
+    .line 443
+    return-object v0
+
+    .line 441
+    :cond_0
+    add-int/lit8 v2, v3, 0x1
+
+    move v3, v2
+
+    goto :goto_0
+
+    .line 446
+    .end local v0    # "value":Ljava/lang/Enum;, "TT;"
+    :cond_1
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, " int : "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method

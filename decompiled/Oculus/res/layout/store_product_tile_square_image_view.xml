@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.view.SimpleDraweeView android:layout_gravity="center_vertical" android:id="@id/image" android:layout_width="86.0dip" android:layout_height="@dimen/store_recyclerview_item_height" app:actualImageScaleType="centerCrop" app:placeholderImage="@drawable/store_item_placeholder" style="?store_productImageStyle" />
+    <include android:visibility="gone" layout="@layout/iap_badge_view" />
+    <include android:visibility="gone" layout="@layout/three_d_tag_view" />
+    <include android:visibility="gone" layout="@layout/promo_benefit_badge_view" />
+</FrameLayout>

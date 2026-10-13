@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.chrome.browser.ui.widget.PromoDialogLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/promo_dialog_layout" android:background="@drawable/APKTOOL_DUMMYVAL_0x7f0802ad" android:layout_width="wrap_content" android:layout_height="wrap_content" app:APKTOOL_DUMMYVAL_0x7f040183="@dimen/APKTOOL_DUMMYVAL_0x7f0700ef" app:APKTOOL_DUMMYVAL_0x7f040184="@dimen/APKTOOL_DUMMYVAL_0x7f0700ef">
+        <org.chromium.chrome.browser.ui.widget.FadingEdgeScrollView android:id="@id/promo_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:fadeScrollbars="false">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/full_promo_content" android:padding="@dimen/APKTOOL_DUMMYVAL_0x7f070277" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center" android:id="@id/illustration" android:paddingTop="@dimen/APKTOOL_DUMMYVAL_0x7f070273" android:layout_width="@dimen/APKTOOL_DUMMYVAL_0x7f070274" android:layout_height="wrap_content" android:scaleType="fitCenter" android:layout_marginStart="@dimen/APKTOOL_DUMMYVAL_0x7f070273" android:layout_marginEnd="@dimen/APKTOOL_DUMMYVAL_0x7f070273" />
+                <org.chromium.chrome.browser.ui.widget.BoundedLinearLayout android:orientation="vertical" android:id="@id/scrollable_promo_content" android:layout_width="wrap_content" android:layout_height="wrap_content" app:APKTOOL_DUMMYVAL_0x7f040183="@dimen/APKTOOL_DUMMYVAL_0x7f070275" app:APKTOOL_DUMMYVAL_0x7f040184="@dimen/APKTOOL_DUMMYVAL_0x7f070275">
+                    <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401bf" android:id="@id/header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f0700ee" android:layout_marginBottom="@dimen/APKTOOL_DUMMYVAL_0x7f0700ee" />
+                    <org.chromium.ui.widget.TextViewWithLeading android:id="@id/subheader" android:layout_width="wrap_content" android:layout_height="wrap_content" app:APKTOOL_DUMMYVAL_0x7f040169="@dimen/APKTOOL_DUMMYVAL_0x7f0702f9" style="@style/APKTOOL_DUMMYVAL_0x7f1401b7" />
+                </org.chromium.chrome.browser.ui.widget.BoundedLinearLayout>
+            </LinearLayout>
+        </org.chromium.chrome.browser.ui.widget.FadingEdgeScrollView>
+        <ViewStub android:id="@id/footer_stub" android:layout="@layout/APKTOOL_DUMMYVAL_0x7f0e0091" android:inflatedId="@id/footer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/APKTOOL_DUMMYVAL_0x7f070277" />
+        <org.chromium.chrome.browser.ui.widget.DualControlLayout android:layout_gravity="end" android:id="@id/button_bar" android:padding="@dimen/APKTOOL_DUMMYVAL_0x7f070277" android:layout_width="fill_parent" android:layout_height="wrap_content" app:APKTOOL_DUMMYVAL_0x7f040051="end" app:APKTOOL_DUMMYVAL_0x7f0401fd="@dimen/APKTOOL_DUMMYVAL_0x7f070278" />
+    </org.chromium.chrome.browser.ui.widget.PromoDialogLayout>
+</merge>

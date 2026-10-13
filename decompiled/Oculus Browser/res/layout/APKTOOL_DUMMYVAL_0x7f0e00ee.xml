@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.keyboard_accessory.sheet_tabs.PasswordAccessoryInfoView android:gravity="start|center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f070176" android:layout_marginBottom="@dimen/APKTOOL_DUMMYVAL_0x7f070171" android:fillViewport="true" android:paddingStart="@dimen/APKTOOL_DUMMYVAL_0x7f07017a" android:paddingEnd="@dimen/APKTOOL_DUMMYVAL_0x7f07017a"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401c1" android:gravity="start|center" android:id="@id/password_info_title" android:paddingTop="@dimen/APKTOOL_DUMMYVAL_0x7f070171" android:paddingBottom="@dimen/APKTOOL_DUMMYVAL_0x7f070171" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/APKTOOL_DUMMYVAL_0x7f07016b" />
+    <LinearLayout android:gravity="start|center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f070177" android:fillViewport="true">
+        <org.chromium.ui.widget.ChipView android:gravity="start|center" android:id="@id/suggestion_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f140104" />
+        <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center" android:id="@id/favicon" android:layout_width="@dimen/APKTOOL_DUMMYVAL_0x7f070178" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f070178" android:importantForAccessibility="no" />
+    </LinearLayout>
+    <org.chromium.ui.widget.ChipView android:gravity="start|center" android:id="@id/password_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f140104" />
+    <View android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f070172" android:layout_marginBottom="0.0dip" style="@style/APKTOOL_DUMMYVAL_0x7f140103" />
+</org.chromium.chrome.browser.keyboard_accessory.sheet_tabs.PasswordAccessoryInfoView>

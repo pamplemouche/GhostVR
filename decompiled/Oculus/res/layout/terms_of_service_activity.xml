@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/oculus_black_10" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:background="@drawable/white_dialog_background" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="30.0dip" android:layout_centerInParent="true">
+        <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/dialog_divider">
+            <TextView android:gravity="center" android:id="@id/dialog_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="25.0dip" />
+        </ScrollView>
+        <View android:id="@id/dialog_divider" android:background="@color/oculus_gray" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_above="@id/dialog_accept_button" />
+        <com.oculus.horizon.widget.ProgressButton android:id="@id/dialog_accept_button" android:background="@drawable/pressable_item_background" android:layout_width="fill_parent" android:layout_height="@dimen/custom_alert_dialog_item_height" android:text="@string/common_agree_and_continue" android:layout_alignParentBottom="true" style="?android:textAppearance" />
+    </RelativeLayout>
+</RelativeLayout>

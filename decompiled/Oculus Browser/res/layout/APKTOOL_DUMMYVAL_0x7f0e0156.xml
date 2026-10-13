@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/editor_container" android:background="@color/APKTOOL_DUMMYVAL_0x7f06011e"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <org.chromium.chrome.browser.widget.prefeditor.EditorDialogToolbar android:id="@id/action_bar" android:layout_width="fill_parent" android:layout_height="?APKTOOL_DUMMYVAL_0x7f040003" android:layout_alignParentTop="true" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" />
+    <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e017e" />
+    <org.chromium.chrome.browser.ui.widget.FadingEdgeScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_below="@id/action_bar" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" android:layout_alignParentEnd="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/contents" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/APKTOOL_DUMMYVAL_0x7f07025f" android:paddingEnd="@dimen/APKTOOL_DUMMYVAL_0x7f07025f" />
+    </org.chromium.chrome.browser.ui.widget.FadingEdgeScrollView>
+</RelativeLayout>

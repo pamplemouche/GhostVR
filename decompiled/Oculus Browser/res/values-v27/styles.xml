@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="APKTOOL_DUMMYVAL_0x7f1400f0" parent="@style/APKTOOL_DUMMYVAL_0x7f140056">
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+    <style name="APKTOOL_DUMMYVAL_0x7f14024b" parent="@style/APKTOOL_DUMMYVAL_0x7f140057">
+        <item name="android:navigationBarColor">@color/APKTOOL_DUMMYVAL_0x7f06002e</item>
+        <item name="android:windowLightNavigationBar">@bool/APKTOOL_DUMMYVAL_0x7f050006</item>
+        <item name="android:navigationBarDividerColor">@color/APKTOOL_DUMMYVAL_0x7f06002f</item>
+    </style>
+    <style name="APKTOOL_DUMMYVAL_0x7f14025c" parent="@style/APKTOOL_DUMMYVAL_0x7f14005b">
+        <item name="android:navigationBarColor">@color/APKTOOL_DUMMYVAL_0x7f06002e</item>
+        <item name="android:windowLightNavigationBar">@bool/APKTOOL_DUMMYVAL_0x7f050006</item>
+        <item name="android:navigationBarDividerColor">@color/APKTOOL_DUMMYVAL_0x7f06002f</item>
+    </style>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/preselect_avatar_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.drawee.view.SimpleDraweeView android:layout_gravity="center" android:id="@id/avatar" android:layout_width="@dimen/premade_avatar_dimension" android:layout_height="@dimen/premade_avatar_dimension" style="@style/Oculus.Social.Avatar" />
+</FrameLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?nuxBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/nux360_toolbar" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/nux_container_padding" android:paddingTop="?actionBarSize" android:paddingRight="@dimen/nux_container_padding" android:paddingBottom="@dimen/nux_container_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_container_padding" android:text="@string/nux_pin_header" />
+        <com.oculus.horizon.widget.EditPIN android:textColor="?android:textColorPrimary" android:layout_gravity="center" android:id="@id/nux_pin" android:paddingTop="@dimen/nux_single_field_offset" android:paddingBottom="@dimen/nux_single_field_offset" android:layout_width="fill_parent" android:layout_height="wrap_content" app:showKeyboard="true" />
+        <Button android:layout_gravity="bottom" android:id="@id/nux_continue" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_continue" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="APKTOOL_DUMMYVAL_0x7f050000">true</bool>
+    <bool name="APKTOOL_DUMMYVAL_0x7f050001">false</bool>
+    <bool name="APKTOOL_DUMMYVAL_0x7f050002">true</bool>
+    <bool name="APKTOOL_DUMMYVAL_0x7f050003">true</bool>
+    <bool name="APKTOOL_DUMMYVAL_0x7f050004">false</bool>
+    <bool name="APKTOOL_DUMMYVAL_0x7f050005">true</bool>
+    <bool name="APKTOOL_DUMMYVAL_0x7f050006">true</bool>
+    <bool name="APKTOOL_DUMMYVAL_0x7f050007">true</bool>
+</resources>

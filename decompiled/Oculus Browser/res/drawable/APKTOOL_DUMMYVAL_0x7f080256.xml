@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:maxLevel="@integer/APKTOOL_DUMMYVAL_0x7f0c0017">
+        <shape android:shape="oval">
+            <solid android:color="@color/APKTOOL_DUMMYVAL_0x7f06011f" />
+        </shape>
+    </item>
+    <item android:maxLevel="@integer/APKTOOL_DUMMYVAL_0x7f0c0019">
+        <shape android:shape="oval">
+            <solid android:color="@color/APKTOOL_DUMMYVAL_0x7f0600ee" />
+        </shape>
+    </item>
+    <item android:maxLevel="@integer/APKTOOL_DUMMYVAL_0x7f0c0018">
+        <shape android:shape="oval">
+            <solid android:color="@color/APKTOOL_DUMMYVAL_0x7f0601a4" />
+        </shape>
+    </item>
+</level-list>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/APKTOOL_DUMMYVAL_0x7f130130" android:key="accounts_category" />
+    <Preference android:layout="@layout/APKTOOL_DUMMYVAL_0x7f0e0094" />
+    <PreferenceCategory android:title="@string/APKTOOL_DUMMYVAL_0x7f13012e" android:key="parental_settings" />
+    <org.chromium.chrome.browser.preferences.TextMessagePreference android:key="parent_accounts" />
+    <Preference android:title="@string/APKTOOL_DUMMYVAL_0x7f13012b" android:selectable="false" android:key="child_content" />
+    <Preference android:layout="@layout/APKTOOL_DUMMYVAL_0x7f0e0094" android:key="child_content_divider" />
+    <Preference android:title="@string/APKTOOL_DUMMYVAL_0x7f13012f" android:key="sign_out" />
+    <Preference android:layout="@layout/APKTOOL_DUMMYVAL_0x7f0e0094" android:key="sign_out_divider" />
+</PreferenceScreen>

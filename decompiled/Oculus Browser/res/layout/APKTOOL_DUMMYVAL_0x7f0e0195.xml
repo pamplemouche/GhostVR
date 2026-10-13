@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/action_bar_bg" android:background="@color/APKTOOL_DUMMYVAL_0x7f06018c" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f07031c" />
+    <ViewStub android:id="@id/action_bar_stub" android:background="@color/APKTOOL_DUMMYVAL_0x7f060087" android:inflatedId="@id/action_bar" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f07031c" />
+    <org.chromium.chrome.browser.gesturenav.HistoryNavigationLayout android:id="@id/list_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f07031c">
+        <android.support.v7.widget.RecyclerView android:id="@id/recycler_view" android:visibility="gone" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:layout_gravity="center" android:id="@id/empty_view_wrapper" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/APKTOOL_DUMMYVAL_0x7f07029c" android:layout_marginEnd="@dimen/APKTOOL_DUMMYVAL_0x7f07029c" style="@style/APKTOOL_DUMMYVAL_0x7f1400de">
+            <org.chromium.ui.widget.TextViewWithLeading android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401b7" android:layout_gravity="center" android:id="@id/empty_view" android:padding="@dimen/APKTOOL_DUMMYVAL_0x7f070074" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="center" app:APKTOOL_DUMMYVAL_0x7f040169="@dimen/APKTOOL_DUMMYVAL_0x7f0702f9" />
+        </FrameLayout>
+        <org.chromium.chrome.browser.ui.widget.LoadingView android:layout_gravity="center" android:id="@id/loading_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </org.chromium.chrome.browser.gesturenav.HistoryNavigationLayout>
+    <org.chromium.chrome.browser.ui.widget.FadingShadowView android:id="@id/shadow" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f07004f" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f07031c" />
+</merge>

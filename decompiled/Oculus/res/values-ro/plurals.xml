@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="app_with_iap_count">
+        <item quantity="other">cu %1$d IAP-uri</item>
+        <item quantity="one">cu 1 IAP</item>
+    </plurals>
+    <plurals name="app_with_iap_header_count">
+        <item quantity="other">%1$d IAP-uri pentru %2$s</item>
+        <item quantity="one">%1$d IAP pentru %2$s</item>
+    </plurals>
+    <plurals name="bundle_pdp_item_count">
+        <item quantity="other">%1$d experienţe</item>
+        <item quantity="one">1 experienţă</item>
+    </plurals>
+    <plurals name="pdp_controller_required">
+        <item quantity="other">Necesită unul dintre:</item>
+        <item quantity="one">Necesită</item>
+    </plurals>
+    <plurals name="store_countdown_days">
+        <item quantity="other">%1$s zile</item>
+        <item quantity="one">1 zi</item>
+    </plurals>
+</resources>

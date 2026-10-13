@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?nuxBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/nux360_toolbar" />
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/nux_container_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize">
+        <com.google.android.material.textfield.TextInputLayout android:id="@id/email_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?textInputLayoutStyle">
+            <com.google.android.material.textfield.TextInputEditText android:id="@id/email_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/common_email" android:inputType="textEmailAddress" android:imeOptions="actionNext" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@id/password_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?textInputLayoutStyle">
+            <com.google.android.material.textfield.TextInputEditText android:id="@id/password_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/common_password" android:inputType="textPassword" android:imeOptions="actionDone" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.oculus.horizon.widget.ProgressButton android:id="@id/sign_in_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_single_field_offset" android:text="@string/common_sign_in" />
+        <TextView android:textAppearance="@style/Facebook.TextAppearance.Secondary.Small" android:layout_gravity="center" android:id="@id/reset_password_link" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_single_field_offset" android:text="@string/common_forgot_your_password" />
+    </LinearLayout>
+</FrameLayout>

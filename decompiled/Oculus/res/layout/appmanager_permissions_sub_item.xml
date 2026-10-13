@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="center|left" android:id="@id/permission_label" android:paddingLeft="@dimen/common_horizontal_padding" android:paddingRight="@dimen/common_horizontal_padding" android:paddingBottom="@dimen/common_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include android:id="@id/permission_bottom_divider" layout="@layout/divider_horizontal" />
+</LinearLayout>

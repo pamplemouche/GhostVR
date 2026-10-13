@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:insetLeft="0.0dip" android:insetRight="0.0dip" android:insetTop="5.0dip" android:insetBottom="5.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shape>
+        <size android:width="2.0dip" />
+        <solid android:color="@color/colorAnytimeDetailBarDivider" />
+        <padding android:bottom="5.0dip" />
+    </shape>
+</inset>

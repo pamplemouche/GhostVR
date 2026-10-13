@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/nux_common_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/TextAppearance" android:gravity="center" android:layout_gravity="top" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:text="@string/roadblock_add_payment_method_unlock_content_text" android:drawableTop="@drawable/add_payment_icon" android:drawablePadding="30.0dip" android:lineSpacingExtra="2.0sp" />
+    <TextView android:textAppearance="@style/TextAppearance" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:layout_marginBottom="30.0dip" android:text="@string/roadblock_add_payment_method_wont_be_charged_text" android:drawablePadding="30.0dip" android:lineSpacingExtra="2.0sp" />
+    <TextView android:gravity="center" android:id="@id/continue_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="30.0dip" android:text="@string/roadblock_add_payment_method_unlock_content_cta" android:lineSpacingExtra="2.0sp" style="@style/RoundButton.BlackOnWhite" />
+    <TextView android:textAppearance="@style/TextAppearance" android:gravity="center" android:id="@id/skip_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/roadblock_skip_payment_method_unlock_content_text" android:lineSpacingExtra="2.0sp" />
+</LinearLayout>

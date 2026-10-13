@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.notifications.view.NotificationView style="@style/NotificationTheme"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/NotificationSystemTextContainer">
+        <TextView android:id="@id/notif_title_text" android:text="My Title" style="@style/NotificationTitle" />
+        <TextView android:id="@id/notif_description_text" android:text="Notification Description goes here. It's capped at two lines max with ellipsis." style="@style/NotificationAUISystemDescription" />
+    </LinearLayout>
+</com.oculus.notifications.view.NotificationView>

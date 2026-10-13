@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.dialogs.PermissionRequestDialog android:gravity="top" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vrshell="http://schemas.android.com/apk/res-auto">
+    <com.oculus.vrshell.panels.views.SystemDialog android:id="@id/system_dialog" android:layout_height="wrap_content" vrshell:icon="@drawable/ic_system_dialog_warning" style="@style/SystemDialog">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/dialog_title" style="@style/SystemDialogTitleText" />
+            <TextView android:id="@id/dialog_text" android:textAlignment="center" style="@style/SystemDialogContentText" />
+            <LinearLayout style="@style/DialogButtonBar">
+                <com.oculus.vrshell.panels.views.ShellButton android:enabled="false" android:id="@id/dialog_secondary" android:text="@string/dialog_permission_request_button_deny_access" style="@style/DialogButtonSecondary" />
+                <com.oculus.vrshell.panels.views.ShellButton android:enabled="false" android:id="@id/dialog_primary" android:text="@string/dialog_permission_request_button_allow_access" style="@style/DialogButtonPrimary" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.oculus.vrshell.panels.views.SystemDialog>
+</com.oculus.panelapp.anytimeui.dialogs.PermissionRequestDialog>

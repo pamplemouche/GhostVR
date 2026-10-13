@@ -1,0 +1,32 @@
+version: 2.9.3
+apkFileName: Oculus Browser.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+  tag: null
+sdkInfo:
+  minSdkVersion: 22
+  targetSdkVersion: 28
+packageInfo:
+  forcedPackageId: 127
+  renameManifestPackage: null
+versionInfo:
+  versionCode: 372918202
+  versionName: 8.1.5.203450095
+resourcesAreCompressed: false
+sharedLibrary: false
+sparseResources: false
+doNotCompress:
+- resources.arsc
+- assets/webapk_dex_version.txt
+- assets/chrome_100_percent.pak
+- assets/dev_ui_resources.pak
+- assets/icudtl.dat
+- assets/natives_blob.bin
+- assets/resources.pak
+- assets/snapshot_blob_32.bin
+- webp
+- png
+- wav
+- META-INF/oculus_prod.OSIG

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="capture_blacklist">
+        <item>com.netflix.ninja.vr</item>
+        <item>com.hulu.huluvr</item>
+        <item>com.oculus.streamingsdk</item>
+        <item>com.oculus.cinema</item>
+        <item>com.oculus.venues</item>
+        <item>com.showtime.standalone.vr</item>
+        <item>com.showtime.showtimeanytime.vr</item>
+        <item>com.amazon.asxr</item>
+    </string-array>
+</resources>

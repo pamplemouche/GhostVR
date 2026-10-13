@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/control_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ViewStub android:id="@id/omnibox_results_container_stub" android:background="@android:color/white" android:layout="@layout/omnibox_results_container" android:layout_width="fill_parent" android:layout_height="wrap_content" app:APKTOOL_DUMMYVAL_0x7f040157="@id/toolbar" />
+    <FrameLayout android:id="@id/toolbar" android:background="@color/APKTOOL_DUMMYVAL_0x7f06018c" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f07031c" android:paddingStart="@dimen/APKTOOL_DUMMYVAL_0x7f07031b" android:paddingEnd="@dimen/APKTOOL_DUMMYVAL_0x7f07031b">
+        <org.chromium.chrome.browser.searchwidget.SearchActivityLocationBarLayout android:layout_gravity="center_vertical" android:id="@id/search_location_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f070194" android:layout_marginBottom="@dimen/APKTOOL_DUMMYVAL_0x7f070194" android:paddingStart="@dimen/APKTOOL_DUMMYVAL_0x7f07018a" android:paddingEnd="@dimen/APKTOOL_DUMMYVAL_0x7f07018a" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/bottom_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</android.support.design.widget.CoordinatorLayout>

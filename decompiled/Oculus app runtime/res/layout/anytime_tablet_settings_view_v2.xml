@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.v2.tablet.AnytimeTabletSettingsViewV2 android:gravity="start|center|top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/TabletContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Settings" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" style="@style/AnytimeSliderControlsThemeV2">
+        <TextView android:layout_width="80.0dip" android:text="@string/anytime_detail_button_brightness" style="@style/AnytimeSliderText" />
+        <TextView android:text="0" style="@style/AnytimeSliderText" />
+        <SeekBar android:id="@id/brightness_slider_controls_seekbar" style="@style/AnytimeSettingsSeekBarTheme" />
+        <TextView android:text="100" style="@style/AnytimeSliderText" />
+        <Space style="@style/AnytimeMenuBarSpacerTheme" />
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/close_slider_button" android:visibility="gone" style="@style/AnytimeCloseSliderButtonTheme" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" style="@style/AnytimeSliderControlsThemeV2">
+        <TextView android:layout_width="80.0dip" android:text="@string/anytime_detail_button_volume" style="@style/AnytimeSliderText" />
+        <TextView android:text="0" style="@style/AnytimeSliderText" />
+        <SeekBar android:id="@id/volume_slider_controls_seekbar" style="@style/AnytimeSettingsSeekBarTheme" />
+        <TextView android:text="100" style="@style/AnytimeSliderText" />
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/close_slider_button" android:visibility="gone" style="@style/AnytimeCloseSliderButtonTheme" />
+    </LinearLayout>
+    <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/wifi_button" android:tag="systemux://wifi" android:text="@string/anytime_detail_button_wifi" android:drawableTop="@drawable/anytime_detail_button_wifi" style="@style/AnytimeDetailButtonThemeV2" />
+</com.oculus.panelapp.anytimeui.v2.tablet.AnytimeTabletSettingsViewV2>

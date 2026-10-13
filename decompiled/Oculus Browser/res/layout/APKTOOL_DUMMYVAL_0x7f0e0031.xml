@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.chrome.browser.ui.widget.FadingEdgeScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/APKTOOL_DUMMYVAL_0x7f07025f" android:paddingEnd="@dimen/APKTOOL_DUMMYVAL_0x7f07025f" />
+    </org.chromium.chrome.browser.ui.widget.FadingEdgeScrollView>
+    <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e017e" />
+</FrameLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/events_event_item_vertical_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.percentlayout.widget.PercentFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.drawee.view.SimpleDraweeView android:id="@id/image" app:layout_aspectRatio="@dimen/common_aspect_ratio_16_9" app:layout_widthPercent="@dimen/common_width_percent_100" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@android:color/white" android:id="@id/live_upcoming_overlay" android:paddingLeft="@dimen/events_event_item_now_live_horizontal_padding" android:paddingTop="@dimen/events_event_item_now_live_vertical_padding" android:paddingRight="@dimen/events_event_item_now_live_horizontal_padding" android:paddingBottom="@dimen/events_event_item_now_live_vertical_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/events_event_item_now_live_horizontal_margin" android:layout_marginTop="@dimen/events_event_item_now_live_vertical_margin" android:maxLines="1" />
+    </androidx.percentlayout.widget.PercentFrameLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/events_event_item_horizontal_margin" android:layout_marginTop="@dimen/events_event_item_vertical_margin" android:layout_marginRight="@dimen/events_event_item_horizontal_margin">
+        <include layout="@layout/events_start_month_day" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/events_event_item_horizontal_margin">
+            <TextView android:textAppearance="?android:textAppearance" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:lineSpacingExtra="@dimen/events_event_item_line_spacing" android:fontFamily="sans-serif-medium" />
+            <TextView android:textAppearance="?android:textAppearance" android:ellipsize="end" android:id="@id/description_short" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/events_event_item_header_vertical_margin" android:maxLines="2" android:lineSpacingExtra="@dimen/events_event_item_line_spacing" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/oculus_black_6" android:ellipsize="end" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/events_event_item_header_vertical_margin" android:maxLines="1" android:lineSpacingExtra="@dimen/events_event_item_line_spacing" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/events_event_item_horizontal_margin" android:layout_marginTop="@dimen/events_event_item_vertical_margin" android:layout_marginRight="@dimen/events_event_item_horizontal_margin">
+        <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:layout_weight="1.0">
+            <Button android:textAppearance="?android:textAppearance" android:id="@id/subscribe_or_join_button" android:layout_width="wrap_content" android:layout_height="@dimen/events_subscribe_button_height" android:text="@string/events_subscribe_button" android:drawablePadding="@dimen/events_subscribe_button_drawable_padding" />
+            <TextView android:textAppearance="?android:textAppearance" android:textColor="?mediumDarkTextColor" android:id="@id/unjoinable_event_label" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/events_event_item_line_spacing" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.oculus.horizon.events.view.SubscriberAvatarsWithCountView android:layout_gravity="center_vertical" android:id="@id/subscribers" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textAppearance="?android:textAppearance" android:textColor="@color/oculus_black_8" android:layout_gravity="center_vertical" android:id="@id/subscribers_count_only" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/events_event_item_line_spacing" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

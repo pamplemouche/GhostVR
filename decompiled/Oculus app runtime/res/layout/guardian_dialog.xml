@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.dialogs.GuardianDialog android:id="@id/guardian_dialog_main" style="@style/GuardianContainerMain"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vrshell="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_gravity="top" android:id="@id/guardian_frame" android:layout_width="360.0dip" android:layout_height="850.0dip">
+        <LinearLayout android:gravity="top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center|top" android:orientation="vertical" android:id="@id/guardian_padding" android:layout_width="fill_parent" android:layout_height="225.0dip" />
+            <LinearLayout android:gravity="center|top" android:orientation="vertical" android:id="@id/guardian_dialog_spacer" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="200.0dip" />
+            <LinearLayout android:gravity="center|top" android:orientation="vertical" android:id="@id/guardian_dialog_spacer_no_anim" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="140.0dip" />
+            <LinearLayout android:gravity="top" android:layout_gravity="top" android:orientation="vertical" android:id="@id/guardian_dialog_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="top" style="@style/GuardianDialog">
+                    <LinearLayout android:gravity="start" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginRight="25.0dip">
+                        <ImageButton android:id="@id/guardian_back_btn" android:background="@drawable/guardian_back_button" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" />
+                        <TextView android:gravity="center_horizontal" android:id="@id/guardian_dialog_title" android:text="@string/guardian_welcome_title" style="@style/GuardianHeadingText" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="top" android:orientation="vertical" android:id="@id/guardian_dialog_body_view" android:background="@drawable/guardian_dialog_background_middle" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:gravity="center_horizontal" android:id="@id/guardian_dialog_body" android:minHeight="75.0dip" android:text="@string/guardian_welcome_body" android:textAlignment="center" style="@style/GuardianDialogText" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/guardian_survey" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="This survey is unskippable because it is extremely critical to improving Guardian. Especially if you choose to send images, it gives us the real-world data to improve performance which we have no other way of getting. Thank you in advance! \n\nSelect all that apply:" style="@style/GuardianDialogSurveyText" />
+                        <LinearLayout android:orientation="vertical" android:id="@id/guardian_survey_reloc_failed" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <CheckBox android:id="@id/survey_failed_a" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="I am setting up Guardian in a new room." style="@style/GuardianSurveyComponent" />
+                            <CheckBox android:id="@id/survey_failed_b" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="I setup Guardian in this room previously and lighting has changed since then." style="@style/GuardianSurveyComponent" />
+                            <CheckBox android:id="@id/survey_failed_c" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="I setup Guardian in this room previously and I am standing outside of the Guardian boundary that was previously setup." style="@style/GuardianSurveyComponent" />
+                            <CheckBox android:id="@id/survey_failed_d" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Something else went wrong" style="@style/GuardianSurveyComponent" />
+                            <CheckBox android:id="@id/survey_failed_e" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Send Images With Report (highly recommended). By checking this box, you agree to send us data from your headset’s sensors to help debug these issues. This data includes a screen capture and the last set of images of your real world environment captured before the issue is reported." style="@style/GuardianSurveyComponent" />
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@id/guardian_survey_manual_setup" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <CheckBox android:id="@id/survey_manual_a" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="You want to correct the floor height." style="@style/GuardianSurveyComponent" />
+                            <CheckBox android:id="@id/survey_manual_b" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="The Guardian boundary moved from its original position." style="@style/GuardianSurveyComponent" />
+                            <CheckBox android:id="@id/survey_manual_c" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="You want to change the previous Guardian size." style="@style/GuardianSurveyComponent" />
+                            <CheckBox android:id="@id/survey_manual_d" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Something else went wrong" style="@style/GuardianSurveyComponent" />
+                            <CheckBox android:id="@id/survey_manual_e" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Send Images With Report (highly recommended). By checking this box, you agree to send us data from your headset’s sensors to help debug these issues. This data includes a screen capture and the last set of images of your real world environment captured before the issue is reported." style="@style/GuardianSurveyComponent" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="top" android:orientation="vertical" android:id="@id/guardian_dialog_button_view" android:background="@drawable/guardian_dialog_background_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginTop="9.0dip" android:layout_marginRight="18.0dip" android:layout_marginBottom="9.0dip">
+                        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/guardian_dialog_btn1" android:visibility="visible" android:text="button1" style="@style/GuardianButtonPrimary" />
+                        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/guardian_dialog_btn2" android:visibility="visible" android:text="button2" style="@style/GuardianButtonSecondary" />
+                    </LinearLayout>
+                    <TextView android:id="@id/guardian_dialog_btn3" android:visibility="gone" android:minHeight="30.0dip" android:text="button3" style="@style/GuardianTextButton" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</com.oculus.panelapp.anytimeui.dialogs.GuardianDialog>

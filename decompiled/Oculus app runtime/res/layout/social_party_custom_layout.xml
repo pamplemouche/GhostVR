@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/social_party_custom_layout" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/group_info_section" style="@style/SocialPartyDialogHeader">
+        <TextView android:id="@id/join_policy_label" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/SocialPartyDialogJoinPolicyLabel" />
+        <ImageButton android:id="@id/toggle_icon" android:visibility="gone" android:clickable="true" style="@style/SocialPartyToggleIconTheme" />
+    </LinearLayout>
+    <LinearLayout style="@style/SocialPartyDialogSeekBarContainer">
+        <TextView android:text="@string/social_party_dialog_volume_label" style="@style/SocialPartyVolumeSliderLabel" />
+        <SeekBar android:id="@id/party_volume_slider_controls_seekbar" style="@style/SocialPartyDialogSeekBar" />
+        <ImageView android:id="@id/party_volume_icon" android:src="@drawable/ic_volume" style="@style/SocialPartyVolumeSliderIcon" />
+    </LinearLayout>
+    <ListView android:id="@id/members_list" style="@style/SocialPartyDialogMemberList" />
+</LinearLayout>

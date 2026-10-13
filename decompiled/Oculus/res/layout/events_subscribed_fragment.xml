@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:oculus="http://schemas.android.com/apk/res-auto">
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.oculus.horizon.widget.EmptyErrorView android:layout_gravity="center" android:id="@id/empty_error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" oculus:descriptionText="@string/common_error_generic_description" oculus:iconSrc="@drawable/error_icon" oculus:titleText="@string/common_error_generic_title" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/no_subscribed_events_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/events_no_events_horizontal_margin" android:layout_marginRight="@dimen/events_no_events_horizontal_margin">
+        <TextView android:textAppearance="?android:textAppearance" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/events_no_subscribed_events" android:lineSpacingExtra="@dimen/events_no_events_line_spacing" />
+        <Button android:layout_gravity="center" android:id="@id/browse_events_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/events_subscribed_no_events_browse_button_top_margin" android:text="@string/events_no_subscribed_events_browse_button" />
+    </LinearLayout>
+</FrameLayout>

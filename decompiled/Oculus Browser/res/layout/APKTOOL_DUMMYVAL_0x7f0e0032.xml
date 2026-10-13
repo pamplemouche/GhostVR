@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Space style="@style/APKTOOL_DUMMYVAL_0x7f1400dc" />
+    <org.chromium.chrome.browser.ui.widget.DualControlLayout android:id="@id/button_bar" android:background="@color/APKTOOL_DUMMYVAL_0x7f06011e" android:paddingTop="@dimen/APKTOOL_DUMMYVAL_0x7f07010a" android:paddingBottom="@dimen/APKTOOL_DUMMYVAL_0x7f07010a" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/APKTOOL_DUMMYVAL_0x7f070262" android:paddingEnd="@dimen/APKTOOL_DUMMYVAL_0x7f070262" app:APKTOOL_DUMMYVAL_0x7f040051="end" app:APKTOOL_DUMMYVAL_0x7f0401c6="@string/done" app:APKTOOL_DUMMYVAL_0x7f0401df="@string/APKTOOL_DUMMYVAL_0x7f1301d4" app:APKTOOL_DUMMYVAL_0x7f0401fd="@dimen/APKTOOL_DUMMYVAL_0x7f070157" />
+</merge>

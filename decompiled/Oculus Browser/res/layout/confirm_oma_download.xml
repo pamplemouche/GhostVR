@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout android:id="@id/confirm_oma_download" android:stretchColumns="1" style="@style/APKTOOL_DUMMYVAL_0x7f140003"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableRow>
+        <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401b8" android:gravity="start" android:padding="3.0dip" android:text="@string/APKTOOL_DUMMYVAL_0x7f130448" />
+        <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401b8" android:gravity="start" android:id="@id/oma_download_name" android:padding="3.0dip" />
+    </TableRow>
+    <TableRow>
+        <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401b8" android:gravity="start" android:padding="3.0dip" android:text="@string/APKTOOL_DUMMYVAL_0x7f13044c" />
+        <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401b8" android:gravity="start" android:id="@id/oma_download_vendor" android:padding="3.0dip" />
+    </TableRow>
+    <TableRow>
+        <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401b8" android:gravity="start" android:padding="3.0dip" android:text="@string/APKTOOL_DUMMYVAL_0x7f13044a" />
+        <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401b8" android:gravity="start" android:id="@id/oma_download_size" android:padding="3.0dip" />
+    </TableRow>
+    <TableRow>
+        <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401b8" android:gravity="start" android:padding="3.0dip" android:text="@string/APKTOOL_DUMMYVAL_0x7f13044b" />
+        <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401b8" android:gravity="start" android:id="@id/oma_download_type" android:padding="3.0dip" />
+    </TableRow>
+    <TableRow>
+        <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401b8" android:gravity="start" android:padding="3.0dip" android:text="@string/APKTOOL_DUMMYVAL_0x7f130445" />
+        <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401b8" android:gravity="start" android:id="@id/oma_download_description" android:padding="3.0dip" />
+    </TableRow>
+</TableLayout>

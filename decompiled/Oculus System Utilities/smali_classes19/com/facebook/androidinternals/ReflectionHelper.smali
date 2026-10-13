@@ -1,0 +1,56 @@
+.class public final Lcom/facebook/androidinternals/ReflectionHelper;
+.super Ljava/lang/Object;
+.source "ReflectionHelper.java"
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 22
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static rethrowRuntimeExceptions(Ljava/lang/reflect/InvocationTargetException;)V
+    .locals 2
+    .param p0, "e"    # Ljava/lang/reflect/InvocationTargetException;
+
+    .prologue
+    .line 26
+    invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->getTargetException()Ljava/lang/Throwable;
+
+    move-result-object v0
+
+    .line 27
+    .local v0, "targetException":Ljava/lang/Throwable;
+    instance-of v1, v0, Ljava/lang/RuntimeException;
+
+    if-eqz v1, :cond_0
+
+    .line 28
+    check-cast v0, Ljava/lang/RuntimeException;
+
+    .end local v0    # "targetException":Ljava/lang/Throwable;
+    throw v0
+
+    .line 29
+    .restart local v0    # "targetException":Ljava/lang/Throwable;
+    :cond_0
+    instance-of v1, v0, Ljava/lang/Error;
+
+    if-eqz v1, :cond_1
+
+    .line 30
+    check-cast v0, Ljava/lang/Error;
+
+    .end local v0    # "targetException":Ljava/lang/Throwable;
+    throw v0
+
+    .line 32
+    .restart local v0    # "targetException":Ljava/lang/Throwable;
+    :cond_1
+    return-void
+.end method

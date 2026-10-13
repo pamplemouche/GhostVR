@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.dialogs.localstream.LocalStreamStopFromDeviceDialog android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewStub android:layout_gravity="center" android:id="@id/local_stream_stop_from_device_dialog_stub_old" android:layout="@layout/local_stream_stop_from_device_dialog_old" android:inflatedId="@id/local_stream_stop_from_device_dialog_layout_old" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:layout_gravity="center" android:id="@id/local_stream_stop_dialog_stub" android:layout="@layout/local_stream_stop_dialog" android:inflatedId="@id/local_stream_stop_dialog_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.oculus.panelapp.anytimeui.dialogs.localstream.LocalStreamStopFromDeviceDialog>

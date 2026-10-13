@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="12.0dip" android:layout_width="@dimen/store_recyclerview_item_width" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/store_product_tile_image_view" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip">
+            <TextView android:textSize="11.0sp" android:ellipsize="end" android:id="@id/name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:maxLines="1" android:layout_toLeftOf="@id/price" android:fontFamily="sans-serif-medium" android:layout_toStartOf="@id/price" />
+            <TextView android:textSize="10.0sp" android:id="@id/price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/store_price_free" android:drawableLeft="@drawable/store_gray_purchased_icon" android:drawablePadding="7.0dip" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip">
+            <com.oculus.horizon.widget.RatingView android:layout_gravity="start|center" android:id="@id/stars" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Oculus.Widget.RatingBar.Small.Indicator" />
+            <TextView android:textSize="10.0sp" android:textColor="@color/oculus_black_4" android:layout_gravity="start|center" android:id="@id/review_count" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

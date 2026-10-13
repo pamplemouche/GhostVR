@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.dialogs.IPDAdjustDialog android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vrshell="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/ipd_adjust_dialog" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0">
+        <ImageView android:id="@id/ipd_adjust_dialog_calibration_image" android:src="@drawable/img_ipd_horizontal" style="@style/IPDAdjustDialogCalibrationImage" />
+        <RelativeLayout android:layout_width="1794.0px" android:layout_height="wrap_content" android:layout_marginTop="927.0px" android:layout_centerHorizontal="true">
+            <TextView android:id="@id/ipd_adjust_dialog_instructions_text_left" android:text="@string/ipd_adjust_dialog_horizontal_instructions" android:layout_alignParentLeft="true" style="@style/IPDAdjustDialogInstructionText" />
+            <TextView android:id="@id/ipd_adjust_dialog_instructions_text_right" android:text="@string/ipd_adjust_dialog_horizontal_instructions" android:layout_alignParentRight="true" style="@style/IPDAdjustDialogInstructionText" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/ipd_adjust_dialog_continue_text" android:layout_width="1568.0px" android:layout_height="wrap_content" android:layout_marginTop="1034.0px" android:layout_centerHorizontal="true">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="274.0px" android:layout_height="wrap_content" android:layout_alignParentLeft="true">
+                <TextView android:id="@id/ipd_adjust_dialog_adjust_text_left" android:visibility="gone" android:layout_marginRight="4.0px" android:text="@string/ipd_adjust_dialog_adjust_instructions" style="@style/IPDAdjustDialogAdjustActionText" />
+                <TextView android:text="@string/ipd_adjust_dialog_continue_instructions" style="@style/IPDAdjustDialogContinueActionText" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="274.0px" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+                <TextView android:id="@id/ipd_adjust_dialog_adjust_text_right" android:visibility="gone" android:layout_marginRight="4.0px" android:text="@string/ipd_adjust_dialog_adjust_instructions" style="@style/IPDAdjustDialogAdjustActionText" />
+                <TextView android:text="@string/ipd_adjust_dialog_continue_instructions" style="@style/IPDAdjustDialogContinueActionText" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</com.oculus.panelapp.anytimeui.dialogs.IPDAdjustDialog>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f140009">
+        <TextView android:textAppearance="?android:textAppearanceLargePopupMenu" android:gravity="center_vertical" android:layout_gravity="start" android:id="@id/menu_item_text" android:paddingTop="13.0dip" android:paddingBottom="13.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingEnd="16.0dip" />
+        <org.chromium.ui.widget.ChromeImageView android:gravity="center_vertical" android:layout_gravity="end" android:id="@id/menu_item_icon" android:layout_width="24.0dip" android:layout_height="fill_parent" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f08010b" app:APKTOOL_DUMMYVAL_0x7f040256="@color/APKTOOL_DUMMYVAL_0x7f060169" />
+    </LinearLayout>
+    <View android:id="@id/menu_item_divider" android:background="@color/APKTOOL_DUMMYVAL_0x7f0600ac" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

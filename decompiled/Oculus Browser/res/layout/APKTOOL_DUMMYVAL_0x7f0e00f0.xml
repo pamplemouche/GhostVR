@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.ui.widget.ChipView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" app:APKTOOL_DUMMYVAL_0x7f040139="@dimen/APKTOOL_DUMMYVAL_0x7f070167" style="@style/APKTOOL_DUMMYVAL_0x7f14000a"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

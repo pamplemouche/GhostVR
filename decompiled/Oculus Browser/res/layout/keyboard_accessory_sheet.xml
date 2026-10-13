@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.keyboard_accessory.sheet_component.AccessorySheetView android:layout_gravity="start|center|top" android:paddingTop="0.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f070174" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <org.chromium.chrome.browser.keyboard_accessory.sheet_component.NoSwipeViewPager android:id="@id/keyboard_accessory_sheet" android:background="@color/APKTOOL_DUMMYVAL_0x7f06011e" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" />
+    <ImageView android:id="@id/accessory_sheet_shadow" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f070170" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f080262" android:scaleType="fitXY" android:importantForAccessibility="no" />
+</org.chromium.chrome.browser.keyboard_accessory.sheet_component.AccessorySheetView>

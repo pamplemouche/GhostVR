@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.view.SimpleDraweeView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" app:actualImageScaleType="centerCrop" />
+    <include android:visibility="gone" layout="@layout/iap_badge_view" />
+    <include android:visibility="gone" layout="@layout/three_d_tag_view" />
+    <include android:visibility="gone" layout="@layout/promo_benefit_badge_view" />
+</FrameLayout>

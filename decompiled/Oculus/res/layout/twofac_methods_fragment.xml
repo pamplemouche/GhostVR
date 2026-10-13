@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/twofac_methods_fragment" android:background="?nuxBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/nux360_toolbar" />
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/nux_container_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?actionBarSize">
+        <TextView android:textAppearance="@style/Nux.TextAppearance.Secondary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/two_factor_method_choice_needed_message" />
+        <Spinner android:id="@id/two_factor_methods" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_single_field_offset" android:overlapAnchor="false" />
+        <TextView android:textAppearance="@style/Nux.TextAppearance.Secondary" android:id="@id/method_selection_error" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_single_field_offset" />
+        <com.oculus.horizon.widget.ProgressButton android:layout_gravity="bottom" android:id="@id/continue_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_single_field_offset" android:text="@string/common_continue" />
+    </LinearLayout>
+</FrameLayout>

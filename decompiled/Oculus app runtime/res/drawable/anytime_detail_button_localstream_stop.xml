@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:height="8.0px" android:width="8.0px" android:top="8.0px">
+        <shape android:shape="oval">
+            <solid android:color="@color/colorAnytimeRecordingDot" />
+        </shape>
+    </item>
+    <item android:height="@dimen/anytime_detail_button_icon_height" android:width="@dimen/anytime_detail_button_icon_width" android:drawable="@drawable/ic_localstream" android:left="18.0px" />
+</layer-list>

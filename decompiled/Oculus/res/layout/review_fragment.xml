@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oculus.horizon.widget.ProgressButton android:id="@id/send_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginTop="@dimen/common_vertical_padding" android:layout_marginRight="@dimen/common_horizontal_padding" android:layout_marginBottom="@dimen/common_horizontal_padding" android:text="@string/common_submit" android:layout_alignParentBottom="true" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/send_button">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/common_horizontal_padding" android:paddingTop="@dimen/common_vertical_padding" android:paddingRight="@dimen/common_horizontal_padding" android:paddingBottom="@dimen/common_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.oculus.horizon.widget.RatingView android:layout_gravity="center_horizontal" android:id="@id/rating" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Oculus.Widget.RatingBar" />
+            <com.google.android.material.textfield.TextInputLayout android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/common_vertical_padding" style="?textInputLayoutStyle">
+                <androidx.appcompat.widget.AppCompatEditText android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/pdp_review_title_hint" android:lines="1" android:maxLength="40" android:inputType="textCapSentences" android:imeOptions="actionNext" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/common_vertical_padding" style="?textInputLayoutStyle">
+                <androidx.appcompat.widget.AppCompatEditText android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/pdp_review_description_hint" android:maxLines="10" android:inputType="textCapSentences|textMultiLine" android:imeOptions="actionDone" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

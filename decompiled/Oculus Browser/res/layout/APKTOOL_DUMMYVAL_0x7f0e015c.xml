@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f07010c" android:layout_marginBottom="@dimen/APKTOOL_DUMMYVAL_0x7f07010c"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.chrome.browser.widget.ChromeTextInputLayout android:id="@id/text_input_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:APKTOOL_DUMMYVAL_0x7f0400e6="@style/APKTOOL_DUMMYVAL_0x7f1401ee">
+        <AutoCompleteTextView android:id="@id/text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:imeOptions="flagNoExtractUi" />
+    </org.chromium.chrome.browser.widget.ChromeTextInputLayout>
+    <LinearLayout android:layout_gravity="end" android:orientation="horizontal" android:id="@id/icons_layer" android:layout_width="wrap_content" android:layout_height="48.0dip">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/value_icon" android:visibility="gone" android:clickable="false" android:layout_width="wrap_content" android:layout_height="24.0dip" android:adjustViewBounds="true" android:layout_marginStart="8.0dip" />
+        <ImageView android:id="@id/action_icon" android:padding="12.0dip" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" />
+    </LinearLayout>
+</FrameLayout>

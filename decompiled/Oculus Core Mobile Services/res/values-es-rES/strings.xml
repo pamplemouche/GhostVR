@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notifications_download_canceled_message">Se ha cancelado la descarga de \"%1$s\"</string>
+    <string name="notifications_download_failed_message">No se ha podido descargar \"%1$s\"</string>
+    <string name="notifications_download_failed_title">Error en la descarga</string>
+    <string name="notifications_downloading_and_installing_apps">Descargando e instalando aplicaciones...</string>
+    <string name="notifications_install_failed_message">No se ha podido instalar \"%1$s\"</string>
+    <string name="notifications_install_succeeded_message">%1$s se ha instalado correctamente en tu biblioteca.</string>
+    <string name="notifications_progress_of_download_message">%1$d %%</string>
+    <string name="notifications_update_succeeded_message">%1$s se ha actualizado correctamente</string>
+    <string name="obb_display_title">%1$s (fichero de ampliación)</string>
+</resources>

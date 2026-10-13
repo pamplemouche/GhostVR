@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="end|center" android:orientation="horizontal" android:id="@id/url_action_container" android:layout_width="wrap_content" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f07031c" android:layout_marginEnd="@dimen/APKTOOL_DUMMYVAL_0x7f070192">
+        <org.chromium.ui.widget.ChromeImageButton android:id="@id/delete_button" android:visibility="invisible" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f08009f" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f130116" style="@style/APKTOOL_DUMMYVAL_0x7f14010f" />
+        <org.chromium.ui.widget.ChromeImageButton android:id="@id/mic_button" android:visibility="invisible" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f0800a3" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f13011d" style="@style/APKTOOL_DUMMYVAL_0x7f14010f" />
+        <org.chromium.ui.widget.ChromeImageButton android:id="@id/bookmark_button" android:visibility="gone" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f1300e6" style="@style/APKTOOL_DUMMYVAL_0x7f14010f" />
+        <org.chromium.ui.widget.ChromeImageButton android:id="@id/save_offline_button" android:visibility="gone" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f08013a" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f1302e0" android:nextFocusForward="@id/menu_button" style="@style/APKTOOL_DUMMYVAL_0x7f14010f" />
+    </LinearLayout>
+</merge>

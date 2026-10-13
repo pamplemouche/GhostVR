@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.v2.tablet.AnytimeTabletSharingViewV2 android:gravity="start|center|top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/TabletContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sharing" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/share_localstream" android:tag="systemux://dialog/local-stream-start-from-device" android:text="@string/anytime_detail_button_localstream" android:drawableTop="@drawable/anytime_detail_button_localstream" style="@style/AnytimeDetailButtonThemeV2" />
+        <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/share_localstream_stop" android:tag="systemux://dialog/local-stream-stop-from-device" android:visibility="gone" android:text="@string/anytime_detail_button_localstream_stop" android:drawableTop="@drawable/anytime_detail_button_localstream_stop" style="@style/AnytimeDetailButtonThemeV2" />
+        <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/share_livestream" android:tag="systemux://livestreaming" android:text="@string/anytime_detail_button_livestream" android:drawableTop="@drawable/anytime_detail_button_livestream" style="@style/AnytimeDetailButtonThemeV2" />
+        <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/share_livestream_stop" android:tag="systemux://livestreaming" android:visibility="gone" android:text="@string/anytime_detail_button_livestream_stop" android:drawableTop="@drawable/anytime_detail_button_livestream_stop" style="@style/AnytimeDetailButtonThemeV2" />
+        <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/share_videocapture" android:text="@string/anytime_detail_button_videocapture" android:drawableTop="@drawable/anytime_detail_button_videocapture" style="@style/AnytimeDetailButtonThemeV2" />
+        <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/share_videocapture_stop" android:visibility="gone" android:text="@string/anytime_detail_button_videocapture_stop" android:drawableTop="@drawable/anytime_detail_button_videocapture_stop" style="@style/AnytimeDetailButtonThemeV2" />
+        <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/share_screenshot" android:text="@string/anytime_detail_button_screenshot" android:drawableTop="@drawable/anytime_detail_button_screenshot" style="@style/AnytimeDetailButtonThemeV2" />
+        <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/share_camera_roll" android:tag="systemux://cameraroll" android:text="@string/anytime_detail_button_cameraroll" android:drawableTop="@drawable/anytime_detail_button_cameraroll" style="@style/AnytimeDetailButtonThemeV2" />
+    </LinearLayout>
+</com.oculus.panelapp.anytimeui.v2.tablet.AnytimeTabletSharingViewV2>

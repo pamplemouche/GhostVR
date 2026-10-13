@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/oc_gray_1" />
+            <corners android:radius="@dimen/home_dialog_corner_radius" />
+        </shape>
+    </item>
+    <item>
+        <bitmap android:gravity="bottom|center|left" android:src="@drawable/img_ota_blocking_phone_screenshot" />
+    </item>
+</layer-list>

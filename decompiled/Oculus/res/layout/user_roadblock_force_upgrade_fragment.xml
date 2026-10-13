@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/roadblock_glamour" />
+            <TextView android:textAppearance="@style/TextAppearance" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/nux_common_padding" android:layout_marginTop="@dimen/nux_field_separation_margin" android:layout_marginRight="@dimen/nux_common_padding" android:text="@string/roadblock_force_upgrade_description" />
+            <TextView android:textAppearance="@style/TextAppearance" android:id="@id/warning" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/nux_common_padding" android:layout_marginTop="@dimen/nux_field_separation_margin" android:layout_marginRight="@dimen/nux_common_padding" android:text="@string/roadblock_force_upgrade_warning" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/status" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/nux_common_padding" android:layout_marginTop="@dimen/nux_field_separation_margin" android:layout_marginRight="@dimen/nux_common_padding">
+        <TextView android:textAppearance="@style/TextAppearance" android:id="@id/status_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/roadblock_force_upgrade_status_label" />
+        <TextView android:textAppearance="@style/TextAppearance" android:gravity="end" android:id="@id/status_progress" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.oculus.horizon.widget.ProgressButton android:id="@id/update_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/nux_common_padding" android:layout_marginTop="@dimen/nux_field_separation_margin" android:layout_marginRight="@dimen/nux_common_padding" android:layout_marginBottom="@dimen/nux_common_padding" android:text="@string/roadblock_update_now" />
+</LinearLayout>

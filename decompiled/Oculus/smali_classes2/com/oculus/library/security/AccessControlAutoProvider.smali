@@ -1,0 +1,75 @@
+.class public Lcom/oculus/library/security/AccessControlAutoProvider;
+.super Lcom/facebook/inject/AbstractProvider;
+.source "AccessControlAutoProvider.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/facebook/inject/AbstractProvider",
+        "<",
+        "Lcom/oculus/library/security/AccessControl;",
+        ">;"
+    }
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 11
+    invoke-direct {p0}, Lcom/facebook/inject/AbstractProvider;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public get()Lcom/oculus/library/security/AccessControl;
+    .locals 2
+
+    .prologue
+    .line 14
+    const-string v0, "getMethod_com.oculus.library.security.AccessControl"
+
+    invoke-static {v0}, Lcom/facebook/ultralight/instrumentation/systrace/UlTracer;->startTracer(Ljava/lang/String;)V
+
+    .line 16
+    :try_start_0
+    new-instance v0, Lcom/oculus/library/security/AccessControl;
+
+    .line 17
+    invoke-static {p0}, Lcom/oculus/library/security/TrustedApplications;->$ul_$xXXcom_oculus_library_security_TrustedApplications$xXXACCESS_METHOD(Lcom/facebook/inject/InjectorLike;)Lcom/oculus/library/security/TrustedApplications;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/oculus/library/security/AccessControl;-><init>(Lcom/oculus/library/security/TrustedApplications;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 20
+    invoke-static {}, Lcom/facebook/ultralight/instrumentation/systrace/UlTracer;->stopTracer()V
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {}, Lcom/facebook/ultralight/instrumentation/systrace/UlTracer;->stopTracer()V
+
+    throw v0
+.end method
+
+.method public bridge synthetic get()Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 11
+    invoke-virtual {p0}, Lcom/oculus/library/security/AccessControlAutoProvider;->get()Lcom/oculus/library/security/AccessControl;
+
+    move-result-object v0
+
+    return-object v0
+.end method

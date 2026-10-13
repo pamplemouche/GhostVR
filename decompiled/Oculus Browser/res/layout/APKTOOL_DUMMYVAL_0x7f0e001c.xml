@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/language_item" android:paddingStart="@dimen/APKTOOL_DUMMYVAL_0x7f070100" android:paddingEnd="@dimen/APKTOOL_DUMMYVAL_0x7f070100" android:layout_marginStart="0.0dip" style="@style/APKTOOL_DUMMYVAL_0x7f140109"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.ui.widget.ChromeImageView android:id="@id/icon_view" app:APKTOOL_DUMMYVAL_0x7f040256="@color/APKTOOL_DUMMYVAL_0x7f060169" style="@style/APKTOOL_DUMMYVAL_0x7f14010c" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f140155" />
+        <TextView android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f140151" />
+    </LinearLayout>
+    <org.chromium.chrome.browser.ui.widget.ListMenuButton android:id="@id/more" android:background="@null" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f080171" android:paddingStart="@dimen/APKTOOL_DUMMYVAL_0x7f07029c" android:paddingEnd="@dimen/APKTOOL_DUMMYVAL_0x7f07029c" app:APKTOOL_DUMMYVAL_0x7f040194="@dimen/APKTOOL_DUMMYVAL_0x7f070268" app:APKTOOL_DUMMYVAL_0x7f040256="@color/APKTOOL_DUMMYVAL_0x7f060169" />
+</LinearLayout>

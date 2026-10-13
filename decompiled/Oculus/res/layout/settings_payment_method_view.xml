@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oculus.horizon.commerce.PaymentMethodInfoView android:ellipsize="end" android:gravity="center_vertical" android:id="@id/payment_method_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+    <Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <TextView android:textAppearance="?android:textAppearance" android:gravity="center_vertical" android:id="@id/default_label" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/commerce_default_payment_method" />
+    <ImageView android:id="@id/menu_button" android:paddingLeft="@dimen/settings_item_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/library_item_more_icon" />
+</merge>

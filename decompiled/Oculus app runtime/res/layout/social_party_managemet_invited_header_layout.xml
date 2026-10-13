@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/social_party_member_layout" android:layout_width="fill_parent" android:layout_height="32.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/invited_friends_header" android:text="@string/invited_friends_header" style="@style/SocialListHeaderRow" />
+</LinearLayout>

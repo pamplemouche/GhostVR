@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/bookmark_row" style="@style/APKTOOL_DUMMYVAL_0x7f140109">
+        <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e010a" />
+        <org.chromium.ui.widget.ChromeImageView android:id="@id/drag_handle" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f08011e" app:APKTOOL_DUMMYVAL_0x7f040256="@color/APKTOOL_DUMMYVAL_0x7f060169" style="@style/APKTOOL_DUMMYVAL_0x7f14010a" />
+        <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e00f7" />
+    </LinearLayout>
+</merge>

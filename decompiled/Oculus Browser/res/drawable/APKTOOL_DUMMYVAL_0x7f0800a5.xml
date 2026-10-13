@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/APKTOOL_DUMMYVAL_0x7f0800b1" android:maxLevel="@integer/APKTOOL_DUMMYVAL_0x7f0c0024" />
+    <item android:drawable="@drawable/APKTOOL_DUMMYVAL_0x7f08009d" android:maxLevel="@integer/APKTOOL_DUMMYVAL_0x7f0c0025" />
+</level-list>

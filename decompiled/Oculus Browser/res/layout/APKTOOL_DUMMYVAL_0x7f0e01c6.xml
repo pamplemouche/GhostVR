@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.toolbar.top.ToolbarPhone android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f07031c"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.chrome.browser.toolbar.HomeButton android:id="@id/home_button" android:visibility="gone" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f0800b0" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f130118" app:APKTOOL_DUMMYVAL_0x7f040256="@color/APKTOOL_DUMMYVAL_0x7f060169" style="@style/APKTOOL_DUMMYVAL_0x7f140294" />
+    <org.chromium.chrome.browser.omnibox.LocationBarPhone android:layout_gravity="top" android:id="@id/location_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="end|center|top" android:orientation="horizontal" android:id="@id/toolbar_buttons" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ViewStub android:id="@id/experimental_button_stub" android:visibility="gone" android:layout="@layout/experimental_toolbar_button" android:inflatedId="@id/experimental_toolbar_button" android:paddingStart="12.0dip" style="@style/APKTOOL_DUMMYVAL_0x7f140294" />
+        <org.chromium.chrome.browser.toolbar.top.ToggleTabStackButton android:layout_gravity="top" android:id="@id/tab_switcher_button" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f130122" android:paddingStart="8.0dip" style="@style/APKTOOL_DUMMYVAL_0x7f140294" />
+        <include layout="@layout/menu_button" />
+    </LinearLayout>
+</org.chromium.chrome.browser.toolbar.top.ToolbarPhone>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentFrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.oculus.horizon.widget.MediaView android:id="@id/media_view" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_widthPercent="@dimen/common_width_percent_100" />
+    <TextView android:textColor="@android:color/white" android:gravity="bottom|center" android:id="@id/countdown_timer_clock" android:background="@drawable/countdown_timer_gradient" android:paddingBottom="@dimen/common_vertical_padding" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" android:fontFamily="sans-serif-light" app:layout_widthPercent="@dimen/common_width_percent_100" style="@style/TextAppearance.Large" />
+</androidx.percentlayout.widget.PercentFrameLayout>

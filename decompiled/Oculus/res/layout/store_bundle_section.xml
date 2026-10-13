@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/store_horizontal_padding" layout="@layout/header_see_all" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/action_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/store_vertical_padding">
+        <com.facebook.drawee.view.SimpleDraweeView android:id="@id/thumbnail_1" android:background="@drawable/border" android:layout_width="@dimen/bundle_store_image_width" android:layout_height="@dimen/bundle_store_image_height" app:actualImageScaleType="centerCrop" />
+        <com.facebook.drawee.view.SimpleDraweeView android:id="@id/thumbnail_2" android:background="@drawable/border" android:layout_width="@dimen/bundle_store_image_width" android:layout_height="@dimen/bundle_store_image_height" app:actualImageScaleType="centerCrop" />
+        <com.facebook.drawee.view.SimpleDraweeView android:id="@id/thumbnail_3" android:background="@drawable/border" android:layout_width="@dimen/bundle_store_image_width" android:layout_height="@dimen/bundle_store_image_height" app:actualImageScaleType="centerCrop" />
+    </LinearLayout>
+    <TextView android:layout_gravity="center" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/store_vertical_padding" android:text="@string/store_view_all" android:fontFamily="sans-serif-medium" style="@style/TextAppearance.Small" />
+</LinearLayout>

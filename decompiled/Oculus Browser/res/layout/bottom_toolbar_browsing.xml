@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center|top" android:orientation="horizontal" android:id="@id/bottom_toolbar_browsing" android:background="@color/APKTOOL_DUMMYVAL_0x7f06018c" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/APKTOOL_DUMMYVAL_0x7f07006e" android:paddingEnd="@dimen/APKTOOL_DUMMYVAL_0x7f07006e"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/home_button_wrapper" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f130118" style="@style/APKTOOL_DUMMYVAL_0x7f1400d6">
+        <org.chromium.chrome.browser.toolbar.HomeButton android:id="@id/home_button" app:APKTOOL_DUMMYVAL_0x7f040256="@color/APKTOOL_DUMMYVAL_0x7f060169" style="@style/APKTOOL_DUMMYVAL_0x7f140173" />
+        <TextView android:id="@id/home_button_label" android:text="@string/APKTOOL_DUMMYVAL_0x7f130118" style="@style/APKTOOL_DUMMYVAL_0x7f1400d7" />
+    </LinearLayout>
+    <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e01c7" />
+    <LinearLayout android:id="@id/share_button_wrapper" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f130575" style="@style/APKTOOL_DUMMYVAL_0x7f1400d6">
+        <org.chromium.chrome.browser.toolbar.bottom.ShareButton android:id="@id/share_button" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f080213" app:APKTOOL_DUMMYVAL_0x7f040256="@color/APKTOOL_DUMMYVAL_0x7f060169" style="@style/APKTOOL_DUMMYVAL_0x7f140173" />
+        <TextView android:id="@id/share_button_label" android:text="@string/APKTOOL_DUMMYVAL_0x7f130575" style="@style/APKTOOL_DUMMYVAL_0x7f1400d7" />
+    </LinearLayout>
+    <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e01c7" />
+    <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:id="@id/search_accelerator_wrapper" android:background="?APKTOOL_DUMMYVAL_0x7f0401e7" android:layout_width="72.0dip" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f130120" android:paddingStart="4.0dip" android:paddingEnd="4.0dip">
+        <org.chromium.chrome.browser.toolbar.bottom.SearchAccelerator android:layout_gravity="center" android:id="@id/search_accelerator" android:paddingTop="@dimen/APKTOOL_DUMMYVAL_0x7f070290" android:paddingBottom="@dimen/APKTOOL_DUMMYVAL_0x7f070290" android:clickable="false" android:layout_width="@dimen/APKTOOL_DUMMYVAL_0x7f070291" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f07028f" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f080211" android:importantForAccessibility="no" />
+        <TextView android:id="@id/search_accelerator_label" android:paddingTop="0.0dip" android:text="@string/APKTOOL_DUMMYVAL_0x7f130120" style="@style/APKTOOL_DUMMYVAL_0x7f1400d7" />
+    </LinearLayout>
+    <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e01c7" />
+    <LinearLayout android:id="@id/tab_switcher_button_wrapper" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f130122" style="@style/APKTOOL_DUMMYVAL_0x7f1400d6">
+        <org.chromium.chrome.browser.toolbar.TabSwitcherButtonView android:id="@id/tab_switcher_button" style="@style/APKTOOL_DUMMYVAL_0x7f140173" />
+        <TextView android:id="@id/tab_switcher_button_label" android:text="@string/tab_switcher_button_label" style="@style/APKTOOL_DUMMYVAL_0x7f1400d7" />
+    </LinearLayout>
+    <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e01c7" />
+    <LinearLayout android:id="@id/labeled_menu_button_wrapper" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f13011a" style="@style/APKTOOL_DUMMYVAL_0x7f1400d6">
+        <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e004d" style="@style/APKTOOL_DUMMYVAL_0x7f140173" />
+        <TextView android:id="@id/menu_button_label" android:text="@string/more" style="@style/APKTOOL_DUMMYVAL_0x7f1400d7" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oculus.horizon.widget.CustomToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textAppearance="?android:textAppearance" android:gravity="center" android:id="@id/description" android:layout_width="280.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/common_vertical_padding" android:text="@string/common_oculus_pin_description" android:layout_below="@id/toolbar" android:layout_centerHorizontal="true" android:lineSpacingExtra="5.0sp" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/description" android:layout_centerHorizontal="true">
+        <com.oculus.horizon.widget.EditPIN android:textColor="@android:color/white" android:id="@id/pin_row" android:paddingLeft="@dimen/common_horizontal_padding" android:paddingTop="15.0dip" android:paddingRight="@dimen/common_horizontal_padding" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.oculus.horizon.widget.NumericKeyboard android:id="@id/numeric_keyboard" android:layout_width="230.0dip" android:layout_height="290.0dip" android:layout_marginTop="15.0dip" />
+    </LinearLayout>
+    <com.oculus.horizon.widget.ProgressButton android:id="@id/continue_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginRight="@dimen/common_horizontal_padding" android:layout_marginBottom="@dimen/common_vertical_padding" android:text="@string/common_continue" android:layout_alignParentBottom="true" />
+</RelativeLayout>

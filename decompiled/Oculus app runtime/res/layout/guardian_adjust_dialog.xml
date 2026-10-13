@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.dialogs.GenericSystemDialog android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vrshell="http://schemas.android.com/apk/res-auto">
+    <com.oculus.vrshell.panels.views.SystemDialogStandardLayout android:id="@id/system_dialog_layout" vrshell:acceptResult="roomscale" vrshell:acceptText="@string/guardian_adjust_dialog_roomscale" vrshell:backResult="cancel" vrshell:cancelResult="cancel" vrshell:cancelText="@string/guardian_adjust_dialog_cancel" vrshell:contentText="@string/guardian_adjust_dialog_description" vrshell:gearResult="show-guardian-settings" vrshell:middleResult="stationary" vrshell:middleText="@string/guardian_adjust_dialog_stationary" vrshell:tags="@array/system_dialog_styling_for_gear_btn" vrshell:titleText="@string/guardian_adjust_dialog_title" style="@style/SystemDialog" />
+</com.oculus.panelapp.anytimeui.dialogs.GenericSystemDialog>

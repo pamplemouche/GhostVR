@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/tablet_button" style="@style/TabletLauncherButton"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

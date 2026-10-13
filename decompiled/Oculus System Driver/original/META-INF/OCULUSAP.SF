@@ -1,0 +1,143 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android)
+SHA-256-Digest-Manifest: XayAbX3qwcD6qRvS73h96BZkuyvp7hWbFND0LTbjlpI=
+X-Android-APK-Signed: 2
+
+Name: AndroidManifest.xml
+SHA-256-Digest: obolHAz4nvew3sLAuGj7qG9asM/NmhMKf/xEOlT8mH4=
+
+Name: assets/donotdelete.txt
+SHA-256-Digest: M4ba6FGCmlkeqcPZE/GbzkKXxInRkXB0yKaBx2X7GNc=
+
+Name: classes.dex
+SHA-256-Digest: SlyrOQkawWtrHemzD1f+o3ezj9ZH0wU02TOiAH1jwvg=
+
+Name: lib/arm64-v8a/libapilog.so
+SHA-256-Digest: pL+gWiBbVXvtTegOhhrKwQiPMAqs/fxQigswOcTvFtQ=
+
+Name: lib/arm64-v8a/libautodriver.so
+SHA-256-Digest: 2Wwzy+3wFvjsz48q16lDhxeAYipA7o9z1o7KiEMMkNE=
+
+Name: lib/arm64-v8a/libgocompatibility.so
+SHA-256-Digest: V8maMHEmIVeFjzl6vgZJJkBHl+Ypa0jQhdBuaR2wwfY=
+
+Name: lib/arm64-v8a/libmobilesimplified.so
+SHA-256-Digest: mlsZRTFfG4FoEqlDpT9jItS01+nIBkbGGxCPe5zYZPo=
+
+Name: lib/arm64-v8a/libmr_passthrough3d_quest.so
+SHA-256-Digest: SZzBjmzRQDd4UU/D5WoPTtYOVi/hxABrmtz0fbb/ZvM=
+
+Name: lib/arm64-v8a/libpowerlevelswitcher.so
+SHA-256-Digest: WZHH618FDccWeMttUerTSLkQIAOLdfFW9l57m+3BVOY=
+
+Name: lib/arm64-v8a/libtrackingservice.so
+SHA-256-Digest: QvtBRP2QjbesL5bt4jOr1HyCH8EuShhRdwUOyvMUfnM=
+
+Name: lib/arm64-v8a/libutilpoller.so
+SHA-256-Digest: QPW/v7W6bvflUQi6zcdxr7f/tCBjV76mmO1Ugcy+X1o=
+
+Name: lib/arm64-v8a/libvrapi.so
+SHA-256-Digest: x5EQu0DZg4+LoZk6QA1FRUSAqXhN8vl7LbVnHodoOYM=
+
+Name: lib/arm64-v8a/libvrapiimpl.so
+SHA-256-Digest: 9Pa/DT5rLfOQLrQdPe9mGDRne0hsY3shXolxrODKtEk=
+
+Name: lib/arm64-v8a/libvrapilayers.so
+SHA-256-Digest: z2SQ9Af8Ie5u6Bd9pWkg/hw1JlNYqXvSSfYxZMQYx4g=
+
+Name: lib/arm64-v8a/libvrapilinker.so
+SHA-256-Digest: POjCV/CxnO7nX7PP/yOdcYUSi25fbLEbl7K/Qx8UpgU=
+
+Name: lib/arm64-v8a/libvrguardianservice.so
+SHA-256-Digest: 4z+SVhcu/0tlBiVCsgdmY9T/mZz6XWrVwAfYUj1ratg=
+
+Name: lib/arm64-v8a/libvrintegrationlayer.so
+SHA-256-Digest: PpTZr63o9PffsMluoyfXaaCsMmrNI2V+fOUCrCKs0zA=
+
+Name: lib/arm64-v8a/libvrruntimeservice.so
+SHA-256-Digest: N6XsLW3B/DgTuPEqkeHRH9ljRonB1xdl6m9NKOTE8TU=
+
+Name: lib/armeabi-v7a/libapilog.so
+SHA-256-Digest: KE2rqVFZYF5pxuOXEEM8e/UTS+xEKmMm55Yf4CCRErc=
+
+Name: lib/armeabi-v7a/libautodriver.so
+SHA-256-Digest: qOd1WX8SUBNxYhe+rcRmtQZvFRlzXOKIOhOw2foVC5M=
+
+Name: lib/armeabi-v7a/libgocompatibility.so
+SHA-256-Digest: lideEeCGPh7VeUFrbNQBgt9mMd9HgGR5hQ32tFh++Bc=
+
+Name: lib/armeabi-v7a/libmobilesimplified.so
+SHA-256-Digest: nlEihIm5X/93RHVYd6rFyA9pwvdps09XCzkxnuu73M0=
+
+Name: lib/armeabi-v7a/libmr_passthrough3d_quest.so
+SHA-256-Digest: jhDrqmeQXPfDdvE+YM0rfr6g7DOT1QBTV0mAuS7R3L8=
+
+Name: lib/armeabi-v7a/libpowerlevelswitcher.so
+SHA-256-Digest: RghUk30BUTJVcWC90HWJKkGwtdg10k1K89bip/Nn1R4=
+
+Name: lib/armeabi-v7a/libtrackingservice.so
+SHA-256-Digest: wVcY5H8tu8duwQ7KO3Ky8Jk+tpVFCu2JuVJYmn6jQP8=
+
+Name: lib/armeabi-v7a/libutilpoller.so
+SHA-256-Digest: Vy9ArZrWcqh7D8CrK2JK1ouwaNiuwxJJvxC87uk9qa4=
+
+Name: lib/armeabi-v7a/libvrapi.so
+SHA-256-Digest: qenhNwiufib2yt5tJL3xBteZXc+6woq7LXkIPlAUBJ8=
+
+Name: lib/armeabi-v7a/libvrapiimpl.so
+SHA-256-Digest: yIFIgEsKteFa5kZzNlftCpbNP/d7wVKBZDMHWpB9k1o=
+
+Name: lib/armeabi-v7a/libvrapilayers.so
+SHA-256-Digest: VN+h8ywvG0Bosknb46KEs89fz09PoF2+8Z5YZFmp/SI=
+
+Name: lib/armeabi-v7a/libvrapilinker.so
+SHA-256-Digest: 1UBSBNLYFQhkKesQzau63VwsC4NPFx5xmmDA0evt5ek=
+
+Name: lib/armeabi-v7a/libvrguardianservice.so
+SHA-256-Digest: SOeYrn4pOs0sS9E3zViuTLyo6mkGhNMyKY1MeiLfORA=
+
+Name: lib/armeabi-v7a/libvrintegrationlayer.so
+SHA-256-Digest: RtMQOi9ItqE25jQ8JKn6awPoa/W28Z670g7grvScox8=
+
+Name: lib/armeabi-v7a/libvrruntimeservice.so
+SHA-256-Digest: gLVew7Lj0jQ2gdBpyNp6Utait7JbWoOxuROerwoFLwQ=
+
+Name: res/anim/fadein.xml
+SHA-256-Digest: eqtORs1qg+wlhQ0MXtvJbe9CsT2FzBVnYum8iW4d87Y=
+
+Name: res/anim/fadeout.xml
+SHA-256-Digest: xGlVnxwPCVldznTIQiuvj4GYM9f2MypBhamOsEW81os=
+
+Name: res/drawable-hdpi-v4/ic_launcher.png
+SHA-256-Digest: +bXtK7YzabwOv4iVUyLwZOhDOd7fTnmTHcORg9sdl7g=
+
+Name: res/drawable-mdpi-v4/ic_launcher.png
+SHA-256-Digest: C04j0MW35PQ9d1ZfG0Kwv5iC/lngJEb/DLX5VgJKVpA=
+
+Name: res/drawable-xhdpi-v4/ic_launcher.png
+SHA-256-Digest: tLw4tcvdEoId4fA2nOlroae6/EF9Iist5jbw9ami6vo=
+
+Name: res/drawable-xxhdpi-v4/ic_launcher.png
+SHA-256-Digest: 7oL74OiQ8Dy+9JlG9UvjaU2PQBgE+lVhLkOkilgnMWs=
+
+Name: res/raw/notify_controller_battery_low.png
+SHA-256-Digest: bRISJMUh07n3HikNKUtB2WFyBEByN5xgB0OJPaTCE4I=
+
+Name: res/raw/notify_controller_disconnected.png
+SHA-256-Digest: KG8EKF/NEFWNH0RgC6Fh1mxdVHWyqJ7hTRiY1pFkgA0=
+
+Name: res/raw/notify_go_controller_battery_low.png
+SHA-256-Digest: aYs2fnGi4VCrfMbvix84MF62rnTt4oOoMs2WnWfEJFU=
+
+Name: res/raw/notify_go_controller_disconnected.png
+SHA-256-Digest: 9g20xeoDFE23JZh8PXNulSSTDB+IKmkxZt0t38Dszlw=
+
+Name: res/raw/notify_quest_controller_battery_low.png
+SHA-256-Digest: 74KO2bhKawgDiA2DI/LB/LmvqhS2tPhn1YaX7R3nk+k=
+
+Name: res/raw/notify_quest_controller_disconnected.png
+SHA-256-Digest: 4WbLXorGbgOlkbo7rld7683jIrEPDRiFwJOo3fygUTI=
+
+Name: resources.arsc
+SHA-256-Digest: lIXuZsgJWocOyLGf/BleIaT0RMYAUokxS+Cey9LD4GQ=
+

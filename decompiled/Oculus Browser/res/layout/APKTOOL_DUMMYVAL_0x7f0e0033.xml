@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingBottom="16.0dip" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="32.0dip" android:minHeight="36.0dip" style="@style/APKTOOL_DUMMYVAL_0x7f140003"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401b8" android:id="@id/cc_details_masked" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:gravity="center_horizontal" android:id="@id/cc_month_edit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/APKTOOL_DUMMYVAL_0x7f130179" android:width="50.0sp" android:maxLength="2" android:inputType="number" android:imeOptions="actionNext" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/APKTOOL_DUMMYVAL_0x7f13017a" />
+        <EditText android:gravity="center_horizontal" android:id="@id/cc_year_edit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/APKTOOL_DUMMYVAL_0x7f13017b" android:width="50.0sp" android:maxLength="2" android:inputType="number" android:imeOptions="actionDone" />
+    </LinearLayout>
+    <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401b5" android:gravity="start" android:id="@id/error_message" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

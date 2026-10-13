@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abc_action_bar_home_description">Navegar para casa</string>
+    <string name="abc_activitychooserview_choose_application">Escolher uma aplicação</string>
+    <string name="abc_menu_alt_shortcut_label">Alt +</string>
+    <string name="abc_menu_ctrl_shortcut_label">Ctrl +</string>
+    <string name="abc_menu_delete_shortcut_label">eliminar</string>
+    <string name="abc_menu_function_shortcut_label">Função +</string>
+    <string name="abc_menu_meta_shortcut_label">Meta +</string>
+    <string name="abc_menu_shift_shortcut_label">Shift +</string>
+    <string name="abc_menu_sym_shortcut_label">Sym +</string>
+    <string name="abc_prepend_shortcut_label">Menu +</string>
+    <string name="abc_shareactionprovider_share_with">Partilhar com</string>
+    <string name="abc_shareactionprovider_share_with_application">Partilhar com a aplicação %s</string>
+    <string name="abc_toolbar_collapse_description">Reduzir</string>
+    <string name="notifications_download_canceled_message">Descarga cancelada de \"%1$s\"</string>
+    <string name="notifications_download_canceled_title">Descarga cancelada</string>
+    <string name="notifications_download_failed_message">Impossível descarregar %1$s</string>
+    <string name="notifications_download_failed_title">Erro ao descarregar</string>
+    <string name="notifications_download_in_progress_message">A descarregar %1$s...</string>
+    <string name="notifications_downloading_and_installing_apps">Descarregar e instalar apps...</string>
+    <string name="notifications_head_install_failed_message">Erro ao instalar</string>
+    <string name="notifications_head_installing_message">A instalar</string>
+    <string name="notifications_install_failed_message">Impossível instalar %1$s</string>
+    <string name="notifications_install_failed_title">A instalação falhou.</string>
+    <string name="notifications_install_in_progress_message">A instalar %1$s...</string>
+    <string name="notifications_install_in_progress_title">Instalação em curso</string>
+    <string name="notifications_install_succeeded_message">O %1$s foi instalado com sucesso na tua biblioteca.</string>
+    <string name="notifications_update_succeeded_message">%1$s foi atualizado com sucesso</string>
+    <string name="obb_display_title">%1$s (ficheiro de expansão)</string>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?nuxBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/nux360_toolbar" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingLeft="@dimen/nux_container_padding" android:paddingTop="?actionBarSize" android:paddingRight="@dimen/nux_container_padding" android:paddingBottom="@dimen/nux_container_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/nux_fblogin_add_email_header_margin_top">
+        <TextView android:id="@id/add_email_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_container_padding" android:text="@string/nux_fblogin_add_email_label" />
+        <com.google.android.material.textfield.TextInputLayout android:id="@id/edit_email_layout" android:paddingLeft="@dimen/nux_edit_padding" android:paddingRight="@dimen/nux_edit_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_fblogin_add_email_email_input_margin_top" style="?textInputLayoutStyle">
+            <com.google.android.material.textfield.TextInputEditText android:id="@id/edit_email" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/common_email" android:inputType="textEmailAddress" android:imeOptions="actionNext" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView android:id="@id/email_verification_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nux_fblogin_add_email_verified_email" />
+        <TextView android:id="@id/enter_another_email_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nux_fblogin_add_email_enter_another_email" />
+        <LinearLayout android:gravity="center_vertical" android:id="@id/nux_marketing_email_opt_in_container" android:paddingLeft="@dimen/nux_edit_padding" android:paddingRight="@dimen/nux_edit_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_fblogin_common_button_margin">
+            <CheckBox android:id="@id/nux_marketing_email_opt_in_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/nux_field_separation_margin" />
+            <TextView android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/nux_opt_in_email" android:layout_weight="1.0" />
+        </LinearLayout>
+        <com.oculus.horizon.widget.ProgressButton android:id="@id/add_email_next_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_fblogin_add_email_header_margin_top" android:text="@string/nux_fblogin_add_email_next_button" />
+        <com.oculus.horizon.widget.ProgressButton android:id="@id/add_email_connect_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_fblogin_add_email_header_margin_top" android:text="@string/nux_fblogin_add_email_connect_button" style="@style/RoundButton.WhiteOnBlue" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <org.chromium.chrome.browser.preferences.ChromeSwitchPreference android:persistent="false" android:title="@string/APKTOOL_DUMMYVAL_0x7f1305d3" android:key="sync_everything" />
+    <org.chromium.chrome.browser.preferences.ChromeBaseCheckBoxPreference android:persistent="false" android:title="@string/APKTOOL_DUMMYVAL_0x7f1305c6" android:key="sync_autofill" />
+    <org.chromium.chrome.browser.preferences.ChromeBaseCheckBoxPreference android:persistent="false" android:title="@string/APKTOOL_DUMMYVAL_0x7f1305c7" android:key="sync_bookmarks" />
+    <org.chromium.chrome.browser.preferences.ChromeBaseCheckBoxPreference android:persistent="false" android:title="@string/APKTOOL_DUMMYVAL_0x7f1305ea" android:key="sync_payments_integration" />
+    <org.chromium.chrome.browser.preferences.ChromeBaseCheckBoxPreference android:persistent="false" android:title="@string/APKTOOL_DUMMYVAL_0x7f1305d4" android:key="sync_history" />
+    <org.chromium.chrome.browser.preferences.ChromeBaseCheckBoxPreference android:persistent="false" android:title="@string/APKTOOL_DUMMYVAL_0x7f1305e9" android:key="sync_passwords" />
+    <org.chromium.chrome.browser.preferences.ChromeBaseCheckBoxPreference android:persistent="false" android:title="@string/APKTOOL_DUMMYVAL_0x7f1305eb" android:key="sync_recent_tabs" />
+    <org.chromium.chrome.browser.preferences.ChromeBaseCheckBoxPreference android:persistent="false" android:title="@string/APKTOOL_DUMMYVAL_0x7f1305ec" android:key="sync_settings" />
+    <org.chromium.chrome.browser.preferences.ChromeBasePreference android:title="@string/APKTOOL_DUMMYVAL_0x7f130586" android:key="google_activity_controls" android:summary="@string/APKTOOL_DUMMYVAL_0x7f130584" />
+    <org.chromium.chrome.browser.preferences.ChromeBasePreference android:title="@string/APKTOOL_DUMMYVAL_0x7f1305ca" android:key="encryption" />
+    <org.chromium.chrome.browser.preferences.ChromeBasePreference android:title="@string/APKTOOL_DUMMYVAL_0x7f1305dd" android:key="sync_manage_data" />
+</PreferenceScreen>

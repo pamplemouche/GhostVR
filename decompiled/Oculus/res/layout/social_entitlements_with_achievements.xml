@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/social_entitlements_with_achievements_margin" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/first_entitlement" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/social_entitlements_with_achievements_half_margin" android:layout_weight="1.0">
+        <com.facebook.drawee.view.SimpleDraweeView android:id="@id/first_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/social_entitlements_with_achievements_image_margin" android:adjustViewBounds="true" />
+        <TextView android:textAppearance="@style/TextAppearance" android:textColor="?mediumDarkTextColor" android:id="@id/first_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/second_entitlement" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/social_entitlements_with_achievements_half_margin" android:layout_weight="1.0">
+        <com.facebook.drawee.view.SimpleDraweeView android:id="@id/second_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/social_entitlements_with_achievements_image_margin" android:adjustViewBounds="true" />
+        <TextView android:textAppearance="@style/TextAppearance" android:textColor="?mediumDarkTextColor" android:id="@id/second_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

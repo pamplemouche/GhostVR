@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.tasks.tab_management.TabGridMessageCardView android:orientation="horizontal" android:id="@id/tab_grid_iph_item" android:background="@drawable/APKTOOL_DUMMYVAL_0x7f0802ad" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <org.chromium.ui.widget.ChromeImageView android:id="@id/icon" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f080201" android:adjustViewBounds="true" android:minWidth="8.0dip" android:layout_weight="1.0" android:importantForAccessibility="no" />
+    <org.chromium.chrome.browser.snackbar.TemplatePreservingTextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401b8" android:layout_gravity="start|center" android:id="@id/description" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:layout_marginBottom="14.0dip" android:layout_weight="4.0" android:textAlignment="viewStart" />
+    <org.chromium.ui.widget.ButtonCompat android:layout_gravity="center" android:id="@id/action_button" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f140226" />
+    <org.chromium.ui.widget.ChromeImageView android:id="@id/close_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:tint="@color/APKTOOL_DUMMYVAL_0x7f060079" android:layout_weight="1.0" android:contentDescription="@string/close" style="@style/APKTOOL_DUMMYVAL_0x7f1400d5" />
+</org.chromium.chrome.browser.tasks.tab_management.TabGridMessageCardView>

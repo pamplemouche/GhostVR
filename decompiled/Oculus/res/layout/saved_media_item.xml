@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/saved_media_item_title_vertical_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.drawee.view.SimpleDraweeView android:layout_gravity="center" android:id="@id/preview_image" android:layout_width="fill_parent" android:layout_height="@dimen/saved_media_item_height" />
+        <ImageView android:layout_gravity="center" android:id="@id/play_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/play_icon" android:tint="@color/oculus_black_10_alpha_15" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearance" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/saved_media_item_title_horizontal_margin" android:layout_marginTop="@dimen/saved_media_item_title_vertical_margin" android:layout_marginBottom="@dimen/saved_media_item_title_vertical_margin" android:layout_weight="1.0" />
+        <ImageView android:id="@id/context_button" android:paddingLeft="@dimen/saved_media_item_title_horizontal_margin" android:paddingRight="@dimen/saved_media_item_title_horizontal_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/social_more_icon" />
+    </LinearLayout>
+</LinearLayout>

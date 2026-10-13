@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/APKTOOL_DUMMYVAL_0x7f060161" android:paddingTop="20.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e0090" />
+    <org.chromium.chrome.browser.ui.widget.DualControlLayout android:id="@id/button_bar" android:paddingTop="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" app:APKTOOL_DUMMYVAL_0x7f040051="end" app:APKTOOL_DUMMYVAL_0x7f0401fd="@dimen/APKTOOL_DUMMYVAL_0x7f07006f">
+        <org.chromium.ui.widget.ButtonCompat android:layout_gravity="end" android:id="@id/allow" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f1400fe" />
+        <org.chromium.ui.widget.ButtonCompat android:layout_gravity="end" android:id="@id/block" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f140226" />
+    </org.chromium.chrome.browser.ui.widget.DualControlLayout>
+</LinearLayout>

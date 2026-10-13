@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="jobscheduler_analytics2">
+        <item>@id/jobscheduler_analytics2_normal_pri</item>
+        <item>@id/jobscheduler_analytics2_high_pri</item>
+    </array>
+</resources>

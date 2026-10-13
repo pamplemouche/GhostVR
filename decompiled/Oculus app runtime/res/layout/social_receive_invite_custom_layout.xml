@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/social_receive_invite_dialog_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/social_receive_invite_dialog_description_no_sender_name" style="@style/SocialReceiveInviteDialogSubtitle" />
+    <ImageView android:id="@id/social_receive_invite_dialog_activity_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:layout_below="@id/social_receive_invite_dialog_subtitle" />
+    <TextView android:id="@id/social_receive_invite_dialog_activity_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_below="@id/social_receive_invite_dialog_activity_image" style="@style/SocialReceiveInviteDialogActivityTitle" />
+    <TextView android:id="@id/social_receive_invite_dialog_activity_subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_below="@id/social_receive_invite_dialog_activity_title" />
+    <LinearLayout android:orientation="vertical" android:id="@id/social_receive_invite_dialog_party_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_below="@id/social_receive_invite_dialog_activity_subtitle">
+        <TextView android:id="@id/social_receive_invite_dialog_party_members_count" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/social_receive_invite_dialog_party_members_count_text" />
+        <TextView android:id="@id/social_receive_invite_dialog_invited_users_count" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/social_receive_invite_dialog_invited_users_text" />
+        <TextView android:id="@id/social_receive_invite_dialog_party_blocked_users_warning" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/social_receive_invite_dialog_party_blocked_users_warning" android:layout_below="@id/social_receive_invite_dialog_party_info" />
+    </LinearLayout>
+</RelativeLayout>

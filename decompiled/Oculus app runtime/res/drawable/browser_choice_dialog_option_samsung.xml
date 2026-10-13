@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <layer-list
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <item android:height="101.0px" android:width="180.0px" android:drawable="@drawable/ic_samsung_internet_landscape" />
+            <item android:gravity="bottom|center" android:height="24.0px" android:width="24.0px" android:drawable="@drawable/ic_checkmark_selected" />
+        </layer-list>
+    </item>
+    <item android:state_hovered="true">
+        <layer-list
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <item android:height="101.0px" android:width="180.0px" android:drawable="@drawable/ic_samsung_internet_landscape" />
+            <item android:gravity="bottom|center" android:height="24.0px" android:width="24.0px" android:drawable="@drawable/ic_checkmark_hovered" />
+        </layer-list>
+    </item>
+    <item>
+        <layer-list
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <item android:height="101.0px" android:width="180.0px" android:drawable="@drawable/ic_samsung_internet_landscape" />
+            <item android:gravity="bottom|center" android:height="24.0px" android:width="24.0px" android:drawable="@drawable/ic_checkmark_unselected" />
+        </layer-list>
+    </item>
+</selector>

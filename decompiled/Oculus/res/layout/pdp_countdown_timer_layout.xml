@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginTop="@dimen/pdp_countdown_timer_vertical_margin" android:layout_marginRight="@dimen/common_horizontal_padding" layout="@layout/divider_horizontal_with_theme" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginTop="@dimen/pdp_countdown_timer_vertical_margin" android:layout_marginRight="@dimen/common_horizontal_padding" android:layout_marginBottom="@dimen/pdp_countdown_timer_vertical_margin">
+        <TextView android:gravity="center" android:paddingLeft="@dimen/common_horizontal_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/store_deal_end_in_message" android:drawableLeft="@drawable/clock_icon" android:layout_weight="0.5" style="@style/TextAppearance.Body.Medium" />
+        <TextView android:textSize="@dimen/pdp_countdown_timer_clock_text_size" android:gravity="center" android:id="@id/countdown_timer_clock" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.5" android:fontFamily="sans-serif-light" />
+    </LinearLayout>
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginRight="@dimen/common_horizontal_padding" layout="@layout/divider_horizontal_with_theme" />
+</LinearLayout>

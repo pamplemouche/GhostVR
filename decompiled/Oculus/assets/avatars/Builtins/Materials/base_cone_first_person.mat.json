@@ -1,0 +1,81 @@
+{ 
+   "baseColor" : [ 
+      0.886274516582489, 
+      0.862745106220245, 
+      0.776470601558685, 
+      1
+   ], 
+   "baseMaskType" : 1, 
+   "baseMaskParameters" : [ 
+      0, 
+      0.0399999991059303, 
+      1, 
+      0
+   ], 
+   "baseMaskAxis" : [ 
+      0, 
+      1, 
+      0, 
+      0
+   ], 
+   "layers" : [ 
+      { 
+         "sampleMode" : 0, 
+         "blendMode" : 1, 
+         "maskType" : 3, 
+         "color" : [ 
+            1, 
+            1, 
+            1, 
+            1
+         ], 
+         "sampleParameters" : [ 
+            1, 
+            1, 
+            1, 
+            1
+         ], 
+         "maskParameters" : [ 
+            1, 
+            0, 
+            1, 
+            0
+         ], 
+         "maskAxis" : [ 
+            0, 
+            0, 
+            0, 
+            0
+         ]
+      }, 
+      { 
+         "sampleMode" : 0, 
+         "blendMode" : 0, 
+         "maskType" : 1, 
+         "color" : [ 
+            0.992156803607941, 
+            1, 
+            0.933333337306976, 
+            0
+         ], 
+         "sampleParameters" : [ 
+            1, 
+            1, 
+            1, 
+            1
+         ], 
+         "maskParameters" : [ 
+            0, 
+            0.0399999991059303, 
+            1, 
+            0
+         ], 
+         "maskAxis" : [ 
+            0, 
+            1, 
+            0, 
+            0
+         ]
+      }
+   ]
+}

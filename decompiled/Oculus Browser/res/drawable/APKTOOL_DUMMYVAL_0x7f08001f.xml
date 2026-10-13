@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="sequentially"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:duration="@integer/APKTOOL_DUMMYVAL_0x7f0c0013" android:startOffset="300" android:valueFrom="@color/APKTOOL_DUMMYVAL_0x7f0600d5" android:valueTo="@color/APKTOOL_DUMMYVAL_0x7f06007a" android:propertyName="strokeColor" />
+    <objectAnimator android:duration="@integer/APKTOOL_DUMMYVAL_0x7f0c0012" android:valueFrom="@color/APKTOOL_DUMMYVAL_0x7f06007a" android:valueTo="@color/APKTOOL_DUMMYVAL_0x7f0600d5" android:propertyName="strokeColor" />
+</set>

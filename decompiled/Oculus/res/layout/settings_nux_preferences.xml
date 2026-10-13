@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:oculus="http://schemas.android.com/apk/res-auto">
+    <com.oculus.horizon.widget.SwitchButtonSetting android:id="@id/hsw_opt_out" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/settings_item_height" oculus:titleText="@string/hsw_opt_out" />
+    <com.oculus.horizon.widget.SwitchButtonSetting android:id="@id/saved_prompt_seen" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/settings_item_height" oculus:titleText="@string/saved_prompt_seen" />
+    <com.oculus.horizon.widget.SwitchButtonSetting android:id="@id/browser_prompt_seen" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/settings_item_height" oculus:titleText="@string/browser_prompt_seen" />
+    <com.oculus.horizon.widget.SwitchButtonSetting android:id="@id/hsw_long_seen" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/settings_item_height" oculus:titleText="@string/hsw_long_seen" />
+    <com.oculus.horizon.widget.SwitchButtonSetting android:id="@id/malibu_recenter_opt_out" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/settings_item_height" oculus:titleText="@string/malibu_recenter_opt_out" />
+    <com.oculus.horizon.widget.SwitchButtonSetting android:id="@id/tutorial_prompt_seen" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/settings_item_height" oculus:titleText="@string/tutorial_prompt_seen" />
+    <com.oculus.horizon.widget.SwitchButtonSetting android:id="@id/party_calls_seen" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/settings_item_height" oculus:titleText="@string/party_calls_seen" />
+    <com.oculus.horizon.widget.SwitchButtonSetting android:id="@id/confirm_quit_seen" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/settings_item_height" oculus:titleText="Seen Confirm Quit" />
+    <com.oculus.horizon.widget.SwitchButtonSetting android:id="@id/confirm_quit_notif_seen" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/settings_item_height" oculus:titleText="Seen Confirm Quit Notif" />
+    <com.oculus.horizon.widget.SwitchButtonSetting android:id="@id/focus_screen_seen" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/settings_item_height" oculus:titleText="@string/focus_seen" />
+    <com.oculus.horizon.widget.SwitchButtonSetting android:id="@id/nux_finished" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/settings_item_height" oculus:titleText="@string/nux_finished" />
+</LinearLayout>

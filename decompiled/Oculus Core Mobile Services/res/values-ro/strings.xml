@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abc_action_bar_home_description">Navigați la ecranul de pornire</string>
+    <string name="abc_action_bar_up_description">Navigați în sus</string>
+    <string name="abc_action_menu_overflow_description">Mai multe opțiuni</string>
+    <string name="abc_action_mode_done">Gata</string>
+    <string name="abc_activity_chooser_view_see_all">Afișați tot</string>
+    <string name="abc_activitychooserview_choose_application">Alegeți o aplicație</string>
+    <string name="abc_capital_off">DEZACTIVAT</string>
+    <string name="abc_capital_on">ACTIVAT</string>
+    <string name="abc_prepend_shortcut_label">Meniu+</string>
+    <string name="abc_search_hint">Căutați…</string>
+    <string name="abc_searchview_description_clear">Ștergeți interogarea</string>
+    <string name="abc_searchview_description_query">Termen de căutare</string>
+    <string name="abc_searchview_description_search">Căutați</string>
+    <string name="abc_searchview_description_submit">Trimiteți interogarea</string>
+    <string name="abc_searchview_description_voice">Căutare vocală</string>
+    <string name="abc_shareactionprovider_share_with">Trimiteți la</string>
+    <string name="abc_shareactionprovider_share_with_application">Trimiteți folosind %s</string>
+    <string name="abc_toolbar_collapse_description">Restrângeți</string>
+    <string name="notifications_download_canceled_message">Descărcare aplicaţiei „%1$s” a fost anulată</string>
+    <string name="notifications_download_canceled_title">Descărcarea a fost anulată</string>
+    <string name="notifications_download_failed_message">Descărcarea „%1$s” nu e reuşit</string>
+    <string name="notifications_download_failed_title">Descărcarea nu a reuşit</string>
+    <string name="notifications_download_in_progress_message">Se descarcă %1$s…</string>
+    <string name="notifications_downloading_and_installing_apps">Se descarcă şi se instalează aplicaţii...</string>
+    <string name="notifications_head_install_failed_message">Instalarea nu a reuşit</string>
+    <string name="notifications_head_installed_message">S-a instalat</string>
+    <string name="notifications_head_installing_message">Se instalează</string>
+    <string name="notifications_install_failed_message">Instalarea „%1$s” nu e reuşit</string>
+    <string name="notifications_install_failed_title">Instalarea nu a reuşit</string>
+    <string name="notifications_install_in_progress_message">Se instalează %1$s…</string>
+    <string name="notifications_install_in_progress_title">Instalare în curs</string>
+    <string name="notifications_install_succeeded_message">Aplicaţia %1$s a fost instalată în biblioteca ta.</string>
+    <string name="notifications_install_succeeded_title">Instalare finalizată</string>
+    <string name="notifications_update_succeeded_message">%1$s a fost actualizată</string>
+    <string name="notifications_update_succeeded_title">Actualizare reuşită</string>
+    <string name="obb_display_title">%1$s (fişier de extensie)</string>
+    <string name="search_menu_title">Căutați</string>
+</resources>

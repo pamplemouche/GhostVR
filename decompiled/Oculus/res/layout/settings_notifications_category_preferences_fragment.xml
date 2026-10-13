@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/notification_settings_layout" android:background="?settingsPageBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?lineDividerDecorationDrawable" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:oculus="http://schemas.android.com/apk/res-auto">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_notifications_category_title" style="@style/Oculus.Widget.Light.Setting.Label" />
+    <LinearLayout android:orientation="vertical" android:id="@id/notification_category_settings_layout" android:background="?settingsPageBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?lineDividerDecorationDrawable" android:showDividers="middle" />
+    <TextView android:id="@id/dev_notifications_header" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_notifications_dev_title" style="@style/Oculus.Widget.Light.Setting.Label" />
+    <LinearLayout android:orientation="vertical" android:id="@id/dev_notifications_subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Oculus.Widget.Light.Setting">
+        <TextView android:textAppearance="?android:textAppearance" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_notifications_dev_subtitle" />
+    </LinearLayout>
+</LinearLayout>

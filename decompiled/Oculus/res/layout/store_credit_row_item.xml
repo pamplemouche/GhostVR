@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/payment_method_store_credit_horizontal_padding" android:paddingRight="@dimen/payment_method_store_credit_horizontal_padding" android:layout_width="fill_parent" android:layout_height="@dimen/payment_method_item_row_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/value" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.5" style="@style/TextAppearance" />
+    <TextView android:id="@id/expiration_date" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.5" style="@style/TextAppearance" />
+</LinearLayout>

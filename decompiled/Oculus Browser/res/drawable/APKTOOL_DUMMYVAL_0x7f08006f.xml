@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:insetLeft="@dimen/APKTOOL_DUMMYVAL_0x7f070019" android:insetRight="@dimen/APKTOOL_DUMMYVAL_0x7f070019" android:insetTop="@dimen/APKTOOL_DUMMYVAL_0x7f070019" android:insetBottom="@dimen/APKTOOL_DUMMYVAL_0x7f070019"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <selector>
+        <item android:state_checked="false" android:state_pressed="false">
+            <layer-list>
+                <item android:drawable="@drawable/APKTOOL_DUMMYVAL_0x7f08007c" />
+                <item android:drawable="@drawable/APKTOOL_DUMMYVAL_0x7f08006e" />
+            </layer-list>
+        </item>
+        <item>
+            <layer-list>
+                <item android:drawable="@drawable/APKTOOL_DUMMYVAL_0x7f08007b" />
+                <item android:drawable="@drawable/APKTOOL_DUMMYVAL_0x7f08006e" />
+            </layer-list>
+        </item>
+    </selector>
+</inset>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.explore_sites.ExploreSitesCategoryCardView android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="@dimen/APKTOOL_DUMMYVAL_0x7f070118" android:paddingBottom="@dimen/APKTOOL_DUMMYVAL_0x7f070117" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/APKTOOL_DUMMYVAL_0x7f070113" android:layout_marginEnd="@dimen/APKTOOL_DUMMYVAL_0x7f070113"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401c5" android:gravity="center" android:id="@id/category_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/APKTOOL_DUMMYVAL_0x7f070119" />
+    <org.chromium.chrome.browser.suggestions.tile.TileGridLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/category_sites" android:paddingTop="@dimen/APKTOOL_DUMMYVAL_0x7f07011a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:columnCount="5" android:columnOrderPreserved="true" />
+</org.chromium.chrome.browser.explore_sites.ExploreSitesCategoryCardView>

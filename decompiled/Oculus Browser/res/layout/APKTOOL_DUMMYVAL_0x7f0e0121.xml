@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingTop="@dimen/APKTOOL_DUMMYVAL_0x7f070217" android:paddingBottom="@dimen/APKTOOL_DUMMYVAL_0x7f070217" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <org.chromium.ui.widget.TextViewWithClickableSpans android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401ba" android:layout_gravity="center" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

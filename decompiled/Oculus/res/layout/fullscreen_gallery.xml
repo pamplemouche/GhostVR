@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/root_view" android:background="@color/oculus_black_10" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="top" android:id="@id/overlay" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:alpha="0.0">
+        <TextView android:textSize="14.0sp" android:textColor="@android:color/white" android:layout_gravity="center|left|top" android:id="@id/page_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        <ImageView android:layout_gravity="center|right|top" android:id="@id/close_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/gallery_close_button" />
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="202.0dip">
+        <androidx.viewpager.widget.ViewPager android:id="@id/image_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.oculus.horizon.widget.ViewPagerIndicator android:layout_gravity="bottom|center" android:id="@id/pager_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" />
+    </FrameLayout>
+</FrameLayout>

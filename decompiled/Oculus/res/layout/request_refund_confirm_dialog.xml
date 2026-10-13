@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/TextAppearance" android:textColor="@color/oculus_black_4" android:gravity="center_vertical" android:paddingLeft="@dimen/settings_item_padding" android:paddingRight="@dimen/settings_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/refunds_paragraph_padding" android:text="@string/commerce_refund_request_submit_message_conditions" />
+    <TextView android:textAppearance="@style/TextAppearance" android:textColor="@color/oculus_black_4" android:gravity="center_vertical" android:id="@id/ack_text" android:paddingLeft="@dimen/settings_item_padding" android:paddingRight="@dimen/settings_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/refunds_paragraph_padding" />
+</LinearLayout>

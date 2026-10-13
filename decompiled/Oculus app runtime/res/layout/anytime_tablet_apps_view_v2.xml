@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.v2.tablet.AnytimeTabletAppsViewV2 android:gravity="start|center|top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/TabletContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tablet_launcher_get_started" />
+    <LinearLayout android:gravity="start|center|top" android:orientation="horizontal" android:id="@id/get_started_apps" android:layout_width="wrap_content" android:layout_height="@dimen/tablet_launcher_get_started_layout_height" android:layout_marginBottom="20.0dip">
+        <com.oculus.panelapp.anytimeui.AnytimeUIButton android:tag="systemux://library" android:text="@string/anytime_detail_button_library" android:drawableTop="@drawable/ic_tablet_launcher_library_item" style="@style/TabletLauncherButton" />
+        <com.oculus.panelapp.anytimeui.AnytimeUIButton android:tag="systemux://browser" android:text="@string/anytime_detail_button_internet" android:drawableTop="@drawable/ic_tablet_launcher_internet_item" style="@style/TabletLauncherButton" />
+        <com.oculus.panelapp.anytimeui.AnytimeUIButton android:tag="systemux://store" android:text="@string/anytime_detail_button_store" android:drawableTop="@drawable/ic_tablet_launcher_store_item" style="@style/TabletLauncherButton" />
+        <com.oculus.panelapp.anytimeui.AnytimeUIButton android:tag="systemux://tv" android:text="@string/anytime_detail_button_tv" android:drawableTop="@drawable/ic_tablet_launcher_tv_item" style="@style/TabletLauncherButton" />
+        <com.oculus.panelapp.anytimeui.AnytimeUIButton android:tag="systemux://gallery" android:text="@string/anytime_detail_button_gallery" android:drawableTop="@drawable/ic_tablet_launcher_gallery_item" style="@style/TabletLauncherButton" />
+    </LinearLayout>
+    <TextView android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tablet_launcher_recent_apps" />
+    <LinearLayout android:gravity="start|center|top" android:orientation="horizontal" android:id="@id/recent_apps" android:layout_width="wrap_content" android:layout_height="@dimen/tablet_launcher_recent_apps_layout_height" />
+</com.oculus.panelapp.anytimeui.v2.tablet.AnytimeTabletAppsViewV2>

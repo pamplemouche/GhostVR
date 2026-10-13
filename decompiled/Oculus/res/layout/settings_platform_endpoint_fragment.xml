@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@drawable/divider_horizontal" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:oculus="http://schemas.android.com/apk/res-auto">
+    <com.oculus.horizon.widget.CustomSetting android:id="@id/endpoint" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/settings_plaform_uri" />
+</LinearLayout>

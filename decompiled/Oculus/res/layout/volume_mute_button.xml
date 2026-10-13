@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/volume_mute_icon" android:paddingRight="@dimen/video_volume_mute_button_padding" android:paddingBottom="@dimen/video_volume_mute_button_padding" android:layout_width="@dimen/video_volume_button_size" android:layout_height="@dimen/video_volume_button_size" android:src="@drawable/feed_video_volume_mute" android:scaleType="fitXY" android:adjustViewBounds="true" />
+    <ImageView android:id="@id/volume_unmute_icon" android:paddingRight="@dimen/video_volume_mute_button_padding" android:paddingBottom="@dimen/video_volume_mute_button_padding" android:layout_width="@dimen/video_volume_button_size" android:layout_height="@dimen/video_volume_button_size" android:src="@drawable/feed_video_volume_unmute" android:scaleType="fitXY" android:adjustViewBounds="true" />
+</merge>

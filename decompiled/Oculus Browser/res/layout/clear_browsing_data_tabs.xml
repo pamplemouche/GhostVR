@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.TabLayout android:id="@id/clear_browsing_data_tabs" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="ltr" style="@style/APKTOOL_DUMMYVAL_0x7f14017d" />
+    <android.support.v4.view.ViewPager android:id="@id/clear_browsing_data_viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/clear_browsing_data_tabs" app:APKTOOL_DUMMYVAL_0x7f04015a="@string/APKTOOL_DUMMYVAL_0x7f13014e" />
+    <ImageView android:layout_below="@id/clear_browsing_data_tabs" android:importantForAccessibility="no" style="@style/APKTOOL_DUMMYVAL_0x7f14017b" />
+</RelativeLayout>

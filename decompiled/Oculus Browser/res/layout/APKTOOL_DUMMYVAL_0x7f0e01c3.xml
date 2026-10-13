@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e01c1" />
+    <org.chromium.ui.widget.TextViewWithLeading android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401ba" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/tile_view_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f070317" android:lines="2" app:APKTOOL_DUMMYVAL_0x7f040169="@dimen/APKTOOL_DUMMYVAL_0x7f0702fb" />
+</merge>

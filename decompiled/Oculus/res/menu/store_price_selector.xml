@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/all_prices" android:title="@string/store_price_selector_all" android:showAsAction="never" />
+    <item android:id="@id/paid" android:title="@string/store_price_selector_paid" android:showAsAction="never" />
+    <item android:id="@id/free" android:title="@string/store_price_selector_free" android:showAsAction="never" />
+</menu>

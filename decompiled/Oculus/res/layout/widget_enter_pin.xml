@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:gravity="center" android:id="@id/first_digit" android:background="@drawable/widget_pin_indicator_empty" android:layout_width="15.0dip" android:layout_height="15.0dip" />
+    <View android:gravity="center" android:id="@id/second_digit" android:background="@drawable/widget_pin_indicator_empty" android:layout_width="15.0dip" android:layout_height="15.0dip" android:layout_marginLeft="14.0dip" />
+    <View android:gravity="center" android:id="@id/third_digit" android:background="@drawable/widget_pin_indicator_empty" android:layout_width="15.0dip" android:layout_height="15.0dip" android:layout_marginLeft="14.0dip" />
+    <View android:gravity="center" android:id="@id/fourth_digit" android:background="@drawable/widget_pin_indicator_empty" android:layout_width="15.0dip" android:layout_height="15.0dip" android:layout_marginLeft="14.0dip" />
+</merge>

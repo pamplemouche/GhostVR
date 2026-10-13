@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:height="@dimen/anytime_nav_bar_icon_size_v2" android:width="@dimen/anytime_nav_bar_icon_size_v2" android:drawable="@drawable/oc_icon_apps_1_24_f0f0f0_v2" />
+    <item android:height="@dimen/anytime_nav_bar_icon_size_v2" android:width="@dimen/anytime_nav_bar_icon_size_v2" android:drawable="@drawable/oc_icon_apps_1_24_959799_v2" />
+</selector>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.debug.ShellDebugView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oculus.vrshell.panels.views.ShellTabHost android:id="@id/debug_panel_tabhost" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+        <LinearLayout android:orientation="vertical" android:background="@color/colorDebugTransparent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:id="@id/debug_panel_title" android:text="@string/debug_panel_title" style="@style/DebugPanelTitleText" />
+            <HorizontalScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TabWidget android:id="@android:id/tabs" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </HorizontalScrollView>
+            <FrameLayout android:id="@android:id/tabcontent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <include layout="@layout/debug_tab_control" />
+                <com.oculus.panelapp.debug.DeviceTab android:id="@id/debug_tab_device" android:background="@color/colorDebugPanelBackground" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ListView android:id="@id/device_details_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </com.oculus.panelapp.debug.DeviceTab>
+                <com.oculus.panelapp.debug.QuickLaunchTab android:id="@id/debug_tab_quick_launch" android:background="@color/colorDebugPanelBackground" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ListView android:id="@id/quick_launch_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </com.oculus.panelapp.debug.QuickLaunchTab>
+                <include layout="@layout/debug_tab_coex" />
+                <com.oculus.panelapp.debug.FeatureFlagsTab android:orientation="vertical" android:id="@id/debug_tab_feature_flags" android:background="@color/colorDebugPanelBackground" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <FrameLayout android:orientation="horizontal" android:id="@id/feature_flag_filter" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+                        <view android:id="@id/feature_flag_filter_edittext" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Filter settings" android:maxLines="1" class="com.oculus.panelapp.debug.FeatureFlagsTab$FilterEditText" />
+                        <Button android:layout_gravity="center|right" android:id="@id/feature_flag_filter_clear" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="✖️" />
+                    </FrameLayout>
+                    <android.support.v7.widget.RecyclerView android:id="@id/debug_feature_flag_list" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0px" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0px" android:text="Changes may require a restart of Shell to take effect." />
+                </com.oculus.panelapp.debug.FeatureFlagsTab>
+                <com.oculus.panelapp.debug.TrackingTab android:id="@id/debug_tab_tracking" android:background="@color/colorDebugPanelBackground" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <TextView android:id="@id/debug_tab_tracking_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    </ScrollView>
+                </com.oculus.panelapp.debug.TrackingTab>
+                <com.oculus.panelapp.debug.XrspTab android:id="@id/debug_tab_xrsp" android:background="@color/colorDebugPanelBackground" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <TextView android:id="@id/debug_tab_xrsp_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    </ScrollView>
+                </com.oculus.panelapp.debug.XrspTab>
+                <com.oculus.panelapp.debug.UserTab android:orientation="vertical" android:id="@id/debug_tab_user" android:background="@color/colorDebugPanelBackground" android:paddingLeft="10.0dip" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <TextView android:id="@id/user_email_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Email" />
+                    <EditText android:id="@id/user_email" android:tag="user_email" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="300.0dip" android:layout_below="@id/user_email_title" android:inputType="text" />
+                    <TextView android:id="@id/user_password_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Password" android:layout_below="@id/user_email" />
+                    <EditText android:id="@id/user_password" android:tag="user_password" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="300.0dip" android:layout_below="@id/user_password_title" android:inputType="textPassword" />
+                    <com.oculus.vrshell.panels.views.ShellButton android:id="@id/submit_login" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Login" android:layout_below="@id/user_password" />
+                    <com.oculus.vrshell.panels.views.ShellButton android:id="@id/logout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Logout" android:layout_above="@id/login_status" />
+                    <TextView android:id="@id/login_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:layout_alignParentBottom="true" />
+                    <TextView android:id="@id/user_pin_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pin" />
+                    <EditText android:id="@id/user_pin" android:tag="user_pin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="300.0dip" android:layout_below="@id/user_pin_title" android:inputType="number" />
+                    <com.oculus.vrshell.panels.views.ShellButton android:id="@id/pin_cancel_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="Cancel" android:layout_below="@id/user_pin" />
+                    <com.oculus.vrshell.panels.views.ShellButton android:id="@id/verify_login_pin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginBottom="5.0dip" android:text="Verify Pin" android:layout_toRightOf="@id/pin_cancel_button" android:layout_below="@id/user_pin" />
+                    <com.oculus.vrshell.panels.views.ShellButton android:id="@id/two_fac_select_back_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Back" />
+                    <TextView android:id="@id/two_fac_select_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:text="Select two fac method" android:layout_toRightOf="@id/two_fac_select_back_button" />
+                    <android.support.v7.widget.RecyclerView android:id="@id/two_fac_select_list" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="5.0dip" android:layout_below="@id/two_fac_select_back_button" />
+                </com.oculus.panelapp.debug.UserTab>
+                <com.oculus.panelapp.debug.SystemDialogTab android:id="@id/debug_tab_system_dialog" style="@style/SystemDialogTab">
+                    <com.oculus.vrshell.panels.views.ShellButton android:id="@id/dialog_flow_button" android:text="Show Dialog Flow" style="@style/SystemDialogButton" />
+                    <com.oculus.vrshell.panels.views.ShellButton android:id="@id/back_button_dialog_button" android:text="Show Dialog with Back Button" style="@style/SystemDialogButton" />
+                    <com.oculus.vrshell.panels.views.ShellButton android:id="@id/icon_button_dialog_button" android:text="Show Dialog with Icon Button" style="@style/SystemDialogButton" />
+                    <com.oculus.vrshell.panels.views.ShellButton android:id="@id/information_box_dialog_button" android:text="Show Dialog with Information Box" style="@style/SystemDialogButton" />
+                    <com.oculus.vrshell.panels.views.ShellButton android:id="@id/list_dialog_button" android:text="Show Dialog with List" style="@style/SystemDialogButton" />
+                    <com.oculus.vrshell.panels.views.ShellButton android:id="@id/full_feature_dialog_button" android:text="Show Dialog with All Features" style="@style/SystemDialogButton" />
+                </com.oculus.panelapp.debug.SystemDialogTab>
+                <com.oculus.panelapp.debug.SystemTooltipTab android:id="@id/debug_tab_system_tooltip" style="@style/SystemTooltipTab">
+                    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                            <include layout="@layout/tooltip_sample" />
+                            <include layout="@layout/tooltip_sample" />
+                            <include layout="@layout/tooltip_sample" />
+                            <include layout="@layout/tooltip_sample" />
+                        </LinearLayout>
+                    </ScrollView>
+                </com.oculus.panelapp.debug.SystemTooltipTab>
+                <com.oculus.panelapp.debug.ControllerRepairingTab android:id="@id/debug_tab_controller_repairing" android:background="@color/colorDebugPanelBackground" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:orientation="vertical" android:paddingTop="24.0dip" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="24.0dip" android:paddingEnd="24.0dip">
+                        <TextView android:textSize="16.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/controller_repairing_line1" />
+                        <TextView android:textSize="16.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/controller_repairing_line2" />
+                        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip">
+                            <com.oculus.vrshell.panels.views.ShellButton android:id="@id/controller_repairing_left_controller_button" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LEFT CONTROLLER" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" android:layout_marginEnd="12.0dip" />
+                            <com.oculus.vrshell.panels.views.ShellButton android:id="@id/controller_repairing_right_controller_button" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RIGHT CONTROLLER" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.oculus.panelapp.debug.ControllerRepairingTab>
+                <include layout="@layout/debug_vr_cast" />
+            </FrameLayout>
+        </LinearLayout>
+    </com.oculus.vrshell.panels.views.ShellTabHost>
+</com.oculus.panelapp.debug.ShellDebugView>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/NotificationAUIContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/NotificationAUIContainerSeparator">
+        <LinearLayout android:id="@id/notifications_aui_main_container" style="@style/NotificationAUIMainContainer">
+            <FrameLayout android:id="@id/notif_content_container" style="@style/NotificationContentContainer" />
+            <Space style="@style/AnytimeMenuBarSpacerTheme" />
+            <com.oculus.vrshell.panels.views.ShellButton android:id="@id/notif_icon_accept" style="@style/NotificationIconCTAAccept" />
+            <com.oculus.vrshell.panels.views.ShellButton android:id="@id/notif_icon_invitecall" style="@style/NotificationIconCTAInviteCall" />
+            <com.oculus.vrshell.panels.views.ShellButton android:id="@id/notif_icon_seemore" style="@style/NotificationIconCTASeeMore" />
+            <com.oculus.vrshell.panels.views.ShellButton android:id="@id/notif_icon_canceldownload" style="@style/NotificationIconCTACancelDownload" />
+            <com.oculus.vrshell.panels.views.ShellButton android:id="@id/notif_icon_launchcontent" style="@style/NotificationIconCTALaunchContent" />
+            <com.oculus.vrshell.panels.views.ShellButton android:id="@id/notif_icon_retrydownload" style="@style/NotificationIconCTARetryDownload" />
+            <com.oculus.vrshell.panels.views.ShellButton android:id="@id/notif_icon_deny" style="@style/NotificationIconCTADeny" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/notifications_all_container" android:visibility="gone" style="@style/NotificationAUIViewAllButtonContainer">
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/notifications_all" android:tag="systemux://notifications" android:text="@string/anytime_notifs_button_view_all" android:drawableTop="@drawable/notification_none" style="@style/NotificationsViewAllButtonTheme" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

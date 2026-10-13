@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard custom:horizontalGap="1.0px" custom:keyHeight="32.0px" custom:keyTextColor="@color/keyboard_key_text" custom:keyTextSize="18.0px" custom:keyToHighlight="@xml/emoji_5_32" custom:keyWidth="32.0px" custom:verticalGap="1.0px" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <Row>
+        <Key custom:keyLabel="👡" custom:keyOutputText="👡" />
+        <Key custom:keyLabel="🎩" custom:keyOutputText="🎩" />
+        <Key custom:keyLabel="💄" custom:keyOutputText="💄" />
+        <Key custom:keyLabel="🐒" custom:keyOutputText="🐒" />
+        <Key custom:keyLabel="🐩" custom:keyOutputText="🐩" />
+        <Key custom:keyLabel="🐈" custom:keyOutputText="🐈" />
+        <Key custom:keyLabel="🐆" custom:keyOutputText="🐆" />
+        <Key custom:keyLabel="🦄" custom:keyOutputText="🦄" />
+        <Key custom:keyLabel="🐄" custom:keyOutputText="🐄" />
+        <Key custom:keyLabel="🐽" custom:keyOutputText="🐽" />
+        <Key custom:keyLabel="🐪" custom:keyOutputText="🐪" />
+        <Key custom:keyLabel="🐭" custom:keyOutputText="🐭" />
+        <Key custom:keyLabel="🐰" custom:keyOutputText="🐰" />
+        <Key custom:keyLabel="🐻" custom:keyOutputText="🐻" />
+        <Key custom:keyLabel="🦃" custom:keyOutputText="🦃" />
+        <Key custom:keyLabel="🐤" custom:keyOutputText="🐤" />
+        <Key custom:keyLabel="🕊️" custom:keyOutputText="🕊️" />
+        <Key custom:keyLabel="🐸" custom:keyOutputText="🐸" />
+        <Key custom:keyLabel="🐍" custom:keyOutputText="🐍" />
+        <Key custom:codes="-4" custom:horizontalGap="0.0px" custom:keyEdgeFlags="right" custom:keyIcon="@drawable/dismiss" />
+    </Row>
+    <Row>
+        <Key custom:keyLabel="👢" custom:keyOutputText="👢" />
+        <Key custom:keyLabel="🎓" custom:keyOutputText="🎓" />
+        <Key custom:keyLabel="💍" custom:keyOutputText="💍" />
+        <Key custom:keyLabel="🦍" custom:keyOutputText="🦍" />
+        <Key custom:keyLabel="🐺" custom:keyOutputText="🐺" />
+        <Key custom:keyLabel="🦁" custom:keyOutputText="🦁" />
+        <Key custom:keyLabel="🐴" custom:keyOutputText="🐴" />
+        <Key custom:keyLabel="🐮" custom:keyOutputText="🐮" />
+        <Key custom:keyLabel="🐷" custom:keyOutputText="🐷" />
+        <Key custom:keyLabel="🐏" custom:keyOutputText="🐏" />
+        <Key custom:keyLabel="🐫" custom:keyOutputText="🐫" />
+        <Key custom:keyLabel="🐁" custom:keyOutputText="🐁" />
+        <Key custom:keyLabel="🐇" custom:keyOutputText="🐇" />
+        <Key custom:keyLabel="🐨" custom:keyOutputText="🐨" />
+        <Key custom:keyLabel="🐔" custom:keyOutputText="🐔" />
+        <Key custom:keyLabel="🐥" custom:keyOutputText="🐥" />
+        <Key custom:keyLabel="🦅" custom:keyOutputText="🦅" />
+        <Key custom:keyLabel="🐊" custom:keyOutputText="🐊" />
+        <Key custom:keyLabel="🐲" custom:keyOutputText="🐲" />
+        <Key custom:codes="-5" custom:horizontalGap="0.0px" custom:isRepeatable="true" custom:keyIcon="@drawable/backspace_32_32" />
+    </Row>
+    <Row>
+        <Key custom:keyLabel="👑" custom:keyOutputText="👑" />
+        <Key custom:keyLabel="⛑️" custom:keyOutputText="⛑️" />
+        <Key custom:keyLabel="💎" custom:keyOutputText="💎" />
+        <Key custom:keyLabel="🐶" custom:keyOutputText="🐶" />
+        <Key custom:keyLabel="🦊" custom:keyOutputText="🦊" />
+        <Key custom:keyLabel="🐯" custom:keyOutputText="🐯" />
+        <Key custom:keyLabel="🐎" custom:keyOutputText="🐎" />
+        <Key custom:keyLabel="🐂" custom:keyOutputText="🐂" />
+        <Key custom:keyLabel="🐖" custom:keyOutputText="🐖" />
+        <Key custom:keyLabel="🐑" custom:keyOutputText="🐑" />
+        <Key custom:keyLabel="🐘" custom:keyOutputText="🐘" />
+        <Key custom:keyLabel="🐀" custom:keyOutputText="🐀" />
+        <Key custom:keyLabel="🐿️" custom:keyOutputText="🐿️" />
+        <Key custom:keyLabel="🐼" custom:keyOutputText="🐼" />
+        <Key custom:keyLabel="🐓" custom:keyOutputText="🐓" />
+        <Key custom:keyLabel="🐦" custom:keyOutputText="🐦" />
+        <Key custom:keyLabel="🦆" custom:keyOutputText="🦆" />
+        <Key custom:keyLabel="🐢" custom:keyOutputText="🐢" />
+        <Key custom:keyLabel="🐉" custom:keyOutputText="🐉" />
+        <Key custom:codes="-2" custom:horizontalGap="0.0px" custom:keyHeight="98.0px" custom:keyLabel="GO" />
+    </Row>
+    <Row>
+        <Key custom:keyLabel="👒" custom:keyOutputText="👒" />
+        <Key custom:keyLabel="📿" custom:keyOutputText="📿" />
+        <Key custom:keyLabel="🐵" custom:keyOutputText="🐵" />
+        <Key custom:keyLabel="🐕" custom:keyOutputText="🐕" />
+        <Key custom:keyLabel="🐱" custom:keyOutputText="🐱" />
+        <Key custom:keyLabel="🐅" custom:keyOutputText="🐅" />
+        <Key custom:keyLabel="🦌" custom:keyOutputText="🦌" />
+        <Key custom:keyLabel="🐃" custom:keyOutputText="🐃" />
+        <Key custom:keyLabel="🐗" custom:keyOutputText="🐗" />
+        <Key custom:keyLabel="🐐" custom:keyOutputText="🐐" />
+        <Key custom:keyLabel="🦏" custom:keyOutputText="🦏" />
+        <Key custom:keyLabel="🐹" custom:keyOutputText="🐹" />
+        <Key custom:keyLabel="🦇" custom:keyOutputText="🦇" />
+        <Key custom:keyLabel="🐾" custom:keyOutputText="🐾" />
+        <Key custom:keyLabel="🐣" custom:keyOutputText="🐣" />
+        <Key custom:keyLabel="🐧" custom:keyOutputText="🐧" />
+        <Key custom:keyLabel="🦉" custom:keyOutputText="🦉" />
+        <Key custom:keyLabel="🦎" custom:keyOutputText="🦎" />
+        <Key custom:keyLabel="🐳" custom:keyOutputText="🐳" />
+    </Row>
+    <Row>
+        <Key custom:codes="-7" custom:keyIcon="@drawable/keyboard_32_32" />
+        <Key custom:codes="-3" custom:keyIcon="@drawable/back_32_32" custom:keyboard="@xml/emoji_4_32" />
+        <Key custom:codes="-3" custom:keyIcon="@drawable/forward_32_32" custom:keyboard="@xml/emoji_6_32" />
+        <Key custom:codes="-3" custom:keyIcon="@drawable/group_0_64_32" custom:keyWidth="65.0px" custom:keyboard="@xml/emoji_0_32" />
+        <Key custom:codes="-3" custom:keyIcon="@drawable/group_1_64_32" custom:keyWidth="65.0px" custom:keyboard="@xml/emoji_5_32" />
+        <Key custom:codes="-3" custom:keyIcon="@drawable/group_2_64_32" custom:keyWidth="65.0px" custom:keyboard="@xml/emoji_6_32" />
+        <Key custom:codes="-3" custom:keyIcon="@drawable/group_3_64_32" custom:keyWidth="65.0px" custom:keyboard="@xml/emoji_7_32" />
+        <Key custom:codes="-3" custom:keyIcon="@drawable/group_4_64_32" custom:keyWidth="65.0px" custom:keyboard="@xml/emoji_10_32" />
+        <Key custom:codes="-3" custom:keyIcon="@drawable/group_5_64_32" custom:keyWidth="65.0px" custom:keyboard="@xml/emoji_11_32" />
+        <Key custom:codes="-3" custom:keyIcon="@drawable/group_6_64_32" custom:keyWidth="65.0px" custom:keyboard="@xml/emoji_13_32" />
+        <Key custom:codes="-3" custom:keyIcon="@drawable/group_7_64_32" custom:keyWidth="65.0px" custom:keyboard="@xml/emoji_16_32" />
+    </Row>
+</Keyboard>

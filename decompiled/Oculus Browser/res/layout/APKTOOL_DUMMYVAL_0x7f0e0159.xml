@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.payments.ui.PaymentRequestUiErrorView android:gravity="center" android:orientation="vertical" android:background="@drawable/APKTOOL_DUMMYVAL_0x7f0802ad" app:APKTOOL_DUMMYVAL_0x7f040183="@dimen/APKTOOL_DUMMYVAL_0x7f070256" app:APKTOOL_DUMMYVAL_0x7f040184="@dimen/APKTOOL_DUMMYVAL_0x7f070256"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e015a" />
+    <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f14020c" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="@dimen/APKTOOL_DUMMYVAL_0x7f070254" android:text="@string/APKTOOL_DUMMYVAL_0x7f1304cc" android:layout_marginStart="@dimen/APKTOOL_DUMMYVAL_0x7f07010b" android:layout_marginEnd="@dimen/APKTOOL_DUMMYVAL_0x7f07010b" />
+    <org.chromium.ui.widget.ButtonCompat android:layout_gravity="end" android:id="@id/ok_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/APKTOOL_DUMMYVAL_0x7f07010c" android:text="@string/APKTOOL_DUMMYVAL_0x7f130443" android:layout_marginEnd="@dimen/APKTOOL_DUMMYVAL_0x7f07010c" style="@style/APKTOOL_DUMMYVAL_0x7f140226" />
+</org.chromium.chrome.browser.payments.ui.PaymentRequestUiErrorView>

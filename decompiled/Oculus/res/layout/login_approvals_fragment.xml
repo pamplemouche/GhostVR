@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?nuxBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/nux360_toolbar" />
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/nux_container_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?actionBarSize">
+        <TextView android:textAppearance="@style/Nux.TextAppearance.Secondary" android:id="@id/email_confirmation_required" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/login_approvals_confirmation_required_message" />
+        <TextView android:id="@id/email" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_single_field_offset" />
+        <TextView android:textAppearance="@style/Nux.TextAppearance.Secondary" android:id="@id/instructions" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_single_field_offset" android:text="@string/login_approvals_enter_confirmation_code_message" />
+        <com.google.android.material.textfield.TextInputLayout android:id="@id/pin_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?textInputLayoutStyle">
+            <com.google.android.material.textfield.TextInputEditText android:id="@id/pin_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="number" android:imeOptions="actionDone" app:showKeyboard="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.oculus.horizon.widget.ProgressButton android:layout_gravity="bottom" android:id="@id/continue_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_continue" />
+        <com.oculus.horizon.widget.ProgressButton android:textAppearance="@style/Facebook.TextAppearance.Secondary.Small" android:id="@id/resend_link" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/login_approvals_resend_confirmation_code_link" />
+    </LinearLayout>
+</FrameLayout>

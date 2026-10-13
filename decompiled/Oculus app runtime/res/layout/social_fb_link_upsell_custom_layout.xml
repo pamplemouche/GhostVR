@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/social_fb_link_upsell_dialog_subtitle" android:text="@string/social_fb_link_upsell_dialog_subtitle" style="@style/FBLinkUpsellSubtitle" />
+    <GridLayout style="@style/FBLinkUpsellPointsContainer">
+        <ImageView android:id="@id/social_fb_link_upsell_point_1_non_empty_friend_count_icon" android:src="@drawable/ic_parties" style="@style/FBLinkUpsellPointIcon" />
+        <TextView android:id="@id/social_fb_link_upsell_point_1_non_empty_friend_count_text" android:text="@string/social_fb_link_upsell_point_1_non_empty_friend_count" style="@style/FBLinkUpsellPointText" />
+        <ImageView android:src="@drawable/ic_add_friend" style="@style/FBLinkUpsellPointIcon" />
+        <TextView android:text="@string/social_fb_link_upsell_point_1" style="@style/FBLinkUpsellPointText" />
+        <ImageView android:src="@drawable/ic_chat" style="@style/FBLinkUpsellPointIcon" />
+        <TextView android:text="@string/social_fb_link_upsell_point_2" style="@style/FBLinkUpsellPointText" />
+        <ImageView android:id="@id/social_fb_link_upsell_point_3_icon" android:src="@drawable/ic_start_livestream" style="@style/FBLinkUpsellPointIcon" />
+        <TextView android:id="@id/social_fb_link_upsell_point_3_text" android:text="@string/social_fb_link_upsell_point_3" style="@style/FBLinkUpsellPointText" />
+    </GridLayout>
+    <TextView android:id="@id/social_fb_link_upsell_footer_text" android:text="@string/social_fb_link_upsell_footer_text" style="@style/FBLinkUpsellFooterText" />
+</LinearLayout>

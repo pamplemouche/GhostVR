@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="?settingsPageBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:oculus="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?lineDividerDecorationDrawable" android:showDividers="middle">
+        <com.oculus.horizon.widget.CustomSetting android:id="@id/clear_cache" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/settings_clear_qp_cache" />
+        <com.oculus.horizon.widget.CustomSetting android:id="@id/clear_timestamp" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/settings_clear_qp_cooldown" />
+        <com.oculus.horizon.widget.CustomSetting android:id="@id/reset_library_nux" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/settings_reset_library_nux" />
+    </LinearLayout>
+</ScrollView>

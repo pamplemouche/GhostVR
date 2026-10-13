@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="@dimen/saved_carousel_item_width" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.view.SimpleDraweeView android:layout_gravity="center_vertical" android:id="@id/image_view" android:layout_width="@dimen/saved_carousel_item_width" android:layout_height="@dimen/saved_carousel_item_height" app:actualImageScaleType="centerCrop" app:placeholderImage="@drawable/store_item_placeholder" app:viewAspectRatio="1.0" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/saved_carousel_item_title_marginTop">
+        <TextView android:ellipsize="end" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/saved_carousel_title_context_item_margin" android:maxLines="2" android:layout_weight="1.0" android:layout_marginEnd="@dimen/saved_carousel_title_context_item_margin" style="@style/TextAppearance.Small.SemiBold" />
+        <ImageView android:id="@id/context_button" android:layout_width="@dimen/saved_carousel_context_item_width" android:layout_height="@dimen/saved_carousel_context_item_height" android:src="@drawable/social_more_icon" android:scaleType="centerInside" android:adjustViewBounds="true" />
+    </LinearLayout>
+</LinearLayout>

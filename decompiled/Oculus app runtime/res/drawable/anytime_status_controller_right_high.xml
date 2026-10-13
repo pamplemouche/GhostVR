@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:layout_width="@dimen/controller_battery_icon_width_quest" android:layout_height="@dimen/controller_battery_icon_height_quest" android:drawable="@drawable/controller_right_high" android:top="@dimen/controller_battery_icon_top_quest" android:right="@dimen/controller_battery_icon_right_quest" />
+</layer-list>

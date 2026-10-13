@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.accessibility_tab_switcher.AccessibilityTabModelListItem android:id="@id/list_item_frame" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f07004b"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/tab_contents_modern" style="@style/APKTOOL_DUMMYVAL_0x7f140109">
+        <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e010a" />
+        <org.chromium.ui.widget.ChromeImageButton android:id="@id/close_btn_modern" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f08009f" android:paddingStart="23.0dip" android:paddingEnd="13.0dip" style="@style/APKTOOL_DUMMYVAL_0x7f14010b" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/undo_contents" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <org.chromium.ui.widget.ButtonCompat android:layout_gravity="center_vertical" android:id="@id/undo_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/APKTOOL_DUMMYVAL_0x7f130104" android:layout_weight="1.0" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f130104" android:textAlignment="viewStart" android:paddingStart="72.0dip" style="@style/APKTOOL_DUMMYVAL_0x7f140226" />
+    </LinearLayout>
+</org.chromium.chrome.browser.accessibility_tab_switcher.AccessibilityTabModelListItem>

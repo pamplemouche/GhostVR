@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center" android:id="@id/signin_promo_image" android:layout_width="@dimen/APKTOOL_DUMMYVAL_0x7f0702a3" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f0702a3" android:scaleType="fitCenter" />
+    <org.chromium.ui.widget.ChromeImageButton android:layout_gravity="end|center|top" android:id="@id/signin_promo_close_button" android:background="?APKTOOL_DUMMYVAL_0x7f0401e7" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f08009d" android:scaleType="fitCenter" android:contentDescription="@string/close" app:APKTOOL_DUMMYVAL_0x7f040256="@color/APKTOOL_DUMMYVAL_0x7f060079" />
+</merge>

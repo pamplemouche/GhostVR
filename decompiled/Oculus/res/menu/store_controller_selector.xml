@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/all_controllers" android:title="@string/store_controller_selector_all" android:showAsAction="never" />
+    <item android:id="@id/gamepad" android:title="@string/store_controller_selector_gamepad" android:showAsAction="never" />
+    <item android:id="@id/touchpad" android:title="@string/store_controller_selector_touchpad" android:showAsAction="never" />
+    <item android:id="@id/gear_vr" android:title="@string/store_controller_selector_gear_vr" android:showAsAction="never" />
+</menu>

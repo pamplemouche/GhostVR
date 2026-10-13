@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <shape>
+            <solid android:color="@color/oculus_green_1" />
+            <corners android:radius="@dimen/button_corners_radius" />
+        </shape>
+    </item>
+    <item>
+        <ripple android:color="@color/oculus_green_2">
+            <item>
+                <shape>
+                    <solid android:color="@color/oculus_green_3" />
+                    <corners android:radius="@dimen/button_corners_radius" />
+                </shape>
+            </item>
+        </ripple>
+    </item>
+</selector>

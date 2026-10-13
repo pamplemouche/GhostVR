@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/all" android:title="@string/store_genre_selector_all" android:showAsAction="never" />
+    <item android:id="@id/action" android:title="@string/store_genre_selector_action" android:showAsAction="never" />
+    <item android:id="@id/adventure" android:title="@string/store_genre_selector_adventure" android:showAsAction="never" />
+    <item android:id="@id/arcade" android:title="@string/store_genre_selector_arcade" android:showAsAction="never" />
+    <item android:id="@id/casual" android:title="@string/store_genre_selector_casual" android:showAsAction="never" />
+    <item android:id="@id/educational" android:title="@string/store_genre_selector_educational" android:showAsAction="never" />
+    <item android:id="@id/exploration" android:title="@string/store_genre_selector_exploration" android:showAsAction="never" />
+    <item android:id="@id/fighting" android:title="@string/store_genre_selector_fighting" android:showAsAction="never" />
+    <item android:id="@id/horror" android:title="@string/store_genre_selector_horror" android:showAsAction="never" />
+    <item android:id="@id/movie" android:title="@string/store_genre_selector_movie" android:showAsAction="never" />
+    <item android:id="@id/music" android:title="@string/store_genre_selector_music" android:showAsAction="never" />
+    <item android:id="@id/music_video" android:title="@string/store_genre_selector_music_video" android:showAsAction="never" />
+    <item android:id="@id/narrative" android:title="@string/store_genre_selector_narrative" android:showAsAction="never" />
+    <item android:id="@id/productivity" android:title="@string/store_genre_selector_productivity" android:showAsAction="never" />
+    <item android:id="@id/puzzle" android:title="@string/store_genre_selector_puzzle" android:showAsAction="never" />
+    <item android:id="@id/racing" android:title="@string/store_genre_selector_racing" android:showAsAction="never" />
+    <item android:id="@id/rpg" android:title="@string/store_genre_selector_rpg" android:showAsAction="never" />
+    <item android:id="@id/shooter" android:title="@string/store_genre_selector_shooter" android:showAsAction="never" />
+    <item android:id="@id/simulation" android:title="@string/store_genre_selector_simulation" android:showAsAction="never" />
+    <item android:id="@id/social" android:title="@string/store_genre_selector_social" android:showAsAction="never" />
+    <item android:id="@id/sports" android:title="@string/store_genre_selector_sports" android:showAsAction="never" />
+    <item android:id="@id/strategy" android:title="@string/store_genre_selector_strategy" android:showAsAction="never" />
+    <item android:id="@id/utility" android:title="@string/store_genre_selector_utility" android:showAsAction="never" />
+</menu>

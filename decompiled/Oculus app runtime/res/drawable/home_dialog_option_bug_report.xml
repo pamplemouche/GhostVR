@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_hovered="true">
+        <layer-list
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <item>
+                <shape android:shape="oval"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <solid android:color="@color/oc_white" />
+                    <size android:height="18.0px" android:width="18.0px" />
+                </shape>
+            </item>
+            <item android:gravity="center" android:height="10.0px" android:width="10.0px">
+                <bitmap android:src="@drawable/ic_system_dialog_oculus_logo" android:tint="@color/oc_gray_6" />
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <item>
+                <shape android:shape="oval"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <solid android:color="@color/oc_gray_6" />
+                    <size android:height="18.0px" android:width="18.0px" />
+                </shape>
+            </item>
+            <item android:gravity="center" android:height="10.0px" android:width="10.0px">
+                <bitmap android:src="@drawable/ic_system_dialog_oculus_logo" android:tint="@color/shell_gray_8b" />
+            </item>
+        </layer-list>
+    </item>
+</selector>

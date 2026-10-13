@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/events_event_item_horizontal_margin" android:layout_marginRight="@dimen/events_event_item_horizontal_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:ellipsize="end" android:id="@id/details_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/events_event_item_vertical_margin" android:layout_marginBottom="@dimen/events_event_item_vertical_margin" android:text="@string/events_details_title" android:maxLines="1" android:fontFamily="sans-serif-medium" />
+    <TextView android:textAppearance="?android:textAppearance" android:textColor="?mediumDarkTextColor" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/events_event_item_vertical_margin" android:layout_marginBottom="@dimen/events_event_item_vertical_margin" android:lineSpacingExtra="@dimen/events_event_item_line_spacing" />
+</LinearLayout>

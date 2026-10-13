@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.chrome.browser.preferences.ChromeSwitchPreference android:key="contextual_search_switch" android:summaryOn="@string/APKTOOL_DUMMYVAL_0x7f130600" android:summaryOff="@string/APKTOOL_DUMMYVAL_0x7f1305ff" />
+    <org.chromium.chrome.browser.preferences.TextMessagePreference android:title="@string/APKTOOL_DUMMYVAL_0x7f13024f" app:APKTOOL_DUMMYVAL_0x7f04002a="false" />
+</PreferenceScreen>

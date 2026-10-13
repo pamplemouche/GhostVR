@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="app_with_iap_count">
+        <item quantity="other">med %1$d IAP-er</item>
+        <item quantity="one">med 1 IAP</item>
+    </plurals>
+    <plurals name="app_with_iap_header_count">
+        <item quantity="other">%1$d IAP-er for %2$s</item>
+        <item quantity="one">%1$d IAP for %2$s</item>
+    </plurals>
+    <plurals name="bundle_pdp_item_count">
+        <item quantity="other">%1$d opplevelser</item>
+        <item quantity="one">1 opplevelse</item>
+    </plurals>
+    <plurals name="pdp_controller_required">
+        <item quantity="other">Krever enten</item>
+        <item quantity="one">Krever</item>
+    </plurals>
+    <plurals name="store_countdown_days">
+        <item quantity="other">%1$s dager</item>
+        <item quantity="one">1 dag</item>
+    </plurals>
+</resources>

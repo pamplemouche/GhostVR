@@ -1,0 +1,61 @@
+{ 
+   "baseColor" : [ 
+      0.852941155433655, 
+      0.849480926990509, 
+      0.802768170833588, 
+      1
+   ], 
+   "baseMaskType" : 3, 
+   "baseMaskParameters" : [ 
+      0.600000023841858, 
+      1, 
+      0, 
+      1
+   ], 
+   "baseMaskAxis" : [ 
+      0, 
+      0, 
+      0, 
+      0
+   ], 
+   "alphaMask" : "7669453086671509399", 
+   "alphaMask_scale" : [ 
+      1, 
+      1
+   ], 
+   "alphaMask_offset" : [ 
+      0, 
+      0
+   ], 
+   "layers" : [ 
+      { 
+         "sampleMode" : 0, 
+         "blendMode" : 0, 
+         "maskType" : 1, 
+         "color" : [ 
+            1, 
+            0.941987872123718, 
+            0.617647051811218, 
+            1
+         ], 
+         "sampleParameters" : [ 
+            1, 
+            1, 
+            1, 
+            1
+         ], 
+         "maskParameters" : [ 
+            0, 
+            0.25, 
+            1, 
+            0
+         ], 
+         "maskAxis" : [ 
+            0, 
+            1, 
+            0, 
+            0
+         ]
+      }
+   ]
+}

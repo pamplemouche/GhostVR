@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/alpha_asc" android:title="@string/store_sort_selector_alpha_asc" android:showAsAction="never" />
+    <item android:id="@id/alpha_desc" android:title="@string/store_sort_selector_alpha_desc" android:showAsAction="never" />
+    <item android:id="@id/release_date_desc" android:title="@string/store_sort_selector_release_date_desc" android:showAsAction="never" />
+    <item android:id="@id/release_date_asc" android:title="@string/store_sort_selector_release_date_asc" android:showAsAction="never" />
+    <item android:id="@id/quality_rating_desc" android:title="@string/store_sort_selector_quality_rating_desc" android:showAsAction="never" />
+</menu>

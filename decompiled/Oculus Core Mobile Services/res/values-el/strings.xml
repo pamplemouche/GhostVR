@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abc_action_bar_home_description">Πλοήγηση στην αρχική σελίδα</string>
+    <string name="abc_action_bar_up_description">Πλοήγηση προς τα επάνω</string>
+    <string name="abc_action_menu_overflow_description">Περισσότερες επιλογές</string>
+    <string name="abc_action_mode_done">Τέλος</string>
+    <string name="abc_activity_chooser_view_see_all">Εμφάνιση όλων</string>
+    <string name="abc_activitychooserview_choose_application">Επιλέξτε μια εφαρμογή</string>
+    <string name="abc_capital_off">ΑΠΕΝΕΡΓΟΠΟΙΗΣΗ</string>
+    <string name="abc_capital_on">ΕΝΕΡΓΟΠΟΙΗΣΗ</string>
+    <string name="abc_menu_space_shortcut_label">διάστημα</string>
+    <string name="abc_search_hint">Αναζήτηση…</string>
+    <string name="abc_searchview_description_clear">Διαγραφή ερωτήματος</string>
+    <string name="abc_searchview_description_query">Ερώτημα αναζήτησης</string>
+    <string name="abc_searchview_description_search">Αναζήτηση</string>
+    <string name="abc_searchview_description_submit">Υποβολή ερωτήματος</string>
+    <string name="abc_searchview_description_voice">Φωνητική αναζήτηση</string>
+    <string name="abc_shareactionprovider_share_with">Κοινοποίηση σε</string>
+    <string name="abc_shareactionprovider_share_with_application">Κοινοποίηση στην εφαρμογή %s</string>
+    <string name="abc_toolbar_collapse_description">Σύμπτυξη</string>
+    <string name="notifications_download_canceled_message">Η λήψη της εφαρμογής %1$s ακυρώθηκε</string>
+    <string name="notifications_download_canceled_title">Η λήψη ακυρώθηκε</string>
+    <string name="notifications_download_failed_message">Η λήψη της εφαρμογής \"%1$s\" απέτυχε</string>
+    <string name="notifications_download_failed_title">Αποτυχία λήψης</string>
+    <string name="notifications_download_in_progress_message">Λήψη %1$s…</string>
+    <string name="notifications_downloading_and_installing_apps">Λήψη και εγκατάσταση εφαρμογών...</string>
+    <string name="notifications_head_install_failed_message">Αποτυχία εγκατάστασης</string>
+    <string name="notifications_head_installed_message">Εγκαταστάθηκε</string>
+    <string name="notifications_head_installing_message">Εγκατάσταση...</string>
+    <string name="notifications_install_failed_message">Η εγκατάσταση της εφαρμογής \"%1$s\" απέτυχε</string>
+    <string name="notifications_install_failed_title">Η εγκατάσταση απέτυχε</string>
+    <string name="notifications_install_in_progress_message">Εγκατάσταση της εφαρμογής \"%1$s\"…</string>
+    <string name="notifications_install_in_progress_title">Εγκατάσταση σε εξέλιξη</string>
+    <string name="notifications_install_succeeded_message">Το %1$s εγκαταστάθηκε επιτυχώς στη βιβλιοθήκη σας.</string>
+    <string name="notifications_install_succeeded_title">Η εγκατάσταση ολοκληρώθηκε</string>
+    <string name="notifications_update_succeeded_message">Η εφαρμογή %1$s ενημερώθηκε επιτυχώς</string>
+    <string name="notifications_update_succeeded_title">Επιτυχής ενημέρωση</string>
+    <string name="obb_display_title">%1$s (αρχείο επέκτασης)</string>
+    <string name="search_menu_title">Αναζήτηση</string>
+</resources>

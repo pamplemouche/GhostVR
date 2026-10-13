@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/TextAppearance.Title" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22.0dip" />
+    <TextView android:textAppearance="@style/TextAppearance.Summary" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+    <LinearLayout android:gravity="end|center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="42.0dip">
+        <TextView android:textAppearance="@style/TextAppearance.Medium" android:id="@id/dismiss_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="41.0dip" />
+        <Button android:id="@id/action_button" android:layout_width="wrap_content" android:layout_height="32.0dip" android:textAllCaps="true" />
+    </LinearLayout>
+</merge>

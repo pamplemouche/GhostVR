@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?settingsPageBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Oculus.Widget.GrayDividers"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_name_privacy_label" style="@style/Oculus.Widget.Light.Setting.Label" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Oculus.Widget.Light.Setting">
+        <TextView android:textAppearance="?android:textAppearance" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_profile_privacy_title" />
+        <TextView android:textAppearance="?android:textAppearance" android:id="@id/facebook_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_profile_privacy_title_facebook" />
+    </LinearLayout>
+    <RadioGroup android:orientation="vertical" android:id="@id/settings_real_name_group" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Oculus.Widget.GrayDividers">
+        <RadioButton android:id="@id/anyone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_privacy_common_anyone_title" style="@style/Oculus.Widget.Light.Setting.RadioButton" />
+        <RadioButton android:id="@id/friends" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_privacy_common_friends_title" style="@style/Oculus.Widget.Light.Setting.RadioButton" />
+        <RadioButton android:id="@id/specific_friends" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_privacy_common_specific_friends_title" style="@style/Oculus.Widget.Light.Setting.RadioButton" />
+        <RadioButton android:id="@id/invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_privacy_common_just_me_title" style="@style/Oculus.Widget.Light.Setting.RadioButton" />
+    </RadioGroup>
+    <com.oculus.horizon.widget.SwitchSetting android:id="@id/identity_in_search_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" app:title="@string/settings_privacy_identity_in_search_checkbox" style="@style/Oculus.Widget.Light.Setting" />
+</LinearLayout>

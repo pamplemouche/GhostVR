@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="anytime_detail_button_all_settings">Xem tất cả</string>
+    <string name="anytime_detail_button_brightness">Độ sáng</string>
+    <string name="anytime_detail_button_events">Sự kiện</string>
+    <string name="anytime_detail_button_friends">Bạn bè</string>
+    <string name="anytime_detail_button_gallery">Thư viện</string>
+    <string name="anytime_detail_button_home">Nhà</string>
+    <string name="anytime_detail_button_library">Thư viện</string>
+    <string name="anytime_detail_button_profile">Trang cá nhân</string>
+    <string name="anytime_detail_button_search">Tìm kiếm</string>
+    <string name="anytime_detail_button_store">Cửa hàng</string>
+    <string name="anytime_detail_button_videocapture">Quay video</string>
+    <string name="anytime_detail_button_volume">Âm lượng</string>
+    <string name="anytime_navigation_detail_bar">Điều hướng</string>
+    <string name="anytime_settings_detail_bar">Cài đặt</string>
+    <string name="app_name">Thời gian chạy ứng dụng Oculus</string>
+    <string name="browser_choice_dialog_button_cancel">Hủy</string>
+    <string name="browser_choice_dialog_button_ok">Lưu &amp; mở</string>
+    <string name="browser_choice_dialog_title">Lối tắt Internet cho Nhà trên Oculus</string>
+    <string name="controller_recenter_dialog_description_standalone">Nếu bộ điều khiển trỏ sai hướng, hãy khắc phục bằng cách giữ Nút Oculus.</string>
+    <string name="controller_recenter_dialog_title">Đặt lại bộ điều khiển</string>
+    <string name="focus_wheel_dialog_description">Xoay nút lấy nét đến khi mọi thứ rõ ràng.</string>
+    <string name="focus_wheel_dialog_title">Điều chỉnh tiêu cự</string>
+    <string name="health_safety_dialog_callout">Nhấp hoặc nhấn để xác nhận</string>
+    <string name="health_safety_dialog_description">Đọc và làm theo tất cả cảnh báo và hướng dẫn đi kèm Gear VR trước khi sử dụng. Cần điều chỉnh Gear VR cho mỗi người dùng. Cấm trẻ em dưới 13 tuổi sử dụng. Ngồi im hoặc không chuyển động khi sử dụng Gear VR. Dừng sử dụng nếu bạn thấy bất cứ điều gì không thoải mái hoặc ảnh hưởng đến sức khỏe. Xem thêm tại www.oculus.com/warnings</string>
+    <string name="health_safety_dialog_description_standalone">Đọc và làm theo tất cả cảnh báo và hướng dẫn đi kèm Oculus Go trước khi sử dụng. Cần điều chỉnh Oculus Go cho mỗi người dùng. Cấm trẻ em dưới 13 tuổi sử dụng. Ngồi im hoặc không chuyển động khi sử dụng Oculus Go. Dừng sử dụng nếu bạn thấy bất cứ điều gì không thoải mái hoặc ảnh hưởng đến sức khỏe. Xem thêm tại www.oculus.com/warnings</string>
+    <string name="health_safety_dialog_title">CẢNH BÁO SỨC KHỎE &amp; AN TOÀN!</string>
+    <string name="health_safety_long_dialog_callout">Nhấp hoặc nhấn để xác nhận</string>
+    <string name="health_safety_long_dialog_description">Đọc và làm theo tất cả cảnh báo và hướng dẫn đi kèm Gear VR trước khi sử dụng. Cần điều chỉnh Gear VR cho mỗi người dùng. Cấm trẻ em dưới 13 tuổi sử dụng. Ngồi im hoặc không chuyển động khi sử dụng Gear VR. Dừng sử dụng nếu bạn thấy bất cứ điều gì không thoải mái hoặc ảnh hưởng đến sức khỏe. Xem thêm tại www.oculus.com/warnings</string>
+    <string name="health_safety_long_dialog_title">CẢNH BÁO SỨC KHỎE &amp; AN TOÀN!</string>
+    <string name="home_dialog_button_resume">Tiếp tục</string>
+    <string name="local_stream_dialog_button_close">Đóng</string>
+    <string name="panel_reorient_dialog_instructions">Nhấp vào bàn di chuột hoặc kéo nút kích hoạt để đặt bảng điều khiển ở vị trí bạn đang xem.</string>
+</resources>

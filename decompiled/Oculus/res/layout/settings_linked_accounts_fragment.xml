@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?settingsPageBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="?lineDividerDecorationDrawable" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.oculus.horizon.widget.SwitchSetting android:id="@id/facebook_link_account" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_label_margin_top" app:title="@string/settings_linked_accounts_facebook_link_to_facebook" style="@style/Oculus.Widget.Light.Setting" />
+    <com.oculus.horizon.widget.SwitchSetting android:id="@id/facebook_sync_friends" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:title="@string/settings_linked_accounts_facebook_sync_friends" style="@style/Oculus.Widget.Light.Setting" />
+</LinearLayout>

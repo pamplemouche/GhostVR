@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.chrome.browser.preferences.ChromeBaseCheckBoxPreference android:title="@string/APKTOOL_DUMMYVAL_0x7f1301d3" android:key="can_make_payment" android:summary="@string/APKTOOL_DUMMYVAL_0x7f130572" />
+    <org.chromium.chrome.browser.preferences.ChromeBaseCheckBoxPreference android:persistent="false" android:title="@string/APKTOOL_DUMMYVAL_0x7f130506" android:key="preload_pages" android:summary="@string/APKTOOL_DUMMYVAL_0x7f130505" />
+    <org.chromium.chrome.browser.preferences.ChromeBasePreference android:persistent="false" android:title="@string/APKTOOL_DUMMYVAL_0x7f130642" android:key="usage_stats_reporting" />
+    <Preference android:title="@string/APKTOOL_DUMMYVAL_0x7f1302a2" android:key="do_not_track" android:fragment="org.chromium.chrome.browser.preferences.privacy.DoNotTrackPreference" />
+    <Preference android:title="@string/APKTOOL_DUMMYVAL_0x7f1301f5" android:key="clear_browsing_data" android:summary="@string/APKTOOL_DUMMYVAL_0x7f1301ed" android:fragment="org.chromium.chrome.browser.preferences.privacy.ClearBrowsingDataTabsFragment" />
+    <org.chromium.chrome.browser.preferences.TextMessagePreference android:key="sync_and_services_link" android:summary="@string/APKTOOL_DUMMYVAL_0x7f13050a" app:APKTOOL_DUMMYVAL_0x7f04002a="false" />
+</PreferenceScreen>

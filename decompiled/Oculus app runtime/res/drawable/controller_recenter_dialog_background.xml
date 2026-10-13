@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/oc_gray_1" />
+        </shape>
+    </item>
+    <item android:gravity="bottom" android:height="260.0px" android:width="260.0px" android:drawable="@drawable/img_controller_recenter_dialog_background" android:left="50.0px" android:top="35.0px" android:bottom="35.0px" />
+</layer-list>

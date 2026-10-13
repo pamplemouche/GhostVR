@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/APKTOOL_DUMMYVAL_0x7f070243" android:textColor="@color/APKTOOL_DUMMYVAL_0x7f0600b5" android:id="@id/password_generation_explanation" android:paddingTop="@dimen/APKTOOL_DUMMYVAL_0x7f070244" android:paddingBottom="@dimen/APKTOOL_DUMMYVAL_0x7f070244" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:paddingStart="@dimen/APKTOOL_DUMMYVAL_0x7f070242" android:paddingEnd="@dimen/APKTOOL_DUMMYVAL_0x7f070242" />
+</RelativeLayout>

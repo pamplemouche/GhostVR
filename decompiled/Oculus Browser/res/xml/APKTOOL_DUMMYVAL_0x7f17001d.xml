@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.chrome.browser.preferences.ChromeSwitchPreference android:key="usage_and_crash_reports_switch" android:summaryOn="@string/APKTOOL_DUMMYVAL_0x7f130600" android:summaryOff="@string/APKTOOL_DUMMYVAL_0x7f1305ff" app:APKTOOL_DUMMYVAL_0x7f0400d0="true" />
+    <org.chromium.chrome.browser.preferences.TextMessagePreference android:title="@string/APKTOOL_DUMMYVAL_0x7f13063a" />
+    <org.chromium.chrome.browser.preferences.LearnMorePreference android:key="usage_and_crash_reports_learn_more" app:APKTOOL_DUMMYVAL_0x7f040120="@string/APKTOOL_DUMMYVAL_0x7f13033c" />
+</PreferenceScreen>

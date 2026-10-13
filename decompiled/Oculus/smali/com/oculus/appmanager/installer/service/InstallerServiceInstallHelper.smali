@@ -1,0 +1,2955 @@
+.class public Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;
+.super Ljava/lang/Object;
+.source "InstallerServiceInstallHelper.java"
+
+# interfaces
+.implements Lcom/oculus/common/init/INeedInit;
+.implements Lcom/oculus/common/packagescache/PackagesListener;
+
+
+# annotations
+.annotation runtime Lcom/facebook/ultralight/Dependencies;
+.end annotation
+
+.annotation runtime Ljavax/inject/Singleton;
+.end annotation
+
+
+# static fields
+.field private static volatile $ul_$xXXcom_oculus_appmanager_installer_service_InstallerServiceInstallHelper$xXXINSTANCE:Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;
+
+.field private static final TAG:Ljava/lang/String;
+
+
+# instance fields
+.field private $ul_mInjectionContext:Lcom/facebook/inject/InjectionContext;
+
+.field private final mAssetBroadcastDispatch:Lcom/oculus/appmanager/installer/broadcast/AssetBroadcastDispatch;
+    .annotation build Lcom/facebook/ultralight/Inject;
+    .end annotation
+.end field
+
+.field private final mAssets:Lcom/oculus/appmanager/assets/Assets;
+    .annotation build Lcom/facebook/ultralight/Inject;
+    .end annotation
+.end field
+
+.field private final mCleanUpHelper:Lcom/oculus/appmanager/installer/service/InstallerCleanUpHelper;
+    .annotation build Lcom/facebook/ultralight/Inject;
+    .end annotation
+.end field
+
+.field private final mClock:Lcom/oculus/time/Clock;
+    .annotation build Lcom/facebook/ultralight/Inject;
+    .end annotation
+.end field
+
+.field private final mContext:Landroid/content/Context;
+    .annotation build Lcom/facebook/inject/ForAppContext;
+    .end annotation
+
+    .annotation build Lcom/facebook/ultralight/Inject;
+    .end annotation
+.end field
+
+.field private final mDeviceUtils:Lcom/oculus/util/device/DeviceUtils;
+    .annotation build Lcom/facebook/ultralight/Inject;
+    .end annotation
+.end field
+
+.field private final mErrorReporter:Lcom/oculus/errorreporting/ErrorReporter;
+    .annotation build Lcom/facebook/ultralight/Inject;
+    .end annotation
+.end field
+
+.field private final mEventEmitter:Lcom/oculus/appmanager/installer/service/InstallerEventEmitter;
+    .annotation build Lcom/facebook/ultralight/Inject;
+    .end annotation
+.end field
+
+.field private final mInfoUtils:Lcom/oculus/appmanager/info/InfoUtils;
+    .annotation build Lcom/facebook/ultralight/Inject;
+    .end annotation
+.end field
+
+.field private final mInstallInProgressPackagesSet:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final mInstallerAnalytics:Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;
+    .annotation build Lcom/facebook/ultralight/Inject;
+    .end annotation
+.end field
+
+.field private final mInstallerApi:Lcom/facebook/oxygen/appmanager/installer/proxy/InstallerApi;
+    .annotation build Lcom/facebook/ultralight/Inject;
+    .end annotation
+.end field
+
+.field private final mInstallerEventBus:Lcom/facebook/inject/Lazy;
+    .annotation build Lcom/facebook/ultralight/Inject;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/facebook/inject/Lazy",
+            "<",
+            "Lcom/oculus/appmanager/installer/events/InstallerEventBus;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final mInstallerFileUtils:Lcom/oculus/appmanager/installer/common/InstallerFileUtils;
+    .annotation build Lcom/facebook/ultralight/Inject;
+    .end annotation
+.end field
+
+.field private final mInstallerOxygenUtil:Lcom/oculus/appmanager/installer/util/oxygen/InstallerOxygenUtil;
+    .annotation build Lcom/facebook/ultralight/Inject;
+    .end annotation
+.end field
+
+.field private final mInstallerProxyServiceContract:Lcom/oculus/library/proxy/contract/InstallerProxyServiceContract;
+    .annotation build Lcom/facebook/ultralight/Inject;
+    .end annotation
+.end field
+
+.field private final mInstallerServiceContract:Lcom/oculus/appmanager/installer/contract/InstallerServiceContract;
+    .annotation build Lcom/facebook/ultralight/Inject;
+    .end annotation
+.end field
+
+.field private final mPackagesCache:Lcom/oculus/common/packagescache/PackagesCache;
+    .annotation build Lcom/facebook/ultralight/Inject;
+    .end annotation
+.end field
+
+.field private final mRetryHelper:Lcom/oculus/appmanager/installer/service/InstallerRetryHelper;
+    .annotation build Lcom/facebook/ultralight/Inject;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public static final $ul_$xXXcom_oculus_appmanager_installer_service_InstallerServiceInstallHelper$xXXACCESS_METHOD(Lcom/facebook/inject/InjectorLike;)Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;
+    .locals 1
+    .annotation build Lcom/facebook/ultralight/AutoGeneratedAccessMethod;
+    .end annotation
+
+    .prologue
+    .line 20
+    const-string v0, "$ul_$xXXcom_oculus_appmanager_installer_service_InstallerServiceInstallHelper$xXXACCESS_METHOD"
+
+    invoke-static {v0}, Lcom/facebook/ultralight/instrumentation/systrace/UlTracer;->startTracer(Ljava/lang/String;)V
+
+    sget v0, Lcom/oculus/appmanager/installer/service/InstallerServiceModule$UL_id;->$ul_$xXXcom_oculus_appmanager_installer_service_InstallerServiceInstallHelper$xXXBINDING_ID:I
+
+    .line 67
+    invoke-static {v0, p0}, Lcom/facebook/ultralight/UL$factorymap;->get(ILcom/facebook/inject/InjectorLike;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;
+
+    .line 20
+    invoke-static {}, Lcom/facebook/ultralight/instrumentation/systrace/UlTracer;->stopTracer()V
+
+    return-object v0
+.end method
+
+.method public static final $ul_$xXXcom_oculus_appmanager_installer_service_InstallerServiceInstallHelper$xXXFACTORY_METHOD(Lcom/facebook/inject/InjectorLike;)Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;
+    .locals 4
+    .annotation build Lcom/facebook/ultralight/AutoGeneratedFactoryMethod;
+    .end annotation
+
+    .prologue
+    .line 67
+    sget-object v0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->$ul_$xXXcom_oculus_appmanager_installer_service_InstallerServiceInstallHelper$xXXINSTANCE:Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;
+
+    if-nez v0, :cond_1
+
+    const-class v1, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;
+
+    monitor-enter v1
+
+    :try_start_0
+    sget-object v0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->$ul_$xXXcom_oculus_appmanager_installer_service_InstallerServiceInstallHelper$xXXINSTANCE:Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;
+
+    invoke-static {v0, p0}, Lcom/facebook/inject/SingletonClassInit;->start(Ljava/lang/Object;Lcom/facebook/inject/InjectorLike;)Lcom/facebook/inject/SingletonClassInit;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    :try_start_1
+    invoke-interface {p0}, Lcom/facebook/inject/InjectorLike;->getApplicationInjector()Lcom/facebook/inject/InjectorLike;
+
+    move-result-object v0
+
+    new-instance v3, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;
+
+    invoke-direct {v3, v0}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;-><init>(Lcom/facebook/inject/InjectorLike;)V
+
+    sput-object v3, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->$ul_$xXXcom_oculus_appmanager_installer_service_InstallerServiceInstallHelper$xXXINSTANCE:Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    invoke-virtual {v2}, Lcom/facebook/inject/SingletonClassInit;->finish()V
+
+    :cond_0
+    monitor-exit v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    :cond_1
+    sget-object v0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->$ul_$xXXcom_oculus_appmanager_installer_service_InstallerServiceInstallHelper$xXXINSTANCE:Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_3
+    invoke-virtual {v2}, Lcom/facebook/inject/SingletonClassInit;->finish()V
+
+    throw v0
+
+    :catchall_1
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    throw v0
+.end method
+
+.method static constructor <clinit>()V
+    .locals 1
+
+    .prologue
+    .line 69
+    const-class v0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->TAG:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/facebook/inject/InjectorLike;)V
+    .locals 2
+    .annotation build Lcom/facebook/ultralight/Inject;
+    .end annotation
+
+    .prologue
+    .line 99
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 96
+    invoke-static {}, Lcom/google/common/collect/Sets;->newConcurrentHashSet()Ljava/util/Set;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallInProgressPackagesSet:Ljava/util/Set;
+
+    .line 99
+    new-instance v0, Lcom/facebook/inject/InjectionContext;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, p1}, Lcom/facebook/inject/InjectionContext;-><init>(ILcom/facebook/inject/InjectorLike;)V
+
+    iput-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->$ul_mInjectionContext:Lcom/facebook/inject/InjectionContext;
+
+    invoke-static {p1}, Lcom/facebook/inject/BundledAndroidModule;->$ul_$xXXandroid_content_Context$xXXcom_facebook_inject_ForAppContext$xXXACCESS_METHOD(Lcom/facebook/inject/InjectorLike;)Landroid/content/Context;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mContext:Landroid/content/Context;
+
+    invoke-static {p1}, Lcom/oculus/common/packagescache/PackagesCache;->$ul_$xXXcom_oculus_common_packagescache_PackagesCache$xXXACCESS_METHOD(Lcom/facebook/inject/InjectorLike;)Lcom/oculus/common/packagescache/PackagesCache;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mPackagesCache:Lcom/oculus/common/packagescache/PackagesCache;
+
+    invoke-static {p1}, Lcom/oculus/appmanager/installer/common/InstallerFileUtils;->$ul_$xXXcom_oculus_appmanager_installer_common_InstallerFileUtils$xXXACCESS_METHOD(Lcom/facebook/inject/InjectorLike;)Lcom/oculus/appmanager/installer/common/InstallerFileUtils;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerFileUtils:Lcom/oculus/appmanager/installer/common/InstallerFileUtils;
+
+    invoke-static {p1}, Lcom/oculus/appmanager/info/InfoUtils;->$ul_$xXXcom_oculus_appmanager_info_InfoUtils$xXXACCESS_METHOD(Lcom/facebook/inject/InjectorLike;)Lcom/oculus/appmanager/info/InfoUtils;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInfoUtils:Lcom/oculus/appmanager/info/InfoUtils;
+
+    invoke-static {p1}, Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;->$ul_$xXXcom_oculus_appmanager_installer_analytics_InstallerAnalytics$xXXACCESS_METHOD(Lcom/facebook/inject/InjectorLike;)Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerAnalytics:Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;
+
+    invoke-static {p1}, Lcom/oculus/time/Clock;->$ul_$xXXcom_oculus_time_Clock$xXXACCESS_METHOD(Lcom/facebook/inject/InjectorLike;)Lcom/oculus/time/Clock;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mClock:Lcom/oculus/time/Clock;
+
+    invoke-static {p1}, Lcom/oculus/appmanager/installer/contract/InstallerServiceContract;->$ul_$xXXcom_oculus_appmanager_installer_contract_InstallerServiceContract$xXXACCESS_METHOD(Lcom/facebook/inject/InjectorLike;)Lcom/oculus/appmanager/installer/contract/InstallerServiceContract;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerServiceContract:Lcom/oculus/appmanager/installer/contract/InstallerServiceContract;
+
+    invoke-static {p1}, Lcom/oculus/appmanager/installer/broadcast/AssetBroadcastDispatch;->$ul_$xXXcom_oculus_appmanager_installer_broadcast_AssetBroadcastDispatch$xXXACCESS_METHOD(Lcom/facebook/inject/InjectorLike;)Lcom/oculus/appmanager/installer/broadcast/AssetBroadcastDispatch;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mAssetBroadcastDispatch:Lcom/oculus/appmanager/installer/broadcast/AssetBroadcastDispatch;
+
+    invoke-static {p1}, Lcom/oculus/appmanager/installer/events/EventsModule;->$ul_$xXXcom_facebook_inject_Lazy$x3Ccom_oculus_appmanager_installer_events_InstallerEventBus$x3E$xXXACCESS_METHOD(Lcom/facebook/inject/InjectorLike;)Lcom/facebook/inject/Lazy;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerEventBus:Lcom/facebook/inject/Lazy;
+
+    invoke-static {p1}, Lcom/oculus/util/device/DeviceUtils;->$ul_$xXXcom_oculus_util_device_DeviceUtils$xXXACCESS_METHOD(Lcom/facebook/inject/InjectorLike;)Lcom/oculus/util/device/DeviceUtils;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mDeviceUtils:Lcom/oculus/util/device/DeviceUtils;
+
+    invoke-static {p1}, Lcom/oculus/appmanager/installer/service/InstallerRetryHelper;->$ul_$xXXcom_oculus_appmanager_installer_service_InstallerRetryHelper$xXXACCESS_METHOD(Lcom/facebook/inject/InjectorLike;)Lcom/oculus/appmanager/installer/service/InstallerRetryHelper;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mRetryHelper:Lcom/oculus/appmanager/installer/service/InstallerRetryHelper;
+
+    invoke-static {p1}, Lcom/oculus/errorreporting/ErrorReportingModule;->$ul_$xXXcom_oculus_errorreporting_ErrorReporter$xXXACCESS_METHOD(Lcom/facebook/inject/InjectorLike;)Lcom/oculus/errorreporting/ErrorReporter;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mErrorReporter:Lcom/oculus/errorreporting/ErrorReporter;
+
+    invoke-static {p1}, Lcom/oculus/appmanager/installer/service/InstallerServiceModule;->$ul_$xXXcom_facebook_oxygen_appmanager_installer_proxy_InstallerApi$xXXACCESS_METHOD(Lcom/facebook/inject/InjectorLike;)Lcom/facebook/oxygen/appmanager/installer/proxy/InstallerApi;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerApi:Lcom/facebook/oxygen/appmanager/installer/proxy/InstallerApi;
+
+    invoke-static {p1}, Lcom/oculus/appmanager/assets/Assets;->$ul_$xXXcom_oculus_appmanager_assets_Assets$xXXACCESS_METHOD(Lcom/facebook/inject/InjectorLike;)Lcom/oculus/appmanager/assets/Assets;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mAssets:Lcom/oculus/appmanager/assets/Assets;
+
+    invoke-static {p1}, Lcom/oculus/appmanager/installer/service/InstallerCleanUpHelper;->$ul_$xXXcom_oculus_appmanager_installer_service_InstallerCleanUpHelper$xXXACCESS_METHOD(Lcom/facebook/inject/InjectorLike;)Lcom/oculus/appmanager/installer/service/InstallerCleanUpHelper;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mCleanUpHelper:Lcom/oculus/appmanager/installer/service/InstallerCleanUpHelper;
+
+    invoke-static {p1}, Lcom/oculus/appmanager/installer/service/InstallerEventEmitter;->$ul_$xXXcom_oculus_appmanager_installer_service_InstallerEventEmitter$xXXACCESS_METHOD(Lcom/facebook/inject/InjectorLike;)Lcom/oculus/appmanager/installer/service/InstallerEventEmitter;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mEventEmitter:Lcom/oculus/appmanager/installer/service/InstallerEventEmitter;
+
+    invoke-static {p1}, Lcom/oculus/library/proxy/contract/InstallerProxyServiceContract;->$ul_$xXXcom_oculus_library_proxy_contract_InstallerProxyServiceContract$xXXACCESS_METHOD(Lcom/facebook/inject/InjectorLike;)Lcom/oculus/library/proxy/contract/InstallerProxyServiceContract;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerProxyServiceContract:Lcom/oculus/library/proxy/contract/InstallerProxyServiceContract;
+
+    invoke-static {p1}, Lcom/oculus/appmanager/installer/util/oxygen/InstallerOxygenUtil;->$ul_$xXXcom_oculus_appmanager_installer_util_oxygen_InstallerOxygenUtil$xXXACCESS_METHOD(Lcom/facebook/inject/InjectorLike;)Lcom/oculus/appmanager/installer/util/oxygen/InstallerOxygenUtil;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerOxygenUtil:Lcom/oculus/appmanager/installer/util/oxygen/InstallerOxygenUtil;
+
+    .line 101
+    return-void
+.end method
+
+.method private deletePreparedFiles(Ljava/util/List;Ljava/lang/String;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/oculus/appmanager/info/ApkUpdateInfo;",
+            ">;",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
+
+    .prologue
+    .line 492
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    .line 493
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->getExtras()Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;->getPreparedInstallFilePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 494
+    iget-object v2, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerFileUtils:Lcom/oculus/appmanager/installer/common/InstallerFileUtils;
+
+    invoke-virtual {v2, v0, p2}, Lcom/oculus/appmanager/installer/common/InstallerFileUtils;->removeFileWithReason(Ljava/lang/String;Ljava/lang/String;)Z
+
+    goto :goto_0
+
+    .line 496
+    :cond_0
+    return-void
+.end method
+
+.method private genESig(Lcom/oculus/appmanager/info/ApkUpdateInfo;)Ljava/lang/String;
+    .locals 3
+    .annotation runtime Ljavax/annotation/Nullable;
+    .end annotation
+
+    .prologue
+    .line 582
+    iget-object v0, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->externalSignatures:Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 583
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "No e-sig exists in e-sig enforced environment"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 587
+    :cond_0
+    :try_start_0
+    new-instance v0, Lorg/json/JSONArray;
+
+    iget-object v1, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->externalSignatures:Ljava/lang/String;
+
+    invoke-direct {v0, v1}, Lorg/json/JSONArray;-><init>(Ljava/lang/String;)V
+
+    .line 589
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 590
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    .line 591
+    return-object v0
+
+    .line 593
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Unable to parse e-sig from json"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 595
+    :catch_0
+    move-exception v0
+
+    .line 596
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    const-string v2, "Illegal json"
+
+    invoke-direct {v1, v2, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+.end method
+
+.method private getDuration(J)J
+    .locals 3
+
+    .prologue
+    const-wide/16 v0, -0x1
+
+    .line 651
+    cmp-long v2, p1, v0
+
+    if-eqz v2, :cond_0
+
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mClock:Lcom/oculus/time/Clock;
+
+    .line 652
+    invoke-virtual {v0}, Lcom/oculus/time/Clock;->now()J
+
+    move-result-wide v0
+
+    sub-long/2addr v0, p1
+
+    :cond_0
+    return-wide v0
+.end method
+
+.method private maybeAddSideloadedApp(Ljava/lang/String;Z)V
+    .locals 12
+
+    .prologue
+    .line 676
+    sget v0, Lcom/oculus/libraryapi/OVRLibraryModule$UL_id;->$ul_$xXXcom_oculus_libraryapi_OVRLibraryInternal$xXXBINDING_ID:I
+
+    iget-object v1, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->$ul_mInjectionContext:Lcom/facebook/inject/InjectionContext;
+
+    .line 1
+    invoke-static {v0, v1}, Lcom/facebook/inject/FbInjector;->localInstance(ILcom/facebook/inject/InjectionContext;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oculus/libraryapi/OVRLibraryInternal;
+
+    .line 679
+    invoke-virtual {v0, p1}, Lcom/oculus/libraryapi/OVRLibraryInternal;->getApp(Ljava/lang/String;)Lcom/oculus/library/model/App;
+
+    move-result-object v0
+
+    .line 680
+    if-nez v0, :cond_0
+
+    .line 699
+    :goto_0
+    return-void
+
+    .line 684
+    :cond_0
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mPackagesCache:Lcom/oculus/common/packagescache/PackagesCache;
+
+    invoke-virtual {v0, p1}, Lcom/oculus/common/packagescache/PackagesCache;->getPackageInfo(Ljava/lang/String;)Landroid/content/pm/PackageInfo;
+
+    move-result-object v0
+
+    .line 685
+    if-nez v0, :cond_1
+
+    .line 686
+    sget-object v0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->TAG:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Received package added callback but app is not in package cache:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/facebook/debug/log/BLog;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 689
+    :cond_1
+    new-instance v1, Lcom/oculus/appmanager/installer/events/InstallResponse;
+
+    const-wide/16 v2, -0x1
+
+    const/4 v4, 0x1
+
+    iget v7, v0, Landroid/content/pm/PackageInfo;->versionCode:I
+
+    const/4 v8, 0x0
+
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mClock:Lcom/oculus/time/Clock;
+
+    .line 697
+    invoke-virtual {v0}, Lcom/oculus/time/Clock;->now()J
+
+    move-result-wide v10
+
+    invoke-static {p1, v10, v11}, Lcom/oculus/appmanager/info/model/InstallerResult;->createForSuccess(Ljava/lang/String;J)Lcom/oculus/appmanager/info/model/InstallerResult;
+
+    move-result-object v9
+
+    move v5, p2
+
+    move-object v6, p1
+
+    invoke-direct/range {v1 .. v9}, Lcom/oculus/appmanager/installer/events/InstallResponse;-><init>(JZZLjava/lang/String;ILjava/lang/String;Lcom/oculus/appmanager/info/model/InstallerResult;)V
+
+    .line 698
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerEventBus:Lcom/facebook/inject/Lazy;
+
+    invoke-interface {v0}, Lcom/facebook/inject/Lazy;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oculus/appmanager/installer/events/InstallerEventBus;
+
+    invoke-virtual {v0, v1}, Lcom/oculus/appmanager/installer/events/InstallerEventBus;->post(Ljava/lang/Object;)V
+
+    goto :goto_0
+.end method
+
+.method private move(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    .line 486
+    sget-object v0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->TAG:Ljava/lang/String;
+
+    const-string v1, "Moving %s -> %s"
+
+    invoke-static {v0, v1, p1, p2}, Lcom/facebook/debug/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 487
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerFileUtils:Lcom/oculus/appmanager/installer/common/InstallerFileUtils;
+
+    invoke-virtual {v0, p1, p2}, Lcom/oculus/appmanager/installer/common/InstallerFileUtils;->move(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 488
+    return-void
+.end method
+
+.method private onApkInstallFailed(Lcom/oculus/appmanager/info/ApkUpdateInfo;Ljava/lang/Throwable;Ljava/lang/String;I)V
+    .locals 6
+    .param p2    # Ljava/lang/Throwable;
+        .annotation runtime Ljavax/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation runtime Ljavax/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .prologue
+    .line 622
+    invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "INSTALL_PARSE_FAILED_NO_CERTIFICATES"
+
+    .line 623
+    invoke-virtual {p3, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x4
+
+    if-ne p4, v0, :cond_0
+
+    .line 625
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mRetryHelper:Lcom/oculus/appmanager/installer/service/InstallerRetryHelper;
+
+    invoke-virtual {v0, p1}, Lcom/oculus/appmanager/installer/service/InstallerRetryHelper;->maybeRetryForFullVersion(Lcom/oculus/appmanager/info/ApkUpdateInfo;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 626
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mErrorReporter:Lcom/oculus/errorreporting/ErrorReporter;
+
+    const-string v1, "install_apk_failed"
+
+    const-string v2, "INSTALL_PARSE_FAILED_NO_CERTIFICATES caught and retried"
+
+    invoke-virtual {v0, v1, v2}, Lcom/oculus/errorreporting/ErrorReporter;->softError(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 648
+    :goto_0
+    return-void
+
+    .line 632
+    :cond_0
+    sget-object v0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->TAG:Ljava/lang/String;
+
+    const-string v1, "Installation failed for %s. Message: %s"
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object p1, v2, v3
+
+    const/4 v3, 0x1
+
+    aput-object p3, v2, v3
+
+    invoke-static {v0, p2, v1, v2}, Lcom/facebook/debug/log/BLog;->e(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 634
+    const-string v0, "%s (%d)"
+
+    invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-static {v0, p3, v1}, Lcom/facebook/common/stringformat/StringFormatUtil;->formatStrLocaleSafe(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 637
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallInProgressPackagesSet:Ljava/util/Set;
+
+    iget-object v1, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->packageName:Ljava/lang/String;
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    .line 639
+    invoke-virtual {p1}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->getExtras()Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;->getInstallationStartTimeMs()J
+
+    move-result-wide v0
+
+    invoke-direct {p0, v0, v1}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->getDuration(J)J
+
+    move-result-wide v0
+
+    .line 641
+    invoke-virtual {p1}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->edit()Lcom/oculus/appmanager/info/ApkUpdateInfo$UpdateExtrasEditor;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0, v1}, Lcom/oculus/appmanager/info/ApkUpdateInfo$UpdateExtrasEditor;->putInstallationDurationMs(J)Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p4}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;->putErrorCode(I)Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;->save()V
+
+    .line 642
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInfoUtils:Lcom/oculus/appmanager/info/InfoUtils;
+
+    const-string v2, "install_apk_failed"
+
+    sget-object v4, Lcom/oculus/appmanager/info/model/InstallerResultError;->INSTALLER_ERROR:Lcom/oculus/appmanager/info/model/InstallerResultError;
+
+    move-object v1, p1
+
+    move-object v5, p2
+
+    invoke-virtual/range {v0 .. v5}, Lcom/oculus/appmanager/info/InfoUtils;->failQuiet(Lcom/oculus/appmanager/info/ApkUpdateInfo;Ljava/lang/String;Ljava/lang/String;Lcom/oculus/appmanager/info/model/InstallerResultError;Ljava/lang/Throwable;)V
+
+    goto :goto_0
+.end method
+
+
+# virtual methods
+.method protected doInstallVerifiedApk(Lcom/oculus/appmanager/info/ApkUpdateInfo;)V
+    .locals 10
+    .annotation build Lcom/google/common/annotations/VisibleForTesting;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Throwable;
+        }
+    .end annotation
+
+    .prologue
+    const/4 v6, 0x1
+
+    const/4 v7, 0x0
+
+    .line 501
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallInProgressPackagesSet:Ljava/util/Set;
+
+    iget-object v1, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->packageName:Ljava/lang/String;
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    .line 503
+    new-instance v8, Lcom/facebook/oxygen/appmanager/installer/proxy/InstallConfig;
+
+    invoke-direct {v8}, Lcom/facebook/oxygen/appmanager/installer/proxy/InstallConfig;-><init>()V
+
+    .line 504
+    iget-object v0, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v8, v0}, Lcom/facebook/oxygen/appmanager/installer/proxy/InstallConfig;->setPackageName(Ljava/lang/String;)Lcom/facebook/oxygen/appmanager/installer/proxy/InstallConfig;
+
+    .line 506
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerApi:Lcom/facebook/oxygen/appmanager/installer/proxy/InstallerApi;
+
+    const/4 v1, 0x5
+
+    .line 507
+    invoke-virtual {v0, v1}, Lcom/facebook/oxygen/appmanager/installer/proxy/InstallerApi;->checkApiLevel(I)Z
+
+    move-result v9
+
+    .line 508
+    sget-object v0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->TAG:Ljava/lang/String;
+
+    const-string v1, "Installing apk (%s, target version: %s) with esig support(device support: %s), fullhash support(%s)"
+
+    iget-object v2, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->packageName:Ljava/lang/String;
+
+    iget-wide v4, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->targetVersion:J
+
+    .line 512
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mDeviceUtils:Lcom/oculus/util/device/DeviceUtils;
+
+    .line 513
+    invoke-virtual {v4}, Lcom/oculus/util/device/DeviceUtils;->supportESig()Z
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    .line 514
+    invoke-static {v9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v5
+
+    .line 508
+    invoke-static/range {v0 .. v5}, Lcom/facebook/debug/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 515
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mDeviceUtils:Lcom/oculus/util/device/DeviceUtils;
+
+    invoke-virtual {v0}, Lcom/oculus/util/device/DeviceUtils;->supportESig()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    if-eqz v9, :cond_2
+
+    .line 516
+    invoke-direct {p0, p1}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->genESig(Lcom/oculus/appmanager/info/ApkUpdateInfo;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 517
+    if-nez v0, :cond_1
+
+    .line 578
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 520
+    :cond_1
+    invoke-static {v0, v7}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
+
+    move-result-object v0
+
+    invoke-virtual {v8, v0}, Lcom/facebook/oxygen/appmanager/installer/proxy/InstallConfig;->setFullApkSignatureOculus([B)Lcom/facebook/oxygen/appmanager/installer/proxy/InstallConfig;
+
+    .line 523
+    :cond_2
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerServiceContract:Lcom/oculus/appmanager/installer/contract/InstallerServiceContract;
+
+    invoke-virtual {v0, p1}, Lcom/oculus/appmanager/installer/contract/InstallerServiceContract;->createInstallCompleteIntent(Lcom/oculus/appmanager/info/ApkUpdateInfo;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    .line 524
+    iget-object v1, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mContext:Landroid/content/Context;
+
+    const-class v2, Lcom/oculus/appmanager/installer/service/InstallerService;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+
+    .line 525
+    iget-object v1, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 526
+    iget-wide v2, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->targetVersion:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 528
+    iget-object v1, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mContext:Landroid/content/Context;
+
+    const/high16 v2, 0x40000000    # 2.0f
+
+    .line 529
+    invoke-static {v1, v7, v0, v2}, Landroid/app/PendingIntent;->getService(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v2
+
+    .line 531
+    new-instance v3, Ljava/io/File;
+
+    invoke-virtual {p1}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->getExtras()Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;->getSandboxedFilePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v3, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    .line 537
+    const-string v0, "com.oculus.horizon"
+
+    iget-object v1, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mContext:Landroid/content/Context;
+
+    .line 538
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mDeviceUtils:Lcom/oculus/util/device/DeviceUtils;
+
+    .line 539
+    invoke-virtual {v0}, Lcom/oculus/util/device/DeviceUtils;->isFacebookInstallerPreloaded()Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    move v0, v6
+
+    .line 544
+    :goto_1
+    iget-object v1, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerApi:Lcom/facebook/oxygen/appmanager/installer/proxy/InstallerApi;
+
+    const/4 v4, 0x2
+
+    .line 545
+    invoke-virtual {v1, v4}, Lcom/facebook/oxygen/appmanager/installer/proxy/InstallerApi;->checkApiLevel(I)Z
+
+    move-result v1
+
+    .line 546
+    if-nez v0, :cond_3
+
+    if-nez v1, :cond_4
+
+    :cond_3
+    move v7, v6
+
+    .line 548
+    :cond_4
+    if-eqz v7, :cond_6
+
+    .line 549
+    sget-object v0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->TAG:Ljava/lang/String;
+
+    const-string v1, "This is a non-Oxygen managed device, or the installer is out of date. Installing via Horizon proxy instead"
+
+    invoke-static {v0, v1}, Lcom/facebook/debug/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 552
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerProxyServiceContract:Lcom/oculus/library/proxy/contract/InstallerProxyServiceContract;
+
+    iget-object v1, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v3, v2}, Lcom/oculus/library/proxy/contract/InstallerProxyServiceContract;->requestInstall(Ljava/lang/String;Ljava/io/File;Landroid/app/PendingIntent;)V
+
+    goto :goto_0
+
+    :cond_5
+    move v0, v7
+
+    .line 539
+    goto :goto_1
+
+    .line 560
+    :cond_6
+    :try_start_0
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerOxygenUtil:Lcom/oculus/appmanager/installer/util/oxygen/InstallerOxygenUtil;
+
+    invoke-virtual {v0}, Lcom/oculus/appmanager/installer/util/oxygen/InstallerOxygenUtil;->enableVrAppInstalls()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 565
+    :goto_2
+    const/4 v1, 0x0
+
+    .line 567
+    :try_start_1
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerApi:Lcom/facebook/oxygen/appmanager/installer/proxy/InstallerApi;
+
+    invoke-virtual {v0}, Lcom/facebook/oxygen/appmanager/installer/proxy/InstallerApi;->acquireApkStagingUri()Landroid/net/Uri;
+
+    move-result-object v1
+
+    .line 568
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerApi:Lcom/facebook/oxygen/appmanager/installer/proxy/InstallerApi;
+
+    invoke-virtual {v0, v1, v3}, Lcom/facebook/oxygen/appmanager/installer/proxy/InstallerApi;->writeApk(Landroid/net/Uri;Ljava/io/File;)V
+
+    .line 569
+    invoke-virtual {v3}, Ljava/io/File;->delete()Z
+
+    .line 570
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerAnalytics:Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;
+
+    invoke-virtual {v0, p1}, Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;->reportLocalApkRemovedBeforeInstallStarted(Lcom/oculus/appmanager/info/ApkUpdateInfo;)V
+
+    .line 572
+    invoke-virtual {p0, p1, v1, v8, v2}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->performInstall(Lcom/oculus/appmanager/info/ApkUpdateInfo;Landroid/net/Uri;Lcom/facebook/oxygen/appmanager/installer/proxy/InstallConfig;Landroid/app/PendingIntent;)Ljava/lang/Void;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 574
+    if-eqz v1, :cond_0
+
+    .line 575
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerApi:Lcom/facebook/oxygen/appmanager/installer/proxy/InstallerApi;
+
+    invoke-virtual {v0, v1}, Lcom/facebook/oxygen/appmanager/installer/proxy/InstallerApi;->cancelApkStagingUri(Landroid/net/Uri;)V
+
+    goto/16 :goto_0
+
+    .line 561
+    :catch_0
+    move-exception v0
+
+    .line 562
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerAnalytics:Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;
+
+    invoke-virtual {v0, p1}, Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;->reportInstallFunnelAppmanagerVrEnableFailure(Lcom/oculus/appmanager/info/ApkUpdateInfo;)V
+
+    goto :goto_2
+
+    .line 574
+    :catchall_0
+    move-exception v0
+
+    if-eqz v1, :cond_7
+
+    .line 575
+    iget-object v2, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerApi:Lcom/facebook/oxygen/appmanager/installer/proxy/InstallerApi;
+
+    invoke-virtual {v2, v1}, Lcom/facebook/oxygen/appmanager/installer/proxy/InstallerApi;->cancelApkStagingUri(Landroid/net/Uri;)V
+
+    :cond_7
+    throw v0
+.end method
+
+.method public handleInstallCompletedIntent(Lcom/oculus/appmanager/info/ApkUpdateInfo;ILjava/lang/String;)V
+    .locals 1
+    .param p3    # Ljava/lang/String;
+        .annotation runtime Ljavax/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .prologue
+    .line 105
+    if-nez p2, :cond_0
+
+    .line 106
+    invoke-virtual {p0, p1}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->onApkInstallSuccess(Lcom/oculus/appmanager/info/ApkUpdateInfo;)V
+
+    .line 110
+    :goto_0
+    return-void
+
+    .line 108
+    :cond_0
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0, p3, p2}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->onApkInstallFailed(Lcom/oculus/appmanager/info/ApkUpdateInfo;Ljava/lang/Throwable;Ljava/lang/String;I)V
+
+    goto :goto_0
+.end method
+
+.method public init()V
+    .locals 1
+
+    .prologue
+    .line 659
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mPackagesCache:Lcom/oculus/common/packagescache/PackagesCache;
+
+    invoke-virtual {v0, p0}, Lcom/oculus/common/packagescache/PackagesCache;->addListener(Lcom/oculus/common/packagescache/PackagesListener;)V
+
+    .line 660
+    return-void
+.end method
+
+.method public installAsset(Lcom/oculus/appmanager/info/ApkUpdateInfo;)V
+    .locals 8
+
+    .prologue
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 114
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInfoUtils:Lcom/oculus/appmanager/info/InfoUtils;
+
+    invoke-virtual {v0, p1}, Lcom/oculus/appmanager/info/InfoUtils;->isRetry(Lcom/oculus/appmanager/info/ApkUpdateInfo;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    .line 115
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInfoUtils:Lcom/oculus/appmanager/info/InfoUtils;
+
+    invoke-virtual {v0, p1}, Lcom/oculus/appmanager/info/InfoUtils;->getRetriedUpdate(Lcom/oculus/appmanager/info/ApkUpdateInfo;)Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    move-result-object v0
+
+    .line 116
+    if-eqz v0, :cond_4
+
+    iget-object v3, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInfoUtils:Lcom/oculus/appmanager/info/InfoUtils;
+
+    .line 117
+    invoke-virtual {v3, v0}, Lcom/oculus/appmanager/info/InfoUtils;->hasParentUpdate(Lcom/oculus/appmanager/info/ApkUpdateInfo;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    move v0, v1
+
+    .line 119
+    :goto_0
+    invoke-virtual {p1}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->getExtras()Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;->getAssetRequiredFilename()Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 120
+    iget-object v4, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->updateType:Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateType;
+
+    invoke-virtual {v4}, Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateType;->isAsset()Z
+
+    move-result v4
+
+    invoke-static {v4}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
+
+    .line 121
+    iget-object v4, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInfoUtils:Lcom/oculus/appmanager/info/InfoUtils;
+
+    invoke-virtual {v4, p1}, Lcom/oculus/appmanager/info/InfoUtils;->hasParentUpdate(Lcom/oculus/appmanager/info/ApkUpdateInfo;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    if-eqz v0, :cond_5
+
+    :cond_0
+    move v0, v1
+
+    :goto_1
+    invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
+
+    .line 122
+    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    :goto_2
+    invoke-static {v1}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
+
+    .line 125
+    invoke-virtual {p1}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->edit()Lcom/oculus/appmanager/info/ApkUpdateInfo$UpdateExtrasEditor;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;->INSTALLING:Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;
+
+    iget-object v2, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mClock:Lcom/oculus/time/Clock;
+
+    .line 126
+    invoke-virtual {v2}, Lcom/oculus/time/Clock;->now()J
+
+    move-result-wide v4
+
+    invoke-virtual {v0, v1, v4, v5}, Lcom/oculus/appmanager/info/ApkUpdateInfo$UpdateExtrasEditor;->putState(Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;J)Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mClock:Lcom/oculus/time/Clock;
+
+    .line 127
+    invoke-virtual {v1}, Lcom/oculus/time/Clock;->now()J
+
+    move-result-wide v4
+
+    invoke-virtual {v0, v4, v5}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;->putInstallationStartTimeMs(J)Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;
+
+    move-result-object v0
+
+    .line 128
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;->save()V
+
+    .line 129
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerAnalytics:Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;
+
+    invoke-virtual {v0, p1}, Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;->reportAssetInstallStarted(Lcom/oculus/appmanager/info/ApkUpdateInfo;)V
+
+    .line 130
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerAnalytics:Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;
+
+    invoke-virtual {v0, p1}, Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;->reportInstallFunnelAssetInstallStarted(Lcom/oculus/appmanager/info/ApkUpdateInfo;)V
+
+    .line 134
+    invoke-virtual {p1}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->getExtras()Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;->getFinalPatchedExternalFilePath()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 135
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerFileUtils:Lcom/oculus/appmanager/installer/common/InstallerFileUtils;
+
+    invoke-virtual {v0, p1}, Lcom/oculus/appmanager/installer/common/InstallerFileUtils;->getFinalAssetPath(Lcom/oculus/appmanager/info/ApkUpdateInfo;)Ljava/lang/String;
+
+    move-result-object v7
+
+    .line 136
+    const/4 v6, 0x0
+
+    .line 137
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mAssets:Lcom/oculus/appmanager/assets/Assets;
+
+    iget-object v2, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->packageName:Ljava/lang/String;
+
+    iget-wide v4, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->baseVersion:J
+
+    .line 138
+    invoke-virtual {v0, v2, v4, v5}, Lcom/oculus/appmanager/assets/Assets;->getAssetList(Ljava/lang/String;J)Ljava/util/List;
+
+    move-result-object v0
+
+    .line 139
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_3
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oculus/appmanager/assets/AssetInfo;
+
+    .line 140
+    iget-object v4, v0, Lcom/oculus/appmanager/assets/AssetInfo;->name:Ljava/lang/String;
+
+    invoke-virtual {p1}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->getExtras()Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;->getAssetRequiredFilename()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_9
+
+    .line 141
+    iget-object v4, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerFileUtils:Lcom/oculus/appmanager/installer/common/InstallerFileUtils;
+
+    iget-object v5, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->packageName:Ljava/lang/String;
+
+    iget-object v0, v0, Lcom/oculus/appmanager/assets/AssetInfo;->name:Ljava/lang/String;
+
+    invoke-virtual {v4, v5, v0}, Lcom/oculus/appmanager/installer/common/InstallerFileUtils;->isAssetInstalled(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    .line 143
+    sget-object v0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->TAG:Ljava/lang/String;
+
+    const-string v2, "No installed asset found for %s. No backup will be made"
+
+    invoke-static {v0, v2, v3}, Lcom/facebook/debug/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 164
+    :cond_1
+    :try_start_0
+    invoke-direct {p0, v1, v7}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->move(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+
+    .line 195
+    :cond_2
+    invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    .line 196
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerFileUtils:Lcom/oculus/appmanager/installer/common/InstallerFileUtils;
+
+    const-string v1, "delete backup after successful asset install"
+
+    invoke-virtual {v0, v6, v1}, Lcom/oculus/appmanager/installer/common/InstallerFileUtils;->removeFileWithReason(Ljava/lang/String;Ljava/lang/String;)Z
+
+    .line 202
+    :cond_3
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerAnalytics:Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;
+
+    invoke-virtual {v0, p1}, Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;->reportInstallFunnelInstallSuccess(Lcom/oculus/appmanager/info/ApkUpdateInfo;)V
+
+    .line 204
+    sget-object v0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->TAG:Ljava/lang/String;
+
+    const-string v1, "Successfully installed asset %s for %s"
+
+    .line 207
+    invoke-virtual {p1}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->getExtras()Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;->getAssetRequiredFilename()Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->packageName:Ljava/lang/String;
+
+    .line 204
+    invoke-static {v0, v1, v2, v3}, Lcom/facebook/debug/log/BLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 211
+    invoke-virtual {p1}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->edit()Lcom/oculus/appmanager/info/ApkUpdateInfo$UpdateExtrasEditor;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;->SUCCESS:Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;
+
+    iget-object v2, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mClock:Lcom/oculus/time/Clock;
+
+    .line 212
+    invoke-virtual {v2}, Lcom/oculus/time/Clock;->now()J
+
+    move-result-wide v2
+
+    invoke-virtual {v0, v1, v2, v3}, Lcom/oculus/appmanager/info/ApkUpdateInfo$UpdateExtrasEditor;->putState(Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;J)Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;
+
+    move-result-object v0
+
+    .line 214
+    invoke-virtual {p1}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->getExtras()Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;->getInstallationStartTimeMs()J
+
+    move-result-wide v2
+
+    invoke-direct {p0, v2, v3}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->getDuration(J)J
+
+    move-result-wide v2
+
+    .line 213
+    invoke-virtual {v0, v2, v3}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;->putInstallationDurationMs(J)Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;
+
+    move-result-object v0
+
+    .line 215
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;->save()V
+
+    .line 217
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerAnalytics:Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;
+
+    invoke-virtual {v0, p1}, Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;->reportInstallAssetSuccess(Lcom/oculus/appmanager/info/ApkUpdateInfo;)V
+
+    .line 219
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mCleanUpHelper:Lcom/oculus/appmanager/installer/service/InstallerCleanUpHelper;
+
+    invoke-virtual {v0, p1}, Lcom/oculus/appmanager/installer/service/InstallerCleanUpHelper;->cleanUpStorage(Lcom/oculus/appmanager/info/ApkUpdateInfo;)V
+
+    .line 220
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mEventEmitter:Lcom/oculus/appmanager/installer/service/InstallerEventEmitter;
+
+    invoke-virtual {v0, p1}, Lcom/oculus/appmanager/installer/service/InstallerEventEmitter;->notifyInstallSucceeded(Lcom/oculus/appmanager/info/ApkUpdateInfo;)V
+
+    .line 221
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mAssetBroadcastDispatch:Lcom/oculus/appmanager/installer/broadcast/AssetBroadcastDispatch;
+
+    invoke-virtual {v0, p1}, Lcom/oculus/appmanager/installer/broadcast/AssetBroadcastDispatch;->broadcastAssetInstallComplete(Lcom/oculus/appmanager/info/ApkUpdateInfo;)V
+
+    .line 222
+    :goto_4
+    return-void
+
+    :cond_4
+    move v0, v2
+
+    .line 117
+    goto/16 :goto_0
+
+    :cond_5
+    move v0, v2
+
+    .line 121
+    goto/16 :goto_1
+
+    :cond_6
+    move v1, v2
+
+    .line 122
+    goto/16 :goto_2
+
+    .line 146
+    :cond_7
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerFileUtils:Lcom/oculus/appmanager/installer/common/InstallerFileUtils;
+
+    invoke-virtual {v0, p1}, Lcom/oculus/appmanager/installer/common/InstallerFileUtils;->getAssetBackupPath(Lcom/oculus/appmanager/info/ApkUpdateInfo;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 148
+    :try_start_1
+    invoke-direct {p0, v7, v0}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->move(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+
+    :goto_5
+    move-object v6, v0
+
+    .line 161
+    goto/16 :goto_3
+
+    .line 149
+    :catch_0
+    move-exception v5
+
+    .line 150
+    iget-object v1, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerFileUtils:Lcom/oculus/appmanager/installer/common/InstallerFileUtils;
+
+    const-string v2, "Removing backup file after failed backup"
+
+    invoke-virtual {v1, v0, v2}, Lcom/oculus/appmanager/installer/common/InstallerFileUtils;->removeFileWithReason(Ljava/lang/String;Ljava/lang/String;)Z
+
+    .line 152
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInfoUtils:Lcom/oculus/appmanager/info/InfoUtils;
+
+    const-string v2, "file_move"
+
+    const-string v3, "failed to backup previously installed asset"
+
+    sget-object v4, Lcom/oculus/appmanager/info/model/InstallerResultError;->IO_ERROR:Lcom/oculus/appmanager/info/model/InstallerResultError;
+
+    move-object v1, p1
+
+    invoke-virtual/range {v0 .. v5}, Lcom/oculus/appmanager/info/InfoUtils;->failQuiet(Lcom/oculus/appmanager/info/ApkUpdateInfo;Ljava/lang/String;Ljava/lang/String;Lcom/oculus/appmanager/info/model/InstallerResultError;Ljava/lang/Throwable;)V
+
+    goto :goto_4
+
+    .line 165
+    :catch_1
+    move-exception v5
+
+    .line 166
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerFileUtils:Lcom/oculus/appmanager/installer/common/InstallerFileUtils;
+
+    const-string v1, "Clearing asset install remnants after failure"
+
+    invoke-virtual {v0, v7, v1}, Lcom/oculus/appmanager/installer/common/InstallerFileUtils;->removeFileWithReason(Ljava/lang/String;Ljava/lang/String;)Z
+
+    .line 168
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInfoUtils:Lcom/oculus/appmanager/info/InfoUtils;
+
+    const-string v2, "file_move"
+
+    const-string v3, "Failed to install asset"
+
+    sget-object v4, Lcom/oculus/appmanager/info/model/InstallerResultError;->IO_ERROR:Lcom/oculus/appmanager/info/model/InstallerResultError;
+
+    move-object v1, p1
+
+    invoke-virtual/range {v0 .. v5}, Lcom/oculus/appmanager/info/InfoUtils;->failQuiet(Lcom/oculus/appmanager/info/ApkUpdateInfo;Ljava/lang/String;Ljava/lang/String;Lcom/oculus/appmanager/info/model/InstallerResultError;Ljava/lang/Throwable;)V
+
+    .line 176
+    invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 178
+    :try_start_2
+    new-instance v0, Ljava/io/File;
+
+    invoke-direct {v0, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    .line 179
+    invoke-direct {p0, v6, v7}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->move(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 188
+    :cond_8
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerFileUtils:Lcom/oculus/appmanager/installer/common/InstallerFileUtils;
+
+    const-string v1, "Removing asset backup after installation failure"
+
+    invoke-virtual {v0, v6, v1}, Lcom/oculus/appmanager/installer/common/InstallerFileUtils;->removeFileWithReason(Ljava/lang/String;Ljava/lang/String;)Z
+
+    goto :goto_4
+
+    .line 181
+    :catch_2
+    move-exception v0
+
+    .line 183
+    :try_start_3
+    iget-object v1, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mErrorReporter:Lcom/oculus/errorreporting/ErrorReporter;
+
+    const-string v2, "install_recovert_failure"
+
+    const-string v3, "Failed to rename/move file during install recovery"
+
+    invoke-virtual {v1, v2, v3}, Lcom/oculus/errorreporting/ErrorReporter;->softError(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 186
+    iget-object v1, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerAnalytics:Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;
+
+    invoke-virtual {v1, p1, v0}, Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;->reportInstallRecoveryFailed(Lcom/oculus/appmanager/info/ApkUpdateInfo;Ljava/lang/Exception;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    .line 188
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerFileUtils:Lcom/oculus/appmanager/installer/common/InstallerFileUtils;
+
+    const-string v1, "Removing asset backup after installation failure"
+
+    invoke-virtual {v0, v6, v1}, Lcom/oculus/appmanager/installer/common/InstallerFileUtils;->removeFileWithReason(Ljava/lang/String;Ljava/lang/String;)Z
+
+    goto :goto_4
+
+    :catchall_0
+    move-exception v0
+
+    iget-object v1, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerFileUtils:Lcom/oculus/appmanager/installer/common/InstallerFileUtils;
+
+    const-string v2, "Removing asset backup after installation failure"
+
+    invoke-virtual {v1, v6, v2}, Lcom/oculus/appmanager/installer/common/InstallerFileUtils;->removeFileWithReason(Ljava/lang/String;Ljava/lang/String;)Z
+
+    throw v0
+
+    :cond_9
+    move-object v0, v6
+
+    goto :goto_5
+
+    :cond_a
+    move v0, v2
+
+    goto/16 :goto_0
+.end method
+
+.method public installOrUpdateApp(Lcom/oculus/appmanager/info/ApkUpdateInfo;)V
+    .locals 10
+
+    .prologue
+    const/4 v2, 0x1
+
+    const/4 v1, 0x0
+
+    .line 225
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInfoUtils:Lcom/oculus/appmanager/info/InfoUtils;
+
+    invoke-virtual {v0, p1}, Lcom/oculus/appmanager/info/InfoUtils;->getUpdateInfoCollection(Lcom/oculus/appmanager/info/ApkUpdateInfo;)Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;
+
+    move-result-object v4
+
+    .line 227
+    iget-object v0, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->obb:Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->obb:Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    .line 228
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->getState()Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;
+
+    move-result-object v0
+
+    sget-object v3, Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;->VERIFIED:Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;
+
+    if-ne v0, v3, :cond_1
+
+    :cond_0
+    move v0, v2
+
+    :goto_0
+    const-string v3, "Expected obb in verified state"
+
+    .line 227
+    invoke-static {v0, v3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
+
+    .line 230
+    iget-object v0, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->assets:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v5
+
+    :goto_1
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    .line 232
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->getState()Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;
+
+    move-result-object v3
+
+    sget-object v6, Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;->VERIFIED:Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;
+
+    if-ne v3, v6, :cond_2
+
+    move v3, v2
+
+    :goto_2
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "Expected asset in verified state, found: "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    .line 233
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->getState()Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;
+
+    move-result-object v0
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 231
+    invoke-static {v3, v0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_1
+    move v0, v1
+
+    .line 228
+    goto :goto_0
+
+    :cond_2
+    move v3, v1
+
+    .line 232
+    goto :goto_2
+
+    .line 236
+    :cond_3
+    new-instance v3, Ljava/util/ArrayList;
+
+    iget-object v0, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->assets:Ljava/util/List;
+
+    invoke-direct {v3, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 237
+    iget-object v0, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->obb:Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    if-eqz v0, :cond_4
+
+    .line 238
+    iget-object v0, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->obb:Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 240
+    :cond_4
+    new-instance v5, Ljava/util/ArrayList;
+
+    invoke-direct {v5, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 241
+    invoke-interface {v5, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 246
+    sget-object v6, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->TAG:Ljava/lang/String;
+
+    const-string v7, "Starting install for %s. obb: %s. asset count: %s"
+
+    iget-object v8, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->packageName:Ljava/lang/String;
+
+    iget-object v0, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->obb:Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    if-eqz v0, :cond_5
+
+    const-string v0, "present"
+
+    :goto_3
+    iget-object v9, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->assets:Ljava/util/List;
+
+    .line 251
+    invoke-interface {v9}, Ljava/util/List;->size()I
+
+    move-result v9
+
+    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v9
+
+    .line 246
+    invoke-static {v6, v7, v8, v0, v9}, Lcom/facebook/debug/log/BLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 253
+    invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v5
+
+    :goto_4
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    .line 255
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->edit()Lcom/oculus/appmanager/info/ApkUpdateInfo$UpdateExtrasEditor;
+
+    move-result-object v0
+
+    sget-object v6, Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;->INSTALLING:Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;
+
+    iget-object v7, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mClock:Lcom/oculus/time/Clock;
+
+    .line 256
+    invoke-virtual {v7}, Lcom/oculus/time/Clock;->now()J
+
+    move-result-wide v8
+
+    invoke-virtual {v0, v6, v8, v9}, Lcom/oculus/appmanager/info/ApkUpdateInfo$UpdateExtrasEditor;->putState(Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;J)Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;
+
+    move-result-object v0
+
+    iget-object v6, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mClock:Lcom/oculus/time/Clock;
+
+    .line 257
+    invoke-virtual {v6}, Lcom/oculus/time/Clock;->now()J
+
+    move-result-wide v6
+
+    invoke-virtual {v0, v6, v7}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;->putInstallationStartTimeMs(J)Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;
+
+    move-result-object v0
+
+    .line 258
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;->save()V
+
+    goto :goto_4
+
+    .line 246
+    :cond_5
+    const-string v0, "not present"
+
+    goto :goto_3
+
+    .line 261
+    :cond_6
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerAnalytics:Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;
+
+    invoke-virtual {v0, v4}, Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;->reportInstallStarted(Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;)V
+
+    .line 262
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerAnalytics:Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;
+
+    invoke-virtual {v0, p1}, Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;->reportInstallFunnelInstallStarted(Lcom/oculus/appmanager/info/ApkUpdateInfo;)V
+
+    .line 268
+    :try_start_0
+    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    :goto_5
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    .line 269
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->getExtras()Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;->getFinalPatchedExternalFilePath()Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 270
+    iget-object v6, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerFileUtils:Lcom/oculus/appmanager/installer/common/InstallerFileUtils;
+
+    invoke-virtual {v6, v0}, Lcom/oculus/appmanager/installer/common/InstallerFileUtils;->getInstallationPreparationPath(Lcom/oculus/appmanager/info/ApkUpdateInfo;)Ljava/lang/String;
+
+    move-result-object v6
+
+    .line 271
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->edit()Lcom/oculus/appmanager/info/ApkUpdateInfo$UpdateExtrasEditor;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v6}, Lcom/oculus/appmanager/info/ApkUpdateInfo$UpdateExtrasEditor;->putPreparedInstallFilePath(Ljava/lang/String;)Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;->save()V
+
+    .line 272
+    invoke-direct {p0, v5, v6}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->move(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_5
+
+    .line 274
+    :catch_0
+    move-exception v5
+
+    .line 276
+    const-string v0, "Removing prior prepared file during preparation failure"
+
+    invoke-direct {p0, v3, v0}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->deletePreparedFiles(Ljava/util/List;Ljava/lang/String;)V
+
+    .line 279
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInfoUtils:Lcom/oculus/appmanager/info/InfoUtils;
+
+    const-string v2, "file_move"
+
+    const-string v3, "failed to move files for install preparation"
+
+    sget-object v4, Lcom/oculus/appmanager/info/model/InstallerResultError;->IO_ERROR:Lcom/oculus/appmanager/info/model/InstallerResultError;
+
+    move-object v1, p1
+
+    invoke-virtual/range {v0 .. v5}, Lcom/oculus/appmanager/info/InfoUtils;->failQuiet(Lcom/oculus/appmanager/info/ApkUpdateInfo;Ljava/lang/String;Ljava/lang/String;Lcom/oculus/appmanager/info/model/InstallerResultError;Ljava/lang/Throwable;)V
+
+    .line 303
+    :goto_6
+    return-void
+
+    .line 287
+    :cond_7
+    sget-object v0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->TAG:Ljava/lang/String;
+
+    const-string v4, "asset and obb preparation has completed"
+
+    invoke-static {v0, v4}, Lcom/facebook/debug/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 293
+    :try_start_1
+    invoke-virtual {p0, p1}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->doInstallVerifiedApk(Lcom/oculus/appmanager/info/ApkUpdateInfo;)V
+    :try_end_1
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_6
+
+    .line 294
+    :catch_1
+    move-exception v0
+
+    .line 296
+    const-string v4, "Removing prepared file for failed install"
+
+    invoke-direct {p0, v3, v4}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->deletePreparedFiles(Ljava/util/List;Ljava/lang/String;)V
+
+    .line 298
+    sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string v4, "Exception raised while performing install request: %s"
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    .line 300
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v5
+
+    aput-object v5, v2, v1
+
+    .line 299
+    invoke-static {v3, v4, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 301
+    const/16 v2, 0x63
+
+    invoke-direct {p0, p1, v0, v1, v2}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->onApkInstallFailed(Lcom/oculus/appmanager/info/ApkUpdateInfo;Ljava/lang/Throwable;Ljava/lang/String;I)V
+
+    goto :goto_6
+.end method
+
+.method protected onApkInstallSuccess(Lcom/oculus/appmanager/info/ApkUpdateInfo;)V
+    .locals 12
+    .annotation build Lcom/google/common/annotations/VisibleForTesting;
+    .end annotation
+
+    .prologue
+    const/4 v2, 0x1
+
+    const/4 v1, 0x0
+
+    .line 307
+    invoke-virtual {p1}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->getExtras()Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;->getInstallationStartTimeMs()J
+
+    move-result-wide v4
+
+    invoke-direct {p0, v4, v5}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->getDuration(J)J
+
+    move-result-wide v4
+
+    .line 308
+    invoke-virtual {p1}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->edit()Lcom/oculus/appmanager/info/ApkUpdateInfo$UpdateExtrasEditor;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v4, v5}, Lcom/oculus/appmanager/info/ApkUpdateInfo$UpdateExtrasEditor;->putInstallationDurationMs(J)Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;->save()V
+
+    .line 311
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInfoUtils:Lcom/oculus/appmanager/info/InfoUtils;
+
+    invoke-virtual {v0, p1}, Lcom/oculus/appmanager/info/InfoUtils;->getUpdateInfoCollection(Lcom/oculus/appmanager/info/ApkUpdateInfo;)Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;
+
+    move-result-object v4
+
+    .line 313
+    iget-object v0, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->obb:Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->obb:Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    .line 314
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->getState()Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;
+
+    move-result-object v0
+
+    sget-object v3, Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;->INSTALLING:Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;
+
+    if-ne v0, v3, :cond_1
+
+    :cond_0
+    move v0, v2
+
+    :goto_0
+    const-string v3, "Expected obb in installing state"
+
+    .line 313
+    invoke-static {v0, v3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
+
+    .line 316
+    iget-object v0, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->assets:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v5
+
+    :goto_1
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    .line 318
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->getState()Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;
+
+    move-result-object v3
+
+    sget-object v6, Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;->INSTALLING:Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;
+
+    if-ne v3, v6, :cond_2
+
+    move v3, v2
+
+    :goto_2
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "Expected asset in verified state, found: "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    .line 319
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->getState()Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;
+
+    move-result-object v0
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 317
+    invoke-static {v3, v0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_1
+    move v0, v1
+
+    .line 314
+    goto :goto_0
+
+    :cond_2
+    move v3, v1
+
+    .line 318
+    goto :goto_2
+
+    .line 322
+    :cond_3
+    new-instance v6, Ljava/util/ArrayList;
+
+    iget-object v0, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->assets:Ljava/util/List;
+
+    invoke-direct {v6, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 323
+    iget-object v0, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->obb:Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    if-eqz v0, :cond_4
+
+    .line 324
+    iget-object v0, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->obb:Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    invoke-interface {v6, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 326
+    :cond_4
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3, v6}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 327
+    invoke-interface {v3, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 332
+    new-instance v5, Ljava/util/HashMap;
+
+    invoke-direct {v5}, Ljava/util/HashMap;-><init>()V
+
+    .line 333
+    iget-object v0, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->assets:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v7
+
+    :goto_3
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    .line 334
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->getExtras()Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;->getAssetRequiredFilename()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-interface {v5, v8, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_3
+
+    .line 336
+    :cond_5
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mAssets:Lcom/oculus/appmanager/assets/Assets;
+
+    iget-object v7, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->packageName:Ljava/lang/String;
+
+    iget-wide v8, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->baseVersion:J
+
+    .line 337
+    invoke-virtual {v0, v7, v8, v9}, Lcom/oculus/appmanager/assets/Assets;->getAssetList(Ljava/lang/String;J)Ljava/util/List;
+
+    move-result-object v0
+
+    .line 338
+    new-instance v7, Ljava/util/HashMap;
+
+    invoke-direct {v7}, Ljava/util/HashMap;-><init>()V
+
+    .line 339
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v8
+
+    :cond_6
+    :goto_4
+    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oculus/appmanager/assets/AssetInfo;
+
+    .line 340
+    iget-object v9, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerFileUtils:Lcom/oculus/appmanager/installer/common/InstallerFileUtils;
+
+    iget-object v10, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->packageName:Ljava/lang/String;
+
+    iget-object v11, v0, Lcom/oculus/appmanager/assets/AssetInfo;->name:Ljava/lang/String;
+
+    invoke-virtual {v9, v10, v11}, Lcom/oculus/appmanager/installer/common/InstallerFileUtils;->isAssetInstalled(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_6
+
+    .line 341
+    iget-object v9, v0, Lcom/oculus/appmanager/assets/AssetInfo;->name:Ljava/lang/String;
+
+    invoke-interface {v7, v9, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_4
+
+    .line 346
+    :cond_7
+    invoke-interface {v5}, Ljava/util/Map;->keySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v7}, Ljava/util/Map;->keySet()Ljava/util/Set;
+
+    move-result-object v7
+
+    invoke-interface {v0, v7}, Ljava/util/Set;->retainAll(Ljava/util/Collection;)Z
+
+    .line 347
+    sget-object v0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->TAG:Ljava/lang/String;
+
+    const-string v7, "Found %d assets that need to be backed up prior to install"
+
+    .line 348
+    invoke-interface {v5}, Ljava/util/Map;->size()I
+
+    move-result v8
+
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    .line 347
+    invoke-static {v0, v7, v8}, Lcom/facebook/debug/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 351
+    new-instance v7, Ljava/util/HashMap;
+
+    invoke-direct {v7}, Ljava/util/HashMap;-><init>()V
+
+    .line 354
+    :try_start_0
+    invoke-interface {v5}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v5
+
+    :goto_5
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    .line 355
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->getExtras()Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;->getAssetRequiredFilename()Ljava/lang/String;
+
+    move-result-object v8
+
+    .line 356
+    iget-object v9, v0, Lcom/oculus/appmanager/info/ApkUpdateInfo;->packageName:Ljava/lang/String;
+
+    invoke-static {v9, v8}, Lcom/oculus/appmanager/installer/common/InstallerFileUtils;->getFinalAssetPath(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
+    .line 357
+    iget-object v9, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerFileUtils:Lcom/oculus/appmanager/installer/common/InstallerFileUtils;
+
+    invoke-virtual {v9, v0}, Lcom/oculus/appmanager/installer/common/InstallerFileUtils;->getAssetBackupPath(Lcom/oculus/appmanager/info/ApkUpdateInfo;)Ljava/lang/String;
+
+    move-result-object v9
+
+    .line 358
+    invoke-interface {v7, v9, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 359
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->edit()Lcom/oculus/appmanager/info/ApkUpdateInfo$UpdateExtrasEditor;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v9}, Lcom/oculus/appmanager/info/ApkUpdateInfo$UpdateExtrasEditor;->putInstallBackupFilePath(Ljava/lang/String;)Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;->save()V
+
+    .line 360
+    invoke-direct {p0, v8, v9}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->move(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_5
+
+    .line 362
+    :catch_0
+    move-exception v5
+
+    .line 363
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallInProgressPackagesSet:Ljava/util/Set;
+
+    iget-object v1, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->packageName:Ljava/lang/String;
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    .line 364
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInfoUtils:Lcom/oculus/appmanager/info/InfoUtils;
+
+    const-string v2, "file_move"
+
+    const-string v3, "failed to backup assets"
+
+    sget-object v4, Lcom/oculus/appmanager/info/model/InstallerResultError;->IO_ERROR:Lcom/oculus/appmanager/info/model/InstallerResultError;
+
+    move-object v1, p1
+
+    invoke-virtual/range {v0 .. v5}, Lcom/oculus/appmanager/info/InfoUtils;->failQuiet(Lcom/oculus/appmanager/info/ApkUpdateInfo;Ljava/lang/String;Ljava/lang/String;Lcom/oculus/appmanager/info/model/InstallerResultError;Ljava/lang/Throwable;)V
+
+    .line 372
+    const-string v0, "Removing prepared file after failed backup"
+
+    invoke-direct {p0, v6, v0}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->deletePreparedFiles(Ljava/util/List;Ljava/lang/String;)V
+
+    .line 376
+    :try_start_1
+    invoke-interface {v7}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_6
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    .line 377
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-direct {p0, v1, v0}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->move(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_6
+
+    .line 379
+    :catch_1
+    move-exception v0
+
+    .line 381
+    iget-object v1, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mErrorReporter:Lcom/oculus/errorreporting/ErrorReporter;
+
+    const-string v2, "install_recovert_failure"
+
+    const-string v3, "Failed to rename/move file during install recovery"
+
+    invoke-virtual {v1, v2, v3}, Lcom/oculus/errorreporting/ErrorReporter;->softError(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 384
+    iget-object v1, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerAnalytics:Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;
+
+    invoke-virtual {v1, p1, v0}, Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;->reportInstallRecoveryFailed(Lcom/oculus/appmanager/info/ApkUpdateInfo;Ljava/lang/Exception;)V
+
+    .line 483
+    :cond_8
+    :goto_7
+    return-void
+
+    .line 392
+    :cond_9
+    sget-object v0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->TAG:Ljava/lang/String;
+
+    const-string v5, "All preparation complete, now installing obb(%d) and assets(%d)"
+
+    iget-object v8, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->obb:Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    if-nez v8, :cond_a
+
+    .line 395
+    :goto_8
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iget-object v2, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->assets:Ljava/util/List;
+
+    .line 396
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    .line 392
+    invoke-static {v0, v5, v1, v2}, Lcom/facebook/debug/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 398
+    :try_start_2
+    iget-object v0, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->assets:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_9
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    .line 399
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->getExtras()Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;->getPreparedInstallFilePath()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 400
+    iget-object v5, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerFileUtils:Lcom/oculus/appmanager/installer/common/InstallerFileUtils;
+
+    invoke-virtual {v5, v0}, Lcom/oculus/appmanager/installer/common/InstallerFileUtils;->getFinalAssetPath(Lcom/oculus/appmanager/info/ApkUpdateInfo;)Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 401
+    invoke-direct {p0, v2, v5}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->move(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 403
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->edit()Lcom/oculus/appmanager/info/ApkUpdateInfo$UpdateExtrasEditor;
+
+    move-result-object v0
+
+    .line 405
+    invoke-virtual {p1}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->getExtras()Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;->getInstallationStartTimeMs()J
+
+    move-result-wide v8
+
+    invoke-direct {p0, v8, v9}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->getDuration(J)J
+
+    move-result-wide v8
+
+    .line 404
+    invoke-virtual {v0, v8, v9}, Lcom/oculus/appmanager/info/ApkUpdateInfo$UpdateExtrasEditor;->putInstallationDurationMs(J)Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;
+
+    move-result-object v0
+
+    .line 406
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;->save()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
+
+    goto :goto_9
+
+    .line 419
+    :catch_2
+    move-exception v5
+
+    .line 420
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallInProgressPackagesSet:Ljava/util/Set;
+
+    iget-object v1, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->packageName:Ljava/lang/String;
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    .line 421
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInfoUtils:Lcom/oculus/appmanager/info/InfoUtils;
+
+    const-string v2, "file_move"
+
+    const-string v3, "failed to perform obb/asset install"
+
+    sget-object v4, Lcom/oculus/appmanager/info/model/InstallerResultError;->IO_ERROR:Lcom/oculus/appmanager/info/model/InstallerResultError;
+
+    move-object v1, p1
+
+    invoke-virtual/range {v0 .. v5}, Lcom/oculus/appmanager/info/InfoUtils;->failQuiet(Lcom/oculus/appmanager/info/ApkUpdateInfo;Ljava/lang/String;Ljava/lang/String;Lcom/oculus/appmanager/info/model/InstallerResultError;Ljava/lang/Throwable;)V
+
+    .line 429
+    const-string/jumbo v0, "removing prepared file after failed install"
+
+    invoke-direct {p0, v6, v0}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->deletePreparedFiles(Ljava/util/List;Ljava/lang/String;)V
+
+    .line 433
+    :try_start_3
+    invoke-interface {v7}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_a
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    .line 434
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-direct {p0, v1, v0}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->move(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_3
+
+    goto :goto_a
+
+    .line 436
+    :catch_3
+    move-exception v0
+
+    .line 438
+    iget-object v1, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mErrorReporter:Lcom/oculus/errorreporting/ErrorReporter;
+
+    const-string v2, "install_recovert_failure"
+
+    const-string v3, "Failed to rename/move file during install recovery"
+
+    invoke-virtual {v1, v2, v3}, Lcom/oculus/errorreporting/ErrorReporter;->softError(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 441
+    iget-object v1, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerAnalytics:Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;
+
+    invoke-virtual {v1, p1, v0}, Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;->reportInstallRecoveryFailed(Lcom/oculus/appmanager/info/ApkUpdateInfo;Ljava/lang/Exception;)V
+
+    goto/16 :goto_7
+
+    :cond_a
+    move v1, v2
+
+    .line 392
+    goto/16 :goto_8
+
+    .line 408
+    :cond_b
+    :try_start_4
+    iget-object v0, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->obb:Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    if-eqz v0, :cond_c
+
+    .line 409
+    iget-object v0, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->obb:Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->getExtras()Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;->getPreparedInstallFilePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 410
+    iget-object v1, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerFileUtils:Lcom/oculus/appmanager/installer/common/InstallerFileUtils;
+
+    iget-object v2, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->obb:Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    invoke-virtual {v1, v2}, Lcom/oculus/appmanager/installer/common/InstallerFileUtils;->getFinalObbPath(Lcom/oculus/appmanager/info/ApkUpdateInfo;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 411
+    invoke-direct {p0, v0, v1}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->move(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 412
+    iget-object v0, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->obb:Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    .line 414
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->edit()Lcom/oculus/appmanager/info/ApkUpdateInfo$UpdateExtrasEditor;
+
+    move-result-object v0
+
+    .line 416
+    invoke-virtual {p1}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->getExtras()Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtras;->getInstallationStartTimeMs()J
+
+    move-result-wide v8
+
+    invoke-direct {p0, v8, v9}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->getDuration(J)J
+
+    move-result-wide v8
+
+    .line 415
+    invoke-virtual {v0, v8, v9}, Lcom/oculus/appmanager/info/ApkUpdateInfo$UpdateExtrasEditor;->putInstallationDurationMs(J)Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;
+
+    move-result-object v0
+
+    .line 417
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;->save()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
+
+    .line 450
+    :cond_c
+    invoke-interface {v7}, Ljava/util/Map;->keySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_b
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_d
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    .line 451
+    iget-object v2, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerFileUtils:Lcom/oculus/appmanager/installer/common/InstallerFileUtils;
+
+    const-string v5, "Removing backup"
+
+    invoke-virtual {v2, v0, v5}, Lcom/oculus/appmanager/installer/common/InstallerFileUtils;->removeFileWithReason(Ljava/lang/String;Ljava/lang/String;)Z
+
+    goto :goto_b
+
+    .line 453
+    :cond_d
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerFileUtils:Lcom/oculus/appmanager/installer/common/InstallerFileUtils;
+
+    iget-object v1, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerFileUtils:Lcom/oculus/appmanager/installer/common/InstallerFileUtils;
+
+    iget-object v2, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->packageName:Ljava/lang/String;
+
+    iget-wide v6, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->baseVersion:J
+
+    .line 454
+    invoke-virtual {v1, v2, v6, v7}, Lcom/oculus/appmanager/installer/common/InstallerFileUtils;->getFinalObbPath(Ljava/lang/String;J)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "Removing old install\'s obb file"
+
+    .line 453
+    invoke-virtual {v0, v1, v2}, Lcom/oculus/appmanager/installer/common/InstallerFileUtils;->removeFileWithReason(Ljava/lang/String;Ljava/lang/String;)Z
+
+    .line 460
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mCleanUpHelper:Lcom/oculus/appmanager/installer/service/InstallerCleanUpHelper;
+
+    invoke-virtual {v0, p1}, Lcom/oculus/appmanager/installer/service/InstallerCleanUpHelper;->cleanUpStorage(Lcom/oculus/appmanager/info/ApkUpdateInfo;)V
+
+    .line 464
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerAnalytics:Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;
+
+    invoke-virtual {v0, p1}, Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;->reportInstallFunnelInstallSuccess(Lcom/oculus/appmanager/info/ApkUpdateInfo;)V
+
+    .line 466
+    sget-object v1, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->TAG:Ljava/lang/String;
+
+    const-string v2, "Completed install for %s. obb: %s. asset count: %s"
+
+    iget-object v5, p1, Lcom/oculus/appmanager/info/ApkUpdateInfo;->packageName:Ljava/lang/String;
+
+    iget-object v0, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->obb:Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    if-eqz v0, :cond_e
+
+    const-string v0, "present"
+
+    :goto_c
+    iget-object v6, v4, Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;->assets:Ljava/util/List;
+
+    .line 471
+    invoke-interface {v6}, Ljava/util/List;->size()I
+
+    move-result v6
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    .line 466
+    invoke-static {v1, v2, v5, v0, v6}, Lcom/facebook/debug/log/BLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 473
+    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_d
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_f
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oculus/appmanager/info/ApkUpdateInfo;
+
+    .line 474
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo;->edit()Lcom/oculus/appmanager/info/ApkUpdateInfo$UpdateExtrasEditor;
+
+    move-result-object v0
+
+    sget-object v2, Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;->SUCCESS:Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;
+
+    iget-object v3, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mClock:Lcom/oculus/time/Clock;
+
+    invoke-virtual {v3}, Lcom/oculus/time/Clock;->now()J
+
+    move-result-wide v6
+
+    invoke-virtual {v0, v2, v6, v7}, Lcom/oculus/appmanager/info/ApkUpdateInfo$UpdateExtrasEditor;->putState(Lcom/oculus/appmanager/info/ApkUpdateInfoContract$UpdateState;J)Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oculus/appmanager/info/ApkUpdateInfo$ApkUpdateExtrasBuilder;->save()V
+
+    goto :goto_d
+
+    .line 466
+    :cond_e
+    const-string v0, "not present"
+
+    goto :goto_c
+
+    .line 477
+    :cond_f
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerAnalytics:Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;
+
+    invoke-virtual {v0, v4}, Lcom/oculus/appmanager/installer/analytics/InstallerAnalytics;->reportInstallSuccess(Lcom/oculus/appmanager/info/InfoUtils$UpdateInfoCollection;)V
+
+    .line 482
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mEventEmitter:Lcom/oculus/appmanager/installer/service/InstallerEventEmitter;
+
+    invoke-virtual {v0, p1}, Lcom/oculus/appmanager/installer/service/InstallerEventEmitter;->notifyInstallSucceeded(Lcom/oculus/appmanager/info/ApkUpdateInfo;)V
+
+    goto/16 :goto_7
+.end method
+
+.method public onPackageChanged(Lcom/oculus/common/packagescache/PackagesListener$PackageAction;Ljava/lang/String;)V
+    .locals 1
+
+    .prologue
+    .line 665
+    sget-object v0, Lcom/oculus/common/packagescache/PackagesListener$PackageAction;->REMOVED:Lcom/oculus/common/packagescache/PackagesListener$PackageAction;
+
+    if-ne p1, v0, :cond_1
+
+    .line 673
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 668
+    :cond_1
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallInProgressPackagesSet:Ljava/util/Set;
+
+    invoke-interface {v0, p2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 672
+    sget-object v0, Lcom/oculus/common/packagescache/PackagesListener$PackageAction;->UPDATED:Lcom/oculus/common/packagescache/PackagesListener$PackageAction;
+
+    if-ne p1, v0, :cond_2
+
+    const/4 v0, 0x1
+
+    :goto_1
+    invoke-direct {p0, p2, v0}, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->maybeAddSideloadedApp(Ljava/lang/String;Z)V
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_1
+.end method
+
+.method public performInstall(Lcom/oculus/appmanager/info/ApkUpdateInfo;Landroid/net/Uri;Lcom/facebook/oxygen/appmanager/installer/proxy/InstallConfig;Landroid/app/PendingIntent;)Ljava/lang/Void;
+    .locals 2
+    .annotation build Lcom/google/common/annotations/VisibleForTesting;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Throwable;
+        }
+    .end annotation
+
+    .prologue
+    .line 612
+    iget-object v0, p0, Lcom/oculus/appmanager/installer/service/InstallerServiceInstallHelper;->mInstallerApi:Lcom/facebook/oxygen/appmanager/installer/proxy/InstallerApi;
+
+    invoke-virtual {p4}, Landroid/app/PendingIntent;->getIntentSender()Landroid/content/IntentSender;
+
+    move-result-object v1
+
+    invoke-virtual {v0, p2, p3, v1}, Lcom/facebook/oxygen/appmanager/installer/proxy/InstallerApi;->install(Landroid/net/Uri;Lcom/facebook/oxygen/appmanager/installer/proxy/InstallConfig;Landroid/content/IntentSender;)I
+
+    .line 613
+    const/4 v0, 0x0
+
+    return-object v0
+.end method

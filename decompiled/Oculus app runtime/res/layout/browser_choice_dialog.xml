@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.dialogs.BrowserChoiceDialog style="@style/BrowserChoiceDialogContainerTheme"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:text="@string/browser_choice_dialog_title" style="@style/BrowserChoiceDialogTitleText" />
+    <TextView android:text="@string/browser_choice_dialog_description" style="@style/BrowserChoiceDialogDescriptionText" />
+    <Space style="@style/BrowserChoiceDialogSpacer" />
+    <RadioGroup android:id="@id/browser_choice_options" style="@style/BrowserChoiceDialogOptions">
+        <RadioButton android:id="@id/browser_choice_option_oculus" style="@style/BrowserChoiceDialogOculusOption" />
+        <RadioButton android:id="@id/browser_choice_option_samsung" style="@style/BrowserChoiceDialogSamsungOption" />
+    </RadioGroup>
+    <LinearLayout style="@style/BrowserChoiceDialogButtons">
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/browser_choice_dialog_button_cancel" android:text="@string/browser_choice_dialog_button_cancel" style="@style/BrowserChoiceDialogButtonSecondary" />
+        <com.oculus.vrshell.panels.views.ShellButton android:enabled="false" android:id="@id/browser_choice_dialog_button_ok" android:text="@string/browser_choice_dialog_button_ok" style="@style/BrowserChoiceDialogButtonPrimary" />
+    </LinearLayout>
+</com.oculus.panelapp.anytimeui.dialogs.BrowserChoiceDialog>

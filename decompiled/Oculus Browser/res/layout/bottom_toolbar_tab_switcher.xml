@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/bottom_toolbar_tab_switcher" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/bottom_toolbar_buttons" android:background="@color/APKTOOL_DUMMYVAL_0x7f06011e" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/APKTOOL_DUMMYVAL_0x7f07006e" android:paddingEnd="@dimen/APKTOOL_DUMMYVAL_0x7f07006e">
+            <org.chromium.chrome.browser.toolbar.bottom.CloseAllTabsButton android:id="@id/close_all_tabs_button" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f08010e" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f130115" app:APKTOOL_DUMMYVAL_0x7f040256="@color/APKTOOL_DUMMYVAL_0x7f060169" style="@style/APKTOOL_DUMMYVAL_0x7f1400d6" />
+            <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e01c7" />
+            <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:id="@id/new_tab_button_wrapper" android:background="?APKTOOL_DUMMYVAL_0x7f0401e7" android:layout_width="72.0dip" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f13011f">
+                <org.chromium.chrome.browser.toolbar.bottom.BottomToolbarNewTabButton android:layout_gravity="center" android:id="@id/tab_switcher_new_tab_button" android:paddingTop="@dimen/APKTOOL_DUMMYVAL_0x7f070290" android:paddingBottom="@dimen/APKTOOL_DUMMYVAL_0x7f070290" android:clickable="false" android:layout_width="@dimen/APKTOOL_DUMMYVAL_0x7f07028f" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f07028f" android:importantForAccessibility="no" />
+                <TextView android:id="@id/new_tab_button_label" android:paddingTop="0.0dip" android:text="@string/APKTOOL_DUMMYVAL_0x7f13011f" style="@style/APKTOOL_DUMMYVAL_0x7f1400d7" />
+            </LinearLayout>
+            <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e01c7" />
+            <LinearLayout android:id="@id/labeled_menu_button_wrapper" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f13011a" style="@style/APKTOOL_DUMMYVAL_0x7f1400d6">
+                <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e004d" style="@style/APKTOOL_DUMMYVAL_0x7f140173" />
+                <TextView android:id="@id/menu_button_label" android:text="@string/more" style="@style/APKTOOL_DUMMYVAL_0x7f1400d7" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <ImageView android:id="@id/bottom_toolbar_bottom_shadow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f070322" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f080262" android:scaleType="fitXY" />
+</LinearLayout>

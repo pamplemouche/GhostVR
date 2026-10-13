@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.keyboard_accessory.sheet_tabs.AddressAccessoryInfoView android:gravity="start|center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f070176" android:layout_marginBottom="@dimen/APKTOOL_DUMMYVAL_0x7f070171" android:fillViewport="true" android:paddingStart="@dimen/APKTOOL_DUMMYVAL_0x7f07017a" android:paddingEnd="@dimen/APKTOOL_DUMMYVAL_0x7f07017a"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <org.chromium.ui.widget.ChipView android:gravity="start|center" android:id="@id/name_full" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f140104" />
+    <org.chromium.ui.widget.ChipView android:gravity="start|center" android:id="@id/company_name" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f140104" />
+    <org.chromium.ui.widget.ChipView android:gravity="start|center" android:id="@id/address_home_line_1" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f140104" />
+    <org.chromium.ui.widget.ChipView android:gravity="start|center" android:id="@id/address_home_line_2" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f140104" />
+    <LinearLayout android:gravity="start|center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true">
+        <org.chromium.ui.widget.ChipView android:gravity="start|center" android:id="@id/address_home_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/APKTOOL_DUMMYVAL_0x7f070175" style="@style/APKTOOL_DUMMYVAL_0x7f140104" />
+        <org.chromium.ui.widget.ChipView android:gravity="start|center" android:id="@id/address_home_city" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/APKTOOL_DUMMYVAL_0x7f070175" style="@style/APKTOOL_DUMMYVAL_0x7f140104" />
+        <org.chromium.ui.widget.ChipView android:gravity="start|center" android:id="@id/address_home_zip" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f140104" />
+    </LinearLayout>
+    <org.chromium.ui.widget.ChipView android:gravity="start|center" android:id="@id/address_home_country" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f140104" />
+    <org.chromium.ui.widget.ChipView android:gravity="start|center" android:id="@id/phone_home_whole_number" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f140104" />
+    <org.chromium.ui.widget.ChipView android:gravity="start|center" android:id="@id/email_address" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f140104" />
+    <View android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f070172" android:layout_marginBottom="0.0dip" style="@style/APKTOOL_DUMMYVAL_0x7f140103" />
+</org.chromium.chrome.browser.keyboard_accessory.sheet_tabs.AddressAccessoryInfoView>

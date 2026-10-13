@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="?lineDividerDecorationDrawable" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:oculus="http://schemas.android.com/apk/res-auto">
+    <com.oculus.horizon.widget.CustomSetting android:id="@id/customer_support_button" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/help_visit_customer_support" />
+    <com.oculus.horizon.widget.CustomSetting android:id="@id/report_a_bug" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/settings_report_a_bug_title" />
+</LinearLayout>

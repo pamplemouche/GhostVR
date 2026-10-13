@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.debug.CoExTab android:orientation="vertical" android:id="@id/debug_tab_coex" android:background="@color/colorDebugPanelBackground" android:padding="15.0px" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:id="@id/debug_coex_peers_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Party members P2P connection status: " />
+        <ListView android:id="@id/debug_coex_peers_list" android:layout_width="400.0px" android:layout_height="wrap_content" android:layout_marginLeft="30.0px" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:id="@id/debug_coex_party_id_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="System Party Id: " />
+        <TextView android:id="@id/debug_coex_party_id_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30.0px" android:text="0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:id="@id/debug_coex_leader_id_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="System Party Leader Id: " />
+        <TextView android:id="@id/debug_coex_leader_id_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30.0px" android:text="0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:id="@id/debug_coex_active_users_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Party members using this debug panel: " />
+        <ListView android:id="@id/debug_coex_active_users_list" android:layout_width="200.0px" android:layout_height="wrap_content" android:layout_marginLeft="30.0px" />
+    </LinearLayout>
+</com.oculus.panelapp.debug.CoExTab>

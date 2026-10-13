@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginRight="@dimen/common_horizontal_padding">
+        <com.facebook.drawee.view.SimpleDraweeView android:id="@id/iarc_section_image" android:padding="1.0dip" android:layout_width="@dimen/pdp_iarc_icon_size" android:layout_height="@dimen/pdp_iarc_icon_size" />
+        <TextView android:layout_gravity="center_vertical" android:id="@id/iarc_section_rating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/pdp_horizontal_padding_small" style="?android:textAppearance" />
+    </LinearLayout>
+    <TextView android:id="@id/iarc_section_descriptors" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginTop="@dimen/pdp_info_vertical_padding" android:layout_marginRight="@dimen/common_horizontal_padding" style="?android:textAppearanceSmall" />
+    <TextView android:id="@id/iarc_section_interactive_elements" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginTop="@dimen/pdp_horizontal_padding_small" android:layout_marginRight="@dimen/common_horizontal_padding" style="?android:textAppearanceSmall" />
+</merge>

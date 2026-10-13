@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/dialog_parent_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/dialog_container_view" android:background="@drawable/APKTOOL_DUMMYVAL_0x7f0802cf" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/dialog_ungroup_bar" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+            <ImageView android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f070322" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f080262" android:scaleType="fitXY" android:tint="@color/APKTOOL_DUMMYVAL_0x7f060194" android:scaleY="-1.0" />
+            <TextView android:gravity="center" android:id="@id/dialog_ungroup_bar_text" android:background="@drawable/APKTOOL_DUMMYVAL_0x7f0802ee" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f07006a" android:text="@string/APKTOOL_DUMMYVAL_0x7f1305f3" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:id="@id/dialog_frame" android:background="@drawable/APKTOOL_DUMMYVAL_0x7f0802cf" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/dialog_animation_card_view" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e01b1" />
+    </FrameLayout>
+</FrameLayout>

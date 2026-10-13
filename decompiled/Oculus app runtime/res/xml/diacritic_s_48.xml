@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard custom:horizontalGap="1.0px" custom:keyHeight="48.0px" custom:keySubTextSize="8.0px" custom:keyTextColor="@color/keyboard_popup_key_text" custom:keyTextSize="26.0px" custom:keyWidth="48.0px" custom:verticalGap="1.0px" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <Row>
+        <Key custom:keyEdgeFlags="left" custom:keyLabel="š" custom:keyOutputText="š" custom:shiftKeyLabel="Š" custom:shiftKeyOutputText="Š" />
+        <Key custom:keyLabel="s" custom:keyOutputText="s" custom:shiftKeyLabel="S" custom:shiftKeyOutputText="S" />
+        <Key custom:keyLabel="ß" custom:keyOutputText="ß" custom:shiftKeyLabel="ẞ" custom:shiftKeyOutputText="ß" />
+    </Row>
+</Keyboard>

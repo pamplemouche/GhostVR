@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.accessibility_tab_switcher.AccessibilityTabModelWrapper android:orientation="vertical" android:id="@id/wrapper" android:background="@color/APKTOOL_DUMMYVAL_0x7f060186" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@drawable/APKTOOL_DUMMYVAL_0x7f080081" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.chrome.browser.accessibility_tab_switcher.AccessibilityTabModelListView android:id="@id/list_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f130100" />
+    <LinearLayout android:orientation="vertical" android:id="@id/tab_wrapper" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleY="-1.0">
+        <android.support.design.widget.TabLayout android:id="@id/tab_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:APKTOOL_DUMMYVAL_0x7f04021b="fill" app:APKTOOL_DUMMYVAL_0x7f040225="0.0dip" app:tabMode="fixed" />
+        <Space android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f07004c" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/button_wrapper" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <org.chromium.ui.widget.ChromeImageButton android:id="@id/standard_tabs_button" android:background="@drawable/APKTOOL_DUMMYVAL_0x7f080099" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f0800a4" android:layout_weight="1.0" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f130100" app:APKTOOL_DUMMYVAL_0x7f040256="@color/APKTOOL_DUMMYVAL_0x7f06018b" style="?android:borderlessButtonStyle" />
+        <View android:layout_gravity="center_vertical" android:background="#ff292929" android:layout_width="1.0px" android:layout_height="18.0dip" />
+        <org.chromium.ui.widget.ChromeImageButton android:id="@id/incognito_tabs_button" android:background="@drawable/APKTOOL_DUMMYVAL_0x7f080098" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f080235" android:layout_weight="1.0" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f1300fe" app:APKTOOL_DUMMYVAL_0x7f040256="@color/APKTOOL_DUMMYVAL_0x7f06018b" style="?android:borderlessButtonStyle" />
+    </LinearLayout>
+</org.chromium.chrome.browser.accessibility_tab_switcher.AccessibilityTabModelWrapper>

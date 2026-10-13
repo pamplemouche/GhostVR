@@ -1,0 +1,26 @@
+.class Lcom/oculus/horizon/linkedaccounts/provider/LinkedAccountsContentProviderContract$Projection;
+.super Ljava/lang/Object;
+.source "LinkedAccountsContentProviderContract.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/oculus/horizon/linkedaccounts/provider/LinkedAccountsContentProviderContract;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = "Projection"
+.end annotation
+
+
+# direct methods
+.method constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 25
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

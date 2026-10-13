@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="app_with_iap_count">
+        <item quantity="other">có %1$d IAP</item>
+    </plurals>
+    <plurals name="app_with_iap_header_count">
+        <item quantity="other">%1$d IAP dành cho %2$s</item>
+    </plurals>
+    <plurals name="bundle_pdp_item_count">
+        <item quantity="other">%1$d lần trải nghiệm</item>
+    </plurals>
+    <plurals name="pdp_controller_required">
+        <item quantity="other">Yêu cầu một trong hai bộ điều khiển sau</item>
+    </plurals>
+    <plurals name="store_countdown_days">
+        <item quantity="other">%1$s ngày</item>
+    </plurals>
+</resources>

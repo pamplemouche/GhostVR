@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?settingsPageBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_label_margin_top" style="@style/Oculus.Widget.Light.Setting">
+        <TextView android:textAppearance="?android:textAppearance" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_redeem_code_description" />
+        <com.google.android.material.textfield.TextInputLayout android:id="@id/code" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_top_padding" style="?textInputLayoutStyle">
+            <androidx.appcompat.widget.AppCompatEditText android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/settings_redeem_code_hint" android:maxLength="29" android:inputType="textVisiblePassword" android:imeOptions="actionSend" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.oculus.horizon.widget.ProgressButton android:id="@id/submit_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_submit" />
+    </LinearLayout>
+</LinearLayout>

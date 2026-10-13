@@ -1,0 +1,4639 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android)
+SHA-256-Digest-Manifest: S7rahvqvyC/m7FqsfU0J/bzDRn5Y2zWl0HCOMszx43Y=
+X-Android-APK-Signed: 2
+
+Name: AndroidManifest.xml
+SHA-256-Digest: 1/WbWsT+sPyHWBGphHLvK/wXdZPC0yOfnncIgW7xNac=
+
+Name: assets/ConfigMetadata.json
+SHA-256-Digest: 1CAcYv+bUYXjxDWdwMVg0s8r24i5riFYMsQ7VsNcMrM=
+
+Name: assets/NotoEmoji-Regular.ttf
+SHA-256-Digest: FA+JRZcE00dzr3qWyRNS2KMtkSAHneLP0oaHcW6HAOQ=
+
+Name: assets/Roboto-Bold.ttf
+SHA-256-Digest: qaHwcqqMU0ZH4Cj3yALw1c6AR2eljEnf0Au/mbu9hGA=
+
+Name: assets/Roboto-Light.ttf
+SHA-256-Digest: WAD98LBDe0W5nrKJxvBT42JpvOaYa2lM/fa+BDqqrGM=
+
+Name: assets/Roboto-Regular.ttf
+SHA-256-Digest: LycaZajjB70/KgTHKa/zWXMcaTERQZiZBpn61xUyywY=
+
+Name: assets/UI/Concept_EA/Icon_Gallery.ktx
+SHA-256-Digest: onwLoWPqlejIzQObpXfkNyDDdGw5VWBuFIII4d/o9uQ=
+
+Name: assets/UI/Explore/alpha_gradient_mask_20x318.ktx
+SHA-256-Digest: hMXgTLyvqrdDH5Ewlp6aTB7n8oi5WrUbvjuLImfII84=
+
+Name: assets/UI/Explore/card_thumbnail_bottom_gradient_512x88.ktx
+SHA-256-Digest: Ld4eVgGMO81Ju4kql9mSdm69wrFbPJjSoQPpcbE1918=
+
+Name: assets/UI/Explore/gear_controller_hint_88x210.ktx
+SHA-256-Digest: gQ6h9A61rIfCG3G1n5o0+UXuFriYf9G2bevicda0ZBE=
+
+Name: assets/UI/Explore/gear_touchpad_hint_88x210.ktx
+SHA-256-Digest: m1qd9Jt+qwi5bne07Jvyx2zJceTAfS1ys6qKcN2cKuQ=
+
+Name: assets/UI/Explore/glint_170x610.ktx
+SHA-256-Digest: pnsjGDFMjIZWhmprVws7JazYdksMNwlydnPkLt1yKzI=
+
+Name: assets/UI/Explore/go_controller_hint_88x210.ktx
+SHA-256-Digest: /2UoD0L8fkSfz5lnb/1oCqZlRaI6iUYqjdeRZzin0xk=
+
+Name: assets/UI/Explore/icon_recents_24x24.ktx
+SHA-256-Digest: KpQP/khkP3l/s4HTatF0hhE8CE1FiE5CuxC4lq1iShA=
+
+Name: assets/UI/Explore/nux/drop_shadow_216x132.ktx
+SHA-256-Digest: n4FU4tD699Qh73bZoMuCGl/L1M2dnL6QGqk1aSbCePg=
+
+Name: assets/UI/Explore/prime_thumbnail_bottom_gradient_222x56.ktx
+SHA-256-Digest: J5a0PYXq9z8GEALaMPUS13uAO8VIVE2CNJaKiKICFHc=
+
+Name: assets/UI/Explore/rail_hover_backing_144x81.ktx
+SHA-256-Digest: BQuAfzI7gUGc+gjw+JyIVN+kobnCWCNh/zxgUxUEUME=
+
+Name: assets/UI/Explore/scroll_hint_dot_15x15.ktx
+SHA-256-Digest: k865B4cGxmLQwB4yshaVz8J7ig7fv2sztjVbkSI/9Go=
+
+Name: assets/UI/Explore/tile_bottom_mask_256x8.ktx
+SHA-256-Digest: k81BIGoFf0JeVzwhJnvxt6x3K8/ekbJBlt5UxUWBNa4=
+
+Name: assets/UI/Explore/up_arrow_64x64.ktx
+SHA-256-Digest: AWd1kVYPhh9hJhpPIBa8rzWKGl8BVvW2ikkLHF/GkC0=
+
+Name: assets/UI/Header/corner_20x20.ktx
+SHA-256-Digest: K8HEp7qkns2+rdahYgHJLgzMZC6I0wmFyZllj1lGccM=
+
+Name: assets/UI/Header/fill_4x4.ktx
+SHA-256-Digest: 3irXju+IZMQs/COqydHUfK0kSq2AMiXBh4zalDHMX8Q=
+
+Name: assets/UI/Header/side_left_20x4.ktx
+SHA-256-Digest: jkyPzNmolpPcCtrHKmcjCbJ4iTPYyJAeIt4+qj4VdyI=
+
+Name: assets/UI/Header/side_top_4x20.ktx
+SHA-256-Digest: w4CndLy01BEkrpmphT9fenbyba/sKKmfNDMx7/R2E8M=
+
+Name: assets/UI/Icons/icon_comfort_few.ktx
+SHA-256-Digest: ixn2ZcQ1qVPZHmtYubO7bYkQX/GE16XMDhWoNYmOuqc=
+
+Name: assets/UI/Icons/icon_comfort_most.ktx
+SHA-256-Digest: aWrS9tBLhzFKky07SQ0P633/z1k5CzvYEMfvfHNqpZk=
+
+Name: assets/UI/Icons/icon_comfort_some.ktx
+SHA-256-Digest: 8f3Pts0OwUETgd9zIJbxxO15uUQrI4awP9eF7K5Ld20=
+
+Name: assets/UI/Icons/icon_comfort_unrated.ktx
+SHA-256-Digest: kveFg0zhrSdOyudmhaH13cXn7rEp59UNS2GrirqFDM0=
+
+Name: assets/UI/Icons/icon_download.ktx
+SHA-256-Digest: pslA4T1Z5jrv6HMwNoFNl7mwv1Kp9439xbn+JrFxLVA=
+
+Name: assets/UI/Icons/icon_gamepad.ktx
+SHA-256-Digest: t03Q4vGFd9VSjxGmLVVTMWG/HtTaY2rNx5f9ek1l5iE=
+
+Name: assets/UI/Nux/Go_Controller_BackButton_565x326.ktx
+SHA-256-Digest: y2OxIEUWpJW/3GsMDmzURXGYAegO86XCVKiRN1acAxc=
+
+Name: assets/UI/Nux/Go_Controller_OculusButton_565x326.ktx
+SHA-256-Digest: bpwRDphidZStyrzSY5r5TWhVUDCR+9wxCz2qZaVVONg=
+
+Name: assets/UI/Nux/Go_Controller_Touchpad_565x326.ktx
+SHA-256-Digest: J1hlv5cIvqPlUfiGRCIwxDu0jb2KngILFvgUpu2uuu4=
+
+Name: assets/UI/Nux/Go_Controller_Trigger_565x326.ktx
+SHA-256-Digest: 6+7FaGlVF4fxtx6zUEDkqbVpOYDt6YNfDFl0MppyPBQ=
+
+Name: assets/UI/Nux/arrow_down_left_480x480.ktx
+SHA-256-Digest: NW9GcchLAojAdZ5gNV6RU9QMWaw6HoEAi6fGYgINMZQ=
+
+Name: assets/UI/Nux/arrow_line_80x10.ktx
+SHA-256-Digest: FMy/5tCl/Cfp1YKW3rT09epLCEu+mIut0k4wsbxSw0k=
+
+Name: assets/UI/Nux/controller_line_left_down_150x45.ktx
+SHA-256-Digest: XSyfbt4udJebK7SUcDWk7taRN0ZY8t/3tzOLP7W2v3o=
+
+Name: assets/UI/Nux/controller_line_left_up_150x45.ktx
+SHA-256-Digest: vMCqXY1HF38M6xMQAf8Dt0+rdlT7Y7xtS5vVAtvktmk=
+
+Name: assets/UI/Nux/controller_line_right_down_150x45.ktx
+SHA-256-Digest: D+o7bC8nBCnpUFd0DOGfXY4daOveOVRsfhYwvCTGjAA=
+
+Name: assets/UI/Nux/controller_line_right_up_150x45.ktx
+SHA-256-Digest: 9FCCrj5YffQyAskZt/qWxExQFfHWfIcQpD67mqrn13k=
+
+Name: assets/UI/Nux/go_swipe_controller_56x135.ktx
+SHA-256-Digest: Sme5GXXDgEyiD+zMZXwcqSq3UTVjbmlcsjyko44zm/A=
+
+Name: assets/UI/Nux/go_swipe_highlight_17x17.ktx
+SHA-256-Digest: g15aqupJGWf1L9gTVkO7YG8ZCO8MuYu4u7Iqscl9tMM=
+
+Name: assets/UI/Nux/malibu_home_182x400.ktx
+SHA-256-Digest: R70qWqyG0bkwEQfCQDPUV6sniU0ERENic9AWpXdgigk=
+
+Name: assets/UI/Nux/pacific_controller_grey_144x400.ktx
+SHA-256-Digest: HCCoSaQtS4sEQRzqTjtsPwFRY2cQ+7o8ab8xVAoCxV0=
+
+Name: assets/UI/Nux/searching_for_wifi_flipbook/flipbook_72x72.ktx
+SHA-256-Digest: GkfCyonmp6zoKggbaufZsGQ6S2RriTSXtR1t9B7ZQ64=
+
+Name: assets/UI/Nux/wifi-off_72x72.ktx
+SHA-256-Digest: pxFe7nBKxl0rxmYFmcDENIDrNZuh5J61+q3RkbP5yOM=
+
+Name: assets/UI/Nux/wifi-on_72x72.ktx
+SHA-256-Digest: 9DyMktAczt2UXWZQm7iHXLkeMTBMDTh9bPKn/UKmML4=
+
+Name: assets/UI/Settings/environment_oculus_dome_100x100.ktx
+SHA-256-Digest: 8Czkc1Jh4oM8jBTRfsickVS1PasYRxZtXXPmyhzZqzA=
+
+Name: assets/UI/SnapPillBar/nav_pill_sort_backward_32x32.ktx
+SHA-256-Digest: r3MS10wHUI4ZRu9wi64ck+01EXMb82vMlwcgbEmt8nc=
+
+Name: assets/UI/SnapPillBar/nav_pill_sort_forward_32x32.ktx
+SHA-256-Digest: nnmMm2QaqklmYr05Z79Re5kVOE4YfQhF5RdEC/GZ4lU=
+
+Name: assets/UI/Store/heart_tile_label_48x32.ktx
+SHA-256-Digest: Ft2ISP7I6U4Ob+O68uxa0x84WhC4A+zRMoGYi42nUOE=
+
+Name: assets/UI/Store/snowflake_flipbook/flipbook_200x151.ktx
+SHA-256-Digest: RL0uxhXa5sq/6/9tPU9re5nVsjVkadQUf2QHsQT8pb8=
+
+Name: assets/UI/Store/store_collection_icon_20x20.ktx
+SHA-256-Digest: gkbHD1Vk/d5E4S/jlSEF7Vb/7OhBL15D/o4rt7O6JYI=
+
+Name: assets/UI/Store/swipable_section_arrow_left_40x40.ktx
+SHA-256-Digest: 3DtW7qpMhgDk6W3wHHRALWbP3YnT9P68mJ0nMTb3t8U=
+
+Name: assets/UI/Store/swipable_section_arrow_right_40x40.ktx
+SHA-256-Digest: 8xtVgfzJgO0ZvWUPVihSfoKcwEZrmzMhVGa9Kav1wLc=
+
+Name: assets/UI/Store/swipable_section_go_to_browse_48x48.ktx
+SHA-256-Digest: p2IVROM+j5RU/Zn76W3Cec2nLkd0wbB/pyZhh4tT/oY=
+
+Name: assets/UI/broken_image_128x128.ktx
+SHA-256-Digest: DXfqS1QkBVIIOLEkrcPmoB2ZH4cWq5TMSBkb4EoTJJA=
+
+Name: assets/UI/customize_backgrounds_80x80.ktx
+SHA-256-Digest: 4woXDyLXPiDTLoekue1UQ7lo3nVJtVXT8s+/iLDDJmM=
+
+Name: assets/UI/go_headset_200x126.ktx
+SHA-256-Digest: yJH7BmXbdKTAEReuskEiaOrTkQ+IARKoSJhPdwjf0kg=
+
+Name: assets/UI/go_headset_36x36.ktx
+SHA-256-Digest: Q61QVvGWl1BEbWPVyD171Q3X+ueW8iQtpqQsnT2MKzo=
+
+Name: assets/UI/quest_headset_36x36.ktx
+SHA-256-Digest: 8X1ApBXIGRns5RuCu7H4qTrFCDXP8j6UvXlsB99zn/s=
+
+Name: assets/UI/shortcut_tutorial_256x128.ktx
+SHA-256-Digest: Dj7PURzY1cngX5vrD3AyKGhQ2T87NBzvRtQUrmrb0jY=
+
+Name: assets/UI/shortcut_tutorial_mini_64x32.ktx
+SHA-256-Digest: 2/D4t6J3tzxKgsdPOXMEVuKvukHqUYXgoLVQV6MG8s4=
+
+Name: assets/apple_store_120x40.ktx
+SHA-256-Digest: ejtKyQ+eiz3XJGnMzzw88+aRlghLyjZumHgFHt34Fjw=
+
+Name: assets/assets/icons/app.png
+SHA-256-Digest: X1TH0Y4P0+Dlk3jSKPdqZoMs62oIO0riCTky6b39zGE=
+
+Name: assets/audio/mus_pacnux_ambix.ogg
+SHA-256-Digest: ttSznGJg5wTQwVZWLK9qzpHKI1tGigjzYtKQuexv4AE=
+
+Name: assets/audio/music_first_time_nux_dark_loop.ogg
+SHA-256-Digest: iqcV/ZsPLyKMJ+Rtu8WsTsbI2VFsEsphsCqhlpSZ+Vc=
+
+Name: assets/audio/music_first_time_nux_light_loop.ogg
+SHA-256-Digest: PG6P0mx74b/J6nTd1rLUShuiW1kN7kUKWPVFGD0gHA8=
+
+Name: assets/audio/sfx_anytime_UI_intro.ogg
+SHA-256-Digest: ElEe4TthKk+ED9wqQSfbenToFDCGj6YjSQj4Uv2bEV4=
+
+Name: assets/audio/sfx_avatar_complete.ogg
+SHA-256-Digest: 0eDl6ZXT0mXl90G/D879ETLjqwXAZOb++JZcywmBH1I=
+
+Name: assets/audio/sfx_button_tone_01.ogg
+SHA-256-Digest: UAKQzbPtQe2E/3GwhKJcjjDa4+B7hL4Q+MdLzZoInY0=
+
+Name: assets/audio/sfx_button_tone_02.ogg
+SHA-256-Digest: c91fmxIDThGCerOXi7xct8owuM7JrWSnErg8iFs4yHk=
+
+Name: assets/audio/sfx_button_tone_02a.ogg
+SHA-256-Digest: a9mTkUBd78bSukSqg//zHdsUL3d9Hgl95Tw/N1XMA0M=
+
+Name: assets/audio/sfx_button_tone_03.ogg
+SHA-256-Digest: ebkYE242xOKbDfU/PzVx6AmlT4XUNcyzfYqEoPp38MU=
+
+Name: assets/audio/sfx_button_tone_04.ogg
+SHA-256-Digest: spTf6r/Cb8WbdwGUCEqg5VmaGp/i/pgP8oa9VBGHNxw=
+
+Name: assets/audio/sfx_button_tone_05.ogg
+SHA-256-Digest: 0k6sUQyIrHCHuchKvkBvDSOAHPkU/eG5FW4Wk3UG3r4=
+
+Name: assets/audio/sfx_button_tone_07.ogg
+SHA-256-Digest: IKDA7r/G5gc3a0my5waEhvTMNsQEH9DoaR+2jno7cQQ=
+
+Name: assets/audio/sfx_button_tone_08.ogg
+SHA-256-Digest: qDh5h41e+bf4WZR05qvawtfu728Zce2SShH9+FazX70=
+
+Name: assets/audio/sfx_controller_intro.ogg
+SHA-256-Digest: Y7xpk3orPakFpn/xe9yYGORJ+CeOj/lTSXgz/GZdGqY=
+
+Name: assets/audio/sfx_cubemap_transition_01.ogg
+SHA-256-Digest: NwiWk+KjD9Z4ztZN493DWSG400ZvVm3cBxF7w+4+3sA=
+
+Name: assets/audio/sfx_cubemap_transition_02.ogg
+SHA-256-Digest: PBO+9eonRBzwQhdP3NMmdlkTL4D/WLosVuVKDI1j2wg=
+
+Name: assets/audio/sfx_deselect.ogg
+SHA-256-Digest: 5PHhAEOVVPS39dCHDd24ze7BCbtUSnGaWiS3xeeEjaI=
+
+Name: assets/audio/sfx_negative.ogg
+SHA-256-Digest: gJDUjwJpMgcSooE+HCUm9dVo/eH8tNR9in7t4dYSzes=
+
+Name: assets/audio/sfx_nux_ending.ogg
+SHA-256-Digest: mXl9I63qr7Qpe7AI2kd3td/SB6WqC2/r3Q4W0aEgPQw=
+
+Name: assets/audio/sfx_paging.ogg
+SHA-256-Digest: IIfrt0CYBBUKIR1tkPHVac/m6peDObsDxcNa4gwDz3g=
+
+Name: assets/audio/sound_def.json
+SHA-256-Digest: T+ptDUznlWLgr2zCXZL+8ydI7b/eLLeOcbN1N3FIYek=
+
+Name: assets/avatar/avatar_mesh_selected_512x512.ktx
+SHA-256-Digest: h016QObOGW1M8WY3Q2hkVCZRgRYKy113GSwsjOhuNfY=
+
+Name: assets/avatar/beard_512x512.ktx
+SHA-256-Digest: igzNNLPTB3OobWcghEVQ/jze5mP3y0aArafshXSsdj8=
+
+Name: assets/avatar/beard_none_512x512.ktx
+SHA-256-Digest: SPjxcO0XUJdIH5HI/jeeFBL/DCZDPaxQMYbuEk9W1Yo=
+
+Name: assets/avatar/beard_type_56x56.ktx
+SHA-256-Digest: q/EvxydqufuaW78p6lhfm2gZMEUecyfJpfnSh4GFwEM=
+
+Name: assets/avatar/beard_type_selected_56x56.ktx
+SHA-256-Digest: Hi1QMAy1BtSwkSNS4mifPJuFLRdBiurDqFGRyb/T9Ts=
+
+Name: assets/avatar/body_512x512.ktx
+SHA-256-Digest: h2gwQsAsfgleW9UB4i+Litu7mnb+uHyuJqanDznebpg=
+
+Name: assets/avatar/body_type_56x56.ktx
+SHA-256-Digest: 1KsafruHrrBtboE+Er7cSPwwa6YCaL+bUEetwApgPTc=
+
+Name: assets/avatar/body_type_selected_56x56.ktx
+SHA-256-Digest: AXyjGs0UZ3Zu7GLaV0riQBMWw49CGUL8s1br3f9vY/Y=
+
+Name: assets/avatar/clothing_type_56x56.ktx
+SHA-256-Digest: oushrLL6pXJhqEjpx5FkNShm00bW5b++cJg9sswsLUo=
+
+Name: assets/avatar/clothing_type_selected_56x56.ktx
+SHA-256-Digest: oiFleZrsbvUgDV91pqe0c36RimX7YjnXaMl4pdW+5tw=
+
+Name: assets/avatar/crowd_intro_expressive_1200x123.ktx
+SHA-256-Digest: SlrMU4uS1du8kQq6VzOkouaMy06CaABrboxR6qxqYKY=
+
+Name: assets/avatar/eyewear_type_56x55.ktx
+SHA-256-Digest: AUYi3tA+R5YYIu/FuKKqaSTqwgO+FFywx0OMa5WOjEk=
+
+Name: assets/avatar/eyewear_type_selected_56x55.ktx
+SHA-256-Digest: Kk/WHIpRluGEc23a5Hi27GUMWqOj0OsxZ7GznOuBTNs=
+
+Name: assets/avatar/hair_512x512.ktx
+SHA-256-Digest: EvRweaSukuw+/OeFTBk+NUniBjnUsQ1hi6eHgJ+DgxE=
+
+Name: assets/avatar/hair_none_512x512.ktx
+SHA-256-Digest: zbnYediL8kK2qDRY4nlStsgO93ioc02pzZqZiR3F7qA=
+
+Name: assets/avatar/hair_type_56x56.ktx
+SHA-256-Digest: Fy/7uy7Sh+q7A6afFMpHensHBoSNb6vJBVyl6kEL9Y0=
+
+Name: assets/avatar/hair_type_selected_56x56.ktx
+SHA-256-Digest: 26umyDrLlQprLGRqJnbUPs/wKi+Rp46b25Ii2U1BMCI=
+
+Name: assets/avatar/lips_none_512x512.ktx
+SHA-256-Digest: y8fIksUBBoAzzOVA56QAA6eiFq5E/dREk84aTZwTW1M=
+
+Name: assets/avatar_crowd_intro_1200x123.ktx
+SHA-256-Digest: IFa/tiWwY1fnv91uv48YqMeHlGlHKnNnVt12gJ3jSKo=
+
+Name: assets/avatar_editor_cubemap.ktx
+SHA-256-Digest: aAExqCfrxsSxU5d6AdMIlL6cNhoQndPyoW1M0Hnki+0=
+
+Name: assets/camera_photo_36x36.ktx
+SHA-256-Digest: f3LOpUEgXhkr7UM6Q2CAFr31mVsScBN1JvansSKXytY=
+
+Name: assets/camera_video_36x36.ktx
+SHA-256-Digest: 61kYtR1WiuwEF+6ViOQ1GgtgGtscaMnWGq+L+ry39fU=
+
+Name: assets/carmel_landscape_180x101.ktx
+SHA-256-Digest: ybb1acqeQggO5PVRDIQ42gByDtXEo/0iLCvqVS7cxPs=
+
+Name: assets/cs_CZ.json
+SHA-256-Digest: fyeR2HES252Uu2uwwFpMdSiwytvTW0x/yRVe++BA1NY=
+
+Name: assets/da_DK.json
+SHA-256-Digest: QqTQ6ulDWQG97Al2yyJc5qCoiE0onEzFkkjFM7EbMUs=
+
+Name: assets/de_DE.json
+SHA-256-Digest: 1I4qjMYWt8lAPp/bzlXtiwLeys/Vu5IKRuE8GrWMPHg=
+
+Name: assets/el_GR.json
+SHA-256-Digest: ieDlZyADGNtou2sPrNsb/tSGgUVo06AREpi7c6sYY+o=
+
+Name: assets/en_GB.json
+SHA-256-Digest: uVzqLJ348x2puND1se2rJhHViloqmr1GCveHGxXL71E=
+
+Name: assets/entypo.ttf
+SHA-256-Digest: 0hEMJ3zFKp/ejWwVMQB/7+3DjSZ8CUkYGixH1QMWp+k=
+
+Name: assets/es_ES.json
+SHA-256-Digest: iu6xXUQ0QH76NOGBowbOWLwX3Nx7ctsKpYuokvrUF1I=
+
+Name: assets/es_LA.json
+SHA-256-Digest: +VIqkPFFgq+Fa66Z/Qk1BMY773znT7b0+gTwmEcD/t0=
+
+Name: assets/f_logo_rgb-blue_144x144.ktx
+SHA-256-Digest: ZJKHG194OcQTn6b+UAPruSJGHXrcpMBcsboSZeIscec=
+
+Name: assets/fb_AC.json
+SHA-256-Digest: J5EmbGfBmPLG4YeWF3vc6XUPa+mxmnDOuz50epcx9PA=
+
+Name: assets/fb_HA.json
+SHA-256-Digest: CJJ29hgniTWQIij6Zo5yAlhs38jEgwtssjtBbGyKdg0=
+
+Name: assets/fb_logo_72x72.ktx
+SHA-256-Digest: SsdxW/Qe001KaGSd8c/duVZnGjR76VmtJC7MEWslmpY=
+
+Name: assets/fbpermissions.json
+SHA-256-Digest: 0L4UHhWCETmAHJT6waK0w9soWLbr83I211xgCBmHuS4=
+
+Name: assets/fi_FI.json
+SHA-256-Digest: uR1v9EH2HIdj1okH/p/AfpAmw5UwYtgF9rLGd5Zka6g=
+
+Name: assets/first_time_nux_cubemap.ktx
+SHA-256-Digest: KKd8og8LWNY5AlniGsBvUbQWRvCxHVwrtQsWuH7I4Jk=
+
+Name: assets/first_time_nux_terrain.gltf.ovrscene
+SHA-256-Digest: 8yLydh9+2FI/BlamPf8NJvWMNAABb90ecHwkIpbWUoU=
+
+Name: assets/fr_FR.json
+SHA-256-Digest: gyAjBxiot/ruGbz1mSNKPXV2mb+ivkKeS1QrXeFhA/M=
+
+Name: assets/headset_adjust_focus_246x153.ktx
+SHA-256-Digest: VzV4rPErBY6Hy1FTdm13twKtdGpHWuh78iowSRv6268=
+
+Name: assets/i18n/raw-af/localizable.json
+SHA-256-Digest: LidNZXcEMwi23Tm+yhQBftHPIBUsxHR5Ygu0xK2v2+I=
+
+Name: assets/i18n/raw-ar/localizable.json
+SHA-256-Digest: +7KOr/6bZZdTaDI0lLsvMDOefNRO3DNXiQUz8BsAKRE=
+
+Name: assets/i18n/raw-bn/localizable.json
+SHA-256-Digest: tYJWYMjTVfV4gkrYPUekuHdqBo4+NV9CyK+RoZ8cBDE=
+
+Name: assets/i18n/raw-cs/currency_format_config.json
+SHA-256-Digest: Kr4Ey/iOxjSkyGdjhHkN/exik42CWAZg66mP05ENqyo=
+
+Name: assets/i18n/raw-cs/date_format_config.json
+SHA-256-Digest: lwG9cVZ7BscvgLx/j3q0zPn9NW+j2LUqkJ1CLoAW4L8=
+
+Name: assets/i18n/raw-cs/localizable.json
+SHA-256-Digest: iwUlrjGFVT/9evLPuZda1mMkWH7wkZqlXDC8nCoki3E=
+
+Name: assets/i18n/raw-cs/number_format_config.json
+SHA-256-Digest: Qbwj86ldhpbj3fus0UIv414pPJR9L2bVcYnbz2hOF24=
+
+Name: assets/i18n/raw-da/currency_format_config.json
+SHA-256-Digest: KllxsQZTFvUGOBUKEP4wFBVCN108HetnhTYaPzlRGOE=
+
+Name: assets/i18n/raw-da/date_format_config.json
+SHA-256-Digest: auXk+YfJGmwzjR1heBmBNy2rRUDk/P0c3tN2QW7HLyU=
+
+Name: assets/i18n/raw-da/localizable.json
+SHA-256-Digest: GkYDou0nS2JRdPYlC8ic0tcdNayncUMG26SdohlPJ2k=
+
+Name: assets/i18n/raw-da/number_format_config.json
+SHA-256-Digest: oD4YlEo+00ze+ImpeZk6qzpA3EoPD502TMq7xFtE3UQ=
+
+Name: assets/i18n/raw-de/currency_format_config.json
+SHA-256-Digest: UjaKGIwAKb/QTwan6F6dIL5CzLXzebzocFkMIZfSI94=
+
+Name: assets/i18n/raw-de/date_format_config.json
+SHA-256-Digest: oFNPBqJnpmhks8qNVq21iMiAKEF9Zv2dNxZmzkQJl88=
+
+Name: assets/i18n/raw-de/localizable.json
+SHA-256-Digest: LMC7RTJPpQWp/caV7o1eChSfnBQy4F1SCoUmL1FZeG8=
+
+Name: assets/i18n/raw-de/number_format_config.json
+SHA-256-Digest: ChnT2P2JHjgdgFWu+xPYaToO/l2AkdsWW+FeEMPgSCg=
+
+Name: assets/i18n/raw-el/currency_format_config.json
+SHA-256-Digest: ivR+1IfecUJQwztIr2zWJ3VkTeyY6vCh/a8VaQZRtXM=
+
+Name: assets/i18n/raw-el/date_format_config.json
+SHA-256-Digest: oeqXFMKByL8hsOPNJ8YFkiFu1DXLEEyLe855FBAGHA0=
+
+Name: assets/i18n/raw-el/localizable.json
+SHA-256-Digest: A3QsnTQXIspQc5dLuDAWsIbIW0dzrNsLVJIE3em8Tek=
+
+Name: assets/i18n/raw-el/number_format_config.json
+SHA-256-Digest: TVgiT9SX/dgmZBUwgJ4xUpmHjXTeJgEEUNn960YcDrM=
+
+Name: assets/i18n/raw-en-rGB/currency_format_config.json
+SHA-256-Digest: 0bDOMnWxcpivb5lr5MM+Lx8N+WkzPrgQ2TIJD/JGSoM=
+
+Name: assets/i18n/raw-en-rGB/date_format_config.json
+SHA-256-Digest: bw2QCVe1dS391iBNFUFbDwybLjtD/ObtnWHwh+7JSFA=
+
+Name: assets/i18n/raw-en-rGB/number_format_config.json
+SHA-256-Digest: m1gJi6o3lV4grxFAGs6c9WnlxL2O9RN67TJdhkn8ycU=
+
+Name: assets/i18n/raw-es-rES/currency_format_config.json
+SHA-256-Digest: 8I0/6SHZZp/bTMx4XMtMvVRP3Kki9w+gUxyZxlxeZTg=
+
+Name: assets/i18n/raw-es-rES/date_format_config.json
+SHA-256-Digest: V0OGNpVHL5Z1mafX0aCX+mkWIA62OYcImzlFrMTtrjw=
+
+Name: assets/i18n/raw-es-rES/localizable.json
+SHA-256-Digest: 1pxezCcH8ZuwMN0CRYiZ0oM5E4ywgiGlCc9Wb67/rW4=
+
+Name: assets/i18n/raw-es-rES/number_format_config.json
+SHA-256-Digest: D86iw7UVBZLf3WrrnGt37nMLfCDuhpo4jRVJOaQ9tC8=
+
+Name: assets/i18n/raw-es/currency_format_config.json
+SHA-256-Digest: A8QMg85Bu1DWJDlqWbwWoA+QcDzg6UTbaUPPxBW94ks=
+
+Name: assets/i18n/raw-es/date_format_config.json
+SHA-256-Digest: 0m1pLQJykheGKGtZhtNqG6sBg6B9N0NaKw4PaEfM4xQ=
+
+Name: assets/i18n/raw-es/localizable.json
+SHA-256-Digest: lt/13AmSJEiJv5Ozt4ZApDhDo5wWQ22UU4BymCWNB7I=
+
+Name: assets/i18n/raw-es/number_format_config.json
+SHA-256-Digest: wN11nyG5p74dJgfPOViiK3VXRrAwSPlGM1dxs6vFPK8=
+
+Name: assets/i18n/raw-fb/localizable.json
+SHA-256-Digest: 0D9GFOqD9TTbzRDPCIo+yn8qaNp8gMyyo9ZSG6O/EBw=
+
+Name: assets/i18n/raw-fi/currency_format_config.json
+SHA-256-Digest: HQsLLIBbPWEkqGNwGhNX+ft89ACx3Fo3mhawkSofhPE=
+
+Name: assets/i18n/raw-fi/date_format_config.json
+SHA-256-Digest: oXgVJ10GH7uqJpR/GdOg7dTvyidkPYBavHVOBWBTwcQ=
+
+Name: assets/i18n/raw-fi/localizable.json
+SHA-256-Digest: zybDnK4mGSz4SLITlB1Ce0K6aVFZ7w8A7WqvsWicD1Q=
+
+Name: assets/i18n/raw-fi/number_format_config.json
+SHA-256-Digest: 3Ubpxekik9ccV+K0TPdSSgoPbbYkWj+ExBBzMZS32JI=
+
+Name: assets/i18n/raw-fr/currency_format_config.json
+SHA-256-Digest: YTV4jMqpYBj86MlertX31+VqEUSo+s9xhRMYPTqlvm4=
+
+Name: assets/i18n/raw-fr/date_format_config.json
+SHA-256-Digest: jXvZpWneW35XZST6uJr9TQc32F+Mr4Nq3qd+H0mLN+s=
+
+Name: assets/i18n/raw-fr/localizable.json
+SHA-256-Digest: Gs49rk3CwJB+RqHoqAQ26Pcms9BYtN059Lt/uwqoVuo=
+
+Name: assets/i18n/raw-fr/number_format_config.json
+SHA-256-Digest: nm2rr4ZuYfbt+W+YxPFPl8QPfe+BUn/WBTugtIOX7TY=
+
+Name: assets/i18n/raw-gu/localizable.json
+SHA-256-Digest: ivmCAXjZY4QEIstaS3nhFTAGQ6cBbNMCuhY51/CdTZw=
+
+Name: assets/i18n/raw-hi/localizable.json
+SHA-256-Digest: NyxGKmTg/OhZpZP3sHuI/HL7uWj5IANHMU9peCDp9Kc=
+
+Name: assets/i18n/raw-hu/currency_format_config.json
+SHA-256-Digest: /VHEuqjKSe07upnFfLqY2hBgzMZN25RcQp+hXTy7qmc=
+
+Name: assets/i18n/raw-hu/date_format_config.json
+SHA-256-Digest: UfjJYqK8jt0aInx3OoTMsliM4hzZeyaDakkPg9cenj0=
+
+Name: assets/i18n/raw-hu/number_format_config.json
+SHA-256-Digest: k0bZGSfCi+SyN6f3aym3F9PI9q3eC1V6/fNCY+PJhDY=
+
+Name: assets/i18n/raw-in/currency_format_config.json
+SHA-256-Digest: qCXHV/b35cJ8CJOK2u7Co+xKmprpwjREDuj0PBcHKr4=
+
+Name: assets/i18n/raw-in/date_format_config.json
+SHA-256-Digest: vizVDxP0BhV9AgdCXA2r1DwyjBVSFlE8ulnIuZ4YoQY=
+
+Name: assets/i18n/raw-in/localizable.json
+SHA-256-Digest: NR8Yg6MkS71sB6yjAMsNhhi8kqxE6/0e0FC+8OA05mk=
+
+Name: assets/i18n/raw-in/number_format_config.json
+SHA-256-Digest: VcwplQsLHMDcM69EMVUFgMqyMwh0TvT/Q/44ciHtUPY=
+
+Name: assets/i18n/raw-it/currency_format_config.json
+SHA-256-Digest: XrdextAjSBnJRMY7kcGeHq8z5W7ZcuVU39hm+d+mlG8=
+
+Name: assets/i18n/raw-it/date_format_config.json
+SHA-256-Digest: PS5J3gSMEGPKotlInLX2pcAF0s8dFgffxRY0IVHiNGQ=
+
+Name: assets/i18n/raw-it/localizable.json
+SHA-256-Digest: l7fvHFHBYJ8hR9+MRNvXIybRVC47Cuxx2zER8nJEmVo=
+
+Name: assets/i18n/raw-it/number_format_config.json
+SHA-256-Digest: UJb5l8S9EKJOz33SaXZJ3jwZM+YuyQGPIpV7G0mJYqg=
+
+Name: assets/i18n/raw-ja/currency_format_config.json
+SHA-256-Digest: 2OPOTH6z3m6RFUqy+OAuUqgKrGwIlioQZlYno+ZMDMk=
+
+Name: assets/i18n/raw-ja/date_format_config.json
+SHA-256-Digest: lvsCRnlQ5NsFJ91drfJYlPkMw9qP64Qm/KoHUMYHsks=
+
+Name: assets/i18n/raw-ja/localizable.json
+SHA-256-Digest: DkkVhxW3sWi+/RpCG5OMl8PHbTVCR7TBYlzY6alYHvk=
+
+Name: assets/i18n/raw-ja/number_format_config.json
+SHA-256-Digest: 8UWTfKlaee3Je9inp3M38fX0x/gIgL4qrcDQbrsgwnI=
+
+Name: assets/i18n/raw-kn/localizable.json
+SHA-256-Digest: t3almQPwAz3eivbEOH551rgFUjr+HC6H8M1qcc1WEcY=
+
+Name: assets/i18n/raw-ko/currency_format_config.json
+SHA-256-Digest: 1neu9XibA+aKoyv2x5MV5RPcWtFgo8nsPHsm9xczx3k=
+
+Name: assets/i18n/raw-ko/date_format_config.json
+SHA-256-Digest: EF1EXgKb2Lu+XEFKPVGEeN+jAVisCGfNxxwvKKvo/Fs=
+
+Name: assets/i18n/raw-ko/localizable.json
+SHA-256-Digest: J1DV0Nxxzr57F+zagjKrIwpvU2N1N9iwvJmoMTI2Vxw=
+
+Name: assets/i18n/raw-ko/number_format_config.json
+SHA-256-Digest: RCYLREe/A4wx1xMs+AfnQ8rqlvFh+ZUAxMVocWWrz3Y=
+
+Name: assets/i18n/raw-ml/localizable.json
+SHA-256-Digest: xbw9//KwvWpb+Iajgo7E4Gqtj4ae/1b9r7BGEjWukDk=
+
+Name: assets/i18n/raw-mr/localizable.json
+SHA-256-Digest: 9gEZo1yFEsXVqTjsMWLRjfFJ8EW8Rozz+8XLFO/ajvg=
+
+Name: assets/i18n/raw-ms/localizable.json
+SHA-256-Digest: sSybQP4jFkDUSCZxBf2jb6QgjgM2T4Ob3HdyIHlb7G8=
+
+Name: assets/i18n/raw-nb/currency_format_config.json
+SHA-256-Digest: AkrYZ5LnElfbNk63yQ8xpg9MGHPNDJwpncj7sqfBpJY=
+
+Name: assets/i18n/raw-nb/date_format_config.json
+SHA-256-Digest: 27jIucYprHXtLLlCw5MZLv0l1o/SGFeC5AmZeb3KjRo=
+
+Name: assets/i18n/raw-nb/localizable.json
+SHA-256-Digest: 3SbFaPf5hKPoHayiwQGCdVQ1Gn+mhvQUM1a0ESFG0aE=
+
+Name: assets/i18n/raw-nb/number_format_config.json
+SHA-256-Digest: tvH1476GYtK5GKIiDL3cYxloPk5i2sANESiLPIuWDCU=
+
+Name: assets/i18n/raw-nl/currency_format_config.json
+SHA-256-Digest: jIXqnxgkotjjK1GonPGPLeBROO2zRKDn067a2YTZ6A4=
+
+Name: assets/i18n/raw-nl/date_format_config.json
+SHA-256-Digest: Mm1X6pHLIthtgnvr2WxIRDZL1paabG4ymK9iCsIm010=
+
+Name: assets/i18n/raw-nl/localizable.json
+SHA-256-Digest: fs7H9kMbzdGRB49qlENkpA/588QRZLgPNneVKXXacs0=
+
+Name: assets/i18n/raw-nl/number_format_config.json
+SHA-256-Digest: Z4T6hJfz1Tb+4sI5EQuxhU0pt42ZVHsj1aF7rAOH+tQ=
+
+Name: assets/i18n/raw-pa/localizable.json
+SHA-256-Digest: cCDcsDLOIo/ZIW4qOqmm3aDHF9vJi+W8D8emmiancxg=
+
+Name: assets/i18n/raw-pl/currency_format_config.json
+SHA-256-Digest: C3agE9jDneadWrBYK0/bRkHOAdflteO9KxTxS9HW5C4=
+
+Name: assets/i18n/raw-pl/date_format_config.json
+SHA-256-Digest: K3ZxF8gQ4UM60zoVxljKidxTuxMosfrB5uOlwE/gbMk=
+
+Name: assets/i18n/raw-pl/localizable.json
+SHA-256-Digest: H1TY1gp6ZhCKo4HAzq8qSoYcMt73sVsQisSJpnNT63g=
+
+Name: assets/i18n/raw-pl/number_format_config.json
+SHA-256-Digest: SojYchAr9FMtgNRqOOjwNg1XpKauh4lsKRhQ/+iFf30=
+
+Name: assets/i18n/raw-pt-rPT/currency_format_config.json
+SHA-256-Digest: V+jSHyb4SpysikOrcrIDcuY6Kqjt+y1pUD5WdS7gilo=
+
+Name: assets/i18n/raw-pt-rPT/date_format_config.json
+SHA-256-Digest: XdOJcKUDqNAQYxyFb9WanN8jUHx5YvxwWIDrvvMzwfE=
+
+Name: assets/i18n/raw-pt-rPT/localizable.json
+SHA-256-Digest: Kh12sMWzkR3P94/ZdgI5s+xsWHnLk8bkAwBo8wiyrWw=
+
+Name: assets/i18n/raw-pt-rPT/number_format_config.json
+SHA-256-Digest: awWtJkFsy5AwiqHg6liEeppr80AjlPwv2nKaXYrmDtY=
+
+Name: assets/i18n/raw-pt/currency_format_config.json
+SHA-256-Digest: zF3ZCwJC6aIOMQBxEI2qdnEQy7/kgFlC1G829bUMiuI=
+
+Name: assets/i18n/raw-pt/date_format_config.json
+SHA-256-Digest: XUgOVK1jxF5dibMnsD4kQDNWjQY/g0Y9/MBuwr/H1zE=
+
+Name: assets/i18n/raw-pt/localizable.json
+SHA-256-Digest: /2L3b/SxCid3nudSB7JDixuLO6rf39opPWIjcB1+/b0=
+
+Name: assets/i18n/raw-pt/number_format_config.json
+SHA-256-Digest: oGchAiApMUDFDn34xlT225NxCuil1o1Zqq1OR0PX8fw=
+
+Name: assets/i18n/raw-ro/currency_format_config.json
+SHA-256-Digest: /6JtNx9W8iugsGqJr24zxpK43rMIX8pUkjUJxQwrOCM=
+
+Name: assets/i18n/raw-ro/date_format_config.json
+SHA-256-Digest: g2k+4jX9pyPLW4G3picun67I1u+p7iG/hgNwtHwxR7w=
+
+Name: assets/i18n/raw-ro/number_format_config.json
+SHA-256-Digest: bBISZRo7btT1tYCbN8O0/+bFRRzfb5rByzjMnQKuTgQ=
+
+Name: assets/i18n/raw-ru/currency_format_config.json
+SHA-256-Digest: tj9arsTd3EMlkRfB6c1Bv/d6ih1rhQxeLvKiXDkwCXA=
+
+Name: assets/i18n/raw-ru/date_format_config.json
+SHA-256-Digest: RTsWOd4fuweL4yQB8tXdqjMAtQJWZN+ds7h5UFcE1Rs=
+
+Name: assets/i18n/raw-ru/localizable.json
+SHA-256-Digest: 5ZXWinS9sK8Qw8erM4BLtmqNUYD3TQ4kHlJnCAjxUlo=
+
+Name: assets/i18n/raw-ru/number_format_config.json
+SHA-256-Digest: h7VE3wpNZbeGbcGuB/vd+Tes3k8jtU00fZ6hFLyEg7M=
+
+Name: assets/i18n/raw-sv/currency_format_config.json
+SHA-256-Digest: gOUiUYJj31gjbK/+LpnCTik3hx9IjzV/CYOf5mxs01s=
+
+Name: assets/i18n/raw-sv/date_format_config.json
+SHA-256-Digest: xXmhCS4mGLsy9wxrfyq+PSaP9/wGOnpzTn11tCOasPQ=
+
+Name: assets/i18n/raw-sv/localizable.json
+SHA-256-Digest: k4yEE4fHrXCEDTITWi0VzHGuHzTRDspMlv6aNadstRA=
+
+Name: assets/i18n/raw-sv/number_format_config.json
+SHA-256-Digest: 1C7RT8DRB0pp9r2RAEi1y1xsoCjNUY9kVg8YvcH7VCw=
+
+Name: assets/i18n/raw-ta/localizable.json
+SHA-256-Digest: 3XO4KQG+xOpO3jRflcvHCDV1olVvv2BKIlXSFTUTgAo=
+
+Name: assets/i18n/raw-te/localizable.json
+SHA-256-Digest: c9MZSDvcjd3qD3ASvPpsaw40bU6G9gqBrudvngdpIJk=
+
+Name: assets/i18n/raw-th/currency_format_config.json
+SHA-256-Digest: fRETlRHf1z4N81dErfdpPX93T2DBA2AH/Lvk6VBPUJk=
+
+Name: assets/i18n/raw-th/date_format_config.json
+SHA-256-Digest: G9XdLRKlnNCjHdY6CKPFZ0ytzv+UyXSc8eEjvbsrUIg=
+
+Name: assets/i18n/raw-th/localizable.json
+SHA-256-Digest: tkqSmaIvRpCszwGhd6aQsUa/c0t1Inb9+jrMP3/NwEQ=
+
+Name: assets/i18n/raw-th/number_format_config.json
+SHA-256-Digest: ePqF6l4BFii4BNlra1DQB18NKviwcBMIr/hg5N9d4F8=
+
+Name: assets/i18n/raw-tl/localizable.json
+SHA-256-Digest: p15p48BYJryj+ezCOpSDExAj+dN7Tthf3akl7nO02Ws=
+
+Name: assets/i18n/raw-tr/currency_format_config.json
+SHA-256-Digest: FeO5GoHQJoPFFi+pKlE927UeWgniecpYi7Jr7wxRQNY=
+
+Name: assets/i18n/raw-tr/date_format_config.json
+SHA-256-Digest: l/ijh1os+36tzd1VlyQMnWxVUgTHeGlhOrVfvQU62iM=
+
+Name: assets/i18n/raw-tr/localizable.json
+SHA-256-Digest: hF95E7EA6mPx6xm4qFimtdL0Hi0TNQN6Df7C859vGfQ=
+
+Name: assets/i18n/raw-tr/number_format_config.json
+SHA-256-Digest: uWl3QmizaeHbQuZxlAeZxRnVu38CYvp2X/DA/q2lKU4=
+
+Name: assets/i18n/raw-vi/currency_format_config.json
+SHA-256-Digest: bfqgiVEuZ8BeptPbwXbc4kFKqd3szlEwnO/VLoboo/Y=
+
+Name: assets/i18n/raw-vi/date_format_config.json
+SHA-256-Digest: FzuxA9ow2Dh0y/3R1cX5yJJJBM8y/mJtaLHI9ZcJWhM=
+
+Name: assets/i18n/raw-vi/localizable.json
+SHA-256-Digest: GQ5fYOLmEsPQP+59BtKVLhHohYER2c/t9Lm17glUG0w=
+
+Name: assets/i18n/raw-vi/number_format_config.json
+SHA-256-Digest: HxRL79UlBtbwjJUv8FurTJcZDwg66ah545jcTLHcdBE=
+
+Name: assets/i18n/raw-zh-rCN/currency_format_config.json
+SHA-256-Digest: wbBldE5veLs6Om/b/QZG4G7HHDMIBsxNtj/ot9rRFPY=
+
+Name: assets/i18n/raw-zh-rCN/date_format_config.json
+SHA-256-Digest: lG6+FW0Wekha3olpryIrPAH+HZLYCjc1MmgJumRspdU=
+
+Name: assets/i18n/raw-zh-rCN/localizable.json
+SHA-256-Digest: c0PJyYIzb8cjMfsAIbrnIOxHU+F83PL2r6aBserdiHA=
+
+Name: assets/i18n/raw-zh-rCN/number_format_config.json
+SHA-256-Digest: 8IVfW+S6TB7wQhOj3XB25kiv9rMLqMxWjMOj+jb/+Sc=
+
+Name: assets/i18n/raw-zh-rHK/currency_format_config.json
+SHA-256-Digest: /0SQdoJj679kltUiHbw97OSpAV4GrUt9bQ08uEmCR78=
+
+Name: assets/i18n/raw-zh-rHK/date_format_config.json
+SHA-256-Digest: P/HK6h3VduZVzelF5KWAHbhwXle0VoUCW/UXPkAUvB0=
+
+Name: assets/i18n/raw-zh-rHK/localizable.json
+SHA-256-Digest: rdE9ieekGdyUtRB82fDu0/Z6B5hNE390562EBWOjD+s=
+
+Name: assets/i18n/raw-zh-rHK/number_format_config.json
+SHA-256-Digest: BJ3EBcoh6I1HclyOun2ElBTDPhSTl9aiYTBzRbQn4f8=
+
+Name: assets/i18n/raw-zh-rTW/currency_format_config.json
+SHA-256-Digest: RaqPVgKvB34iTQ8ogFs8wYjt+qtClhtxN/4BPLrzRNs=
+
+Name: assets/i18n/raw-zh-rTW/date_format_config.json
+SHA-256-Digest: TeeLzRlW1HBY6wIXeaA2vLkAg/k/bWdtzZZlACnYQuo=
+
+Name: assets/i18n/raw-zh-rTW/localizable.json
+SHA-256-Digest: F8UqlGGMy2drMS1V42+Aj2bYelXU+aBYvOklySkAc48=
+
+Name: assets/i18n/raw-zh-rTW/number_format_config.json
+SHA-256-Digest: spzw/Q0Zkj+iI5z1R3HZko3gngoMkpCIT7DFgybNNVY=
+
+Name: assets/i18n/raw/currency_format_config.json
+SHA-256-Digest: LIyfe2MWW1jbwXAbptaADdUh/py5IPXfr4HF/zm93RY=
+
+Name: assets/i18n/raw/date_format_config.json
+SHA-256-Digest: aYGOhJGF0Gr4VI/qhw/6Sr1KM6sJtKfzPUwohSjRf+0=
+
+Name: assets/i18n/raw/localizable.json
+SHA-256-Digest: WcKwOoF2OnxXOf0muTMDTVEinpGqdswN4Q3yo/T5FWo=
+
+Name: assets/i18n/raw/number_format_config.json
+SHA-256-Digest: KXxqCrw/vAsWAg9XN8bBZXNx3n/SW/ge6NCGjBNhOdg=
+
+Name: assets/icons/accept_party_invite_48x48.ktx
+SHA-256-Digest: Lh05mZbdHOQE607uyqcI34WcIFxeasw1ZgRm+IggChg=
+
+Name: assets/icons/add_24x24.ktx
+SHA-256-Digest: WPulwcVfLigapBsy8OFi16niJzh4WP+kV52XvnQEWHA=
+
+Name: assets/icons/add_to_party_48x48.ktx
+SHA-256-Digest: +qyaWs4+yntZZPhWeGFSI19UHgFRL/TWLeW+FJk2GT4=
+
+Name: assets/icons/airplane_24x24.ktx
+SHA-256-Digest: X+1QtvmzfzatsykSZiV7JNlpH0IhTe/+hMFXIuHwCgM=
+
+Name: assets/icons/arrow_left_24x24.ktx
+SHA-256-Digest: otzpw0CRKz0PSCCrBY6JpR9eYNej7JFwk+ig0FTxF8A=
+
+Name: assets/icons/arrow_right_24x24.ktx
+SHA-256-Digest: SjRtqw1vFxLVzUAcpWN1MQdsKPZ7mFc2RFuE88IWORE=
+
+Name: assets/icons/autosleep_24x24.ktx
+SHA-256-Digest: vn8jXPi6armivchEJIBRM52k1gwY/19lvvFsP8xrpA4=
+
+Name: assets/icons/autowake_clock_24x24.ktx
+SHA-256-Digest: eZfseP5/ZCBZDwGYqCEIj30hRlU08tcz8HGI5FR7+WQ=
+
+Name: assets/icons/autowake_eye_24x24.ktx
+SHA-256-Digest: iXhlULIgsJc15vhW24VuchqszADbvitDy9PgtRLQ/tI=
+
+Name: assets/icons/avatar_319x319.ktx
+SHA-256-Digest: /taUIFvRZeKkC/Zkb9reOR3sCxoUhQqqCnQOdr9a6A4=
+
+Name: assets/icons/avatar_40x40.ktx
+SHA-256-Digest: elXmjvt+abolGiStlQ/+tVwBYc8wa1A7bQ0HZcBLEzc=
+
+Name: assets/icons/back_button_24x24.ktx
+SHA-256-Digest: RvjtvuA0YNHQRcCGaiO6H/8FgLiw9N0e2For29rNZY8=
+
+Name: assets/icons/backing_circle_70x70.ktx
+SHA-256-Digest: Pvtw06EYFu57Cnlz0JiUnxEtOzZSunNHYq5Ua/XprYw=
+
+Name: assets/icons/backspace_128x128.ktx
+SHA-256-Digest: TGcCBtHmUx6Kl3cvQF9beRzUZQwYjQah9g+0oGhnB7I=
+
+Name: assets/icons/battery/battery_charge_0_24x24.ktx
+SHA-256-Digest: X8HeKZBRefHIXRahY7qCcJ2+mR7oXaT1EJYq0K0UZ/4=
+
+Name: assets/icons/battery/battery_charge_100_24x24.ktx
+SHA-256-Digest: skoblOFsltiGLwT5dOyX1BpIUucAURXEBsSM7rf7JAQ=
+
+Name: assets/icons/battery/battery_charge_25_24x24.ktx
+SHA-256-Digest: zlYRGJuNkPZo4dqnfXHQEztrc61PmWwWscJNJDEPBOc=
+
+Name: assets/icons/battery/battery_charge_50_24x24.ktx
+SHA-256-Digest: eeB9ifeEn4s98T+S+0TQ2APotu17H/uamgxVvbyZdpQ=
+
+Name: assets/icons/battery/battery_charge_75_24x24.ktx
+SHA-256-Digest: 9l4erWNQK5QR4okVvP8etAs6a+CsjH948aVgsKkfLKE=
+
+Name: assets/icons/battery/battery_charge_alert_24x24.ktx
+SHA-256-Digest: xHVr7BJiv7qKENzXkiEcTyde4rvYbPNIRw6rcFhoCbE=
+
+Name: assets/icons/battery/battery_charge_charging_24x24.ktx
+SHA-256-Digest: ZMc9FMTPs66XPXa3PPOQZegJT/7dBy5j7LnVfcIaGqg=
+
+Name: assets/icons/battery/battery_charge_unknown_24x24.ktx
+SHA-256-Digest: wsp/kChj6c60umhRY4FzetIOoXU79cyrwHTqpvuW434=
+
+Name: assets/icons/bedmode_24x24.ktx
+SHA-256-Digest: +9wPkneRrM/RSuxN4Z0pYhvn6o5fSh+dTUdNcjDjOPo=
+
+Name: assets/icons/block_24x24.ktx
+SHA-256-Digest: 6b2g9bjqpHiDVQGkav5ENIrrdz+F5yJZaMtdXqpOnFY=
+
+Name: assets/icons/bluetooth/bluetooth_connected_24x24.ktx
+SHA-256-Digest: a/K3tQApSNu+UL+9L4F8wLhmgF3MKGHZGeOzvmdGaIw=
+
+Name: assets/icons/bluetooth/bluetooth_off_24x24.ktx
+SHA-256-Digest: LcQcs9hKy7TxY6qeAcwez7Lb0jjLJD92YbGBlpYBqL8=
+
+Name: assets/icons/bluetooth/bluetooth_on_24x24.ktx
+SHA-256-Digest: 0GoB8FN1LKRoaBlpLKIMV2lWDxMeUEyFmyyWqR300is=
+
+Name: assets/icons/bluetooth/bluetooth_searching_24x24.ktx
+SHA-256-Digest: n1Rnc93hLojsMxNTVMTGosvfKTijxkJrh9tSADmsyxI=
+
+Name: assets/icons/bookmark_off_48x48.ktx
+SHA-256-Digest: UDckEWOr9tT7IW/Y8i1PMgyf35+urNT/UgN50VZDprw=
+
+Name: assets/icons/bookmark_on_48x48.ktx
+SHA-256-Digest: jv9BfNe/UsmNzmaI5mttOoNDQLDpbl1JdRXQ5AP9uV4=
+
+Name: assets/icons/brightness_24x24.ktx
+SHA-256-Digest: hTLL4Qu9pJWjK/0v1W5zp55Yd3TfoaHA33vWt6u+xLs=
+
+Name: assets/icons/browser_24x24.ktx
+SHA-256-Digest: j5f4v3l0dI1wFYNhN3cGFqovkfaQkrVRmGByaRM9rPI=
+
+Name: assets/icons/buy_24x24.ktx
+SHA-256-Digest: SiKLEekgQSZxRr8mj7AugdU6Pfx/7x+WqrsUkgPc2lg=
+
+Name: assets/icons/camera_72x72.ktx
+SHA-256-Digest: nn2gpBRCNFnLrjP9AFNjeHpi8Tib7a0oxNQjSP4wcVg=
+
+Name: assets/icons/cancel_128x128.ktx
+SHA-256-Digest: tg7aqsZJgt6AiPRc3KdzXPKndKtkzd144F3bUbki0BQ=
+
+Name: assets/icons/cell_signal/cell_signal_bar_0_24x24.ktx
+SHA-256-Digest: ws/+25kTIXb1lRi33+SykDxTXAgQ91Xe1JUm+1OlOt4=
+
+Name: assets/icons/cell_signal/cell_signal_bar_1_24x24.ktx
+SHA-256-Digest: 6VpvFAMLxEDsbkqnzZhBYN6mRRmSxFHfjrTy5d1eq58=
+
+Name: assets/icons/cell_signal/cell_signal_bar_2_24x24.ktx
+SHA-256-Digest: EOdXJSWe6lpQETuxxlOSBfBHK9bL5JTZabYPNAH6Cv8=
+
+Name: assets/icons/cell_signal/cell_signal_bar_3_24x24.ktx
+SHA-256-Digest: UKt9WlSWf9TK3TfcMwuMBN3WED7qzucklW3PmsVU43s=
+
+Name: assets/icons/cell_signal/cell_signal_bar_4_24x24.ktx
+SHA-256-Digest: IqTXwYSezaGEymSmkpDj/IVGBcAI6phdJ+KhbWrbqyQ=
+
+Name: assets/icons/cell_signal/cell_signal_none_24x24.ktx
+SHA-256-Digest: Kl4jvXz3SoAp7Ppec+6ZBrkoXSmG4T81DS6ZwGniLMQ=
+
+Name: assets/icons/cell_signal/cell_signal_off_24x24.ktx
+SHA-256-Digest: 6k+w8tXu1x2E89OOmSE9R9fqhHxOZ5ipklhUyaFGhM8=
+
+Name: assets/icons/check_24x24.ktx
+SHA-256-Digest: eEOnzw9wH0QmIOsorQPdBALxuthjCi6L+psvZpYjcpM=
+
+Name: assets/icons/check_48x48.ktx
+SHA-256-Digest: CvI5SWINF1lNK5hnQgczsGJ91EaZoUkiRW3WO1UM+NY=
+
+Name: assets/icons/checkmark_selected_24x24.ktx
+SHA-256-Digest: rSjyH/+JfMgobrk3MUSmqtUdxg01w9D8PPF19znsIAY=
+
+Name: assets/icons/checkmark_unselected_24x24.ktx
+SHA-256-Digest: CkOOTng5ktg5Hsy0ytmFRq4aA2qlXoh644sZwl1SB98=
+
+Name: assets/icons/chevron_right_18x30.ktx
+SHA-256-Digest: yCKv+qeUy3mk1cZEqGDucO1qjBO6K/VdKl2aLAtjTAc=
+
+Name: assets/icons/chevron_right_dimmed_17x27.ktx
+SHA-256-Digest: 4dGqvnh91TwS2PfO7vkPg5DqNhQu9/spTZ1Hg1aPZkQ=
+
+Name: assets/icons/circle_outline_128x128.ktx
+SHA-256-Digest: QuaW1KzsnIdWB1VR56iTra10U5k77cAEN7gNHHL0lXo=
+
+Name: assets/icons/comfort_few_128x128.ktx
+SHA-256-Digest: tY+ZFnc9K2gfOanUqvVk0TEsni5zTrRkkfXDsoyVpP0=
+
+Name: assets/icons/comfort_most_128x128.ktx
+SHA-256-Digest: 5U2LuBGTwkackHDQF3xyLF6aAgN4rWB5lRBlLU1XUKo=
+
+Name: assets/icons/comfort_some_128x128.ktx
+SHA-256-Digest: wt+haQmWT0jazosCAGUpdgSTRVH6zQ7uJ5Cxv4uG+cE=
+
+Name: assets/icons/comfort_unrated_128x128.ktx
+SHA-256-Digest: Qj3m9J/LJNrvb+auQTf9TETd545qLSF8iauDxVHtqtY=
+
+Name: assets/icons/comment_24x24.ktx
+SHA-256-Digest: yFhwyzp/pN4q0Rp553/cY0VJxCnoj8oXNR08+Sc/RIw=
+
+Name: assets/icons/creditcards/credit_card_amex_96x96.ktx
+SHA-256-Digest: KNTfAfI62QxgDrbgWlWRGQu2iZU8JHtCRgsff8whzSY=
+
+Name: assets/icons/creditcards/credit_card_discover_96x96.ktx
+SHA-256-Digest: Bvc9hIUCsZmfuewYuo3kmWLGqvLdkWyhLF0YUDyYpi8=
+
+Name: assets/icons/creditcards/credit_card_jcb_96x96.ktx
+SHA-256-Digest: DsZYGmIuXvzHwo/RtVa2brZzYFzeXttKUr7xt69z02c=
+
+Name: assets/icons/creditcards/credit_card_mastercard_96x96.ktx
+SHA-256-Digest: 1p170YrV5qAVNW2lVwYRVQCw/Nn7DOT0n5geC2Nd3Uc=
+
+Name: assets/icons/creditcards/credit_card_placeholder_black_96x96.ktx
+SHA-256-Digest: 5tjXkMONntIft6zdC4Il9jTN5I468kUixKlhXDFfk98=
+
+Name: assets/icons/creditcards/credit_card_visa_96x96.ktx
+SHA-256-Digest: 6pLXlgW0dKYYvU0F5GgVCWqSPVIDJ2MgdkPTYLI13Yk=
+
+Name: assets/icons/creditcards/paypal_96x96.ktx
+SHA-256-Digest: W0fF5+gdzEHd1lh20V5jRViClokt0H8WPc32RKLBFNo=
+
+Name: assets/icons/creditcards/paypal_simple_96x96.ktx
+SHA-256-Digest: p8V8EzFyupsNmqXYep3YkvPEKFpV7s0CCyz5SXY+huA=
+
+Name: assets/icons/creditcards/store_credit_96x96.ktx
+SHA-256-Digest: wlebIRhQq5JI2JA9w8y4l4VMHEchvtaunOjcUzyPUPs=
+
+Name: assets/icons/cross_24x24.ktx
+SHA-256-Digest: NwVls5Qy7PplwLwKhQaevTesMv1o8CYPS7ybI3y9t2Y=
+
+Name: assets/icons/cross_48x48.ktx
+SHA-256-Digest: ZCxWnitZrVy1j/l84LTydph4ud6znwd5WkbG9OX9t/A=
+
+Name: assets/icons/default_profile_126x126.ktx
+SHA-256-Digest: UNp5uCjNa8wwisoSdr24lOWG1BqEJlUMBIZWlrXprno=
+
+Name: assets/icons/delete_icon_24x24.ktx
+SHA-256-Digest: iODIZ7Qz0GoTs/0neCU74zNrNByKtOQ/VdnVIPihSyo=
+
+Name: assets/icons/dice_56x56.ktx
+SHA-256-Digest: BJr0Nht7kdp6ODK2GlAqDrYU7iylZMzjAtI1ftG/gWM=
+
+Name: assets/icons/distance_24x24.ktx
+SHA-256-Digest: +CEkcyH9wsMeSq2BQXwDkQt+UavIZkng9M03uc4/T4g=
+
+Name: assets/icons/dnd_24x24.ktx
+SHA-256-Digest: BAf79SYIG/Y9kFZoJBFdkTNhEXeH1FxUhqlN8ohQSMU=
+
+Name: assets/icons/download_128x128.ktx
+SHA-256-Digest: u0Sk1DpWTqTM3aC+jptTfJdXFeHhABMQawp7bBNozEI=
+
+Name: assets/icons/ellipsis-vertical-hover.ktx
+SHA-256-Digest: SLSDVtTgDBHZFVh+23TzKx1PjO1nLtuNq2jXCJqukPw=
+
+Name: assets/icons/ellipsis_horizontal_24x24.ktx
+SHA-256-Digest: 4x6D4aXG3Akmi9O4RlI2U9V0kRncMeoToUU4D6lykr4=
+
+Name: assets/icons/ellipsis_vertical_24x24.ktx
+SHA-256-Digest: BS4yHqvPDszZ8d/MAgy8TnpNmoqB2Q0IiP54HzDVfP0=
+
+Name: assets/icons/events_interested_24x24.ktx
+SHA-256-Digest: awmLO+scYr8H+FBgjrpuv6hQaIzivBT2K2Eus1cg960=
+
+Name: assets/icons/experiments_24x24.ktx
+SHA-256-Digest: T5BsiR7bkVkqg1xHlRDPPvndYm4bYoKErlAM+s2OfFc=
+
+Name: assets/icons/explore/icn_info_24x24.ktx
+SHA-256-Digest: P2mi04pj/ns2chWITGgZu01W3Q1FrKlh7WGH8BTxda0=
+
+Name: assets/icons/explore/icn_type_album_white_32x32.ktx
+SHA-256-Digest: bS/1jHHivAEvXDxr55wicnQBb5P/a4yeEivznoYs7oE=
+
+Name: assets/icons/explore/icn_type_announce_white_32x32.ktx
+SHA-256-Digest: gkRFmhA3G0f7teP84qdCDF94rDvUlxSy38U59rM5s70=
+
+Name: assets/icons/explore/icn_type_app_white_32x32.ktx
+SHA-256-Digest: XVayXPXK4CsNJ5HR0VD5UvUZB4MyKfqwOXO5eVN011o=
+
+Name: assets/icons/explore/icn_type_events_white_32x32.ktx
+SHA-256-Digest: wRIhNXMKV/Dnsy4yHGNrT9TBuXAfJI0b8fmAdaw6Dtw=
+
+Name: assets/icons/explore/icn_type_video_white_32x32.ktx
+SHA-256-Digest: NBQ93TINIl/7tZLfL3Hx1H5IwGrs12+VvhuFxu49fA8=
+
+Name: assets/icons/explore/icn_type_webvr_white_32x32.ktx
+SHA-256-Digest: L5SmQ7vM6KVis+b6bKxfZrygQPkY8g4lcEYO+dFbCEc=
+
+Name: assets/icons/eye_24x24.ktx
+SHA-256-Digest: IBfYDGDiE+z+LsN4sR8+Z5PyPL/GTkRHemiXE5eKn9E=
+
+Name: assets/icons/face_neutral_24x24.ktx
+SHA-256-Digest: htosISnxGmGPrPJQiGy/ACQWN3zgZJBtcW2cu9YzQnc=
+
+Name: assets/icons/facebook_24x24.ktx
+SHA-256-Digest: +99OHHKSwXe/4AZcj8bibMETio+AgJLe8cGeQiWlNhM=
+
+Name: assets/icons/facebook_rgb_72x72.ktx
+SHA-256-Digest: o8rVHAq6vO93Smlttm1nyOakBcG+qr1BYH3ns5Gs7Os=
+
+Name: assets/icons/follow_16x16.ktx
+SHA-256-Digest: t1n8vLbu+lXjsWfVU3aH/4lyk4WqzEhtUVdpacl71i0=
+
+Name: assets/icons/following_16x16.ktx
+SHA-256-Digest: 7tKr3lQYsq8zqxehiHn0oHHTFZu+Bq0zgWeRsH3G8O0=
+
+Name: assets/icons/frequency_24x24.ktx
+SHA-256-Digest: E/3uUH9NnTtfh5Xr1NRUYNwNsE7ilSqZybsdXwW3DBE=
+
+Name: assets/icons/friend_added_24x24.ktx
+SHA-256-Digest: W1rjbwdlxyvBjyVa1hadMo/yv00UaUYvIhOdPV1Yg/w=
+
+Name: assets/icons/friend_request_send_24x24.ktx
+SHA-256-Digest: bBD4mCwao0JkbTUulGFtkXq+NX/dCYNdib0gZDQRgo4=
+
+Name: assets/icons/friend_request_send_48x48.ktx
+SHA-256-Digest: gr9qQN4BvPkEFzlSzQsbSt/9jlAluVobr2lk8piUO18=
+
+Name: assets/icons/friend_request_sent_24x24.ktx
+SHA-256-Digest: AjYnNgMGgJfY3XfcW+jVLmSsHKfmoevJF3Kd9ImffnU=
+
+Name: assets/icons/friends_48x48.ktx
+SHA-256-Digest: 7ck3BzV7ezvLXfkD3y5QJBqDuQ3dLAnshJg0bXj1IsM=
+
+Name: assets/icons/friends_96x96.ktx
+SHA-256-Digest: LKwGVeQALhB7UGGgclZiJwNP+RQb5NUqtgC5GjgkT3I=
+
+Name: assets/icons/gamepad_128x128.ktx
+SHA-256-Digest: nhwPRTxEoDHt+8ZzS+QkjJjXqwInahN7uChYD0Rw7cQ=
+
+Name: assets/icons/gear_vr_controller_96x96.ktx
+SHA-256-Digest: /B8xiB7Enh9iQ9mJcntd7Vzsqfy09YfTq/gI5AqARkw=
+
+Name: assets/icons/green_dot_8x8.ktx
+SHA-256-Digest: UmlBGkNLHMGMwNdDC5P/LkWANktMJ1AFWLrBedhAkCY=
+
+Name: assets/icons/guardian_24x24.ktx
+SHA-256-Digest: M1G6OrUn030jCvXPk+kWaVJU7aetHI7x1+NdAvkc5GE=
+
+Name: assets/icons/guardian_set_floor_24x24.ktx
+SHA-256-Digest: sHb++OhlMzfttLJRrQzyBdfPhHGW/PMecoJqletjnBg=
+
+Name: assets/icons/gyroscope_38x38.ktx
+SHA-256-Digest: PFLmcB++qLVyj0v8TfYABpe9YBIQAKUOQ5+uw6lDCwM=
+
+Name: assets/icons/gyroscope_62x62.ktx
+SHA-256-Digest: 1RHGXF5yE+Jq/LJyEKNLPkeAZVjDkDDTPpOop2uNVDg=
+
+Name: assets/icons/hand_24x24.ktx
+SHA-256-Digest: MoUpxT7ykOxLg5ASCLr5k8Y3bUoM9PtnnNeVS7E5OTY=
+
+Name: assets/icons/headset_gear_187x124.ktx
+SHA-256-Digest: hZ35T+faDAkX96Ui+5vB9Ms2AwtaMnRPEcSmVyNIf8M=
+
+Name: assets/icons/headset_rift_181x121.ktx
+SHA-256-Digest: FzUxxGqt677XxovpnWydKjFUd1YcLhURO0+lmujhJTY=
+
+Name: assets/icons/hmd_32x32.ktx
+SHA-256-Digest: xBrPG9yp/17ByPqwlPmmEOU0NkzhZV35OSzfzpcFYXc=
+
+Name: assets/icons/home_128x128.ktx
+SHA-256-Digest: g0FsoiMDxzJ06tGyrfNdN2VZ8C91IJp6vX8tBvL7hhA=
+
+Name: assets/icons/image_loading_384x216.ktx
+SHA-256-Digest: Zk6R6rHxm/FoIEKMdMLgDlehdtK5PbEW2KmlKAnJnwc=
+
+Name: assets/icons/image_no_video_72x72.ktx
+SHA-256-Digest: bps5PGEcuKaNDb/Sc/ftBI1s3G8Cgn/dknh0wj56UtI=
+
+Name: assets/icons/in_party_48x48.ktx
+SHA-256-Digest: OZNQWfbL3smKYY8USL8lodhbEikccEmS/2sTQCu3tpg=
+
+Name: assets/icons/info_24x24.ktx
+SHA-256-Digest: CyWi6CNyGjcJgOt1eCwmfX4q43kX2u4x6ywIza62kMc=
+
+Name: assets/icons/info_filled_14x14.ktx
+SHA-256-Digest: lIHvjJ+NF/baHecNTlJz0HkkUgP0J2Pl2yGH3gj4X5o=
+
+Name: assets/icons/install_48x48.ktx
+SHA-256-Digest: sR9MDC+UVXJoW6uHhkOCdZBjo3JjzGwfHo5oo/YYzyU=
+
+Name: assets/icons/invited_to_party_48x48.ktx
+SHA-256-Digest: ISNiJZvISxh54obKJD081Q7letaiPIUDmsR9GBupfiM=
+
+Name: assets/icons/language_24x24.ktx
+SHA-256-Digest: MlvptT5zhnQl03YFz7FjkjZYir3kQpWF8Pe3GXS+91U=
+
+Name: assets/icons/leave_party_48x48.ktx
+SHA-256-Digest: ApfvLtzFp+guiSZaNgU6bzY62xz87N6ByvF0gFufopM=
+
+Name: assets/icons/library/close_24x24.ktx
+SHA-256-Digest: wB/OCxIQeQOMhXJ87hHf45OUmZPnM7NxZZ5a87vHtIQ=
+
+Name: assets/icons/library/cloud_syncing_24x24.ktx
+SHA-256-Digest: hWfEi926SxOxl1ICQGqvi3TRyC5MCfahmyO3mqKei7M=
+
+Name: assets/icons/library/download_24x24.ktx
+SHA-256-Digest: UIuD2AxeZYtKvZw2qOwcVx1LVwntrcMcb7UdHHjAe4Q=
+
+Name: assets/icons/library/fit_guide_tile_360x360.ktx
+SHA-256-Digest: 8LSZoZNb1iZRrbAZbPxhpLuepHVgEHGmzGo3M12+omo=
+
+Name: assets/icons/library/play_24x24.ktx
+SHA-256-Digest: RyPoNne9WyHbyGZBi/a64fbSuSmOi3CmA8v5Q4kXy/0=
+
+Name: assets/icons/library_128x128.ktx
+SHA-256-Digest: NW9+oTNHqbhVRyQPtrlytJosmpGaAI8DP2qGlZcBaUU=
+
+Name: assets/icons/like_48x48.ktx
+SHA-256-Digest: NZGeVb98/9kOmUk/s89+mlayGqVk/WGSEribExLalyY=
+
+Name: assets/icons/live_24x24.ktx
+SHA-256-Digest: csWlHqlg4TCIw1E9ApvDlW0GqdG2BP63LaIUtcYmAZ8=
+
+Name: assets/icons/live_50x24.ktx
+SHA-256-Digest: DQN1bfxDH/3z9AYGZjD33Jfn0KbyjPhItLo/uN97LBM=
+
+Name: assets/icons/lpm_24x24.ktx
+SHA-256-Digest: aw0/nM4b5kVeai6LHJpZmXrvrQn1KveTA/HwTuT/yJA=
+
+Name: assets/icons/magnify_24x24.ktx
+SHA-256-Digest: nU1GykmsfTeTT7kK32xUJXMBWDf+EYap0GCOq2SDIRk=
+
+Name: assets/icons/magnify_circle_128x128.ktx
+SHA-256-Digest: n9S2L8DgJCBFwy9S/4di1pHd/KIcsGsXCdod3uTQ0rY=
+
+Name: assets/icons/mic_72x72.ktx
+SHA-256-Digest: SHCKkm3jbeQfpXjO0CrySprMFqGXnmL26pdZWLZJwD4=
+
+Name: assets/icons/mic_none_48x48.ktx
+SHA-256-Digest: VNLhyaU83qODkYwAhDRCEC6c175i4mTUjFEFfmvxwtw=
+
+Name: assets/icons/mic_off_48x48.ktx
+SHA-256-Digest: rYLt/StEcFx4UQDBmJwbE4zl8Bf+0InnGTkGeeYCZX4=
+
+Name: assets/icons/mic_on_48x48.ktx
+SHA-256-Digest: D8R3QoULbhVBXhfNHz9eFNOl1BFgSF364inZH53/gtQ=
+
+Name: assets/icons/microphone_on_24x24.ktx
+SHA-256-Digest: oFGYQ3oTS3US1d8soSKznU4gU+EUFF6lGNTJHJa/FOU=
+
+Name: assets/icons/movies/movie_3d_49x34.ktx
+SHA-256-Digest: VdKfz78aX4/tb2xx22PC/p1F115d5Ke4362HRVaie6A=
+
+Name: assets/icons/movies/movie_rating_g_40x36.ktx
+SHA-256-Digest: Tv9YBVm3kl9mXFzevt8JlecOC+GTfjuP5ZXg+ON6/QI=
+
+Name: assets/icons/movies/movie_rating_nc17_96x36.ktx
+SHA-256-Digest: MmAeCWtNd04E786VQ6F3uMyTjR6Isp9YWMSMxKQwW78=
+
+Name: assets/icons/movies/movie_rating_nr_63x36.ktx
+SHA-256-Digest: 9rWSMxjS8X9Y8pKBDCBuCRU2KWu1PDFu9s9/WUKI5Mo=
+
+Name: assets/icons/movies/movie_rating_pg13_103x36.ktx
+SHA-256-Digest: Z1G9pvKa01DKkFN5HkM3Fqoz9gwlT5xg5cBG1hbjHuo=
+
+Name: assets/icons/movies/movie_rating_pg_60x36.ktx
+SHA-256-Digest: gRPLhYgp50QoZ5RGtVbLGXtL4q2VVRnhjq0PmwuDYPk=
+
+Name: assets/icons/movies/movie_rating_r_41x36.ktx
+SHA-256-Digest: JpHN01daTMo4yXPXZJ7RDQb+Jd8hzfnuBaRr3fLVtVY=
+
+Name: assets/icons/night_shift_24x24.ktx
+SHA-256-Digest: d8ueA/JVdvOp+JrBnExycQvOQuA7wsreZnJ6y5bdtGQ=
+
+Name: assets/icons/oculus_24x24.ktx
+SHA-256-Digest: /0uoP1xn8lxoUwVBo/vx9xHPCFr7C1l0sZkN2hJgXNE=
+
+Name: assets/icons/oculus_remote_icon_128x128.ktx
+SHA-256-Digest: zgh8qQQO2y2F1IoQ66yA8BYAGYIEddKjh3TtFi4F4sI=
+
+Name: assets/icons/oculus_touch_icon_128x128.ktx
+SHA-256-Digest: oQPDt5EAa0dmwYvr6tZ6oyftn7F/D8A6OebE3aqhjGk=
+
+Name: assets/icons/oculus_video_icon_512x512.ktx
+SHA-256-Digest: LEAi5jAmUhK7mxiHNyPkh1Fw6r/y2DKO+y99BVBvgcg=
+
+Name: assets/icons/party_24x24.ktx
+SHA-256-Digest: AQBH5Eexx1vYwDwWiGEckOZRd56od4TNonmTe/FHilM=
+
+Name: assets/icons/passthrough_24x24.ktx
+SHA-256-Digest: SNXhPFSSFTYI6vuVIcGiorxu44GtAwd+i/7hn36/a74=
+
+Name: assets/icons/pause_24x24.ktx
+SHA-256-Digest: +jOZA3PP19qlg6NLzHL/vPH6dlbbrUzSefqYmfWRMcY=
+
+Name: assets/icons/pause_no_padding_128x128.ktx
+SHA-256-Digest: GSIAV6Hn9IhKybwxo/emudhzXF6rcwUB6P7R9fqdhb8=
+
+Name: assets/icons/phone_48x48.ktx
+SHA-256-Digest: TB4tTMHTCmoHdBecp5MFy7XIXZNIztkcVhD93IJXRgY=
+
+Name: assets/icons/play_96x96.ktx
+SHA-256-Digest: ePS4tYHJaJ1Z/6nDH33jclyx/BlLrQEp/UpQR46c3Jg=
+
+Name: assets/icons/play_circle_128x128.ktx
+SHA-256-Digest: 7F+Y245EY1ofAj11aL0/6oFXwXPf4uTQ1F5wmJmyT8s=
+
+Name: assets/icons/play_circle_38x38.ktx
+SHA-256-Digest: MksCea1Boc6ce1aLnVuMQxj2UyWtN7Mf2UAKWydssG8=
+
+Name: assets/icons/play_no_padding_128x128.ktx
+SHA-256-Digest: OXkfe4xPyPQa4qGcAmEe2U4QQ9i8cc5vGhCuFaEYfPQ=
+
+Name: assets/icons/pointer_up.ktx
+SHA-256-Digest: QceU33OVm/LRmEal7w+riMm2yLLX6EksrPNFrEYS22U=
+
+Name: assets/icons/quest_controller_right_24x24.ktx
+SHA-256-Digest: ZmxRaNAG9dSyxDCqWMTWTu1YO5eBxNeSCgy/A7DViY4=
+
+Name: assets/icons/question_24x24.ktx
+SHA-256-Digest: pUfQc2SgPPB8ZYi3e37k5xjdwWrOm2BWq0oDstviTJw=
+
+Name: assets/icons/remove_24x24.ktx
+SHA-256-Digest: RwDJYmI0tS4aWZvx5jtpulvudPu+q4gE2zS98URHkgw=
+
+Name: assets/icons/reorient_24x24.ktx
+SHA-256-Digest: YRyRPsG+LplIFk5C9Pm1W8WpVF2+etfbwyeTfE4uorI=
+
+Name: assets/icons/report_24x24.ktx
+SHA-256-Digest: iL9hwWLCw1ui8wyBF1Pz/c2FoQGFKmOAdyMPZUuy+tE=
+
+Name: assets/icons/report_80x80.ktx
+SHA-256-Digest: incd9587ZFnEqlhSNOy6Q5CTp4kyL5VYi/alULQygcw=
+
+Name: assets/icons/reset_24x24.ktx
+SHA-256-Digest: FVkWs/NnlXXJu6Fxit+06uRHn7plKuzXNgL4ULZhylQ=
+
+Name: assets/icons/roomscale_24x24.ktx
+SHA-256-Digest: I7WHWL4mzWQo5Z+T/LIe/f0T/bxvUlUsTRcDIwkaOT8=
+
+Name: assets/icons/samsung_264x60.ktx
+SHA-256-Digest: 6slCNQCakjapldU78G5sD3u6LiBnl1Vxs3WbaQEP+Xk=
+
+Name: assets/icons/saved_24.ktx
+SHA-256-Digest: T/SccoAIB2H0D6wvmT0AVWUJ+S2cyRsHg+SnGfOvszI=
+
+Name: assets/icons/saved_24x24.ktx
+SHA-256-Digest: ZpJ33R4NM8DyoDFLzWGj09wKArcdCajmxY+YYeacsxs=
+
+Name: assets/icons/search_128x128.ktx
+SHA-256-Digest: ngT3g/Ar56q0XUYdIEoTVTuJA7JQfxNzl1/0EFBzjCA=
+
+Name: assets/icons/searching_for_wifi_flipbook/flipbook_170x170.ktx
+SHA-256-Digest: LRMO27s6id7G62ZYnJYuCVf4a256MyMcrplje4pL41s=
+
+Name: assets/icons/settings_32x32.ktx
+SHA-256-Digest: oMPKwf39KHz1OOEh4wCQy7ClEzeZaHizoWokbjU0drU=
+
+Name: assets/icons/sort_down_24x24.ktx
+SHA-256-Digest: 0GWOxIqp/6tTkh6McQ9PX50Ce360F18wmdJIx7O0wkg=
+
+Name: assets/icons/sort_up_24x24.ktx
+SHA-256-Digest: y4zSs5NMIWOl8PdY1pIh3pv4g0grkyS2nPTfr8TC3z8=
+
+Name: assets/icons/speed_24x24.ktx
+SHA-256-Digest: pKw4h4mrEud1LTPCYbFQPbrN+UAF1JQOSHicfLGw93Q=
+
+Name: assets/icons/stop_24x24.ktx
+SHA-256-Digest: CbW77aYpzVOnw2upAs2rxU3mRDBHSnHevQVF+0rABLI=
+
+Name: assets/icons/storage_72x72.ktx
+SHA-256-Digest: WUe5XDSd8/M/+nIFUQyoclwJkYTBVYPWtnYXccLRni4=
+
+Name: assets/icons/storage_alternate_24x24.ktx
+SHA-256-Digest: NUzxLXN5lJHnvuT9D3FvAtYhHLJwD0C02MXhQKuPVgE=
+
+Name: assets/icons/store_128x128.ktx
+SHA-256-Digest: qOsl5DwYm7YIeNLIEO+ItgbbwuPfoqbt5JhFeHOCZJg=
+
+Name: assets/icons/touchpad_96x96.ktx
+SHA-256-Digest: E6PLnZeq3p2MSEcYJhe6RacBMbB/C57EzemwhgJmu/I=
+
+Name: assets/icons/tracking_24x24.ktx
+SHA-256-Digest: bFsygS4EHyiFLJLKAqkJdoQXIjNAuOfS9cxdfu6j9GU=
+
+Name: assets/icons/triangle_down_24x24.ktx
+SHA-256-Digest: Y14ftFAnAeHjDiPLULSf76HjbTcsOYIHAhwEMFENENE=
+
+Name: assets/icons/unsaved_24.ktx
+SHA-256-Digest: MbnU+KY1gdcaqGAk1C1Y5TBGJ7hFUkUuusyMAV6+O7M=
+
+Name: assets/icons/unsaved_24x24.ktx
+SHA-256-Digest: vitSVqWfzilKNYcaVbejlEwq5B723d8Vzmqn5Bnl3NA=
+
+Name: assets/icons/volume/volume_level_0_24x24.ktx
+SHA-256-Digest: F9yOKR2jTRPkhQlJoaFeyvrvSYnjvkhllCIfkeGfJuQ=
+
+Name: assets/icons/volume/volume_level_1_24x24.ktx
+SHA-256-Digest: G5+F//ZmM8SVGj8reMfSsyghnSqgSIiET5FLpxTfBks=
+
+Name: assets/icons/volume/volume_level_2_24x24.ktx
+SHA-256-Digest: blEUDQfwF0RVTd5jxyUNiwEv34NcLG3wg6WO8+a5MXk=
+
+Name: assets/icons/volume/volume_off_24x24.ktx
+SHA-256-Digest: n5ysGCv3SxYHikNZCSOaJuogFaGobyK9YXcsTSouj9A=
+
+Name: assets/icons/warning_72x72.ktx
+SHA-256-Digest: I/5HQsL0Ju7DJwX8Sd2JSB4UjBw/gcZqLQkqiBaPLQk=
+
+Name: assets/icons/wifi/wifi_bar_0_24x24.ktx
+SHA-256-Digest: x4OmYE/pzFu/oV954hzLCgaKD3Rb+YS6+jKs7XXPDK4=
+
+Name: assets/icons/wifi/wifi_bar_1_24x24.ktx
+SHA-256-Digest: z/lpg83HxBHNCHzqaL6XAw2XfebteBqxLH37TDQPpOQ=
+
+Name: assets/icons/wifi/wifi_bar_2_24x24.ktx
+SHA-256-Digest: 95FuhF4XEbA6YnxXWDPPeRbWEpYFt7d8NFgGZnJTbOU=
+
+Name: assets/icons/wifi/wifi_bar_3_24x24.ktx
+SHA-256-Digest: mM8WVKJcpxlj/IBUmvRZWxj9rFx4jlJG7u9sGBO1qtI=
+
+Name: assets/icons/wifi/wifi_bar_4_24x24.ktx
+SHA-256-Digest: mDe5Z2cy5ZcwkdnsBYgdjG5H9kkymFrWp+7qStwRd4g=
+
+Name: assets/icons/wifi/wifi_off_24x24.ktx
+SHA-256-Digest: Xdmuu3DboCZAbTz8S3FIFPdSwesqGG26dcRp2qwTHp8=
+
+Name: assets/icons/wifi_24x24.ktx
+SHA-256-Digest: EeGOsb+wnLqeYnETFEJg7Fmd5iZmrSbCjfLo6aL/XS4=
+
+Name: assets/icons/wifi_off_24x24.ktx
+SHA-256-Digest: ihv2ODTKO7vyrTX7BJYkIfvZsMtoYpWkgXkm1CB83Cg=
+
+Name: assets/it_IT.json
+SHA-256-Digest: bhcwy5KwgZSvpCKIfVRGTH+ysjxTEfpvfiwQEqwePD0=
+
+Name: assets/ja_JP.json
+SHA-256-Digest: 9fvnWy6coSyiQrvVIwgXkBWhoeKZbMS7LmBRL9qFL+o=
+
+Name: assets/ko_KR.json
+SHA-256-Digest: QuWlnZXGBrpHYDZ325xLJjN08AVIErvmQWgcYnHv83A=
+
+Name: assets/metadata.txt
+SHA-256-Digest: lbPx6O/OFUx51tM7YNyD3RwHkl5Aiqwpat9t1xLdW1s=
+
+Name: assets/nb_NO.json
+SHA-256-Digest: ZMEgExPvtGGv57ISxAczd7OQWg21pXqzm/EpDK956Lg=
+
+Name: assets/nl_NL.json
+SHA-256-Digest: Q/shRo0XC4gXmFLBJg4ck5sEkcO3NucTNChszzAbrLQ=
+
+Name: assets/node_modules/intl/locale-data/jsonp/cs.js.dat
+SHA-256-Digest: Xf/xIKU9GvQqLRSSo9mBQuqmRVxJg18AFkM384m4chA=
+
+Name: assets/node_modules/intl/locale-data/jsonp/da.js.dat
+SHA-256-Digest: NDpIOjEjZtCjdlJBOSvtG1b97Bnm/y2FL1i+OmUKZ3Y=
+
+Name: assets/node_modules/intl/locale-data/jsonp/de.js.dat
+SHA-256-Digest: gVmdDzbqrIvxUE/VfdiSG8KNodngg7YqvcsuAYlRpqk=
+
+Name: assets/node_modules/intl/locale-data/jsonp/el.js.dat
+SHA-256-Digest: wNp6ih34oKCndGTwZKrAf77IriEUl7RyybN0VeqJJIs=
+
+Name: assets/node_modules/intl/locale-data/jsonp/en.js.dat
+SHA-256-Digest: q0OeOedW+pKJTH761Y67hJui3j9xxpr7fHF3Lti96hg=
+
+Name: assets/node_modules/intl/locale-data/jsonp/es.js.dat
+SHA-256-Digest: 7/8pkFiZGecN2/Fp4GBq9DQNTccufIs1zGCD0JnL1Hs=
+
+Name: assets/node_modules/intl/locale-data/jsonp/fi.js.dat
+SHA-256-Digest: hFp5AMHxHj0a3Mh31LBgoD6NKfXvOII3Gt8G9YTMzX4=
+
+Name: assets/node_modules/intl/locale-data/jsonp/fr.js.dat
+SHA-256-Digest: 5TH4S8uN4j7fHadi/DAd2tmyjKrgTSxQ/PL3LkVjVWU=
+
+Name: assets/node_modules/intl/locale-data/jsonp/it.js.dat
+SHA-256-Digest: t+eyQpdWQI+xeJTHBiWNcV8771rSgPKCb7YPhXOuAPM=
+
+Name: assets/node_modules/intl/locale-data/jsonp/ja.js.dat
+SHA-256-Digest: ukqmT4Ao+5B4QU5gpr0ecylqRTLa/xnaUFckBP27mYg=
+
+Name: assets/node_modules/intl/locale-data/jsonp/ko.js.dat
+SHA-256-Digest: sq8al0BH3qsFOcSgxpIiCknqWvBwrW4HQCOei0F4gu4=
+
+Name: assets/node_modules/intl/locale-data/jsonp/nb.js.dat
+SHA-256-Digest: t9PjSh8g65E6f9GVdsiCcx9SBCBrQXOJVCZ2dGob504=
+
+Name: assets/node_modules/intl/locale-data/jsonp/nl.js.dat
+SHA-256-Digest: 0T8oT7pDbY/9AFf0upVCrlMuUOLan4LyJWiA9aotenY=
+
+Name: assets/node_modules/intl/locale-data/jsonp/pl.js.dat
+SHA-256-Digest: gPuFEep65jCbJ3zaKJ2txAJ4O99EhC+24FsbWJz5HMs=
+
+Name: assets/node_modules/intl/locale-data/jsonp/pt.js.dat
+SHA-256-Digest: RRoUXD1rRA3Mb1t0zYSfHquunv2CQteUAZGSUug/QWA=
+
+Name: assets/node_modules/intl/locale-data/jsonp/ro.js.dat
+SHA-256-Digest: QX5PJ6gXrvhmwYK5aawkkoeyqLe/3jJGs9XM0L8yWpc=
+
+Name: assets/node_modules/intl/locale-data/jsonp/ru.js.dat
+SHA-256-Digest: JPfwdnxGiRda84Wwc0Fg6f82vLe7JMyUf0vA+Ncj+/A=
+
+Name: assets/node_modules/intl/locale-data/jsonp/sv.js.dat
+SHA-256-Digest: amlE6hxo2bCwO6CHJQKEj8QwLne8DytnzZUo8hHhwE0=
+
+Name: assets/node_modules/intl/locale-data/jsonp/tr.js.dat
+SHA-256-Digest: 4Ie7VeUh2gtxe/fHVsCzAYZlLUI34S/KklzjZQAn8Lo=
+
+Name: assets/node_modules/intl/locale-data/jsonp/vi.js.dat
+SHA-256-Digest: lrdmCoQ7ziDWzX2aOhwewNWsLPf8msJIlN2/gwPX56I=
+
+Name: assets/node_modules/intl/locale-data/jsonp/zh.js.dat
+SHA-256-Digest: WI5yiT1TesRG/oBZMpLTVbVklGdIxWCmhUe1TITYFv4=
+
+Name: assets/nux_assets.zip
+SHA-256-Digest: 6zrSL5d29hHdUbXvqEiDokVWcwCTtdllXXTmhn+xvgo=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Explore/alpha_g
+ radient_mask_20x318.ktx
+SHA-256-Digest: xiVeEi5OIEFwKtbJU+a3EOqqqh3X0fqXCe4leNZ1oRg=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Explore/card_th
+ umbnail_bottom_gradient_512x88.ktx
+SHA-256-Digest: XF0ONc3pw9Y/b8PvQhUeW25+A7/32mFIYqG9ou3L8Qc=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Explore/gear_co
+ ntroller_hint_88x210.ktx
+SHA-256-Digest: o+BqR47cB4jopXV3E8aUx3AUHBjC/TKpVoBmlqJXCes=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Explore/gear_to
+ uchpad_hint_88x210.ktx
+SHA-256-Digest: rRwYwaNlvdBpentSPFCd5oeBEgVbgr0cybBOeCIrSOw=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Explore/go_cont
+ roller_hint_88x210.ktx
+SHA-256-Digest: hL290X5xYPimLjbf45QtCJiqJHm8HJSOy3uszZUz/f0=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Explore/icon_re
+ cents_24x24.ktx
+SHA-256-Digest: pPOOhXpX0se8VGuXl/oZ529yQoSLP4mW2y68D+5DFZM=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Explore/nux/dro
+ p_shadow_216x132.ktx
+SHA-256-Digest: Le7MgpvtfWItvchZzbptcMhN6C7HbUgtSogy9A+iUBM=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Explore/prime_t
+ humbnail_bottom_gradient_222x56.ktx
+SHA-256-Digest: P0p5l1BCSiymDsRIMjImXwf6+ztDVBzSxWby/kbip/A=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Explore/rail_ho
+ ver_backing_144x81.ktx
+SHA-256-Digest: 0mYYAHDRouMyiJr+RGuI74MN9Ae389CErnOhOXkDj8Y=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Explore/scroll_
+ hint_dot_15x15.ktx
+SHA-256-Digest: wxYQoLsRQWU5lFQnzz7IFbDPUdqHC5HSw1ywqZ1l+mw=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Explore/tile_bo
+ ttom_mask_256x8.ktx
+SHA-256-Digest: KOJyWOEDldE9caekQiJJ5Z53VLhHkG+zBIsQf3mnB6E=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Explore/up_arro
+ w_64x64.ktx
+SHA-256-Digest: 0Y3V8LQqh+OpilR+fgyJeCSoPQQiRiOv4oKssFSaTlo=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Header/corner_2
+ 0x20.ktx
+SHA-256-Digest: 1R8tdIylPV8/OKiqXCsFFKuU458bR/xKOy6xdrzLFbI=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Header/fill_4x4
+ .ktx
+SHA-256-Digest: ACZYIXARKZmGyku3xRfBcqSlUxGH/SAjjcfqz7kx6wY=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Header/side_lef
+ t_20x4.ktx
+SHA-256-Digest: MNkIYw0Mi1K03IYHp7oEDxp36/eZq4Bd5cOC2peP/rA=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Header/side_top
+ _4x20.ktx
+SHA-256-Digest: S1dslsE7kzgBbkMeZSyQgWrEd+24YgdqKliB8WGJPm4=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Nux/Go_Controll
+ er_BackButton_565x326.ktx
+SHA-256-Digest: IQZqELLaHZhSGTo0kDuoZ2KrzZcV70UG1SAjMuKTeXo=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Nux/Go_Controll
+ er_OculusButton_565x326.ktx
+SHA-256-Digest: fUlDxWkQpdGdEA5klSXGhkaXeTQw3uA4vx9ZuOdjgNc=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Nux/Go_Controll
+ er_Touchpad_565x326.ktx
+SHA-256-Digest: BGtJE+b69ECdbZhMBVlNdC2SKP+DpTFdVKHxIqm5A9c=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Nux/Go_Controll
+ er_Trigger_565x326.ktx
+SHA-256-Digest: DNEzVWEVSwIzgKHEaZqIDPAt/QNlYnr6PElflQ8SIJE=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Nux/arrow_down_
+ left_480x480.ktx
+SHA-256-Digest: dUI5EAZGDws0T4dG+jU9v0nvFlHqRFj4NnNlEeTITJ8=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Nux/arrow_line_
+ 80x10.ktx
+SHA-256-Digest: cUukPiqm0uvaSp5SJKD3q+J4ZoZ05qxVVpPtw/Onft4=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Nux/controller_
+ line_left_down_150x45.ktx
+SHA-256-Digest: XPK9XeG7d3Cj9K9QoM+K50VlprT/fBpLU34BVuNqV1E=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Nux/controller_
+ line_left_up_150x45.ktx
+SHA-256-Digest: VpmvRtgx/796BeKGwvekvH3KKgqJ7b4qe986JdpxCk0=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Nux/controller_
+ line_right_down_150x45.ktx
+SHA-256-Digest: 9hW2ubTj44cSjELEsHLwA0tU1ZOfYO5uUInhkQ9g7oE=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Nux/controller_
+ line_right_up_150x45.ktx
+SHA-256-Digest: e8htz7b+p8/iEaYly8nKQQYmtEa8D2tG5LOs4rkG4/k=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Nux/go_swipe_co
+ ntroller_56x135.ktx
+SHA-256-Digest: DSwB2YteR7vRl72ZTiJVL5H6OUjOmQIcJ8UnDiwCTVo=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Nux/go_swipe_hi
+ ghlight_17x17.ktx
+SHA-256-Digest: ZPDMokGNgEKMBbkYahYc4ITDj8/HpB58PeNUDBvIgTU=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Nux/malibu_home
+ _182x400.ktx
+SHA-256-Digest: hAtXVsOjISZA0srNGZ6l521LQwGsa1nIolhdAFGyiDw=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Nux/pacific_con
+ troller_grey_144x400.ktx
+SHA-256-Digest: jGCJv3qWXck3+y+W6w2vLratJHEIW1pdwno+do0jYXc=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Nux/wifi-off_72
+ x72.ktx
+SHA-256-Digest: kM91mJ8oc0Xgy9XIbv0XpZWnaMM0pH/BtsIGEe19rMM=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Nux/wifi-on_72x
+ 72.ktx
+SHA-256-Digest: LrgNHCs+IF66a+Q+aQ0uJbXf8OVewhLX71HRI56TT1s=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/SnapPillBar/nav
+ _pill_sort_backward_32x32.ktx
+SHA-256-Digest: o0flZop0aNcUBdP/msKAmqjpfDEoTZmD+uILRbqUkPM=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/SnapPillBar/nav
+ _pill_sort_forward_32x32.ktx
+SHA-256-Digest: IynUziUg2bx+Ge2bWpT5HaBU486POaV25VS/kv24occ=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Store/heart_til
+ e_label_48x32.ktx
+SHA-256-Digest: RSy/0DDVtdxZbKUHx00TE0whp3yZLGvu3a17K99w0QE=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Store/store_col
+ lection_icon_20x20.ktx
+SHA-256-Digest: vR0OLpAMLtuxOMT3FmP4MAmr7Qzi40ZG1LWAoJDtI9U=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Store/swipable_
+ section_arrow_left_40x40.ktx
+SHA-256-Digest: DAwV+um6tbjmZ4Fvm3entd5N9hhgI2I8nWxwZ25M0Oo=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Store/swipable_
+ section_arrow_right_40x40.ktx
+SHA-256-Digest: xP1tVgJPKan/MokikCFRK7okuIDG8X0XRTURo+KJ5gU=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/Store/swipable_
+ section_go_to_browse_48x48.ktx
+SHA-256-Digest: HL9jhLXlbDLBfBdJ30OA0kKv6jhQLrc3bjdsp0fgIVQ=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/broken_image_12
+ 8x128.ktx
+SHA-256-Digest: qoUXA5TWQ7ruk76QCPk9AJcJGCwTiLHt/XwBLYPfdsI=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/customize_backg
+ rounds_80x80.ktx
+SHA-256-Digest: 9Sd4USCJNZ/+WaSrqD4MjVQkx6XkHZX9IK3EQKqxzZs=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/go_headset_200x
+ 126.ktx
+SHA-256-Digest: A1l1UkDFRD06TG/mvjkjkFrLeH+COqAtOvl0+7uLYDY=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/go_headset_36x3
+ 6.ktx
+SHA-256-Digest: Um7O6KKvAn295DsHiX5F4SZ8P71gxseV5bppZ50xJGQ=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/quest_headset_3
+ 6x36.ktx
+SHA-256-Digest: GUD2L6KYC7AnCV5AHtS6W1AVHMmFfh1AtjiQ88DDUY4=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/shortcut_tutori
+ al_256x128.ktx
+SHA-256-Digest: KFHXfcDJ3NpBlgvJTJHOqHQE2ZDkA4nqq4WrXkGHYVQ=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/shortcut_tutori
+ al_mini_64x32.ktx
+SHA-256-Digest: 3EQ8sjq0/vCLuoTPON92kinE04TUYUE5YO4snQqAmeo=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/UI/voice_orb_118x1
+ 16.ktx
+SHA-256-Digest: qCwfQ8AjaUt9ajtSmGPqLt2JFqSlc+w+ebKdxvaKMsA=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/apple_store_120x40
+ .ktx
+SHA-256-Digest: Q7hatxZgwbqb4QEJGjjewMKKfbulJtKNV3kRsVLv27A=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/avatar/avatar_mesh
+ _selected_512x512.ktx
+SHA-256-Digest: TbTOLOdYzRQGOUCNfzXJ7sucZmVltR1/LVvnJ9TkSx8=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/avatar/beard_512x5
+ 12.ktx
+SHA-256-Digest: X+CbearkTZsmaq229Ka450fLsX4nneaYpsDpxfhIVz8=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/avatar/beard_none_
+ 512x512.ktx
+SHA-256-Digest: Ztf2Nn9F/qJnZJuPW4wijg0svR2MHnATIWDM6QsiHTA=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/avatar/beard_type_
+ 56x56.ktx
+SHA-256-Digest: brFxiu0ngcuGo97foLsblcfNBPttufAO1/GrJW0JVxs=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/avatar/beard_type_
+ selected_56x56.ktx
+SHA-256-Digest: JR9LcSXfIspYxSM8+j132KpjApk7GyQ5TaoQ7p0I6mE=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/avatar/body_512x51
+ 2.ktx
+SHA-256-Digest: jQUwMAvEJZt/iRqYWQNMEDMbRtaijTSoornVQhzSG5o=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/avatar/body_type_5
+ 6x56.ktx
+SHA-256-Digest: NBgjammh5Lw6/c23r01oYEoB6ur2OkAtBMEiAuFIPOg=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/avatar/body_type_s
+ elected_56x56.ktx
+SHA-256-Digest: QIg2+9ZpatdIEPE6Vj2Ax7FAxBFHeyXCXFzDX3FBJ8w=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/avatar/clothing_ty
+ pe_56x56.ktx
+SHA-256-Digest: yzxAkTTxe+EdNmNKNw/xQr1/VnK08AnWXZIbSEIx4XQ=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/avatar/clothing_ty
+ pe_selected_56x56.ktx
+SHA-256-Digest: xqliridZQuq3V9Wlnx1/1llQuwMF5gOCMGOjhxboU+0=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/avatar/crowd_intro
+ _expressive_1200x123.ktx
+SHA-256-Digest: XiItSdiYSgG7KIaJF3lamBLtJityx8gQIVwhFy7hlYw=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/avatar/eyewear_typ
+ e_56x55.ktx
+SHA-256-Digest: APv538uyMor+T8Pwqejm0o2/fk/kEXvb2rIvIvl8Meo=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/avatar/eyewear_typ
+ e_selected_56x55.ktx
+SHA-256-Digest: jRu1aR/7uNIjE4PDbqcsHdkyXy/dUZfugyi7pmZknjk=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/avatar/hair_512x51
+ 2.ktx
+SHA-256-Digest: VJYBkLKNGJ60Doy75sOZmOBvkkHR4UVj/3sz3VyUod8=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/avatar/hair_none_5
+ 12x512.ktx
+SHA-256-Digest: M9W5bYh3xbnCBXC8RaeLBWzkI4cQBCSpgCLKlIvrcRk=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/avatar/hair_type_5
+ 6x56.ktx
+SHA-256-Digest: Obn+cnVbKjPmJnI5XWHb65F/svQnu6WY97iOml9MDiM=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/avatar/hair_type_s
+ elected_56x56.ktx
+SHA-256-Digest: 92GAKOwSiUNl84QBHvYbftjsWKQ/qQehQiv+ZbGYpGE=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/avatar/lips_none_5
+ 12x512.ktx
+SHA-256-Digest: n2feJB++iVheYEMB3P8RwJZsKycRgC7oHn8wXfQs/aQ=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/avatar_crowd_intro
+ _1200x123.ktx
+SHA-256-Digest: TOhxlRn6kb80zpPdnyPn6QaJm6m8PArY4fGpnABE+0g=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/camera_photo_36x36
+ .ktx
+SHA-256-Digest: wK3VytkfnWjswbJKsWwMiNubgJ0G6xl5TpwwKQVRzno=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/camera_video_36x36
+ .ktx
+SHA-256-Digest: rWGSMGzXdP1fd/zh39WJeNbdj0a7xEj/zT/DZsEDRLk=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/carmel_landscape_1
+ 80x101.ktx
+SHA-256-Digest: CfEPI+rZQv2iSJqNEJ42psiumZrxOpDHUlcFwJheaRo=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/fb_logo_72x72.ktx
+SHA-256-Digest: sdvDQeAL6zOFs+Yr5UhRZSNfI0XA2cPGSpacdTQBayA=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/headset_adjust_foc
+ us_246x153.ktx
+SHA-256-Digest: YoYdOIFbg3UZ6EuK+kYGvJS2QBFcaE3yjyzHVujathI=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/accept_party
+ _invite_48x48.ktx
+SHA-256-Digest: xwLQmW1WCJ+M8ZBQd4EcO8Bz3GsOOsMNB2JO3Zi5YoM=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/add_24x24.kt
+ x
+SHA-256-Digest: TYdhgvFUZaL5BYbfUyTFJdQrmqz+o2qn/RFrKWd2mUY=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/add_to_party
+ _48x48.ktx
+SHA-256-Digest: 5g/QPtl6517jGe1RJi/V22nSRPqSgT03wpA+b2clv8M=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/airplane_24x
+ 24.ktx
+SHA-256-Digest: tfc7iKAh6lDUJjgiDRcC+3924Ky9TljNeAKRslpVSy4=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/arrow_left_2
+ 4x24.ktx
+SHA-256-Digest: y+3AMTCAD3ENJFWNiKJF7ioUXQvDe8QB4dSj8amljVU=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/arrow_right_
+ 24x24.ktx
+SHA-256-Digest: RiFDiEsDyQ0RF8TVPfDrSmgA4y3zT0k2Rdlm84uEE68=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/arrows_contr
+ act.ktx
+SHA-256-Digest: RU86agi4fB5NnwafcdA65GW211xejhzYQHQVyjzPzNs=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/arrows_contr
+ act_32x32.ktx
+SHA-256-Digest: 8of/b7+3kHSzHtTotHrkOVuPdFNOTvk6hjivmxgsr6w=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/arrows_expan
+ d.ktx
+SHA-256-Digest: xJMPCFKl7e7VRQ7ePllhzfgjt61Te7PRZ9VT/tp8Z9w=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/arrows_expan
+ d_32x32.ktx
+SHA-256-Digest: hdAKoBjiU+u4il+VaeX3U/LYqKZM/f8bWwCrxclMoYA=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/avatar_319x3
+ 19.ktx
+SHA-256-Digest: 4xueSrt0jZctVqj9SqxWcL7KUibGsXtL299qjwK0N9Y=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/avatar_40x40
+ .ktx
+SHA-256-Digest: F+i9rO7X4ILI/yek+ZTwbzeMFcx7irRRrRlQS5X8vjQ=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/back_button_
+ 24x24.ktx
+SHA-256-Digest: LdNOAMrLr3vkboBfeoU0iODJaeIfWj2ZyoIu/Qcx604=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/backing_circ
+ le_70x70.ktx
+SHA-256-Digest: bEeN6cMP7yZtLaU+4U75G5tjqS/Q7oa/xa5NnmDbysU=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/backspace_12
+ 8x128.ktx
+SHA-256-Digest: peVTMAlTZpXBHjRyJyRRYGI68kmMc3Z50Nc1SeulqCs=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/battery/batt
+ ery_charge_0_24x24.ktx
+SHA-256-Digest: hK6a/UgYFsDSN4MdBteDJ38uj+Jn4gCB898IYyXluwQ=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/battery/batt
+ ery_charge_100_24x24.ktx
+SHA-256-Digest: Vbknu6Ve0qctw+Fj6P8ff8KfB7gbSsXhy01mWMEbYV8=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/battery/batt
+ ery_charge_25_24x24.ktx
+SHA-256-Digest: jteiMftZ+Wp077axTN5fKtAPkd63AvumMy//PNaNsIg=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/battery/batt
+ ery_charge_50_24x24.ktx
+SHA-256-Digest: hNkNc7dLnSOtzIAK2c+1tE3o2mAa8Rr9XR0iTNljcrc=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/battery/batt
+ ery_charge_75_24x24.ktx
+SHA-256-Digest: choYJLRbU2iRPqLzjv92XL8nbhswsjBuks1dzgNCUic=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/battery/batt
+ ery_charge_alert_24x24.ktx
+SHA-256-Digest: WpqT+fvy3gZqx8olWkrD7KLIeaZk8cvWInxxxJ8+164=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/battery/batt
+ ery_charge_charging_24x24.ktx
+SHA-256-Digest: Y2Dg3vfRigDUNyqLrsqgxm6W17GXs7hBnicG1PUxkX4=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/battery/batt
+ ery_charge_unknown_24x24.ktx
+SHA-256-Digest: BYy6zvJPXYsLOfdoWDYEGh9XDscCEGIfpsxI+O0JKqE=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/bedmode_24x2
+ 4.ktx
+SHA-256-Digest: bwhh1Fx/Cnrv+c7LfQHpEMIoqHGBgyjgXMSXDgjg5J8=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/block_24x24.
+ ktx
+SHA-256-Digest: D0ldL0iZwa3qLuAVKXdDjuYsDW/J8cyOGCZywgQhIzY=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/bluetooth/bl
+ uetooth_connected_24x24.ktx
+SHA-256-Digest: 7nIhwP0bYeCNI/gyfPSr/PYEoHxR59yvkL9eoWfxwc8=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/bluetooth/bl
+ uetooth_off_24x24.ktx
+SHA-256-Digest: f45eiImXNiIO154QQ14OPd8kLKZQA58BiXvbXhJKp24=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/bluetooth/bl
+ uetooth_on_24x24.ktx
+SHA-256-Digest: aMUcQBaMFPEl3s4M8eY7GZ6iT68ENe9YnGqpFRCfob0=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/bluetooth/bl
+ uetooth_searching_24x24.ktx
+SHA-256-Digest: UGB8ODWhsaiYHHJUE4/NuqDwz9jtQjYiOdK0YagKqIQ=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/bookmark_off
+ _48x48.ktx
+SHA-256-Digest: MK5l5cVN9V+tjaVx4fhCXxfFm/CwuGPBawRT1wsNoow=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/bookmark_on_
+ 48x48.ktx
+SHA-256-Digest: PdIXv5f/ZJqs4zOTcHmTgsbVuXW9P6fviNP7aMauS/E=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/brightness_2
+ 4x24.ktx
+SHA-256-Digest: Axb4aOiyQXTMXQ9TFLzoVUPwjOZIgUK8q0s1ThgPO/U=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/browser_24x2
+ 4.ktx
+SHA-256-Digest: iEdOHxO+zfUyWhF4RxegvpDAemdMfPk/R4A9qoyxlL0=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/buy_24x24.kt
+ x
+SHA-256-Digest: td3wlfLOP8sLQFTuOEEqw9WaK1UsLWz2qYEKyWaA5Hk=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/camera_72x72
+ .ktx
+SHA-256-Digest: Wr3CbH/aBGRWzCCtVuJntb6YhMUHo835Mo48Q/o8A1g=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/cancel_128x1
+ 28.ktx
+SHA-256-Digest: uBcwq4Vg7UxIx9vfTerE6Brs6cdMjsnIhznfLvN/eMU=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/cell_signal/
+ cell_signal_bar_0_24x24.ktx
+SHA-256-Digest: 6fQqWfSd5h9hGpMSkllS9DJz1pMegeujARsEs1KOnbI=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/cell_signal/
+ cell_signal_bar_1_24x24.ktx
+SHA-256-Digest: lHrfVe4KPJbllZM18Of1sk/lutvhI7Gdgb8deUnIyn4=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/cell_signal/
+ cell_signal_bar_2_24x24.ktx
+SHA-256-Digest: Q9xJNy4dWZwcQHOfCrl2hNLzh+hou8oETA5i5oVyXe8=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/cell_signal/
+ cell_signal_bar_3_24x24.ktx
+SHA-256-Digest: 0Lv4UE+KnptjN6gSSldQbXOGFZ5NC4noypc4ENDGi3Y=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/cell_signal/
+ cell_signal_bar_4_24x24.ktx
+SHA-256-Digest: 1DDp+7TfjzMcdGFNQu+5RRW7sOGF49Cre8EnQT16N3k=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/cell_signal/
+ cell_signal_none_24x24.ktx
+SHA-256-Digest: PkBX5WQQ610kt432HMI6DFWCELiBi3/BFfrwR0R/WBc=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/cell_signal/
+ cell_signal_off_24x24.ktx
+SHA-256-Digest: 9JS79OwFoXgW3uMffeQnDTQ0nIdVVwAHk3UZZmrUut4=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/check_24x24.
+ ktx
+SHA-256-Digest: 1FhhClyq4ai7WwVw8RdyU14MLVi7bYZiMkmBPFw9/7U=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/check_48x48.
+ ktx
+SHA-256-Digest: 7xi1jL0BsRCLGi/5vS/+yM1xjq9ZEAL5yzhkyfFZbsE=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/checkmark_se
+ lected_24x24.ktx
+SHA-256-Digest: l8PGaYV0VAdA3dajP9Tn+r/81/MBeg5f/IlpG3K0/20=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/checkmark_un
+ selected_24x24.ktx
+SHA-256-Digest: a93GHjH3vus1PSYlFFUiLEmQ9dcLJlGNpCVLd2+jgdo=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/chevron_righ
+ t_18x30.ktx
+SHA-256-Digest: xCqyZciT97vLdCcRreN9g2TgWVIA83K17JeN/M/dWfM=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/chevron_righ
+ t_dimmed_17x27.ktx
+SHA-256-Digest: p5LaU9ta6Haiy7jz14L/sqsB7sbni/n27E3s7/ZD25k=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/circle_outli
+ ne_128x128.ktx
+SHA-256-Digest: r8qho+GqDYdlRtVTKJcu2Y3jvsA9FukblnP7u3l6q8E=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/circle_outli
+ ne_dashed.ktx
+SHA-256-Digest: hzQPZBK9DdDx3jFZSidBsVGvrLpOExwk8bpdM+T8XFE=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/circle_outli
+ ne_dashed_38x38.ktx
+SHA-256-Digest: ivq+WNJGp9fmXd1Dw9wu10sSQ1cFsMQip3WOyxsjCFM=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/circle_outli
+ ne_dotted.ktx
+SHA-256-Digest: GtojaI9FTJltRXkECVW89r3EVUXlQvJNQcddLAxQhy8=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/circle_outli
+ ne_dotted_37x37.ktx
+SHA-256-Digest: JHVenD6U36O20pe4EvkUNteJk/uQk0ApQZ7CpQSEpyw=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/circle_outli
+ ne_full.ktx
+SHA-256-Digest: nhj3Qg7YR/vo4ux5RMUmqK7eQyUNug8vu70Oe1bIhyw=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/circle_outli
+ ne_full_38x38.ktx
+SHA-256-Digest: d1NMwNMF2FjJnj7fufwcX4//Vxykuj8yhI1H3AcSt4U=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/circle_shade
+ d_full.ktx
+SHA-256-Digest: FhkuQmHVQ4GeKRFpTJLiSZi++E8B9JQ7SIhrDxhli5w=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/circle_shade
+ d_half.ktx
+SHA-256-Digest: 5CKx3s5SsmJDN28bK9iQRhfFj8bsGSzDkj5jvv/6RlY=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/comfort_few_
+ 128x128.ktx
+SHA-256-Digest: HYvB1olED84owOP2SOxFvQ+GPWVJx8yk3cYxbsZq2dU=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/comfort_most
+ _128x128.ktx
+SHA-256-Digest: 2UV0QvggmdiZAVBh77z16kCDdGllbC+VRmup2cO2TrI=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/comfort_some
+ _128x128.ktx
+SHA-256-Digest: sn7dHaGzzUTyFfxa1yRMn9WTNiY+Dq4vSvfaOj50+ng=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/comfort_unra
+ ted_128x128.ktx
+SHA-256-Digest: pXxxjwkmyycJQIJSIL+6X8G0ESuGXihhAGWbxA7DLZA=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/comment_24x2
+ 4.ktx
+SHA-256-Digest: Q6ozkcglu/qN+at8vXkmVyFw+NHmObfgitl45KaCi0c=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/creditcards/
+ credit_card_amex_96x96.ktx
+SHA-256-Digest: I5k66L1UBcIGF5FXYFwz575fz9lgi1zH8xZUezRMKw0=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/creditcards/
+ credit_card_discover_96x96.ktx
+SHA-256-Digest: 2FnM78NOrNL9S/NLYypifiuw/rZxo3xaAYaUezHj+jQ=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/creditcards/
+ credit_card_jcb_96x96.ktx
+SHA-256-Digest: iyH0i3TSiOnlYUbXVHF/D8np6sF+0fBIgpIgdHAmOiM=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/creditcards/
+ credit_card_mastercard_96x96.ktx
+SHA-256-Digest: OQ6iS+Q38Pp5zeE6S2XcR1QVeO1ERcJ2YW2c7DQ9Yyg=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/creditcards/
+ credit_card_placeholder_black_96x96.ktx
+SHA-256-Digest: lyIP7yC/DoLjiRHMBXKSmGv2iGpQy71oj3Rgz0G9WjE=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/creditcards/
+ credit_card_visa_96x96.ktx
+SHA-256-Digest: LfphjQdbvbJX75uJympj8GItS8CXmm3ccESCc5BH/Tw=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/creditcards/
+ paypal_96x96.ktx
+SHA-256-Digest: WiFlSgPG/xpBBQGGDqUct1SKeHP8dNcnzQhBUaHRcp8=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/creditcards/
+ paypal_simple_96x96.ktx
+SHA-256-Digest: qDnmalZOvZHJ6QpPRj07P/fmFWutsUDd9mw2DzgUZ1k=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/creditcards/
+ store_credit_96x96.ktx
+SHA-256-Digest: SRGUG3cZOFsC/IYrqzOCNzcdig6ijNlSavegx2RRT3w=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/cross_24x24.
+ ktx
+SHA-256-Digest: rSd6DyIW2esjlRFF/RlWsl7fKfy4HhSL/JRVaO28/4Q=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/cross_48x48.
+ ktx
+SHA-256-Digest: 9ZKa39nlegJTaAN3GrIlRkWRYFn6LgmmoBxDlA/X0ak=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/default_prof
+ ile_126x126.ktx
+SHA-256-Digest: WjXt+h/V5Iktq+MawVreWocOqOzRP+lN6AeIhNd3g8Y=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/delete_icon_
+ 24x24.ktx
+SHA-256-Digest: AhkBaNYKCmsdEljkzdTRPLDsQ82O1EBEI4979fjpHBY=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/dice_56x56.k
+ tx
+SHA-256-Digest: e0h+ASufEAaZErEIkP5M6RT5wYGt3KdrKifS1HcSihc=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/dnd_24x24.kt
+ x
+SHA-256-Digest: r0euxvX103uneW4jE+7RmTW8j+0n0+0kJOhOM7UdUvs=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/download_128
+ x128.ktx
+SHA-256-Digest: zaGE5ll6IBsK2K3VR0Sfp7zF7qvlgzwadATnYRqUK1w=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/ellipsis_hor
+ izontal_24x24.ktx
+SHA-256-Digest: n09bZaTwPiN0Z8O5VHv+0fdDF6XBP0oNvZ7Hsv2z07Y=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/ellipsis_ver
+ tical_24x24.ktx
+SHA-256-Digest: cSN+8asXTxuwWMvIMMsNgQhLzeExRdsogXiJwb7ouUM=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/events_inter
+ ested_24x24.ktx
+SHA-256-Digest: XI0Rklamoo5/77+Gim6YAIbajuOuCHe9GTAsVEumTZc=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/explore/icn_
+ info_24x24.ktx
+SHA-256-Digest: fIlHHu12xNd/6TW0+tS1o4fPG8do3dvi2RyUwPULno0=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/explore/icn_
+ type_album_white_32x32.ktx
+SHA-256-Digest: xSIXaCMvwLaltO2ZQHHWF09jjMQgx+pTBA1QcOqwlAo=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/explore/icn_
+ type_announce_white_32x32.ktx
+SHA-256-Digest: WJ8EeHNftMDLPlCufCwfYA5Od9qlF7iaB7Css29oh0Q=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/explore/icn_
+ type_app_white_32x32.ktx
+SHA-256-Digest: ClMLB6sbv8kF5PO5GcH5Mr9gH+YETcmTfXkxocMBrfQ=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/explore/icn_
+ type_events_white_32x32.ktx
+SHA-256-Digest: F2U+66ndu3XpnRhW1IjHE433YVzeGRbQ6FSsR355hps=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/explore/icn_
+ type_video_white_32x32.ktx
+SHA-256-Digest: MrGEdk1Kc524SuKTDqRVQ3igR7Ax93lTSGBrCYTHOG0=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/explore/icn_
+ type_webvr_white_32x32.ktx
+SHA-256-Digest: VbLN+C/rtTKIEp7jB38zFOCi2Ye8QYrwMp/pz6T7FaY=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/eye_24x24.kt
+ x
+SHA-256-Digest: 238bwVCIrowTjeqVt6MWsHqq6eUO0JL1GrXewLcVFx8=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/face_neutral
+ _24x24.ktx
+SHA-256-Digest: ZkJQXaK8d4oPOzZTUutlWLpgwJoZ6ABT+HnKENWUjgg=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/facebook_24x
+ 24.ktx
+SHA-256-Digest: y2LEdfrmInE4fB8t7S7isZBBiR8zhGoc8fFcHP6O+Bc=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/facebook_rgb
+ _72x72.ktx
+SHA-256-Digest: zLoPEMhCFE5R3Nq53evV1/5TRy675uQlAFe0xvcPUhg=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/follow_16x16
+ .ktx
+SHA-256-Digest: fF+wZdS8/DOhVBfYujJDt3ao5yjtZgTO6Mk9QbwWXTE=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/following_16
+ x16.ktx
+SHA-256-Digest: ya+0D70t+8wcyR6HSwJ/6TME3IIkP6Y1LN9ETQYhvH0=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/friend_added
+ _24x24.ktx
+SHA-256-Digest: PlB+BxkIRFyCERKvlmNWjfUYzpudNtzEbDBJkWGTmOg=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/friend_reque
+ st_send_24x24.ktx
+SHA-256-Digest: OikbIrpeLABKjVohVckmCBDlYHIma0Fq2qiJQ8+I+0I=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/friend_reque
+ st_send_48x48.ktx
+SHA-256-Digest: UVT6Zjq685mvCgvOMiY1qxGsys1Xnzo5iH9MVRg0uOU=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/friend_reque
+ st_sent_24x24.ktx
+SHA-256-Digest: YQQ49Ui8JOsv/9YO87HSKi4OndC1FWS5f6WXz78ys2g=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/friends_48x4
+ 8.ktx
+SHA-256-Digest: qF4IRE8Cbrn6WSXyxAxqUUpp98TTQA3xq0stMogZ804=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/friends_96x9
+ 6.ktx
+SHA-256-Digest: X5KojJ0pWG7iT95fxacA9yKFS4VbhawLJDotYe8lccU=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/gamepad_128x
+ 128.ktx
+SHA-256-Digest: Zbjne5LNWS4pLC5XWcHYn1agz5av++pTIWlU/ZC8PrA=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/gear_vr_cont
+ roller_96x96.ktx
+SHA-256-Digest: wVtMPsLxv5em6za4pbBQ5v1ydyZ9iR5hv6lq8tW+nIY=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/green_dot_8x
+ 8.ktx
+SHA-256-Digest: NIExEBYRdf40bkush7GFk+0ycF/v4zNrWx6xyHFmjQI=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/gyroscope_38
+ x38.ktx
+SHA-256-Digest: HQpwl0e4f6r267w7fIRC9gnLJ5v3BEekgF1XVgTiAwc=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/gyroscope_62
+ x62.ktx
+SHA-256-Digest: W9p+nPeHiTl5HFmWHZSjfR/ITtlaiG0WeAD17QCabH8=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/hand_24x24.k
+ tx
+SHA-256-Digest: Ww3vhggbArDEwny47JB0AsE15rB3SeHqWZgnFcAdFfw=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/headset_gear
+ _187x124.ktx
+SHA-256-Digest: QISZGqN6BoAHbI71c5Y2EBGwVH6jIyulbgA9DJnWGCg=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/headset_rift
+ _181x121.ktx
+SHA-256-Digest: T2YUyxdiv7hovTUGGYEF+tLXl6UDftmrluOn0JID3Jo=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/hmd_32x32.kt
+ x
+SHA-256-Digest: bndBxEHfqQbi50A485GuxH9AOn0hHdZiRnUiJHS9ts4=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/home_128x128
+ .ktx
+SHA-256-Digest: bwVJnjWIda6zolUYB+TmvU2YAxvUc9Z9XmwXveiqHp4=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/image_loadin
+ g_384x216.ktx
+SHA-256-Digest: xc/9KeckqqrtyNdklVafrtpmjY6irJFpb0DrVWYpcUg=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/image_no_vid
+ eo_72x72.ktx
+SHA-256-Digest: Ed+hO7Bj2DZZIwqSQyFy20uUcKn1KLXEhux0iUGz98w=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/info_24x24.k
+ tx
+SHA-256-Digest: eEyBDxhlMxXXjW3EBpwoJ7I+aik8axB1oRqbmc5j4J0=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/info_filled_
+ 14x14.ktx
+SHA-256-Digest: 6WohcGT+lLa4wT92IaPcbYotZrQVYoCbqI559EEQ+VM=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/install_48x4
+ 8.ktx
+SHA-256-Digest: E9fOezQ0byMHPW/RfWlMd+sAlZTjuo0NUig8+ZIOoao=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/invited_to_p
+ arty_48x48.ktx
+SHA-256-Digest: 76E5bg88Zfq8ZRxJlyFVphEYWz7ONZiNrsoRFsi9boI=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/leave_party_
+ 48x48.ktx
+SHA-256-Digest: wys2eunDIc2qPCSAl8d6haFwmDA+8OddH88Hxf6DaOc=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/library/clos
+ e_24x24.ktx
+SHA-256-Digest: TM4iD0/nGK+VZn2QgrMiZJwTOA0v+8dfEDC7Ngp+z9I=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/library/clou
+ d_syncing_24x24.ktx
+SHA-256-Digest: 2qTeCNIIDiFZ0qya7TrJkUMTdl0d1x3aSIUzwvLeB7g=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/library/down
+ load_24x24.ktx
+SHA-256-Digest: GusiR+C7EDArrRDaVJFcnn49Sa2YjZYzaDr78a3TqSo=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/library/fit_
+ guide_tile_360x360.ktx
+SHA-256-Digest: wdC08K4q/sgSUHD8YMukvmAhLDBwbWXTAUJZRWe6qHM=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/library/play
+ _24x24.ktx
+SHA-256-Digest: xP92Y18W3TEEf9b4fYLB6BDAaEeqf5XdSDaSPxIq+hc=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/library_128x
+ 128.ktx
+SHA-256-Digest: UO6E6UgB+Ovk6oI0OnFqoPs06iMCGTSNAXDTODmRmzk=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/like_48x48.k
+ tx
+SHA-256-Digest: fRMAl47FewdFhf9SY2KxEzLUhZr2OTxNwK4R9npIvDk=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/live_24x24.k
+ tx
+SHA-256-Digest: ddt5njy3aY9c7/1ls70+CjBP90eMzzIbg6Eifd2jIcM=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/live_50x24.k
+ tx
+SHA-256-Digest: vx28GNMoQe+9xzqVFDSvhEWwTdwr9GxUGuOXQyGJMb8=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/lpm_24x24.kt
+ x
+SHA-256-Digest: p8L8ufkwnwmqzIhZgWfC4Moubp8/s2PHJoButmWpfP8=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/magnify_24x2
+ 4.ktx
+SHA-256-Digest: 6zI11PoEw0qO3jy/HFx3vp8XzNm+6jAVAgfhi078ZSg=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/magnify_circ
+ le_128x128.ktx
+SHA-256-Digest: L3ZiD8/NDsbH7KJk7vWvz37EhuI8Eldu8o71akmOeTA=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/mic_72x72.kt
+ x
+SHA-256-Digest: KsF0arYfMp8/vwefGkY6Q83S1SOgCg+4IuO6jifwGQE=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/mic_none_48x
+ 48.ktx
+SHA-256-Digest: 6rlfHJxaQ+MtoawM/yzI40dcToTfTcP59KPbDNjmss8=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/mic_off_48x4
+ 8.ktx
+SHA-256-Digest: X6Jg8neyuY7YRyG+9rhKIJdIQ3Ti6uookLMmTS1d0ZE=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/mic_on_48x48
+ .ktx
+SHA-256-Digest: txPo7ni67Tidsxu0RCnFhOk+XRxCQF3i5pu7PGZY7o4=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/microphone_o
+ n_24x24.ktx
+SHA-256-Digest: BnkwDbPis2tJENomDhRih+Obnp+pa01L22xiJsblQME=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/movies/movie
+ _3d_49x34.ktx
+SHA-256-Digest: 73TLl3sMGV32N6Oy8T7kmy40KqQlnsD1XrlgLMgky+I=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/movies/movie
+ _rating_g_40x36.ktx
+SHA-256-Digest: 14o9pkT5cW/qK98NszNUmG5ayo0ZOlTEGq7KF222V2E=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/movies/movie
+ _rating_nc17_96x36.ktx
+SHA-256-Digest: BpLmDDin/RWNSF7QlXJ0y6s+I2jlRIQVMiEK46LXAlk=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/movies/movie
+ _rating_nr_63x36.ktx
+SHA-256-Digest: ugPHEKw6I/XR/jOQGvh5bEBgrlS7coe/IcEsnF+U6EQ=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/movies/movie
+ _rating_pg13_103x36.ktx
+SHA-256-Digest: RST7UMbRtIVROfq878gVWoJ4OfWev0PWnTFZsfuTavU=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/movies/movie
+ _rating_pg_60x36.ktx
+SHA-256-Digest: m2kcvTiEz/T8br/V9xhYqWCRMa2Dq3/FDSqdUG2Sx6E=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/movies/movie
+ _rating_r_41x36.ktx
+SHA-256-Digest: Ph+eH3ouSkzoUPLywn/Hv0K5nCPmuQwxwCzYXBvm+0A=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/oculus_remot
+ e_icon_128x128.ktx
+SHA-256-Digest: XEKPNHmM094CkT5F5nyH79REvjiTJFH7//1hhIbyc3Y=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/oculus_touch
+ _icon_128x128.ktx
+SHA-256-Digest: zz324UFapzYFVJbjEpbzgWW88rYdkr/dhSaAbepMAqU=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/oculus_video
+ _icon_512x512.ktx
+SHA-256-Digest: z0Aufabj1mwBvKKiPd3uW7PRBVPHUCaHWeYLzzYP7Nk=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/party_24x24.
+ ktx
+SHA-256-Digest: bhLGMZpk+Ui6Jkd4pX1U/ED427zpTl0/vTAUB5HvBTA=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/passthrough_
+ 24x24.ktx
+SHA-256-Digest: IfGvEmfhIcFj3+yrMk5Hu88/C/VTUuH1Y2n/oJeoiGE=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/pause_24x24.
+ ktx
+SHA-256-Digest: DemlztEbWTnufO430DRDnOGGr0Bpx3WOctKoES+Kf34=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/pause_no_pad
+ ding_128x128.ktx
+SHA-256-Digest: 6A8L9I3BHted4/bEODnSGLvTTAC5KU2WAmvYtkCEdXI=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/phone_48x48.
+ ktx
+SHA-256-Digest: 4nFRJxX36g+PMzg6/fb2JeqGsBN38hx8C8M+NKaOd/4=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/play_96x96.k
+ tx
+SHA-256-Digest: vStgNo4uu/2EufsE1CMRPANbfSji9CiZqBal2yyHk14=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/play_circle_
+ 128x128.ktx
+SHA-256-Digest: llH2YD5X7BPbq46rwQ0kgrnvDdSMj4pVTNyvR0gwoJo=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/play_circle_
+ 38x38.ktx
+SHA-256-Digest: c8hEVlxnKb5QwFI9rj00FytGNm2tRMXMNSahDdsH7Xo=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/play_no_padd
+ ing_128x128.ktx
+SHA-256-Digest: +cVl9R5WdcxmGheIfBfU2oEB7Ssu2BiPuy3REXcTEmA=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/pointer_up.k
+ tx
+SHA-256-Digest: e8zt4mODeVl0rKgj/idSA7KalQVarJE8+cHWl0kcb+k=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/question_24x
+ 24.ktx
+SHA-256-Digest: V6ux3E6Uu56TZt+GZgInkBGeFZgd8zesW3GIr8tLtMI=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/remove_24x24
+ .ktx
+SHA-256-Digest: HgUx1L74FEQ+jvrmF3MKOqpJvJSUbraXcqMi7nyru6w=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/reorient_24x
+ 24.ktx
+SHA-256-Digest: /1dbfCnzT+TZnmsY/hi1fQJZvqrB1G/48Rp4osxFGJo=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/report_24x24
+ .ktx
+SHA-256-Digest: aoeCVBkeeSngerX7qVjGuxqWyeQO5fE2dVyEIjZM5eI=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/report_80x80
+ .ktx
+SHA-256-Digest: O8YSGQGCBg96ETqNYcvDMKHcdvhmB4Qnd+VvpnsJPYI=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/samsung_264x
+ 60.ktx
+SHA-256-Digest: k3u6g0h0XqAkVoGdQuu2xzM8QXZmt5clyxnI6zmwLC0=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/saved_24x24.
+ ktx
+SHA-256-Digest: qS5vXUsoSV48r6Kbsql7gYDYIQGgmQP+JmqNdqPqoQA=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/search_128x1
+ 28.ktx
+SHA-256-Digest: D3dqfRL3rQWk8fPl9AgnadkD2BRluSOdr45nW4Gzi1k=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/settings_32x
+ 32.ktx
+SHA-256-Digest: cOXMYtNiP0CaZMXbO2EfkgCVj49UXasBlAxx10F/wQE=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/settings_512
+ x512.ktx
+SHA-256-Digest: An2xXi91a2d0CQfrHNrSRcsXNKW79kcxdeSU9L7WDt4=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/sort_down_24
+ x24.ktx
+SHA-256-Digest: 1Pu3mC5b6/9TfHOaLeg7kWeedUUghMIKpkcPMnvNX/8=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/sort_up_24x2
+ 4.ktx
+SHA-256-Digest: y14Yd4bwPkY8sBBJ/4qZ3hcWpVA38doQ6Zjnvs7ENgw=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/stop_24x24.k
+ tx
+SHA-256-Digest: 6GL2rk9zVFXWR/KShQRqajikd2HsTZBrAITkomeuDXU=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/storage_72x7
+ 2.ktx
+SHA-256-Digest: BkACgti262hRWiib2MBM/zki6ybHC9f7xwUbCTYQBtM=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/storage_alte
+ rnate_24x24.ktx
+SHA-256-Digest: HNoqoY9LjX+V6P5T4vfvw8asSQ2UeSReju6AvrNQJaM=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/store_128x12
+ 8.ktx
+SHA-256-Digest: XN1xzb+51BKeF40Idr7D2KRyoPYWmPpw7+1g8X6pm14=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/touchpad_96x
+ 96.ktx
+SHA-256-Digest: ArUoEHfAohniQZZjyW0bhkGxq+UpczA9rg9SI5LU+C0=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/triangle_dow
+ n_24x24.ktx
+SHA-256-Digest: M78dEHt+NhbbTjgT6rjpPaHWh0lBhReoQ1FEjwqEZM8=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/unsaved_24x2
+ 4.ktx
+SHA-256-Digest: MNuLJkJ8nnPNBKI8RvmJRKi1MolRAma5cxDVgHINC60=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/volume/volum
+ e_level_0_24x24.ktx
+SHA-256-Digest: Sqp70hwr2IKr6lFGJbybNJh6Q+nEpAiqX5Ijk5OJ1J0=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/volume/volum
+ e_level_1_24x24.ktx
+SHA-256-Digest: K6gCEyXsWSTrKuv9xSEVsJPsTgfD8z35Pe4JJvWK5Sc=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/volume/volum
+ e_level_2_24x24.ktx
+SHA-256-Digest: qlkpewt33s1XX8dE9NtwCxlOHQNq/9yBcoLAcB9JIyM=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/volume/volum
+ e_off_24x24.ktx
+SHA-256-Digest: swOXU73bQiTUxKwsKniqKgz8ew3cRXjCTc1asZWvKSA=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/warning_72x7
+ 2.ktx
+SHA-256-Digest: 1C1JlAupkx8qiIkhhtg4zkvkOb2JCunEhhi7b+ZIpr4=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/wifi/wifi_ba
+ r_0_24x24.ktx
+SHA-256-Digest: CMlDz09H4IRuq3wHHaEosIx3WEPFi6PbUVvb4o08gOQ=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/wifi/wifi_ba
+ r_1_24x24.ktx
+SHA-256-Digest: ZGEr/Ym7n5703F8mFjASi7RSzX2+4ehHq+beRVimvPo=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/wifi/wifi_ba
+ r_2_24x24.ktx
+SHA-256-Digest: 7xDgOnPUktWuOstt7Ax53Piqa1E5G6PQpcYsVNIGQyY=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/wifi/wifi_ba
+ r_3_24x24.ktx
+SHA-256-Digest: DdfTr2ntkTU6Fq6l3IpOWatYAA+LB/94Q0lSxZiFxrE=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/wifi/wifi_ba
+ r_4_24x24.ktx
+SHA-256-Digest: 7tUKJZ92yOHu2tuiPKa/bOWkAxfHTcH6TxSaKeieEoY=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/wifi/wifi_of
+ f_24x24.ktx
+SHA-256-Digest: LwaKCiolkFmkxCj/F8yV9pm60r3XnLPY558lqyqajqk=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/wifi_24x24.k
+ tx
+SHA-256-Digest: 72QZ8fqA0286cambdFj/zBTQevmztfnlOILTqdPMVlA=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/icons/wifi_off_24x
+ 24.ktx
+SHA-256-Digest: fYDTYofYlDBmjljXaEbP05aF6xh+n7DL5aRsHxPYYiU=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/oculus_logo_white_
+ 93x57.ktx
+SHA-256-Digest: F6hRT1Q6aaiILu77sKlkoMg+gn2coSptk60ZwOeUbH0=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/oculus_logo_with_t
+ ext_164x164.ktx
+SHA-256-Digest: 0K8FGCUpgjCMX8IzSAf6Za6mhjp+QDvNGckZV2YXHGY=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/ota_charge_743x418
+ .ktx
+SHA-256-Digest: RGL0SG77NeanQblnUEjr8/MOS9qEFDz52rNHFZEtJS4=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/ota_clear_space_74
+ 3x418.ktx
+SHA-256-Digest: 4yKKJmi+GI9bUjLFMm2qdaEe7ytrEcPwuD7zJNBnxic=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/ota_headset_update
+ _743x418.ktx
+SHA-256-Digest: 3z0Za0kh86Xy+FsISgnaPsHIiIukh6k6kMQ+i54/Wxg=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/ota_twilight_upsel
+ l_743x418.ktx
+SHA-256-Digest: sLbeeBbYbCzJ0aTo4mocQi4J4AqeyuU45mqKKeftLpo=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/party_calls_nux_he
+ ro_582x582.ktx
+SHA-256-Digest: 2Kre1GAB8/TJCf0GB1+T8Tir0BzuhAG1/3UJdoFbfkI=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/play_store_133x40.
+ ktx
+SHA-256-Digest: L6a3C18hM1KKjBTN2pBuNDr6QMu8CL6lfC3dFoAXl9k=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/prologue_246x153.k
+ tx
+SHA-256-Digest: KiQSJDANtWfrmSc25NjtSwMYmcpuPV8/yekbf5Cp9fM=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/recenter_272x257.k
+ tx
+SHA-256-Digest: iayzSdLzyIXHk6UO4nSHIMgUs8FbCaVwIrfOdDB3xAg=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/rooms_640x203.ktx
+SHA-256-Digest: 0KTi5/cUs+FIZ84BYo03EIONQ//jNDr4TGfPDNVAyVA=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/samsung_internet_l
+ andscape_180x101.ktx
+SHA-256-Digest: BROF7kBv1pNMskXxB2UKyX0TAi/maCEIc+iutpG5liU=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/scroll_tip_124x124
+ .ktx
+SHA-256-Digest: /qbpEXZFW/lLNq7/Ew6TidJMGqP0o46H412n+dH4Y68=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/share_gyroscope_24
+ x24.ktx
+SHA-256-Digest: tIVIUucgO+Z8pxY2WWa/iLjPeIr6rGrqFmPMihDFFRQ=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/share_photo_24x24.
+ ktx
+SHA-256-Digest: v7eGY9EnJAB4NGNhK7mDYq0VUZVSYnyyPXcv2CriFUo=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/share_video_24x24.
+ ktx
+SHA-256-Digest: ivgbSDEdgKaG5dL01Li1q1I2I8+lCFPbwRP2Ut0Pgkk=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/store_three_d_secu
+ re_background_958x528.ktx
+SHA-256-Digest: vdqXIIFtFVQoTNe5HTd132fFvXCE0zLqN/TCAETF0gE=
+
+Name: assets/oculus-apps-native/VrShell/Home/assets/twilight_upsell_30
+ 6x343.ktx
+SHA-256-Digest: HdF8dXxWLVUxTaicX1vWTzAXhrwRtR4Ju2qlOIM00SE=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRCinema/assets/default_p
+ oster.png
+SHA-256-Digest: COicwKv3W1E5365zXIUgNM14bYHAFhxWXZJoCEmI61A=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRCinema/assets/tag_3D.pn
+ g
+SHA-256-Digest: SwuNM63zFlB0ZXfOhWcAqSyhZILksvw+g0dy9vpHVDY=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRCinema/assets/tag_MPAA_
+ G.png
+SHA-256-Digest: hNsYKM9MWdHDrjo6JtC3LRCWiD2AX3NeZJ6dH1bVn60=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRCinema/assets/tag_MPAA_
+ NC17.png
+SHA-256-Digest: lIavWGZQdDgakTOzRa7MDnU5K8yHtp9l2gDhhi0r7Js=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRCinema/assets/tag_MPAA_
+ NR.png
+SHA-256-Digest: dS7VQCJaYBOweoBiKHQ50DyzC7Ibt3thn6JChYf4XaE=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRCinema/assets/tag_MPAA_
+ PG.png
+SHA-256-Digest: f8AztQwd8hbpNvwr7X1TSu9AzGCUwjJEDxIFMgqVT6M=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRCinema/assets/tag_MPAA_
+ PG13.png
+SHA-256-Digest: 15NJEXAoqh/OZJgr9zZP7YuSwFgQ7HnDaVWnpjIgSlM=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRCinema/assets/tag_MPAA_
+ R.png
+SHA-256-Digest: pgqmJZLFP9Q7SRr61hIpHpo6+iXxSWDBpKJux8h3xTI=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/gallery/saved_24.ktx
+SHA-256-Digest: RF1t8gxeGp9uJKhuSAT80KCTXYWajUjUCc40ks6IM28=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/gallery/unsaved_24.ktx
+SHA-256-Digest: Om5+rFCMDGBGzupv6Yb7uQ/DHX3755ZSF2mrhB0q7lk=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/media_player/cc.ktx
+SHA-256-Digest: cpmiw8qEKUNZEQwDRdQszZ7tpojwlJewgp4s2l0ud7Y=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/media_player/media-180-3d.ktx
+SHA-256-Digest: NnAX1Vh1nh7h2xsJEJ+6821NaW4Gp+wlNRXn2H8mzd0=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/media_player/media-180.ktx
+SHA-256-Digest: w1AAM+WxTKuaYYlBA5vYXYQFzOpcdbZ+Gv48HivrK0U=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/media_player/media-2d.ktx
+SHA-256-Digest: UwvtLadiJklbWVpwyLoKKQm0cb77zWaJIdouiTW3UAA=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/media_player/media-360-3d.ktx
+SHA-256-Digest: g3I6smcXCh/eck6CMaeSYO9C6bQZSy361uNcrd9s/aY=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/media_player/media-360.ktx
+SHA-256-Digest: ZD77rg8A6QnOxNJBzsEf+UM34y7W3NegWfxp8xv29uE=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/media_player/media-3d-vert.ktx
+SHA-256-Digest: y2qiHt+nv2OAK3rZV6GiIrU/QqgWUGGK38q6broGLO4=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/media_player/media-3d.ktx
+SHA-256-Digest: Udk5xCvP2djvDSWor5JDpLby+Xf8gyRNWtdu/F1BY3Q=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/media_player/pause.ktx
+SHA-256-Digest: iqRXfL2KqAymtslYlwAtzOCR35fVYh4q48/bH3g7vKA=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/media_player/play-next.ktx
+SHA-256-Digest: 0NlKldXFmuv6j9sau4TdsgRh/HjQmV2aV9KKGygR844=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/media_player/play-prev.ktx
+SHA-256-Digest: o83GiFxbCEbxd+dAYila/iMr2oPALETegrMgAN49/4I=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/media_player/play.ktx
+SHA-256-Digest: DaY/xg0l5fAkImnYM6SxcScVfWwurPMwl36vDXJyP2Y=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/media_player/theaters.ktx
+SHA-256-Digest: 5O2rmnVLjXyiKk3SFuWHeQcG9+8yaMCHP3aZLOjU6Pg=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/media_player/volume-off.ktx
+SHA-256-Digest: YbYz1+6rhgwxHwK/unNFtSy5sLurVe0pnNByWIS/O6g=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/media_player/volume-on.ktx
+SHA-256-Digest: XN3c/a8/TweaJnGf7YY7D1LlV7cxJ49Y4SCg1jWGQsI=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/video_player/180_3d_projection.png
+SHA-256-Digest: ZgmvJarUPKbDDehvSficJexLtZOv00q20LCXHeL+dE0=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/video_player/180_mono_projection.png
+SHA-256-Digest: 7VaUy+vJywANJ+R2hDKKXNqEckLkTV8I8C6rX+BVHg0=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/video_player/360_3d_projection.png
+SHA-256-Digest: d8Ak12PEaVA0NhLHNi5NusK6bg+55W2NR6H+Af4MLfI=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/video_player/360_mono_projection.png
+SHA-256-Digest: /bEhRIKYmdsFSlxEOTIO4FE7cFrCw76FXi9honPMS44=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/video_player/ant_theater.png
+SHA-256-Digest: 0p7StIWP1DK6XA00W3dZsWzJjaISuKvCsT7imq9+myQ=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/video_player/back_icon.png
+SHA-256-Digest: OO7JthAnEAmz2b0cHjE+9NqDr4v4Sold+A1kkH5Z3O8=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/video_player/cinema_theater.png
+SHA-256-Digest: B1/tp0628R6rxffX5kqgA4ICRWaeLRhWvdwP/XsDi0M=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/video_player/home_theater.png
+SHA-256-Digest: 2z3zcvD7gm5wMdpa/cG4uNzxWIJ5pK6kHWOpFph6z+I=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/video_player/moon_theater.png
+SHA-256-Digest: YQyUBKmLHOr4io6o/2Hx4ViPsa4Gb60mzIYfF9Dtv2c=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/video_player/next.ktx
+SHA-256-Digest: h733ylIXJtgBc4LEN0ejkvqnCudn4GssmwS3Kc6eO7o=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/video_player/pause_bottom.png
+SHA-256-Digest: fhe6rnc69V6CFLYHUzfgTuX+EsRPclUAzgNAxtd0BB4=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/video_player/play_bottom.png
+SHA-256-Digest: bF12bNo0fpAHr1XNuwv/iczb00+pA9SaI9qne38xkYk=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/video_player/previous.ktx
+SHA-256-Digest: 7JR+fr0PCD34tVOWuMu9m7qUQB5a8TfQ0zX99/lvijY=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/video_player/rect_lr_projection.png
+SHA-256-Digest: VQGcGfqXQyORtuuoTw1xExo6ZYTPo10Qp5zVqA5JlDc=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/video_player/rect_mono_projection.png
+SHA-256-Digest: MIw2/SzgBRwLpvpkenf/TApD+avmksOBvNAohJwDMNE=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/video_player/rect_tb_projection.png
+SHA-256-Digest: NdC3ecyuvfZUWSOyZ8STpDEQyYo0ft/aVfaCmxK7UlE=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/video_player/void_theater.png
+SHA-256-Digest: V/0WMeJiH79421SEx+3v1akQ6nPMA5FqiHUE5qlDPFA=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/video_player/volume_mute.png
+SHA-256-Digest: My9Wcj9e8ObBzEmM1xYJZ+Sa53371tUHlK7zhxqtB34=
+
+Name: assets/oculus-apps-native/VrShell/ReactVRPanelLib/ReactVR/lib_as
+ sets/video_player/volume_unmute.png
+SHA-256-Digest: C1JkdoGSQ8vSDcmgH6sDdstugmF4OcpoRuxnG4YE0Ts=
+
+Name: assets/oculus_logo_white_93x57.ktx
+SHA-256-Digest: pbBzrppgXn2I3IRHIjPMUraekVwcpX6wFfqghm0Tllo=
+
+Name: assets/oculus_logo_with_text_164x164.ktx
+SHA-256-Digest: D8b66ZXi1xNX5aCQw4swuZpBKNGVngNxsorWJ2fqKns=
+
+Name: assets/ota_charge_743x418.ktx
+SHA-256-Digest: TVTO0dEAIPYCbmZA9iRhNguj68MWJEKGVOkFMvJeq+Y=
+
+Name: assets/ota_clear_space_743x418.ktx
+SHA-256-Digest: WD4JAVaSAqTAifjc+U3IEGVVRT/e8I21MhXFqJKHR6w=
+
+Name: assets/ota_headset_update_743x418.ktx
+SHA-256-Digest: QZjwVBA+GK8D9PSIyVmtL30chkqEg0R/QaP2y+CoEXM=
+
+Name: assets/ota_twilight_upsell_743x418.ktx
+SHA-256-Digest: A6Zd+s8FVTYMGP6sBBnSsihuAInQUbsLUARtOC8hDi0=
+
+Name: assets/party_calls_nux_hero_582x582.ktx
+SHA-256-Digest: MRJVDeZphJG6tRP8a1RWM/5UeOSsZxsbOmpGVw3mMJk=
+
+Name: assets/pl_PL.json
+SHA-256-Digest: mmB5VgZaFpb4R6nFyk257LNAnIfiAv0ztyCj5H+lMuk=
+
+Name: assets/play_store_133x40.ktx
+SHA-256-Digest: NIuvcE3/KRMJFKMlKkFyGnGOUj0UWc2zA9G0xsy+TPg=
+
+Name: assets/prologue_246x153.ktx
+SHA-256-Digest: VqafWebobxCjkPV/kSKm7Go4rQWeKuNMWHcwuOoIeZY=
+
+Name: assets/pt_BR.json
+SHA-256-Digest: BrzmvJFKFmkChEGLnTmx0jzXFkMpD8aFFAsiAwKo8vE=
+
+Name: assets/pt_PT.json
+SHA-256-Digest: E+LP/w2JRNgRtpfIQ4F7pMnbGXdrtX1KQoFKfZHIIxk=
+
+Name: assets/query_hash.txt
+SHA-256-Digest: uN2A3TrFVS7ZmYfHP1qLmRDxCmZM1w0nSAHDNhEKF4M=
+
+Name: assets/reactnative.ACCOUNT_LINKING.bcbundle
+SHA-256-Digest: zi1rqxj/zD0mZuXVEv5A6EQotQxoOw3gPBWwKbrD15M=
+
+Name: assets/reactnative.AVATAR_EDITOR.bcbundle
+SHA-256-Digest: oy1pMmW5t5xEU7HNQqSHHM1Nub5ftj0elybZHHJ6d98=
+
+Name: assets/reactnative.EXPLORE.bcbundle
+SHA-256-Digest: oR6uNOV0h/vaEa2YWrvMJOOhLqjV9dXjAvh5FE7/kWU=
+
+Name: assets/reactnative.FIRST_TIME_NUX.bcbundle
+SHA-256-Digest: TSjVa9tghQkkMVQG2S4QhrDFZlD0HHoeOzJzZ9ujmXw=
+
+Name: assets/reactnative.HOME.bcbundle
+SHA-256-Digest: kEIN6ix/nfsPxpj+QEFznU1VvoS4YOT9QC8LLKsBfpk=
+
+Name: assets/reactnative.LIBRARY.bcbundle
+SHA-256-Digest: QC4NxFzUHwiAYLm3KOkkPk3FkxUqHgpoiUjOQLcRdvw=
+
+Name: assets/reactnative.LIVESTREAMING.bcbundle
+SHA-256-Digest: 0WtE2559UaOEW5D56EKqp3MtK8CRD6JZ6HERKYK0tSs=
+
+Name: assets/reactnative.SEARCH.bcbundle
+SHA-256-Digest: Uudhvqg4LqFslsvTrMRM9LAsbKmSq5m1zPIiN8or7dY=
+
+Name: assets/reactnative.SOCIAL.bcbundle
+SHA-256-Digest: kt9twvt/5QdGZYd52JDUQaUOWUCQaahaBc4J86J/zJM=
+
+Name: assets/reactnative.STORAGE_MANAGER.bcbundle
+SHA-256-Digest: My+87T6sNcSnNx6XnonpeiDTsbjK/OAPtZJs05K9q38=
+
+Name: assets/reactnative.STORE.bcbundle
+SHA-256-Digest: rzoZQ4kbIHWxPeY1DpY2vqojZtZ4tT7xi9D3lMItYfQ=
+
+Name: assets/reactnative.SYSTEM_OVERLAYS.bcbundle
+SHA-256-Digest: LlwClsiaZhm/v8L4CqpMh3zdR/x/i6CGvCQQony+448=
+
+Name: assets/reactnative.SYSTEM_UTILITIES.bcbundle
+SHA-256-Digest: Oxvs1wYUyu72oXXyJF7oQp1VkhWQiYfe43rZNfaJTLM=
+
+Name: assets/reactnative.TRANSCRIBE.bcbundle
+SHA-256-Digest: 1PT6vaJ93lA82lpBRafgX4ijiuLt8eXUw++QaLrT26M=
+
+Name: assets/reactnative.USER_ADMIN.bcbundle
+SHA-256-Digest: qdgQI1NtOzDtgG65lfs/dwTnMz8rOWfmZ/UoTlie6SU=
+
+Name: assets/reactnative.VRNUX.bcbundle
+SHA-256-Digest: im1s9vX2B45yZsRUUgPjVU7UvxJ6Ayzvs7F1hGRQ2Qw=
+
+Name: assets/recenter_272x257.ktx
+SHA-256-Digest: 2VqsFfdSCXO9cbWsYNzbtObwuoXGVFewVgoHSY69KP0=
+
+Name: assets/ro_RO.json
+SHA-256-Digest: qzi+o/weSiRKL4QtjuHIpOCp7dPueqeMNh1b2A0OlYU=
+
+Name: assets/rooms_640x203.ktx
+SHA-256-Digest: mT8s5ToI+PEjg7cib/LSUU3lrg9R99w0DlW11+NZafw=
+
+Name: assets/ru_RU.json
+SHA-256-Digest: JiSGwPonf10ykEn4JD6lW4MwoudrIaE7j0g7iSqt6YM=
+
+Name: assets/samsung_internet_landscape_180x101.ktx
+SHA-256-Digest: NvecC2qgjLzYrltCr8XSVIadng9lZu15TYQQ9uDOh3I=
+
+Name: assets/scroll_tip_124x124.ktx
+SHA-256-Digest: r1cDy4FoJtEscHuh0VUpZOHTtAwBtx/1jlZHO6bPA7U=
+
+Name: assets/secondary-1.dex.jar
+SHA-256-Digest: KNEfj5yJfuiLoegBsR9OOhB2PcVpCKWlTw8PQd125Jo=
+
+Name: assets/secondary-1.dex.jar.meta
+SHA-256-Digest: zM1BdAaSaKcygbfk3BPHk9mVX24ZEk8pH/mGeLCcKU8=
+
+Name: assets/secondary-2.dex.jar
+SHA-256-Digest: mYqrdn2N21kVja1Qpivz23untiLkN8MLoXYkJp2mFr8=
+
+Name: assets/secondary-2.dex.jar.meta
+SHA-256-Digest: I1Ip+RzNPd0fGjT63daRnadBbLKFssZw3JzC0xn62mE=
+
+Name: assets/share_gyroscope_24x24.ktx
+SHA-256-Digest: 4SIF72pX3MVA7upH3Bjiu8vTeJfFvU5PmX2aGTI0EOM=
+
+Name: assets/share_photo_24x24.ktx
+SHA-256-Digest: C97Eaw222GUHKFoKEQkdgTU982Lfe7Y7LlzJ/LoNI+A=
+
+Name: assets/share_video_24x24.ktx
+SHA-256-Digest: ijOPk9N2Mw3Ed7RJ8DQNEKCfFWX0BWMlhSEUevmADDc=
+
+Name: assets/spec_to_param.txt
+SHA-256-Digest: Q3t2/Q9BTOlnkjaMckU7pAorf53H9bt1IqPkdpeQWxU=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/add-24.png
+SHA-256-Digest: 0W1AGLrcEIWZxttfhm+zLSTYXERXNZSKzFw1T0yDuHI=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/arrow-left-24.png
+SHA-256-Digest: z+xzmOw+FQ4O7lFDIQ20XxJnBUhJz08Xfb/8mOCOhMg=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/chevron-down-24.png
+SHA-256-Digest: yJ8cAqyuXljo9NOe1ulx4BGYX/VuFDcyJEaAWYZs2VA=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/chevron-left-24.png
+SHA-256-Digest: yOIlnfZshwXrDmohzbYqk4OfahZrGEaUm9xEqTloG+w=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/chevron-right-24.pn
+ g
+SHA-256-Digest: yuQ7GXZ05Gqfbq4LE9tDPkH28bGFdws27u8Zp0uEaOM=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/chevron-up-24.png
+SHA-256-Digest: xICtdUsBU1p1icdL/AQ7lrfJolGEC+8w3ii7JMnWhOk=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/close-24.png
+SHA-256-Digest: Ljc7dvIvChjNZ+Ogl0shTq4FTDGZNXi0lub45uoc8M4=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/comfortable-24.png
+SHA-256-Digest: wQGldj3unHAG8I62ea8q5cj6UOycHVhrsl56BZWMKqs=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/download-24.png
+SHA-256-Digest: 78e+6kd/htGF+XDcpBRSHebOw0Ipr+3tZgovucwwJQw=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/intense-24.png
+SHA-256-Digest: up9danydm2Ihg4ZLhvh+h8ZjCxBy/ycJBsej67mZF9c=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/keyboard-24.png
+SHA-256-Digest: Xjh9LjSfclZByHA0rAAexvAvf62jYTDCwPm6v4ktn38=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/lock-24.png
+SHA-256-Digest: BBcTmzgvcaHG6MeyjUCQdX6u070eexpwv9/YiHTdeJg=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/minimize-24.png
+SHA-256-Digest: tGNcZa1Gvox7oElX0lzWVFrE+aUzLJviEAjkLbgbH0s=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/missing-image-24.pn
+ g
+SHA-256-Digest: xsAeM1bVD590Tgk6YoxNzE9XJQ+og3MoxtcfdZvaZzY=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/moderate-24.png
+SHA-256-Digest: 3qeAPFFinQNCsKkAWnkcj/uaQFw2yLreG9CQmW3HoEk=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/more-horizontal-24.
+ png
+SHA-256-Digest: 8VxUN0U475U5GE4nd3VTQYuSTXFCwUwwp72Qp1/1A2s=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/oculus-logo-24.png
+SHA-256-Digest: VNi27CBs2E55UTuChTABNXIx16S4m2vsmQD+xw9qJwY=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/pause-24.png
+SHA-256-Digest: nGjwpVEUNhwVgoBxz2qgHLNrxvGHwmjUy8qBMpK1MrA=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/pin-experience-off-
+ 24.png
+SHA-256-Digest: 7K2FG5qYE2gRgpSkSNCnWiGeMPBAvBwL8m1ECHscjZU=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/pin-experience-on-2
+ 4.png
+SHA-256-Digest: JNjiw5dWaOJZgqVc6pIULW42PHWU3aWW15kbtIhyKec=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/play-24.png
+SHA-256-Digest: 85a6Rb8g+kgpgnztJVETqa6DEvXcmIhTdkUZ7/+iNvU=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/radio-selected-24.p
+ ng
+SHA-256-Digest: wghmG5IoBDRpBluGyxC4wZqyAVCuntZ8DwtFdPaGDX8=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/radio-unselected-24
+ .png
+SHA-256-Digest: r29FJCSvhM3PxgahlFOVlSWzGzwoEJ/d40GB7DqIRrE=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/remove-24.png
+SHA-256-Digest: Kcqy3DawLidWYrs6XZm7lMOaTguLOUpEIbxeXXEn94M=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/reorient-24.png
+SHA-256-Digest: Sb38dNx34GJCVzfMlCViFfWjuj3pWL5XD9iqp9u5Nq0=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/search-24.png
+SHA-256-Digest: w4oKYm2juRmxk8b4wd1tIGobNu+K9RYFlOl1hHiJ3w4=
+
+Name: assets/src/apps/dash/asset_files/icons/24_x2/unrated-24.png
+SHA-256-Digest: /KvyU7JqbeTqEW5bQSIg+paaGO+p43U4CpqYBcteiz4=
+
+Name: assets/src/apps/dash/asset_files/icons/360_x2/store-360.jpg
+SHA-256-Digest: ZyqyWUGFBLIcQ//DI0yUuJ8aQmyBNMsQmR46UJfPA1E=
+
+Name: assets/src/apps/dash/asset_files/icons/360_x2/worlds-360.jpg
+SHA-256-Digest: QPgmP0fjaJQ+cIOxkDKE3UXwr3aooBRwphhxYx6TdPI=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/command-center-48.p
+ ng
+SHA-256-Digest: mfTW5HZurSbawbsaLnWLbn/klO9l5wFhDr+iYEAZuS8=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/desktop-48.png
+SHA-256-Digest: zXD6rM6E2HRrzvwQ6koa7I+TM9I1y5PHghix7UqoUF0=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/do-not-disturb-off-
+ 48.png
+SHA-256-Digest: ltheCkJnx1idY7PsCG5KlMwl76HZfZhdLrUKdyjxh8s=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/do-not-disturb-on-4
+ 8.png
+SHA-256-Digest: lDfuCa9tZoBKkqA2ARQazfWNxZYCzv0FCJ0KA+eIEco=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/events-48.png
+SHA-256-Digest: CT43z2HWF5ZbHzFLJ6vml6QG56i1bkUIeKOy5wHRDkE=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/gamepad-48.png
+SHA-256-Digest: OYFtKbZp24XNoV3TkQDs/LuHcwzGkSVX542pZ5KBHBU=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/home-48.png
+SHA-256-Digest: pKLgNhYi6ms/hskJTR+iv8ZCK8N45K+5wuOraIbYhtA=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/install-circle-48.p
+ ng
+SHA-256-Digest: 4UuqTWh6nS2fA1oEnAdb9hAaRKqWxPfe77FvzfzcpDA=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/lens-adjustment-48.
+ png
+SHA-256-Digest: wfDHWnrc2Ki19lISDF51yhlA/Z5TwT0MfBDSUEzRwtM=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/library-48.png
+SHA-256-Digest: S6aMpJOc1EJVHnnK+J0j08TaGMfpAV1sDO+7f5jfxns=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/microphone-off-48.p
+ ng
+SHA-256-Digest: FzvUcMwlv/U7Co2wMGz1ubvZn5NvAClm/xxFV+k2uLA=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/microphone-on-48.pn
+ g
+SHA-256-Digest: I50zvu2yXldJhNKyDCKL7EXocJ43rYhYnyfGU6U8OOw=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/notifications-48.pn
+ g
+SHA-256-Digest: O6aquOZ8fgpFKGTQEs9Pk2PD/juC7w9RWN89/iIHcjE=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/oculus-remote-48.pn
+ g
+SHA-256-Digest: ln02PJ/u0AqxDIb1qTiYvVcYSbBv5bDfH+BGRFIa7Lg=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/play-circle-48.png
+SHA-256-Digest: cJqpdMKVV7B7alVlHey5ccyHnV2UWlfDrO/+uf8Nn9k=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/recent-played-48.pn
+ g
+SHA-256-Digest: ws1pwYDD6g0z6VEn9a7grbOJswHdLjK5FNdOpZwo3iQ=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/settings-48.png
+SHA-256-Digest: Q1c3P27PThUc6UIZyDnzkEYrcbSavJRxWBKZ2zIBLPo=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/social-48.png
+SHA-256-Digest: jJcCXqN22dClBSMT967WR0bRClGx+RcKbYQ6K+GU+94=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/store-48.png
+SHA-256-Digest: xmITg0PtpQPh1pn3bI7YKeYDQWw9jeE+j0wTsuL6LIg=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/touch-left-48.png
+SHA-256-Digest: 9ysp27eRBz+vWPa4aideH598Uc2UjQYtZCHchOnlVH8=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/touch-right-48.png
+SHA-256-Digest: rlFXk/T5B/NY60AkIxU6OSUS66HAbSejNC6r72g3osw=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/volume-low-48.png
+SHA-256-Digest: ujwsKm3nlUscmVOy74QAOjoqIAXzM88aJcabkVchkhU=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/volume-mid-48.png
+SHA-256-Digest: di52cPajbPD/AP0RJiYAr7xOAEXB9ZKNSA36HbfapBg=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/volume-off-48.png
+SHA-256-Digest: QlfqxxyaN6XsQtQTez7qnPl8GygaVKnhc8dyX9vpoyc=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/volume-on-48.png
+SHA-256-Digest: mKMXhg7a6KuyVs4VfmcAq5FUDDOG1CS2lGYWrU4MhBA=
+
+Name: assets/src/apps/dash/asset_files/icons/48_x2/warning-48.png
+SHA-256-Digest: cd/6px8KHcEm26qRRzzJCdtQqt8wHBJeVARXLxtED1A=
+
+Name: assets/src/apps/dash/asset_files/icons/Misc_x2/controller-menu-d
+ irection.png
+SHA-256-Digest: 3kqeT4obu8KEedIJWBt3pdSPvxSw4rmzFLKSsSXC+ig=
+
+Name: assets/src/apps/dash/asset_files/icons/Misc_x2/cylinder-grid.png
+SHA-256-Digest: fRYl3S3FYZJgOloNLYHd4d9ir1dlZF0Oa12j4X1f0D4=
+
+Name: assets/src/apps/dash/asset_files/icons/Misc_x2/default-user.png
+SHA-256-Digest: VljPaGxEv6zb89X4l3lUMnkNyyxKYQ1nq/KYiV/GJ1w=
+
+Name: assets/src/apps/dash/asset_files/icons/Misc_x2/guardian-floor.pn
+ g
+SHA-256-Digest: CiLz0dN/LGLsPWGo7OXPi/2P6JPDA/+nXcoUrja+MNA=
+
+Name: assets/src/apps/dash/asset_files/icons/Misc_x2/guardian-off.png
+SHA-256-Digest: 7CBVsk0s8PHs3fVCY00ciMy70oZTTUMBmx3O5NsMWBI=
+
+Name: assets/src/apps/dash/asset_files/icons/Misc_x2/guardian-on.png
+SHA-256-Digest: P+T/KlV3NoZ7z52C/desscV/qfIxY1pmvU/AGTHV4bM=
+
+Name: assets/src/apps/dash/asset_files/icons/Misc_x2/main-panel-indica
+ tor.png
+SHA-256-Digest: +NsJ6DGdRwlPzWBxNsvcdDufM8IBDZ6XPdEwO1yKutE=
+
+Name: assets/src/apps/dash/asset_files/icons/Misc_x2/store-landscape.j
+ pg
+SHA-256-Digest: whmygffB8WYVdKXXGeCyIW3k+Le6jaff9cNiiiXPgGs=
+
+Name: assets/src/apps/dash/asset_files/icons/Misc_x2/tooltip-arrow-dow
+ n.png
+SHA-256-Digest: xsFXNk52XdAocz/JnZ+sk7OgtOuy3rjm7vIfCFCSZF0=
+
+Name: assets/src/apps/dash/asset_files/icons/Misc_x2/tooltip-arrow-up.
+ png
+SHA-256-Digest: Q8YJb2cAil6OM50g9aVwwFsHSyQvHVDEBUGcXSqYn7M=
+
+Name: assets/src/apps/dash/asset_files/icons/Misc_x2/worlds-landscape.
+ jpg
+SHA-256-Digest: q037Yf08KIS+/M1t2xdRRvQ/eOeyINg38qhXarSATuU=
+
+Name: assets/src/apps/dash/settings/headset/assets/volume-high.png
+SHA-256-Digest: yZuRHmbPjxS+d9uQGV4Nco5mBTMbJpts0e2kBoPZJ0Y=
+
+Name: assets/src/apps/dash/settings/headset/assets/volume-low.png
+SHA-256-Digest: s/mTMWEIfuAgwxrFJkRWmE9h+abJwrTNcmkHz8AeDRE=
+
+Name: assets/src/apps/dash/settings/headset/assets/volume-medium.png
+SHA-256-Digest: coCDvHrKvzHCgPQ4uK5AKdv79DJLFTPD+d5ZLLeanZk=
+
+Name: assets/src/apps/dash/settings/headset/assets/volume-off.png
+SHA-256-Digest: jDal0jBZIfloMlXGUSNOpHLFzPg662MM/GC5P0ntylc=
+
+Name: assets/src/components-rn/asset_files/tooltip-arrow-down.png
+SHA-256-Digest: K6LnF52ppYcLcZtDiE3FVlQgvKVtVyxawHmJj1WMQY0=
+
+Name: assets/src/components-rn/asset_files/tooltip-arrow-up.png
+SHA-256-Digest: 27vqMUFd8jCLR71xA/NpHH7pqNUrUbJflHASgs0z7Eg=
+
+Name: assets/src/methods/notification/assets/default-achievement-2x.pn
+ g
+SHA-256-Digest: sUm29lbqlTjK0ieQ7iFj68Scc5fPT7PQtf4JpaRec9o=
+
+Name: assets/src/methods/notification/assets/default-app-2x.png
+SHA-256-Digest: DUJtioYq+HNn3Z6YhgsU0zHNo2zmrFjLdeRERjCxXBc=
+
+Name: assets/src/methods/notification/assets/default-device-2x.png
+SHA-256-Digest: um8NoFPdGev27BoMatHaN1kERWnqQ3EuhdlV72CwNq8=
+
+Name: assets/src/methods/notification/assets/default-user-2x.png
+SHA-256-Digest: uAbXGWvHAViCH0nFgmwOLuSkmzcwCpe6n4LTNGm2LIM=
+
+Name: assets/src/methods/notification/assets/gamepad-2x.png
+SHA-256-Digest: ORtX1Fre/PaTqNHTCsgZ1ygRbiipPOpwIOuRRz7CQtk=
+
+Name: assets/src/methods/notification/assets/remote-2x.png
+SHA-256-Digest: h0Z9/oHHpVlOnONb3QbEze1BgQeMg+MSIhAZQiwB8Bk=
+
+Name: assets/src/methods/notification/assets/rift-2x.png
+SHA-256-Digest: HJWR4nLI06+miBOT1UguIlS87ibkLfQYJqPrJfRJD10=
+
+Name: assets/src/methods/notification/assets/sensor-2x.png
+SHA-256-Digest: 1lkNxwzwtw0U7fWgjlcikqBaEM00yk8CXn6LBPZKMv0=
+
+Name: assets/src/methods/notification/assets/system-2x.png
+SHA-256-Digest: eplh7XHKa+0HLONZcAtrPC9JAQwx53aKOnlePM+YypA=
+
+Name: assets/src/methods/notification/assets/touch-left-2x.png
+SHA-256-Digest: 1YmW3lBY8jmRCFbcdivXDqvn6V7uQE8wtRV3Mdcocm0=
+
+Name: assets/src/methods/notification/assets/touch-right-2x.png
+SHA-256-Digest: 8ChQ50n8IV6ZNEAa3p/zStJ1B/zLk82H1o4rLGSYvw8=
+
+Name: assets/src/methods/notification/assets/vr-object-2x.png
+SHA-256-Digest: /rB54y1DypIP7DsCTTWxEX1phI7xSvufh+BgHqXd00E=
+
+Name: assets/src/ocicon/assets/oc_icon_add_1_24.png
+SHA-256-Digest: zs1FUaaMPjNAKeLkQDD7gsIMf7O221zm+LfwrVJKHdQ=
+
+Name: assets/src/ocicon/assets/oc_icon_add_1_24_fff.png
+SHA-256-Digest: xzqqNkNBrQrdxuhzgXBFbgKsTRqXhYV1oqAT68/xLOs=
+
+Name: assets/src/ocicon/assets/oc_icon_add_1_24_ffffff.png
+SHA-256-Digest: 7mbUMXAw3jdLgHoi0zUNu/UGtPQRY9IVMKXhQGZTy6M=
+
+Name: assets/src/ocicon/assets/oc_icon_add_2_24_fff.png
+SHA-256-Digest: AGIwJ5Ilk29P3ZAxbTsbgkrKI/IhZWUVVdumSWrzNTg=
+
+Name: assets/src/ocicon/assets/oc_icon_add_2_24_ffffff.png
+SHA-256-Digest: S2SHZpAv2ZhnsZv4WG7GHhSVzZaYqTJCv/XEcw4O5is=
+
+Name: assets/src/ocicon/assets/oc_icon_add_2_48_ffffff.png
+SHA-256-Digest: zzeQJbjFwv2TF87nuVwKdbZWVvjG+PT0JePCLP4RcLU=
+
+Name: assets/src/ocicon/assets/oc_icon_add_friend_1_24_ffffff.png
+SHA-256-Digest: bVb+Zjlc9n39plJTlSEp/9Wa4n8AYzS4EGXJQ8hFElY=
+
+Name: assets/src/ocicon/assets/oc_icon_add_friend_2_24_47d147.png
+SHA-256-Digest: odVpZikjxIXksVr2tEec2PWe4GzNQkX/073P1Q0kJpo=
+
+Name: assets/src/ocicon/assets/oc_icon_add_friend_2_24_ffffff.png
+SHA-256-Digest: mygBIwTKYQ/CU1wJRWQQMrMmUDHBFvb9Xumsdz/yFc4=
+
+Name: assets/src/ocicon/assets/oc_icon_add_friend_3_24_ffffff.png
+SHA-256-Digest: ZWhWvwQRPrQEUJjPBwA3KR1dk6eF0ErmunWL/jzOmkk=
+
+Name: assets/src/ocicon/assets/oc_icon_add_party_1_24_ffffff.png
+SHA-256-Digest: +jk4I9RDkxFhKphSa+1/snWin3a/s92SHASwjJ19cqk=
+
+Name: assets/src/ocicon/assets/oc_icon_apps_2_24_ffffff.png
+SHA-256-Digest: z1dPeccL6EVNt6GDLP9N2yRt4DysrcBHQRaQxTPKVFg=
+
+Name: assets/src/ocicon/assets/oc_icon_arrow_down_1_24_fff.png
+SHA-256-Digest: RfS83/J0/Lt6C22huaBux+6khAMlTgbufW+9183mH7o=
+
+Name: assets/src/ocicon/assets/oc_icon_arrow_down_1_24_ffffff.png
+SHA-256-Digest: 4VUt85Cw6gT95m8fcF08gf0gvvBZR7j8IpHxZ0i701E=
+
+Name: assets/src/ocicon/assets/oc_icon_arrow_down_2_24_fff.png
+SHA-256-Digest: 9M0a55sGd1gKDJKcr8eEeubZqDhFXnc8LjPV35NyxMg=
+
+Name: assets/src/ocicon/assets/oc_icon_arrow_down_2_24_ffffff.png
+SHA-256-Digest: IQydchwsqcJERf2r2DQi1rmURa2Zg9IFCY3KWcqo2MA=
+
+Name: assets/src/ocicon/assets/oc_icon_arrow_left_1_24_ffffff.png
+SHA-256-Digest: Ab/DL6yDwnYgl7+73csFq/8Hhj7czkR3yC2VQFWsfxc=
+
+Name: assets/src/ocicon/assets/oc_icon_arrow_left_1_48_ffffff.png
+SHA-256-Digest: mDdW2GPH1AK9LfpajL/LtR6K54Q8+WYHI+QCGyTSePQ=
+
+Name: assets/src/ocicon/assets/oc_icon_arrow_left_2_24_ffffff.png
+SHA-256-Digest: oXX4WuQe/kGAn+PI2cINccnVFIWZhherCLifDnAvuog=
+
+Name: assets/src/ocicon/assets/oc_icon_arrow_right_1_24_fff.png
+SHA-256-Digest: bRTqPS+DICx2hCn+8EMCTM5pkEFdQLkYxHcFSi9l4tw=
+
+Name: assets/src/ocicon/assets/oc_icon_arrow_right_1_48_ffffff.png
+SHA-256-Digest: ZMWRWuEXlnBj3jeD9SqUxl5roPmpcuJzay+Uk8/7SD0=
+
+Name: assets/src/ocicon/assets/oc_icon_arrow_right_2_24_ffffff.png
+SHA-256-Digest: IbxXOUToOpuD5lbfkKr2qjHSxEoQLHQLQ+vUE1TuaX0=
+
+Name: assets/src/ocicon/assets/oc_icon_arrow_up_1_24_ffffff.png
+SHA-256-Digest: 9IZiqxW51c/u6LWRBCZf+2XO6QgbKBqWLoGcKhAgQmY=
+
+Name: assets/src/ocicon/assets/oc_icon_battery_charge_1_24_ffffff.png
+SHA-256-Digest: OaMK0rWjgPk0+yN7DZ64/6xtZthN6gOzS9MlX/JREXM=
+
+Name: assets/src/ocicon/assets/oc_icon_battery_empty_1_24_ffffff.png
+SHA-256-Digest: qG/zg8pM3E8dnws40ajpsC5+1DON7mJDh3YAuHt82zA=
+
+Name: assets/src/ocicon/assets/oc_icon_battery_empty_2_24_ffffff.png
+SHA-256-Digest: IQXRLD0uMom8re1L1yr1IqxQrRxyG/5hNR3q1BvxBAk=
+
+Name: assets/src/ocicon/assets/oc_icon_battery_full_1_24_ffffff.png
+SHA-256-Digest: S+wWvuQ4fF5McUn67PxfWPC46kEU1cAxx0JiNu6yKl0=
+
+Name: assets/src/ocicon/assets/oc_icon_battery_full_2_24_ffffff.png
+SHA-256-Digest: BLhMiVLlIeZFHFfgBkYVJM41NMcdDkJHQki52Dcdxo0=
+
+Name: assets/src/ocicon/assets/oc_icon_battery_low_1_24_ffffff.png
+SHA-256-Digest: y7ODxr3kCxrtTn3KVFJTjMa6IZCYyrAS8F/AnPZzHVQ=
+
+Name: assets/src/ocicon/assets/oc_icon_battery_low_2_24_ffffff.png
+SHA-256-Digest: T+wFsI04WfJsNuXCwLJfWCfrWIIvOgOCVN+9fJqEXNA=
+
+Name: assets/src/ocicon/assets/oc_icon_battery_mid_1_24_ffffff.png
+SHA-256-Digest: lmUoAHwdHuZW2EOQYyR8y2ReUnzJNswB5lsRoSj2vpA=
+
+Name: assets/src/ocicon/assets/oc_icon_battery_mid_2_24_ffffff.png
+SHA-256-Digest: w+ZTmaQocyORPyh2xgoxZlV5bbstfezCUX4A7yG9DAM=
+
+Name: assets/src/ocicon/assets/oc_icon_battery_midhigh_1_24_ffffff.png
+SHA-256-Digest: 92TJVrntWzv7PmUvl2lS8FmKvFlftOqN/Wrq/EbhfX4=
+
+Name: assets/src/ocicon/assets/oc_icon_battery_midhigh_2_24_ffffff.png
+SHA-256-Digest: JM+H5EUE0gaXJwjtrtASyOCgbRemcKTDIhX6KiGqROc=
+
+Name: assets/src/ocicon/assets/oc_icon_bookmark_1_24_fff.png
+SHA-256-Digest: ixqtrBglCIfdnvgU7DZ0hmyyuONw1R3UeUULFLKaMAk=
+
+Name: assets/src/ocicon/assets/oc_icon_bt_a_2_24_ffffff.png
+SHA-256-Digest: QrwsJkHRQqYZtbwW3/0T76D336huYWSzyWLSRbk0sTU=
+
+Name: assets/src/ocicon/assets/oc_icon_bt_b_2_24_ffffff.png
+SHA-256-Digest: AP0myBOYDI8f0AZAgZeVtx2Rqf3mIpJbNjP1GlN9ldg=
+
+Name: assets/src/ocicon/assets/oc_icon_bt_menu_2_24_ffffff.png
+SHA-256-Digest: jQtX6kcKR2f4P2WCBE1j2PVcEB0I574/OFmjOrAOqsA=
+
+Name: assets/src/ocicon/assets/oc_icon_bt_oculus_2_24_ffffff.png
+SHA-256-Digest: dv57kwsNcn2GW+TSHT5CxV3cIi9gGUY4NDDIGwNQBXM=
+
+Name: assets/src/ocicon/assets/oc_icon_bt_x_2_24_ffffff.png
+SHA-256-Digest: qODI69tCmZ/LVSUbSy3/SMnflPl0S7495QAKMUkoyDM=
+
+Name: assets/src/ocicon/assets/oc_icon_bt_y_2_24_ffffff.png
+SHA-256-Digest: YsQuYtLUgH5hieR3/gcLlsjppuuhvYqv9vYd3ILp+KE=
+
+Name: assets/src/ocicon/assets/oc_icon_category_all_1_24_ffffff.png
+SHA-256-Digest: uLkYqIOZQ8kpEDl8yfTKBz7nSfvPrIazwrRhINJEzp4=
+
+Name: assets/src/ocicon/assets/oc_icon_chat_2_24_ffffff.png
+SHA-256-Digest: egwebS7jhPQ5O8W2OMT3fHXR95VOkoQJgWfMNNdvII8=
+
+Name: assets/src/ocicon/assets/oc_icon_chat_2_48_ffffff.png
+SHA-256-Digest: BRV9C95b4qXbsUHHQ8AJgZVvLfWxb6J+6EDlOyG2uNU=
+
+Name: assets/src/ocicon/assets/oc_icon_chat_3_24_ffffff.png
+SHA-256-Digest: H3/ooyiMmDkpNiz7RaM9umcO0acbPAZn0QuxKP7Fbo0=
+
+Name: assets/src/ocicon/assets/oc_icon_check_1_24_ffffff.png
+SHA-256-Digest: JpIC5r6uwnm5+p+A0g9dnltqG7mKaXWIGSK0yupUmVk=
+
+Name: assets/src/ocicon/assets/oc_icon_check_2_24_ffffff.png
+SHA-256-Digest: jU6EXsRximxVR749oLlQVCGgz3sWm3Dci0kLporYPuQ=
+
+Name: assets/src/ocicon/assets/oc_icon_check_alt_1_24_47d147.png
+SHA-256-Digest: CJfl2hEpdXvD9099Yv2L8fccQ7TsDVOoZqtjVVb0PB4=
+
+Name: assets/src/ocicon/assets/oc_icon_check_alt_1_24_ffffff.png
+SHA-256-Digest: 3iq3HpQT2d5cBHIP+dF0rqJMHyGH2K61YDlX8FlQFEA=
+
+Name: assets/src/ocicon/assets/oc_icon_check_alt_2_24_666.png
+SHA-256-Digest: 4U6XruYwYIh33cV1Hxh8hzvQkdL7zS6E60aNohNOh0Q=
+
+Name: assets/src/ocicon/assets/oc_icon_check_alt_2_24_666666.png
+SHA-256-Digest: iqYlTN6UztMS41vyibo/bOm2XFcVC6kS8pXsZqecWYc=
+
+Name: assets/src/ocicon/assets/oc_icon_check_alt_2_24_eee.png
+SHA-256-Digest: fF86xL2arEtmx8nO5c9khz3cYdK4EvN2wnjzroyXHyk=
+
+Name: assets/src/ocicon/assets/oc_icon_check_alt_2_24_eeeeee.png
+SHA-256-Digest: GK965+ghIVIe0t/MDH9+3uIkJHoyXyL2S4VxM34u/nM=
+
+Name: assets/src/ocicon/assets/oc_icon_check_alt_2_24_ffffff.png
+SHA-256-Digest: GtX9qenfBUaJL5U4dI8MYhuDiSFcwRR4R2V4nPN0w7E=
+
+Name: assets/src/ocicon/assets/oc_icon_check_alt_3_24_ffffff.png
+SHA-256-Digest: u48TZ+vhJGbG1qDaqbCj6rCrZ+HQF3BHIi65b7d1SDE=
+
+Name: assets/src/ocicon/assets/oc_icon_chevron_down_1_24.png
+SHA-256-Digest: HEYkmQkur58JaXMlwXG1asEZ7x47x6JuIMBAzAzqFT8=
+
+Name: assets/src/ocicon/assets/oc_icon_chevron_down_1_24_fff.png
+SHA-256-Digest: bwgLsJnMyeywjVqj56DLtepv/HVExLbfpUMEAY1gkPk=
+
+Name: assets/src/ocicon/assets/oc_icon_chevron_down_1_24_ffffff.png
+SHA-256-Digest: ZPB/S+S8BCHo4kVXJ7d06/LT5orzkfM0/lyG3GvjRpw=
+
+Name: assets/src/ocicon/assets/oc_icon_chevron_down_2_24_fff.png
+SHA-256-Digest: PKAzGD54D+YU0cxka9JH9dFREHSuneAUY6pGg9kLDfg=
+
+Name: assets/src/ocicon/assets/oc_icon_chevron_down_2_24_ffffff.png
+SHA-256-Digest: 7vTPzN7yanbz9tWZwzd6aws/NcR5Zu6fZ8xDIfkduFs=
+
+Name: assets/src/ocicon/assets/oc_icon_chevron_left_1_24_ffffff.png
+SHA-256-Digest: m4ykDUy9D4HjHIL6dTRSIrtmDmAWJMpyHzcgsdS9OJg=
+
+Name: assets/src/ocicon/assets/oc_icon_chevron_left_2_24_111111.png
+SHA-256-Digest: M3hXAvncMJbq+ekBWhVxib25r6RsFzljYwC4NDl6XCI=
+
+Name: assets/src/ocicon/assets/oc_icon_chevron_left_2_24_d8d8d8.png
+SHA-256-Digest: AN3yR703QxR0PkiuL2i6b69o1Eto5PBuQlrG/ziQ7mg=
+
+Name: assets/src/ocicon/assets/oc_icon_chevron_left_2_24_ffffff.png
+SHA-256-Digest: gq71S8vpttOnC88t14qbVNjvg96iw9UJPBoHwCOghQE=
+
+Name: assets/src/ocicon/assets/oc_icon_chevron_right_1_24.png
+SHA-256-Digest: cK7nG24RQ/xlGoLhAz+1OXdnKByKSfu27hdAhnLMyrs=
+
+Name: assets/src/ocicon/assets/oc_icon_chevron_right_1_24_fff.png
+SHA-256-Digest: brZ8HuKCmjRArfLJ/UHfw5kun0YvxBK0KXrM34lTxr8=
+
+Name: assets/src/ocicon/assets/oc_icon_chevron_right_1_24_ffffff.png
+SHA-256-Digest: 46AUaGhWks8M/iOWFpBEyKGWHIRyEnlXMOVAOxwvF3g=
+
+Name: assets/src/ocicon/assets/oc_icon_chevron_right_2_24_111111.png
+SHA-256-Digest: WVHIgVaGsztcApEkXMuIgrDcAshJYddoYhYjRB0GEF0=
+
+Name: assets/src/ocicon/assets/oc_icon_chevron_right_2_24_d8d8d8.png
+SHA-256-Digest: tw9EAmLbvd/uTrPFxMcZ3OQ4XlSeL8Yaqk5HTM8EgF4=
+
+Name: assets/src/ocicon/assets/oc_icon_chevron_right_2_24_ffffff.png
+SHA-256-Digest: AUfea5EMWTar2NqqYrzHK8cM71Njn9rqADtePiwSXm8=
+
+Name: assets/src/ocicon/assets/oc_icon_chevron_up_1_24_ffffff.png
+SHA-256-Digest: MiTk0USRlwiAeF/BTu6xBI5ztfh1CAglgV5YZBqJDNw=
+
+Name: assets/src/ocicon/assets/oc_icon_chevron_up_2_24_fff.png
+SHA-256-Digest: BzarVzaSXQpyN9095qoMd6XQ7yyS8jOK6CVem0k6oTI=
+
+Name: assets/src/ocicon/assets/oc_icon_chevron_up_2_24_ffffff.png
+SHA-256-Digest: QptGbHpZ/Q9kmyzza4u4gCwnuczRxTjB+CziIL2Lqww=
+
+Name: assets/src/ocicon/assets/oc_icon_close_1_24_fff.png
+SHA-256-Digest: UZOpUiXqd1PMOoWDnRCOhvC/NvkLNoU5xGNRWxe0P70=
+
+Name: assets/src/ocicon/assets/oc_icon_close_1_24_ffffff.png
+SHA-256-Digest: mLXXsZDM6eEMoHl6pXAuoQsNkjCnuvEDX52tkYzp13k=
+
+Name: assets/src/ocicon/assets/oc_icon_close_2_24_b2b2b2.png
+SHA-256-Digest: ebCn/VrW/WaL+hfGkUvdzvUo4ZoeVUnBwDtsrh1Nfqo=
+
+Name: assets/src/ocicon/assets/oc_icon_close_2_24_d8d8d8.png
+SHA-256-Digest: 7RMXN3YB3vGrmUEXaI3kncHUefIGI+jkNtKbVW+UPkA=
+
+Name: assets/src/ocicon/assets/oc_icon_close_2_24_fff.png
+SHA-256-Digest: zbPMcS26+mcCdvrlHZi5DMX24ZQkUJKGb3gdgvIrscc=
+
+Name: assets/src/ocicon/assets/oc_icon_close_2_24_ffffff.png
+SHA-256-Digest: 5xqirH0Rzl6dr7EFbIvi2m5Fa1Z9fW+CNKL38IU1Lvs=
+
+Name: assets/src/ocicon/assets/oc_icon_close_3_24_ffffff.png
+SHA-256-Digest: N42mD0Lwbe9DuTczjDe7qkgNro2iC216buBnRXc0gus=
+
+Name: assets/src/ocicon/assets/oc_icon_close_circle_1_24.png
+SHA-256-Digest: 5/aEqBoHVwsxvJp6a1kgPY5D7N0J/Yn/MilvZEG4DBQ=
+
+Name: assets/src/ocicon/assets/oc_icon_close_circle_1_24_e61010.png
+SHA-256-Digest: NMTnU3G/Zh5ed0CzfeG6Wm03ho2Co/L9HCaMZYaloqE=
+
+Name: assets/src/ocicon/assets/oc_icon_close_circle_2_24_a0a0a0.png
+SHA-256-Digest: rqSBAyRHGTVGrRNnkLmF0uQp0TDrxRhk3y1ouWkTnTQ=
+
+Name: assets/src/ocicon/assets/oc_icon_close_circle_2_24_e61010.png
+SHA-256-Digest: /eJVB8PyeyIQK7kZGnUqDI1R0PVlYa1VOupB05/1zBw=
+
+Name: assets/src/ocicon/assets/oc_icon_cloud_syncing_1_24_ffffff.png
+SHA-256-Digest: E9AB5AHBDnomhmAR5eaHdgz4PK6f8DnXIjdQIe5+Lnw=
+
+Name: assets/src/ocicon/assets/oc_icon_comfortable_1_24_78cc0b.png
+SHA-256-Digest: cGwC3Ke+7Vt9oBuRmMoBb8u4nwUowkv8l5nzIU6JCPA=
+
+Name: assets/src/ocicon/assets/oc_icon_comfortable_2_24_78cc0b.png
+SHA-256-Digest: iakybxQRYnOfHUnDslkL2yhJKnJ9BE27sHeUz5qO2Ys=
+
+Name: assets/src/ocicon/assets/oc_icon_compass_2_48_ffffff.png
+SHA-256-Digest: TEqctlXnixlL5B3pWB3Nh0yq8EGIpjlg8kn5VhejyF8=
+
+Name: assets/src/ocicon/assets/oc_icon_compose_2_24_eeeeee.png
+SHA-256-Digest: QLsIayjVf2j9pLs12WqV744u1sIHxoUJeJpdI9TUP9w=
+
+Name: assets/src/ocicon/assets/oc_icon_compose_2_24_ffffff.png
+SHA-256-Digest: +81dXAGNfqiloRXPXJBA1/FMyhLGbsq74bNI9KxOMII=
+
+Name: assets/src/ocicon/assets/oc_icon_computer_1_24_ffffff.png
+SHA-256-Digest: VNzZISE8RpIzLwskqMmmo+8it9Ks9eXyHE22ST1sv1w=
+
+Name: assets/src/ocicon/assets/oc_icon_credit_card_2_24_ffffff.png
+SHA-256-Digest: NLtx0j50yjh9S7w/QNoOb3XbvpneL/IvkqDneoM7AKk=
+
+Name: assets/src/ocicon/assets/oc_icon_desktop_1_24_ffffff.png
+SHA-256-Digest: YNXVK+C/wGsK1eGTf+IVI+Z0QNu55Q+BpdDMbzoxDZs=
+
+Name: assets/src/ocicon/assets/oc_icon_desktop_1_48_ffffff.png
+SHA-256-Digest: qmXrgsyYMuW6kVo5E32xM+3y6Pmok5NCgB4gApWpYQQ=
+
+Name: assets/src/ocicon/assets/oc_icon_desktop_2_48_ffffff.png
+SHA-256-Digest: b48aqUTLxG+WizwRukNMIj9ku+y+92eQ5miw6KSz0dI=
+
+Name: assets/src/ocicon/assets/oc_icon_desktop_notshared_1_24_ffffff.p
+ ng
+SHA-256-Digest: VgHHjNRw/UP+yrg3rsxhPkrs3a0/OaDJurvqbH2Ni5k=
+
+Name: assets/src/ocicon/assets/oc_icon_destination_1_24_ffffff.png
+SHA-256-Digest: R88qVqyk5yqPvo1tJby61LKAg+yufRfhX4I8ulzRklo=
+
+Name: assets/src/ocicon/assets/oc_icon_devices_1_24_ffffff.png
+SHA-256-Digest: Laba4izX3jRLNREkfjX+bkfMfdczIG6kBNqXKEQZHio=
+
+Name: assets/src/ocicon/assets/oc_icon_devices_2_24_ffffff.png
+SHA-256-Digest: s9RnJ+E04KDIPxVRrTAEvxVD5KbxC2v/XJJ4tUHLNgI=
+
+Name: assets/src/ocicon/assets/oc_icon_disturb_on_1_24_ffffff.png
+SHA-256-Digest: /B8WEPz8n3ZlVNtRjqxLdp1q7wL/kBO44FNbXjI/jW0=
+
+Name: assets/src/ocicon/assets/oc_icon_disturb_on_2_24_ffffff.png
+SHA-256-Digest: 7Z5XmYTR1DQSDPR29JTz+124z5AVDRPpLoQMH8Gl5U8=
+
+Name: assets/src/ocicon/assets/oc_icon_download_1_24_ffffff.png
+SHA-256-Digest: cr7r+bmLWjhGVuNsVbc+F5oTF3YnsoXLq3ySJCQk+0o=
+
+Name: assets/src/ocicon/assets/oc_icon_download_2_24_ffffff.png
+SHA-256-Digest: 63B5/HtKmsOjmQi0lYThhp/q7ASnNt3S60A0XrJZ99M=
+
+Name: assets/src/ocicon/assets/oc_icon_dropbox_1_48_ffffff.png
+SHA-256-Digest: rtMsgLapkEMk7WFDmG4752b167b54KQOuAk3Jr9WG8Y=
+
+Name: assets/src/ocicon/assets/oc_icon_edit_2_24_ffffff.png
+SHA-256-Digest: iCK++UC30NG6ALCkgO2/SMbtulg0+MnenTHcMzpMGDE=
+
+Name: assets/src/ocicon/assets/oc_icon_environment_1_24_ffffff.png
+SHA-256-Digest: vFK7B0qMEoSogBuz9Z7Eb2QqlE/rceUm8kALS0Ig0/Q=
+
+Name: assets/src/ocicon/assets/oc_icon_environment_2_24_ffffff.png
+SHA-256-Digest: zC6AKsRKUtXeBIei1Ip7tlsqcwyQOiGRCQRgpBr8I2c=
+
+Name: assets/src/ocicon/assets/oc_icon_error_2_24_a0a0a0.png
+SHA-256-Digest: 8ESPmMkr4fJ9YfuWYQOz185616JBXJzZZBdIiGeiD84=
+
+Name: assets/src/ocicon/assets/oc_icon_error_2_24_e61010.png
+SHA-256-Digest: X8rL5yPxAw2pkS17MjOA34dGLqJmXlqrDsXZztIwtA0=
+
+Name: assets/src/ocicon/assets/oc_icon_error_2_24_ffffff.png
+SHA-256-Digest: 9UVW77QQYkZQygnDnnPAT2eQE5X7PI1iXWgkRW3kTW8=
+
+Name: assets/src/ocicon/assets/oc_icon_error_3_24_ffffff.png
+SHA-256-Digest: wKej4O8em7hjx/Q/iz3eHdl9y1FEsWn5h3pgP39e6xs=
+
+Name: assets/src/ocicon/assets/oc_icon_events_2_48_ffffff.png
+SHA-256-Digest: KTTo5xVN9y2MaF//iS8ftuEFWPG8tMJnI/O/jdhh/7g=
+
+Name: assets/src/ocicon/assets/oc_icon_events_3_24_ffffff.png
+SHA-256-Digest: yKak+OQ/d65WMpX8dmbf5qsPf49WrzSAB4MMFNb11MA=
+
+Name: assets/src/ocicon/assets/oc_icon_facebook_1_24_ffffff.png
+SHA-256-Digest: PUP3v9DcM3J8dsFNbnxYI2tHXj06M2+YgX7Bh4nIi1Q=
+
+Name: assets/src/ocicon/assets/oc_icon_facebook_1_48_ffffff.png
+SHA-256-Digest: onSxkGdtYVTaSDigx4H98j+QY0eYr9DRq7fpsS/WjY4=
+
+Name: assets/src/ocicon/assets/oc_icon_facebook_2_24_ffffff.png
+SHA-256-Digest: AGm00VamSQqZpaf+mGJqWfFaOcoXroHxTfPP0Aepmjg=
+
+Name: assets/src/ocicon/assets/oc_icon_facebook_3_24_ffffff.png
+SHA-256-Digest: 1LERGn1+Av15QOnZgvEbLQIFiB/6sr1gz3lfvfXnjdY=
+
+Name: assets/src/ocicon/assets/oc_icon_facebook_3_48_ffffff.png
+SHA-256-Digest: saXDXRgkUDYETpaZjcVpAreg5/we7rubKkyfxR1qsss=
+
+Name: assets/src/ocicon/assets/oc_icon_folder_1_48_ffffff.png
+SHA-256-Digest: OhqE2F6evx7wX2oLObmfFOqHSIQ6ej6jSCeV6bOeFu4=
+
+Name: assets/src/ocicon/assets/oc_icon_folder_2_24_a0a0a0.png
+SHA-256-Digest: KB043eDGWlvnazwBWFv33ehEaAx2SsjXm4KuidXW/LY=
+
+Name: assets/src/ocicon/assets/oc_icon_folder_2_24_ffffff.png
+SHA-256-Digest: biOs57yclLmMv+8iTlK685MEU+IMyB61oTMwmiVrEMo=
+
+Name: assets/src/ocicon/assets/oc_icon_frequency_2_24_ffffff.png
+SHA-256-Digest: 4kk2eKWQDBL1XCH0+z3beIl1TkYS/fn4tLVO4pU1bbM=
+
+Name: assets/src/ocicon/assets/oc_icon_friend_request_sent_2_24_47d147
+ .png
+SHA-256-Digest: fnU6DD7SWtuok1F920jOvG+RgQceHRSCZFo1UADztls=
+
+Name: assets/src/ocicon/assets/oc_icon_friends_block_1_24_fff.png
+SHA-256-Digest: Sthfaz6ZsPHfRqyT56k2h+JeG1Ic+PPbPTm8+xng+IU=
+
+Name: assets/src/ocicon/assets/oc_icon_friends_block_1_24_ffffff.png
+SHA-256-Digest: JqSC8UebmYTxtFPkSasNCHq+8lIYI1HfNZERFTX0gxM=
+
+Name: assets/src/ocicon/assets/oc_icon_friends_block_1_48_fff.png
+SHA-256-Digest: BylYriPXZaYhMv27IdCTf6HQSnf4HqoneZof5xdlDxM=
+
+Name: assets/src/ocicon/assets/oc_icon_friends_block_2_24_666666.png
+SHA-256-Digest: zseFr/SYGmlryz1jvlFNDk7F6TFJwebSgDmbxWTaVSM=
+
+Name: assets/src/ocicon/assets/oc_icon_friends_block_2_24_ffffff.png
+SHA-256-Digest: P3PxFkvbTHW8MoWoj2PzMoeDwsR/K+307PWKPqhvnxQ=
+
+Name: assets/src/ocicon/assets/oc_icon_full_screen_2_24_ffffff.png
+SHA-256-Digest: MVLbSoRIzE0cvzfFXwYEyYGptQX4lu08V/p8X3MpbOE=
+
+Name: assets/src/ocicon/assets/oc_icon_full_screen_exit_2_24_ffffff.pn
+ g
+SHA-256-Digest: v3L7Dhse3KIN1GJa0sk3VUrkPmvdzp6OxvMN2S8Xm6A=
+
+Name: assets/src/ocicon/assets/oc_icon_gallery_connect_1_24_666666.png
+SHA-256-Digest: 9cZkyDAL0LChaqtPea+3YKgS2m20VWOnmVppBC16Y+A=
+
+Name: assets/src/ocicon/assets/oc_icon_gallery_ready_1_24.png
+SHA-256-Digest: oTgkfnvhP1YrQHR1zDpquWitnyI6E4Jiyo1NVIsQkV8=
+
+Name: assets/src/ocicon/assets/oc_icon_gallery_ready_1_24_47d147.png
+SHA-256-Digest: Yft3K81YHxKwVYDvJdcm/83e8wqP6W5uL5yLHQq2Id4=
+
+Name: assets/src/ocicon/assets/oc_icon_gallery_ready_1_24_666666.png
+SHA-256-Digest: FzRTwEbciXgUaUGvkbByVDI1x964Byu0ob53uFEBNfw=
+
+Name: assets/src/ocicon/assets/oc_icon_gallery_ready_2_24_47d147.png
+SHA-256-Digest: 217xIrs4IIfss1Vv1juBh8BLR84WyN4Gh/nmWtkW9So=
+
+Name: assets/src/ocicon/assets/oc_icon_gallery_reconnect_1_24_666666.p
+ ng
+SHA-256-Digest: cMMdoirdJmJIw45cnvuN3fyBjYpBbOeOp1CnNBTf1w0=
+
+Name: assets/src/ocicon/assets/oc_icon_gamepad_1_24_fff.png
+SHA-256-Digest: nTDn1EZZ7vaVV605BB9kjEhiKoYdHiXWLkAAsk6UvMU=
+
+Name: assets/src/ocicon/assets/oc_icon_gamepad_1_24_ffffff.png
+SHA-256-Digest: ekanO8dQqnT0jPB17966Q1aUAwpfI+Uoj7WwEQerJTQ=
+
+Name: assets/src/ocicon/assets/oc_icon_gamepad_2_24_ffffff.png
+SHA-256-Digest: 7HpNj+a3Kk/SHkp3V7fpxZFgX/1iWNn3nx5vne8oDCc=
+
+Name: assets/src/ocicon/assets/oc_icon_gamepad_2_48_ffffff.png
+SHA-256-Digest: bzWqrimvUAvuYWXr9d96+Ilm9v6vzxvyxTeeJpq9vRE=
+
+Name: assets/src/ocicon/assets/oc_icon_gear_vr_controller_1_24_ffffff.
+ png
+SHA-256-Digest: XMZ+9lMdwOUzmIbu2lPCRQiEQWCblX4EUF0rgdS+5Kw=
+
+Name: assets/src/ocicon/assets/oc_icon_google_1_48_ffffff.png
+SHA-256-Digest: 05Oa6z/jt3KlczesNNJWGPWDVSjvZFZJUCwl/mTV3a0=
+
+Name: assets/src/ocicon/assets/oc_icon_google_photos_1_48_ffffff.png
+SHA-256-Digest: pK/VuF8jLMki293Bv1RNCJaexFdj/DsGTbvxaDzFWUA=
+
+Name: assets/src/ocicon/assets/oc_icon_guardian_2_24_fff.png
+SHA-256-Digest: ieM9K3kJU+bNn+dq32Xsyb8P7H00zigFtVI3POXNgCk=
+
+Name: assets/src/ocicon/assets/oc_icon_guardian_2_24_ffffff.png
+SHA-256-Digest: uFVQVeZeX7n7+Jrlfz7dWYXfCwSb7zSmGPrPtF/aXpA=
+
+Name: assets/src/ocicon/assets/oc_icon_heart_1_24_ffffff.png
+SHA-256-Digest: iNBvSLJBb7oh8cDMKRJBExo1pqj+WMtwjQSAejKHI7Q=
+
+Name: assets/src/ocicon/assets/oc_icon_heart_2_24_ffffff.png
+SHA-256-Digest: tqKtGUYWXj05ddmAIwAfSv0fMwIwv7D9+QR2x3d9jYc=
+
+Name: assets/src/ocicon/assets/oc_icon_heart_on_2_24_ffffff.png
+SHA-256-Digest: x+z31mQQOUKjhdV2RtfAHUQ6wZqi7UMJss7Da7ObhJo=
+
+Name: assets/src/ocicon/assets/oc_icon_home_1_48_a0a0a0.png
+SHA-256-Digest: IQXfNig7DUTHc38jp15xFz4VUt0qSQgE8Xgwg/W2Tp0=
+
+Name: assets/src/ocicon/assets/oc_icon_home_2_24_ffffff.png
+SHA-256-Digest: adhaymy5np0oYbR509xfU3qmloo4koWR1oBETkFAu+g=
+
+Name: assets/src/ocicon/assets/oc_icon_home_2_48_a0a0a0.png
+SHA-256-Digest: NXBUvTmOydRv6aqOTGBCCkBh/4TFEvjHmRJeYAGiMRw=
+
+Name: assets/src/ocicon/assets/oc_icon_home_2_48_ffffff.png
+SHA-256-Digest: fGXe0A024NxwnRUZnlwVuiQTpX1ChMYukbYpFhO01Ks=
+
+Name: assets/src/ocicon/assets/oc_icon_home_user_2_24_ffffff.png
+SHA-256-Digest: wqUW6E3C2MQzw7cBhJW+YKO815jc9zknJ1S42pyHJL0=
+
+Name: assets/src/ocicon/assets/oc_icon_home_user_3_24_ffffff.png
+SHA-256-Digest: YUO6ybLsmahLlk7BxCKm6qzAGzhAurV4sEw991F7Gbw=
+
+Name: assets/src/ocicon/assets/oc_icon_image_1_24_ffffff.png
+SHA-256-Digest: cW4k5kTxzdO9AA+Mxd1iTGA1PgIbTl0k6aal+gvZvIw=
+
+Name: assets/src/ocicon/assets/oc_icon_image_2_24_ffffff.png
+SHA-256-Digest: kdH0U0Ps2j6BNMP/fiJ00afq/8IHEs2/KJ8Ojf4p8w0=
+
+Name: assets/src/ocicon/assets/oc_icon_in_party_1_24_ffffff.png
+SHA-256-Digest: wEDm6Mv2WsvWPD3/IEt8IeXFwOqk4rPxdhLLUXO6NZ4=
+
+Name: assets/src/ocicon/assets/oc_icon_in_party_2_24_ffffff.png
+SHA-256-Digest: yFthghcvFGdCq5LQbyyXtO4a+bq5y1DN62OPJlOHZYw=
+
+Name: assets/src/ocicon/assets/oc_icon_info_1_24_ffffff.png
+SHA-256-Digest: Q/XSwJFl/ke7WkGfMe+e7SAcvNTzm0LEkn9h6C7Rc30=
+
+Name: assets/src/ocicon/assets/oc_icon_info_2_24_ffffff.png
+SHA-256-Digest: pZ+4j+hA6wACZFEJjtJN1yjXp4d4wTnWBtOa0LcmSJ0=
+
+Name: assets/src/ocicon/assets/oc_icon_info_3_24_ffffff.png
+SHA-256-Digest: zg2ZIN2qh3ho80JjkAx/wzaFgjUKSFH5vXUVXHLrUhc=
+
+Name: assets/src/ocicon/assets/oc_icon_instagram_1_48_ffffff.png
+SHA-256-Digest: 0enZx7xmhF57LXs5+UJblFIUMVLZjgL2OqGsvsevP1I=
+
+Name: assets/src/ocicon/assets/oc_icon_install_1_24_ffffff.png
+SHA-256-Digest: b/JUtOCDu51Oaf33ptlgIerF6BRj+mQl6VXMmbioTuo=
+
+Name: assets/src/ocicon/assets/oc_icon_install_circle_2_24_ffffff.png
+SHA-256-Digest: uyGLByHfQysJX3/FBuPUCY+dLube57FhKmh8IxMra8U=
+
+Name: assets/src/ocicon/assets/oc_icon_install_circle_2_48_ffffff.png
+SHA-256-Digest: axiAmlo5JFHQsplb7E9YVn/rhz5ekxY2RXFAvSq71Vc=
+
+Name: assets/src/ocicon/assets/oc_icon_intense_1_24_d87501.png
+SHA-256-Digest: 6a/zIRiwxhtBZGC8jUb/bQ2WercxrZgQQxHmDYo+OPk=
+
+Name: assets/src/ocicon/assets/oc_icon_intense_2_24_d87501.png
+SHA-256-Digest: R/TI8w5tewULzLC6SnZBhQ0BMNaH31jIYHvHdtkLk8E=
+
+Name: assets/src/ocicon/assets/oc_icon_language_2_24_ffffff.png
+SHA-256-Digest: 8F0lNVTowuI0qVeOB9fMqKe32j1Qz2TaJopEj2m7acE=
+
+Name: assets/src/ocicon/assets/oc_icon_leave_places_2_48_ffffff.png
+SHA-256-Digest: 9y/M0qv0mLAsCN+IpPJXgzqGUaIzyfNkO/3bg1QUiO4=
+
+Name: assets/src/ocicon/assets/oc_icon_lens_adjustment_2_48_ffffff.png
+SHA-256-Digest: vW9Bc/VJqFNTuZFw2tvgKUV04Nn5i4RhAzRIMZ/Qv4A=
+
+Name: assets/src/ocicon/assets/oc_icon_library_2_24_ffffff.png
+SHA-256-Digest: ySdJ7G++0dXAPlLgrd9qAtzM6KOnlDNO+5gkFY8exvQ=
+
+Name: assets/src/ocicon/assets/oc_icon_library_2_48_ffffff.png
+SHA-256-Digest: wr/8yUWs9uTSe8UWBPnzqg9lasunqkOcMuu89Jcjy8U=
+
+Name: assets/src/ocicon/assets/oc_icon_link_1_24_ffffff.png
+SHA-256-Digest: bfV98wrY8TWCRAhG9ThDWmYjzn6FJVmCAobWs4LPp/4=
+
+Name: assets/src/ocicon/assets/oc_icon_link_2_24_ffffff.png
+SHA-256-Digest: jqlFBG2NAI0YFCWn5hpEsaf2LkQsZdDY3OdvBlWkLBI=
+
+Name: assets/src/ocicon/assets/oc_icon_linkedin_1_24_ffffff.png
+SHA-256-Digest: hwNZ8334sc8eTk2k9wlapIL+EGPMdcLcb0P828iaRpI=
+
+Name: assets/src/ocicon/assets/oc_icon_linkedin_2_24_ffffff.png
+SHA-256-Digest: CiSn028z0LUijQHfv4oMofqM/yhvwv03BIcGXUI/zlw=
+
+Name: assets/src/ocicon/assets/oc_icon_list_view_1_24_ffffff.png
+SHA-256-Digest: FXEJ7QeFmYZG0KJBRYPlJf0qFgW08Hs1wUp54WbyLPw=
+
+Name: assets/src/ocicon/assets/oc_icon_livestream_2_24_ffffff.png
+SHA-256-Digest: 7wd5e5hqyw1MfzTy4JonwweOCMpJR8ArQUPVuqRhYXM=
+
+Name: assets/src/ocicon/assets/oc_icon_livestream_2_48_ffffff.png
+SHA-256-Digest: 4GMGUfG6OkhXzvkfsWRqVOoK5PA1jlDaywEXshrGPzI=
+
+Name: assets/src/ocicon/assets/oc_icon_livestream_3_24_ffffff.png
+SHA-256-Digest: BOFU1aYyq/vLD5iJVPBf1DtqKPpwkJTrMPv4cpQyEvE=
+
+Name: assets/src/ocicon/assets/oc_icon_lock_1_24_fff.png
+SHA-256-Digest: SpLJUujWVlgJyomIPwxdpf3p1ksjmZeZI2fN4i8YFws=
+
+Name: assets/src/ocicon/assets/oc_icon_lock_1_24_ffffff.png
+SHA-256-Digest: Iq8rjRs0Z9DW+NMfysmyEfEGvt5zQre88WBYnEq707w=
+
+Name: assets/src/ocicon/assets/oc_icon_lock_2_24_ffffff.png
+SHA-256-Digest: vbCL2KF1tm6i+V3R9EqB7IpLWG9wwCqtX+CD+GXpDSk=
+
+Name: assets/src/ocicon/assets/oc_icon_media_180_1_24_ffffff.png
+SHA-256-Digest: x19A/Zn5rvxRTVVvaGmTdWzNMwCl37bq3btFKOdSQ+0=
+
+Name: assets/src/ocicon/assets/oc_icon_media_180_3d_1_24_ffffff.png
+SHA-256-Digest: TZt23G4/btIqE0ze0ff25YHvpboP6YArDEC/nDrP/Hc=
+
+Name: assets/src/ocicon/assets/oc_icon_media_2d_1_24_ffffff.png
+SHA-256-Digest: Qi34k5S/w+TlqhERD5/0Odihi1n6tTWBneMqBR+hA6g=
+
+Name: assets/src/ocicon/assets/oc_icon_media_360_1_24_ffffff.png
+SHA-256-Digest: 9DOYih9AvrwKY/f4dJ+dCkC3p0oW/wZfPEh9tTtamsY=
+
+Name: assets/src/ocicon/assets/oc_icon_media_360_3d_1_24_ffffff.png
+SHA-256-Digest: rlTYuKIDoBkMUAR/hYyFMf4aR2ekYKpKB5Lk7QITQRI=
+
+Name: assets/src/ocicon/assets/oc_icon_media_3d_horiz_1_24_ffffff.png
+SHA-256-Digest: rFrBOfnJkuGaToEnvRBnR40cLXGmbAtPhFbGmQkCANk=
+
+Name: assets/src/ocicon/assets/oc_icon_media_3d_vert_1_24_ffffff.png
+SHA-256-Digest: oF0EWML8GmvM+PsUnD2l1QYNa0Jg1ZLU21jzqq30wYc=
+
+Name: assets/src/ocicon/assets/oc_icon_microphone_off_2_24_ffffff.png
+SHA-256-Digest: R3vWduIupTXXsqAxU2mLtOwIY3I0LodR6c85X307uKM=
+
+Name: assets/src/ocicon/assets/oc_icon_microphone_on_2_24_ffffff.png
+SHA-256-Digest: seLenzJHjh/K/YxEuOFDq59SLL58hUxaIphjNSQpsiA=
+
+Name: assets/src/ocicon/assets/oc_icon_microphone_unavailable_2_24_fff
+ fff.png
+SHA-256-Digest: C0gjQ1Y0cnudFS2b0x2pYQnkQ5ym8eZ0F8bsJ86rqqE=
+
+Name: assets/src/ocicon/assets/oc_icon_missing_image_2_24_ffffff.png
+SHA-256-Digest: wuxluRIb4rEMJaotUIKqPwbzdFXeYMUMwwM/SiMZq9w=
+
+Name: assets/src/ocicon/assets/oc_icon_mobile_1_48_ffffff.png
+SHA-256-Digest: fc0/+GCjkWN6sD8qBBzR3nt2VlcVUNt9Gnn6zTr93bc=
+
+Name: assets/src/ocicon/assets/oc_icon_mobile_2_24_ffffff.png
+SHA-256-Digest: niw78xCZLUv83Y3MJAK19YksNMDcW0FHcNmc+UAG0Y4=
+
+Name: assets/src/ocicon/assets/oc_icon_moderate_1_24_efca00.png
+SHA-256-Digest: +n+hCBGSYCZD7UH2gfgEk4f+HQZwtVX9Z9GV5jD6R3k=
+
+Name: assets/src/ocicon/assets/oc_icon_moderate_2_24_efca00.png
+SHA-256-Digest: IdSuaynEgkfZvm6QcmvAZGOv7P9YnJMKMzZZFrzct+8=
+
+Name: assets/src/ocicon/assets/oc_icon_more_horizontal_2_24_ffffff.png
+SHA-256-Digest: jpK5wnfYJBXElD3xZuUNELLmoxuns8ew+ESxcld+MiM=
+
+Name: assets/src/ocicon/assets/oc_icon_more_vertical_1_24_ffffff.png
+SHA-256-Digest: JZqeoeVx7g+fv5BNp53kwvg6+hOdOWyLODQNw7DSHx4=
+
+Name: assets/src/ocicon/assets/oc_icon_more_vertical_2_24_ffffff.png
+SHA-256-Digest: t+uQ/gjRxFxFzfUrhJ2ioWwv8001v2GysoFJdoibN68=
+
+Name: assets/src/ocicon/assets/oc_icon_my_media_2_24_ffffff.png
+SHA-256-Digest: YyHF8scDtU6MXNnHzZ7fjrf+ST2KnV5QoK6qNLZ8Aw8=
+
+Name: assets/src/ocicon/assets/oc_icon_night_mode_2_24_ffffff.png
+SHA-256-Digest: d9fvyXH0OrJvGhNO+RrnQ4thiHn0thvwIj4a6L6guPI=
+
+Name: assets/src/ocicon/assets/oc_icon_notifications_1_24_ffffff.png
+SHA-256-Digest: 2DmtcwgMO8HLWF7KIZOOm/tNVejjad2uVII4xBnnVCw=
+
+Name: assets/src/ocicon/assets/oc_icon_notifications_2_24_ffffff.png
+SHA-256-Digest: XVCBVrYdZUkbBB/5cq8HWQT1vOz71pmCxAhxDGnvwgA=
+
+Name: assets/src/ocicon/assets/oc_icon_notifications_2_48_ffffff.png
+SHA-256-Digest: ulvPJY2VqanGHcK7N4FY2Nk+Mxf+FDECVsiFOSYkGlA=
+
+Name: assets/src/ocicon/assets/oc_icon_oculus_2_24_ffffff.png
+SHA-256-Digest: gBnHNYgECpXBFgl5WAsHUBZ+dT2wHeQHe0HJvwr0+SU=
+
+Name: assets/src/ocicon/assets/oc_icon_oculus_2_48_ffffff.png
+SHA-256-Digest: 01/tJ6M6BJ4mzVCISBjm1qdykLk1R4fDqPSRLzeCsZE=
+
+Name: assets/src/ocicon/assets/oc_icon_oculus_3_48_eeeeee.png
+SHA-256-Digest: ell2V3QD3KAGH40BfI9nkLPbEANS9m1bqU1V5qsK/VQ=
+
+Name: assets/src/ocicon/assets/oc_icon_oculus_messenger_2_24_ffffff.pn
+ g
+SHA-256-Digest: Y5pnsnSGMJB1GpND8plnzqUOYw5pZECqnN+rsqj+xf4=
+
+Name: assets/src/ocicon/assets/oc_icon_oculus_remote_1_24_fff.png
+SHA-256-Digest: +xY5ApkGpCpWcSsOmty7oquQdwnPvMdi5Gm3+SH9IP8=
+
+Name: assets/src/ocicon/assets/oc_icon_oculus_remote_1_24_ffffff.png
+SHA-256-Digest: n/UHCQS3j1iShCuTxuQt3fmG8BrvfD3YGZpIoEvby/A=
+
+Name: assets/src/ocicon/assets/oc_icon_oculus_remote_2_24_ffffff.png
+SHA-256-Digest: N71IgTMSBHVXC9RNtfxHpcIFksLpRPAtRCFAL3RkC/0=
+
+Name: assets/src/ocicon/assets/oc_icon_oculus_remote_2_48_ffffff.png
+SHA-256-Digest: bFev2lfsSCs7vJ/qwnG5TFVSedZ9eR6jxe3r/DbCAp8=
+
+Name: assets/src/ocicon/assets/oc_icon_open_tab_1_24_ffffff.png
+SHA-256-Digest: cLRv9LJe/HCF/E3hPbCYSXKNjtfzd7LyXNG9PY6XIZc=
+
+Name: assets/src/ocicon/assets/oc_icon_open_tab_2_24_ffffff.png
+SHA-256-Digest: 5n62kPfSv6aUhgx7KqbBZH6j0y4yke3WaFpkBQxj4Uw=
+
+Name: assets/src/ocicon/assets/oc_icon_pacific_1_48_ffffff.png
+SHA-256-Digest: HiZnA4qnn/GFJmpOccLlqZxj9drpVOUqBxCc/+PqDts=
+
+Name: assets/src/ocicon/assets/oc_icon_pacific_2_48_ffffff.png
+SHA-256-Digest: X1Ay+91OcohaMRg0yq04rPG7J0/KG9PhBxxVRNFP570=
+
+Name: assets/src/ocicon/assets/oc_icon_pacific_controller_1_24_ffffff.
+ png
+SHA-256-Digest: FWmen+6xJtHK34SHOsRl5MirWRb3hZ2Wwex29Y8khOI=
+
+Name: assets/src/ocicon/assets/oc_icon_pair_headset_2_24_ffffff.png
+SHA-256-Digest: 9INg1rDuLcjE6tBbAfdXG+2F+vOBpGqBE6jtNoPHFmg=
+
+Name: assets/src/ocicon/assets/oc_icon_parties_1_24_fff.png
+SHA-256-Digest: m7n34V31UNfjYq/6QU87GXukc4u9kfwS7q6N0lX6LSM=
+
+Name: assets/src/ocicon/assets/oc_icon_parties_1_24_ffffff.png
+SHA-256-Digest: puTp6AyWuqhpfOYzns7ata+sgRl4rL2jpVDI4i6dQII=
+
+Name: assets/src/ocicon/assets/oc_icon_parties_2_24.png
+SHA-256-Digest: V+1pPdWLtJrMxyIayl2bDhcIXBZNgCBRvawYCIp/D0Y=
+
+Name: assets/src/ocicon/assets/oc_icon_parties_2_24_ffffff.png
+SHA-256-Digest: JMtap2HPrVW1PEOC7v9QFeFTGMcPBRD7EPaKDKiyrnQ=
+
+Name: assets/src/ocicon/assets/oc_icon_parties_2_48_ffffff.png
+SHA-256-Digest: FwbqvJfkQLeBQj8mW6Chvs4Qq1U4du9Y07iW2rYmB0Y=
+
+Name: assets/src/ocicon/assets/oc_icon_parties_3_24_ffffff.png
+SHA-256-Digest: h6uv1+yQR6BjOmi653dkANgh11ylqlIu1gtYJVGcWM8=
+
+Name: assets/src/ocicon/assets/oc_icon_party_invite_sent_1_24_47d147.p
+ ng
+SHA-256-Digest: m/PGW1FfK8jxcx3gidNFfuppBeGcXuErcX58GbB+wiE=
+
+Name: assets/src/ocicon/assets/oc_icon_party_invite_sent_2_24_47d147.p
+ ng
+SHA-256-Digest: 06O4Hj7qPCT/JvPV4HwCTuzjp7V6weXK+6t2ZAH7XxY=
+
+Name: assets/src/ocicon/assets/oc_icon_pass_through_2_24_ffffff.png
+SHA-256-Digest: ET6fTeWX3nbzPbnkt3LUG00zBDfMDrsQbjjq2cA9ZwA=
+
+Name: assets/src/ocicon/assets/oc_icon_password_hidden_2_24_ffffff.png
+SHA-256-Digest: IqlP+NeiFFSDj2ma1qIheIc7OT3TsrVjL5lRKV8pkPo=
+
+Name: assets/src/ocicon/assets/oc_icon_password_hidden_3_24_ffffff.png
+SHA-256-Digest: OuZ2hVTX/BX20krUT0RjrwU+CDfGj5iNFkmJchAVt4c=
+
+Name: assets/src/ocicon/assets/oc_icon_password_visible_1_24_ffffff.pn
+ g
+SHA-256-Digest: NF6Kwo+NO+Y9uxUlDbVCuw5a8HJCtSt+8xFCIzBjERc=
+
+Name: assets/src/ocicon/assets/oc_icon_password_visible_2_24_ffffff.pn
+ g
+SHA-256-Digest: 85bsRHE3Y7dSpHyKAn0wGGNlqhb0p5RD2uD80gg90os=
+
+Name: assets/src/ocicon/assets/oc_icon_password_visible_3_24_ffffff.pn
+ g
+SHA-256-Digest: JyY8dVDvmlGR3ayC0PINiEYv+f9gmvQjXDbc0w1wb9w=
+
+Name: assets/src/ocicon/assets/oc_icon_pause_1_24_fff.png
+SHA-256-Digest: VVTK3YxlREgtZoDnujEa7u+gLL95WhjDyxe3CQXCAwo=
+
+Name: assets/src/ocicon/assets/oc_icon_pause_2_24_fff.png
+SHA-256-Digest: 6VsLrvWzDvmYnZ6H8BdR20wkJKIgMqP0NUwk+nx5fCw=
+
+Name: assets/src/ocicon/assets/oc_icon_pause_2_24_ffffff.png
+SHA-256-Digest: TedBmJELu+epNYOzPFsHtLjF9h9lPHYu0oftl2GjSjo=
+
+Name: assets/src/ocicon/assets/oc_icon_phone_1_24_ffffff.png
+SHA-256-Digest: LYzIJiXvYSzEI9hZNLlq/Off/7XJzWnFM5IwH6tEfRU=
+
+Name: assets/src/ocicon/assets/oc_icon_pin_experience_off_2_24_ffffff.
+ png
+SHA-256-Digest: m+1h+NfVpLO+1lKVzTzZ8XlfHSJ/KgAFK3tFg1dJmzY=
+
+Name: assets/src/ocicon/assets/oc_icon_pin_experience_on_2_24_ffffff.p
+ ng
+SHA-256-Digest: bdWR7VBWSfbLzZx8AU/WvQHhBHooCZNS67WUqZEEiKg=
+
+Name: assets/src/ocicon/assets/oc_icon_play_1_24_fff.png
+SHA-256-Digest: e1Y4on5TRn2iLgasXj8ejVDjDOzL4lNxW4wguO+McKo=
+
+Name: assets/src/ocicon/assets/oc_icon_play_1_24_ffffff.png
+SHA-256-Digest: cQfZBuWJ9sfQDqOiHMJbcNhyv2+Unyjt4554C2MHVsk=
+
+Name: assets/src/ocicon/assets/oc_icon_play_2_24_fff.png
+SHA-256-Digest: PolS+EnY1Fd8lxfShJOT65vEYj2+micLsZsnWjmXx1w=
+
+Name: assets/src/ocicon/assets/oc_icon_play_2_24_ffffff.png
+SHA-256-Digest: D2nmlTx4WdzIygciKYu536y09o2vYHO5W1BaIToX3uI=
+
+Name: assets/src/ocicon/assets/oc_icon_play_circle_1_24_ffffff.png
+SHA-256-Digest: iGbWvH5kOig78AxrM4my51itUQts9O99KiZr4JaWZtU=
+
+Name: assets/src/ocicon/assets/oc_icon_play_circle_1_48_fff.png
+SHA-256-Digest: EwR9o4/lKUdVuw9OcFKluYCjtRByDAk0MqJ9SRYKtXA=
+
+Name: assets/src/ocicon/assets/oc_icon_play_circle_1_48_ffffff.png
+SHA-256-Digest: 1L0nYf3BcEzku+2Nk7SgLYnOzuWoyPGoS0RZqRFSDDA=
+
+Name: assets/src/ocicon/assets/oc_icon_play_circle_2_48_ffffff.png
+SHA-256-Digest: pQHLje7HU051rpBAF0U91dg/WXgUQjsvRnrN55ia8zE=
+
+Name: assets/src/ocicon/assets/oc_icon_privacy_2_24_ffffff.png
+SHA-256-Digest: 4ToHUaPlNY61hivQUck/MlHrjHk/4Y3q8eHbM7og8Jk=
+
+Name: assets/src/ocicon/assets/oc_icon_profile_2_24_ffffff.png
+SHA-256-Digest: d56nRIvOozh84ljMwvqLx29Eo0UJ/m+zc7kzh41rJ6w=
+
+Name: assets/src/ocicon/assets/oc_icon_question_1_24.png
+SHA-256-Digest: XxV4xBB1/0mDUVkZ0ReUKnuhX0SQM/EPwDHx5iiAcZ4=
+
+Name: assets/src/ocicon/assets/oc_icon_question_1_24_ffffff.png
+SHA-256-Digest: gIR2lpoewDp9uWoBoz4QbePGdYb3k8ssY8EFlsJCGI0=
+
+Name: assets/src/ocicon/assets/oc_icon_question_2_24_ffffff.png
+SHA-256-Digest: ZUt7GXkGBlUKmf11KNC8GPcqxCYRmMItk3Pp1RXvDnI=
+
+Name: assets/src/ocicon/assets/oc_icon_question_3_24_ffffff.png
+SHA-256-Digest: 0NUNLiKvsyQx5Ctj31gMlMgUi/jcdYf6ZJFzt8XJMLs=
+
+Name: assets/src/ocicon/assets/oc_icon_refresh_1_24_ffffff.png
+SHA-256-Digest: 7itIgJFwhadDWILFLy4v2WPLjbHFhJJaT69fsgzV3zY=
+
+Name: assets/src/ocicon/assets/oc_icon_remove_1_24_ffffff.png
+SHA-256-Digest: fqyhRgV9ScLmNf/MWtLA+vEIrZMkVsk/ouEHIK4wiSw=
+
+Name: assets/src/ocicon/assets/oc_icon_remove_2_24_ffffff.png
+SHA-256-Digest: Bv85rA10M9AD7wxLf4/73EZnIMeKkhNWtXgvzbc0o/U=
+
+Name: assets/src/ocicon/assets/oc_icon_reorient_2_24_ffffff.png
+SHA-256-Digest: Ye732x+dZ1V6RnpuRWpCoqQN0JhxbiKnkbRXwfT+M4c=
+
+Name: assets/src/ocicon/assets/oc_icon_report_1_24_fff.png
+SHA-256-Digest: HPuCdZ6nOfV7PVS4EYR19WXsIy8CLbqlJ+4b6HzfDyc=
+
+Name: assets/src/ocicon/assets/oc_icon_report_1_24_ffffff.png
+SHA-256-Digest: 3pbxLByorf3KQrQXdgs6aQL5SKKAXuL80Flzs0hKohM=
+
+Name: assets/src/ocicon/assets/oc_icon_report_1_48_fff.png
+SHA-256-Digest: LIU3XryNSVnClQ6rq4lRvcuO1ZlDrYqX8HcG+lAy3fY=
+
+Name: assets/src/ocicon/assets/oc_icon_report_1_48_ffffff.png
+SHA-256-Digest: ihJLNZY80KMBc7GADOdcqWpCmnIq1lHoHpN2nXEgQAA=
+
+Name: assets/src/ocicon/assets/oc_icon_report_2_24_ffffff.png
+SHA-256-Digest: 5XqyhSlam4OPpbjposAkQWx+zmkLZC4xIfCODtwtw6M=
+
+Name: assets/src/ocicon/assets/oc_icon_rescan_2_24_ffffff.png
+SHA-256-Digest: CBO13UtjD8m1YEsTmMg2dsdfhgEY7UItyA+nakvrQF0=
+
+Name: assets/src/ocicon/assets/oc_icon_reset_1_24_ffffff.png
+SHA-256-Digest: bzUybiwW8LWd9XmqYBQF4UEys4Pz9dqMnX1lmFTr9E0=
+
+Name: assets/src/ocicon/assets/oc_icon_screenshot_2_24_ffffff.png
+SHA-256-Digest: 56tci5PddYFxoawDFNXxoQKtifIpsh81Rheh8U9tnY8=
+
+Name: assets/src/ocicon/assets/oc_icon_search_1_24_999.png
+SHA-256-Digest: nG1N2lQ34HzqSMZ1Blqnhc1Qvwva1igJbIjlDXtFkUk=
+
+Name: assets/src/ocicon/assets/oc_icon_search_1_24_999999.png
+SHA-256-Digest: yE5npKHHCil6KFxVMJSM8U2HocObCbl+HmvdfAW5Qio=
+
+Name: assets/src/ocicon/assets/oc_icon_search_1_24_b2b2b2.png
+SHA-256-Digest: F8C2BoHHTZ/p3tlWhOLZrSe4zKGEb3ghQlHECUrzTow=
+
+Name: assets/src/ocicon/assets/oc_icon_search_1_24_ffffff.png
+SHA-256-Digest: mnj/liYwmdSWxbPsqdkj5LwhOx4J2dY9KLj4ObjJ2o8=
+
+Name: assets/src/ocicon/assets/oc_icon_search_2_24_999999.png
+SHA-256-Digest: sNHIkVpDEt+sCg03dcFcC5PynaFteacfA5VuF3+oBjQ=
+
+Name: assets/src/ocicon/assets/oc_icon_search_2_24_b2b2b2.png
+SHA-256-Digest: HMDCRYmNCIIz+RWcQ/IXAq8g27xf3QiZzNlYr9PLPvc=
+
+Name: assets/src/ocicon/assets/oc_icon_search_2_24_fff.png
+SHA-256-Digest: h6TcwmHLMtgB0OA8zz/i2VhJP0IK3emMTn3x9DrSNWE=
+
+Name: assets/src/ocicon/assets/oc_icon_search_2_24_ffffff.png
+SHA-256-Digest: Zasj3mMLjk3SM23Zm7Slr2D0KKInWKScBFQHEv4A6zg=
+
+Name: assets/src/ocicon/assets/oc_icon_search_2_48_999.png
+SHA-256-Digest: dggmse+vLV1y9jEUVCR7A2p18PtDke16Cy6AS/SuRko=
+
+Name: assets/src/ocicon/assets/oc_icon_search_2_48_999999.png
+SHA-256-Digest: 34ivwHHMwhQstpc9srY3yRwYy29FC5AStV/SfqDwjGs=
+
+Name: assets/src/ocicon/assets/oc_icon_search_2_48_a0a0a0.png
+SHA-256-Digest: zm7yYZV33NnnGAo23+iIJhnXdhhE3cXV0HDuE6CCbOU=
+
+Name: assets/src/ocicon/assets/oc_icon_search_3_48_ffffff.png
+SHA-256-Digest: 14iN6OMiR8VZXJ/dsBta8XSGRW9JfRxbtWZZwIykEJw=
+
+Name: assets/src/ocicon/assets/oc_icon_select_photo_1_24_ffffff.png
+SHA-256-Digest: ypHtCVyG8UopvR1FH90pSuRqsoVT3mbeX79HEWv0NUo=
+
+Name: assets/src/ocicon/assets/oc_icon_select_photo_2_24_ffffff.png
+SHA-256-Digest: ic3II2PytxgS0W9GkRZQ7DpSpoiJhVUon3S1f36MJec=
+
+Name: assets/src/ocicon/assets/oc_icon_select_photo_3_24_ffffff.png
+SHA-256-Digest: xrBzPzk6Yb853sC/BG8PoTCF6PC1Zj9vqAFEztW5oM0=
+
+Name: assets/src/ocicon/assets/oc_icon_send_party_invite_1_24_ffffff.p
+ ng
+SHA-256-Digest: kB1HrYC/HukS7hhlKCMpyXJ5PT6b5SH+m453FF7WhFY=
+
+Name: assets/src/ocicon/assets/oc_icon_sensor_2_24_ffffff.png
+SHA-256-Digest: 8LmjkcTJSk+EF00UQvFdT+V22eW31oNKDeiyNeDgY38=
+
+Name: assets/src/ocicon/assets/oc_icon_settings_1_24_fff.png
+SHA-256-Digest: 0v7CMOqQ9oh//TO8pVvsYyp6l6m2DOyAVwRYmNuSQ/4=
+
+Name: assets/src/ocicon/assets/oc_icon_settings_1_24_ffffff.png
+SHA-256-Digest: 6mls2lpBlIu6adC7KTNIkY97O+5jUJ+gMGhUbi25cd4=
+
+Name: assets/src/ocicon/assets/oc_icon_settings_2_24_ffffff.png
+SHA-256-Digest: jcS7lNRbFR4ov+srdxcQK08Vjllc8mnv5nOYUw40E/0=
+
+Name: assets/src/ocicon/assets/oc_icon_settings_2_48_ffffff.png
+SHA-256-Digest: d7/3nFhBxRbMQqQYRLCzCll9PF2LVwzh6w49psvFqlI=
+
+Name: assets/src/ocicon/assets/oc_icon_share_1_24_ffffff.png
+SHA-256-Digest: +J0Ly/cspN8HLsrf1B5YZFUrGZ3cgTtjMmDV97so7Bs=
+
+Name: assets/src/ocicon/assets/oc_icon_share_2_24_ffffff.png
+SHA-256-Digest: 7N3oe9Gw0AfC38sIF8erwgNcdfWcYG2fgMcuufHtveI=
+
+Name: assets/src/ocicon/assets/oc_icon_social_2_24_ffffff.png
+SHA-256-Digest: yDwjlaB8kgQntLANa8qRWtEOPIXFOg9GLhhgOU1qJCw=
+
+Name: assets/src/ocicon/assets/oc_icon_social_2_48_ffffff.png
+SHA-256-Digest: 70h2Y/h3rLbJ1tjZ00z/dSwhoeRTE/z7oicp/Ije9MA=
+
+Name: assets/src/ocicon/assets/oc_icon_social_3_24_ffffff.png
+SHA-256-Digest: /xVZP78DHs49uKnL/M1UJ/6BulGS5JkrEKrawmVr/IY=
+
+Name: assets/src/ocicon/assets/oc_icon_standing_2_24_ffffff.png
+SHA-256-Digest: ZKFyRGP/T21xTrcVgWHboKaDoDfQlgTIxtnf9PV/bp4=
+
+Name: assets/src/ocicon/assets/oc_icon_star_1_24_ffffff.png
+SHA-256-Digest: vTYfZEFLjDMp+/MWDMCzNNl6GBtLxd6AAE9cHleSARA=
+
+Name: assets/src/ocicon/assets/oc_icon_star_2_24_ffffff.png
+SHA-256-Digest: lekQrxeXu+iYRZoZeGfKB9SN8ZgmJexEq7Vt55/ZpLo=
+
+Name: assets/src/ocicon/assets/oc_icon_star_full_1_12_ffffff.png
+SHA-256-Digest: 48ZfMzXIXLuhS9//XLq1Vn++qdL7GzvWvamZMj+OY9o=
+
+Name: assets/src/ocicon/assets/oc_icon_star_full_1_24_ffffff.png
+SHA-256-Digest: X35qCZUVfzglVpisTKjDMLr3b+A9IVeQ8HrI6OMZMC8=
+
+Name: assets/src/ocicon/assets/oc_icon_star_full_2_24_ffffff.png
+SHA-256-Digest: KLmsCzWw7vGMYO1+lWACZdk/i8z7m1NffI6p5mUDG7A=
+
+Name: assets/src/ocicon/assets/oc_icon_star_half_2_24_ffffff.png
+SHA-256-Digest: imyq15ft4AkSGDI4UYf9roPHK9TrVwojbWLEcMLJ4h8=
+
+Name: assets/src/ocicon/assets/oc_icon_storage_2_24_ffffff.png
+SHA-256-Digest: YlWkNJ4VgyYM3BMFHazFIw5Jv+4lWP0boCbjLz3B2JI=
+
+Name: assets/src/ocicon/assets/oc_icon_store_cart_2_24_ffffff.png
+SHA-256-Digest: 9FE3e8iuX+A1BE/dMhnVywqM12z97Ns/c32ekrezkww=
+
+Name: assets/src/ocicon/assets/oc_icon_store_cart_2_48_ffffff.png
+SHA-256-Digest: 9btEY7URmSolCZDNDj407YtReNjeJbI5v89KU4/uGmw=
+
+Name: assets/src/ocicon/assets/oc_icon_tag_1_24_fff.png
+SHA-256-Digest: FfW0AnQiwFtmSR3VGMybA67n6TPODV14wrNyFM/r4tY=
+
+Name: assets/src/ocicon/assets/oc_icon_tag_1_24_ffffff.png
+SHA-256-Digest: zVX1JFshYwgvpgBifqXSFU1jTx5TCIOfA5QqyjIG93E=
+
+Name: assets/src/ocicon/assets/oc_icon_thumbs_down_2_16_ffffff.png
+SHA-256-Digest: 4JT5w7kcuX8rR+xPiVZMNYieYi3NPWlRwe5536Vellw=
+
+Name: assets/src/ocicon/assets/oc_icon_thumbs_down_2_24_ffffff.png
+SHA-256-Digest: shozH6RJmNYu+XPFVtjXc/9os3FBKQSGa9zW+lk+aB4=
+
+Name: assets/src/ocicon/assets/oc_icon_thumbs_up_2_16_ffffff.png
+SHA-256-Digest: m7gmtBbg1VR/RtOIM/XnwUwuA4WMHmIA/CAR8MQsNtg=
+
+Name: assets/src/ocicon/assets/oc_icon_thumbs_up_2_24_ffffff.png
+SHA-256-Digest: 4zXw22Pzn8TgSCX+Ws9bGZbCZ9tuMRs6fLY2mnat+og=
+
+Name: assets/src/ocicon/assets/oc_icon_time_1_24_ffffff.png
+SHA-256-Digest: U1nvfUy68a4/Yqr2IquT1oTSxG4YEvRntIAhOmyDYxA=
+
+Name: assets/src/ocicon/assets/oc_icon_time_2_24_ffffff.png
+SHA-256-Digest: +jaVZqWUiOxIEqrDmKmHXoEYZnLq8Z2wXJ1zwUo9iKc=
+
+Name: assets/src/ocicon/assets/oc_icon_touch_2_left_2_24_ffffff.png
+SHA-256-Digest: FrteRJBStrhaaPAndAq6stAF0jyK+N9eTzAECeHhKlk=
+
+Name: assets/src/ocicon/assets/oc_icon_touch_2_left_2_48_ffffff.png
+SHA-256-Digest: 9JFI4LNo8k517Gk2K5pYaBd8VbVyeDha8Caf+DwlZFo=
+
+Name: assets/src/ocicon/assets/oc_icon_touch_2_right_2_24_ffffff.png
+SHA-256-Digest: SMRiKAddGccEjcxMDSQzNOs5/I7asZeFyMH+PoML/So=
+
+Name: assets/src/ocicon/assets/oc_icon_touch_2_right_2_48_ffffff.png
+SHA-256-Digest: pUXzfclxlNnVOrneZtwAEYMj7XASew/CdHjh99jSj1Q=
+
+Name: assets/src/ocicon/assets/oc_icon_touch_left_1_24_fff.png
+SHA-256-Digest: IG3r3LkpExJek+KJS7l/6UHWzfUULU/KwNCsc8BgpHY=
+
+Name: assets/src/ocicon/assets/oc_icon_touch_left_1_24_ffffff.png
+SHA-256-Digest: TMCwQxRqq4D3y9XFebyJruPIe99XBLRRIhLn/xr34CI=
+
+Name: assets/src/ocicon/assets/oc_icon_touch_left_2_24_ffffff.png
+SHA-256-Digest: tPUxxWURYkQn77KR3WSQT7OkBxCO8d/bIpNSwNqlRLA=
+
+Name: assets/src/ocicon/assets/oc_icon_touch_left_2_48_ffffff.png
+SHA-256-Digest: o4iTp952LdwdKynfB3nq5d+J+weUxx1PeErf9qrgS8A=
+
+Name: assets/src/ocicon/assets/oc_icon_touch_right_2_24_ffffff.png
+SHA-256-Digest: eMWoBF7/Ss5gCSZ7jaKoqgyUYI241rwP1YaB15zlTts=
+
+Name: assets/src/ocicon/assets/oc_icon_touch_right_2_48_ffffff.png
+SHA-256-Digest: duh5tDkKR7zbo9la64eC1C7Fj/Ti+30V7gJcAl5aRV4=
+
+Name: assets/src/ocicon/assets/oc_icon_touchpad_1_24_ffffff.png
+SHA-256-Digest: sdWSAEnQBkljB6w/wNqsPcFq3kR/X2tJkw3lT09SxfI=
+
+Name: assets/src/ocicon/assets/oc_icon_trash_1_24_fff.png
+SHA-256-Digest: BhP2boXS3f2MLYL5ZAtVdwYV1H8xeltSOLG0LzR/jjo=
+
+Name: assets/src/ocicon/assets/oc_icon_trash_1_24_ffffff.png
+SHA-256-Digest: gKirQ/xAsd8bNF83F+Khvdw9YyyaENxSli5ekVH/Mc8=
+
+Name: assets/src/ocicon/assets/oc_icon_trash_2_24_ffffff.png
+SHA-256-Digest: b9BpNsWNyAcrM76px95zSroqry6+aH2odg9RYG4YCJM=
+
+Name: assets/src/ocicon/assets/oc_icon_twitter_1_24_ffffff.png
+SHA-256-Digest: 3ougg3kbw6aoV29SUfGERDRPwZkmYQ00xjpxq0g/hvw=
+
+Name: assets/src/ocicon/assets/oc_icon_twitter_2_24_ffffff.png
+SHA-256-Digest: 5eAlcuh329B9WD6TCnxli+nYUuy+HXyTtKjIn4Pck7E=
+
+Name: assets/src/ocicon/assets/oc_icon_unfriend_2_24_cc1010.png
+SHA-256-Digest: N0aZsryH89bp5fgC9wb3Jat+6JAOX7ijeliaCOTqNlU=
+
+Name: assets/src/ocicon/assets/oc_icon_unfriend_2_24_ffffff.png
+SHA-256-Digest: 8Ndc4CvGaL8FGsk2yUHs5X4ATOU9RInJKsQfHX7ZtTk=
+
+Name: assets/src/ocicon/assets/oc_icon_unlock_1_24_ffffff.png
+SHA-256-Digest: NqWS6UMTbKJSBxxd+qX0PyOv7oi1ScjbCI+TbHl03HI=
+
+Name: assets/src/ocicon/assets/oc_icon_unlock_2_24_ffffff.png
+SHA-256-Digest: 2+gAYZMOhr3U/IIO0Hf9JMj8R+LEJDIrxc1sjWC887E=
+
+Name: assets/src/ocicon/assets/oc_icon_unrated_1_24_a4a5a6.png
+SHA-256-Digest: 9Xmq5nAik94xgwUpK9a2Nu5zTWu+LeZ7BEj1x/H+gak=
+
+Name: assets/src/ocicon/assets/oc_icon_unrated_2_24_a4a5a6.png
+SHA-256-Digest: 3k/9Al5V393xUocrUOjbhpPC3GOuiLS/prNjSvPXfxY=
+
+Name: assets/src/ocicon/assets/oc_icon_usb_stick_1_48_ffffff.png
+SHA-256-Digest: PTI4LaPIXdMSIUtxfiQ+GRNA55nV8VyWwZS5uVVCWjw=
+
+Name: assets/src/ocicon/assets/oc_icon_video_capture_1_24_fff.png
+SHA-256-Digest: SvjmJuKjqn4wyC0RpO3zfbWfMph23rC1WkScFO2m2pA=
+
+Name: assets/src/ocicon/assets/oc_icon_video_capture_1_24_ffffff.png
+SHA-256-Digest: hWtqNKD+aEpstDHOl6wQlZBQSmBb6VCR1p4dDcrcBH4=
+
+Name: assets/src/ocicon/assets/oc_icon_video_capture_1_48_fff.png
+SHA-256-Digest: Z7j95em5ZX6gg2mZmJZn/ueLwEdgtTz/xLkGsLpFNGs=
+
+Name: assets/src/ocicon/assets/oc_icon_video_capture_1_48_ffffff.png
+SHA-256-Digest: NyeFUq2On+KGDlHkf+vDPVL8dEwsmtTHozCWXbRdn1Q=
+
+Name: assets/src/ocicon/assets/oc_icon_view_gallery_1_48_ffffff.png
+SHA-256-Digest: jaiCSjKtKnU10nfB0g3pDIpULvVpvkr3Zixp17PVPrw=
+
+Name: assets/src/ocicon/assets/oc_icon_volume_low_2_24_ffffff.png
+SHA-256-Digest: qE15XjVqgE9NuNQIpwLQakV0uh0lnt7g56FpMqU9/UY=
+
+Name: assets/src/ocicon/assets/oc_icon_volume_mid_2_24_ffffff.png
+SHA-256-Digest: YF/xe/j4/4wTZ9bd8jdAkgx6QagsNzdL/mK7zUgK0CE=
+
+Name: assets/src/ocicon/assets/oc_icon_volume_off_2_24_eeeeee.png
+SHA-256-Digest: +iHfwYZ3QhBRkZ0Py10Zz7QhLU1qXd6a1DTEI4in37E=
+
+Name: assets/src/ocicon/assets/oc_icon_volume_off_2_24_ffffff.png
+SHA-256-Digest: or5PohynWBJEYI8IPhwRSFE2KfWRu3VK8i2Z2G5bObM=
+
+Name: assets/src/ocicon/assets/oc_icon_volume_on_2_24_ffffff.png
+SHA-256-Digest: a0afHePp/7Ccv/NJFpqJzMufAOcpZdlStC3UpKFyfB0=
+
+Name: assets/src/ocicon/assets/oc_icon_vr_object_1_24_fff.png
+SHA-256-Digest: nHeQwGpvZVs0rULC20l/piBdQsQTdXtfGWpR7jL0DoM=
+
+Name: assets/src/ocicon/assets/oc_icon_vr_object_1_24_ffffff.png
+SHA-256-Digest: vZjhshLLfjeFlHRy5mYPmCtP+Co+UVlMfOYCb1JyDa4=
+
+Name: assets/src/ocicon/assets/oc_icon_vr_object_2_24_ffffff.png
+SHA-256-Digest: iG/AKX0EmbgOp5I4BbJX3FGCsbeb8yMg0hzADZuEdkE=
+
+Name: assets/src/ocicon/assets/oc_icon_warning_1_24.png
+SHA-256-Digest: 1B/93YS23BMJ7T3UTdp/mcFWlzPK8+hDB5Wvdhy/ciQ=
+
+Name: assets/src/ocicon/assets/oc_icon_warning_1_24_666666.png
+SHA-256-Digest: v56bwl09tqgMtEjDyTSK3MAVuivmOhsr+Xy/iZkNnPo=
+
+Name: assets/src/ocicon/assets/oc_icon_warning_1_24_d87501.png
+SHA-256-Digest: h3h2+Vtqd54bPYm2yuOAGqb4B154Q4d83xlzhY3qCm4=
+
+Name: assets/src/ocicon/assets/oc_icon_warning_1_24_ffffff.png
+SHA-256-Digest: vRqLY+LWIdRfFDQgQ6Q+enJoLeij8VrXlndDJJrXOYA=
+
+Name: assets/src/ocicon/assets/oc_icon_warning_2_24_a0a0a0.png
+SHA-256-Digest: Makf5B1RJi3XgC0bwsvn5Ys2eC66sfKU+SfGkOlvNuQ=
+
+Name: assets/src/ocicon/assets/oc_icon_warning_2_24_d87501.png
+SHA-256-Digest: nxaTLgJJuLYcQk9HnutV5LUshYhv/HVaopAlvHVoT+E=
+
+Name: assets/src/ocicon/assets/oc_icon_warning_2_24_ffffff.png
+SHA-256-Digest: GoJDhdpqudOIvafp1vEIYh5JynbCAE/IMDtFxg63rLY=
+
+Name: assets/src/ocicon/assets/oc_icon_warning_3_24_ffffff.png
+SHA-256-Digest: ooUD3SnEriUVPGPffxa8b19BY6X22mEfD6T/WBTOiP8=
+
+Name: assets/src/ocicon/assets/oc_icon_wifi_off_1_24_ffffff.png
+SHA-256-Digest: J8nZHJnIgvuhd8V8dOYQ0D1bCCL7fuxQRRlrlylCfOA=
+
+Name: assets/src/ocicon/assets/oc_icon_wifi_on_1_24_ffffff.png
+SHA-256-Digest: AEXcQXO1Rai5JIdC3j9Db9hvam0lPJGW493OugYWdmQ=
+
+Name: assets/src/ocicon/assets/oc_icon_wifi_on_2_24_ffffff.png
+SHA-256-Digest: 19BWWmisEZoyMaq231hVKQoEQY83RtZzN1szGxgYNQk=
+
+Name: assets/src/ocicon/assets/oc_icon_wifi_on_2_48_ffffff.png
+SHA-256-Digest: WKnxvR3WG/tnMc8K0AZ71UULBUS+tmpMxgMyd2T1hqw=
+
+Name: assets/src/ocicon/assets/oc_icon_world_1_24_ffffff.png
+SHA-256-Digest: F7dlwZrMx8u3sxHAX6/nSYlgLgU94BQaLfwzDbdTbKM=
+
+Name: assets/src/ocicon/assets/oc_icon_world_2_24_fff.png
+SHA-256-Digest: /bWSd00UiIUiJDFRGp5qKa2gAXw8jRLsXiKqAdgBOdY=
+
+Name: assets/src/ocicon/assets/oc_icon_world_2_24_ffffff.png
+SHA-256-Digest: L1wU64hzvx3x5GQh4k81bVuRM7b9hWiCG6e2KqnBb2M=
+
+Name: assets/src/ocui/assets/chevron_down.png
+SHA-256-Digest: YERC0hDRWLTONv45RdEzET79V/e5ehc5AsonF4SwuTk=
+
+Name: assets/src/ocui/assets/chevron_left.png
+SHA-256-Digest: RNGHX2o7/9zk0h1226BWGCJLQwXl4is/x7cP4AyoLvk=
+
+Name: assets/src/ocui/assets/chevron_right.png
+SHA-256-Digest: wSGdne5Bz45L5DXcO/Tflv9Lipo4yJwrKVBlXOOETBo=
+
+Name: assets/src/ocui/assets/chevron_up.png
+SHA-256-Digest: kMOAlDHuYfkf1OVy2d1rc6pCNcyfdm9u5hr6sgucpkg=
+
+Name: assets/src/ocui/assets/circle.png
+SHA-256-Digest: bWz0XVjLfD9rVZbcvd9pQBn71aAvhiCMR10ZGpdsPKQ=
+
+Name: assets/src/ocui/assets/comments.ktx
+SHA-256-Digest: kZba+o728lFpTyYVWYi3srPhlN+w9qqgZ/nxL7bDASE=
+
+Name: assets/src/ocui/assets/default_profile.png
+SHA-256-Digest: PrkwFOyM8trPA8rGNKFdXr4FjiLh6P1QHy5auWYz5J8=
+
+Name: assets/src/ocui/assets/icons/star/full.png
+SHA-256-Digest: Ur2vGRlJFedPCMgNdgPGLmIYOzqBKXR0QSUeXb7eMhQ=
+
+Name: assets/src/ocui/assets/icons/star/half.png
+SHA-256-Digest: 9j/qAyu8zF2kv11QPiEDrBl9cB/45/ZxK4y+jSvt49s=
+
+Name: assets/src/ocui/assets/icons/star/quarter.png
+SHA-256-Digest: BXXj8oYhqyxkALZBL+I38C7lsGoPxBa6HZx8Wj+Z0Sc=
+
+Name: assets/src/ocui/assets/icons/star/threequarter.png
+SHA-256-Digest: 5NaJyWEhSY1DRuAvMzAK1DHDAaSiD0vllQsk6BlUUu4=
+
+Name: assets/src/ocui/assets/sounds/sfx_hover.ogg
+SHA-256-Digest: 3mZNh2ustRPeTNE8yHNSkz2ryobP2LW72QGPzQCJ7sI=
+
+Name: assets/src/ocui/assets/sounds/sfx_scroll.ogg
+SHA-256-Digest: gr22CBZ69MCbeSvu2Q29eopEX6yX67f6+ax1DJWQ/vE=
+
+Name: assets/src/ocui/assets/sounds/sfx_select_main.ogg
+SHA-256-Digest: KB0Gw0HUS+1XsMTxzByzJd3+WD73CSuTYqLpOkyijrw=
+
+Name: assets/src/ocui/assets/sounds/sfx_select_main_close.ogg
+SHA-256-Digest: jDQXcCrY3hJcsfdupuJ6BiQxG1u9cMCIhEOglF3Kw3g=
+
+Name: assets/src/ocui/assets/sounds/sfx_zoom_in.wav
+SHA-256-Digest: j01Crv5sL9dBbtAZ1v9VyTuQs7xPWdCmwKgi9db23fc=
+
+Name: assets/src/ocui/assets/sounds/sfx_zoom_out.wav
+SHA-256-Digest: Z12rzt2XRu5UMWAk6VRc6rgk+D0ZnVWNo/1Q0xfrBC0=
+
+Name: assets/src/ocui/assets/sounds/ui_select_neg_m.ogg
+SHA-256-Digest: eteo9tX7W7oPAWoj+dYtxJ9ZPAB0tdHam92UNk0qCsI=
+
+Name: assets/src/ocui/assets/sounds/ui_success_01.ogg
+SHA-256-Digest: q5l68IQbqoVmSK+XptPYCplM6QUzzfJkPGFpD1SLF3Y=
+
+Name: assets/src/ocui/assets/spinner.png
+SHA-256-Digest: nzCrE+Lrf7MBM1oDxC5/1MX9EbR8lsHlgvkBUDKIozw=
+
+Name: assets/src/ocui/assets/viewers.ktx
+SHA-256-Digest: QK2eYkxS5gDwIPh5f1/8dRKtpOhZMeg2pbQbb8b/Acs=
+
+Name: assets/store_three_d_secure_background_958x528.ktx
+SHA-256-Digest: 6PPFqBQuIJittXCcEWGNQ1tDvfJ9CBvjGm3jFQfnT7g=
+
+Name: assets/sv_SE.json
+SHA-256-Digest: tfL4zc4wO/eUftd3Nc+g9c13/NXdmsmwxSTjdVmTqNc=
+
+Name: assets/swipe_flipbook_96x96.ktx
+SHA-256-Digest: fW8JDyBpaye3/9Bfnc37U34ReKvHDtY/VGEVosXaXsw=
+
+Name: assets/tr_TR.json
+SHA-256-Digest: nkTG3wZ/XuuGUaQBrc0oVWyP1jEOjfama3MI4Jaeq6I=
+
+Name: assets/twilight_upsell_306x343.ktx
+SHA-256-Digest: OZUgRTP0W4HaohF7NYw5NnO7NpvFtlkBN1fgmo0z0WQ=
+
+Name: assets/vr_nux.ktx
+SHA-256-Digest: wSMktRqZaaJUw0drHUBgaiEWrF8ix0sKsfq2cgYYFt4=
+
+Name: assets/zh_CN.json
+SHA-256-Digest: qmYa42b76lFc+vQX+xYLkaaf3CNn2AevkObi35Bxgno=
+
+Name: assets/zh_HK.json
+SHA-256-Digest: 7TddmwITGOSO6xFEJbRxGNgonFCcme0mM3a8/oFEsJY=
+
+Name: assets/zh_TW.json
+SHA-256-Digest: yihQohfurQ7P2QvSKSp35IRDViYFg9/NUEg+riKc4pQ=
+
+Name: classes.dex
+SHA-256-Digest: zzgydnrv/tOE/KdbfQBeuMZShOphnxZscmMfVKLzWok=
+
+Name: lib/armeabi-v7a/libacra.so
+SHA-256-Digest: za3KIO9KZ4zoNC+ShLc8zhlUBMvZT+yno7TAdyd5Al8=
+
+Name: lib/armeabi-v7a/libappstatelogger.so
+SHA-256-Digest: K4noWZIGjylguYozJvPbX4lQ5ISwgUzVzc+30GWt9tA=
+
+Name: lib/armeabi-v7a/libbreakpad.so
+SHA-256-Digest: SMOSrcYF+mD6on68VCop9l7RnUH341/EX9d1YQ86/Pk=
+
+Name: lib/armeabi-v7a/libbreakpad_cpp_helper.so
+SHA-256-Digest: Ju/mlTB89vmiRBPQVnmIWte8pp3gaJHbcx1UQkNkqqI=
+
+Name: lib/armeabi-v7a/libcpanelservice.so
+SHA-256-Digest: GjxiF1GC6KmAzSP/WVNl/v1r8QHIoaiJxTFHZAiqIFo=
+
+Name: lib/armeabi-v7a/libdistract.so
+SHA-256-Digest: VnxRWntqH8Ww5xzGTvGq4EKUjpe/UWl8azFNXsHHAJA=
+
+Name: lib/armeabi-v7a/libfb.so
+SHA-256-Digest: wU2FE24dN/3k9Vdpdx1/+kcH0a3AO+77E6GkF6Bv5rM=
+
+Name: lib/armeabi-v7a/libfb_leanstacktracer.so
+SHA-256-Digest: t+kLDdY3GgcK4Q56D7r2idAMExxjFyooZ+QA20rn7oQ=
+
+Name: lib/armeabi-v7a/libfbgloginit.so
+SHA-256-Digest: jal6Jc+cLuxd6XH42Hncmz12zoqLra6fKISkYGQ07WE=
+
+Name: lib/armeabi-v7a/libfbjni.so
+SHA-256-Digest: d5TNzcjDiCi+E/kGtDgeYP9he+3Oa93uukdOFeDkgZI=
+
+Name: lib/armeabi-v7a/libfbsystrace.so
+SHA-256-Digest: xkUt6q/CtqTdTj4CPKe16QxW1s+3fNF+AZzH7/8cryM=
+
+Name: lib/armeabi-v7a/libforce_dlopen.so
+SHA-256-Digest: 2LkVNzRMZIHbLcjUrDDPs65gUoZwsD51A4Y66CmnnP4=
+
+Name: lib/armeabi-v7a/libglog.so
+SHA-256-Digest: Yq0KoZzCqCXBEEJ4t7kjFYVYVFG6w+0BUWkna7apnoI=
+
+Name: lib/armeabi-v7a/libgnustl_shared.so
+SHA-256-Digest: GQezN2ZRLoagtWIyXa5nHHiVXVlFMZhv+E0rr9sRjvA=
+
+Name: lib/armeabi-v7a/libhome.so
+SHA-256-Digest: WoXj74pshCPszRViF+M7cGNYiKGuH/dAtaN5TGym+/o=
+
+Name: lib/armeabi-v7a/libmemalign16.so
+SHA-256-Digest: 1TdR06vSnBMTD0fq+LiIrodgG3bKjS/WyH4htcH1RUo=
+
+Name: lib/armeabi-v7a/libnightwatch.so
+SHA-256-Digest: PCu3J/FYgBahqcIJ584OU40BJWbp2OUYpRvZyCpZJkY=
+
+Name: lib/armeabi-v7a/libovrplatformloader.so
+SHA-256-Digest: KOLWNXy1O+X3eB4VJncJoTbgu0FJzeAUI8PaID8eBuE=
+
+Name: lib/armeabi-v7a/libprofiloextapi.so
+SHA-256-Digest: epRBOj1z9tnHTerJY9YiUJndDMdSvH2jv5CtXNzvP5Q=
+
+Name: lib/armeabi-v7a/libsigmux.so
+SHA-256-Digest: 7ZbTtb1SLcp7sDYqtN3xQYjm2rnyymQitrlZmICbtyQ=
+
+Name: lib/armeabi-v7a/libwatcher_binary.so
+SHA-256-Digest: EL8NJpePjYWssRXOCN6DFp5pZS509QuhJzDmf1eGCmw=
+
+Name: lib/armeabi-v7a/libxplat_hermes_API_HermesAPIAndroid.so
+SHA-256-Digest: Q41QKlZTvkinGRbJCwl6p2zhlZWZx8TniC1rCE57e1o=
+
+Name: lib/armeabi-v7a/libxplat_hermes_external_dtoa_dtoaAndroid.so
+SHA-256-Digest: kOu8nyryBdiUHZZUCAWxNMTPzOptzBa8McFQ4Fzh0g8=
+
+Name: lib/armeabi-v7a/libxplat_hermes_external_llvm_extra_llvm_extraAn
+ droid.so
+SHA-256-Digest: +h7IqjEJ7J+h3nxXixKOto9qt70wF9IZZumNppvhJmU=
+
+Name: lib/armeabi-v7a/libxplat_hermes_facebook_llvm_LLVMSupportAndroid
+ .so
+SHA-256-Digest: CLFcl3EHJ+kYXGij1YkShN1r8c5Gn+7J89H9n6fnkws=
+
+Name: lib/armeabi-v7a/libxplat_hermes_facebook_llvm_support-cAndroid.s
+ o
+SHA-256-Digest: rvCmvMsSUBo+71Ey/yeaotz2DCtoyWnQ0gv/8SuoYyc=
+
+Name: lib/armeabi-v7a/libxplat_hermes_lib_AST_ASTAndroid.so
+SHA-256-Digest: ZS4F1X8T8HThIrIKIeZ7/ZIVRgKMwU/+l40FdZ5PUek=
+
+Name: lib/armeabi-v7a/libxplat_hermes_lib_BCGen_BCGenAndroid.so
+SHA-256-Digest: 7wtsdfsLPnLIPulPw/dI34b/e1/wrH/X8INxNS8jn7U=
+
+Name: lib/armeabi-v7a/libxplat_hermes_lib_BCGen_HBC_HBCAndroid.so
+SHA-256-Digest: rJAbiF+u7CHgbOIe6NfWg5kdxgw+AisoVlw6Injzsio=
+
+Name: lib/armeabi-v7a/libxplat_hermes_lib_HermesFrontendAndroid.so
+SHA-256-Digest: bPUxyhuSej3zMPMIDOHTsNHTx+/BJdTD8d6A8q7CrF0=
+
+Name: lib/armeabi-v7a/libxplat_hermes_lib_Inst_InstAndroid.so
+SHA-256-Digest: SkEq8hNzQuNUXv8d1sZFvbVrySx9d+K1ZVGpKAgGOxs=
+
+Name: lib/armeabi-v7a/libxplat_hermes_lib_OptimizerAndroid.so
+SHA-256-Digest: jpPcbShcDDgT3/B6JI+VZ3IxR0R8jFVY7s4JF/tWF38=
+
+Name: lib/armeabi-v7a/libxplat_hermes_lib_Parser_ParserAndroid.so
+SHA-256-Digest: panQ08hPALhHTDwLLGuBFhjFNuUOs0ZMc41hV8xBidM=
+
+Name: lib/armeabi-v7a/libxplat_hermes_lib_Platform_PlatformAndroid.so
+SHA-256-Digest: FcG4LZSfmxjn6RDLzf07obKUJqQXjE+Zepu9nCX4Aao=
+
+Name: lib/armeabi-v7a/libxplat_hermes_lib_Platform_Unicode_UnicodeAndr
+ oid.so
+SHA-256-Digest: 2vFxjFoiK60C6pBjfOAABcr0fjKgp+Hhm/XNj+rrAis=
+
+Name: lib/armeabi-v7a/libxplat_hermes_lib_SourceMap_SourceMapAndroid.s
+ o
+SHA-256-Digest: OukSTaCPAL6lEyXgh67vYAhfkh6Hq6SnvteEL7dj23I=
+
+Name: lib/armeabi-v7a/libxplat_hermes_lib_Support_SupportAndroid.so
+SHA-256-Digest: 5ETCrbuHhyqneCLJzFPe87qxKbm08HPio2XutgvI6Eo=
+
+Name: lib/armeabi-v7a/libxplat_hermes_lib_VM_VMAndroid.so
+SHA-256-Digest: XWoPN/Q/J87IpFfur3z+dJ1nV96GsgpA/BDkWWfppg0=
+
+Name: lib/armeabi-v7a/libxplat_jsi_jsiAndroid.so
+SHA-256-Digest: P8n/iL+CDNJ/gFn/pugNJfdoqGo11qoxMRvdjqjVY/E=
+
+Name: lib/armeabi-v7a/libxplat_third-party_boost_boostAndroid.so
+SHA-256-Digest: v69j1sA6f7EdldpPE818m3cXEFGOHNJs7He8p3vplQQ=
+
+Name: res/anim/cycle_interpolator.xml
+SHA-256-Digest: w71rKZTotIqNHagEEkW0+i/rKwHIFIDHi5mwrOC9w/4=
+
+Name: res/anim/fadein.xml
+SHA-256-Digest: eqtORs1qg+wlhQ0MXtvJbe9CsT2FzBVnYum8iW4d87Y=
+
+Name: res/anim/fadeout.xml
+SHA-256-Digest: xGlVnxwPCVldznTIQiuvj4GYM9f2MypBhamOsEW81os=
+
+Name: res/anim/wrong_pattern_shake.xml
+SHA-256-Digest: /qn5gjBDldrtncCg8Gji0fg/z5fV85Qbx5103S4kSFI=
+
+Name: res/color/pin_button.xml
+SHA-256-Digest: Tpi2KulhzIQvEzUVuRAJyb2aW2ZlzGKO9ApmjqyVr7Y=
+
+Name: res/drawable-hdpi-v4/notification_bg_low_normal.9.png
+SHA-256-Digest: fdgyJ61bkVHESSHzWiTHQ5LVNwIge6pbEao7ySrGIjw=
+
+Name: res/drawable-hdpi-v4/notification_bg_low_pressed.9.png
+SHA-256-Digest: 4RlHlyDIzTYG5Klg5AKe0Fi4c3z+iVWMOHgAh9ZL7Aw=
+
+Name: res/drawable-hdpi-v4/notification_bg_normal.9.png
+SHA-256-Digest: R2ot7jptNS4NITpYzXOWw8lhLeXmUvp8G9vuPhk6Z5g=
+
+Name: res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png
+SHA-256-Digest: QpO86S6qjy93OQJSq/J9fVVQWcP9s8Pv2bUoICK94gI=
+
+Name: res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png
+SHA-256-Digest: dCVdsT+YXNmtBPjWEkE/xXkZwqcQVT4l/D2fYj/hm2g=
+
+Name: res/drawable-mdpi-v4/notification_bg_low_normal.9.png
+SHA-256-Digest: vPDmKMKiqjYmhi26bO46qs1KOttdTfXBQv3S6xgfvbk=
+
+Name: res/drawable-mdpi-v4/notification_bg_low_pressed.9.png
+SHA-256-Digest: e16Z3lBylbmIotIXO0QYkgWhWX879GWDILhD+IqQPrc=
+
+Name: res/drawable-mdpi-v4/notification_bg_normal.9.png
+SHA-256-Digest: vg/gP72vh/b3yaE+84dQHojgy5jwUZQN3hC/VrbOPYU=
+
+Name: res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png
+SHA-256-Digest: E+nflwefiwR9S8AxSqqdC4YdlP6FC3dp3U7y/507B1k=
+
+Name: res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png
+SHA-256-Digest: TPQeQsQVdK4X7JCVntXSQl8CH73No2PqtNupdqLRScQ=
+
+Name: res/drawable-v21/notification_action_background.xml
+SHA-256-Digest: AtHfCh39tX9MmnTVm4JEOaxRMhOLJBBTF3EREgYfmSQ=
+
+Name: res/drawable-xhdpi-v4/notification_bg_low_normal.9.png
+SHA-256-Digest: uXY6G0jRm/22W3PCh/Bn1QB8m4GwiK1QCuoTeveblDQ=
+
+Name: res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png
+SHA-256-Digest: f/QdP0Grwhn/DYrOcK8L48iPdr49tI6JUbIsde2OQaY=
+
+Name: res/drawable-xhdpi-v4/notification_bg_normal.9.png
+SHA-256-Digest: UcrXW2ElY1qt5dfTsuSlaRj5YzoOKQ6qQH5GeDt/B8E=
+
+Name: res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png
+SHA-256-Digest: ukgIe6XxA8BIeBpiCpKscdVufr7N3/HFli1R1e0BBDs=
+
+Name: res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png
+SHA-256-Digest: IwF2V2yf2ZrcE2enjXsUywKQM3CGaqSSpSW4AOnn3go=
+
+Name: res/drawable/home_button_icon_gear.png
+SHA-256-Digest: kzPwFfxJK//2/C2zLxD5prFs0MMT7qWrrPs2GzwKyDE=
+
+Name: res/drawable/home_button_icon_malibu.png
+SHA-256-Digest: SrCdOKxXsmzYJJYVEa2AkSyEK7yfo1MXzj6cLVcryOY=
+
+Name: res/drawable/ic_notif_check_alt.png
+SHA-256-Digest: WDuweETmHSkoh0u5Lv5x9xNGLpyQ9OgnNcEwWyRkvOk=
+
+Name: res/drawable/ic_notif_download.png
+SHA-256-Digest: hMs5rlp3F7CEokW/DaLHApyFt8TC62SyZTtMXtL9Zgw=
+
+Name: res/drawable/ic_notif_gallery.png
+SHA-256-Digest: Byqdx37L1rLrEGs/56Ts7XuuFD57htB9GzCgXY5Spwk=
+
+Name: res/drawable/ic_notif_gear.png
+SHA-256-Digest: BMR1dzEKl2JiTTC4FvfahmlyU8l/GV5bNTmcl+lnV7U=
+
+Name: res/drawable/ic_notif_home.png
+SHA-256-Digest: XNyXxYp/CDD4kdMC518dM00oPp98/cbC8muIZOsjuOI=
+
+Name: res/drawable/ic_notif_library.png
+SHA-256-Digest: Tk8hAYfhdwgt4kpd8Y2rt4Py6yBrzO5QcsVQktHiaY4=
+
+Name: res/drawable/ic_notif_microphone.png
+SHA-256-Digest: /gh6TSn2ocwrpwNMAM6VDwuIR5p31YMjicuJutxHQBk=
+
+Name: res/drawable/ic_notif_pac_cont.png
+SHA-256-Digest: 6rxgwIEqT92XP4mPVsd7T590Krr5phsqlnPC6y0NaTA=
+
+Name: res/drawable/ic_notif_party.png
+SHA-256-Digest: c5yu2v6jbn4OeGDpaLE/KrrKZ4HVK8FdZwl9H1o1fDA=
+
+Name: res/drawable/ic_notif_store.png
+SHA-256-Digest: fa8PgbrTYFoFP3LFxFqMPMkssCAlROPvw1Yf2Fb7AQ8=
+
+Name: res/drawable/ic_notif_tv.png
+SHA-256-Digest: FTqpsGaibLw+1olOPrVHDKYZcixgcJt+PuXVl3H33Z0=
+
+Name: res/drawable/notification_bg.xml
+SHA-256-Digest: wCY/JX9uoaTCXfBvrFvG7+jElsjV0iojXv9DkEyryT8=
+
+Name: res/drawable/notification_bg_low.xml
+SHA-256-Digest: 4Q+zuIJOqKIJYQ7vT1XWuA5nt7fwxLnDoHpQKGF95Vw=
+
+Name: res/drawable/notification_icon_background.xml
+SHA-256-Digest: 09ghJtmqAhtdElvXI5q47FZ8yJ17rOKx6HFk++nLOPc=
+
+Name: res/drawable/notification_tile_bg.xml
+SHA-256-Digest: c9LzQwSNH1nwGfBnKg/FFuAdKh6lKPPPnHRtugybptQ=
+
+Name: res/drawable/oc_icon_info_1_24_fff.png
+SHA-256-Digest: iVEaD5/Adb3rlcl/WmCn6qPYO04SWWufo4V+tD8Lalc=
+
+Name: res/drawable/pin_button.xml
+SHA-256-Digest: lYE9rVJ9F5QXQ6ssxQApveKazepqKDZ+JWhaElHchsE=
+
+Name: res/layout-v16/notification_template_custom_big.xml
+SHA-256-Digest: 6L/RBJ6I1shQsAClFFVlaYQINLiwyUIJL/9bUnQ5AIU=
+
+Name: res/layout-v21/notification_action.xml
+SHA-256-Digest: jZslgIByp34dBJFjhZezLd/hQ8X2aB2SB1fS6b4xvFA=
+
+Name: res/layout-v21/notification_action_tombstone.xml
+SHA-256-Digest: 2HgCD2iqb2qn3Oxlq4AFcT8U3/10D1OQzKCVxEnjUyM=
+
+Name: res/layout-v21/notification_template_custom_big.xml
+SHA-256-Digest: gRrgDWfwOy0+MGsvDKyrpju0wpquWFaKa5Ss2sBf7MA=
+
+Name: res/layout-v21/notification_template_icon_group.xml
+SHA-256-Digest: xn+Lu4BlOKU3Jb8ymHHhX/9804ECOXd2UWolvQk2lzs=
+
+Name: res/layout/abstract_lock_pattern_view.xml
+SHA-256-Digest: QGPBiVSfSgqLYNyP02VaLtM3hXwCeUckmY0aRwIcvTs=
+
+Name: res/layout/abstract_lock_pin_view.xml
+SHA-256-Digest: h84meI+1xJVdku7kVkQltUzCbNBGKOrmP8lL/lUOR5s=
+
+Name: res/layout/activity_main.xml
+SHA-256-Digest: W/2qHzZNLy3vXGU5ZyaSGoPeTNlcpJSdqNuGowyyZMI=
+
+Name: res/layout/forgot_pattern_instructions_view.xml
+SHA-256-Digest: vi8ez6p3+O12Ws1lzDbzZW+pgOAC8XFbPXO3rhszwMA=
+
+Name: res/layout/notification_action.xml
+SHA-256-Digest: P2IUPbKgXmGyAQMfaF2mAZLvxqCCGwSnklbyl8nfbtk=
+
+Name: res/layout/notification_action_tombstone.xml
+SHA-256-Digest: IpeJ8h5cVAGPEV7vcIBtRCTHNYZ7hejZrtpmx31S0Ps=
+
+Name: res/layout/notification_media_action.xml
+SHA-256-Digest: bovsYdjkLy4u41/P0oNT5CJbUsHjlnP22oUzy2puR4g=
+
+Name: res/layout/notification_media_cancel_action.xml
+SHA-256-Digest: ul3LHzbc8niXw+4O7HlnEi1Mky4i0QOLwQi2PP1/Dwo=
+
+Name: res/layout/notification_template_big_media.xml
+SHA-256-Digest: 5FNVC8+mmiHne2Kqy2L8GSvcIYy2Z9oRCSNrJEDrYmw=
+
+Name: res/layout/notification_template_big_media_custom.xml
+SHA-256-Digest: MEfi/CranqCC7TjjlmxSkSGHDydU2kohu3TYBcionW8=
+
+Name: res/layout/notification_template_big_media_narrow.xml
+SHA-256-Digest: fJj5WWdJmquu3WPYI2LQ7VD0a31jMVF1JSOfzDUpEx0=
+
+Name: res/layout/notification_template_big_media_narrow_custom.xml
+SHA-256-Digest: pa4ns1ZSacRitLJOZhuTtiw/bPb62mdni0XUevrJuOQ=
+
+Name: res/layout/notification_template_icon_group.xml
+SHA-256-Digest: PGu5MBn09L+FyOybda4exP0wPRayXFdk6rNlR8EfsUg=
+
+Name: res/layout/notification_template_lines_media.xml
+SHA-256-Digest: YdqhlbaMSQL3WDJBL/3a7Yq2EampNq/vI/RhtWlIIJs=
+
+Name: res/layout/notification_template_media.xml
+SHA-256-Digest: lxdVb3zchDeSdGcpqDzA3RBooTDX5SZRyRtBrvznt28=
+
+Name: res/layout/notification_template_media_custom.xml
+SHA-256-Digest: S6yt+d2S6xl7x1o+0luJjS8gostz4j7PcTkGs3ljLyc=
+
+Name: res/layout/notification_template_part_chronometer.xml
+SHA-256-Digest: ODQwR5nJdaIsWvyVGpLs6yXqWWNutsysCqNsezM8SSo=
+
+Name: res/layout/notification_template_part_time.xml
+SHA-256-Digest: 76kKSvDBoMbjvUADMw0bji5ie1/ZfLwj68sM46wdrHc=
+
+Name: res/layout/oculus_lock_pin_view.xml
+SHA-256-Digest: V21ij4vqTkDS7oKIhkGjk38mCmvJsW10mCgo7ToUj7c=
+
+Name: res/mipmap-xxxhdpi-v4/ic_launcher.png
+SHA-256-Digest: tSSuK2RQunkOxdEQQgzFA9IzdOM5740xa2PCa0RbuDY=
+
+Name: resources.arsc
+SHA-256-Digest: l+hkcNZgHWgjckf+K3/suO5tfXXXI9hTwJxeDYQT990=
+

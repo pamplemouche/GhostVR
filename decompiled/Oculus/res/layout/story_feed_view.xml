@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/story_header" />
+    <androidx.percentlayout.widget.PercentFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.oculus.horizon.widget.MediaView android:id="@id/media_view" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_aspectRatio="@dimen/common_aspect_ratio_16_9" app:layout_widthPercent="@dimen/common_width_percent_100" />
+        <ImageView android:layout_gravity="end|center|top" android:id="@id/full_screen_button" android:padding="@dimen/video_full_screen_button_padding" android:layout_width="@dimen/video_full_screen_button_size" android:layout_height="@dimen/video_full_screen_button_size" android:src="@drawable/feed_video_full_screen_icon" />
+    </androidx.percentlayout.widget.PercentFrameLayout>
+    <Space android:id="@id/feed_media_description_space" android:layout_width="fill_parent" android:layout_height="13.0dip" />
+    <TextView android:textAppearance="?android:textAppearance" android:textColor="?mediumDarkTextColor" android:id="@id/feed_description" android:paddingLeft="@dimen/feed_padding" android:paddingRight="@dimen/feed_padding" android:paddingBottom="@dimen/feed_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="3.0dip" />
+</LinearLayout>

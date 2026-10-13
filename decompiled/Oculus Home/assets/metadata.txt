@@ -1,0 +1,3 @@
+.id dex
+secondary-2.dex.jar c8a3a791abe100f974837254dd8260e3855279ad secondary.dex02.Canary
+secondary-1.dex.jar 665162e2043d673ab50e99f4be696fc23b483cdc secondary.dex01.Canary

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.chrome.browser.ui.widget.RadioButtonWithDescription android:id="@id/allowed" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="?android:listPreferredItemPaddingStart" app:APKTOOL_DUMMYVAL_0x7f040260="@string/APKTOOL_DUMMYVAL_0x7f130677" />
+    <org.chromium.chrome.browser.ui.widget.RadioButtonWithDescription android:id="@id/ask" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="?android:listPreferredItemPaddingStart" app:APKTOOL_DUMMYVAL_0x7f040260="@string/APKTOOL_DUMMYVAL_0x7f13067a" />
+    <org.chromium.chrome.browser.ui.widget.RadioButtonWithDescription android:id="@id/blocked" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="?android:listPreferredItemPaddingStart" app:APKTOOL_DUMMYVAL_0x7f040260="@string/APKTOOL_DUMMYVAL_0x7f13067c" />
+</LinearLayout>

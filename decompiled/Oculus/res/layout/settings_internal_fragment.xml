@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:oculus="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?lineDividerDecorationDrawable" android:showDividers="middle">
+        <com.oculus.horizon.widget.CustomSetting android:id="@id/gatekeepers" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/settings_gatekeepers" />
+        <com.oculus.horizon.widget.CustomSetting android:id="@id/platform_endpoint" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/settings_platform_endpoint" />
+        <com.oculus.horizon.widget.CustomSetting android:id="@id/settings_check_app_versions_roadblock" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/settings_check_app_versions_roadblock" />
+        <com.oculus.horizon.widget.CustomSetting android:id="@id/store_overrides" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/settings_store_overrides" />
+        <com.oculus.horizon.widget.CustomSetting android:id="@id/reset_social_nux" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/reset_social_nux_label" />
+        <com.oculus.horizon.widget.CustomSetting android:id="@id/reset_activity_privacy_update_roadblock" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/reset_activity_privacy_roadblock_label" />
+        <com.oculus.horizon.widget.CustomSetting android:id="@id/reset_payments_nux" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/reset_payments_nux_label" />
+        <com.oculus.horizon.widget.CustomSetting android:id="@id/quick_promotions" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/settings_qp" />
+        <com.oculus.horizon.widget.CustomSetting android:id="@id/fb_login" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/setting_fb_login" />
+        <com.oculus.horizon.widget.CustomSetting android:id="@id/save_internal_data" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/setting_save_internal_data" />
+        <com.oculus.horizon.widget.CustomSetting android:id="@id/reset_controller_nux" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/internal_reset_controller_nux" />
+        <com.oculus.horizon.widget.CustomSetting android:id="@id/fresco_debug" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/internal_fresco_debug" />
+        <com.oculus.horizon.widget.CustomSetting android:id="@id/events_always_joinable_setting" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/settings_make_events_always_joinable" />
+        <com.oculus.horizon.widget.CustomSetting android:id="@id/crash_horizon" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/crash_horizon" />
+        <com.oculus.horizon.widget.CustomSetting android:id="@id/quit_horizon" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/quit_horizon" />
+        <com.oculus.horizon.widget.CustomSetting android:id="@id/nux_preferences" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/nux_preferences_settings" />
+        <com.oculus.horizon.widget.CustomSetting android:id="@id/themes_preference" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/themes_preference" />
+        <com.oculus.horizon.widget.CustomSetting android:id="@id/react_native_preference" android:layout_width="fill_parent" android:layout_height="wrap_content" oculus:titleText="@string/react_native_preference" />
+    </LinearLayout>
+</ScrollView>

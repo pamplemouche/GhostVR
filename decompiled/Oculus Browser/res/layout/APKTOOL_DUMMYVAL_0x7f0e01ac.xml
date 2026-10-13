@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bottom_bar_shadow" android:background="@drawable/APKTOOL_DUMMYVAL_0x7f080262" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f07004f" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f070050" android:scaleY="-1.0" android:importantForAccessibility="no" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/bottom_bar_button_container" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <org.chromium.ui.widget.ButtonCompat android:id="@id/cancel_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/APKTOOL_DUMMYVAL_0x7f1301d4" style="@style/APKTOOL_DUMMYVAL_0x7f140226" />
+        <View android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <org.chromium.ui.widget.ButtonCompat android:id="@id/confirm_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/APKTOOL_DUMMYVAL_0x7f13022c" style="@style/APKTOOL_DUMMYVAL_0x7f1400ff" />
+    </LinearLayout>
+</merge>

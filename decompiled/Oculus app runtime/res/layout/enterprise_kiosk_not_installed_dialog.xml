@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.dialogs.EnterpriseKioskNotInstalledDialog style="@style/EnterpriseDialogStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:text="@string/enterprise_kiosk_not_installed_dialog_title" style="@style/EnterpriseDialogTitleStyle" />
+    <TextView android:layout_marginTop="20.0dip" android:text="@string/enterprise_kiosk_not_installed_dialog_description" style="@style/EnterpriseDialogBodyTextStyle" />
+    <TextView android:id="@id/enterprise_kiosk_not_installed_link" android:clickable="true" android:layout_marginTop="20.0dip" android:text="@string/enterprise_kiosk_not_installed_dialog_link_text" style="@style/EnterpriseDialogTertiaryActionTextStyle" />
+</com.oculus.panelapp.anytimeui.dialogs.EnterpriseKioskNotInstalledDialog>

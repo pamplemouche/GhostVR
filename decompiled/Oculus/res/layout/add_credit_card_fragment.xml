@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/credit_card_info_section" android:background="@color/oculus_gray" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_label_margin_top" style="@style/Oculus.Widget.Light.Setting">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout android:id="@id/card_number_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?textInputLayoutStyle">
+                <androidx.appcompat.widget.AppCompatEditText android:id="@id/card_number" android:nextFocusDown="@id/card_expiration_month" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/commerce_credit_card_number" android:maxLength="19" android:inputType="phone" android:imeOptions="actionNext" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <ImageView android:id="@id/card_icon" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:paddingBottom="15.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignRight="@id/card_number_layout" android:layout_centerVertical="true" android:layout_alignEnd="@id/card_number_layout" />
+        </RelativeLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout android:id="@id/card_expiration_month_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:errorEnabled="true" style="?textInputLayoutStyle">
+                <com.google.android.material.textfield.TextInputEditText android:id="@id/card_expiration_month" android:nextFocusDown="@id/card_expiration_year" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/commerce_credit_card_expiration_month" android:maxLength="2" android:inputType="number" android:imeOptions="actionNext" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:id="@id/card_expiration_year_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:errorEnabled="true" style="?textInputLayoutStyle">
+                <com.google.android.material.textfield.TextInputEditText android:id="@id/card_expiration_year" android:nextFocusDown="@id/card_cvv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/commerce_credit_card_expiration_year" android:maxLength="2" android:inputType="number" android:imeOptions="actionNext" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:id="@id/card_cvv_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:errorEnabled="true" style="?textInputLayoutStyle">
+                <com.google.android.material.textfield.TextInputEditText android:id="@id/card_cvv" android:nextFocusDown="@id/card_country" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/commerce_credit_card_cvv" android:maxLength="4" android:inputType="number" android:imeOptions="actionNext" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout android:id="@id/card_country_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:errorEnabled="true" style="?textInputLayoutStyle">
+                <com.google.android.material.textfield.TextInputEditText android:id="@id/card_country" android:nextFocusDown="@id/card_zip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/commerce_credit_card_country" android:inputType="textCapWords" android:imeOptions="actionNext" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:id="@id/card_zip_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:errorEnabled="true" style="?textInputLayoutStyle">
+                <com.google.android.material.textfield.TextInputEditText android:id="@id/card_zip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/commerce_credit_card_zip" android:inputType="textCapCharacters" android:imeOptions="actionDone" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <TextView android:textSize="12.0sp" android:textColor="@color/oculus_red" android:gravity="center" android:id="@id/credit_card_info_error_message" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/oculus_red" android:gravity="center" android:id="@id/credit_card_number_error_message" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/settings_top_padding" android:text="@string/commerce_invalid_credit_card_number" />
+        <com.oculus.horizon.widget.ProgressButton android:id="@id/save_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_save" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/social_party_member_layout" style="@style/SocialListRowTheme"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/SocialListRowContentTheme">
+        <ImageView android:id="@id/profile_picture" style="@style/SocialListRowProfilePhotoTheme" />
+        <LinearLayout style="@style/SocialListRowDescriptionContainerTheme">
+            <TextView android:id="@id/display_name" style="@style/SocialListRowDescriptionTheme" />
+            <TextView android:id="@id/presence_status" style="@style/SocialListRowDescriptionTheme" />
+        </LinearLayout>
+        <Button android:id="@id/join_button" android:text="@string/social_party_dialog_join_button" style="@style/SocialListRowButtonTheme" />
+        <ImageButton android:id="@id/action_icon" android:clickable="true" style="@style/SocialListRowActionIconTheme" />
+        <ImageButton android:id="@id/overflow_action_icon" android:clickable="true" style="@style/SocialListRowActionIconTheme" />
+    </LinearLayout>
+</LinearLayout>

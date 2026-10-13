@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?nuxBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/nux360_toolbar" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/nux_container_padding" android:paddingTop="?actionBarSize" android:paddingRight="@dimen/nux_container_padding" android:paddingBottom="@dimen/nux_container_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textAppearance="@style/TextAppearance.Small" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_container_padding" android:layout_marginBottom="@dimen/nux_text_padding" android:text="@string/nux_username_header" />
+        <com.google.android.material.textfield.TextInputLayout android:id="@id/nux_username_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?textInputLayoutStyle">
+            <com.google.android.material.textfield.TextInputEditText android:id="@id/nux_username" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/registration_username" android:inputType="textVisiblePassword" android:imeOptions="actionNext" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@id/nux_first_name_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?textInputLayoutStyle">
+            <com.google.android.material.textfield.TextInputEditText android:id="@id/nux_first_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/common_first_name" android:inputType="textPersonName|textCapSentences" android:imeOptions="actionNext" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@id/nux_last_name_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?textInputLayoutStyle">
+            <com.google.android.material.textfield.TextInputEditText android:id="@id/nux_last_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/common_last_name" android:inputType="textPersonName|textCapSentences" android:imeOptions="actionDone" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.oculus.horizon.widget.ProgressButton android:id="@id/nux_continue" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_text_padding" android:text="@string/common_continue" />
+    </LinearLayout>
+</FrameLayout>

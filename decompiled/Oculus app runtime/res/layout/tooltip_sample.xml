@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/SystemTooltipColumn"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:text="Multiple Line Tooltip" style="@style/SystemTooltipHost">
+        <tag android:value="This tooltip text is long enough to wrap to addition lines..." android:id="@id/tooltip_text" />
+        <tag android:value="tooltip_id=debug_panel_multi_line_tooltip,tooltip_position=bottom" android:id="@id/tooltip_data" />
+    </TextView>
+    <TextView android:text="Small Tooltip" style="@style/SystemTooltipHost">
+        <tag android:value="Small" android:id="@id/tooltip_text" />
+        <tag android:value="tooltip_id=debug_panel_small_tooltip,tooltip_position=top" android:id="@id/tooltip_data" />
+    </TextView>
+    <TextView android:text="Top Tooltip" style="@style/SystemTooltipHost">
+        <tag android:value="Top Tooltip Text" android:id="@id/tooltip_text" />
+        <tag android:value="tooltip_id=debug_panel_top_tooltip,tooltip_position=top" android:id="@id/tooltip_data" />
+    </TextView>
+    <TextView android:text="Left Tooltip" style="@style/SystemTooltipHost">
+        <tag android:value="Left Tooltip Text" android:id="@id/tooltip_text" />
+        <tag android:value="tooltip_id=debug_panel_left_tooltip,tooltip_position=left" android:id="@id/tooltip_data" />
+    </TextView>
+    <TextView android:text="Right Tooltip" style="@style/SystemTooltipHost">
+        <tag android:value="Right Tooltip Text" android:id="@id/tooltip_text" />
+        <tag android:value="tooltip_id=debug_panel_right_tooltip,tooltip_position=right" android:id="@id/tooltip_data" />
+    </TextView>
+    <TextView android:text="Bottom Tooltip" style="@style/SystemTooltipHost">
+        <tag android:value="Bottom Tooltip Text" android:id="@id/tooltip_text" />
+        <tag android:value="tooltip_id=debug_panel_bottom_tooltip,tooltip_position=bottom" android:id="@id/tooltip_data" />
+    </TextView>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/oculus_black_10" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.oculus.horizon.widget.CustomToolbar android:theme="@style/ThemeOverlay.ActionBar" android:id="@id/toolbar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" app:popupTheme="@style/ThemeOverlay.ActionBar.Popup" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/oculus_black_1" android:gravity="center" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="25.0dip" android:layout_marginRight="30.0dip" android:layout_below="@id/toolbar" android:lineSpacingExtra="5.0sp" />
+    <LinearLayout android:orientation="vertical" android:layout_width="230.0dip" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_below="@id/description" android:layout_centerHorizontal="true">
+        <com.oculus.horizon.widget.PINIndicator android:gravity="center" android:id="@id/enter_pin" android:paddingTop="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/oculus_red" android:gravity="center" android:id="@id/error_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" />
+        <com.oculus.horizon.widget.NumericKeyboard android:id="@id/numeric_keyboard" android:layout_width="fill_parent" android:layout_height="290.0dip" android:layout_marginTop="15.0dip" />
+    </LinearLayout>
+</RelativeLayout>

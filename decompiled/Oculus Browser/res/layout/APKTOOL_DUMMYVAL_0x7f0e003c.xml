@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:minHeight="@dimen/APKTOOL_DUMMYVAL_0x7f070065"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/scroll_view" android:paddingTop="@dimen/APKTOOL_DUMMYVAL_0x7f07031c" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <org.chromium.chrome.browser.bookmarks.BookmarkTextInputLayout android:id="@id/folder_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" app:APKTOOL_DUMMYVAL_0x7f0400df="@string/APKTOOL_DUMMYVAL_0x7f1301b0" app:APKTOOL_DUMMYVAL_0x7f040127="@string/title">
+                <android.support.design.widget.TextInputEditText android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textAutoCorrect|textCapSentences" android:imeOptions="flagNoExtractUi" />
+            </org.chromium.chrome.browser.bookmarks.BookmarkTextInputLayout>
+            <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401c2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_marginBottom="4.0dip" android:text="@string/APKTOOL_DUMMYVAL_0x7f1301b8" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+            <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401c4" android:id="@id/parent_folder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="32.0dip" android:layout_marginStart="16.0dip" />
+        </LinearLayout>
+    </ScrollView>
+    <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f07031c" style="@style/APKTOOL_DUMMYVAL_0x7f140115" />
+    <View android:id="@id/shadow" android:background="@drawable/APKTOOL_DUMMYVAL_0x7f080094" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f07029f" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f07031c" />
+</merge>

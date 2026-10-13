@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/oculus_black_10" android:layout_width="fill_parent" android:layout_height="@dimen/search_bar_height">
+        <ImageView android:id="@id/back_button" android:layout_width="@dimen/search_bar_height" android:layout_height="@dimen/search_bar_height" android:src="@drawable/backarrow_button" android:scaleType="center" />
+        <ImageView android:id="@id/search_icon" android:paddingTop="16.0dip" android:paddingRight="4.0dip" android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/search_icon_active" />
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="14.0sp" android:textColor="@color/oculus_black_6" android:layout_gravity="center|left" android:id="@id/hint_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" />
+            <com.oculus.horizon.widget.CustomEditText android:textSize="14.0sp" android:textColor="@android:color/white" android:textColorHint="@color/oculus_black_6" android:layout_gravity="center|left" android:id="@id/search_box" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:maxLines="1" android:singleLine="true" android:inputType="textNoSuggestions" android:imeOptions="actionSearch" />
+        </FrameLayout>
+        <ImageView android:layout_gravity="center|right" android:id="@id/clear_button" android:padding="16.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/close_button" />
+    </LinearLayout>
+    <include android:id="@id/search_bar_separator_divider" android:visibility="gone" layout="@layout/divider_horizontal_with_theme" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center" android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/oculus_black_2" android:gravity="center" android:layout_gravity="center" android:id="@id/search_instructions_label" android:padding="@dimen/common_horizontal_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="2.0sp" />
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/sync_facebook_friends_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="@style/TextAppearance.Title" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/social_sync_facebook_friends_title" />
+            <TextView android:textAppearance="@style/TextAppearance" android:textColor="?mediumDarkTextColor" android:gravity="center" android:paddingLeft="@dimen/common_horizontal_padding" android:paddingRight="@dimen/common_horizontal_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/social_sync_facebook_friends_text_margin_top" android:text="@string/social_sync_facebook_friends_text" android:lineSpacingExtra="2.0sp" />
+            <Button android:gravity="center" android:id="@id/fbconnect_sync_facebook_friends_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/social_sync_facebook_friends_button_margin_horizontal" android:layout_marginTop="@dimen/social_sync_facebook_friends_button_margin_top" android:layout_marginRight="@dimen/social_sync_facebook_friends_button_margin_horizontal" android:text="@string/social_sync_facebook_friends_label" android:drawableStart="?social_facebookIconDrawable" style="?android:buttonStyleSmall" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,66 @@
+version: 2.9.3
+apkFileName: Oculus app runtime.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+  tag: null
+sdkInfo:
+  minSdkVersion: 21
+  targetSdkVersion: 25
+packageInfo:
+  forcedPackageId: 127
+  renameManifestPackage: null
+versionInfo:
+  versionCode: 206809499
+  versionName: 9.0.0.232.450
+resourcesAreCompressed: false
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  java/lang/invoke/CallSite.java: 8
+  java/lang/invoke/LambdaConversionException.java: 8
+  java/lang/invoke/LambdaMetafactory.java: 8
+  java/lang/invoke/MethodHandle.java: 8
+  java/lang/invoke/MethodHandles.java: 8
+  java/lang/invoke/MethodType.java: 8
+  java/lang/invoke/SerializedLambda.java: 8
+  jsr-305/src/LICENSE: 8
+  jsr-305/src/javax/annotation/CheckForNull.java: 8
+  jsr-305/src/javax/annotation/CheckForSigned.java: 8
+  jsr-305/src/javax/annotation/CheckReturnValue.java: 8
+  jsr-305/src/javax/annotation/Detainted.java: 8
+  jsr-305/src/javax/annotation/MatchesPattern.java: 8
+  jsr-305/src/javax/annotation/Nonnegative.java: 8
+  jsr-305/src/javax/annotation/Nonnull.java: 8
+  jsr-305/src/javax/annotation/Nullable.java: 8
+  jsr-305/src/javax/annotation/OverridingMethodsMustInvokeSuper.java: 8
+  jsr-305/src/javax/annotation/ParametersAreNonnullByDefault.java: 8
+  jsr-305/src/javax/annotation/ParametersAreNullableByDefault.java: 8
+  jsr-305/src/javax/annotation/PropertyKey.java: 8
+  jsr-305/src/javax/annotation/RegEx.java: 8
+  jsr-305/src/javax/annotation/Signed.java: 8
+  jsr-305/src/javax/annotation/Syntax.java: 8
+  jsr-305/src/javax/annotation/Tainted.java: 8
+  jsr-305/src/javax/annotation/Untainted.java: 8
+  jsr-305/src/javax/annotation/WillClose.java: 8
+  jsr-305/src/javax/annotation/WillCloseWhenClosed.java: 8
+  jsr-305/src/javax/annotation/WillNotClose.java: 8
+  jsr-305/src/javax/annotation/concurrent/GuardedBy.java: 8
+  jsr-305/src/javax/annotation/concurrent/Immutable.java: 8
+  jsr-305/src/javax/annotation/concurrent/NotThreadSafe.java: 8
+  jsr-305/src/javax/annotation/concurrent/ThreadSafe.java: 8
+  jsr-305/src/javax/annotation/meta/Exclusive.java: 8
+  jsr-305/src/javax/annotation/meta/Exhaustive.java: 8
+  jsr-305/src/javax/annotation/meta/TypeQualifier.java: 8
+  jsr-305/src/javax/annotation/meta/TypeQualifierDefault.java: 8
+  jsr-305/src/javax/annotation/meta/TypeQualifierNickname.java: 8
+  jsr-305/src/javax/annotation/meta/TypeQualifierValidator.java: 8
+  jsr-305/src/javax/annotation/meta/When.java: 8
+  okhttp3/internal/publicsuffix/publicsuffixes.gz: 0
+doNotCompress:
+- resources.arsc
+- ogg
+- png
+- wav
+- META-INF/oculus_prod.OSIG

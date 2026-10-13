@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.dialogs.GenericSystemDialog android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vrshell="http://schemas.android.com/apk/res-auto">
+    <com.oculus.vrshell.panels.views.SystemDialogStandardLayout android:id="@id/system_dialog_layout" vrshell:acceptResult="turn_on_tracking" vrshell:acceptText="@string/tracking_off_accept_button" vrshell:backResult="cancel" vrshell:cancelResult="cancel" vrshell:cancelText="@string/tracking_off_cancel_button" vrshell:contentText="@string/tracking_off_desc" vrshell:titleText="@string/tracking_off_title" style="@style/SystemDialog" />
+</com.oculus.panelapp.anytimeui.dialogs.GenericSystemDialog>

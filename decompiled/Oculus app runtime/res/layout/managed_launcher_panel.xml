@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.managedlauncher.ManagedLauncherView android:id="@id/managed_launcher_panel" android:background="@drawable/managed_launcher_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/managed_launcher_apps_section" />
+    <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:background="@drawable/managed_launcher_header_background" android:clickable="true" android:layout_width="fill_parent" android:layout_height="88.0dip" android:paddingStart="40.0dip">
+        <ImageView android:id="@id/managed_launcher_company_icon" android:background="@drawable/ic_system_dialog_oculus_icon" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_weight="0.0" android:paddingEnd="8.0dip" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/oc_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/managed_launcher_panel_title" android:singleLine="true" android:layout_weight="1.0" />
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/managed_launcher_scroll_up_button" android:background="@drawable/managed_launcher_scroll_button_up_unselected" android:visibility="gone" android:layout_width="34.0dip" android:layout_height="34.0dip" android:layout_weight="0.0" android:layout_marginEnd="20.0dip" />
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/managed_launcher_scroll_down_button" android:background="@drawable/managed_launcher_scroll_button_down_unselected" android:visibility="gone" android:layout_width="34.0dip" android:layout_height="34.0dip" android:layout_weight="0.0" android:layout_marginEnd="40.0dip" />
+    </LinearLayout>
+</com.oculus.panelapp.managedlauncher.ManagedLauncherView>

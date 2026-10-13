@@ -1,0 +1,31 @@
+.class public LVv0;
+.super Ljava/lang/Object;
+.source "PG"
+
+
+# instance fields
+.field public a:Ljava/lang/Runnable;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static a()Z
+    .locals 1
+
+    const-string v0, "ScrollToExpandPaymentHandler"
+
+    .line 1
+    invoke-static {v0}, LJ/N;->MPiSwAE4(Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method

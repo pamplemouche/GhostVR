@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textAppearance="?android:textAppearanceMedium" android:ellipsize="end" android:gravity="center|left" android:id="@id/label" android:paddingLeft="@dimen/common_horizontal_padding" android:paddingTop="@dimen/common_vertical_padding" android:paddingRight="@dimen/common_horizontal_padding" android:paddingBottom="@dimen/common_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/common_title_small_2_height" android:maxLines="2" android:drawableEnd="@drawable/right_arrow_black"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,95 @@
+.class public Lcom/facebook/inject/MultiBinding;
+.super Ljava/lang/Object;
+.source "MultiBinding.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/facebook/inject/MultiBinding$ArrayListSet;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+
+# instance fields
+.field private final mKey:Lcom/google/inject/Key;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/inject/Key",
+            "<TT;>;"
+        }
+    .end annotation
+.end field
+
+.field private final mValues:Lcom/facebook/inject/MultiBinding$ArrayListSet;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/facebook/inject/MultiBinding$ArrayListSet",
+            "<",
+            "Lcom/google/inject/Key",
+            "<+TT;>;>;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/inject/Key;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/inject/Key",
+            "<TT;>;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 16
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 17
+    iput-object p1, p0, Lcom/facebook/inject/MultiBinding;->mKey:Lcom/google/inject/Key;
+
+    .line 18
+    new-instance v0, Lcom/facebook/inject/MultiBinding$ArrayListSet;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lcom/facebook/inject/MultiBinding$ArrayListSet;-><init>(Lcom/facebook/inject/MultiBinding$1;)V
+
+    iput-object v0, p0, Lcom/facebook/inject/MultiBinding;->mValues:Lcom/facebook/inject/MultiBinding$ArrayListSet;
+
+    .line 19
+    return-void
+.end method
+
+
+# virtual methods
+.method public getValues()Ljava/util/Set;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Set",
+            "<",
+            "Lcom/google/inject/Key",
+            "<+TT;>;>;"
+        }
+    .end annotation
+
+    .prologue
+    .line 39
+    iget-object v0, p0, Lcom/facebook/inject/MultiBinding;->mValues:Lcom/facebook/inject/MultiBinding$ArrayListSet;
+
+    return-object v0
+.end method

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/APKTOOL_DUMMYVAL_0x7f080018"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="arrow_clip" android:animation="@drawable/APKTOOL_DUMMYVAL_0x7f080019" />
+    <target android:name="arrow_blue" android:animation="@drawable/APKTOOL_DUMMYVAL_0x7f08001a" />
+    <target android:name="bar" android:animation="@drawable/APKTOOL_DUMMYVAL_0x7f08001b" />
+</animated-vector>

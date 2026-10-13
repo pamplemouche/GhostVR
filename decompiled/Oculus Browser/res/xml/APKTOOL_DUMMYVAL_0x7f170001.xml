@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <org.chromium.chrome.browser.preferences.TextScalePreference android:title="@string/font_size" android:selectable="false" android:key="text_scale" />
+    <org.chromium.chrome.browser.preferences.ChromeBaseCheckBoxPreference android:title="@string/APKTOOL_DUMMYVAL_0x7f13031f" android:key="force_enable_zoom" android:summary="@string/APKTOOL_DUMMYVAL_0x7f13031e" />
+    <org.chromium.chrome.browser.preferences.ChromeBaseCheckBoxPreference android:title="@string/APKTOOL_DUMMYVAL_0x7f130514" android:key="reader_for_accessibility" android:summary="@string/APKTOOL_DUMMYVAL_0x7f130513" />
+    <org.chromium.chrome.browser.preferences.ChromeBaseCheckBoxPreference android:title="@string/APKTOOL_DUMMYVAL_0x7f130103" android:key="accessibility_tab_switcher" android:summary="@string/APKTOOL_DUMMYVAL_0x7f130102" />
+    <Preference android:title="@string/APKTOOL_DUMMYVAL_0x7f1300d6" android:key="captions" />
+</PreferenceScreen>

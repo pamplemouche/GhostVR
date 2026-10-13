@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.signin.SyncPromoView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/sync_promo_view_layout" android:background="@drawable/APKTOOL_DUMMYVAL_0x7f0800f0" android:padding="@dimen/APKTOOL_DUMMYVAL_0x7f0702bf" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/APKTOOL_DUMMYVAL_0x7f07017f" android:layout_marginEnd="@dimen/APKTOOL_DUMMYVAL_0x7f07017f">
+        <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401c4" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" />
+        <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401b7" android:gravity="center" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="6.0sp" />
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="end" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <org.chromium.ui.widget.ButtonCompat android:id="@id/sign_in" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f1400fe" />
+        </LinearLayout>
+    </LinearLayout>
+</org.chromium.chrome.browser.signin.SyncPromoView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <DatePicker android:layout_gravity="center_horizontal" android:id="@id/date_picker" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f1300dd" android:spinnersShown="true" android:calendarViewShown="false" android:datePickerMode="spinner" />
+        <TimePicker android:layout_gravity="center_horizontal" android:id="@id/time_picker" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f1300de" android:timePickerMode="spinner" />
+    </LinearLayout>
+</ScrollView>

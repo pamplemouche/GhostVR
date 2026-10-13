@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?nuxBackground" android:paddingTop="@dimen/statusbar_height" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="@dimen/nux_container_padding" android:paddingRight="@dimen/nux_container_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/nux_footer_height">
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/oculus_logo_small" />
+        <com.google.android.material.textfield.TextInputLayout android:id="@id/nux_email_layout" android:paddingLeft="@dimen/nux_edit_padding" android:paddingTop="@dimen/nux_edit_padding" android:paddingRight="@dimen/nux_edit_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?textInputLayoutStyle">
+            <com.google.android.material.textfield.TextInputEditText android:id="@id/nux_email" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/common_email" android:inputType="textEmailAddress" android:imeOptions="actionNext" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@id/nux_password_layout" android:paddingLeft="@dimen/nux_edit_padding" android:paddingRight="@dimen/nux_edit_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?textInputLayoutStyle">
+            <com.google.android.material.textfield.TextInputEditText android:id="@id/nux_password" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/common_password" android:inputType="textPassword" android:imeOptions="actionDone" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout android:gravity="center_vertical" android:id="@id/nux_marketing_email_opt_in_container" android:paddingLeft="@dimen/nux_edit_padding" android:paddingRight="@dimen/nux_edit_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/nux_single_field_offset">
+            <CheckBox android:id="@id/nux_marketing_email_opt_in_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/nux_field_separation_margin" />
+            <TextView android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/nux_opt_in_email" android:layout_weight="1.0" />
+        </LinearLayout>
+        <com.oculus.horizon.widget.ProgressButton android:id="@id/nux_create_account" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/nux_signup_button" />
+        <TextView android:textAppearance="@style/Nux.TextAppearance.Secondary.Small" android:gravity="center" android:id="@id/legal_notices" android:paddingTop="@dimen/nux_legal_notice_padding" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/nux_legal_notices_text" android:lineSpacingExtra="4.0sp" />
+    </LinearLayout>
+    <FrameLayout android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="@dimen/nux_footer_height">
+        <View android:layout_gravity="top" android:background="@color/oculus_black_6" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="@dimen/nux_text_padding" android:paddingRight="@dimen/nux_text_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textAppearance="@style/Nux.TextAppearance.Secondary" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/nux_have_account_label" />
+            <TextView android:gravity="center" android:id="@id/nux_login" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/nux_login_link" style="@style/Nux.TextView.Action" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

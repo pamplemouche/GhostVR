@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.keyboard_accessory.bar_component.KeyboardAccessoryView android:layout_gravity="start|bottom|center" android:orientation="vertical" android:id="@id/keyboard_accessory" android:focusable="true" android:visibility="gone" android:scrollbars="none" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f07016c" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f13017f" android:paddingEnd="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/accessory_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f070322" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f080262" android:scaleType="fitXY" android:scaleY="-1.0" />
+    <LinearLayout android:layout_gravity="start|bottom|center" android:orientation="horizontal" android:id="@id/accessory_bar_contents" android:background="@color/APKTOOL_DUMMYVAL_0x7f06011f" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f07016b">
+        <include android:id="@id/tabs" layout="@layout/APKTOOL_DUMMYVAL_0x7f0e00f1" />
+        <View style="@style/APKTOOL_DUMMYVAL_0x7f140297" />
+        <android.support.v7.widget.RecyclerView android:id="@id/bar_items_view" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    </LinearLayout>
+</org.chromium.chrome.browser.keyboard_accessory.bar_component.KeyboardAccessoryView>

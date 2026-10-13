@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="blacklisted_vr_notifications">
+        <item>com.android.systemui|low_battery</item>
+        <item>com.oculus.companion.server|companion_blink</item>
+        <item>com.oculus.browser|DownloadNotificationService</item>
+        <item>com.oculus.horizon|null|-87117812|0</item>
+        <item>com.oculus.horizon|null|135234</item>
+        <item>android|PreBootBroadcaster|0</item>
+    </string-array>
+    <string-array name="dogfood_spinner_array">
+        <item>Summary</item>
+        <item>"View All Build #'s"</item>
+    </string-array>
+    <string-array name="high_priority_notifications">
+        <item>com.android.notification_proxy|remote_disconnected</item>
+    </string-array>
+    <array name="jobscheduler_analytics2">
+        <item>@id/jobscheduler_analytics2_normal_pri</item>
+        <item>@id/jobscheduler_analytics2_high_pri</item>
+    </array>
+    <string-array name="party_invite_accept_modal_with_activity">
+        <item>[HideMiddleButtonOnLoad]</item>
+        <item>[TitleBottomMargin=6]</item>
+    </string-array>
+    <string-array name="system_dialog_styling_for_gear_btn">
+        <item>[TitleLeftBottomMargin=48,24]</item>
+    </string-array>
+    <string-array name="system_dialog_styling_for_parties">
+        <item>[TitleBottomMargin=6]</item>
+    </string-array>
+    <string-array name="system_dialog_styling_for_quest_reset_view">
+        <item>[ContentTextGravity=Center]</item>
+        <item>[ButtonBarMargin=0]</item>
+        <item>[Padding=Small]</item>
+    </string-array>
+    <string-array name="system_dialog_styling_for_quest_show_taskbar">
+        <item>[ContentTextGravity=Center]</item>
+        <item>[ButtonBarMargin=0]</item>
+        <item>[Padding=Small]</item>
+    </string-array>
+    <string-array name="system_dialog_with_smaller_title">
+        <item>[Title=85%]</item>
+    </string-array>
+    <string-array name="system_generated_notifications">
+        <item>com.oculus.notification_proxy</item>
+        <item>com.oculus.vrshell|storage</item>
+        <item>com.oculus.vrshell.home|system</item>
+        <item>com.oculus.horizon|vr_notification</item>
+    </string-array>
+    <string-array name="video_capture_blacklisted_A_series_devices">
+        <item>sm-a530f</item>
+        <item>sm-a730f</item>
+        <item>sm-g8850</item>
+    </string-array>
+    <string-array name="video_capture_blacklisted_apps">
+        <item>com.netflix.ninja.vr</item>
+        <item>com.hulu.huluvr</item>
+        <item>com.oculus.streamingsdk</item>
+        <item>com.oculus.cinema</item>
+        <item>com.oculus.venues</item>
+        <item>com.amazon.asxr</item>
+    </string-array>
+    <string-array name="whitelisted_vr_notifications">
+        <item>com.oculus.horizon</item>
+        <item>com.oculus.ocms</item>
+        <item>com.oculus.notification_proxy</item>
+        <item>com.oculus.os.logcollector</item>
+        <item>android.app.stubs</item>
+    </string-array>
+</resources>

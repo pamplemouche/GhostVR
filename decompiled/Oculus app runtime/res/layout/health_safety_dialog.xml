@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.dialogs.HealthSafetyDialog android:id="@id/health_safety_dialog" style="@style/HealthSafetyDialogContainerMain"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/HealthSafetyDialogContainerLeft">
+        <ImageView style="@style/HealthSafetyDialogIcon" />
+    </LinearLayout>
+    <LinearLayout style="@style/HealthSafetyDialogContainerRight">
+        <TextView android:text="@string/health_safety_dialog_title" style="@style/HealthSafetyDialogTitleText" />
+        <TextView android:id="@id/health_safety_dialog_description_text" android:text="@string/health_safety_dialog_description" style="@style/HealthSafetyDialogDescriptionText" />
+        <View style="@style/HealthSafetyDialogSpacer" />
+        <LinearLayout android:id="@id/health_safety_dialog_container_right_bottom" style="@style/HealthSafetyDialogContainerRightBottom">
+            <TextView android:id="@id/health_safety_dialog_callout" android:text="@string/health_safety_dialog_callout" style="@style/HealthSafetyDialogCalloutText" />
+            <com.oculus.vrshell.panels.views.ShellButton android:id="@id/health_safety_dialog_button" android:text="@string/health_safety_dialog_button" style="@style/HealthSafetyDialogButton" />
+        </LinearLayout>
+    </LinearLayout>
+</com.oculus.panelapp.anytimeui.dialogs.HealthSafetyDialog>

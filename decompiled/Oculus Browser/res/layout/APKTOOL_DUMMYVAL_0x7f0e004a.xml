@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.tasks.tab_management.TabGroupUiToolbarView android:background="@color/APKTOOL_DUMMYVAL_0x7f06011e" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/main_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <org.chromium.ui.widget.ChromeImageView android:id="@id/toolbar_left_button" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f080133" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f1300d2" app:APKTOOL_DUMMYVAL_0x7f040256="@color/APKTOOL_DUMMYVAL_0x7f060169" style="@style/APKTOOL_DUMMYVAL_0x7f1400d5" />
+        <FrameLayout android:id="@id/toolbar_container_view" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <org.chromium.ui.widget.ChromeImageView android:id="@id/toolbar_right_button" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f0802a8" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f1301c4" app:APKTOOL_DUMMYVAL_0x7f040256="@color/APKTOOL_DUMMYVAL_0x7f060169" style="@style/APKTOOL_DUMMYVAL_0x7f1400d5" />
+    </LinearLayout>
+</org.chromium.chrome.browser.tasks.tab_management.TabGroupUiToolbarView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.toolbar.top.ToolbarControlContainer android:id="@id/control_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/APKTOOL_DUMMYVAL_0x7f0700a6"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <view android:id="@id/toolbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" class="org.chromium.chrome.browser.toolbar.top.ToolbarControlContainer$ToolbarViewResourceFrameLayout">
+        <ViewStub android:id="@id/toolbar_stub" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f0700a6" />
+        <ImageView android:id="@id/toolbar_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f0700a6" android:src="@drawable/toolbar_shadow" android:scaleType="fitXY" />
+        <ViewStub android:id="@id/find_toolbar_stub" android:visibility="gone" android:layout="@layout/find_toolbar" android:inflatedId="@id/find_toolbar" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f0700a6" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f0702e4" />
+        <ViewStub android:layout_gravity="end|center|top" android:id="@id/find_toolbar_tablet_stub" android:layout="@layout/find_toolbar" android:inflatedId="@id/find_toolbar" android:layout_width="@dimen/APKTOOL_DUMMYVAL_0x7f070135" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f070133" android:layout_marginEnd="@dimen/APKTOOL_DUMMYVAL_0x7f070134" />
+        <ViewStub android:layout_gravity="start|center|top" android:id="@id/topbar_stub" android:layout="@layout/APKTOOL_DUMMYVAL_0x7f0e0077" android:inflatedId="@id/topbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </view>
+</org.chromium.chrome.browser.toolbar.top.ToolbarControlContainer>

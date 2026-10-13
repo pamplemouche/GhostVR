@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.download.home.list.view.AspectRatioFrameLayout android:background="@color/APKTOOL_DUMMYVAL_0x7f06011f" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center" android:id="@id/placeholder" android:layout_width="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" app:APKTOOL_DUMMYVAL_0x7f040159="100.0%" />
+    <org.chromium.ui.widget.ChromeImageButton android:layout_gravity="end|center|top" android:id="@id/cancel_button" android:background="?APKTOOL_DUMMYVAL_0x7f0401e7" android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f08009d" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f1302d5" app:APKTOOL_DUMMYVAL_0x7f040256="@color/APKTOOL_DUMMYVAL_0x7f060108" />
+    <LinearLayout android:layout_gravity="fill_horizontal|bottom|center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401c2" android:layout_gravity="center_vertical" android:id="@id/caption" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="4.0dip" style="@style/APKTOOL_DUMMYVAL_0x7f1400f3" />
+        <org.chromium.chrome.browser.download.home.list.view.CircularProgressView android:layout_gravity="center_vertical" android:id="@id/action_button" style="@style/APKTOOL_DUMMYVAL_0x7f140293" />
+    </LinearLayout>
+</org.chromium.chrome.browser.download.home.list.view.AspectRatioFrameLayout>

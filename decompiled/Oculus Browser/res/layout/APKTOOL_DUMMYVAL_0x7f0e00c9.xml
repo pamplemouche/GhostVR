@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.firstrun.FirstRunView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/APKTOOL_DUMMYVAL_0x7f07013e" android:fillViewport="true">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/fre_main_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/title" android:text="@string/APKTOOL_DUMMYVAL_0x7f130288" style="@style/APKTOOL_DUMMYVAL_0x7f140102" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/fre_image_and_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f070144">
+                <ImageView android:id="@id/image" android:layout_width="wrap_content" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f070141" app:APKTOOL_DUMMYVAL_0x7f0401fb="@drawable/APKTOOL_DUMMYVAL_0x7f0800d3" />
+                <LinearLayout android:orientation="vertical" android:id="@id/fre_content_wrapper" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f070144" android:layout_weight="1.0" android:layout_marginStart="@dimen/APKTOOL_DUMMYVAL_0x7f070140" android:layout_marginEnd="@dimen/APKTOOL_DUMMYVAL_0x7f070140">
+                    <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401c2" android:gravity="start" android:id="@id/data_reduction_promo_summary_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/APKTOOL_DUMMYVAL_0x7f070144" android:lineSpacingMultiplier="1.4" />
+                    <android.support.v7.widget.SwitchCompat android:id="@id/enable_data_saver_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/APKTOOL_DUMMYVAL_0x7f13027d" android:lineSpacingMultiplier="1.4" android:showText="false" style="@style/APKTOOL_DUMMYVAL_0x7f1401c5" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <org.chromium.ui.widget.ButtonCompat android:layout_gravity="bottom|center" android:id="@id/next_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="@string/next" android:paddingStart="@dimen/APKTOOL_DUMMYVAL_0x7f07013f" android:paddingEnd="@dimen/APKTOOL_DUMMYVAL_0x7f07013f" style="@style/APKTOOL_DUMMYVAL_0x7f1400ff" />
+</org.chromium.chrome.browser.firstrun.FirstRunView>

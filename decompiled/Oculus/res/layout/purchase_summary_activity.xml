@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/title_bar" android:background="@color/oculus_black_10" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <TextView android:textSize="17.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="50.0dip" android:text="@string/commerce_purchase_total" android:layout_alignParentTop="true" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/close_button" android:padding="17.0dip" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/settings_close_button" android:scaleType="centerInside" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/footer_divider" android:layout_below="@id/title_bar">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.drawee.view.SimpleDraweeView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" app:actualImageScaleType="fitCenter" app:placeholderImage="@drawable/store_item_placeholder" />
+            <LinearLayout android:gravity="center_vertical" android:id="@id/rating_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginTop="@dimen/pdp_vertical_padding_small" android:layout_marginRight="@dimen/common_horizontal_padding">
+                <TextView android:textSize="35.0sp" android:id="@id/rating_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:fontFamily="OculusSans Light" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/pdp_horizontal_padding_small" android:layout_weight="1.0">
+                    <com.oculus.horizon.widget.RatingView android:id="@id/rating_stars" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Oculus.Widget.RatingBar.Small.Indicator" />
+                    <TextView android:id="@id/rating_count" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.Small" />
+                </LinearLayout>
+                <ImageView android:id="@id/comfort_image" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:id="@id/comfort_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/pdp_horizontal_padding_small" android:maxWidth="80.0dip" style="@style/TextAppearance.Small" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginTop="@dimen/common_vertical_padding" android:layout_marginRight="@dimen/common_horizontal_padding" android:layout_marginBottom="@dimen/common_vertical_padding">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@id/product_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_toLeftOf="@id/item_price" android:layout_alignParentLeft="true" style="@style/TextAppearance.Body.Medium" />
+                    <TextView android:gravity="center" android:id="@id/item_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_alignParentRight="true" style="@style/TextAppearance.Body.Medium" />
+                </RelativeLayout>
+                <TextView android:textSize="12.0sp" android:id="@id/dynamic_pricing_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" />
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginBottom="15.0dip">
+                    <TextView android:textColor="@color/oculus_black_4" android:ellipsize="end" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/commerce_tax" android:maxLines="1" android:layout_toLeftOf="@id/tax_amount" android:layout_alignParentLeft="true" style="@style/TextAppearance" />
+                    <TextView android:textColor="@color/oculus_black_4" android:gravity="center" android:id="@id/tax_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_alignParentRight="true" style="@style/TextAppearance" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/exemptions_row" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip">
+                    <TextView android:ellipsize="end" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/commerce_exemptions_label" android:maxLines="1" android:layout_toLeftOf="@id/exemptions_field" android:layout_alignParentLeft="true" style="@style/TextAppearance" />
+                    <TextView android:gravity="center" android:id="@id/exemptions_field" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_alignParentRight="true" style="@style/TextAppearance" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/store_credit_row" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip">
+                    <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@id/store_credit_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_toLeftOf="@id/usable_store_credit" android:layout_alignParentLeft="true" style="@style/TextAppearance" />
+                    <TextView android:gravity="center" android:id="@id/usable_store_credit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_alignParentRight="true" style="@style/TextAppearance" />
+                </RelativeLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/store_credit_warning_container" android:background="@drawable/warning_bubble_background_drawable" android:padding="8.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip">
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="12.0dip" android:layout_height="12.0dip" android:src="@drawable/help_inactive" />
+                    <TextView android:textSize="12.0sp" android:id="@id/store_credit_warning" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/commerce_store_credit_warning" />
+                </LinearLayout>
+                <include layout="@layout/divider_horizontal" />
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                    <TextView android:textSize="18.0sp" android:ellipsize="end" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/commerce_total" android:maxLines="1" android:layout_toLeftOf="@id/total_price" android:layout_alignParentLeft="true" style="@style/TextAppearance.Body.Medium" />
+                    <TextView android:textSize="18.0sp" android:gravity="center" android:id="@id/total_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_alignParentRight="true" style="@style/TextAppearance.Body.Medium" />
+                </RelativeLayout>
+                <TextView android:textSize="10.0sp" android:textColor="@color/oculus_black_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/common_vertical_padding" android:layout_marginBottom="8.0dip" android:text="@string/commerce_payment_method" />
+                <include layout="@layout/divider_horizontal" />
+                <com.oculus.horizon.commerce.PaymentMethodInfoView android:ellipsize="end" android:gravity="center_vertical" android:id="@id/payment_method_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:maxLines="1" android:drawablePadding="10.0dip" />
+            </LinearLayout>
+            <TextView android:layout_gravity="center" android:id="@id/terms_of_service" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginTop="8.0dip" android:layout_marginRight="@dimen/common_horizontal_padding" android:layout_marginBottom="8.0dip" style="@style/TextAppearance.Small.SemiBold" />
+        </LinearLayout>
+    </ScrollView>
+    <include android:id="@id/footer_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_above="@id/buy_button" layout="@layout/divider_horizontal" />
+    <Button android:id="@id/buy_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/common_horizontal_padding" android:text="@string/commerce_purchase_buy" android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/oculus_black_10" android:paddingLeft="@dimen/quick_promotion_interstitial_horizontal_padding" android:paddingRight="@dimen/quick_promotion_interstitial_horizontal_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textAppearance="@style/TextAppearance.Title.Large.White" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/quick_promotion_interstitial_title_top_margin" />
+        <TextView android:textAppearance="@style/TextAppearance.Summary" android:textColor="@color/oculus_black_4" android:textColorLink="@color/oculus_white" android:id="@id/description" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/quick_promotion_interstitial_description_height" android:layout_marginTop="@dimen/quick_promotion_interstitial_description_top_margin" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/quick_promotion_interstitial_buttons_margin_top">
+            <TextView android:textAppearance="@style/TextAppearance.Medium" android:textColor="@color/oculus_black_4" android:id="@id/dismiss_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/quick_promotion_interstitial_buttons_margin_right" />
+            <Button android:gravity="center" android:id="@id/action_button" android:layout_width="wrap_content" android:layout_height="@dimen/quick_promotion_interstitial_buttons_height" style="@style/RoundButton.WhiteOnBlue" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

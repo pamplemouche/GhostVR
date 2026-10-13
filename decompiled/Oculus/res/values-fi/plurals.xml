@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="app_with_iap_count">
+        <item quantity="other">ja %1$d sovellusostoa</item>
+        <item quantity="one">ja 1 sovellusosto</item>
+    </plurals>
+    <plurals name="app_with_iap_header_count">
+        <item quantity="other">%1$d sovellusostoa sovelluksessa %2$s</item>
+        <item quantity="one">%1$d sovellusosto sovelluksessa %2$s</item>
+    </plurals>
+    <plurals name="bundle_pdp_item_count">
+        <item quantity="other">%1$d kokemusta</item>
+        <item quantity="one">1 kokemus</item>
+    </plurals>
+    <plurals name="pdp_controller_required">
+        <item quantity="other">Edellyttää jompaakumpaa</item>
+        <item quantity="one">Edellytykset</item>
+    </plurals>
+    <plurals name="store_countdown_days">
+        <item quantity="other">%1$s päivää</item>
+        <item quantity="one">1 päivä</item>
+    </plurals>
+</resources>

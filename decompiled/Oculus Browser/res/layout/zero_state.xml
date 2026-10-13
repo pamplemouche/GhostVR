@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/zero_state_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e00c6" />
+    <LinearLayout android:orientation="vertical" android:id="@id/zero_state" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/no_content_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/no_content" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e00c4" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

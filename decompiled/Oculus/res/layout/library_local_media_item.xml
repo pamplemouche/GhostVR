@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:padding="0.25dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.view.SimpleDraweeView android:id="@id/drawee_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:actualImageScaleType="centerCrop" app:placeholderImage="@color/oculus_black_1" app:viewAspectRatio="1.0" />
+    <ImageView android:layout_gravity="center" android:id="@id/play_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/play_icon" android:tint="@color/oculus_black_10_alpha_15" />
+</FrameLayout>

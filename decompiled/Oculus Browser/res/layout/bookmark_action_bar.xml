@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.bookmarks.BookmarkActionBar android:id="@id/bookmark_action_bar" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f07031c" style="@style/APKTOOL_DUMMYVAL_0x7f140115"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

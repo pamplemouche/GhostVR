@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/events_subscriber_count_bubble_text_size" android:textColor="@android:color/white" android:gravity="center" android:id="@id/subscriber_count" android:background="@drawable/events_subscriber_count_circle" android:paddingLeft="@dimen/events_subscriber_count_bubble_horizontal_padding" android:paddingRight="@dimen/events_subscriber_count_bubble_horizontal_padding" android:layout_width="wrap_content" android:layout_height="@dimen/events_subscriber_avatar_bubble_size" android:minWidth="@dimen/events_subscriber_avatar_bubble_size"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

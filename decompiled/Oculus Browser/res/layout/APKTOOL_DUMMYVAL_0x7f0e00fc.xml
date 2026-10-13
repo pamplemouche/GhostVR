@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.chrome.browser.omnibox.status.StatusView android:id="@id/location_bar_status" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ViewStub android:layout_gravity="center_vertical" android:id="@id/location_bar_incognito_badge_stub" android:layout="@layout/APKTOOL_DUMMYVAL_0x7f0e00fe" android:inflatedId="@id/location_bar_incognito_badge" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e00fd" />
+        <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f140209" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/location_bar_verbose_status" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxLines="1" android:textAlignment="viewStart" android:paddingEnd="8.0dip" />
+        <View android:layout_gravity="center_vertical" android:id="@id/location_bar_verbose_status_separator" android:background="@color/APKTOOL_DUMMYVAL_0x7f060023" android:visibility="gone" android:layout_width="@dimen/APKTOOL_DUMMYVAL_0x7f070191" android:layout_height="24.0dip" />
+        <Space android:id="@id/location_bar_verbose_status_extra_space" android:visibility="gone" android:layout_width="@dimen/APKTOOL_DUMMYVAL_0x7f070190" android:layout_height="fill_parent" />
+    </org.chromium.chrome.browser.omnibox.status.StatusView>
+</merge>

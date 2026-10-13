@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/APKTOOL_DUMMYVAL_0x7f080126" android:id="@id/action_edit_saved_password" android:title="@string/APKTOOL_DUMMYVAL_0x7f13047d" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f13047c" app:APKTOOL_DUMMYVAL_0x7f040137="@color/APKTOOL_DUMMYVAL_0x7f060079" app:APKTOOL_DUMMYVAL_0x7f0401ea="ifRoom" />
+    <item android:icon="@drawable/APKTOOL_DUMMYVAL_0x7f080113" android:id="@id/action_delete_saved_password" android:title="@string/APKTOOL_DUMMYVAL_0x7f13047b" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f13047a" app:APKTOOL_DUMMYVAL_0x7f040137="@color/APKTOOL_DUMMYVAL_0x7f060079" app:APKTOOL_DUMMYVAL_0x7f0401ea="ifRoom" />
+</menu>

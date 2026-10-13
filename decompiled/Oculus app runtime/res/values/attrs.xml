@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="acceptResult" format="reference|string|integer|boolean|color|float|dimension|fraction" />
+    <attr name="acceptText" format="reference" />
+    <attr name="active" format="boolean" />
+    <attr name="backResult" format="reference|string|integer|boolean|color|float|dimension|fraction" />
+    <attr name="background" format="reference" />
+    <attr name="backgroundDimAmount" format="float" />
+    <attr name="calloutText" format="reference" />
+    <attr name="cancelResult" format="reference|string|integer|boolean|color|float|dimension|fraction" />
+    <attr name="cancelText" format="reference" />
+    <attr name="codes" format="string|integer" />
+    <attr name="codesModifier" format="string" />
+    <attr name="contentText" format="reference" />
+    <attr name="customLayout" format="reference" />
+    <attr name="font" format="string" />
+    <attr name="gearResult" format="reference|string|integer|boolean|color|float|dimension|fraction" />
+    <attr name="horizontalGap" format="dimension|fraction" />
+    <attr name="icon" format="reference" />
+    <attr name="iconPreview" format="reference" />
+    <attr name="ime" format="string" />
+    <attr name="isCommand" format="boolean" />
+    <attr name="isExitKey" format="boolean" />
+    <attr name="isModifier" format="boolean" />
+    <attr name="isRepeatable" format="boolean" />
+    <attr name="isShiftPopupKeyboardDifferent" format="boolean" />
+    <attr name="isSticky" format="boolean" />
+    <attr name="keyBackground" format="reference" />
+    <attr name="keyEdgeFlags">
+        <flag name="left" value="0x00000001" />
+        <flag name="right" value="0x00000002" />
+    </attr>
+    <attr name="keyFont" format="string" />
+    <attr name="keyHeight" format="dimension|fraction" />
+    <attr name="keyIcon" format="reference" />
+    <attr name="keyLabel" format="string" />
+    <attr name="keyOutputText" format="string" />
+    <attr name="keyPreviewHeight" format="dimension" />
+    <attr name="keyPreviewOffset" format="dimension" />
+    <attr name="keySubLabel" format="string" />
+    <attr name="keySubTextSize" format="dimension" />
+    <attr name="keyTextColor" format="color" />
+    <attr name="keyTextSize" format="dimension" />
+    <attr name="keyToHighlight" format="reference" />
+    <attr name="keyWidth" format="dimension|fraction" />
+    <attr name="keyboard" format="reference" />
+    <attr name="keyboardLocale" format="string" />
+    <attr name="keyboardMode" format="reference" />
+    <attr name="keyboardSize" format="string" />
+    <attr name="keyboardViewStyle" format="reference" />
+    <attr name="layoutManager" format="string" />
+    <attr name="middleResult" format="reference|string|integer|boolean|color|float|dimension|fraction" />
+    <attr name="middleText" format="reference" />
+    <attr name="popupCharacters" format="string" />
+    <attr name="popupKeyboard" format="reference" />
+    <attr name="popupLayout" format="reference" />
+    <attr name="reverseLayout" format="boolean" />
+    <attr name="rowEdgeFlags">
+        <flag name="bottom" value="0x00000008" />
+        <flag name="top" value="0x00000004" />
+    </attr>
+    <attr name="shadowColor" format="reference|string|integer|boolean|color|float|dimension|fraction" />
+    <attr name="shadowRadius" format="reference|string|integer|boolean|color|float|dimension|fraction" />
+    <attr name="shiftKeyIcon" format="reference" />
+    <attr name="shiftKeyLabel" format="string" />
+    <attr name="shiftKeyOutputText" format="string" />
+    <attr name="shiftPopupKeyboard" format="reference" />
+    <attr name="spanCount" format="integer" />
+    <attr name="stackFromEnd" format="boolean" />
+    <attr name="state_long_pressable" format="boolean" />
+    <attr name="subTextSize" format="dimension" />
+    <attr name="supportsCapsLock" format="boolean" />
+    <attr name="tags" format="reference" />
+    <attr name="textColor" format="color" />
+    <attr name="textSize" format="dimension" />
+    <attr name="titleText" format="reference" />
+    <attr name="uri" format="string" />
+    <attr name="verticalCorrection" format="dimension" />
+    <attr name="verticalGap" format="dimension|fraction" />
+</resources>

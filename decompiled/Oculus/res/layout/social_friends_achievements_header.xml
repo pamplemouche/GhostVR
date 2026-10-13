@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/single_header" android:paddingLeft="@dimen/social_header_padding_horizontal" android:paddingTop="@dimen/social_header_padding_top" android:paddingRight="@dimen/social_header_padding_horizontal" android:paddingBottom="@dimen/social_header_padding_bottom" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/social_header_height">
+        <TextView android:textSize="14.0sp" android:layout_gravity="start|bottom|center" android:id="@id/single_header_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="sans-serif-medium" />
+        <TextView android:textAppearance="@style/TextAppearance" android:textColor="@color/oculus_black_4" android:layout_gravity="start|bottom|center" android:id="@id/single_header_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/double_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/social_friends_achievements_header_height">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/friends_header" android:background="@drawable/social_friends_achievements_header_selected_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textAppearance="@style/TextAppearance" android:id="@id/friends_header_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/social_friends_label" />
+            <TextView android:textAppearance="@style/TextAppearance" android:id="@id/friends_header_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" />
+        </LinearLayout>
+        <TextView android:textAppearance="@style/TextAppearance" android:textColor="@color/oculus_black_6" android:gravity="center" android:id="@id/achievements_header" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/social_achievements_label" android:layout_weight="1.0" />
+    </LinearLayout>
+</FrameLayout>

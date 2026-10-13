@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingTop="@dimen/common_vertical_padding" android:paddingBottom="@dimen/common_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oculus.horizon.pdp.widget.SortFilterDropDownMenuWidget android:id="@id/sort_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" style="@style/Oculus.Widget.Store.FilterDropdown" />
+    <com.oculus.horizon.pdp.widget.SortFilterDropDownMenuWidget android:id="@id/filter_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/sort_selector" android:layout_toEndOf="@id/sort_selector" style="@style/Oculus.Widget.Store.FilterDropdown" />
+</RelativeLayout>

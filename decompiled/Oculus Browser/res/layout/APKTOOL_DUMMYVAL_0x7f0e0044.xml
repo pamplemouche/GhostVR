@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView android:id="@id/bookmarks_list" android:background="@color/APKTOOL_DUMMYVAL_0x7f06002c" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/APKTOOL_DUMMYVAL_0x7f080095" android:drawSelectorOnTop="true" android:divider="@null" android:alpha="0.9" style="@style/APKTOOL_DUMMYVAL_0x7f1400ea"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

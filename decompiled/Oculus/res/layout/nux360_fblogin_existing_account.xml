@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?nuxBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/nux360_toolbar" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingLeft="@dimen/nux_container_padding" android:paddingTop="?actionBarSize" android:paddingRight="@dimen/nux_container_padding" android:paddingBottom="@dimen/nux_container_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/nux_text_padding">
+        <TextView android:textAppearance="@style/Nux.TextAppearance.Secondary" android:id="@id/existing_account_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_container_padding" android:text="@string/nux_fblogin_existing_account_message" />
+        <TextView android:id="@id/existing_account_email" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_single_field_offset" />
+        <TextView android:textAppearance="@style/Nux.TextAppearance.Secondary" android:id="@id/existing_account_explanation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_single_field_offset" android:text="@string/nux_fblogin_existing_account_explanation" />
+    </LinearLayout>
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:paddingLeft="@dimen/nux_container_padding" android:paddingRight="@dimen/nux_container_padding" android:paddingBottom="@dimen/nux_container_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Button android:id="@id/existing_account_connect_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_fblogin_common_button_margin" android:text="@string/nux_fblogin_existing_account_connect_button" style="@style/RoundButton.WhiteOnBlue" />
+        <TextView android:textAppearance="@style/Facebook.TextAppearance.Secondary.Small" android:gravity="center" android:id="@id/create_account_link" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_fblogin_common_button_margin" android:text="@string/nux_fblogin_existing_account_create_account_link" />
+    </LinearLayout>
+</FrameLayout>

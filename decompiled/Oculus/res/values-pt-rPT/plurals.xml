@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="app_with_iap_count">
+        <item quantity="other">"com %1$d IAP's"</item>
+        <item quantity="one">com 1 IAP</item>
+    </plurals>
+    <plurals name="app_with_iap_header_count">
+        <item quantity="other">"%1$d IAP's para %2$s"</item>
+        <item quantity="one">%1$d IAP para %2$s</item>
+    </plurals>
+    <plurals name="pdp_controller_required">
+        <item quantity="other">Requer</item>
+    </plurals>
+</resources>

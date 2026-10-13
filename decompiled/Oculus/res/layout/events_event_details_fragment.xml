@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:oculus="http://schemas.android.com/apk/res-auto">
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.oculus.horizon.widget.EmptyErrorView android:layout_gravity="center" android:id="@id/empty_error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" oculus:descriptionText="@string/common_error_generic_description" oculus:iconSrc="@drawable/error_icon" oculus:titleText="@string/common_error_generic_title" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

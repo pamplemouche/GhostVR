@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" package="com.oculus.browser" platformBuildVersionCode="28" platformBuildVersionName="9">
+    <uses-feature android:glEsVersion="0x00020000"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission-sdk-23 android:name="android.permission.BLUETOOTH"/>
+    <uses-permission-sdk-23 android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission-sdk-23 android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission-sdk-23 android:name="android.permission.REORDER_TASKS"/>
+    <uses-permission-sdk-23 android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission-sdk-23 android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="com.oculus.horizon.FBCONNECT_CONTENT_PROVIDER_READ_ACCESS"/>
+    <uses-permission android:name="com.oculus.permission.PLAY_AUDIO_BACKGROUND"/>
+    <uses-permission android:name="com.oculus.permission.RECORD_AUDIO_BACKGROUND"/>
+    <permission android:name="com.oculus.browser.permission.CHILD_SERVICE" android:protectionLevel="signature"/>
+    <permission android:name="com.oculus.browser.permission.READ_WRITE_BOOKMARK_FOLDERS" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.oculus.browser.TOS_ACKED" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.oculus.browser.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <permission android:label="Debug web pages" android:name="com.oculus.browser.permission.DEBUG" android:permissionGroup="android.permission-group.DEVELOPMENT_TOOLS" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.oculus.browser.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.oculus.browser.permission.READ_WRITE_BOOKMARK_FOLDERS"/>
+    <uses-permission android:name="com.oculus.browser.TOS_ACKED"/>
+    <uses-permission android:name="com.chrome.permission.DEVICE_EXTRAS"/>
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"/>
+    <uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.apps.now.CURRENT_ACCOUNT_ACCESS"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-feature android:name="android.hardware.vr.headtracking" android:required="false" android:version="1"/>
+    <uses-feature android:name="oculus.hardware.handtracking" android:required="false"/>
+    <uses-feature android:name="oculus.software.handtracking" android:required="false"/>
+    <uses-permission android:name="oculus.permission.handtracking"/>
+    <application android:allowBackup="false" android:appComponentFactory="android.support.v4.app.CoreComponentFactory" android:icon="@mipmap/APKTOOL_DUMMYVAL_0x7f100001" android:label="@string/APKTOOL_DUMMYVAL_0x7f13014c" android:largeHeap="false" android:name="com.oculus.browser.HydraApplication" android:networkSecurityConfig="@xml/APKTOOL_DUMMYVAL_0x7f170013" android:supportsRtl="true">
+        <meta-data android:name="android.allow_multiple_resumed_activities" android:value="true"/>
+        <meta-data android:name="com.samsung.android.sdk.multiwindow.enable" android:value="true"/>
+        <meta-data android:name="com.samsung.android.sdk.multiwindow.multiinstance.enable" android:value="true"/>
+        <meta-data android:name="com.samsung.android.sdk.multiwindow.multiinstance.launchmode" android:value="singleTask"/>
+        <meta-data android:name="com.samsung.android.sdk.multiwindow.penwindow.enable" android:value="true"/>
+        <meta-data android:name="android.max_aspect" android:value="2.1"/>
+        <meta-data android:name="android.content.APP_RESTRICTIONS" android:resource="@xml/APKTOOL_DUMMYVAL_0x7f170003"/>
+        <meta-data android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME" android:value="org.chromium.chrome.browser.media.router.caf.CastOptionsProvider"/>
+        <activity android:enabled="false" android:excludeFromRecents="true" android:exported="true" android:name="org.chromium.chrome.browser.media.MediaLauncherActivity" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+                <data android:mimeType="video/*"/>
+                <data android:scheme="file"/>
+                <data android:scheme="content"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:enabled="false" android:excludeFromRecents="true" android:exported="true" android:name="org.chromium.chrome.browser.media.AudioLauncherActivity" android:targetActivity="org.chromium.chrome.browser.media.MediaLauncherActivity" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="audio/*"/>
+                <data android:scheme="file"/>
+                <data android:scheme="content"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="false" android:name="org.chromium.chrome.browser.media.PictureInPictureActivity" android:noHistory="true" android:resizeableActivity="true" android:supportsPictureInPicture="true" android:theme="@style/APKTOOL_DUMMYVAL_0x7f14023f"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="org.chromium.chrome.browser.LauncherShortcutActivity" android:taskAffinity="" android:theme="@android:style/Theme.NoDisplay"/>
+        <activity android:enabled="false" android:excludeFromRecents="true" android:exported="true" android:name="org.chromium.chrome.browser.incognito.IncognitoTabLauncher" android:taskAffinity="" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="org.chromium.chrome.browser.incognito.OPEN_PRIVATE_TAB"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <service android:exported="false" android:isolatedProcess="false" android:name="com.oculus.browser.BrowserRestartService" android:process=":browser_restart_process"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:launchMode="singleInstance" android:name="org.chromium.chrome.browser.BrowserRestartActivity" android:process=":browser_restart_process" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:exported="true" android:name="com.oculus.browser.PermissionsRequestActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <meta-data android:name="com.samsung.android.vr.activity" android:value="true"/>
+            <intent-filter>
+                <action android:name="com.oculus.vrshell.panel.vr_permission.GET"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="org.chromium.chrome.browser.browserservices.ClearDataDialogActivity" android:theme="@style/APKTOOL_DUMMYVAL_0x7f140248"/>
+        <activity android:exported="true" android:name="org.chromium.chrome.browser.browserservices.ManageTrustedWebActivityDataActivity" android:theme="@style/APKTOOL_DUMMYVAL_0x7f140242">
+            <intent-filter>
+                <action android:name="android.support.customtabs.action.ACTION_MANAGE_TRUSTED_WEB_ACTIVITY_DATA"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.support.customtabs.action.ACTION_MANAGE_TRUSTED_WEB_ACTIVITY_DATA"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.oculus.vr.focusaware" android:value="true"/>
+        <activity android:alwaysRetainTaskState="true" android:autoRemoveFromRecents="true" android:configChanges="keyboard|keyboardHidden|navigation|screenSize" android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.oculus.browser.WebVRActivity" android:screenOrientation="landscape" android:taskAffinity="" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <meta-data android:name="com.samsung.android.vr.activity" android:value="true"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.INFO"/>
+            </intent-filter>
+        </activity>
+        <service android:description="@string/APKTOOL_DUMMYVAL_0x7f130297" android:exported="false" android:isolatedProcess="true" android:name="org.chromium.chrome.browser.photo_picker.DecoderService" android:process=":decoder_service"/>
+        <provider android:authorities="com.oculus.browser.ChromeBrowserProvider;com.oculus.browser.browser;com.oculus.browser" android:exported="true" android:name="org.chromium.chrome.browser.provider.ChromeBrowserProvider">
+            <path-permission android:path="/bookmarks/search_suggest_query" android:readPermission="android.permission.GLOBAL_SEARCH"/>
+        </provider>
+        <provider android:authorities="com.oculus.browser.FileProvider" android:exported="false" android:grantUriPermissions="true" android:name="org.chromium.chrome.browser.util.ChromeFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/APKTOOL_DUMMYVAL_0x7f17000d"/>
+        </provider>
+        <provider android:authorities="com.oculus.browser.DownloadFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="org.chromium.chrome.browser.download.DownloadFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/APKTOOL_DUMMYVAL_0x7f17000d"/>
+        </provider>
+        <service android:exported="false" android:name="org.chromium.chrome.browser.invalidation.ChromeBrowserSyncAdapterService">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/APKTOOL_DUMMYVAL_0x7f17001a"/>
+        </service>
+        <receiver android:name="org.chromium.chrome.browser.services.AccountsChangedReceiver">
+            <intent-filter>
+                <action android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="org.chromium.chrome.browser.download.DownloadForegroundService"/>
+        <service android:exported="false" android:name="org.chromium.chrome.browser.download.DownloadBroadcastManager"/>
+        <activity android:clearTaskOnLaunch="true" android:configChanges="keyboard|keyboardHidden|mcc|mnc|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="false" android:label="Search" android:launchMode="singleTask" android:name="org.chromium.chrome.browser.searchwidget.SearchActivity" android:taskAffinity="" android:theme="@style/APKTOOL_DUMMYVAL_0x7f140256" android:windowSoftInputMode="adjustResize"/>
+        <receiver android:exported="true" android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.oculus.browser"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.ipc.invalidation.ticl.android2.channel.GcmRegistrationTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.google.ipc.invalidation.ticl.android2.channel.AndroidInstanceIDListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="org.chromium.chrome.browser.services.gcm.ChromeGcmListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="org.chromium.chrome.browser.services.gcm.GCMBackgroundService"/>
+        <meta-data android:name="ipc.invalidation.ticl.gcm_upstream_service_class" android:value="org.chromium.chrome.browser.services.gcm.InvalidationGcmUpstreamSender"/>
+        <service android:exported="false" android:name="org.chromium.chrome.browser.services.gcm.InvalidationGcmUpstreamSender"/>
+        <service android:exported="false" android:name="com.google.ipc.invalidation.ticl.android2.TiclService"/>
+        <service android:exported="false" android:name="com.google.ipc.invalidation.ticl.android2.channel.AndroidMessageSenderService"/>
+        <receiver android:exported="false" android:name="com.google.ipc.invalidation.ticl.android2.AndroidInternalScheduler$AlarmReceiver"/>
+        <receiver android:exported="false" android:name="com.google.ipc.invalidation.external.client.contrib.AndroidListener$AlarmReceiver"/>
+        <service android:exported="false" android:name="org.chromium.chrome.browser.notifications.NotificationService"/>
+        <receiver android:exported="false" android:name="org.chromium.chrome.browser.notifications.NotificationService$Receiver">
+            <intent-filter>
+                <action android:name="org.chromium.chrome.browser.notifications.CLICK_NOTIFICATION"/>
+                <action android:name="org.chromium.chrome.browser.notifications.CLOSE_NOTIFICATION"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="org.chromium.chrome.browser.notifications.NotificationJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="org.chromium.components.background_task_scheduler.BackgroundTaskJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="true" android:name="org.chromium.components.background_task_scheduler.BackgroundTaskGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="org.chromium.chrome.browser.ChromeBackgroundService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="org.chromium.chrome.browser.prerender.ChromePrerenderService"/>
+        <service android:exported="true" android:name="org.chromium.chrome.browser.customtabs.CustomTabsConnectionService">
+            <intent-filter>
+                <action android:name="android.support.customtabs.action.CustomTabsService"/>
+                <category android:name="androidx.browser.trusted.category.TrustedWebActivities"/>
+                <category android:name="androidx.browser.trusted.category.TrustedWebActivitySplashScreensV1"/>
+                <category android:name="androidx.browser.customtabs.category.NavBarColorCustomization"/>
+                <category android:name="androidx.browser.customtabs.category.ColorSchemeCustomization"/>
+                <category android:name="androidx.browser.trusted.category.WebShareTargetV2"/>
+            </intent-filter>
+        </service>
+        <service android:name="androidx.browser.customtabs.PostMessageService"/>
+        <meta-data android:name="org.chromium.content.browser.NUM_SANDBOXED_SERVICES" android:value="40"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService0" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process0"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService1" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process1"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService2" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process2"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService3" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process3"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService4" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process4"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService5" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process5"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService6" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process6"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService7" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process7"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService8" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process8"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService9" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process9"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService10" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process10"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService11" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process11"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService12" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process12"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService13" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process13"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService14" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process14"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService15" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process15"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService16" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process16"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService17" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process17"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService18" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process18"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService19" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process19"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService20" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process20"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService21" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process21"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService22" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process22"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService23" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process23"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService24" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process24"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService25" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process25"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService26" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process26"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService27" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process27"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService28" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process28"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService29" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process29"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService30" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process30"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService31" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process31"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService32" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process32"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService33" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process33"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService34" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process34"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService35" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process35"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService36" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process36"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService37" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process37"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService38" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process38"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="org.chromium.content.app.SandboxedProcessService39" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":sandboxed_process39"/>
+        <meta-data android:name="org.chromium.content.browser.NUM_PRIVILEGED_SERVICES" android:value="5"/>
+        <meta-data android:name="com.oculus.browser:privileged_process0.ignore_multidex" android:value="true"/>
+        <service android:exported="false" android:isolatedProcess="false" android:name="org.chromium.content.app.PrivilegedProcessService0" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":privileged_process0"/>
+        <meta-data android:name="com.oculus.browser:privileged_process1.ignore_multidex" android:value="true"/>
+        <service android:exported="false" android:isolatedProcess="false" android:name="org.chromium.content.app.PrivilegedProcessService1" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":privileged_process1"/>
+        <meta-data android:name="com.oculus.browser:privileged_process2.ignore_multidex" android:value="true"/>
+        <service android:exported="false" android:isolatedProcess="false" android:name="org.chromium.content.app.PrivilegedProcessService2" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":privileged_process2"/>
+        <meta-data android:name="com.oculus.browser:privileged_process3.ignore_multidex" android:value="true"/>
+        <service android:exported="false" android:isolatedProcess="false" android:name="org.chromium.content.app.PrivilegedProcessService3" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":privileged_process3"/>
+        <meta-data android:name="com.oculus.browser:privileged_process4.ignore_multidex" android:value="true"/>
+        <service android:exported="false" android:isolatedProcess="false" android:name="org.chromium.content.app.PrivilegedProcessService4" android:permission="com.oculus.browser.permission.CHILD_SERVICE" android:process=":privileged_process4"/>
+        <service android:exported="true" android:isolatedProcess="false" android:name="com.oculus.browser.PanelService">
+            <intent-filter>
+                <action android:name="com.oculus.vrshell.SHELL_MAIN"/>
+            </intent-filter>
+            <meta-data android:name="com.oculus.vrshell.is_default_service" android:value="true"/>
+            <meta-data android:name="com.oculus.vrshell.supports_ime_composition" android:value="true"/>
+            <meta-data android:name="com.oculus.vrshell.required_panel_surfaces" android:value="content"/>
+            <meta-data android:name="com.oculus.vrshell.layer_definition" android:resource="@array/APKTOOL_DUMMYVAL_0x7f03001e"/>
+            <meta-data android:name="com.oculus.vrshell.supports_multi_instance" android:value="false"/>
+            <meta-data android:name="com.oculus.vrshell.supports_multiapp" android:value="true"/>
+            <meta-data android:name="com.oculus.vrshell.supports_layers" android:value="true"/>
+            <meta-data android:name="com.oculus.vrshell.supports_taskbar" android:value="true"/>
+        </service>
+        <receiver android:exported="false" android:name="org.chromium.chrome.browser.notifications.NotificationIntentInterceptor$Receiver"/>
+        <receiver android:exported="false" android:name="org.chromium.chrome.browser.notifications.scheduler.DisplayAgent$Receiver"/>
+        <receiver android:exported="false" android:name="org.chromium.chrome.browser.send_tab_to_self.NotificationManager$TapReceiver"/>
+        <receiver android:exported="false" android:name="org.chromium.chrome.browser.send_tab_to_self.NotificationManager$DeleteReceiver"/>
+        <receiver android:exported="false" android:name="org.chromium.chrome.browser.send_tab_to_self.NotificationManager$TimeoutReceiver"/>
+        <receiver android:exported="false" android:name="org.chromium.chrome.browser.sharing.click_to_call.ClickToCallMessageHandler$TapReceiver"/>
+        <receiver android:exported="false" android:name="org.chromium.chrome.browser.sharing.shared_clipboard.SharedClipboardMessageHandler$TapReceiver"/>
+        <receiver android:exported="false" android:name="org.chromium.chrome.browser.sharing.shared_clipboard.SharedClipboardMessageHandler$TryAgainReceiver"/>
+        <receiver android:exported="false" android:name="org.chromium.chrome.browser.offlinepages.prefetch.PrefetchedPagesNotifier$ClickReceiver"/>
+        <receiver android:exported="false" android:name="org.chromium.chrome.browser.offlinepages.prefetch.PrefetchedPagesNotifier$SettingsReceiver"/>
+        <receiver android:exported="false" android:name="org.chromium.chrome.browser.offlinepages.AutoFetchNotifier$CompleteNotificationReceiver"/>
+        <receiver android:exported="false" android:name="org.chromium.chrome.browser.offlinepages.AutoFetchNotifier$InProgressCancelReceiver"/>
+        <service android:exported="false" android:name="org.chromium.chrome.browser.media.MediaCaptureNotificationService"/>
+        <service android:exported="false" android:name="org.chromium.chrome.browser.media.ui.MediaNotificationManager$PlaybackListenerService">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="org.chromium.chrome.browser.media.ui.MediaNotificationManager$PresentationListenerService">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="org.chromium.chrome.browser.media.ui.MediaNotificationManager$CastListenerService">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="org.chromium.chrome.browser.media.ui.MediaNotificationManager$PlaybackMediaButtonReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="org.chromium.chrome.browser.media.ui.MediaNotificationManager$PresentationMediaButtonReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="org.chromium.chrome.browser.media.ui.MediaNotificationManager$CastMediaButtonReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="org.chromium.chrome.browser.tracing.TracingNotificationService"/>
+        <receiver android:exported="false" android:name="org.chromium.chrome.browser.omaha.UpdateNotificationController$UpdateNotificationReceiver"/>
+        <meta-data android:name="org.chromium.content.browser.SMART_CLIP_PROVIDER" android:value="org.chromium.content_public.browser.SmartClipProvider"/>
+        <activity android:configChanges="keyboard|keyboardHidden|mcc|mnc|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="true" android:name="org.chromium.chrome.features.test_dummy.TestDummyActivity" android:noHistory="true" android:theme="@style/APKTOOL_DUMMYVAL_0x7f140229"/>
+        <meta-data android:name="org.chromium.content.browser.REMOTE_MEDIA_PLAYERS" android:value="org.chromium.chrome.browser.media.remote.DefaultMediaRouteController"/>
+        <meta-data android:name="com.samsung.android.vr.application.mode" android:value="dual"/>
+        <meta-data android:name="com.samsung.android.vr.application.mode" android:value="dual"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/APKTOOL_DUMMYVAL_0x7f0c0014"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:exported="false" android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver"/>
+        <service android:exported="false" android:name="com.google.android.gms.cast.framework.media.MediaNotificationService"/>
+        <service android:exported="false" android:name="com.google.android.gms.cast.framework.ReconnectionService"/>
+        <activity android:enabled="false" android:exported="false" android:launchMode="singleInstance" android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity" android:process=":playcore_missing_splits_activity" android:stateNotNeeded="true"/>
+        <activity android:enabled="false" android:exported="false" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:process=":playcore_dialog_wrapper_activity" android:stateNotNeeded="true" android:theme="@style/APKTOOL_DUMMYVAL_0x7f14027d"/>
+    </application>
+</manifest>

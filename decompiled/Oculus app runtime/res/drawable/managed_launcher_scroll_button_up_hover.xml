@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/chevron_up_24_1x" android:left="5.0dip" android:top="5.0dip" android:right="5.0dip" android:bottom="5.0dip" />
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/white_a30" />
+            <corners android:radius="17.0dip" />
+        </shape>
+    </item>
+</layer-list>

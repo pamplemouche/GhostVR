@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abc_action_bar_home_description">홈으로 이동</string>
+    <string name="abc_action_bar_up_description">위로 이동</string>
+    <string name="abc_action_menu_overflow_description">추가 옵션</string>
+    <string name="abc_action_mode_done">완료</string>
+    <string name="abc_activity_chooser_view_see_all">전체 보기</string>
+    <string name="abc_activitychooserview_choose_application">앱 선택</string>
+    <string name="abc_capital_off">사용 중지</string>
+    <string name="abc_capital_on">사용</string>
+    <string name="abc_menu_delete_shortcut_label">Delete</string>
+    <string name="abc_menu_enter_shortcut_label">Enter</string>
+    <string name="abc_menu_space_shortcut_label">스페이스바</string>
+    <string name="abc_search_hint">검색...</string>
+    <string name="abc_searchview_description_clear">검색어 삭제</string>
+    <string name="abc_searchview_description_query">검색어</string>
+    <string name="abc_searchview_description_search">검색</string>
+    <string name="abc_searchview_description_submit">검색어 보내기</string>
+    <string name="abc_searchview_description_voice">음성 검색</string>
+    <string name="abc_shareactionprovider_share_with">공유 대상:</string>
+    <string name="abc_shareactionprovider_share_with_application">%s과(와) 공유</string>
+    <string name="abc_toolbar_collapse_description">접기</string>
+    <string name="notifications_download_canceled_message">\"%1$s\" 다운로드 취소됨</string>
+    <string name="notifications_download_canceled_title">다운로드 취소됨</string>
+    <string name="notifications_download_failed_message">\"%1$s\" 앱을 다운로드할 수 없습니다</string>
+    <string name="notifications_download_failed_title">다운로드 실패</string>
+    <string name="notifications_download_in_progress_message">%1$s 앱 다운로드 중...</string>
+    <string name="notifications_downloading_and_installing_apps">앱 다운로드 또는 설치 중...</string>
+    <string name="notifications_head_install_failed_message">설치 실패</string>
+    <string name="notifications_head_installed_message">설치됨</string>
+    <string name="notifications_head_installing_message">설치 중</string>
+    <string name="notifications_install_failed_message">\"%1$s\" 앱을 설치할 수 없습니다</string>
+    <string name="notifications_install_failed_title">설치 실패</string>
+    <string name="notifications_install_in_progress_message">%1$s 앱 설치 중…</string>
+    <string name="notifications_install_in_progress_title">설치 중</string>
+    <string name="notifications_install_succeeded_message">%1$s 앱이 라이브러리에 설치되었습니다.</string>
+    <string name="notifications_install_succeeded_title">설치 완료</string>
+    <string name="notifications_update_succeeded_message">%1$s 앱이 업데이트되었습니다</string>
+    <string name="notifications_update_succeeded_title">업데이트 완료</string>
+    <string name="obb_display_title">%1$s(확장 파일)</string>
+    <string name="search_menu_title">검색</string>
+</resources>

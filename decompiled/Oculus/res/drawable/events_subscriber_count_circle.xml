@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="1.0dip" android:color="@android:color/white" />
+    <solid android:color="@color/oculus_black_10" />
+    <corners android:radius="@dimen/events_subscriber_count_corners_radius" />
+</shape>

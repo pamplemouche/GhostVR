@@ -1,0 +1,178 @@
+.class Lcom/facebook/react/views/drawer/ReactDrawerLayout;
+.super Landroidx/drawerlayout/widget/DrawerLayout;
+.source "ReactDrawerLayout.java"
+
+
+# instance fields
+.field private mDrawerPosition:I
+
+.field private mDrawerWidth:I
+
+
+# direct methods
+.method public constructor <init>(Lcom/facebook/react/bridge/ReactContext;)V
+    .locals 1
+
+    .prologue
+    .line 29
+    invoke-direct {p0, p1}, Landroidx/drawerlayout/widget/DrawerLayout;-><init>(Landroid/content/Context;)V
+
+    .line 25
+    const v0, 0x800003
+
+    iput v0, p0, Lcom/facebook/react/views/drawer/ReactDrawerLayout;->mDrawerPosition:I
+
+    .line 26
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/facebook/react/views/drawer/ReactDrawerLayout;->mDrawerWidth:I
+
+    .line 30
+    return-void
+.end method
+
+
+# virtual methods
+.method closeDrawer()V
+    .locals 1
+
+    .prologue
+    .line 54
+    iget v0, p0, Lcom/facebook/react/views/drawer/ReactDrawerLayout;->mDrawerPosition:I
+
+    invoke-virtual {p0, v0}, Lcom/facebook/react/views/drawer/ReactDrawerLayout;->closeDrawer(I)V
+
+    .line 55
+    return-void
+.end method
+
+.method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
+    .locals 3
+
+    .prologue
+    .line 35
+    :try_start_0
+    invoke-super {p0, p1}, Landroidx/drawerlayout/widget/DrawerLayout;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 36
+    invoke-static {p0, p1}, Lcom/facebook/react/uimanager/events/NativeGestureUtil;->notifyNativeGestureStarted(Landroid/view/View;Landroid/view/MotionEvent;)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 37
+    const/4 v0, 0x1
+
+    .line 46
+    :goto_0
+    return v0
+
+    .line 39
+    :catch_0
+    move-exception v0
+
+    .line 43
+    const-string v1, "ReactNative"
+
+    const-string v2, "Error intercepting touch event."
+
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 46
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method openDrawer()V
+    .locals 1
+
+    .prologue
+    .line 50
+    iget v0, p0, Lcom/facebook/react/views/drawer/ReactDrawerLayout;->mDrawerPosition:I
+
+    invoke-virtual {p0, v0}, Lcom/facebook/react/views/drawer/ReactDrawerLayout;->openDrawer(I)V
+
+    .line 51
+    return-void
+.end method
+
+.method setDrawerPosition(I)V
+    .locals 0
+
+    .prologue
+    .line 58
+    iput p1, p0, Lcom/facebook/react/views/drawer/ReactDrawerLayout;->mDrawerPosition:I
+
+    .line 59
+    invoke-virtual {p0}, Lcom/facebook/react/views/drawer/ReactDrawerLayout;->setDrawerProperties()V
+
+    .line 60
+    return-void
+.end method
+
+.method setDrawerProperties()V
+    .locals 4
+
+    .prologue
+    const/4 v3, 0x1
+
+    .line 69
+    invoke-virtual {p0}, Lcom/facebook/react/views/drawer/ReactDrawerLayout;->getChildCount()I
+
+    move-result v0
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    .line 70
+    invoke-virtual {p0, v3}, Lcom/facebook/react/views/drawer/ReactDrawerLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    .line 71
+    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/drawerlayout/widget/DrawerLayout$LayoutParams;
+
+    .line 72
+    iget v2, p0, Lcom/facebook/react/views/drawer/ReactDrawerLayout;->mDrawerPosition:I
+
+    iput v2, v0, Landroidx/drawerlayout/widget/DrawerLayout$LayoutParams;->gravity:I
+
+    .line 73
+    iget v2, p0, Lcom/facebook/react/views/drawer/ReactDrawerLayout;->mDrawerWidth:I
+
+    iput v2, v0, Landroidx/drawerlayout/widget/DrawerLayout$LayoutParams;->width:I
+
+    .line 74
+    invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 75
+    invoke-virtual {v1, v3}, Landroid/view/View;->setClickable(Z)V
+
+    .line 77
+    :cond_0
+    return-void
+.end method
+
+.method setDrawerWidth(I)V
+    .locals 0
+
+    .prologue
+    .line 63
+    iput p1, p0, Lcom/facebook/react/views/drawer/ReactDrawerLayout;->mDrawerWidth:I
+
+    .line 64
+    invoke-virtual {p0}, Lcom/facebook/react/views/drawer/ReactDrawerLayout;->setDrawerProperties()V
+
+    .line 65
+    return-void
+.end method

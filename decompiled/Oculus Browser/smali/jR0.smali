@@ -1,0 +1,44 @@
+.class public final synthetic LjR0;
+.super Ljava/lang/Object;
+.source "PG"
+
+# interfaces
+.implements Landroid/view/View$OnTouchListener;
+
+
+# static fields
+.field public static final w:Landroid/view/View$OnTouchListener;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, LjR0;
+
+    invoke-direct {v0}, LjR0;-><init>()V
+
+    sput-object v0, LjR0;->w:Landroid/view/View$OnTouchListener;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 0
+
+    invoke-static {}, Lorg/chromium/chrome/browser/widget/selection/SelectableListLayout;->b()Z
+
+    const/4 p1, 0x1
+
+    return p1
+.end method

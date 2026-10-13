@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.v2.AnytimeBarViewV2 style="@style/AnytimeBarV2"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oculus.panelapp.anytimeui.v2.bar.AnytimeBarStatusViewV2 android:id="@id/status_bar_v2" style="@style/AnytimeStatusBarV2">
+        <LinearLayout style="@style/AnytimeStatusBarTopV2">
+            <TextView android:id="@id/status_clock_text_v2" android:text="11:58 pm" style="@style/AnytimeStatusClockTheme" />
+            <View android:id="@id/status_do_not_disturb_icon_v2" android:background="@drawable/anytime_status_donotdisturb" android:visibility="gone" style="@style/AnytimeStatusIconTheme" />
+            <View android:id="@id/status_airplane_icon_v2" android:background="@drawable/anytime_status_airplane" android:visibility="gone" style="@style/AnytimeStatusIconTheme" />
+            <View android:id="@id/status_bluetooth_icon_v2" android:background="@drawable/anytime_status_bluetooth_on" android:visibility="gone" style="@style/AnytimeStatusIconTheme" />
+            <View android:id="@id/status_wifi_icon_v2" android:background="@drawable/anytime_status_wifi_off" style="@style/AnytimeStatusIconTheme" />
+            <View android:id="@id/status_microphone_icon_v2" android:background="@drawable/anytime_status_microphone" android:visibility="gone" style="@style/AnytimeStatusIconTheme">
+                <tag android:value="@string/anytime_microphone_icon_tooltip" android:id="@id/tooltip_text" />
+                <tag android:value="tooltip_id=taskbar_microphone_icon_tooltip,tooltip_position=top" android:id="@id/tooltip_data" />
+            </View>
+            <View android:id="@id/status_cell_signal_icon_v2" android:background="@drawable/anytime_status_cell_signal_0" android:visibility="gone" style="@style/AnytimeStatusIconTheme" />
+            <View android:id="@id/status_night_shift_icon_v2" android:background="@drawable/anytime_status_night_shift" android:visibility="gone" style="@style/AnytimeStatusIconTheme">
+                <tag android:value="@string/anytime_night_shift_icon_tooltip" android:id="@id/tooltip_text" />
+                <tag android:value="tooltip_id=taskbar_night_shift_icon_tooltip,tooltip_position=top" android:id="@id/tooltip_data" />
+            </View>
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:gravity="center" android:id="@id/status_lock_screen_icon_v2" android:paddingRight="4.0dip" android:visibility="gone" android:drawableTop="@drawable/anytime_status_lock" style="@style/AnytimeStatusButtonTheme">
+                <tag android:value="@string/anytime_lock_screen_icon_tooltip" android:id="@id/tooltip_text" />
+                <tag android:value="tooltip_id=taskbar_lock_screen_button_tooltip,tooltip_position=top" android:id="@id/tooltip_data" />
+            </com.oculus.panelapp.anytimeui.AnytimeUIButton>
+        </LinearLayout>
+        <LinearLayout style="@style/AnytimeStatusBarBottomV2">
+            <View android:id="@id/status_debug_panel_icon_v2" android:background="@drawable/anytime_status_debug_panel" android:visibility="gone" style="@style/AnytimeStatusIconTheme" />
+            <View android:id="@id/status_bug_report_icon_v2" android:background="@drawable/anytime_status_bug_report" android:visibility="gone" style="@style/AnytimeStatusIconTheme" />
+        </LinearLayout>
+    </com.oculus.panelapp.anytimeui.v2.bar.AnytimeBarStatusViewV2>
+    <LinearLayout android:id="@id/taskbar_container" style="@style/AnytimeBarNavigationContainerV2">
+        <com.oculus.panelapp.anytimeui.v2.bar.AnytimeBarNavigationButtonV2 android:id="@id/tablet_launcher" android:tag="APPS" android:background="@drawable/anytime_bar_nav_button_background_v2" android:text="@string/anytime_bar_nav_apps_v2" android:drawableTop="@drawable/anytime_bar_nav_button_apps_v2" android:drawablePadding="10.0dip" style="@style/AnytimeBarNavigationButtonV2" />
+        <com.oculus.panelapp.anytimeui.v2.bar.AnytimeBarNavigationButtonV2 android:id="@id/tablet_notifications" android:tag="NOTIFICATIONS" android:background="@drawable/anytime_bar_nav_button_background_v2" android:text="@string/anytime_bar_nav_notifications_v2" android:drawableTop="@drawable/anytime_bar_nav_button_notifications_v2" android:drawablePadding="10.0dip" style="@style/AnytimeBarNavigationButtonV2" />
+        <com.oculus.panelapp.anytimeui.v2.bar.AnytimeBarNavigationButtonV2 android:id="@id/tablet_share" android:tag="SHARING" android:background="@drawable/anytime_bar_nav_button_background_v2" android:text="@string/anytime_bar_nav_sharing_v2" android:drawableTop="@drawable/anytime_bar_nav_button_sharing_v2" android:drawablePadding="10.0dip" style="@style/AnytimeBarNavigationButtonV2" />
+        <com.oculus.panelapp.anytimeui.v2.bar.AnytimeBarNavigationButtonV2 android:id="@id/tablet_settings" android:tag="SETTINGS" android:background="@drawable/anytime_bar_nav_button_background_v2" android:text="@string/anytime_bar_nav_settings_v2" android:drawableTop="@drawable/anytime_bar_nav_button_settings_v2" android:drawablePadding="10.0dip" style="@style/AnytimeBarNavigationButtonV2" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/running_apps_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout style="@style/AnytimeBarDockContainerV2" />
+    <com.oculus.panelapp.anytimeui.AnytimeUIMinimizedBarView android:id="@id/minimized_view" android:visibility="gone" style="@style/AnytimeMinimizedBarViewTheme">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/minimized_local_stream_icon" android:src="@drawable/ic_casting_active_minimized_aui" style="@style/AnytimeMinimizedIconTheme" />
+        </LinearLayout>
+    </com.oculus.panelapp.anytimeui.AnytimeUIMinimizedBarView>
+</com.oculus.panelapp.anytimeui.v2.AnytimeBarViewV2>

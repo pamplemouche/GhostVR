@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/row" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/store_horizontal_padding" layout="@layout/header_see_all" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/row_recycler_view" android:layout_width="fill_parent" android:layout_height="164.0dip" />
+    <include android:id="@id/row_divider" layout="@layout/divider_horizontal_with_theme" />
+</LinearLayout>

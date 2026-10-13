@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Oculus.Widget.BottomNav.Action"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@android:id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Oculus.Widget.BottomNav.Action.Icon" />
+    <com.oculus.horizon.widget.BadgeView android:id="@id/badge" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Oculus.Widget.BottomNav.Badge.Icon" />
+    <TextView android:textAppearance="?bottomNavBarActionStyle" android:layout_gravity="bottom|center" android:id="@android:id/text1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+</FrameLayout>

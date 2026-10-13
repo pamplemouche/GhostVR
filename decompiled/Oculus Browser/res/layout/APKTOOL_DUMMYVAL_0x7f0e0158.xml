@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f07010b" android:layout_marginBottom="@dimen/APKTOOL_DUMMYVAL_0x7f07010b" android:layout_marginStart="@dimen/APKTOOL_DUMMYVAL_0x7f070262" android:layout_marginEnd="@dimen/APKTOOL_DUMMYVAL_0x7f070262"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:importantForAccessibility="no" android:layout_alignParentEnd="true" />
+    <TextView android:id="@id/top_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_toStartOf="@id/icon" android:layout_alignParentStart="true" style="@style/APKTOOL_DUMMYVAL_0x7f140155" />
+    <TextView android:id="@id/mid_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/top_label" android:layout_toStartOf="@id/icon" android:layout_alignParentStart="true" style="@style/APKTOOL_DUMMYVAL_0x7f140151" />
+    <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401ba" android:id="@id/bottom_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/mid_label" android:layout_toStartOf="@id/icon" android:layout_alignParentStart="true" />
+</RelativeLayout>

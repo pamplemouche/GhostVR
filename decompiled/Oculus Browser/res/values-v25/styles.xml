@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="APKTOOL_DUMMYVAL_0x7f140122" parent="@style/APKTOOL_DUMMYVAL_0x7f14012d" />
+    <style name="APKTOOL_DUMMYVAL_0x7f140123" parent="@style/APKTOOL_DUMMYVAL_0x7f14012e" />
+    <style name="APKTOOL_DUMMYVAL_0x7f14012d" parent="@android:style/Theme.Material.NoActionBar" />
+    <style name="APKTOOL_DUMMYVAL_0x7f14012e" parent="@android:style/Theme.Material.Light.NoActionBar" />
+</resources>

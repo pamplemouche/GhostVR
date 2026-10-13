@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mr_button_content_description">କାଷ୍ଟ ବଟନ୍‍</string>
+    <string name="mr_cast_button_connected">କାଷ୍ଟ ବଟନ୍‍। କନେକ୍ଟ ହୋ‌ଇଛି</string>
+    <string name="mr_cast_button_connecting">କାଷ୍ଟ ବଟନ୍‍। କନେକ୍ଟ କରାଯାଉଛି</string>
+    <string name="mr_cast_button_disconnected">କାଷ୍ଟ ବଟନ୍‍। ଡିସ୍‌କନେକ୍ଟ ହୋଇଗଲା</string>
+    <string name="mr_cast_dialog_title_view_placeholder">କୌଣସି ସୂଚନା ଉପଲବ୍ଧ ନାହିଁ</string>
+    <string name="mr_chooser_searching">ଡିଭାଇସ୍‍ ଖୋଜାଯାଉଛି</string>
+    <string name="mr_chooser_title">ଏଥିରେ କାଷ୍ଟ କରନ୍ତୁ</string>
+    <string name="mr_controller_album_art">ଆଲବମ୍ ଆର୍ଟ</string>
+    <string name="mr_controller_casting_screen">ସ୍କ୍ରୀନ୍‍ କାଷ୍ଟ କରାଯାଉଛି</string>
+    <string name="mr_controller_close_description">ବନ୍ଦ କରନ୍ତୁ</string>
+    <string name="mr_controller_collapse_group">ସଂକୁଚିତ କରନ୍ତୁ</string>
+    <string name="mr_controller_disconnect">ଡିସ୍‌କନେକ୍ଟ କରନ୍ତୁ</string>
+    <string name="mr_controller_expand_group">ବିସ୍ତାର କରନ୍ତୁ</string>
+    <string name="mr_controller_no_info_available">କୌଣସି ସୂଚନା ଉପଲବ୍ଧ ନାହିଁ</string>
+    <string name="mr_controller_no_media_selected">କୌଣସି ମିଡିଆ ଚୟନ କରାଯାଇନାହିଁ</string>
+    <string name="mr_controller_pause">ପଜ୍‍ କରନ୍ତୁ</string>
+    <string name="mr_controller_play">ଚଲାନ୍ତୁ</string>
+    <string name="mr_controller_stop">ରୋକନ୍ତୁ</string>
+    <string name="mr_controller_stop_casting">କାଷ୍ଟ କରିବା ବନ୍ଦ କରନ୍ତୁ</string>
+    <string name="mr_controller_volume_slider">ଭଲ୍ୟୁମ୍‍ ସ୍ଲାଇଡର୍‍</string>
+    <string name="mr_dialog_groupable_header">ଏକ ଡିଭାଇସ୍‍ ଯୋଗ କରନ୍ତୁ</string>
+    <string name="mr_dialog_transferable_header">ଏକ ଗ୍ରୁପ୍‌ରେ ପ୍ଲେ କରନ୍ତୁ</string>
+    <string name="mr_system_route_name">ସିଷ୍ଟମ୍‌</string>
+    <string name="mr_user_route_category_name">ଡିଭାଇସ୍‌</string>
+</resources>

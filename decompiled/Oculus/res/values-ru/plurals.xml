@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="app_with_iap_count">
+        <item quantity="other">с %1$d встроенными покупками</item>
+        <item quantity="one">с %1$d встроенной покупкой</item>
+        <item quantity="few">с %1$d встроенными покупками</item>
+    </plurals>
+    <plurals name="app_with_iap_header_count">
+        <item quantity="other">%1$d встроенная покупок для приложения «%2$s»</item>
+        <item quantity="one">%1$d встроенная покупка для приложения «%2$s»</item>
+        <item quantity="few">%1$d встроенных покупки для приложения «%2$s»</item>
+    </plurals>
+    <plurals name="bundle_pdp_item_count">
+        <item quantity="other">%1$d объектов</item>
+        <item quantity="one">%1$d объект</item>
+        <item quantity="few">%1$d объекта</item>
+    </plurals>
+    <plurals name="pdp_controller_required">
+        <item quantity="other">Требуется что-то из следующего</item>
+    </plurals>
+    <plurals name="store_countdown_days">
+        <item quantity="other">%1$s дней</item>
+        <item quantity="one">%1$s день</item>
+        <item quantity="few">%1$s дня</item>
+    </plurals>
+</resources>

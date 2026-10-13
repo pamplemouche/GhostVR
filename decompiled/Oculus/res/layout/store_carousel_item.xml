@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/stortakeover_mode_item" android:clickable="true" android:layout_width="@dimen/store_non_takeover_item_width" android:layout_height="@dimen/store_non_takeover_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/store_product_carousel_tile_image_view" />
+    <ImageView android:id="@id/gradient" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/takeover_meta_gradient" />
+    <RelativeLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/store_takeover_item_horizontal_margin" android:layout_marginRight="@dimen/store_takeover_item_horizontal_margin" android:layout_marginBottom="12.0dip">
+        <TextView android:ellipsize="end" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_toLeftOf="@id/countdown_timer_clock" android:layout_alignParentLeft="true" style="@style/Oculus.Store.Takeover.TextAppearance" />
+        <TextView android:ellipsize="end" android:id="@id/price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:drawablePadding="@dimen/store_installed_drawable_padding" android:layout_toLeftOf="@id/countdown_timer_clock" android:layout_toRightOf="@id/name" android:layout_alignWithParentIfMissing="true" style="@style/Oculus.Store.Takeover.TextAppearance" />
+        <TextView android:id="@id/countdown_timer_clock" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/store_takeover_item_horizontal_margin" android:layout_alignParentRight="true" android:fontFamily="sans-serif-light" style="@style/Oculus.Store.Takeover.TextAppearance" />
+    </RelativeLayout>
+</FrameLayout>

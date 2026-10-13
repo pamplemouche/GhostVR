@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.chrome.browser.preferences.TextMessagePreference android:title="@string/APKTOOL_DUMMYVAL_0x7f13026b" app:APKTOOL_DUMMYVAL_0x7f04002a="false" />
+    <org.chromium.chrome.browser.preferences.TextMessagePreference android:title="@string/APKTOOL_DUMMYVAL_0x7f13027a" app:APKTOOL_DUMMYVAL_0x7f04002a="false" />
+    <org.chromium.chrome.browser.preferences.LearnMorePreference android:key="data_reduction_learn_more" app:APKTOOL_DUMMYVAL_0x7f04002a="false" app:APKTOOL_DUMMYVAL_0x7f040120="@string/APKTOOL_DUMMYVAL_0x7f13032e" />
+</PreferenceScreen>

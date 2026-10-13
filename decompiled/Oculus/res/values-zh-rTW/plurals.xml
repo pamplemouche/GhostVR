@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="app_with_iap_count">
+        <item quantity="other">有%1$d次應用程式內購買</item>
+    </plurals>
+    <plurals name="app_with_iap_header_count">
+        <item quantity="other">%2$s有%1$d次應用程式內購買</item>
+    </plurals>
+    <plurals name="bundle_pdp_item_count">
+        <item quantity="other">%1$d個體驗</item>
+    </plurals>
+    <plurals name="pdp_controller_required">
+        <item quantity="other">擇一使用</item>
+    </plurals>
+    <plurals name="store_countdown_days">
+        <item quantity="other">%1$s天</item>
+    </plurals>
+</resources>

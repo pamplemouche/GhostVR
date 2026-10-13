@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="6.0px" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oculus.vrshell.panels.views.ShellButton android:id="@id/managed_launcher_icon_button" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="1" />
+    <TextView android:textSize="16.0px" android:textColor="#ffffffff" android:gravity="center_vertical" android:id="@id/managed_launcher_app_text_card" android:paddingLeft="12.0px" android:layout_width="fill_parent" android:layout_height="64.0px" android:layout_alignParentBottom="true" />
+</RelativeLayout>

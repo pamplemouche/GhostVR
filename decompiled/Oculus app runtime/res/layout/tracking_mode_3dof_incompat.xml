@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.dialogs.GenericSystemDialog android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vrshell="http://schemas.android.com/apk/res-auto">
+    <com.oculus.vrshell.panels.views.SystemDialogStandardLayout android:id="@id/system_dialog_layout" vrshell:acceptResult="continue-with-3dof" vrshell:acceptText="@string/tracking_mode_3dof_incompat_ok" vrshell:backResult="cancel" vrshell:cancelResult="cancel" vrshell:cancelText="@string/guardian_adjust_dialog_cancel" vrshell:contentText="@string/tracking_mode_3dof_incompat_desc" vrshell:titleText="@string/tracking_mode_3dof_incompat_title" style="@style/SystemDialog" />
+</com.oculus.panelapp.anytimeui.dialogs.GenericSystemDialog>

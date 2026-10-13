@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.dialogs.ControllerRecenterDialog android:id="@id/controller_recenter_dialog_container" style="@style/ControllerRecenterDialogContainerTheme"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/controller_recenter_dialog_description_text" android:text="@string/controller_recenter_dialog_description" style="@style/ControllerRecenterDialogDescriptionText" />
+    <com.oculus.vrshell.panels.views.ShellButton android:id="@id/controller_recenter_dialog_button" android:text="@string/controller_recenter_dialog_button" style="@style/ControllerRecenterDialogButton" />
+    <CheckBox android:id="@id/controller_recenter_dialog_checkbox" android:text="@string/controller_recenter_dialog_checkbox" style="@style/ControllerRecenterDialogCheckbox" />
+</com.oculus.panelapp.anytimeui.dialogs.ControllerRecenterDialog>

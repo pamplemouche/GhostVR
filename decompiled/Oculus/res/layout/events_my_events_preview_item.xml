@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/events_my_events_item_horizontal_margin" android:layout_marginTop="@dimen/events_my_events_item_vertical_margin" android:layout_marginRight="@dimen/events_my_events_item_horizontal_margin" android:layout_marginBottom="@dimen/events_my_events_item_vertical_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@id/interested" android:layout_width="@dimen/events_my_events_item_icon_size" android:layout_height="@dimen/events_my_events_item_icon_size" android:src="@drawable/events_interested_selected" />
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/events_my_events_item_horizontal_margin">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textAppearance="?android:textAppearance" android:id="@id/my_events_with_count" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/oculus_black_6" android:ellipsize="end" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/events_my_events_item_line_spacing" android:maxLines="1" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:layout_gravity="end|center" android:id="@id/right_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/right_arrow_black" />
+</FrameLayout>

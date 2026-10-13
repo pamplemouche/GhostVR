@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <org.chromium.chrome.browser.widget.ChromeTextInputLayout android:id="@id/homepage_url" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f14014e">
+                <EditText android:id="@id/homepage_url_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/APKTOOL_DUMMYVAL_0x7f13045a" android:singleLine="true" android:inputType="textUri" />
+            </org.chromium.chrome.browser.widget.ChromeTextInputLayout>
+            <Space style="@style/APKTOOL_DUMMYVAL_0x7f1400db" />
+            <View style="@style/APKTOOL_DUMMYVAL_0x7f1400da" />
+            <LinearLayout style="@style/APKTOOL_DUMMYVAL_0x7f1400d8">
+                <org.chromium.ui.widget.ButtonCompat android:id="@id/homepage_reset" android:text="@string/APKTOOL_DUMMYVAL_0x7f130531" style="@style/APKTOOL_DUMMYVAL_0x7f1400d9" />
+                <org.chromium.ui.widget.ButtonCompat android:id="@id/homepage_cancel" android:text="@string/APKTOOL_DUMMYVAL_0x7f1301d4" style="@style/APKTOOL_DUMMYVAL_0x7f1400d9" />
+                <org.chromium.ui.widget.ButtonCompat android:id="@id/homepage_save" android:text="@string/APKTOOL_DUMMYVAL_0x7f130542" style="@style/APKTOOL_DUMMYVAL_0x7f1400d9" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e017e" />
+</FrameLayout>

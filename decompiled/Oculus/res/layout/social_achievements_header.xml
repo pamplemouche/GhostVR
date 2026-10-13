@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.view.SimpleDraweeView android:id="@id/cover_image" android:layout_width="fill_parent" android:layout_height="wrap_content" app:placeholderImage="@color/oculus_black_1" app:viewAspectRatio="@dimen/image_default_aspect_ratio_inverse" />
+    <Button android:id="@id/pdp_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/social_achievement_row_margin" android:layout_marginTop="@dimen/social_achievement_pdp_button_margin_top" android:layout_marginRight="@dimen/social_achievement_row_margin" android:layout_marginBottom="@dimen/social_achievement_pdp_button_margin_bottom" android:text="@string/social_achievements_app_detail" android:layout_marginStart="@dimen/social_achievement_row_margin" android:layout_marginEnd="@dimen/social_achievement_row_margin" />
+    <TextView android:textAppearance="@style/TextAppearance.Title.Small" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/social_achievement_row_margin" android:text="@string/social_achievements_label" />
+</LinearLayout>

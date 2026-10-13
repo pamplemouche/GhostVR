@@ -1,0 +1,561 @@
+.class public Lcom/oculus/vrshell/panelservice/PanelService;
+.super Landroid/app/Service;
+.source "PanelService.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/oculus/vrshell/panelservice/PanelService$IncomingHandler;
+    }
+.end annotation
+
+
+# static fields
+.field public static final CREATE_PANEL_APP_KEY_BUNDLE:Ljava/lang/String; = "panelBundle"
+
+.field public static final CREATE_PANEL_APP_KEY_FD:Ljava/lang/String; = "panelServicePFD"
+
+.field public static final CREATE_PANEL_APP_KEY_SURFACE:Ljava/lang/String; = "panelSurface"
+
+.field public static final MSG_ACTIVITY_TOKEN:I = 0x3
+
+.field public static final MSG_CREATE_PANEL_APP:I = 0x2
+
+.field public static final MSG_SOCKET_PFD:I = 0x1
+
+.field private static final PANEL_SURFACE_KEY_PREFIX:Ljava/lang/String; = "panelSurface:"
+
+.field private static final TAG:Ljava/lang/String; = "CppPanelService"
+
+
+# instance fields
+.field private isDeveloperBuildAllowed:Z
+
+.field private isGearVRDeveloperMode:Z
+
+.field private messenger:Landroid/os/Messenger;
+
+.field private unlockulusFailureMessage:Ljava/lang/String;
+
+.field private vrShellVerifier:Lcom/oculus/vrshell/panelservice/PanelVerifier;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    const-string v0, "CppPanelService"
+
+    const-string v1, "START load of libcpppanelservice.so"
+
+    .line 251
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string v1, "cpppanelservice"
+
+    .line 252
+    invoke-static {v1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+
+    const-string v1, "END load of libcpppanelservice.so"
+
+    .line 253
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 2
+
+    .line 256
+    invoke-direct {p0}, Landroid/app/Service;-><init>()V
+
+    const/4 v0, 0x0
+
+    .line 244
+    iput-boolean v0, p0, Lcom/oculus/vrshell/panelservice/PanelService;->isGearVRDeveloperMode:Z
+
+    const-string v1, "UNKNOWN"
+
+    .line 245
+    iput-object v1, p0, Lcom/oculus/vrshell/panelservice/PanelService;->unlockulusFailureMessage:Ljava/lang/String;
+
+    .line 246
+    iput-boolean v0, p0, Lcom/oculus/vrshell/panelservice/PanelService;->isDeveloperBuildAllowed:Z
+
+    const/4 v0, 0x0
+
+    .line 247
+    iput-object v0, p0, Lcom/oculus/vrshell/panelservice/PanelService;->messenger:Landroid/os/Messenger;
+
+    .line 248
+    iput-object v0, p0, Lcom/oculus/vrshell/panelservice/PanelService;->vrShellVerifier:Lcom/oculus/vrshell/panelservice/PanelVerifier;
+
+    const-string v0, "CppPanelService"
+
+    const-string v1, "PanelService()"
+
+    .line 257
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method static synthetic access$000(Lcom/oculus/vrshell/panelservice/PanelService;JJI)V
+    .locals 0
+
+    .line 24
+    invoke-direct/range {p0 .. p5}, Lcom/oculus/vrshell/panelservice/PanelService;->nativeInitializePanelInstance(JJI)V
+
+    return-void
+.end method
+
+.method private native nativeInitializePanelInstance(JJI)V
+.end method
+
+
+# virtual methods
+.method protected createNativePanelAppInstance(Landroid/view/Surface;Ljava/util/Map;Landroid/os/Bundle;)J
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/view/Surface;",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Landroid/view/Surface;",
+            ">;",
+            "Landroid/os/Bundle;",
+            ")J"
+        }
+    .end annotation
+
+    .line 308
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string p2, "Panel applications should provide an instance."
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
+    .locals 1
+
+    const-string p1, "CppPanelService"
+
+    const-string v0, "onBind()"
+
+    .line 268
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 269
+    iget-object p1, p0, Lcom/oculus/vrshell/panelservice/PanelService;->messenger:Landroid/os/Messenger;
+
+    invoke-virtual {p1}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public onCreate()V
+    .locals 4
+
+    .line 274
+    invoke-super {p0}, Landroid/app/Service;->onCreate()V
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    .line 278
+    :try_start_0
+    invoke-virtual {p0}, Lcom/oculus/vrshell/panelservice/PanelService;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    const-string v3, "vrmode_developer_mode"
+
+    invoke-static {v2, v3}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const/4 v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    iput-boolean v2, p0, Lcom/oculus/vrshell/panelservice/PanelService;->isGearVRDeveloperMode:Z
+    :try_end_0
+    .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 284
+    :catch_0
+    sget-object v2, Landroid/os/Build;->SERIAL:Ljava/lang/String;
+
+    invoke-static {p0, v2}, Lcom/oculus/vrshell/panelservice/UnlockulusVerifier;->isUnlockulusUnlocked(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/oculus/vrshell/panelservice/PanelService;->unlockulusFailureMessage:Ljava/lang/String;
+
+    .line 285
+    iget-boolean v2, p0, Lcom/oculus/vrshell/panelservice/PanelService;->isGearVRDeveloperMode:Z
+
+    if-nez v2, :cond_1
+
+    iget-object v2, p0, Lcom/oculus/vrshell/panelservice/PanelService;->unlockulusFailureMessage:Ljava/lang/String;
+
+    if-nez v2, :cond_2
+
+    :cond_1
+    const/4 v0, 0x1
+
+    :cond_2
+    iput-boolean v0, p0, Lcom/oculus/vrshell/panelservice/PanelService;->isDeveloperBuildAllowed:Z
+
+    .line 287
+    new-instance v0, Landroid/os/Messenger;
+
+    new-instance v1, Lcom/oculus/vrshell/panelservice/PanelService$IncomingHandler;
+
+    invoke-direct {v1, p0}, Lcom/oculus/vrshell/panelservice/PanelService$IncomingHandler;-><init>(Lcom/oculus/vrshell/panelservice/PanelService;)V
+
+    invoke-direct {v0, v1}, Landroid/os/Messenger;-><init>(Landroid/os/Handler;)V
+
+    iput-object v0, p0, Lcom/oculus/vrshell/panelservice/PanelService;->messenger:Landroid/os/Messenger;
+
+    .line 288
+    new-instance v0, Lcom/oculus/vrshell/panelservice/PanelVerifier;
+
+    iget-boolean v1, p0, Lcom/oculus/vrshell/panelservice/PanelService;->isDeveloperBuildAllowed:Z
+
+    invoke-direct {v0, p0, v1, v1}, Lcom/oculus/vrshell/panelservice/PanelVerifier;-><init>(Landroid/content/Context;ZZ)V
+
+    iput-object v0, p0, Lcom/oculus/vrshell/panelservice/PanelService;->vrShellVerifier:Lcom/oculus/vrshell/panelservice/PanelVerifier;
+
+    return-void
+.end method
+
+.method public onDestroy()V
+    .locals 2
+
+    const-string v0, "CppPanelService"
+
+    const-string v1, "onDestroy()"
+
+    .line 293
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method protected onShellTokenReady(Landroid/os/IBinder;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onStartCommand(Landroid/content/Intent;II)I
+    .locals 0
+
+    const-string p1, "CppPanelService"
+
+    const-string p2, "onStartCommand()"
+
+    .line 262
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p1, 0x2
+
+    return p1
+.end method
+
+.method public shouldSimulateLegacyPanelSurfaceAux()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method protected verifyVrShellUID(I)Ljava/lang/String;
+    .locals 11
+
+    .line 329
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v0
+
+    .line 330
+    iget-object v2, p0, Lcom/oculus/vrshell/panelservice/PanelService;->vrShellVerifier:Lcom/oculus/vrshell/panelservice/PanelVerifier;
+
+    invoke-virtual {v2, p1}, Lcom/oculus/vrshell/panelservice/PanelVerifier;->checkApkSignature(I)Lcom/oculus/vrshell/panelservice/SigCertVerifier$SigCertInfo;
+
+    move-result-object v2
+
+    .line 331
+    iget-object v3, v2, Lcom/oculus/vrshell/panelservice/SigCertVerifier$SigCertInfo;->packageNames:Ljava/util/Set;
+
+    invoke-static {v3}, Ljava/util/Collections;->min(Ljava/util/Collection;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    .line 332
+    iget-object v4, p0, Lcom/oculus/vrshell/panelservice/PanelService;->vrShellVerifier:Lcom/oculus/vrshell/panelservice/PanelVerifier;
+
+    invoke-virtual {v4, p1}, Lcom/oculus/vrshell/panelservice/PanelVerifier;->isVrRunnable(I)Z
+
+    move-result v4
+
+    .line 333
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v5
+
+    const/4 v7, 0x5
+
+    .line 335
+    new-array v7, v7, [Ljava/lang/Object;
+
+    iget-boolean v8, p0, Lcom/oculus/vrshell/panelservice/PanelService;->isDeveloperBuildAllowed:Z
+
+    .line 339
+    invoke-static {v8}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
+
+    move-result-object v8
+
+    const/4 v9, 0x0
+
+    aput-object v8, v7, v9
+
+    .line 340
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    const/4 v8, 0x1
+
+    aput-object p1, v7, v8
+
+    .line 341
+    invoke-static {v4}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v10, 0x2
+
+    aput-object p1, v7, v10
+
+    const/4 p1, 0x3
+
+    aput-object v2, v7, p1
+
+    sub-long/2addr v5, v0
+
+    const-wide/32 v0, 0xf4240
+
+    div-long/2addr v5, v0
+
+    .line 343
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    const/4 v0, 0x4
+
+    aput-object p1, v7, v0
+
+    const-string p1, "verifyVrShellUID(isDeveloperBuildAllowed=%s, uid=%d) => isVrRunnable=%s, apkSignatureResult=%s, time=%d ms"
+
+    .line 337
+    invoke-static {p1, v7}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "CppPanelService"
+
+    .line 335
+    invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 345
+    iget-object p1, v2, Lcom/oculus/vrshell/panelservice/SigCertVerifier$SigCertInfo;->packageNames:Ljava/util/Set;
+
+    const-string v0, "com.oculus.vrshell"
+
+    invoke-interface {p1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    .line 346
+    new-array p1, v10, [Ljava/lang/Object;
+
+    aput-object v0, p1, v9
+
+    aput-object v3, p1, v8
+
+    const-string v0, "Expected connection to APK %s and got %s instead; failing authentication."
+
+    invoke-static {v0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 351
+    :cond_0
+    iget-boolean p1, v2, Lcom/oculus/vrshell/panelservice/SigCertVerifier$SigCertInfo;->isTrusted:Z
+
+    if-nez p1, :cond_4
+
+    .line 352
+    new-array p1, v8, [Ljava/lang/Object;
+
+    aput-object v0, p1, v9
+
+    const-string v0, "Expected %s APK to be signed with trusted certificate; failing authentication."
+
+    .line 353
+    invoke-static {v0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 357
+    iget-boolean v0, p0, Lcom/oculus/vrshell/panelservice/PanelService;->isDeveloperBuildAllowed:Z
+
+    if-eqz v0, :cond_1
+
+    return-object p1
+
+    .line 362
+    :cond_1
+    invoke-static {v8}, Lcom/oculus/vrshell/panelservice/VerifierConstants;->getFirstPartyOculusStorePackages(Z)Ljava/util/Map;
+
+    move-result-object v0
+
+    .line 363
+    iget-object v1, v2, Lcom/oculus/vrshell/panelservice/SigCertVerifier$SigCertInfo;->signature:Landroid/content/pm/Signature;
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return-object p1
+
+    .line 367
+    :cond_2
+    iget-object v1, v2, Lcom/oculus/vrshell/panelservice/SigCertVerifier$SigCertInfo;->signature:Landroid/content/pm/Signature;
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Set;
+
+    .line 368
+    invoke-interface {v0, v3}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    return-object p1
+
+    .line 372
+    :cond_3
+    new-array v0, v10, [Ljava/lang/Object;
+
+    aput-object p1, v0, v9
+
+    iget-object p1, p0, Lcom/oculus/vrshell/panelservice/PanelService;->unlockulusFailureMessage:Ljava/lang/String;
+
+    .line 374
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    aput-object p1, v0, v8
+
+    const-string p1, "%s Enabling GearVR developer mode or fixing Unlockulus (%s) will fix this!"
+
+    .line 372
+    invoke-static {p1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_4
+    if-nez v4, :cond_6
+
+    .line 378
+    new-array p1, v8, [Ljava/lang/Object;
+
+    aput-object v0, p1, v9
+
+    const-string v0, "Expected APK %s to have valid OSIG; failing authentication."
+
+    .line 379
+    invoke-static {v0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 382
+    iget-boolean v0, p0, Lcom/oculus/vrshell/panelservice/PanelService;->isGearVRDeveloperMode:Z
+
+    if-eqz v0, :cond_5
+
+    .line 383
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " Did you forget to add your device OSIG to the assets/ directory when building it?"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 386
+    :cond_5
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " Enabling GearVR developer mode may fix this!"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_6
+    const/4 p1, 0x0
+
+    return-object p1
+.end method

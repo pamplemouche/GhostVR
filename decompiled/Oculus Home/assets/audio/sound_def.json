@@ -1,0 +1,52 @@
+{
+  "apk:///assets/src/ocui/assets/sounds/sfx_hover.ogg" : {
+    "uri": "hover1",
+    "volume": 1,
+    "attenuation": "none"
+  },
+  "apk:///assets/src/ocui/assets/sounds/sfx_scroll.ogg" : {
+    "uri": "scroll1",
+    "volume": 1,
+    "attenuation": "none"
+  },
+  "apk:///assets/src/ocui/assets/sounds/sfx_select_main.ogg" : {
+    "uri": "select1",
+    "volume": 1,
+    "attenuation": "none"
+  },
+  "apk:///assets/src/ocui/assets/sounds/sfx_select_main_close.ogg" : {
+    "uri": "close1",
+    "volume": 1,
+    "attenuation": "none"
+  },
+  "apk:///assets/src/ocui/assets/sounds/ui_back_01_m.ogg" : {
+    "uri": "close1",
+    "volume": 1,
+    "attenuation": "none"
+  },
+  "apk:///assets/src/ocui/assets/sounds/ui_gaze_on.ogg" : {
+    "uri": "apk:///assets/src/ocui/assets/sounds/ui_gaze_on.ogg",
+    "volume": 1,
+    "attenuation": "none"
+  },
+  "apk:///assets/src/ocui/assets/sounds/ui_menu_in_m.ogg" : {
+    "uri": "apk:///assets/src/ocui/assets/sounds/ui_menu_in_m.ogg",
+    "volume": 1,
+    "attenuation": "none"
+  },
+  "apk:///assets/src/ocui/assets/sounds/ui_select_01_m.ogg" : {
+    "uri": "select1",
+    "volume": 1,
+    "attenuation": "none"
+  },
+  "apk:///assets/src/ocui/assets/sounds/ui_select_neg_m.ogg" : {
+    "uri": "apk:///assets/src/ocui/assets/sounds/ui_select_neg_m.ogg",
+    "volume": 1,
+    "attenuation": "none"
+  },
+  "apk:///assets/src/ocui/assets/sounds/ui_success_01.ogg" : {
+    "uri": "apk:///assets/src/ocui/assets/sounds/ui_success_01.ogg",
+    "volume": 1,
+    "attenuation": "none"
+  }
+}

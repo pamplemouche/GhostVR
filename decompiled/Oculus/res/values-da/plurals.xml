@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="app_with_iap_count">
+        <item quantity="other">med %1$d køb i app</item>
+        <item quantity="one">med 1 køb i app</item>
+    </plurals>
+    <plurals name="app_with_iap_header_count">
+        <item quantity="other">%1$d køb i app for %2$s</item>
+    </plurals>
+    <plurals name="bundle_pdp_item_count">
+        <item quantity="other">%1$d oplevelser</item>
+        <item quantity="one">1 oplevelse</item>
+    </plurals>
+    <plurals name="pdp_controller_required">
+        <item quantity="other">En af disse er påkrævet</item>
+        <item quantity="one">Kræver</item>
+    </plurals>
+    <plurals name="store_countdown_days">
+        <item quantity="other">%1$s dage</item>
+        <item quantity="one">1 dag</item>
+    </plurals>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/nux_activity_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="0.0dip" android:src="@drawable/oculus_facebook_logo" android:layout_weight="1.0" />
+    <com.oculus.horizon.widget.ProgressButton android:layout_gravity="center_horizontal" android:id="@id/nux_fblogin_create_button" android:layout_width="fill_parent" android:layout_marginTop="@dimen/nux_fblogin_common_button_margin" android:layout_marginBottom="@dimen/nux_fblogin_common_button_margin" android:text="@string/nux_fblogin_login_button" android:drawableLeft="@drawable/fbconnect_facebook_logo_white" android:drawablePadding="@dimen/nux_single_field_offset" style="@style/RoundButton.WhiteOnBlue" />
+    <TextView android:textAppearance="?android:textAppearance" android:layout_gravity="center" android:id="@id/nux_fblogin_not_you" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/nux_fblogin_not_you_margin_bottom" android:text="@string/fbconnect_not_you" />
+    <TextView android:gravity="center" android:id="@id/nux_fblogin_signup_terms" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_fblogin_signup_terms_margin_top" android:text="@string/nux_fblogin_signup_terms" />
+    <TextView android:gravity="center" android:id="@id/nux_fblogin_signup_terms_links" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/nux_fblogin_signup_terms_links" />
+    <TextView android:gravity="center" android:id="@id/nux_fblogin_dont_have" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_activity_padding" android:text="@string/nux_fblogin_dont_have" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textStyle="bold" android:id="@id/nux_fblogin_sign_in" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nux_fblogin_sign_in" />
+        <TextView android:paddingLeft="@dimen/nux_fblogin_signup_options_horizontal_padding" android:paddingRight="@dimen/nux_fblogin_signup_options_horizontal_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nux_fblogin_or" />
+        <TextView android:textStyle="bold" android:id="@id/nux_fblogin_create_account" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nux_fblogin_create_account" />
+    </LinearLayout>
+</LinearLayout>

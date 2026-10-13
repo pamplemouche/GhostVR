@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:oculus="http://schemas.android.com/apk/res-auto">
+    <ProgressBar android:layout_gravity="center" android:id="@id/content_loading_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.oculus.horizon.widget.EmptyErrorView android:id="@id/content_empty_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" oculus:descriptionText="@string/settings_tos_error" oculus:iconSrc="@drawable/error_icon" oculus:titleText="@string/common_error_something_went_wrong" />
+    <ScrollView android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/tos_content" android:paddingLeft="@dimen/common_horizontal_padding" android:paddingTop="@dimen/common_vertical_padding" android:paddingRight="@dimen/common_horizontal_padding" android:paddingBottom="@dimen/common_vertical_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <org.chromium.chrome.browser.preferences.languages.LanguageListPreference android:layout="@layout/APKTOOL_DUMMYVAL_0x7f0e00f5" android:key="preferred_languages" android:widgetLayout="@layout/APKTOOL_DUMMYVAL_0x7f0e001d" />
+    <org.chromium.chrome.browser.preferences.ChromeSwitchPreference android:key="translate_switch" android:summaryOn="@string/APKTOOL_DUMMYVAL_0x7f130395" android:summaryOff="@string/APKTOOL_DUMMYVAL_0x7f130395" />
+</PreferenceScreen>

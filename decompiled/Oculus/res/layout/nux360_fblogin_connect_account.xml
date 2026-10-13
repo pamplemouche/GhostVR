@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?nuxBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/nux360_toolbar" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/nux_container_padding" android:paddingTop="?actionBarSize" android:paddingRight="@dimen/nux_container_padding" android:paddingBottom="@dimen/nux_container_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/nux_text_padding">
+        <TextView android:gravity="center_horizontal" android:id="@id/confirm_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_fblogin_username_label_margin" android:layout_marginBottom="@dimen/nux_single_field_offset" android:text="@string/nux_fblogin_connect_account_confirm_details" />
+        <com.google.android.material.textfield.TextInputLayout android:id="@id/nux_email_layout" android:paddingLeft="@dimen/nux_edit_padding" android:paddingTop="@dimen/nux_edit_padding" android:paddingRight="@dimen/nux_edit_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?textInputLayoutStyle">
+            <com.google.android.material.textfield.TextInputEditText android:id="@id/edit_email" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/common_email" android:inputType="textEmailAddress" android:imeOptions="actionNext" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@id/nux_password_layout" android:paddingLeft="@dimen/nux_edit_padding" android:paddingRight="@dimen/nux_edit_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?textInputLayoutStyle">
+            <com.google.android.material.textfield.TextInputEditText android:id="@id/edit_password" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/common_password" android:inputType="textPassword" android:imeOptions="actionDone" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView android:id="@id/confirm_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/nux_single_field_offset" android:text="@string/nux_fblogin_connect_account_import_name_and_friends" />
+        <com.oculus.horizon.widget.ProgressButton android:id="@id/fbconnect_connect_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nux_fblogin_username_label_margin" android:text="@string/nux_fblogin_connect_account_create_button" style="@style/RoundButton.WhiteOnBlue" />
+    </LinearLayout>
+</FrameLayout>

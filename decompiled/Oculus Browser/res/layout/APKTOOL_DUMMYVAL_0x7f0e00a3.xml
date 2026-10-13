@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.GridLayout android:background="@drawable/APKTOOL_DUMMYVAL_0x7f0800f0" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" app:APKTOOL_DUMMYVAL_0x7f0400a0="1" app:APKTOOL_DUMMYVAL_0x7f0401d6="2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.chrome.browser.download.home.list.view.AsyncImageView android:id="@id/thumbnail" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_marginTop="1.0dip" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_marginStart="1.0dip" android:layout_marginEnd="1.0dip" app:APKTOOL_DUMMYVAL_0x7f0400b5="@dimen/APKTOOL_DUMMYVAL_0x7f0700ff" app:APKTOOL_DUMMYVAL_0x7f0400b6="@dimen/APKTOOL_DUMMYVAL_0x7f0700ff" app:APKTOOL_DUMMYVAL_0x7f04015d="0" app:APKTOOL_DUMMYVAL_0x7f040161="center" app:APKTOOL_DUMMYVAL_0x7f040164="0" app:APKTOOL_DUMMYVAL_0x7f0401d5="@color/APKTOOL_DUMMYVAL_0x7f06010f" />
+    <org.chromium.ui.widget.ChromeImageButton android:id="@id/action_button" android:clickable="false" android:elevation="2.0dip" app:APKTOOL_DUMMYVAL_0x7f04015d="0" app:APKTOOL_DUMMYVAL_0x7f040161="center" app:APKTOOL_DUMMYVAL_0x7f040164="0" style="@style/APKTOOL_DUMMYVAL_0x7f140106" />
+    <org.chromium.chrome.browser.download.home.view.SelectionView android:id="@id/selection" app:APKTOOL_DUMMYVAL_0x7f04015d="0" app:APKTOOL_DUMMYVAL_0x7f040164="0" style="@style/APKTOOL_DUMMYVAL_0x7f1400f2" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" app:APKTOOL_DUMMYVAL_0x7f04015d="0" app:APKTOOL_DUMMYVAL_0x7f040164="1">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="16.0dip">
+            <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401c4" android:id="@id/title" android:layout_width="fill_parent" android:layout_marginTop="11.0dip" style="@style/APKTOOL_DUMMYVAL_0x7f1400f3" />
+            <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401c2" android:id="@id/caption" android:layout_width="fill_parent" android:layout_marginBottom="11.0dip" style="@style/APKTOOL_DUMMYVAL_0x7f1400f3" />
+        </LinearLayout>
+        <include android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_weight="0.0" layout="@layout/APKTOOL_DUMMYVAL_0x7f0e00f7" />
+    </LinearLayout>
+</android.support.v7.widget.GridLayout>

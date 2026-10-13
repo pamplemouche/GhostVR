@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button android:id="@id/invite_friends_button" android:text="@string/social_party_dialog_invite_friends_button" style="@style/SocialPartyInviteFriendsButton"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

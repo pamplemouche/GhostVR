@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.ui.widget.ButtonCompat android:gravity="start|center" android:layout_gravity="top" android:id="@id/clear_browsing_data_button" android:paddingTop="@dimen/APKTOOL_DUMMYVAL_0x7f07017f" android:paddingBottom="@dimen/APKTOOL_DUMMYVAL_0x7f07017f" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/APKTOOL_DUMMYVAL_0x7f130450" android:paddingStart="@dimen/APKTOOL_DUMMYVAL_0x7f07017f" android:paddingEnd="@dimen/APKTOOL_DUMMYVAL_0x7f07017f" app:APKTOOL_DUMMYVAL_0x7f040272="0.0dip" style="@style/APKTOOL_DUMMYVAL_0x7f140226" />
+    <View style="@style/APKTOOL_DUMMYVAL_0x7f140103" />
+</LinearLayout>

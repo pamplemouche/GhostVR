@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard custom:horizontalGap="1.0px" custom:ime="simple" custom:keyHeight="48.0px" custom:keySubTextSize="8.0px" custom:keyTextColor="@color/keyboard_key_text" custom:keyTextSize="26.0px" custom:keyWidth="48.0px" custom:verticalGap="1.0px" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <Row custom:horizontalGap="0.0px" custom:keyHeight="0.0px" custom:keyWidth="0.0px" custom:verticalGap="0.0px">
+        <Key custom:codes="7" custom:keyOutputText="0" />
+        <Key custom:codes="7" custom:codesModifier="SHIFT" custom:keyOutputText=")" />
+        <Key custom:codes="8" custom:keyOutputText="1" />
+        <Key custom:codes="8" custom:codesModifier="SHIFT" custom:keyOutputText="!" />
+        <Key custom:codes="9" custom:keyOutputText="2" />
+        <Key custom:codes="9" custom:codesModifier="SHIFT" custom:keyOutputText="\@" />
+        <Key custom:codes="10" custom:keyOutputText="3" />
+        <Key custom:codes="10" custom:codesModifier="SHIFT" custom:keyOutputText="\#" />
+        <Key custom:codes="11" custom:keyOutputText="4" />
+        <Key custom:codes="11" custom:codesModifier="SHIFT" custom:keyOutputText="$" />
+        <Key custom:codes="12" custom:keyOutputText="5" />
+        <Key custom:codes="12" custom:codesModifier="SHIFT" custom:keyOutputText="%" />
+        <Key custom:codes="13" custom:keyOutputText="6" />
+        <Key custom:codes="13" custom:codesModifier="SHIFT" custom:keyOutputText="^" />
+        <Key custom:codes="14" custom:keyOutputText="7" />
+        <Key custom:codes="14" custom:codesModifier="SHIFT" custom:keyOutputText="&amp;" />
+        <Key custom:codes="15" custom:keyOutputText="8" />
+        <Key custom:codes="15" custom:codesModifier="SHIFT" custom:keyOutputText="*" />
+        <Key custom:codes="16" custom:keyOutputText="9" />
+        <Key custom:codes="16" custom:codesModifier="SHIFT" custom:keyOutputText="(" />
+        <Key custom:codes="19" custom:isCommand="true" custom:keyOutputText="-8" />
+        <Key custom:codes="20" custom:isCommand="true" custom:keyOutputText="-9" />
+        <Key custom:codes="21" custom:isCommand="true" custom:keyOutputText="-10" />
+        <Key custom:codes="22" custom:isCommand="true" custom:keyOutputText="-11" />
+        <Key custom:codes="29" custom:keyOutputText="a" custom:supportsCapsLock="true" />
+        <Key custom:codes="29" custom:codesModifier="SHIFT" custom:keyOutputText="A" custom:supportsCapsLock="true" />
+        <Key custom:codes="30" custom:keyOutputText="b" custom:supportsCapsLock="true" />
+        <Key custom:codes="30" custom:codesModifier="SHIFT" custom:keyOutputText="B" custom:supportsCapsLock="true" />
+        <Key custom:codes="31" custom:keyOutputText="c" custom:supportsCapsLock="true" />
+        <Key custom:codes="31" custom:codesModifier="SHIFT" custom:keyOutputText="C" custom:supportsCapsLock="true" />
+        <Key custom:codes="32" custom:keyOutputText="d" custom:supportsCapsLock="true" />
+        <Key custom:codes="32" custom:codesModifier="SHIFT" custom:keyOutputText="D" custom:supportsCapsLock="true" />
+        <Key custom:codes="33" custom:keyOutputText="e" custom:supportsCapsLock="true" />
+        <Key custom:codes="33" custom:codesModifier="SHIFT" custom:keyOutputText="E" custom:supportsCapsLock="true" />
+        <Key custom:codes="34" custom:keyOutputText="f" custom:supportsCapsLock="true" />
+        <Key custom:codes="34" custom:codesModifier="SHIFT" custom:keyOutputText="F" custom:supportsCapsLock="true" />
+        <Key custom:codes="35" custom:keyOutputText="g" custom:supportsCapsLock="true" />
+        <Key custom:codes="35" custom:codesModifier="SHIFT" custom:keyOutputText="G" custom:supportsCapsLock="true" />
+        <Key custom:codes="36" custom:keyOutputText="h" custom:supportsCapsLock="true" />
+        <Key custom:codes="36" custom:codesModifier="SHIFT" custom:keyOutputText="H" custom:supportsCapsLock="true" />
+        <Key custom:codes="37" custom:keyOutputText="i" custom:supportsCapsLock="true" />
+        <Key custom:codes="37" custom:codesModifier="SHIFT" custom:keyOutputText="I" custom:supportsCapsLock="true" />
+        <Key custom:codes="38" custom:keyOutputText="j" custom:supportsCapsLock="true" />
+        <Key custom:codes="38" custom:codesModifier="SHIFT" custom:keyOutputText="J" custom:supportsCapsLock="true" />
+        <Key custom:codes="39" custom:keyOutputText="k" custom:supportsCapsLock="true" />
+        <Key custom:codes="39" custom:codesModifier="SHIFT" custom:keyOutputText="K" custom:supportsCapsLock="true" />
+        <Key custom:codes="40" custom:keyOutputText="l" custom:supportsCapsLock="true" />
+        <Key custom:codes="40" custom:codesModifier="SHIFT" custom:keyOutputText="L" custom:supportsCapsLock="true" />
+        <Key custom:codes="41" custom:keyOutputText="m" custom:supportsCapsLock="true" />
+        <Key custom:codes="41" custom:codesModifier="SHIFT" custom:keyOutputText="M" custom:supportsCapsLock="true" />
+        <Key custom:codes="42" custom:keyOutputText="n" custom:supportsCapsLock="true" />
+        <Key custom:codes="42" custom:codesModifier="SHIFT" custom:keyOutputText="N" custom:supportsCapsLock="true" />
+        <Key custom:codes="43" custom:keyOutputText="o" custom:supportsCapsLock="true" />
+        <Key custom:codes="43" custom:codesModifier="SHIFT" custom:keyOutputText="O" custom:supportsCapsLock="true" />
+        <Key custom:codes="44" custom:keyOutputText="p" custom:supportsCapsLock="true" />
+        <Key custom:codes="44" custom:codesModifier="SHIFT" custom:keyOutputText="P" custom:supportsCapsLock="true" />
+        <Key custom:codes="45" custom:keyOutputText="q" custom:supportsCapsLock="true" />
+        <Key custom:codes="45" custom:codesModifier="SHIFT" custom:keyOutputText="Q" custom:supportsCapsLock="true" />
+        <Key custom:codes="46" custom:keyOutputText="r" custom:supportsCapsLock="true" />
+        <Key custom:codes="46" custom:codesModifier="SHIFT" custom:keyOutputText="R" custom:supportsCapsLock="true" />
+        <Key custom:codes="47" custom:keyOutputText="s" custom:supportsCapsLock="true" />
+        <Key custom:codes="47" custom:codesModifier="SHIFT" custom:keyOutputText="S" custom:supportsCapsLock="true" />
+        <Key custom:codes="48" custom:keyOutputText="t" custom:supportsCapsLock="true" />
+        <Key custom:codes="48" custom:codesModifier="SHIFT" custom:keyOutputText="T" custom:supportsCapsLock="true" />
+        <Key custom:codes="49" custom:keyOutputText="u" custom:supportsCapsLock="true" />
+        <Key custom:codes="49" custom:codesModifier="SHIFT" custom:keyOutputText="U" custom:supportsCapsLock="true" />
+        <Key custom:codes="50" custom:keyOutputText="v" custom:supportsCapsLock="true" />
+        <Key custom:codes="50" custom:codesModifier="SHIFT" custom:keyOutputText="V" custom:supportsCapsLock="true" />
+        <Key custom:codes="51" custom:keyOutputText="w" custom:supportsCapsLock="true" />
+        <Key custom:codes="51" custom:codesModifier="SHIFT" custom:keyOutputText="W" custom:supportsCapsLock="true" />
+        <Key custom:codes="52" custom:keyOutputText="x" custom:supportsCapsLock="true" />
+        <Key custom:codes="52" custom:codesModifier="SHIFT" custom:keyOutputText="X" custom:supportsCapsLock="true" />
+        <Key custom:codes="53" custom:keyOutputText="y" custom:supportsCapsLock="true" />
+        <Key custom:codes="53" custom:codesModifier="SHIFT" custom:keyOutputText="Y" custom:supportsCapsLock="true" />
+        <Key custom:codes="54" custom:keyOutputText="z" custom:supportsCapsLock="true" />
+        <Key custom:codes="54" custom:codesModifier="SHIFT" custom:keyOutputText="Z" custom:supportsCapsLock="true" />
+        <Key custom:codes="55" custom:keyOutputText="," />
+        <Key custom:codes="55" custom:codesModifier="SHIFT" custom:keyOutputText="&lt;" />
+        <Key custom:codes="56" custom:keyOutputText="." />
+        <Key custom:codes="56" custom:codesModifier="SHIFT" custom:keyOutputText=">" />
+        <Key custom:codes="62" custom:keyOutputText=" " />
+        <Key custom:codes="66" custom:isCommand="true" custom:keyOutputText="-2" />
+        <Key custom:codes="67" custom:isCommand="true" custom:keyOutputText="-5" />
+        <Key custom:codes="68" custom:keyOutputText="`" />
+        <Key custom:codes="68" custom:codesModifier="SHIFT" custom:keyOutputText="~" />
+        <Key custom:codes="69" custom:keyOutputText="-" />
+        <Key custom:codes="69" custom:codesModifier="SHIFT" custom:keyOutputText="_" />
+        <Key custom:codes="70" custom:keyOutputText="=" />
+        <Key custom:codes="70" custom:codesModifier="SHIFT" custom:keyOutputText="+" />
+        <Key custom:codes="71" custom:keyOutputText="[" />
+        <Key custom:codes="71" custom:codesModifier="SHIFT" custom:keyOutputText="{" />
+        <Key custom:codes="72" custom:keyOutputText="]" />
+        <Key custom:codes="72" custom:codesModifier="SHIFT" custom:keyOutputText="}" />
+        <Key custom:codes="73" custom:keyOutputText="\\" />
+        <Key custom:codes="73" custom:codesModifier="SHIFT" custom:keyOutputText="|" />
+        <Key custom:codes="74" custom:keyOutputText=";" />
+        <Key custom:codes="74" custom:codesModifier="SHIFT" custom:keyOutputText=":" />
+        <Key custom:codes="75" custom:keyOutputText="'" />
+        <Key custom:codes="75" custom:codesModifier="SHIFT" custom:keyOutputText="&quot;" />
+        <Key custom:codes="76" custom:keyOutputText="/" />
+        <Key custom:codes="76" custom:codesModifier="SHIFT" custom:keyOutputText="\?" />
+        <Key custom:codes="144" custom:keyOutputText="0" />
+        <Key custom:codes="145" custom:keyOutputText="1" />
+        <Key custom:codes="146" custom:keyOutputText="2" />
+        <Key custom:codes="147" custom:keyOutputText="3" />
+        <Key custom:codes="148" custom:keyOutputText="4" />
+        <Key custom:codes="149" custom:keyOutputText="5" />
+        <Key custom:codes="150" custom:keyOutputText="6" />
+        <Key custom:codes="151" custom:keyOutputText="7" />
+        <Key custom:codes="152" custom:keyOutputText="8" />
+        <Key custom:codes="153" custom:keyOutputText="9" />
+        <Key custom:codes="154" custom:keyOutputText="/" />
+        <Key custom:codes="155" custom:keyOutputText="*" />
+        <Key custom:codes="156" custom:keyOutputText="-" />
+        <Key custom:codes="157" custom:keyOutputText="+" />
+        <Key custom:codes="158" custom:keyOutputText="." />
+        <Key custom:codes="160" custom:isCommand="true" custom:keyOutputText="-2" />
+    </Row>
+    <Row>
+        <Key custom:codes="-7" custom:keyIcon="@drawable/keyboard_48_48" />
+    </Row>
+</Keyboard>

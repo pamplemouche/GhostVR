@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/page_info_permission_row" android:paddingTop="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/page_info_permission_icon" android:layout_width="@dimen/APKTOOL_DUMMYVAL_0x7f07023c" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f07023c" android:layout_marginEnd="16.0dip" />
+    <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401b8" android:id="@id/page_info_permission_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toEndOf="@id/page_info_permission_icon" />
+    <org.chromium.ui.widget.TextViewWithLeading android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401ca" android:id="@id/page_info_permission_unavailable_message" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/page_info_permission_status" android:layout_toEndOf="@id/page_info_permission_icon" app:APKTOOL_DUMMYVAL_0x7f040169="@dimen/APKTOOL_DUMMYVAL_0x7f0702f9" />
+    <org.chromium.ui.widget.TextViewWithLeading android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f14020a" android:id="@id/page_info_permission_subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/page_info_permission_status" android:layout_toEndOf="@id/page_info_permission_icon" app:APKTOOL_DUMMYVAL_0x7f040169="@dimen/APKTOOL_DUMMYVAL_0x7f0702f9" />
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:oculus="http://schemas.android.com/apk/res-auto">
+    <ProgressBar android:layout_gravity="center" android:id="@id/loading_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/orders_recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.oculus.horizon.widget.EmptyErrorView android:id="@id/no_orders_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" oculus:buttonText="@string/store_go_to_store" oculus:titleText="@string/commerce_no_orders" />
+    <com.oculus.horizon.widget.EmptyErrorView android:id="@id/error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" oculus:buttonText="@string/store_go_to_store" oculus:descriptionText="@string/store_error_description" oculus:iconSrc="@drawable/error_icon" oculus:titleText="@string/common_error_something_went_wrong" />
+</FrameLayout>

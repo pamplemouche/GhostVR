@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.dialogs.OTABlockingDialog android:id="@id/ota_blocking_dialog_with_image" style="@style/OTABlockingDialogContainerMain"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/OTABlockingDialogContainerLeft">
+        <ViewFlipper style="@style/OTABlockingDialogViewFlipper">
+            <LinearLayout style="@style/OTABlockingDialogFlipLayout">
+                <TextView android:text="@string/ota_blocking_dialog_title" style="@style/OTABlockingDialogTitleText" />
+                <TextView android:text="@string/ota_blocking_dialog_description" style="@style/OTABlockingDialogDescriptionText" />
+                <TextView android:text="@string/ota_blocking_dialog_callout" style="@style/OTABlockingDialogCalloutText" />
+                <View style="@style/OTABlockingDialogSpacer" />
+                <RadioGroup style="@style/OTABlockingDialogFlipButtonGroup">
+                    <RadioButton android:checked="true" style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout style="@style/OTABlockingDialogFlipLayout">
+                <TextView android:text="@string/ota_blocking_dialog_title_ja" style="@style/OTABlockingDialogTitleText" />
+                <TextView android:text="@string/ota_blocking_dialog_description_ja" style="@style/OTABlockingDialogDescriptionText" />
+                <TextView android:text="@string/ota_blocking_dialog_callout" style="@style/OTABlockingDialogCalloutText" />
+                <View style="@style/OTABlockingDialogSpacer" />
+                <RadioGroup style="@style/OTABlockingDialogFlipButtonGroup">
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton android:checked="true" style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout style="@style/OTABlockingDialogFlipLayout">
+                <TextView android:text="@string/ota_blocking_dialog_title_fr" style="@style/OTABlockingDialogTitleText" />
+                <TextView android:text="@string/ota_blocking_dialog_description_fr" style="@style/OTABlockingDialogDescriptionText" />
+                <TextView android:text="@string/ota_blocking_dialog_callout" style="@style/OTABlockingDialogCalloutText" />
+                <View style="@style/OTABlockingDialogSpacer" />
+                <RadioGroup style="@style/OTABlockingDialogFlipButtonGroup">
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton android:checked="true" style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout style="@style/OTABlockingDialogFlipLayout">
+                <TextView android:text="@string/ota_blocking_dialog_title_it" style="@style/OTABlockingDialogTitleText" />
+                <TextView android:text="@string/ota_blocking_dialog_description_it" style="@style/OTABlockingDialogDescriptionText" />
+                <TextView android:text="@string/ota_blocking_dialog_callout" style="@style/OTABlockingDialogCalloutText" />
+                <View style="@style/OTABlockingDialogSpacer" />
+                <RadioGroup style="@style/OTABlockingDialogFlipButtonGroup">
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton android:checked="true" style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout style="@style/OTABlockingDialogFlipLayout">
+                <TextView android:text="@string/ota_blocking_dialog_title_de" style="@style/OTABlockingDialogTitleText" />
+                <TextView android:text="@string/ota_blocking_dialog_description_de" style="@style/OTABlockingDialogDescriptionText" />
+                <TextView android:text="@string/ota_blocking_dialog_callout" style="@style/OTABlockingDialogCalloutText" />
+                <View style="@style/OTABlockingDialogSpacer" />
+                <RadioGroup style="@style/OTABlockingDialogFlipButtonGroup">
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton android:checked="true" style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout style="@style/OTABlockingDialogFlipLayout">
+                <TextView android:text="@string/ota_blocking_dialog_title_es" style="@style/OTABlockingDialogTitleText" />
+                <TextView android:text="@string/ota_blocking_dialog_description_es" style="@style/OTABlockingDialogDescriptionText" />
+                <TextView android:text="@string/ota_blocking_dialog_callout" style="@style/OTABlockingDialogCalloutText" />
+                <View style="@style/OTABlockingDialogSpacer" />
+                <RadioGroup style="@style/OTABlockingDialogFlipButtonGroup">
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton style="@style/OTABlockingDialogFlipButton" />
+                    <RadioButton android:checked="true" style="@style/OTABlockingDialogFlipButton" />
+                </RadioGroup>
+            </LinearLayout>
+        </ViewFlipper>
+    </LinearLayout>
+    <ImageView style="@style/OTABlockingDialogHeroImage" />
+</com.oculus.panelapp.anytimeui.dialogs.OTABlockingDialog>

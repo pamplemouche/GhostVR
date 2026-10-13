@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/APKTOOL_DUMMYVAL_0x7f080211" android:id="@id/menu_id_search" android:title="@string/search" app:APKTOOL_DUMMYVAL_0x7f040020="android.support.v7.widget.SearchView" app:APKTOOL_DUMMYVAL_0x7f0401ea="always" />
+    <item android:icon="@drawable/APKTOOL_DUMMYVAL_0x7f080160" android:id="@id/menu_id_targeted_help" android:title="@string/APKTOOL_DUMMYVAL_0x7f1303bf" app:APKTOOL_DUMMYVAL_0x7f0401ea="ifRoom" />
+    <item android:id="@id/export_passwords" android:title="@string/APKTOOL_DUMMYVAL_0x7f130544" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f130543" app:APKTOOL_DUMMYVAL_0x7f0401ea="never" />
+</menu>

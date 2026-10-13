@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.notifications.NotificationsView android:id="@id/notifications_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oculus.vrshell.panels.views.ShellTabHost android:id="@id/notifications_tab_host" style="@style/NotificationsPanelTabHost">
+        <LinearLayout style="@style/NotificationsPanelFrameContainer">
+            <TextView android:id="@id/notification_panel_title" android:text="@string/notifications_panel_title" style="@style/NotificationsPanelTitleText" />
+            <TabWidget android:id="@android:id/tabs" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <FrameLayout android:id="@android:id/tabcontent" android:background="@color/oc_gray_1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:id="@id/notifications_all_tab" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <android.support.v7.widget.RecyclerView android:gravity="center" android:orientation="vertical" android:id="@id/notifications_all_tab_list" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="20.0px" />
+                    <FrameLayout android:id="@id/notifications_all_tab_empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/notifications_social_tab" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <android.support.v7.widget.RecyclerView android:gravity="center" android:orientation="vertical" android:id="@id/notifications_social_tab_list" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="20.0px" />
+                    <FrameLayout android:id="@id/notifications_social_tab_empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/notifications_system_tab" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <android.support.v7.widget.RecyclerView android:gravity="center" android:orientation="vertical" android:id="@id/notifications_system_tab_list" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="20.0px" />
+                    <FrameLayout android:id="@id/notifications_system_tab_empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/notifications_downloads_tab" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <android.support.v7.widget.RecyclerView android:gravity="center" android:orientation="vertical" android:id="@id/notifications_downloads_tab_list" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="20.0px" />
+                    <FrameLayout android:id="@id/notifications_downloads_tab_empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </com.oculus.vrshell.panels.views.ShellTabHost>
+</com.oculus.panelapp.notifications.NotificationsView>

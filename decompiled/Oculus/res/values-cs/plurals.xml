@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="app_with_iap_count">
+        <item quantity="other">obsahuje %1$d nákupů v aplikaci</item>
+        <item quantity="one">obsahuje %1$d nákup v aplikaci</item>
+        <item quantity="few">obsahuje %1$d nákupy v aplikaci</item>
+    </plurals>
+    <plurals name="app_with_iap_header_count">
+        <item quantity="other">%1$d nákupů v aplikaci %2$s</item>
+        <item quantity="one">%1$d nákup v aplikaci %2$s</item>
+        <item quantity="few">%1$d nákupy v aplikaci %2$s</item>
+    </plurals>
+    <plurals name="bundle_pdp_item_count">
+        <item quantity="other">%1$d prostředí</item>
+        <item quantity="one">1 prostředí</item>
+    </plurals>
+    <plurals name="pdp_controller_required">
+        <item quantity="other">Vyžaduje buď</item>
+        <item quantity="one">Vyžaduje</item>
+    </plurals>
+    <plurals name="store_countdown_days">
+        <item quantity="other">%1$s dní</item>
+        <item quantity="one">%1$s den</item>
+        <item quantity="few">%1$s dny</item>
+    </plurals>
+</resources>

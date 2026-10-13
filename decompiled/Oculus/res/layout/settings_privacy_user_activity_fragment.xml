@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?settingsPageBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Oculus.Widget.GrayDividers"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_user_activity_privacy_label" style="@style/Oculus.Widget.Light.Setting.Label" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Oculus.Widget.Light.Setting">
+        <TextView android:textAppearance="?android:textAppearance" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_user_activity_privacy_title" />
+        <TextView android:textAppearance="?android:textAppearance" android:textColor="@color/oculus_blue" android:id="@id/learn_more" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_user_activity_privacy_learn_more" />
+    </LinearLayout>
+    <RadioGroup android:orientation="vertical" android:id="@id/settings_real_name_group" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Oculus.Widget.GrayDividers">
+        <RadioButton android:id="@id/anyone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_privacy_common_anyone_title" android:drawableRight="@drawable/btn_checkmark" style="@style/Oculus.Widget.Light.Setting.RadioButton" />
+        <RadioButton android:id="@id/friends" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_privacy_common_friends_title" android:drawableRight="@drawable/btn_checkmark" style="@style/Oculus.Widget.Light.Setting.RadioButton" />
+        <RadioButton android:id="@id/invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_privacy_common_just_me_title" android:drawableRight="@drawable/btn_checkmark" style="@style/Oculus.Widget.Light.Setting.RadioButton" />
+    </RadioGroup>
+    <Space android:layout_width="1.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <com.oculus.horizon.widget.ProgressButton android:layout_gravity="center_horizontal" android:id="@id/continue_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/privacy_user_activity_button_margin" android:layout_marginRight="@dimen/privacy_user_activity_button_margin" android:layout_marginBottom="@dimen/privacy_user_activity_button_margin" android:text="@string/common_continue" android:layout_marginStart="@dimen/privacy_user_activity_button_margin" android:layout_marginEnd="@dimen/privacy_user_activity_button_margin" />
+</LinearLayout>

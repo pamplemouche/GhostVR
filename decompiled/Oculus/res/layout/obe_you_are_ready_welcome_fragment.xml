@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/welcome_panel" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_width="@dimen/you_are_ready_logo_width" android:layout_height="@dimen/you_are_ready_logo_height" android:layout_margin="@dimen/you_are_ready_welcome_margin" android:src="@drawable/oculus_logo_small" android:tint="@color/oculus_black_8" />
+        <TextView android:textAppearance="@style/TextAppearance.ExtraLarge" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/obe_you_are_ready_welcome_title" />
+    </LinearLayout>
+    <TextView android:textAppearance="?android:textAppearance" android:layout_gravity="center" android:id="@id/store_panel" android:paddingLeft="@dimen/you_are_ready_welcome_store_left_margin" android:paddingTop="@dimen/you_are_ready_welcome_store_top_offset" android:paddingRight="@dimen/common_horizontal_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/obe_you_are_ready_welcome_desc" android:drawableLeft="@drawable/app_icon" android:drawablePadding="@dimen/you_are_ready_welcome_store_text_margin" />
+</FrameLayout>

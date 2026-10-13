@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.third_party.android.datausagechart.ChartDataUsageView android:id="@id/chart" android:paddingTop="16.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f0700b1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.third_party.android.datausagechart.ChartNetworkSeriesView android:id="@id/original_series" android:background="@color/APKTOOL_DUMMYVAL_0x7f060067" android:layout_width="fill_parent" android:layout_height="fill_parent" app:APKTOOL_DUMMYVAL_0x7f040104="@color/APKTOOL_DUMMYVAL_0x7f060069" app:APKTOOL_DUMMYVAL_0x7f040105="@color/APKTOOL_DUMMYVAL_0x7f060069" app:APKTOOL_DUMMYVAL_0x7f040205="@color/APKTOOL_DUMMYVAL_0x7f060069" />
+    <org.chromium.third_party.android.datausagechart.ChartNetworkSeriesView android:id="@id/compressed_series" android:layout_width="fill_parent" android:layout_height="fill_parent" app:APKTOOL_DUMMYVAL_0x7f040104="@color/APKTOOL_DUMMYVAL_0x7f060068" app:APKTOOL_DUMMYVAL_0x7f040105="@color/APKTOOL_DUMMYVAL_0x7f060068" app:APKTOOL_DUMMYVAL_0x7f040205="@color/APKTOOL_DUMMYVAL_0x7f060068" />
+</org.chromium.third_party.android.datausagechart.ChartDataUsageView>

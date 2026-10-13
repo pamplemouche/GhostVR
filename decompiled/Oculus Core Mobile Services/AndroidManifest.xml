@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.oculus.ocms">
+    <uses-permission android:name="com.oculus.horizon.permission.ACCESS"/>
+    <uses-permission android:name="com.oculus.horizon.auth"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.oculus.installer.PROXY_INSTALL"/>
+    <uses-permission android:name="com.oculus.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.oculus.permission.WRITE_SETTINGS"/>
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="false" android:label="@string/app_name" android:name="com.oculus.ocms.app.OCMSApplication">
+        <meta-data android:name="com.facebook.build_rule" android:value="ocms_release_fbsign"/>
+        <meta-data android:name="com.facebook.package_type" android:value="release"/>
+        <meta-data android:name="com.facebook.build_time" android:value="1586868370000L"/>
+        <meta-data android:name="com.facebook.versioncontrol.branch" android:value="master"/>
+        <meta-data android:name="com.facebook.versioncontrol.revision" android:value="MASTER"/>
+        <service android:exported="false" android:name="com.facebook.analytics2.logger.LollipopUploadService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.facebook.analytics2.logger.AlarmBasedUploadService"/>
+        <receiver android:name="com.oculus.appmanager.downloader.OculusDownloadManagerReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.oculus.appmanager.downloader.OculusDownloadService"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.oculus.appmanager.installer.boot.InstallerServiceBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.oculus.appmanager.installer.notification.InstallerNotificationService"/>
+        <service android:name="com.oculus.appmanager.installer.service.InstallerService"/>
+        <service android:exported="false" android:name="com.oculus.appmanager.installer.service.ConsistencyJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.oculus.appmanager.uninstaller.receivers.UninstallBroadcastReceiver"/>
+        <receiver android:name="com.oculus.auth.receiver.AuthBroadcastReceiver" android:permission="com.oculus.horizon.auth">
+            <intent-filter>
+                <action android:name="com.oculus.auth.BROADCAST_LOGIN"/>
+                <action android:name="com.oculus.auth.BROADCAST_LOGOUT"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.oculus.auth.receiver.LoginHandlersService">
+            <intent-filter>
+                <action android:name="com.oculus.auth.BROADCAST_LOGIN"/>
+                <action android:name="com.oculus.auth.BROADCAST_LOGOUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.oculus.autoupdates.AutoUpdateJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="true" android:name="com.oculus.common.packagescache.PackagesCacheReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.oculus.installer.service.InstallerServiceUriProxy"/>
+        <provider android:authorities="com.oculus.ocms.installer.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.oculus.library.proxy.contract.InstallerProxyFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/installer_file_provider_paths"/>
+        </provider>
+        <service android:exported="false" android:name="com.oculus.mobileconfig.updater.MobileConfigUpdaterJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <provider android:authorities="com.oculus.ocms.library" android:exported="true" android:name="com.oculus.ocms.library.provider.LibraryProvider"/>
+        <provider android:authorities="com.oculus.ocms.publiclibrary" android:exported="true" android:name="com.oculus.ocms.library.provider.PublicLibraryProvider"/>
+        <service android:enabled="true" android:exported="true" android:name="com.oculus.ocms.unifiedtelemetryservice.UnifiedTelemetryService"/>
+    </application>
+</manifest>

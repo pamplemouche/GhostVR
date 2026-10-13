@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView android:layout_width="@dimen/fbconnect_profile_picture_view_width" android:layout_height="wrap_content" card_view:cardCornerRadius="2.0dip" card_view:cardElevation="2.0dip" card_view:cardUseCompatPadding="true" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+        <LinearLayout android:orientation="vertical" android:background="?social_selectableProfilePictureCardBackground" android:paddingLeft="@dimen/fbconnect_profile_picture_view_padding" android:paddingTop="@dimen/fbconnect_profile_picture_view_padding_top" android:paddingRight="@dimen/fbconnect_profile_picture_view_padding" android:paddingBottom="@dimen/fbconnect_profile_picture_view_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.drawee.view.SimpleDraweeView android:layout_gravity="center_horizontal" android:id="@id/profile_picture" android:layout_width="@dimen/fbconnect_profile_picture_view_image_size" android:layout_height="@dimen/fbconnect_profile_picture_view_image_size" android:layout_marginBottom="@dimen/fbconnect_profile_picture_view_image_bottom_margin" card_view:actualImageScaleType="centerCrop" card_view:failureImage="@drawable/social_profile_picture_unset_large" card_view:placeholderImage="@drawable/social_profile_picture_placeholder" card_view:roundAsCircle="true" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/TextAppearance" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/brand_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/fbconnect_profile_picture_view_text_right_margin" android:maxLines="2" android:layout_toLeftOf="@id/brand_logo" android:layout_alignParentLeft="true" android:layout_marginEnd="@dimen/fbconnect_profile_picture_view_text_right_margin" android:layout_toStartOf="@id/brand_logo" android:layout_alignParentStart="true" />
+                <com.facebook.drawee.view.SimpleDraweeView android:id="@id/brand_logo" android:layout_width="@dimen/fbconnect_profile_picture_view_brand_logo_size" android:layout_height="@dimen/fbconnect_profile_picture_view_brand_logo_size" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</merge>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/APKTOOL_DUMMYVAL_0x7f07028d" android:paddingEnd="@dimen/APKTOOL_DUMMYVAL_0x7f07028d"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="16.0dip">
+        <View android:id="@id/circle_background" android:background="@drawable/APKTOOL_DUMMYVAL_0x7f0802e2" android:visibility="invisible" android:layout_width="@dimen/APKTOOL_DUMMYVAL_0x7f070285" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f070285" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f070287" android:layout_marginStart="@dimen/APKTOOL_DUMMYVAL_0x7f070286" android:layout_marginEnd="@dimen/APKTOOL_DUMMYVAL_0x7f070286" />
+        <ImageView android:id="@id/menu_header_image" android:layout_width="@dimen/APKTOOL_DUMMYVAL_0x7f070288" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f070288" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f07028b" android:layout_marginBottom="@dimen/APKTOOL_DUMMYVAL_0x7f070283" android:src="@color/APKTOOL_DUMMYVAL_0x7f060189" android:scaleType="centerInside" android:importantForAccessibility="no" />
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/title_and_url" android:paddingTop="@dimen/APKTOOL_DUMMYVAL_0x7f07028b" android:paddingBottom="@dimen/APKTOOL_DUMMYVAL_0x7f070283" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <org.chromium.ui.widget.TextViewWithLeading android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401bb" android:ellipsize="end" android:id="@id/menu_header_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:textAlignment="viewStart" app:APKTOOL_DUMMYVAL_0x7f040169="@dimen/APKTOOL_DUMMYVAL_0x7f0702fb" />
+        <org.chromium.ui.widget.TextViewWithLeading android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401ba" android:ellipsize="end" android:id="@id/menu_header_url" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:textDirection="ltr" android:textAlignment="viewStart" app:APKTOOL_DUMMYVAL_0x7f040169="@dimen/APKTOOL_DUMMYVAL_0x7f0702fb" />
+    </LinearLayout>
+</LinearLayout>

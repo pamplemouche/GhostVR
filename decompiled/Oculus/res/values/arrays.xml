@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="camera_dialog_items">
+        <item>@string/camera_take_photo</item>
+        <item>@string/camera_choose_from_phone</item>
+        <item>@string/camera_choose_oculus_picture</item>
+    </string-array>
+    <string-array name="commerce_request_refund_reasons">
+        <item>@string/commerce_request_refund_reason_unauthorized_purchase</item>
+        <item>@string/commerce_request_refund_reason_unintentional_purchase</item>
+        <item>@string/commerce_request_refund_reason_uncomfortable_experience</item>
+        <item>@string/commerce_request_refund_reason_defective_issues</item>
+        <item>@string/commerce_request_refund_reason_defective_start</item>
+        <item>@string/commerce_request_refund_reason_incorrect_description</item>
+        <item>@string/commerce_request_refund_reason_double_charged</item>
+        <item>@string/commerce_request_refund_reason_other</item>
+    </string-array>
+    <string-array name="gatekeepers_override_items">
+        <item>@string/gatekeepers_override_to_true</item>
+        <item>@string/gatekeepers_override_to_false</item>
+        <item>@string/gatekeepers_override_clear</item>
+    </string-array>
+    <array name="jobscheduler_analytics2">
+        <item>@id/jobscheduler_analytics2_normal_pri</item>
+        <item>@id/jobscheduler_analytics2_high_pri</item>
+    </array>
+</resources>

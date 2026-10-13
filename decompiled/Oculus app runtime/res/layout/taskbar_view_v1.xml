@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.TaskBarViewV1 style="@style/AnytimeUITheme"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oculus.panelapp.anytimeui.AnytimeUIDeviceInfoBarView android:id="@id/status_bar" style="@style/AnytimeStatusBarTheme">
+        <LinearLayout style="@style/AnytimeStatusBarColumnLeft">
+            <TextView android:id="@id/status_clock_text" android:text="11:30 pm" style="@style/AnytimeStatusClockTheme" />
+            <View android:id="@id/status_do_not_disturb_icon" android:background="@drawable/anytime_status_donotdisturb" android:visibility="gone" style="@style/AnytimeStatusIconTheme" />
+            <View android:id="@id/status_airplane_icon" android:background="@drawable/anytime_status_airplane" android:visibility="gone" style="@style/AnytimeStatusIconTheme" />
+            <View android:id="@id/status_bluetooth_icon" android:background="@drawable/anytime_status_bluetooth_on" android:visibility="gone" style="@style/AnytimeStatusIconTheme" />
+            <View android:id="@id/status_wifi_icon" android:background="@drawable/anytime_status_wifi_off" style="@style/AnytimeStatusIconTheme" />
+            <View android:id="@id/status_microphone_icon" android:background="@drawable/anytime_status_microphone" android:visibility="gone" style="@style/AnytimeStatusIconTheme">
+                <tag android:value="@string/anytime_microphone_icon_tooltip" android:id="@id/tooltip_text" />
+                <tag android:value="tooltip_id=taskbar_microphone_icon_tooltip,tooltip_position=top" android:id="@id/tooltip_data" />
+            </View>
+            <View android:id="@id/status_cell_signal_icon" android:background="@drawable/anytime_status_cell_signal_0" android:visibility="gone" style="@style/AnytimeStatusIconTheme" />
+            <View android:id="@id/status_night_shift_icon" android:background="@drawable/anytime_status_night_shift" android:visibility="gone" style="@style/AnytimeStatusIconTheme">
+                <tag android:value="@string/anytime_night_shift_icon_tooltip" android:id="@id/tooltip_text" />
+                <tag android:value="tooltip_id=taskbar_night_shift_icon_tooltip,tooltip_position=top" android:id="@id/tooltip_data" />
+            </View>
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:gravity="center" android:id="@id/status_lock_screen_icon" android:paddingRight="4.0dip" android:visibility="gone" android:drawableTop="@drawable/anytime_status_lock" style="@style/AnytimeStatusButtonTheme">
+                <tag android:value="@string/anytime_lock_screen_icon_tooltip" android:id="@id/tooltip_text" />
+                <tag android:value="tooltip_id=taskbar_lock_screen_button_tooltip,tooltip_position=top" android:id="@id/tooltip_data" />
+            </com.oculus.panelapp.anytimeui.AnytimeUIButton>
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/status_admin_mode_toggle" android:visibility="gone" android:text="@string/admin_mode_toggle" style="@style/AnytimeStatusEnterpriseButtonTheme">
+                <tag android:value="@string/anytime_lock_admin_mode_button_tooltip" android:id="@id/tooltip_text" />
+                <tag android:value="tooltip_id=taskbar_admin_mode_button_tooltip,tooltip_position=top" android:id="@id/tooltip_data" />
+            </com.oculus.panelapp.anytimeui.AnytimeUIButton>
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/status_guardian_roomscale_button" android:tag="systemux://guardian/switch-roomscale" android:visibility="gone" android:text="@string/guardian_adjust_dialog_roomscale" style="@style/AnytimeStatusButtonTheme">
+                <tag android:value="@string/anytime_guardian_roomscale_button_tooltip" android:id="@id/tooltip_text" />
+                <tag android:value="tooltip_id=taskbar_guardian_roomscale_button_tooltip,tooltip_position=top" android:id="@id/tooltip_data" />
+            </com.oculus.panelapp.anytimeui.AnytimeUIButton>
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/status_guardian_stationary_button" android:tag="systemux://guardian/stationary-setup" android:visibility="gone" android:text="@string/guardian_adjust_dialog_stationary" style="@style/AnytimeStatusButtonTheme">
+                <tag android:value="@string/anytime_guardian_stationary_button_tooltip" android:id="@id/tooltip_text" />
+                <tag android:value="tooltip_id=taskbar_guardian_stationary_button_tooltip,tooltip_position=top" android:id="@id/tooltip_data" />
+            </com.oculus.panelapp.anytimeui.AnytimeUIButton>
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/status_guardian_3dof_button" android:tag="systemux://guardian/toggle-insight" android:visibility="gone" android:text="@string/guardian_insight_disabled" style="@style/AnytimeStatusButtonTheme">
+                <tag android:value="@string/anytime_guardian_3dof_button_tooltip" android:id="@id/tooltip_text" />
+                <tag android:value="tooltip_id=taskbar_guardian_3dof_button_tooltip,tooltip_position=top" android:id="@id/tooltip_data" />
+            </com.oculus.panelapp.anytimeui.AnytimeUIButton>
+        </LinearLayout>
+        <LinearLayout style="@style/AnytimeStatusBarColumn" />
+        <LinearLayout style="@style/AnytimeStatusBarColumnRight">
+            <View android:id="@id/status_debug_panel_icon" android:background="@drawable/anytime_status_debug_panel" android:visibility="gone" style="@style/AnytimeStatusIconTheme" />
+            <View android:id="@id/status_bug_report_icon" android:background="@drawable/anytime_status_bug_report" android:visibility="gone" style="@style/AnytimeStatusIconTheme" />
+            <LinearLayout android:id="@id/status_controller_battery_container" android:visibility="gone" style="@style/AnytimeStatusTooltipOnHoverContainerTheme">
+                <LinearLayout style="@style/AnytimeStatusTooltipOnHoverTheme">
+                    <tag android:value="@string/anytime_controller_battery_tooltip" android:id="@id/tooltip_text" />
+                    <tag android:value="tooltip_id=taskbar_controller_battery_tooltip,tooltip_position=top" android:id="@id/tooltip_data" />
+                    <View android:id="@id/status_controller_battery_icon" android:background="@drawable/anytime_status_controller_battery_charge_alert" style="@style/AnytimeStatusIconWithTooltipTheme" />
+                    <TextView android:id="@id/status_controller_battery_text" android:text="0%" style="@style/AnytimeStatusTextTheme" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@id/status_controller_left_battery_container" android:visibility="gone" style="@style/AnytimeStatusTooltipOnHoverContainerTheme">
+                <LinearLayout android:id="@id/status_controller_left_battery_tooltip" style="@style/AnytimeStatusTooltipOnHoverTheme">
+                    <tag android:value="@string/anytime_left_controller_battery_tooltip" android:id="@id/tooltip_text" />
+                    <tag android:value="tooltip_id=taskbar_left_controller_battery_tooltip,tooltip_position=top" android:id="@id/tooltip_data" />
+                    <View android:id="@id/status_controller_left_battery_icon" android:background="@drawable/anytime_status_controller_battery_charge_alert" android:layout_width="@dimen/controller_battery_icon_width_quest" android:layout_height="@dimen/controller_battery_icon_height_quest" style="@style/AnytimeStatusIconWithTooltipTheme" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@id/status_controller_right_battery_container" android:visibility="gone" style="@style/AnytimeStatusTooltipOnHoverContainerTheme">
+                <LinearLayout android:id="@id/status_controller_right_battery_tooltip" style="@style/AnytimeStatusTooltipOnHoverTheme">
+                    <tag android:value="@string/anytime_right_controller_battery_tooltip" android:id="@id/tooltip_text" />
+                    <tag android:value="tooltip_id=taskbar_right_controller_battery_tooltip,tooltip_position=top" android:id="@id/tooltip_data" />
+                    <View android:id="@id/status_controller_right_battery_icon" android:background="@drawable/anytime_status_controller_battery_charge_alert" android:layout_width="@dimen/controller_battery_icon_width_quest" android:layout_height="@dimen/controller_battery_icon_height_quest" style="@style/AnytimeStatusIconWithTooltipTheme" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@id/status_device_battery_container" style="@style/AnytimeStatusTooltipOnHoverContainerTheme">
+                <LinearLayout android:id="@id/status_device_battery_tooltip" style="@style/AnytimeStatusTooltipOnHoverTheme">
+                    <tag android:value="@string/anytime_headset_battery_tooltip" android:id="@id/tooltip_text" />
+                    <tag android:value="tooltip_id=taskbar_headset_battery_tooltip,tooltip_position=top" android:id="@id/tooltip_data" />
+                    <View android:id="@id/status_device_battery_icon" android:background="@drawable/anytime_status_device_battery_charge_unknown" style="@style/AnytimeStatusIconWithTooltipTheme" />
+                    <TextView android:id="@id/status_device_battery_text" android:layout_marginLeft="3.0dip" android:text="0%" style="@style/AnytimeStatusTextTheme" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.oculus.panelapp.anytimeui.AnytimeUIDeviceInfoBarView>
+    <LinearLayout android:id="@id/menu_bar" style="@style/AnytimeMenuBarTheme">
+        <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/navigation_button" android:tag="navigation_detail_bar" android:text="@string/anytime_navigation_detail_bar" style="@style/AnytimeMenuButtonTheme" />
+        <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/people_button" android:tag="people_detail_bar" android:visibility="gone" android:text="@string/anytime_people_detail_bar" style="@style/AnytimeMenuButtonTheme" />
+        <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/share_button" android:tag="share_detail_bar" android:text="@string/anytime_share_detail_bar" style="@style/AnytimeMenuButtonTheme" />
+        <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/notifs_button" android:tag="notifs_detail_bar" android:text="@string/anytime_notifs_detail_bar" style="@style/AnytimeMenuButtonTheme" />
+        <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/settings_button" android:tag="settings_detail_bar" android:text="@string/anytime_settings_detail_bar" style="@style/AnytimeMenuButtonTheme" />
+    </LinearLayout>
+    <LinearLayout style="@style/AnytimeDetailBarShadow" />
+    <LinearLayout android:id="@id/detail_bar_container" style="@style/AnytimeDetailBarContainer">
+        <com.oculus.panelapp.anytimeui.AnytimeUINavigationButtonBarView android:id="@id/navigation_detail_bar" style="@style/AnytimeDetailBarTheme">
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/navigation_detail_home" android:tag="systemux://home" android:text="@string/anytime_detail_button_home" android:drawableTop="@drawable/anytime_detail_button_home" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/navigation_detail_library" android:tag="systemux://library" android:text="@string/anytime_detail_button_library" android:drawableTop="@drawable/anytime_detail_button_library" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/navigation_detail_store" android:tag="systemux://store" android:text="@string/anytime_detail_button_store" android:drawableTop="@drawable/anytime_detail_button_store" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/navigation_detail_internet" android:tag="systemux://browser" android:text="@string/anytime_detail_button_internet" android:drawableTop="@drawable/anytime_detail_button_internet" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/navigation_detail_gallery" android:tag="systemux://gallery" android:text="@string/anytime_detail_button_gallery" android:drawableTop="@drawable/anytime_detail_button_gallery" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/navigation_detail_tv" android:tag="systemux://tv" android:text="@string/anytime_detail_button_tv" android:drawableTop="@drawable/anytime_detail_button_tv" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/navigation_detail_living_room" android:tag="systemux://living_room" android:text="@string/anytime_detail_button_living_room" android:drawableTop="@drawable/anytime_detail_button_gallery" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/navigation_detail_search" android:tag="systemux://search" android:text="@string/anytime_detail_button_search" android:drawableTop="@drawable/anytime_detail_button_search" style="@style/AnytimeDetailButtonTheme" />
+        </com.oculus.panelapp.anytimeui.AnytimeUINavigationButtonBarView>
+        <com.oculus.panelapp.anytimeui.AnytimeUIPeopleButtonBarView android:id="@id/people_detail_bar" android:visibility="gone" style="@style/AnytimeDetailBarTheme">
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/people_detail_profile" android:tag="systemux://profile" android:text="@string/anytime_detail_button_profile" android:drawableTop="@drawable/anytime_detail_button_profile" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/people_detail_friends" android:tag="systemux://friends" android:text="@string/anytime_detail_button_friends" android:drawableTop="@drawable/anytime_detail_button_friends" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/people_detail_chats" android:tag="systemux://messages" android:visibility="gone" android:text="@string/anytime_detail_button_chats" android:drawableTop="@drawable/anytime_detail_button_chats" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/people_detail_parties" android:tag="systemux://parties" android:text="@string/anytime_detail_button_parties" android:drawableTop="@drawable/anytime_detail_button_parties" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/people_detail_events" android:tag="systemux://events" android:text="@string/anytime_detail_button_events" android:drawableTop="@drawable/anytime_detail_button_events" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/people_detail_blockandreport" android:tag="systemux://blockandreport" android:visibility="gone" android:text="@string/anytime_detail_button_blockandreport" android:drawableTop="@drawable/anytime_detail_button_blockandreport" style="@style/AnytimeDetailButtonTheme" />
+        </com.oculus.panelapp.anytimeui.AnytimeUIPeopleButtonBarView>
+        <com.oculus.panelapp.anytimeui.AnytimeUIShareButtonBarView android:id="@id/share_detail_bar" android:visibility="gone" style="@style/AnytimeDetailBarTheme">
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/share_detail_localstream" android:tag="systemux://dialog/local-stream-start-from-device" android:text="@string/anytime_detail_button_localstream" android:drawableTop="@drawable/anytime_detail_button_localstream" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/share_detail_localstream_stop" android:tag="systemux://dialog/local-stream-stop-from-device" android:visibility="gone" android:text="@string/anytime_detail_button_localstream_stop" android:drawableTop="@drawable/anytime_detail_button_localstream_stop" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/share_detail_livestream" android:tag="systemux://livestreaming" android:text="@string/anytime_detail_button_livestream" android:drawableTop="@drawable/anytime_detail_button_livestream" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/share_detail_livestream_stop" android:tag="systemux://livestreaming" android:visibility="gone" android:text="@string/anytime_detail_button_livestream_stop" android:drawableTop="@drawable/anytime_detail_button_livestream_stop" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/share_detail_videocapture" android:text="@string/anytime_detail_button_videocapture" android:drawableTop="@drawable/anytime_detail_button_videocapture" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/share_detail_videocapture_stop" android:visibility="gone" android:text="@string/anytime_detail_button_videocapture_stop" android:drawableTop="@drawable/anytime_detail_button_videocapture_stop" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/share_detail_screenshot" android:text="@string/anytime_detail_button_screenshot" android:drawableTop="@drawable/anytime_detail_button_screenshot" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/share_detail_cameraroll" android:tag="systemux://cameraroll" android:text="@string/anytime_detail_button_cameraroll" android:drawableTop="@drawable/anytime_detail_button_cameraroll" style="@style/AnytimeDetailButtonTheme" />
+        </com.oculus.panelapp.anytimeui.AnytimeUIShareButtonBarView>
+        <com.oculus.panelapp.anytimeui.AnytimeUINotifsBarView android:id="@id/notifs_detail_bar" android:visibility="gone" style="@style/AnytimeDetailBarTheme" />
+        <com.oculus.panelapp.anytimeui.AnytimeUISettingsButtonBarView android:id="@id/settings_detail_bar" android:visibility="gone" style="@style/AnytimeDetailBarTheme">
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/settings_detail_managed_launcher" android:tag="systemux://managed_launcher" android:visibility="gone" android:text="@string/anytime_detail_button_home" android:drawableTop="@drawable/anytime_detail_button_home" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/settings_detail_brightness" android:visibility="gone" android:text="@string/anytime_detail_button_brightness" android:drawableTop="@drawable/anytime_detail_button_brightness" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/settings_detail_volume" android:visibility="gone" android:text="@string/anytime_detail_button_volume" android:drawableTop="@drawable/anytime_detail_button_volume" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/settings_detail_wifi" android:tag="systemux://wifi" android:visibility="gone" android:text="@string/anytime_detail_button_wifi" android:drawableTop="@drawable/anytime_detail_button_wifi" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/settings_detail_recenter" android:visibility="gone" android:text="@string/anytime_detail_button_recenter" android:drawableTop="@drawable/anytime_detail_button_recenter" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/settings_detail_guardian_setup" android:tag="systemux://guardian/guardian_adjust" android:visibility="gone" android:text="@string/anytime_detail_button_guardian_setup" android:drawableTop="@drawable/anytime_detail_button_guardian" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/settings_detail_passthrough" android:tag="systemux://guardian/guardian_adjust" android:visibility="gone" android:text="@string/anytime_detail_button_passthrough" android:drawableTop="@drawable/anytime_detail_button_passthrough" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/settings_detail_enterprise_admin_pin" android:tag="systemux://enterprise_keypad" android:visibility="gone" android:text="@string/anytime_detail_button_all_settings" android:drawableTop="@drawable/anytime_detail_button_allsettings" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/settings_detail_all" android:tag="systemux://settings" android:visibility="gone" android:text="@string/anytime_detail_button_all_settings" android:drawableTop="@drawable/anytime_detail_button_allsettings" style="@style/AnytimeDetailButtonTheme" />
+            <com.oculus.panelapp.anytimeui.AnytimeUIButton android:id="@id/settings_detail_dogfooding" android:visibility="gone" android:text="@string/anytime_detail_button_dogfooding" android:drawableTop="@drawable/anytime_detail_button_dogfooding" style="@style/AnytimeDetailButtonTheme" />
+            <LinearLayout android:id="@id/volume_slider_controls" android:visibility="gone" style="@style/AnytimeSliderControlsTheme">
+                <TextView android:text="0" style="@style/AnytimeSliderText" />
+                <SeekBar android:id="@id/volume_slider_controls_seekbar" style="@style/AnytimeSettingsSeekBarTheme" />
+                <TextView android:text="100" style="@style/AnytimeSliderText" />
+                <Space style="@style/AnytimeMenuBarSpacerTheme" />
+                <com.oculus.vrshell.panels.views.ShellButton android:id="@id/close_slider_button" style="@style/AnytimeCloseSliderButtonTheme" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/brightness_slider_controls" android:visibility="gone" style="@style/AnytimeSliderControlsTheme">
+                <TextView android:text="0" style="@style/AnytimeSliderText" />
+                <SeekBar android:id="@id/brightness_slider_controls_seekbar" style="@style/AnytimeSettingsSeekBarTheme" />
+                <TextView android:text="100" style="@style/AnytimeSliderText" />
+                <com.oculus.vrshell.panels.views.ShellButton android:id="@id/close_slider_button" style="@style/AnytimeCloseSliderButtonTheme" />
+            </LinearLayout>
+        </com.oculus.panelapp.anytimeui.AnytimeUISettingsButtonBarView>
+    </LinearLayout>
+    <com.oculus.panelapp.anytimeui.AnytimeUISocialIconsBarView android:id="@id/social_icons_bar" android:visibility="gone" style="@style/AnytimeSocialIconsBarViewTheme">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/social_icons_social_panel" android:visibility="gone" android:src="@drawable/ic_social_panel_icon" style="@style/AnytimeSocialIconTheme" />
+            <ImageView android:id="@id/social_icons_report" android:visibility="gone" android:src="@drawable/ic_social_block_deselected" style="@style/AnytimeSocialIconTheme" />
+            <ImageView android:id="@id/social_icons_invite" android:visibility="gone" android:src="@drawable/ic_social_invite_deselected" style="@style/AnytimeSocialIconTheme" />
+            <ImageView android:id="@id/social_icons_self_profile" style="@style/AnytimeSocialIconTheme" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/social_icons_other_profiles" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </com.oculus.panelapp.anytimeui.AnytimeUISocialIconsBarView>
+    <com.oculus.panelapp.anytimeui.AnytimeUIMinimizedBarView android:id="@id/minimized_view" android:visibility="gone" style="@style/AnytimeMinimizedBarViewTheme">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/minimized_local_stream_icon" android:src="@drawable/ic_casting_active_minimized_aui" style="@style/AnytimeMinimizedIconTheme" />
+        </LinearLayout>
+    </com.oculus.panelapp.anytimeui.AnytimeUIMinimizedBarView>
+</com.oculus.panelapp.anytimeui.TaskBarViewV1>

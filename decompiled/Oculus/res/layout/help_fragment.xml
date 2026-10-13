@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/help_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="60.0dip" android:src="@drawable/help_icon" />
+    <TextView android:textSize="14.0sp" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:text="@string/help_something_wrong" />
+    <TextView android:textSize="14.0sp" android:textColor="@color/oculus_black_6" android:gravity="top" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_marginTop="4.0dip" android:text="@string/help_here_to_help" android:layout_weight="1.0" />
+    <Button android:id="@id/customer_support_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="40.0dip" android:text="@string/help_visit_customer_support" />
+</LinearLayout>

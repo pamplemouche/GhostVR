@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abc_action_bar_home_description">"Revenir à l'accueil"</string>
+    <string name="abc_action_bar_up_description">Revenir en haut de la page</string>
+    <string name="abc_action_menu_overflow_description">Autres options</string>
+    <string name="abc_action_mode_done">OK</string>
+    <string name="abc_activity_chooser_view_see_all">Tout afficher</string>
+    <string name="abc_activitychooserview_choose_application">Sélectionner une application</string>
+    <string name="abc_capital_off">DÉSACTIVÉ</string>
+    <string name="abc_capital_on">ACTIVÉ</string>
+    <string name="abc_menu_delete_shortcut_label">supprimer</string>
+    <string name="abc_menu_enter_shortcut_label">entrée</string>
+    <string name="abc_menu_function_shortcut_label">Fonction+</string>
+    <string name="abc_menu_meta_shortcut_label">Méta+</string>
+    <string name="abc_menu_shift_shortcut_label">Maj+</string>
+    <string name="abc_menu_space_shortcut_label">espace</string>
+    <string name="abc_search_hint">Rechercher…</string>
+    <string name="abc_searchview_description_clear">Effacer la requête</string>
+    <string name="abc_searchview_description_query">Requête de recherche</string>
+    <string name="abc_searchview_description_search">Rechercher</string>
+    <string name="abc_searchview_description_submit">Envoyer la requête</string>
+    <string name="abc_searchview_description_voice">Recherche vocale</string>
+    <string name="abc_shareactionprovider_share_with">Partager avec</string>
+    <string name="abc_shareactionprovider_share_with_application">Partager avec %s</string>
+    <string name="abc_toolbar_collapse_description">Réduire</string>
+    <string name="notifications_download_canceled_message">Téléchargement annulé pour « %1$s »</string>
+    <string name="notifications_download_canceled_title">Téléchargement annulé</string>
+    <string name="notifications_download_failed_message">Impossible de télécharger « %1$s »</string>
+    <string name="notifications_download_failed_title">Échec du téléchargement</string>
+    <string name="notifications_download_in_progress_message">Téléchargement de %1$s...</string>
+    <string name="notifications_downloading_and_installing_apps">Téléchargement et installation des apps...</string>
+    <string name="notifications_head_install_failed_message">Échec de l’installation</string>
+    <string name="notifications_head_installed_message">Installé</string>
+    <string name="notifications_head_installing_message">Installation</string>
+    <string name="notifications_install_failed_message">Impossible d’installer « %1$s »</string>
+    <string name="notifications_install_failed_title">Échec de l’installation</string>
+    <string name="notifications_install_in_progress_message">Installation de %1$s...</string>
+    <string name="notifications_install_in_progress_title">Installation en cours</string>
+    <string name="notifications_install_succeeded_message">%1$s a bien été installée dans votre bibliothèque.</string>
+    <string name="notifications_install_succeeded_title">Installation terminée</string>
+    <string name="notifications_update_succeeded_message">%1$s a été mise à jour</string>
+    <string name="notifications_update_succeeded_title">Mise à jour réussie</string>
+    <string name="obb_display_title">%1$s (fichier d’extension)</string>
+    <string name="search_menu_title">Rechercher</string>
+</resources>

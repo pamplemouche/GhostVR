@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.modaldialog.ModalDialogView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:APKTOOL_DUMMYVAL_0x7f040183="@dimen/APKTOOL_DUMMYVAL_0x7f070022" app:APKTOOL_DUMMYVAL_0x7f040184="@dimen/APKTOOL_DUMMYVAL_0x7f070023"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/title_container" layout="@layout/APKTOOL_DUMMYVAL_0x7f0e0108" />
+    <org.chromium.chrome.browser.ui.widget.FadingEdgeScrollView android:id="@id/modal_dialog_scroll_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:fadeScrollbars="false">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/scrollable_title_container" android:visibility="gone" layout="@layout/APKTOOL_DUMMYVAL_0x7f0e0108" />
+            <org.chromium.ui.widget.TextViewWithLeading android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401b7" android:id="@id/message" app:APKTOOL_DUMMYVAL_0x7f040169="20.0sp" style="@style/APKTOOL_DUMMYVAL_0x7f140003" />
+        </LinearLayout>
+    </org.chromium.chrome.browser.ui.widget.FadingEdgeScrollView>
+    <FrameLayout android:id="@id/custom" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <org.chromium.chrome.browser.ui.widget.DualControlLayout android:id="@id/button_bar" android:paddingTop="?APKTOOL_DUMMYVAL_0x7f0400d9" android:paddingBottom="?APKTOOL_DUMMYVAL_0x7f0400d9" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="?APKTOOL_DUMMYVAL_0x7f0400d8" android:paddingEnd="?APKTOOL_DUMMYVAL_0x7f0400d8" app:APKTOOL_DUMMYVAL_0x7f040051="end" app:APKTOOL_DUMMYVAL_0x7f0401fd="@dimen/APKTOOL_DUMMYVAL_0x7f07006f">
+        <org.chromium.ui.widget.ButtonCompat android:id="@id/positive_button" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?APKTOOL_DUMMYVAL_0x7f040055" />
+        <org.chromium.ui.widget.ButtonCompat android:id="@id/negative_button" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?APKTOOL_DUMMYVAL_0x7f040053" />
+    </org.chromium.chrome.browser.ui.widget.DualControlLayout>
+</org.chromium.chrome.browser.modaldialog.ModalDialogView>

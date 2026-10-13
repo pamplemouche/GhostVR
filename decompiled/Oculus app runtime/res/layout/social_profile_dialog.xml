@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.dialogs.SocialProfileDialog android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vrshell="http://schemas.android.com/apk/res-auto">
+    <com.oculus.vrshell.panels.views.SystemDialogStandardLayout android:id="@id/social_profile_dialog_layout" vrshell:acceptText="@string/social_profile_dialog_button_edit_avatar" vrshell:cancelText="@string/social_profile_dialog_button_close" vrshell:customLayout="@layout/social_profile_custom_layout" vrshell:icon="@drawable/ic_parties" vrshell:titleText="@string/social_profile_dialog_title" style="@style/SocialProfileCard" />
+</com.oculus.panelapp.anytimeui.dialogs.SocialProfileDialog>

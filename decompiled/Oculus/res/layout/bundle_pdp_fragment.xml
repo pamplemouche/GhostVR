@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/swipe_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:oculus="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:id="@id/loading_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.oculus.horizon.widget.EmptyErrorView android:layout_gravity="center" android:id="@id/empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" oculus:buttonText="@string/common_go_to_store" oculus:descriptionText="@string/product_error_description" oculus:iconSrc="@drawable/error_icon" oculus:titleText="@string/common_error_something_went_wrong" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ScrollView android:id="@id/content_area" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/footer_bar">
+                <LinearLayout android:orientation="vertical" android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <androidx.percentlayout.widget.PercentFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.oculus.horizon.widget.MediaView android:id="@id/media_view" android:layout_width="0.0dip" android:layout_height="0.0dip" oculus:layout_aspectRatio="@dimen/common_aspect_ratio_16_9" oculus:layout_widthPercent="@dimen/common_width_percent_100" />
+                    </androidx.percentlayout.widget.PercentFrameLayout>
+                    <Button android:id="@id/action_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginTop="@dimen/pdp_vertical_padding_small" android:layout_marginRight="@dimen/common_horizontal_padding" android:text="@string/common_install" />
+                    <TextView android:gravity="center" android:id="@id/store_credit_balance_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginTop="6.0dip" android:layout_marginRight="@dimen/common_horizontal_padding" style="@style/TextAppearance.Small.SemiBold" />
+                    <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/dynamic_pricing_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginTop="@dimen/pdp_vertical_padding_small" android:layout_marginRight="@dimen/common_horizontal_padding" android:text="@string/dynamic_pricing_text" />
+                    <com.oculus.horizon.pdp.widget.ProgressView android:id="@id/progress_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginTop="@dimen/pdp_vertical_padding_small" android:layout_marginRight="@dimen/common_horizontal_padding" />
+                    <include android:id="@id/countdown_timer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/common_vertical_padding" layout="@layout/pdp_countdown_timer_layout" />
+                    <com.oculus.horizon.pdp.widget.ExpandableTextView android:id="@id/description_container" android:paddingLeft="@dimen/common_horizontal_padding" android:paddingTop="@dimen/pdp_vertical_padding_small" android:paddingRight="@dimen/common_horizontal_padding" android:paddingBottom="@dimen/pdp_vertical_padding_small" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="4">
+                        <TextView android:id="@android:id/text1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="2.0sp" style="@style/TextAppearance" />
+                        <ImageView android:layout_gravity="bottom|center" android:id="@android:id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:src="@drawable/pdp_expand_arrow" />
+                    </com.oculus.horizon.pdp.widget.ExpandableTextView>
+                    <TextView android:textAppearance="@style/TextAppearance.Title" android:gravity="center_vertical" android:id="@id/number_of_experiences" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginTop="@dimen/pdp_vertical_padding_small" />
+                    <include android:id="@id/bundle_app_count_header" layout="@layout/bundle_item_header_view" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/item_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </ScrollView>
+            <com.oculus.horizon.pdp.widget.MessageBar android:id="@id/footer_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </FrameLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

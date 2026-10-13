@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@id/normal_menu_group" android:visible="false">
+        <item android:icon="@drawable/APKTOOL_DUMMYVAL_0x7f0802bd" android:id="@id/settings_menu_id" android:visible="false" android:title="@string/APKTOOL_DUMMYVAL_0x7f1304f2" app:APKTOOL_DUMMYVAL_0x7f040137="@color/APKTOOL_DUMMYVAL_0x7f060169" app:APKTOOL_DUMMYVAL_0x7f0401ea="ifRoom" />
+        <item android:icon="@drawable/APKTOOL_DUMMYVAL_0x7f080211" android:id="@id/search_menu_id" android:visible="false" android:title="@string/search" app:APKTOOL_DUMMYVAL_0x7f040137="@color/APKTOOL_DUMMYVAL_0x7f060169" app:APKTOOL_DUMMYVAL_0x7f0401ea="ifRoom" />
+        <item android:icon="@drawable/APKTOOL_DUMMYVAL_0x7f08009d" android:id="@id/close_menu_id" android:title="@string/close" app:APKTOOL_DUMMYVAL_0x7f040137="@color/APKTOOL_DUMMYVAL_0x7f060169" app:APKTOOL_DUMMYVAL_0x7f0401ea="ifRoom" />
+    </group>
+    <group android:id="@id/selection_mode_menu_group" android:visible="false">
+        <item android:icon="@drawable/APKTOOL_DUMMYVAL_0x7f080213" android:id="@id/selection_mode_share_menu_id" android:title="@string/APKTOOL_DUMMYVAL_0x7f130575" app:APKTOOL_DUMMYVAL_0x7f040137="@color/APKTOOL_DUMMYVAL_0x7f06018a" app:APKTOOL_DUMMYVAL_0x7f0401ea="ifRoom" />
+        <item android:icon="@drawable/APKTOOL_DUMMYVAL_0x7f080113" android:id="@id/selection_mode_delete_menu_id" android:title="@string/APKTOOL_DUMMYVAL_0x7f130298" app:APKTOOL_DUMMYVAL_0x7f040137="@color/APKTOOL_DUMMYVAL_0x7f06018a" app:APKTOOL_DUMMYVAL_0x7f0401ea="ifRoom" />
+    </group>
+</menu>

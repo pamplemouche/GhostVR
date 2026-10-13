@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.ntp.snippets.SectionHeaderView android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/APKTOOL_DUMMYVAL_0x7f0702aa" android:paddingStart="@dimen/APKTOOL_DUMMYVAL_0x7f070074" android:paddingEnd="@dimen/APKTOOL_DUMMYVAL_0x7f070074"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401ba" android:id="@id/header_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:textAlignment="viewStart" />
+    <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401cb" android:id="@id/header_status" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</org.chromium.chrome.browser.ntp.snippets.SectionHeaderView>

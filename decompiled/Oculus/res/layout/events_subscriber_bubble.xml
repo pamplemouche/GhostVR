@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.drawee.view.SimpleDraweeView android:id="@id/subscriber_avatar" android:layout_width="@dimen/events_subscriber_avatar_bubble_size" android:layout_height="@dimen/events_subscriber_avatar_bubble_size" app:failureImage="@drawable/no_profile_image_large_active" app:placeholderImage="@drawable/no_profile_image_large_active" app:roundAsCircle="true" app:roundingBorderColor="@android:color/white" app:roundingBorderWidth="1.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

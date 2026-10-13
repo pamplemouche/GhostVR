@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/write_review" android:visible="false" android:title="@string/library_write_review" />
+    <item android:id="@id/details" android:title="@string/library_details" />
+    <item android:id="@id/install" android:visible="false" android:title="@string/library_install" />
+    <item android:id="@id/update" android:visible="false" android:title="@string/library_update" />
+    <item android:id="@id/library_move_item" android:visible="false" android:title="@string/library_move_item_sd_card" />
+    <item android:id="@id/uninstall" android:visible="false" android:title="@string/library_uninstall" />
+</menu>

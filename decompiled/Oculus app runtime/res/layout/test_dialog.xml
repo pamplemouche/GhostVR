@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.dialogs.TestDialog android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/OTABlockingDialogContainerMain"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/test_dialog_text" android:text="Test Dialog Text" style="@style/OTABlockingDialogTitleText" />
+        <LinearLayout style="@style/DialogButtonBar">
+            <com.oculus.vrshell.panels.views.ShellButton android:id="@id/test_dialog_btn1" android:text="Continue" android:textIsSelectable="false" style="@style/DialogButtonPrimary" />
+        </LinearLayout>
+    </LinearLayout>
+</com.oculus.panelapp.anytimeui.dialogs.TestDialog>

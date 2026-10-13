@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.chrome.browser.coordinator.CoordinatorLayoutForPointer android:id="@id/coordinator" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <include layout="@layout/compositor_view_holder" />
+        <FrameLayout android:id="@id/overview_list_layout_holder" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <org.chromium.chrome.browser.snackbar.BottomContainer android:layout_gravity="start|bottom|center" android:id="@id/bottom_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:layout_gravity="start|bottom|center" android:id="@id/keyboard_accessory_stub" android:inflatedId="@id/keyboard_accessory" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f07016c" />
+        <ViewStub android:layout_gravity="start|bottom|center" android:id="@id/keyboard_accessory_sheet_stub" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f070174" />
+        <ViewStub android:layout_gravity="start|bottom|center" android:id="@id/bottombar_stub" android:layout="@layout/APKTOOL_DUMMYVAL_0x7f0e0072" android:inflatedId="@id/bottombar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" />
+        <ViewStub android:id="@id/tab_modal_dialog_container_stub" android:inflatedId="@id/tab_modal_dialog_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:id="@id/tab_modal_dialog_container_sibling_view" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+        <ViewStub android:id="@id/omnibox_results_container_stub" android:layout="@layout/omnibox_results_container" android:inflatedId="@id/omnibox_results_container" android:layout_width="fill_parent" android:layout_height="wrap_content" app:APKTOOL_DUMMYVAL_0x7f040157="@id/control_container" />
+        <View android:id="@id/action_bar_black_background" android:background="@android:color/black" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f07031c" />
+        <ViewStub android:layout_gravity="start|bottom|center" android:id="@id/bottom_controls_stub" android:layout="@layout/APKTOOL_DUMMYVAL_0x7f0e0047" android:inflatedId="@id/bottom_controls" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/control_container_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/status_indicator_stub" android:layout="@layout/APKTOOL_DUMMYVAL_0x7f0e01a5" android:inflatedId="@id/status_indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/empty_container_stub" android:layout="@layout/APKTOOL_DUMMYVAL_0x7f0e00af" android:inflatedId="@id/empty_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </org.chromium.chrome.browser.coordinator.CoordinatorLayoutForPointer>
+    <View android:layout_gravity="start|bottom|center" android:id="@id/menu_anchor_stub" android:layout_width="0.0px" android:layout_height="0.0px" />
+    <View android:layout_gravity="bottom" android:id="@id/navigation_popup_anchor_stub" android:layout_width="fill_parent" android:layout_height="0.0px" />
+</merge>

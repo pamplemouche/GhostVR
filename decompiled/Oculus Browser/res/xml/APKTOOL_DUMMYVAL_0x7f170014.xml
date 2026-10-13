@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <org.chromium.chrome.browser.preferences.ChromeSwitchPreference android:title="@string/APKTOOL_DUMMYVAL_0x7f130431" android:key="content_suggestions" android:summary="@string/APKTOOL_DUMMYVAL_0x7f13042f" />
+    <Preference android:title="@string/APKTOOL_DUMMYVAL_0x7f130432" android:key="from_websites" android:fragment="org.chromium.chrome.browser.preferences.website.SingleCategoryPreferences" />
+</PreferenceScreen>

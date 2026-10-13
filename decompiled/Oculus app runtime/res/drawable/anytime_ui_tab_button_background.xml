@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:state_hovered="true">
+        <layer-list>
+            <item android:gravity="bottom" android:left="34.0dip" android:right="34.0dip" android:bottom="1.0dip">
+                <shape>
+                    <size android:height="2.0dip" />
+                    <solid android:color="@color/blue_3" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_selected="true" android:state_pressed="true" android:left="34.0dip" android:right="34.0dip">
+        <layer-list>
+            <item android:gravity="bottom" android:bottom="1.0dip">
+                <shape>
+                    <size android:height="2.0dip" />
+                    <solid android:color="@color/blue_3" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_hovered="true">
+        <layer-list>
+            <item android:gravity="bottom" android:left="34.0dip" android:right="34.0dip" android:bottom="1.0dip">
+                <shape>
+                    <size android:height="0.0dip" />
+                    <solid android:color="@color/blue_3" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:gravity="bottom" android:left="34.0dip" android:right="34.0dip" android:bottom="1.0px">
+                <shape>
+                    <size android:height="2.0dip" />
+                    <solid android:color="@color/blue_3" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_selected="true">
+        <layer-list>
+            <item android:gravity="bottom" android:left="34.0dip" android:right="34.0dip" android:bottom="1.0dip">
+                <shape>
+                    <size android:height="2.0dip" />
+                    <solid android:color="@color/blue_3" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item android:gravity="bottom" android:left="34.0dip" android:right="34.0dip" android:bottom="1.0dip">
+                <shape>
+                    <size android:height="0.0dip" />
+                    <solid android:color="@color/blue_3" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

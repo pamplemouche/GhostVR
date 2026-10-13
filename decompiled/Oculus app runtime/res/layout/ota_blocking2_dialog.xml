@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.dialogs.OTABlocking2Dialog android:id="@id/ota_blocking2_dialog" android:layout_width="600.0px" android:layout_height="wrap_content" style="@style/OTABlockingDialogContainerMainWithIcon"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vrshell="http://schemas.android.com/apk/res-auto">
+    <com.oculus.vrshell.panels.views.SystemDialog android:gravity="center" vrshell:icon="@drawable/ic_system_dialog_pair_headset_icon" style="@style/SystemDialog">
+        <LinearLayout android:layout_width="520.0px" style="@style/OTABlockingDialogContainerCenter">
+            <TextView android:layout_marginTop="36.0px" android:text="@string/ota_blocking2_dialog_title_updated" style="@style/OTABlockingDialogTitleTextBold" />
+            <TextView android:layout_marginTop="20.0px" android:text="@string/ota_blocking2_dialog_description_updated" style="@style/OTABlockingDialogDescriptionText" />
+            <com.oculus.vrshell.panels.views.ShellProgressBarView android:id="@id/ota_blocking2_dialog_progress_bar" android:layout_width="332.0px" android:layout_height="10.0px" android:layout_marginTop="48.0px" />
+            <TextView android:layout_marginTop="12.0px" android:layout_marginBottom="28.0px" android:text="@string/ota_blocking2_dialog_progress_bar_downloading" style="@style/OTABlockingDialogProgressBarText" />
+        </LinearLayout>
+    </com.oculus.vrshell.panels.views.SystemDialog>
+</com.oculus.panelapp.anytimeui.dialogs.OTABlocking2Dialog>

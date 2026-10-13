@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/search_filter_selector" android:paddingLeft="@dimen/store_browse_all_top_nav_padding_left" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Oculus.Widget.Store.FilterDropdown">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/store_search_filter_selector_title" style="@style/Oculus.Widget.Store.FilterDescription" />
+        <TextView android:id="@id/search_filter_selector_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/store_genre_selector_all" style="@style/TextAppearance.FilterDropdown" />
+    </LinearLayout>
+</LinearLayout>

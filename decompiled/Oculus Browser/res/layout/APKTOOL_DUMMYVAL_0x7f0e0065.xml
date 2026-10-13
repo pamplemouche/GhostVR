@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f140176"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/card_contents" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/text_layout" android:padding="@dimen/APKTOOL_DUMMYVAL_0x7f070074" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignWithParentIfMissing="true" android:layout_toStartOf="@id/article_thumbnail" android:layout_alignParentStart="true">
+            <org.chromium.ui.widget.TextViewWithLeading android:id="@id/article_headline" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f140177" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/publisher_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f0702ad">
+                <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401ba" android:ellipsize="end" android:id="@id/article_publisher" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:drawablePadding="8.0dip" android:layout_weight="1.0" android:textDirection="locale" />
+                <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401ba" android:id="@id/article_age" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:textDirection="locale" />
+                <ImageView android:id="@id/offline_icon" android:visibility="gone" android:layout_width="@dimen/APKTOOL_DUMMYVAL_0x7f0702ab" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f0702ab" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f1300ed" android:layout_marginStart="6.0dip" app:APKTOOL_DUMMYVAL_0x7f0401fb="@drawable/APKTOOL_DUMMYVAL_0x7f0801fc" />
+                <ImageView android:id="@id/video_badge" android:visibility="gone" android:layout_width="@dimen/APKTOOL_DUMMYVAL_0x7f0702ab" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f0702ab" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f1300fb" android:layout_marginStart="6.0dip" app:APKTOOL_DUMMYVAL_0x7f0401fb="@drawable/APKTOOL_DUMMYVAL_0x7f08020b" />
+            </LinearLayout>
+        </LinearLayout>
+        <org.chromium.ui.widget.ChromeImageView android:id="@id/article_thumbnail" android:layout_width="@dimen/APKTOOL_DUMMYVAL_0x7f0702ae" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f0702ae" android:src="@null" android:scaleType="centerCrop" android:layout_alignParentTop="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <ImageView android:id="@id/corner_top" android:layout_width="@dimen/APKTOOL_DUMMYVAL_0x7f0700bd" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f0700bd" android:layout_alignTop="@id/card_contents" android:scaleX="@integer/APKTOOL_DUMMYVAL_0x7f0c0003" android:layout_alignParentEnd="true" app:APKTOOL_DUMMYVAL_0x7f0401fb="@drawable/APKTOOL_DUMMYVAL_0x7f0800ca" />
+    <ImageView android:id="@id/corner_bottom" android:layout_width="@dimen/APKTOOL_DUMMYVAL_0x7f0700bd" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f0700bd" android:layout_alignBottom="@id/card_contents" android:scaleX="@integer/APKTOOL_DUMMYVAL_0x7f0c0003" android:layout_alignParentEnd="true" app:APKTOOL_DUMMYVAL_0x7f0401fb="@drawable/APKTOOL_DUMMYVAL_0x7f0800c9" />
+</RelativeLayout>

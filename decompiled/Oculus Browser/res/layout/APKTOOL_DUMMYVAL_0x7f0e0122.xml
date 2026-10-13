@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.ntp.IncognitoNewTabPageView android:id="@id/ntp_content" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/APKTOOL_DUMMYVAL_0x7f1300ea"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.chrome.browser.ntp.NewTabPageScrollView android:id="@id/ntp_scrollview" android:background="@color/APKTOOL_DUMMYVAL_0x7f06013f" android:fadingEdgeLength="9.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="false" android:requiresFadingEdge="vertical">
+        <LinearLayout android:gravity="start" android:orientation="vertical" android:id="@id/new_tab_incognito_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/APKTOOL_DUMMYVAL_0x7f070196">
+            <ImageView android:id="@id/new_tab_incognito_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f080236" app:APKTOOL_DUMMYVAL_0x7f040256="@color/APKTOOL_DUMMYVAL_0x7f060084" />
+            <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f14021e" android:id="@id/new_tab_incognito_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/APKTOOL_DUMMYVAL_0x7f130410" />
+            <org.chromium.ui.widget.TextViewWithClickableSpans android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f14021c" android:id="@id/new_tab_incognito_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/APKTOOL_DUMMYVAL_0x7f070195" />
+            <LinearLayout android:gravity="start" android:orientation="horizontal" android:id="@id/new_tab_incognito_bulletpoints_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f14021c" android:id="@id/new_tab_incognito_features" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/APKTOOL_DUMMYVAL_0x7f070195" />
+                <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f14021c" android:id="@id/new_tab_incognito_warning" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/APKTOOL_DUMMYVAL_0x7f070195" />
+            </LinearLayout>
+            <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401f0" android:id="@id/learn_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/learn_more" android:lineSpacingExtra="@dimen/APKTOOL_DUMMYVAL_0x7f070195" />
+        </LinearLayout>
+    </org.chromium.chrome.browser.ntp.NewTabPageScrollView>
+</org.chromium.chrome.browser.ntp.IncognitoNewTabPageView>

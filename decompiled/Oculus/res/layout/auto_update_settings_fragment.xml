@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_advanced_apps_label" style="@style/Oculus.Widget.Light.Setting.Label" />
+    <com.oculus.horizon.widget.SwitchSetting android:id="@id/auto_updates_toggle" android:layout_width="fill_parent" android:layout_height="wrap_content" app:title="@string/settings_auto_updates" style="@style/Oculus.Widget.Light.Setting" />
+</LinearLayout>

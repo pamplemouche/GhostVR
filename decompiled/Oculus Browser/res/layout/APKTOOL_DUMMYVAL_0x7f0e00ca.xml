@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.firstrun.FirstRunView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/APKTOOL_DUMMYVAL_0x7f07013e" android:fillViewport="true">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/fre_main_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/title" android:text="@string/APKTOOL_DUMMYVAL_0x7f130325" style="@style/APKTOOL_DUMMYVAL_0x7f140102" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/fre_image_and_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f070144">
+                <ImageView android:id="@id/image" android:layout_width="wrap_content" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f070141" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f0800eb" />
+                <LinearLayout android:orientation="vertical" android:id="@id/fre_content_wrapper" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f070144" android:layout_weight="1.0" android:layout_marginStart="@dimen/APKTOOL_DUMMYVAL_0x7f070140" android:layout_marginEnd="@dimen/APKTOOL_DUMMYVAL_0x7f070140">
+                    <org.chromium.ui.widget.TextViewWithClickableSpans android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401b8" android:gravity="center" android:id="@id/tos_and_privacy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/APKTOOL_DUMMYVAL_0x7f070144" android:lineSpacingMultiplier="1.4" />
+                    <CheckBox android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401b8" android:id="@id/send_report_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/APKTOOL_DUMMYVAL_0x7f130322" android:lineSpacingMultiplier="1.4" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <org.chromium.ui.widget.ButtonCompat android:layout_gravity="bottom|center" android:id="@id/terms_accept" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="@string/APKTOOL_DUMMYVAL_0x7f130320" android:paddingStart="@dimen/APKTOOL_DUMMYVAL_0x7f07013f" android:paddingEnd="@dimen/APKTOOL_DUMMYVAL_0x7f07013f" style="@style/APKTOOL_DUMMYVAL_0x7f1400ff" />
+    <ProgressBar android:layout_gravity="bottom|center" android:id="@id/progress_spinner" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginBottom="22.0dip" style="@style/APKTOOL_DUMMYVAL_0x7f1402de" />
+</org.chromium.chrome.browser.firstrun.FirstRunView>

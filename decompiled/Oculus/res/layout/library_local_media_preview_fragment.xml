@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/oculus_black_10" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.facebook.drawee.view.SimpleDraweeView android:id="@id/image_preview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:actualImageScaleType="fitCenter" />
+        <FrameLayout android:id="@id/video_preview_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+            <VideoView android:id="@id/video_preview" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:id="@id/bottom_sheet" android:paddingLeft="@dimen/common_vertical_padding" android:paddingRight="@dimen/common_vertical_padding" android:layout_width="fill_parent" android:layout_height="45.0sp" android:layout_marginTop="@dimen/library_local_media_button_vertical_padding" android:layout_marginBottom="@dimen/library_local_media_button_vertical_padding" android:baselineAligned="false">
+        <FrameLayout android:id="@id/view_in_vr_button" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/view_in_vr" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+                <TextView android:textColor="@color/oculus_black_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/library_local_media_view_in_vr" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </FrameLayout>
+        <FrameLayout android:id="@id/share_button" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="?actionModeShareDrawable" android:tint="@android:color/white" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+                <TextView android:textColor="@color/oculus_black_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_share" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

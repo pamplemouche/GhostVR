@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="app_name">Oculus System Utilities</string>
+    <string name="notification_os_update_complete">System update downloaded successfully. Restart for the changes to take effect.</string>
+    <string name="notification_os_update_error">There was a network error when downloading the update. Please check your network connection.</string>
+</resources>

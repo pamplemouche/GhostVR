@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/video_player" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" layout="@layout/video_player_with_control" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <include android:id="@id/story_header" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:layout_weight="1.0" layout="@layout/story_header" />
+        <ImageView android:id="@id/vr_mode_button" android:padding="@dimen/video_vr_mode_button_padding" android:layout_width="@dimen/video_vr_mode_button_width" android:layout_height="@dimen/video_vr_mode_button_height" android:src="@drawable/widget_oculus_media_controller_vr_mode_icon" />
+    </LinearLayout>
+</RelativeLayout>

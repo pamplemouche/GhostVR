@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/menu_row" android:background="@drawable/pressable_item_background" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minWidth="196.0dip" android:minHeight="?android:listPreferredItemHeightSmall" android:paddingStart="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearance" android:layout_gravity="center_vertical" android:id="@id/custom_popup_menu_item_text" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:drawablePadding="6.0dip" android:layout_marginEnd="16.0dip" />
+</FrameLayout>

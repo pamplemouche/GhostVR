@@ -1,0 +1,52 @@
+{ 
+   "baseColor" : [ 
+      0.676470577716827, 
+      0.852941155433655, 
+      1, 
+      1
+   ], 
+   "baseMaskType" : 3, 
+   "baseMaskParameters" : [ 
+      0.5, 
+      0, 
+      1, 
+      1
+   ], 
+   "baseMaskAxis" : [ 
+      0, 
+      0, 
+      0, 
+      0
+   ], 
+   "layers" : [ 
+      { 
+         "sampleMode" : 0, 
+         "blendMode" : 0, 
+         "maskType" : 3, 
+         "color" : [ 
+            0.674509823322296, 
+            0.850980401039124, 
+            1, 
+            1
+         ], 
+         "sampleParameters" : [ 
+            1, 
+            1, 
+            1, 
+            1
+         ], 
+         "maskParameters" : [ 
+            1.47000002861023, 
+            0, 
+            1, 
+            1
+         ], 
+         "maskAxis" : [ 
+            0, 
+            0, 
+            0, 
+            0
+         ]
+      }
+   ]
+}

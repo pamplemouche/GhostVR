@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.oculus.systemutilities" platformBuildVersionCode="23" platformBuildVersionName="6.0-2166767">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.REBOOT"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.oculus.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.oculus.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.oculus.companion.server.permission.SEND_INTENTS"/>
+    <uses-permission android:name="com.oculus.horizon.FBCONNECT_CONTENT_PROVIDER_READ_ACCESS"/>
+    <uses-permission android:name="com.oculus.horizon.LINKED_ACCOUNTS_WRITE_PERMISSION"/>
+    <uses-permission android:name="com.oculus.updater.core.os.OTA_OPERATION"/>
+    <permission android:label="oculus_notifications" android:name="oculus.render_notification"/>
+    <uses-permission android:name="oculus.render_notification"/>
+    <application android:allowBackup="false" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.oculus.systemutilities.SystemUtilitiesApplication">
+        <meta-data android:name="com.samsung.android.vr.application.mode" android:value="vr_only"/>
+        <service android:exported="true" android:name="com.oculus.systemutilities.SettingsService" android:process=":settings">
+            <intent-filter>
+                <action android:name="com.oculus.vrshell.SHELL_MAIN"/>
+            </intent-filter>
+            <meta-data android:name="com.oculus.vrshell.supports_taskbar" android:value="true"/>
+        </service>
+        <activity android:excludeFromRecents="true" android:name="com.oculus.systemutilities.ShellHomePermissionActivity"/>
+        <receiver android:exported="true" android:name="com.oculus.systemutilities.NewOverlayToRenderReceiver" android:process=":systemoverlays">
+            <intent-filter>
+                <action android:name="com.oculus.systemutilities.START_RENDERING_OVERLAY"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="internalVersionName" android:value="9.0.0.232.450.7ff354c8f990+ 2020_04_14_04_20"/>
+        <meta-data android:name="android.support.VERSION" android:value="26.1.0"/>
+        <receiver android:exported="false" android:name="libraries.marauder.analytics.AnalyticsUploadAlarmReceiver"/>
+    </application>
+</manifest>

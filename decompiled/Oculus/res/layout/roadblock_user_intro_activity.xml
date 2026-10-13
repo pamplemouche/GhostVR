@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oculus.horizon.widget.CustomToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ImageView android:id="@id/headset_illustration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:src="@drawable/blue_user_with_headset_illustration" android:layout_below="@id/toolbar" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:gravity="center" android:id="@id/secondary_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:text="@string/roadblock_whats_new" android:layout_below="@id/headset_illustration" />
+    <TextView android:textSize="14.0sp" android:gravity="center" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="30.0dip" android:layout_below="@id/secondary_title" android:layout_centerHorizontal="true" android:layout_marginEnd="30.0dip" />
+    <Button android:id="@id/continue_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/common_horizontal_padding" android:text="@string/common_continue" android:layout_alignParentBottom="true" />
+</RelativeLayout>

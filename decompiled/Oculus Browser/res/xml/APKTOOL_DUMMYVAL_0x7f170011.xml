@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:orderingFromXml="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/APKTOOL_DUMMYVAL_0x7f1304fe" android:key="account_section" android:order="0" />
+    <org.chromium.chrome.browser.preferences.sync.SignInPreference android:title="@string/APKTOOL_DUMMYVAL_0x7f13058c" android:key="sign_in" android:order="1" />
+    <org.chromium.chrome.browser.preferences.ChromeBasePreference android:layout="@layout/APKTOOL_DUMMYVAL_0x7f0e0022" android:title="@string/APKTOOL_DUMMYVAL_0x7f130502" android:key="sync_and_services" android:order="2" android:fragment="org.chromium.chrome.browser.preferences.sync.SyncAndServicesPreferences" />
+    <PreferenceCategory android:title="@string/APKTOOL_DUMMYVAL_0x7f130500" android:key="basics_section" android:order="3" />
+    <org.chromium.chrome.browser.preferences.ChromeBasePreference android:title="@string/APKTOOL_DUMMYVAL_0x7f1304fd" android:key="search_engine" android:order="4" android:fragment="org.chromium.chrome.browser.preferences.SearchEnginePreference" />
+    <org.chromium.chrome.browser.preferences.ChromeBasePreference android:title="@string/APKTOOL_DUMMYVAL_0x7f1304fc" android:key="saved_passwords" android:order="5" android:fragment="org.chromium.chrome.browser.preferences.password.SavePasswordsPreferences" />
+    <org.chromium.chrome.browser.preferences.ChromeBasePreference android:title="@string/APKTOOL_DUMMYVAL_0x7f130181" android:key="autofill_payment_methods" android:order="6" android:fragment="org.chromium.chrome.browser.preferences.autofill.AutofillPaymentMethodsFragment" />
+    <org.chromium.chrome.browser.preferences.ChromeBasePreference android:title="@string/APKTOOL_DUMMYVAL_0x7f130155" android:key="autofill_addresses" android:order="7" android:fragment="org.chromium.chrome.browser.preferences.autofill.AutofillProfilesFragment" />
+    <org.chromium.chrome.browser.preferences.ChromeBasePreference android:title="@string/APKTOOL_DUMMYVAL_0x7f1304f7" android:key="autofill_assistant" android:order="8" android:fragment="org.chromium.chrome.browser.preferences.autofill_assistant.AutofillAssistantPreferences" />
+    <Preference android:title="@string/APKTOOL_DUMMYVAL_0x7f1304f9" android:key="notifications" android:order="9" android:fragment="org.chromium.chrome.browser.preferences.NotificationsPreferences" />
+    <Preference android:title="@string/APKTOOL_DUMMYVAL_0x7f13045c" android:key="homepage" android:order="10" android:fragment="org.chromium.chrome.browser.preferences.HomepagePreferences" />
+    <Preference android:title="@string/APKTOOL_DUMMYVAL_0x7f130504" android:key="ui_theme" android:order="11" android:fragment="org.chromium.chrome.browser.preferences.themes.ThemePreferences" />
+    <PreferenceCategory android:title="@string/APKTOOL_DUMMYVAL_0x7f1304ff" android:key="advanced_section" android:order="12" />
+    <Preference android:title="@string/APKTOOL_DUMMYVAL_0x7f1304fa" android:key="privacy" android:order="13" android:fragment="org.chromium.chrome.browser.preferences.privacy.PrivacyPreferences" />
+    <Preference android:title="@string/APKTOOL_DUMMYVAL_0x7f1304f4" android:key="accessibility" android:order="14" android:fragment="org.chromium.chrome.browser.preferences.AccessibilityPreferences" />
+    <Preference android:title="@string/APKTOOL_DUMMYVAL_0x7f130501" android:key="content_settings" android:order="15" android:fragment="org.chromium.chrome.browser.preferences.website.SiteSettingsPreferences" />
+    <Preference android:title="@string/APKTOOL_DUMMYVAL_0x7f1304f8" android:key="languages" android:order="16" android:fragment="org.chromium.chrome.browser.preferences.languages.LanguagesPreferences" />
+    <org.chromium.chrome.browser.preferences.ChromeBasePreference android:title="@string/APKTOOL_DUMMYVAL_0x7f13028c" android:key="data_reduction" android:order="17" android:fragment="org.chromium.chrome.browser.preferences.datareduction.DataReductionPreferenceFragment" />
+    <org.chromium.chrome.browser.preferences.ChromeBasePreference android:title="@string/APKTOOL_DUMMYVAL_0x7f1303bb" android:key="downloads" android:order="18" android:fragment="org.chromium.chrome.browser.preferences.download.DownloadPreferences" />
+    <Preference android:title="Developer options" android:key="developer" android:order="19" android:fragment="org.chromium.chrome.browser.preferences.developer.DeveloperPreferences" />
+    <Preference android:title="@string/APKTOOL_DUMMYVAL_0x7f1304f3" android:key="about_chrome" android:order="20" android:fragment="org.chromium.chrome.browser.preferences.AboutChromePreferences" />
+</PreferenceScreen>

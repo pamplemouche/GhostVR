@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abc_action_bar_home_description">Portami a casa</string>
+    <string name="abc_action_bar_up_description">Torna indietro</string>
+    <string name="abc_action_menu_overflow_description">Altre opzioni</string>
+    <string name="abc_action_mode_done">Fine</string>
+    <string name="abc_activity_chooser_view_see_all">Mostra tutto</string>
+    <string name="abc_activitychooserview_choose_application">"Scelta di un'app"</string>
+    <string name="abc_menu_alt_shortcut_label">ALT +</string>
+    <string name="abc_menu_ctrl_shortcut_label">CTRL +</string>
+    <string name="abc_menu_delete_shortcut_label">CANC</string>
+    <string name="abc_menu_enter_shortcut_label">INVIO</string>
+    <string name="abc_menu_function_shortcut_label">FUNZIONE +</string>
+    <string name="abc_menu_meta_shortcut_label">META +</string>
+    <string name="abc_menu_shift_shortcut_label">MAIUSC +</string>
+    <string name="abc_menu_space_shortcut_label">spazio</string>
+    <string name="abc_menu_sym_shortcut_label">SYM +</string>
+    <string name="abc_prepend_shortcut_label">MENU +</string>
+    <string name="abc_search_hint">Cerca…</string>
+    <string name="abc_searchview_description_clear">Cancella query</string>
+    <string name="abc_searchview_description_query">Query di ricerca</string>
+    <string name="abc_searchview_description_search">Cerca</string>
+    <string name="abc_searchview_description_submit">Invia query</string>
+    <string name="abc_searchview_description_voice">Ricerca vocale</string>
+    <string name="abc_shareactionprovider_share_with">Condividi con</string>
+    <string name="abc_shareactionprovider_share_with_application">Condividi tramite %s</string>
+    <string name="abc_toolbar_collapse_description">Comprimi</string>
+    <string name="notifications_download_canceled_message">Download annullato per \"%1$s\"</string>
+    <string name="notifications_download_canceled_title">Download annullato</string>
+    <string name="notifications_download_failed_message">Download di \"%1$s\" non riuscito</string>
+    <string name="notifications_download_failed_title">Download non riuscito</string>
+    <string name="notifications_download_in_progress_message">Download di %1$s…</string>
+    <string name="notifications_downloading_and_installing_apps">Download e installazione delle app…</string>
+    <string name="notifications_head_install_failed_message">Installazione non riuscita</string>
+    <string name="notifications_head_installed_message">Installazione completata</string>
+    <string name="notifications_head_installing_message">Installazione</string>
+    <string name="notifications_install_failed_message">Installazione di \"%1$s\" non riuscita</string>
+    <string name="notifications_install_failed_title">Installazione non riuscita</string>
+    <string name="notifications_install_in_progress_message">Installazione di %1$s in corso...</string>
+    <string name="notifications_install_in_progress_title">Installazione in corso</string>
+    <string name="notifications_install_succeeded_message">"L'app %1$s è stata installata correttamente nella tua libreria."</string>
+    <string name="notifications_install_succeeded_title">Installazione completata</string>
+    <string name="notifications_update_succeeded_message">%1$s aggiornata correttamente</string>
+    <string name="notifications_update_succeeded_title">Aggiornamento effettuato correttamente</string>
+    <string name="obb_display_title">%1$s (file di espansione)</string>
+    <string name="search_menu_title">Cerca</string>
+</resources>

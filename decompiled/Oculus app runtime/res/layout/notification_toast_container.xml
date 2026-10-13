@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/NotificationToastContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout style="@style/NotificationToastSizeWrapper">
+        <LinearLayout style="@style/NotificationToastItems">
+            <View android:id="@id/notif_icon" style="@style/NotificationToastHeaderIcon" />
+            <FrameLayout android:id="@id/notif_toast_content" style="@style/NotificationToastContent" />
+            <LinearLayout android:id="@id/notif_toast_cta" style="@style/NotificationToastCTAContainer">
+                <View style="@style/NotificationToastCTAIcon" />
+                <TextView android:text="@string/notification_cta" style="@style/NotificationToastCTAText" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

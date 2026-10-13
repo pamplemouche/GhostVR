@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.notifications.view.NotificationView style="@style/NotificationToastTheme"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/NotificationToastTextContainer">
+        <TextView android:id="@id/notif_description_text" android:text="Notification Description goes here" style="@style/NotificationDescriptionToast" />
+    </LinearLayout>
+</com.oculus.notifications.view.NotificationView>

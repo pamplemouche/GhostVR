@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abc_action_bar_home_description">Přejít na plochu</string>
+    <string name="abc_action_bar_up_description">Přejít nahoru</string>
+    <string name="abc_action_menu_overflow_description">Více možností</string>
+    <string name="abc_action_mode_done">Hotovo</string>
+    <string name="abc_activity_chooser_view_see_all">Zobrazit vše</string>
+    <string name="abc_activitychooserview_choose_application">Vybrat aplikaci</string>
+    <string name="abc_capital_off">VYP</string>
+    <string name="abc_capital_on">ZAP</string>
+    <string name="abc_menu_function_shortcut_label">Fn+</string>
+    <string name="abc_menu_space_shortcut_label">mezerník</string>
+    <string name="abc_search_hint">Vyhledat…</string>
+    <string name="abc_searchview_description_clear">Smazat dotaz</string>
+    <string name="abc_searchview_description_query">Dotaz pro vyhledávání</string>
+    <string name="abc_searchview_description_search">Hledat</string>
+    <string name="abc_searchview_description_submit">Odeslat dotaz</string>
+    <string name="abc_searchview_description_voice">Hlasové vyhledávání</string>
+    <string name="abc_shareactionprovider_share_with">Sdílet s</string>
+    <string name="abc_shareactionprovider_share_with_application">Sdílet s aplikací %s</string>
+    <string name="abc_toolbar_collapse_description">Sbalit</string>
+    <string name="notifications_download_canceled_message">Stahování zrušeno pro %1$s</string>
+    <string name="notifications_download_canceled_title">Stahování zrušeno</string>
+    <string name="notifications_download_failed_message">Aplikace %1$s se nedá stáhnout</string>
+    <string name="notifications_download_failed_title">Stahování selhalo</string>
+    <string name="notifications_download_in_progress_message">%1$s se stahuje...</string>
+    <string name="notifications_downloading_and_installing_apps">Stahování a instalace aplikací...</string>
+    <string name="notifications_head_install_failed_message">Instalace selhala</string>
+    <string name="notifications_head_installed_message">Nainstalováno</string>
+    <string name="notifications_head_installing_message">Instalace</string>
+    <string name="notifications_install_failed_message">Aplikace %1$s se nedá nainstalovat</string>
+    <string name="notifications_install_failed_title">Instalace se nezdařila</string>
+    <string name="notifications_install_in_progress_message">Instaluje se %1$s…</string>
+    <string name="notifications_install_in_progress_title">Probíhá instalace</string>
+    <string name="notifications_install_succeeded_message">Aplikace %1$s byla úspěšně nainstalovaná do vaší knihovny.</string>
+    <string name="notifications_install_succeeded_title">Instalace je dokončená</string>
+    <string name="notifications_progress_of_download_message">%1$d %%</string>
+    <string name="notifications_update_succeeded_message">%1$s byla úspěšně aktualizovaná</string>
+    <string name="notifications_update_succeeded_title">Aktualizace byla úspěšná</string>
+    <string name="obb_display_title">%1$s (soubor pro rozšíření)</string>
+    <string name="search_menu_title">Hledat</string>
+</resources>

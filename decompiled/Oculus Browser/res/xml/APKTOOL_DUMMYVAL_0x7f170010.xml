@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.chrome.browser.preferences.HyperlinkPreference android:title="@string/APKTOOL_DUMMYVAL_0x7f130454" android:key="open_source_license" app:url="@string/APKTOOL_DUMMYVAL_0x7f130455" />
+    <org.chromium.chrome.browser.preferences.HyperlinkPreference android:title="@string/APKTOOL_DUMMYVAL_0x7f1305fd" android:key="terms_of_service" app:url="@string/APKTOOL_DUMMYVAL_0x7f1301e5" />
+    <org.chromium.chrome.browser.preferences.HyperlinkPreference android:title="@string/APKTOOL_DUMMYVAL_0x7f130509" android:key="privacy_notice" app:url="@string/APKTOOL_DUMMYVAL_0x7f1301e3" />
+</PreferenceScreen>

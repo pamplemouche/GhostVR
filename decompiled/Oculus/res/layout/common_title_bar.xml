@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/title_bar_container" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.view.SimpleDraweeView android:id="@id/header_background_image" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:actualImageScaleType="fitXY" />
+    <com.oculus.horizon.widget.CustomToolbar android:theme="@style/ThemeOverlay.ActionBar" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="fill_parent" app:contentInsetStart="0.0dip" app:contentInsetStartWithNavigation="0.0dip" app:popupTheme="@style/ThemeOverlay.ActionBar.Popup">
+        <FrameLayout android:layout_gravity="start|center" android:id="@id/title_bar_left_icon_container" android:visibility="gone" android:layout_width="@dimen/titlebar_container_width" android:layout_height="fill_parent">
+            <com.facebook.drawee.view.SimpleDraweeView android:layout_gravity="center" android:id="@id/title_bar_left_icon_avatar" android:padding="@dimen/titlebar_avatar_icon_padding" android:layout_width="@dimen/titlebar_icon_size" android:layout_height="@dimen/titlebar_icon_size" app:failureImage="@drawable/no_profile_image_large_active" app:placeholderImage="@drawable/no_profile_image_large_active" app:roundAsCircle="true" />
+        </FrameLayout>
+        <FrameLayout android:layout_gravity="start|center" android:id="@id/title_bar_second_icon_container" android:visibility="gone" android:layout_width="@dimen/titlebar_secondary_container_width" android:layout_height="@dimen/titlebar_container_width">
+            <ImageView android:layout_gravity="start|center" android:id="@id/title_bar_left_icon_notifications" android:layout_width="@dimen/titlebar_icon_size" android:layout_height="@dimen/titlebar_icon_size" android:src="@drawable/notifications_icon" />
+            <com.oculus.horizon.widget.BadgeView android:layout_gravity="end|center|top" android:id="@id/notification_feed_badge" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+    </com.oculus.horizon.widget.CustomToolbar>
+</FrameLayout>

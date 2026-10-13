@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:oculus="http://schemas.android.com/apk/res-auto">
+    <ViewStub android:id="@id/search_filter_nav" android:layout="@layout/search_filter_nav" android:layout_width="fill_parent" android:layout_height="@dimen/store_browse_all_top_nav_height" />
+    <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center" android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+</LinearLayout>

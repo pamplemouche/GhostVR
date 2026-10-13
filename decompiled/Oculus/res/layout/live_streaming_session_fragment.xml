@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/oculus_black_8" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="1.0" android:keepScreenOn="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="center" android:id="@id/status_label" android:padding="@dimen/livestreaming_activity_strip_padding" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.2" style="@style/Oculus.Livestreaming.Status" />
+    <FrameLayout android:id="@id/main_stream_panel" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.6" android:animateLayoutChanges="true">
+        <org.webrtc.SurfaceViewRenderer android:id="@id/live_stream_renderer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+        <com.facebook.drawee.view.SimpleDraweeView android:gravity="center" android:id="@id/application_screenshot" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" app:overlayImage="@color/oculus_black_10_alpha_60" />
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/profile_photo_holder" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <LinearLayout android:gravity="start|center" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/user_activity_strip" android:background="@color/oculus_black_10_alpha_35" android:padding="@dimen/livestreaming_activity_strip_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="@style/Oculus.Livestreaming.Application.TextAppearance" android:ellipsize="end" android:id="@id/application_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+            <TextView android:textAppearance="@style/Oculus.Livestreaming.Platform.TextAppearance" android:ellipsize="end" android:id="@id/platform_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:maxLines="1" />
+        </LinearLayout>
+    </FrameLayout>
+    <com.oculus.horizon.livestreaming.widget.LiveStreamingButtonControls android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/button_controls" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.2" />
+</LinearLayout>

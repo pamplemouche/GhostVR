@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="APKTOOL_DUMMYVAL_0x7f140046" parent="@style/APKTOOL_DUMMYVAL_0x7f14008b" />
+    <style name="APKTOOL_DUMMYVAL_0x7f14004d" parent="@style/APKTOOL_DUMMYVAL_0x7f14008c" />
+    <style name="APKTOOL_DUMMYVAL_0x7f1400cf" parent="@style/APKTOOL_DUMMYVAL_0x7f14008d" />
+    <style name="APKTOOL_DUMMYVAL_0x7f1402f0" parent="@android:style/Widget">
+        <item name="android:background">?APKTOOL_DUMMYVAL_0x7f040099</item>
+        <item name="android:stateListAnimator">@animator/APKTOOL_DUMMYVAL_0x7f020000</item>
+        <item name="android:touchscreenBlocksFocus">true</item>
+        <item name="android:keyboardNavigationCluster">true</item>
+    </style>
+    <style name="APKTOOL_DUMMYVAL_0x7f14008b" parent="@style/APKTOOL_DUMMYVAL_0x7f140089">
+        <item name="APKTOOL_DUMMYVAL_0x7f040098">?android:colorError</item>
+    </style>
+    <style name="APKTOOL_DUMMYVAL_0x7f14008c" parent="@style/APKTOOL_DUMMYVAL_0x7f14008a">
+        <item name="APKTOOL_DUMMYVAL_0x7f040098">?android:colorError</item>
+    </style>
+    <style name="APKTOOL_DUMMYVAL_0x7f14008d" parent="@style/APKTOOL_DUMMYVAL_0x7f140097">
+        <item name="android:touchscreenBlocksFocus">true</item>
+        <item name="android:keyboardNavigationCluster">true</item>
+    </style>
+</resources>

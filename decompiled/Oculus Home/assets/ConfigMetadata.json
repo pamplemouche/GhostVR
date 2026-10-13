@@ -1,0 +1,78 @@
+{
+  "__signature": "@generated <<SignedSourcea8cd133a7919a9df3e91f35da8217a57>>",
+  "schema": {
+    "home_config:oculus_home_non_us_locale": {
+      "defaultValue": "false",
+      "type": "bool",
+      "unit_type": 2,
+      "configId": "0",
+      "paramId": 0,
+      "slotId": 0
+    },
+    "home_config:oculus_home_app_version_false": {
+      "defaultValue": "false",
+      "type": "bool",
+      "unit_type": 2,
+      "configId": "0",
+      "paramId": 1,
+      "slotId": 1
+    },
+    "home_config:oculus_home_validation_for_mobile_config_qe": {
+      "defaultValue": "false",
+      "type": "bool",
+      "unit_type": 2,
+      "configId": "0",
+      "paramId": 2,
+      "slotId": 2
+    },
+    "home_config:oculus_home_app_id_true": {
+      "defaultValue": "false",
+      "type": "bool",
+      "unit_type": 2,
+      "configId": "0",
+      "paramId": 3,
+      "slotId": 3
+    },
+    "home_config:oculus_home_validation_for_mobile_config_gk": {
+      "defaultValue": "false",
+      "type": "bool",
+      "unit_type": 2,
+      "configId": "0",
+      "paramId": 4,
+      "slotId": 4
+    },
+    "home_config:oculus_home_us_locale": {
+      "defaultValue": "false",
+      "type": "bool",
+      "unit_type": 2,
+      "configId": "0",
+      "paramId": 5,
+      "slotId": 5
+    },
+    "home_config:oculus_home_employee": {
+      "defaultValue": "false",
+      "type": "bool",
+      "unit_type": 2,
+      "configId": "0",
+      "paramId": 6,
+      "slotId": 6
+    },
+    "home_config:oculus_home_app_version_true": {
+      "defaultValue": "false",
+      "type": "bool",
+      "unit_type": 2,
+      "configId": "0",
+      "paramId": 7,
+      "slotId": 7
+    },
+    "home_config:oculus_home_app_id_false": {
+      "defaultValue": "false",
+      "type": "bool",
+      "unit_type": 2,
+      "configId": "0",
+      "paramId": 8,
+      "slotId": 8
+    }
+  },
+  "schemaHash": "b9258ad1ede34072a6100cf95d496dcf"
+}

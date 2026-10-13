@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center|left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="25.0px"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/notification_item_content_container" android:layout_width="440.0px" android:layout_height="wrap_content" android:layout_marginLeft="25.0px">
+        <View android:id="@id/notification_item_icon" style="@style/NotificationIcon" />
+        <LinearLayout style="@style/NotificationSystemTextContainer">
+            <TextView android:id="@id/notification_item_title" android:text="My Title" style="@style/NotificationTitle" />
+            <TextView android:id="@id/notification_item_description" android:text="Notification Description goes here.  It can be multiple lines." style="@style/NotificationDescription" />
+            <com.oculus.vrshell.panels.views.ShellProgressBarView android:id="@id/notification_progress_bar" style="@style/NotificationProgressBar" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="25.0px">
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/notification_item_invitecall" android:visibility="gone" style="@style/NotificationIconCTAInviteCall" />
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/notification_item_accept" android:visibility="gone" style="@style/NotificationIconCTAAccept" />
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/notification_item_seemore" android:visibility="gone" style="@style/NotificationIconCTASeeMore" />
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/notification_item_canceldownload" android:visibility="gone" style="@style/NotificationIconCTACancelDownload" />
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/notification_item_retrydownload" android:visibility="gone" style="@style/NotificationIconCTARetryDownload" />
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/notification_item_launchcontent" android:visibility="gone" style="@style/NotificationIconCTALaunchContent" />
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/notification_item_deny" android:visibility="gone" style="@style/NotificationIconCTADeny" />
+    </LinearLayout>
+</LinearLayout>

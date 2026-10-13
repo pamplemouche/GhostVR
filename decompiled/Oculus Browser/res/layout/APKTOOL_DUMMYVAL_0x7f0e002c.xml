@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401ba" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f070264" android:text="@string/APKTOOL_DUMMYVAL_0x7f13016e" android:layout_marginStart="@dimen/APKTOOL_DUMMYVAL_0x7f070262" android:layout_marginEnd="@dimen/APKTOOL_DUMMYVAL_0x7f070262" android:labelFor="@id/autofill_credit_card_editor_billing_address_spinner" />
+    <android.support.v7.widget.AppCompatSpinner android:id="@id/autofill_credit_card_editor_billing_address_spinner" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f070264" android:textDirection="locale" android:layout_marginStart="@dimen/APKTOOL_DUMMYVAL_0x7f070262" android:layout_marginEnd="@dimen/APKTOOL_DUMMYVAL_0x7f070262" />
+    <View android:layout_marginStart="@dimen/APKTOOL_DUMMYVAL_0x7f070262" android:layout_marginEnd="@dimen/APKTOOL_DUMMYVAL_0x7f070262" style="@style/APKTOOL_DUMMYVAL_0x7f140150" />
+</merge>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/main_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/main_view" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="6.0dip" android:paddingEnd="6.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+        <TextView android:id="@id/unimportant_site_data_description" android:text="@string/APKTOOL_DUMMYVAL_0x7f1305be" style="@style/APKTOOL_DUMMYVAL_0x7f140113" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="true">
+            <TextView android:id="@id/unimportant_site_data_size_prefix" android:layout_width="0.0dip" android:text="@string/APKTOOL_DUMMYVAL_0x7f1305bf" android:layout_weight="1.0" style="@style/APKTOOL_DUMMYVAL_0x7f140114" />
+            <TextView android:id="@id/unimportant_site_data_storage_size_text" style="@style/APKTOOL_DUMMYVAL_0x7f140114" />
+        </LinearLayout>
+        <Button android:id="@id/clear_unimportant_site_data_storage" android:text="@string/APKTOOL_DUMMYVAL_0x7f1305b6" style="@style/APKTOOL_DUMMYVAL_0x7f140112" />
+        <TextView android:id="@id/site_data_description" android:text="@string/APKTOOL_DUMMYVAL_0x7f1305bb" style="@style/APKTOOL_DUMMYVAL_0x7f140113" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="true">
+            <TextView android:id="@id/site_data_size_prefix" android:layout_width="0.0dip" android:text="@string/APKTOOL_DUMMYVAL_0x7f1305bc" android:layout_weight="1.0" style="@style/APKTOOL_DUMMYVAL_0x7f140114" />
+            <TextView android:id="@id/site_data_storage_size_text" style="@style/APKTOOL_DUMMYVAL_0x7f140114" />
+        </LinearLayout>
+        <Button android:id="@id/manage_site_data_storage" android:text="@string/APKTOOL_DUMMYVAL_0x7f1305b8" style="@style/APKTOOL_DUMMYVAL_0x7f140112" />
+        <TextView android:id="@id/all_storage_description" android:paddingTop="12.0dip" android:text="@string/APKTOOL_DUMMYVAL_0x7f1305b3" style="@style/APKTOOL_DUMMYVAL_0x7f140113" />
+        <Button android:id="@id/clear_all_data" android:text="@string/APKTOOL_DUMMYVAL_0x7f1305b4" style="@style/APKTOOL_DUMMYVAL_0x7f140112" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.debug.ControlTab android:id="@id/debug_tab_control" android:background="@color/colorDebugPanelBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/debug_action_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="Close Panel" />
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/debug_action_exit_shell" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="Exit VR Shell" />
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/debug_action_send_notification" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="Send Test Notification" />
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/debug_change_party_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="Change color for party" />
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/debug_action_setup_guardian" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="Enter Guardian Setup" />
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/debug_action_intro_dialogs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="Reset and Run Intro Dialogs" />
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/debug_action_reset_tv_badge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="Reset TV Badge" />
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/debug_action_reset_quest_recenter" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="Reset Quest View Recenter" />
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/debug_action_reset_quest_show_taskbar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="Reset Quest Show Taskbar Dialog" />
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/debug_action_reset_voice_prompt_toast" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="Reset voice prompt" />
+        <com.oculus.vrshell.panels.views.ShellButton android:id="@id/debug_action_clear_all_maps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="Clear all saved maps" />
+    </LinearLayout>
+</com.oculus.panelapp.debug.ControlTab>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="@string/APKTOOL_DUMMYVAL_0x7f13014f" android:key="application_version" />
+    <org.chromium.chrome.browser.preferences.AboutChromePreferenceOSVersion android:title="@string/APKTOOL_DUMMYVAL_0x7f13045e" android:key="os_version" />
+    <Preference android:title="@string/APKTOOL_DUMMYVAL_0x7f130399" android:key="legal_information" android:fragment="org.chromium.chrome.browser.preferences.LegalInformationPreferences" />
+</PreferenceScreen>

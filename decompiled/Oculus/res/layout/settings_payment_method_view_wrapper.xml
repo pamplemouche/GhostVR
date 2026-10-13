@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.horizon.settings.SettingsPaymentMethodView android:layout_width="fill_parent" android:layout_height="@dimen/settings_item_height" style="@style/Oculus.Widget.Light.Setting"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

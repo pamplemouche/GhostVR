@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/oculus_black_10" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.viewpager.widget.ViewPager android:id="@id/view_pager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <com.viewpagerindicator.CirclePageIndicator android:id="@id/page_indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="44.0dip" app:fillColor="@color/oculus_black_4" app:pageColor="@color/oculus_black_8" app:radius="3.0dip" app:strokeWidth="0.0dip" />
+    <FrameLayout android:id="@id/take_photo_button" android:layout_width="fill_parent" android:layout_marginLeft="32.0dip" android:layout_marginRight="32.0dip" android:layout_marginBottom="24.0dip" style="@style/RoundButton.White">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@android:color/white" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/social_take_photo" android:drawableLeft="@drawable/camera_icon" android:drawablePadding="10.0dip" />
+    </FrameLayout>
+    <TextView android:id="@id/continue_button" android:layout_width="fill_parent" android:layout_marginLeft="32.0dip" android:layout_marginRight="32.0dip" android:layout_marginBottom="32.0dip" android:text="@string/common_cancel" style="@style/RoundButton.BlackOnWhite" />
+</LinearLayout>

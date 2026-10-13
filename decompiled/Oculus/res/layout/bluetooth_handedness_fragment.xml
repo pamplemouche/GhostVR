@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <VideoView android:id="@id/video" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textAppearance="@style/TextAppearance.Title.Large" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginTop="@dimen/common_vertical_padding" android:layout_marginRight="@dimen/common_horizontal_padding" android:layout_marginBottom="@dimen/common_vertical_padding" android:text="@string/bluetooth_malibu_handedness_subtitle" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <TextView android:textAppearance="@style/TextAppearance" android:gravity="start" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_padding" android:layout_marginRight="@dimen/common_horizontal_padding" android:layout_marginBottom="@dimen/common_vertical_padding" android:text="@string/bluetooth_malibu_handedness_desc" />
+    </ScrollView>
+    <RadioGroup android:orientation="horizontal" android:id="@id/handedness_options" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/divider_vertical" android:showDividers="middle">
+        <RadioButton android:id="@id/option_left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:button="@null" android:text="@string/bluetooth_malibu_handedness_left" android:drawableRight="@drawable/btn_checkmark" android:layout_weight="1.0" style="@style/Oculus.Widget.Light.Setting" />
+        <RadioButton android:id="@id/option_right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:button="@null" android:text="@string/bluetooth_malibu_handedness_right" android:drawableRight="@drawable/btn_checkmark" android:layout_weight="1.0" style="@style/Oculus.Widget.Light.Setting" />
+    </RadioGroup>
+    <FrameLayout android:id="@id/action_panel" android:paddingLeft="@dimen/common_horizontal_padding" android:paddingRight="@dimen/common_horizontal_padding" android:layout_width="fill_parent" android:layout_height="@dimen/bluetooth_panel_height">
+        <Button android:layout_gravity="center" android:id="@id/action" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_done" />
+    </FrameLayout>
+</LinearLayout>

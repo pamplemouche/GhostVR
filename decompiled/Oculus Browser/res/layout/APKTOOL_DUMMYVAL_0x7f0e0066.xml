@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="end" android:orientation="vertical" android:id="@id/status_card_view" android:padding="@dimen/APKTOOL_DUMMYVAL_0x7f070074" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f140176"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <org.chromium.ui.widget.TextViewWithLeading android:id="@id/status_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f140177" />
+    <org.chromium.ui.widget.TextViewWithLeading android:id="@id/status_body" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/APKTOOL_DUMMYVAL_0x7f140175" />
+    <org.chromium.ui.widget.ButtonCompat android:id="@id/status_action_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="-6.0dip" android:layout_marginStart="-8.0dip" android:layout_marginEnd="-8.0dip" style="@style/APKTOOL_DUMMYVAL_0x7f140174" />
+</LinearLayout>

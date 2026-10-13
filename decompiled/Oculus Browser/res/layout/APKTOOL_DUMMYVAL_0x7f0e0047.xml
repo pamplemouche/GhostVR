@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.toolbar.bottom.ScrollingBottomViewResourceFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/bottom_controls_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/bottom_container_top_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f070322" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f080262" android:scaleType="fitXY" android:scaleY="-1.0" />
+        <FrameLayout android:id="@id/bottom_container_slot" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ViewStub android:layout_gravity="start|bottom|center" android:id="@id/bottom_toolbar_stub" android:layout="@layout/bottom_toolbar" android:inflatedId="@id/bottom_toolbar" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+    </LinearLayout>
+</org.chromium.chrome.browser.toolbar.bottom.ScrollingBottomViewResourceFrameLayout>

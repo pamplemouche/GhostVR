@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@id/sort_group" android:checkableBehavior="single">
+        <item android:id="@id/most_helpful" android:checked="true" android:orderInCategory="1" android:title="@string/pdp_review_sort_option_most_helpful" />
+        <item android:id="@id/most_recent" android:orderInCategory="2" android:title="@string/pdp_review_sort_option_most_recent" />
+        <item android:id="@id/most_critical" android:orderInCategory="3" android:title="@string/pdp_review_sort_option_most_critical" />
+    </group>
+</menu>

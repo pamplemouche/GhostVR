@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="APKTOOL_DUMMYVAL_0x7f1402f8" parent="@style/APKTOOL_DUMMYVAL_0x7f1400d1">
+        <item name="APKTOOL_DUMMYVAL_0x7f04021b">center</item>
+        <item name="tabMode">fixed</item>
+    </style>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abc_action_bar_home_description">Aller chez moi</string>
+    <string name="abc_action_bar_up_description">Revenir en arrière</string>
+    <string name="abc_action_mode_done">Terminé</string>
+    <string name="abc_capital_off">DÉSACTIVER</string>
+    <string name="abc_capital_on">ACTIVER</string>
+</resources>

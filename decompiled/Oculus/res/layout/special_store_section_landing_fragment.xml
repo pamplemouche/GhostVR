@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/oculus_black_10" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:background="@color/oculus_black_10" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize">
+        <TextView android:textSize="17.0sp" android:textColor="@android:color/white" android:ellipsize="end" android:gravity="center" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="52.0dip" android:maxLines="1" android:singleLine="true" android:layout_weight="1.0" />
+        <ImageView android:id="@id/close_button" android:layout_width="52.0dip" android:layout_height="52.0dip" android:src="@drawable/close_button" android:scaleType="center" />
+    </LinearLayout>
+    <androidx.percentlayout.widget.PercentFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.drawee.view.SimpleDraweeView android:id="@id/banner_image" android:visibility="gone" android:adjustViewBounds="true" app:layout_aspectRatio="177.99988%" app:layout_widthPercent="100.0%" />
+    </androidx.percentlayout.widget.PercentFrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="10.0dip" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="50.0dip" android:layout_marginRight="50.0dip" android:layout_weight="1.0">
+            <TextView android:textSize="14.0sp" android:textColor="@color/oculus_black_4" android:textColorHighlight="@android:color/transparent" android:textColorLink="@android:color/white" android:ellipsize="end" android:gravity="center" android:autoLink="web" android:linksClickable="true" android:id="@id/description_text" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:lineSpacingExtra="4.0dip" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/oculus_black_4" android:textColorHighlight="@android:color/transparent" android:textColorLink="@android:color/white" android:ellipsize="end" android:gravity="center" android:autoLink="web" android:linksClickable="true" android:id="@id/second_description_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:layout_gravity="bottom" android:id="@id/continue_button" android:layout_width="fill_parent" android:layout_marginLeft="40.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="40.0dip" android:layout_marginBottom="40.0dip" android:text="@string/store_roadblock_button_text" style="@style/RoundButton.BlackOnWhite" />
+    </LinearLayout>
+</LinearLayout>

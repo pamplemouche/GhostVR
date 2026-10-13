@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<searchable android:label="@string/APKTOOL_DUMMYVAL_0x7f13014c" android:searchSuggestAuthority="com.oculus.browser.browser" android:searchSuggestSelection="url LIKE ?" android:searchSuggestIntentAction="android.intent.action.VIEW" android:includeInGlobalSearch="true" android:searchSettingsDescription="@string/APKTOOL_DUMMYVAL_0x7f130232"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

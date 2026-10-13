@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.ui.widget.ChromeImageView android:id="@id/background_view" android:background="@drawable/APKTOOL_DUMMYVAL_0x7f0800f3" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="8.0dip" />
+    <org.chromium.ui.widget.ChromeImageView android:id="@id/selected_view_below_lollipop" android:background="@drawable/APKTOOL_DUMMYVAL_0x7f0802b9" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="6.0dip" />
+    <FrameLayout android:id="@id/content_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_gravity="center" android:id="@id/card_view" android:background="@drawable/APKTOOL_DUMMYVAL_0x7f0802ad" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="2.0dip">
+            <ImageView android:id="@id/tab_favicon" android:layout_width="wrap_content" android:layout_height="@dimen/APKTOOL_DUMMYVAL_0x7f0702c6" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f080201" android:adjustViewBounds="true" android:minWidth="8.0dip" android:importantForAccessibility="no" />
+            <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401c5" android:ellipsize="none" android:gravity="center_vertical" android:id="@id/tab_title" android:fadingEdgeLength="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="32.0dip" android:singleLine="true" android:requiresFadingEdge="horizontal" android:layout_marginEnd="32.0dip" android:layout_toEndOf="@id/tab_favicon" />
+            <org.chromium.chrome.browser.ui.widget.RoundedCornerImageView android:gravity="center_horizontal" android:id="@id/tab_thumbnail" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@color/APKTOOL_DUMMYVAL_0x7f060189" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_below="@id/tab_title" android:importantForAccessibility="no" app:APKTOOL_DUMMYVAL_0x7f0400b3="@dimen/APKTOOL_DUMMYVAL_0x7f0702de" app:APKTOOL_DUMMYVAL_0x7f0400b4="@dimen/APKTOOL_DUMMYVAL_0x7f0702de" />
+            <View android:id="@id/divider_view" android:background="@color/APKTOOL_DUMMYVAL_0x7f0600ac" android:layout_below="@id/tab_title" style="@style/APKTOOL_DUMMYVAL_0x7f140103" />
+            <org.chromium.ui.widget.ButtonCompat android:id="@id/create_group_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:text="@string/APKTOOL_DUMMYVAL_0x7f1305fc" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:elevation="4.0dip" style="@style/APKTOOL_DUMMYVAL_0x7f1400fe" />
+        </RelativeLayout>
+        <org.chromium.ui.widget.ChromeImageView android:layout_gravity="end" android:id="@id/action_button" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="center" android:tint="@color/APKTOOL_DUMMYVAL_0x7f060079" />
+    </FrameLayout>
+</merge>

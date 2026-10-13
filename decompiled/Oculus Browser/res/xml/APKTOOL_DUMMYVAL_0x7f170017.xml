@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.chrome.browser.preferences.ChromeBasePreference android:key="os_permissions_warning" />
+    <org.chromium.chrome.browser.preferences.ChromeBasePreference android:key="os_permissions_warning_extra" />
+    <Preference android:layout="@layout/APKTOOL_DUMMYVAL_0x7f0e0094" android:key="os_permissions_warning_divider" />
+    <org.chromium.chrome.browser.preferences.TextMessagePreference android:icon="@drawable/APKTOOL_DUMMYVAL_0x7f0800a1" android:title="@string/APKTOOL_DUMMYVAL_0x7f130359" android:key="intrusive_ads_info" app:APKTOOL_DUMMYVAL_0x7f040137="@color/APKTOOL_DUMMYVAL_0x7f060079" />
+    <Preference android:layout="@layout/APKTOOL_DUMMYVAL_0x7f0e0094" android:key="intrusive_ads_info_divider" />
+    <PreferenceCategory android:title="@string/APKTOOL_DUMMYVAL_0x7f1306a2" android:key="site_heading" />
+    <org.chromium.chrome.browser.preferences.TextMessagePreference android:key="site_title" />
+    <PreferenceCategory android:title="@string/APKTOOL_DUMMYVAL_0x7f1306a4" android:key="site_usage" />
+    <org.chromium.chrome.browser.preferences.website.ClearWebsiteStorage android:title="@string/APKTOOL_DUMMYVAL_0x7f1306aa" android:key="clear_data" android:widgetLayout="@layout/APKTOOL_DUMMYVAL_0x7f0e0056" android:dialogMessage="@string/APKTOOL_DUMMYVAL_0x7f1306a8" android:positiveButtonText="@string/APKTOOL_DUMMYVAL_0x7f1306a9" android:negativeButtonText="@string/APKTOOL_DUMMYVAL_0x7f1301d4" />
+    <PreferenceCategory android:title="@string/APKTOOL_DUMMYVAL_0x7f13069f" android:key="site_permissions" />
+    <ListPreference android:key="cookies_permission_list" />
+    <ListPreference android:key="location_access_list" />
+    <ListPreference android:key="camera_permission_list" />
+    <ListPreference android:key="microphone_permission_list" />
+    <ListPreference android:key="push_notifications_list" />
+    <ListPreference android:key="javascript_permission_list" />
+    <ListPreference android:key="popup_permission_list" />
+    <ListPreference android:key="ads_permission_list" />
+    <ListPreference android:key="background_sync_permission_list" />
+    <ListPreference android:key="automatic_downloads_permission_list" />
+    <ListPreference android:key="protected_media_identifier_permission_list" />
+    <ListPreference android:key="autoplay_permission_list" />
+    <ListPreference android:key="sound_permission_list" />
+    <ListPreference android:key="midi_sysex_permission_list" />
+    <ListPreference android:key="clipboard_permission_list" />
+    <ListPreference android:key="bluetooth_scanning_permission_list" />
+    <org.chromium.chrome.browser.preferences.ButtonPreference android:title="@string/APKTOOL_DUMMYVAL_0x7f130661" android:key="reset_site_button" />
+</PreferenceScreen>

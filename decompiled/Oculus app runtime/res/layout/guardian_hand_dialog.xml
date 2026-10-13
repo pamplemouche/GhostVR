@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oculus.panelapp.anytimeui.dialogs.GuardianHandDialog android:gravity="center" style="@style/SystemControllerLocator"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vrshell="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/guardian_hand_text" style="@style/GuardianControllerLocatorText" />
+    </LinearLayout>
+</com.oculus.panelapp.anytimeui.dialogs.GuardianHandDialog>

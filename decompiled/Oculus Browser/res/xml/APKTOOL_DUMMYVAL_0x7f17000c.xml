@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <org.chromium.chrome.browser.preferences.download.DownloadLocationPreference android:title="@string/APKTOOL_DUMMYVAL_0x7f1302ee" android:key="location_change" android:positiveButtonText="@string/done" android:negativeButtonText="@null" />
+    <org.chromium.chrome.browser.preferences.ChromeSwitchPreference android:title="@string/APKTOOL_DUMMYVAL_0x7f1302b9" android:key="location_prompt_enabled" android:summaryOn="@string/APKTOOL_DUMMYVAL_0x7f130600" android:summaryOff="@string/APKTOOL_DUMMYVAL_0x7f1305ff" />
+    <org.chromium.chrome.browser.preferences.ChromeSwitchPreference android:title="@string/APKTOOL_DUMMYVAL_0x7f1302e1" android:key="prefetching_enabled" />
+</PreferenceScreen>

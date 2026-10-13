@@ -1,0 +1,125 @@
+.class Lcom/google/inject/internal/Annotations$AnnotationChecker;
+.super Ljava/lang/Object;
+.source "Annotations.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/inject/internal/Annotations;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = "AnnotationChecker"
+.end annotation
+
+
+# instance fields
+.field private final annotationTypes:Ljava/util/Collection;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Collection",
+            "<",
+            "Ljava/lang/Class",
+            "<+",
+            "Ljava/lang/annotation/Annotation;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field final cache:Lcom/google/common/cache/LoadingCache;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/common/cache/LoadingCache",
+            "<",
+            "Ljava/lang/Class",
+            "<+",
+            "Ljava/lang/annotation/Annotation;",
+            ">;",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private hasAnnotations:Lcom/google/common/cache/CacheLoader;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/common/cache/CacheLoader",
+            "<",
+            "Ljava/lang/Class",
+            "<+",
+            "Ljava/lang/annotation/Annotation;",
+            ">;",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method constructor <init>(Ljava/util/Collection;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Collection",
+            "<",
+            "Ljava/lang/Class",
+            "<+",
+            "Ljava/lang/annotation/Annotation;",
+            ">;>;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 71
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 54
+    new-instance v0, Lcom/google/inject/internal/Annotations$AnnotationChecker$1;
+
+    invoke-direct {v0, p0}, Lcom/google/inject/internal/Annotations$AnnotationChecker$1;-><init>(Lcom/google/inject/internal/Annotations$AnnotationChecker;)V
+
+    .line 55
+    invoke-static {v0}, Lcom/google/common/cache/CacheLoader;->from(Lcom/google/common/base/Function;)Lcom/google/common/cache/CacheLoader;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/inject/internal/Annotations$AnnotationChecker;->hasAnnotations:Lcom/google/common/cache/CacheLoader;
+
+    .line 68
+    invoke-static {}, Lcom/google/common/cache/CacheBuilder;->newBuilder()Lcom/google/common/cache/CacheBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/common/cache/CacheBuilder;->weakKeys()Lcom/google/common/cache/CacheBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/google/inject/internal/Annotations$AnnotationChecker;->hasAnnotations:Lcom/google/common/cache/CacheLoader;
+
+    invoke-virtual {v0, v1}, Lcom/google/common/cache/CacheBuilder;->build(Lcom/google/common/cache/CacheLoader;)Lcom/google/common/cache/LoadingCache;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/inject/internal/Annotations$AnnotationChecker;->cache:Lcom/google/common/cache/LoadingCache;
+
+    .line 72
+    iput-object p1, p0, Lcom/google/inject/internal/Annotations$AnnotationChecker;->annotationTypes:Ljava/util/Collection;
+
+    .line 73
+    return-void
+.end method
+
+.method static synthetic access$000(Lcom/google/inject/internal/Annotations$AnnotationChecker;)Ljava/util/Collection;
+    .locals 1
+
+    .prologue
+    .line 50
+    iget-object v0, p0, Lcom/google/inject/internal/Annotations$AnnotationChecker;->annotationTypes:Ljava/util/Collection;
+
+    return-object v0
+.end method

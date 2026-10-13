@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="12.0dip" android:layout_width="@dimen/store_recyclerview_item_width" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/store_product_tile_image_view" />
+    <TextView android:textSize="11.0sp" android:ellipsize="end" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:layout_marginRight="4.0dip" android:maxLines="1" android:fontFamily="sans-serif-medium" />
+    <TextView android:textSize="10.0sp" android:gravity="bottom|center|right" android:id="@id/price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/store_price_free" android:drawableLeft="@drawable/store_gray_purchased_icon" android:drawablePadding="7.0dip" />
+</LinearLayout>

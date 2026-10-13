@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.chromium.chrome.browser.widget.ChromeTextInputLayout android:id="@id/credit_card_name_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f070263" android:layout_marginBottom="@dimen/APKTOOL_DUMMYVAL_0x7f070261" android:labelFor="@id/credit_card_name_edit">
+        <EditText android:id="@id/credit_card_name_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/APKTOOL_DUMMYVAL_0x7f130170" android:inputType="textCapWords" android:imeOptions="flagNoExtractUi" />
+    </org.chromium.chrome.browser.widget.ChromeTextInputLayout>
+    <org.chromium.chrome.browser.widget.ChromeTextInputLayout android:id="@id/credit_card_number_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f070264" android:layout_marginBottom="@dimen/APKTOOL_DUMMYVAL_0x7f070261" android:labelFor="@id/credit_card_number_edit">
+        <EditText android:id="@id/credit_card_number_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/APKTOOL_DUMMYVAL_0x7f130171" android:digits="0123456789- " android:inputType="phone" android:imeOptions="flagNoExtractUi" />
+    </org.chromium.chrome.browser.widget.ChromeTextInputLayout>
+    <TextView android:textAppearance="@style/APKTOOL_DUMMYVAL_0x7f1401ba" android:id="@id/credit_card_expiration_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f070264" android:text="@string/APKTOOL_DUMMYVAL_0x7f13016f" android:layout_marginStart="@dimen/APKTOOL_DUMMYVAL_0x7f070262" android:layout_marginEnd="@dimen/APKTOOL_DUMMYVAL_0x7f070262" android:labelFor="@id/credit_card_expiration_month" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/credit_card_expiration_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUMMYVAL_0x7f070264" android:layout_marginBottom="@dimen/APKTOOL_DUMMYVAL_0x7f070260" android:baselineAligned="false" android:layout_marginStart="@dimen/APKTOOL_DUMMYVAL_0x7f070262" android:layout_marginEnd="@dimen/APKTOOL_DUMMYVAL_0x7f070262">
+        <LinearLayout android:orientation="vertical" android:id="@id/credit_card_expiration_month" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="@dimen/APKTOOL_DUMMYVAL_0x7f07010b">
+            <android.support.v7.widget.AppCompatSpinner android:id="@id/autofill_credit_card_editor_month_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <View style="@style/APKTOOL_DUMMYVAL_0x7f140150" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <android.support.v7.widget.AppCompatSpinner android:id="@id/autofill_credit_card_editor_year_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <View style="@style/APKTOOL_DUMMYVAL_0x7f140150" />
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/APKTOOL_DUMMYVAL_0x7f0e002c" />
+</merge>

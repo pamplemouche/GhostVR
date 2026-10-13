@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.chromium.chrome.browser.payments.ui.PaymentRequestBottomBar android:id="@id/bottom_bar" android:background="@color/APKTOOL_DUMMYVAL_0x7f060144" android:paddingTop="@dimen/APKTOOL_DUMMYVAL_0x7f07024f" android:paddingBottom="@dimen/APKTOOL_DUMMYVAL_0x7f07024f" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/APKTOOL_DUMMYVAL_0x7f07024e" android:paddingEnd="@dimen/APKTOOL_DUMMYVAL_0x7f07024e"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/logo_name" android:layout_width="72.0dip" android:layout_height="20.0dip" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f0802b0" />
+    <ImageView android:id="@id/logo" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/APKTOOL_DUMMYVAL_0x7f0800eb" />
+    <Space android:id="@id/space" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    <org.chromium.ui.widget.ButtonCompat android:id="@id/button_secondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/APKTOOL_DUMMYVAL_0x7f1304c7" style="@style/APKTOOL_DUMMYVAL_0x7f140226" />
+    <org.chromium.ui.widget.ButtonCompat android:id="@id/button_primary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/APKTOOL_DUMMYVAL_0x7f1304d5" style="@style/APKTOOL_DUMMYVAL_0x7f1400ff" />
+</org.chromium.chrome.browser.payments.ui.PaymentRequestBottomBar>
