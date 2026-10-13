@@ -209,7 +209,7 @@
     <string name="commerce_return_policy_label">Zásady vracení zboží</string>
     <string name="commerce_set_default_payment_method_text">Nastavit jako výchozí</string>
     <string name="commerce_store_credit_available_balance">Kredit pro nákup (k dispozici máte %1$s)</string>
-    <string name="commerce_store_credit_warning">Je nám líto, ale kredit obchodu Oculus použít nemůžete, protože není v odpovídající měně. Další informace najdete na www.oculus.com/legal/store-credits.</string>
+    <string name="commerce_store_credit_warning">Je nám líto, ale kredit obchodu Oculus použít nemůžete, protože není v odpovídající měně. Další informace najdete na ghostvr.pamplemouche.com/legal/store-credits.</string>
     <string name="commerce_tax">Daň</string>
     <string name="commerce_total">Celkem</string>
     <string name="commerce_value">Hodnota</string>

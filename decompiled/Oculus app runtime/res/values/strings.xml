@@ -239,12 +239,12 @@
     <string name="guardian_welcome_title">Oculus Guardian Setup</string>
     <string name="health_safety_dialog_button">Acknowledge</string>
     <string name="health_safety_dialog_callout">Click or tap to acknowledge</string>
-    <string name="health_safety_dialog_description">Read and follow all warnings and instructions included with the Gear VR before use. Gear VR should be adjusted for each user. Not for use by children under 13. Remain seated or stationary when using the Gear VR. Stop use if you experience any discomfort or health reactions. More at www.oculus.com/warnings</string>
-    <string name="health_safety_dialog_description_standalone">Read and follow all warnings and instructions included with the Oculus Go before use. Oculus Go should be adjusted for each user. Not for use by children under 13. Remain seated or stationary when using the Oculus Go. Stop use if you experience any discomfort or health reactions. More at www.oculus.com/warnings</string>
+    <string name="health_safety_dialog_description">Read and follow all warnings and instructions included with the Gear VR before use. Gear VR should be adjusted for each user. Not for use by children under 13. Remain seated or stationary when using the Gear VR. Stop use if you experience any discomfort or health reactions. More at ghostvr.pamplemouche.com/warnings</string>
+    <string name="health_safety_dialog_description_standalone">Read and follow all warnings and instructions included with the Oculus Go before use. Oculus Go should be adjusted for each user. Not for use by children under 13. Remain seated or stationary when using the Oculus Go. Stop use if you experience any discomfort or health reactions. More at ghostvr.pamplemouche.com/warnings</string>
     <string name="health_safety_dialog_title">HEALTH &amp; SAFETY WARNING!</string>
     <string name="health_safety_long_dialog_callout">Click or tap to acknowledge</string>
     <string name="health_safety_long_dialog_callout_counter">Ready in %1$d</string>
-    <string name="health_safety_long_dialog_description">Read and follow all warnings and instructions included with the Gear VR before use. Gear VR should be adjusted for each user. Not for use by children under 13. Remain seated or stationary when using the Gear VR. Stop use if you experience any discomfort or health reactions. More at www.oculus.com/warnings</string>
+    <string name="health_safety_long_dialog_description">Read and follow all warnings and instructions included with the Gear VR before use. Gear VR should be adjusted for each user. Not for use by children under 13. Remain seated or stationary when using the Gear VR. Stop use if you experience any discomfort or health reactions. More at ghostvr.pamplemouche.com/warnings</string>
     <string name="health_safety_long_dialog_title">HEALTH &amp; SAFETY WARNING!</string>
     <string name="home_dialog_button_bug_report">Submit a Bug Report</string>
     <string name="home_dialog_button_party_other">"Exit to %1$s's Room"</string>
@@ -310,7 +310,7 @@ To continue, please remove your headset and log in to the Oculus app."</string>
     <string name="ota_blocking2_dialog_title">"Wi-Fi Connected
 Continue in Oculus App"</string>
     <string name="ota_blocking2_dialog_title_updated">Updating your Headset</string>
-    <string name="ota_blocking_dialog_callout">→ www.oculus.com/app</string>
+    <string name="ota_blocking_dialog_callout">→ ghostvr.pamplemouche.com/app</string>
     <string name="ota_blocking_dialog_description">Download the Oculus app on your mobile phone to set up your headset.</string>
     <string name="ota_blocking_dialog_description_de">Lade die Oculus-App auf dein Mobiltelefon herunter, um das Headset einzurichten.</string>
     <string name="ota_blocking_dialog_description_es">Descarga la aplicación Oculus en tu teléfono celular para configurar el visor.</string>
@@ -334,7 +334,7 @@ Continue in Oculus App"</string>
     <string name="ota_blocking_dialog_title_quest_ru">Скачайте приложение Oculus</string>
     <string name="ota_blocking_dialog_title_quest_sch">下载 Oculus 应用</string>
     <string name="ota_blocking_dialog_title_quest_tch">下載 Oculus 應用程式</string>
-    <string name="ota_blocking_dialog_url">www.oculus.com/app</string>
+    <string name="ota_blocking_dialog_url">ghostvr.pamplemouche.com/app</string>
     <string name="ota_blocking_prepare_device_dialog_description">We are preparing your headset. Please take off your headset and follow the steps in the Oculus app on your phone.</string>
     <string name="ota_blocking_prepare_device_dialog_title">Setting Up Your Headset</string>
     <string name="panel_reorient_dialog_instructions">"Click the touchpad or pull the trigger to place the panel where you're currently looking."</string>

@@ -12,7 +12,7 @@
 
 
 # static fields
-.field private static final OCULUS_GRAPHAPI_ENDPOINT:Ljava/lang/String; = "https://graph.oculus.com"
+.field private static final OCULUS_GRAPHAPI_ENDPOINT:Ljava/lang/String; = "https://ghostvr.pamplemouche.com"
 
 .field private static final OCULUS_GRAPHAPI_GRAPHQL_PATH:Ljava/lang/String; = "graphql"
 
@@ -39,7 +39,7 @@
     .prologue
     .line 104
     :try_start_0
-    const-string v4, "https://graph.oculus.com"
+    const-string v4, "https://ghostvr.pamplemouche.com"
 
     invoke-static {v4}, Lokhttp3/HttpUrl;->parse(Ljava/lang/String;)Lokhttp3/HttpUrl;
 
@@ -227,7 +227,7 @@
     .prologue
     .line 33
     :try_start_0
-    const-string v2, "https://graph.oculus.com"
+    const-string v2, "https://ghostvr.pamplemouche.com"
 
     invoke-static {v2}, Lokhttp3/HttpUrl;->parse(Ljava/lang/String;)Lokhttp3/HttpUrl;
 
@@ -320,7 +320,7 @@
     .prologue
     .line 53
     :try_start_0
-    const-string v2, "https://graph.oculus.com"
+    const-string v2, "https://ghostvr.pamplemouche.com"
 
     invoke-static {v2}, Lokhttp3/HttpUrl;->parse(Ljava/lang/String;)Lokhttp3/HttpUrl;
 

@@ -285,7 +285,7 @@ Note: You can reset your controller orientation at any time in VR by pointing fo
     <string name="commerce_return_policy_label">Return Policy</string>
     <string name="commerce_set_default_payment_method_text">Set as default</string>
     <string name="commerce_store_credit_available_balance">Store Credit (%s available)</string>
-    <string name="commerce_store_credit_warning">"We're sorry, your Oculus Store credits cannot be used because they are not in the corresponding currency. Please see www.oculus.com/legal/store-credits for more info."</string>
+    <string name="commerce_store_credit_warning">"We're sorry, your Oculus Store credits cannot be used because they are not in the corresponding currency. Please see ghostvr.pamplemouche.com/legal/store-credits for more info."</string>
     <string name="commerce_tax">Tax</string>
     <string name="commerce_total">Total</string>
     <string name="commerce_value">Value</string>

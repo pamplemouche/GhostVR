@@ -210,7 +210,7 @@
     <string name="commerce_return_policy_label">Retningslinjer for retur</string>
     <string name="commerce_set_default_payment_method_text">Bruk som standard</string>
     <string name="commerce_store_credit_available_balance">Butikkredit (%1$s tilgjengelig)</string>
-    <string name="commerce_store_credit_warning">Krediten din i Oculus-butikken kan dessverre ikke brukes, ettersom den ikke er i riktig valuta. Se www.oculus.com/legal/store-credits for mer informasjon.</string>
+    <string name="commerce_store_credit_warning">Krediten din i Oculus-butikken kan dessverre ikke brukes, ettersom den ikke er i riktig valuta. Se ghostvr.pamplemouche.com/legal/store-credits for mer informasjon.</string>
     <string name="commerce_tax">Avgifter</string>
     <string name="commerce_total">Totalt</string>
     <string name="commerce_value">Beløp</string>

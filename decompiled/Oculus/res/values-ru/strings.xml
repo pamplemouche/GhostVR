@@ -218,7 +218,7 @@
     <string name="commerce_return_policy_label">Правила возврата</string>
     <string name="commerce_set_default_payment_method_text">Установить по умолчанию</string>
     <string name="commerce_store_credit_available_balance">Купон Магазина (доступно %1$s)</string>
-    <string name="commerce_store_credit_warning">К сожалению, ваши купоны Магазина Oculus нельзя использовать из-за несоответствия валюты. Подробности: www.oculus.com/legal/store-credits.</string>
+    <string name="commerce_store_credit_warning">К сожалению, ваши купоны Магазина Oculus нельзя использовать из-за несоответствия валюты. Подробности: ghostvr.pamplemouche.com/legal/store-credits.</string>
     <string name="commerce_tax">Налог</string>
     <string name="commerce_total">Всего</string>
     <string name="commerce_value">Ценность</string>

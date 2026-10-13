@@ -204,12 +204,12 @@
     <string name="guardian_welcome_title">Oculusガーディアンを設定</string>
     <string name="health_safety_dialog_button">同意する</string>
     <string name="health_safety_dialog_callout">同意するには、クリックまたはタップしてください</string>
-    <string name="health_safety_dialog_description">ご使用前にGear VRに付属された注意点と使用手順をよくお読みください。Gear VRは各利用者に合わせて調整してください。この製品は13歳以上を対象とした製品です。Gear VRは着席または静止した状態でご利用ください。不快感または異常を感じた場合には、使用を中止してください。その他の情報はwww.oculus.com/warningsでご確認ください。</string>
-    <string name="health_safety_dialog_description_standalone">ご使用前にOculus Goに付属された注意点と使用手順をよくお読みください。Oculus Goは各利用者に合わせて調整してください。この製品は13歳以上を対象とした製品です。Oculus Goは着席または静止した状態でご利用ください。不快感または異常を感じた場合には、使用を中止してください。その他の情報はwww.oculus.com/warningsでご確認ください。</string>
+    <string name="health_safety_dialog_description">ご使用前にGear VRに付属された注意点と使用手順をよくお読みください。Gear VRは各利用者に合わせて調整してください。この製品は13歳以上を対象とした製品です。Gear VRは着席または静止した状態でご利用ください。不快感または異常を感じた場合には、使用を中止してください。その他の情報はghostvr.pamplemouche.com/warningsでご確認ください。</string>
+    <string name="health_safety_dialog_description_standalone">ご使用前にOculus Goに付属された注意点と使用手順をよくお読みください。Oculus Goは各利用者に合わせて調整してください。この製品は13歳以上を対象とした製品です。Oculus Goは着席または静止した状態でご利用ください。不快感または異常を感じた場合には、使用を中止してください。その他の情報はghostvr.pamplemouche.com/warningsでご確認ください。</string>
     <string name="health_safety_dialog_title">健康と安全のための警告</string>
     <string name="health_safety_long_dialog_callout">同意するには、クリックまたはタップしてください</string>
     <string name="health_safety_long_dialog_callout_counter">開始まで%1$d</string>
-    <string name="health_safety_long_dialog_description">ご使用前にGear VRに付属された注意点と使用手順をよくお読みください。Gear VRは各利用者に合わせて調整してください。この製品は13歳以上を対象とした製品です。Gear VRは着席または静止した状態でご利用ください。不快感または異常を感じた場合には、使用を中止してください。その他の情報はwww.oculus.com/warningsでご確認ください。</string>
+    <string name="health_safety_long_dialog_description">ご使用前にGear VRに付属された注意点と使用手順をよくお読みください。Gear VRは各利用者に合わせて調整してください。この製品は13歳以上を対象とした製品です。Gear VRは着席または静止した状態でご利用ください。不快感または異常を感じた場合には、使用を中止してください。その他の情報はghostvr.pamplemouche.com/warningsでご確認ください。</string>
     <string name="health_safety_long_dialog_title">健康と安全のための警告</string>
     <string name="home_dialog_button_bug_report">バグ報告を送信する</string>
     <string name="home_dialog_button_party_other">%1$sさんのルームに戻る</string>

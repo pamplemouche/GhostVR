@@ -212,7 +212,7 @@
     <string name="commerce_return_policy_label">Palautuskäytäntö</string>
     <string name="commerce_set_default_payment_method_text">Aseta oletukseksi</string>
     <string name="commerce_store_credit_available_balance">Kaupan luotto (saatavilla %1$s)</string>
-    <string name="commerce_store_credit_warning">Oculus-kaupan krediittejä ei ikävä kyllä voi käyttää, sillä niiden valuutta on väärä. Saat lisätietoja osoitteesta www.oculus.com/legal/store-credits.</string>
+    <string name="commerce_store_credit_warning">Oculus-kaupan krediittejä ei ikävä kyllä voi käyttää, sillä niiden valuutta on väärä. Saat lisätietoja osoitteesta ghostvr.pamplemouche.com/legal/store-credits.</string>
     <string name="commerce_tax">Vero</string>
     <string name="commerce_total">Yhteensä</string>
     <string name="commerce_value">Arvo</string>

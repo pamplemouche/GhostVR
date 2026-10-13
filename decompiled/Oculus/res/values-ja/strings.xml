@@ -209,7 +209,7 @@
     <string name="commerce_return_policy_label">返品ポリシー</string>
     <string name="commerce_set_default_payment_method_text">デフォルトに指定</string>
     <string name="commerce_store_credit_available_balance">ストアポイント(利用可能:%1$s)</string>
-    <string name="commerce_store_credit_warning">対応する通貨のものではないため、このOculusストアポイントはご利用いただけません。詳細はwww.oculus.com/legal/store-creditsをご覧ください。</string>
+    <string name="commerce_store_credit_warning">対応する通貨のものではないため、このOculusストアポイントはご利用いただけません。詳細はghostvr.pamplemouche.com/legal/store-creditsをご覧ください。</string>
     <string name="commerce_tax">税</string>
     <string name="commerce_total">合計</string>
     <string name="commerce_value">クーポン額</string>

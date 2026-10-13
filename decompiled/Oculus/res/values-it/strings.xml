@@ -211,7 +211,7 @@
     <string name="commerce_return_policy_label">Normativa sui resi</string>
     <string name="commerce_set_default_payment_method_text">Imposta come opzione predefinita</string>
     <string name="commerce_store_credit_available_balance">Credito dello store (disponibilità: %1$s)</string>
-    <string name="commerce_store_credit_warning">Siamo spiacenti, impossibile usare il tuo credito dello store di Oculus perché non è nella valuta corrispondente. Per maggiori informazioni, consulta www.oculus.com/legal/store-credits.</string>
+    <string name="commerce_store_credit_warning">Siamo spiacenti, impossibile usare il tuo credito dello store di Oculus perché non è nella valuta corrispondente. Per maggiori informazioni, consulta ghostvr.pamplemouche.com/legal/store-credits.</string>
     <string name="commerce_tax">Imposta</string>
     <string name="commerce_total">Totale</string>
     <string name="commerce_value">Valore</string>

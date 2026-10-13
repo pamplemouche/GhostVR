@@ -94,7 +94,7 @@
     <string name="commerce_request_refund_status_scheduled">Refund requested</string>
     <string name="commerce_return_policy_label">Returns Policy</string>
     <string name="commerce_store_credit_available_balance">Store credit (%1$s available)</string>
-    <string name="commerce_store_credit_warning">"We're sorry, your Oculus Store credits cannot be used because they are not in the corresponding currency. Please see www.oculus.com/legal/store-credits for more information."</string>
+    <string name="commerce_store_credit_warning">"We're sorry, your Oculus Store credits cannot be used because they are not in the corresponding currency. Please see ghostvr.pamplemouche.com/legal/store-credits for more information."</string>
     <string name="common_delimiter">,</string>
     <string name="common_download_progress">%1$s/%2$s</string>
     <string name="common_download_wifi_warning_description">"You aren't on Wi-Fi, so you'll use your mobile data network to download. Do you wish to continue?"</string>

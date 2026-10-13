@@ -211,7 +211,7 @@
     <string name="commerce_return_policy_label">İade İlkesi</string>
     <string name="commerce_set_default_payment_method_text">Varsayılan olarak ayarla</string>
     <string name="commerce_store_credit_available_balance">Mağaza Kredisi (%1$s mevcut)</string>
-    <string name="commerce_store_credit_warning">Üzgünüz, Oculus Mağazası kredilerin aynı para biriminde olmadığı için kullanılamıyor. Daha fazla bilgi için lütfen www.oculus.com/legal/store-credits adresine bak.</string>
+    <string name="commerce_store_credit_warning">Üzgünüz, Oculus Mağazası kredilerin aynı para biriminde olmadığı için kullanılamıyor. Daha fazla bilgi için lütfen ghostvr.pamplemouche.com/legal/store-credits adresine bak.</string>
     <string name="commerce_tax">Vergi</string>
     <string name="commerce_total">Toplam</string>
     <string name="commerce_value">Değer</string>

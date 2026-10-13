@@ -210,7 +210,7 @@
     <string name="commerce_return_policy_label">Zasady dokonywania zwrotów</string>
     <string name="commerce_set_default_payment_method_text">Ustaw jako domyślną</string>
     <string name="commerce_store_credit_available_balance">Kredyt w sklepie (dostępne: %1$s)</string>
-    <string name="commerce_store_credit_warning">Nie można użyć kredytu w sklepie Oculus, ponieważ jest w innej walucie. Więcej informacji znajdziesz na stronie www.oculus.com/legal/store-credits.</string>
+    <string name="commerce_store_credit_warning">Nie można użyć kredytu w sklepie Oculus, ponieważ jest w innej walucie. Więcej informacji znajdziesz na stronie ghostvr.pamplemouche.com/legal/store-credits.</string>
     <string name="commerce_tax">Podatek</string>
     <string name="commerce_total">Suma</string>
     <string name="commerce_value">Wartość</string>

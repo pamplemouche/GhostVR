@@ -209,12 +209,12 @@
     <string name="guardian_welcome_title">Oculus 守護神設定</string>
     <string name="health_safety_dialog_button">確認</string>
     <string name="health_safety_dialog_callout">點擊或點按即可確認</string>
-    <string name="health_safety_dialog_description">使用前請先詳閱並遵循 Gear VR 隨附的所有警告與指示。Gear VR 必須依照每位用戶的狀況調整，而且不適用於 13 歲以下兒童。使用 Gear VR 時請保持在座位上或靜止不動。如果身體出現任何不適或不良反應，請停止使用。更多資訊請見 www.oculus.com/warnings</string>
-    <string name="health_safety_dialog_description_standalone">使用前請先詳閱並遵循 Oculus Go 隨附的所有警告與指示。Oculus Go 必須依照每位用戶的狀況調整，而且不適用於 13 歲以下兒童。使用 Oculus Go 時請保持在座位上或靜止不動。如果身體出現任何不適或不良反應，請停止使用。更多資訊請見 www.oculus.com/warnings</string>
+    <string name="health_safety_dialog_description">使用前請先詳閱並遵循 Gear VR 隨附的所有警告與指示。Gear VR 必須依照每位用戶的狀況調整，而且不適用於 13 歲以下兒童。使用 Gear VR 時請保持在座位上或靜止不動。如果身體出現任何不適或不良反應，請停止使用。更多資訊請見 ghostvr.pamplemouche.com/warnings</string>
+    <string name="health_safety_dialog_description_standalone">使用前請先詳閱並遵循 Oculus Go 隨附的所有警告與指示。Oculus Go 必須依照每位用戶的狀況調整，而且不適用於 13 歲以下兒童。使用 Oculus Go 時請保持在座位上或靜止不動。如果身體出現任何不適或不良反應，請停止使用。更多資訊請見 ghostvr.pamplemouche.com/warnings</string>
     <string name="health_safety_dialog_title">健康與安全警告！</string>
     <string name="health_safety_long_dialog_callout">點擊或點按即可確認</string>
     <string name="health_safety_long_dialog_callout_counter">%1$d後就緒</string>
-    <string name="health_safety_long_dialog_description">使用前請先詳閱並遵循 Gear VR 隨附的所有警告與指示。Gear VR 必須依照每位用戶的狀況調整，而且不適用於 13 歲以下兒童。使用 Gear VR 時請保持在座位上或靜止不動。如果身體出現任何不適或不良反應，請停止使用。更多資訊請見 www.oculus.com/warnings</string>
+    <string name="health_safety_long_dialog_description">使用前請先詳閱並遵循 Gear VR 隨附的所有警告與指示。Gear VR 必須依照每位用戶的狀況調整，而且不適用於 13 歲以下兒童。使用 Gear VR 時請保持在座位上或靜止不動。如果身體出現任何不適或不良反應，請停止使用。更多資訊請見 ghostvr.pamplemouche.com/warnings</string>
     <string name="health_safety_long_dialog_title">健康與安全警告！</string>
     <string name="home_dialog_button_bug_report">回報故障</string>
     <string name="home_dialog_button_party_other">退出並前往%1$s的虛擬空間</string>

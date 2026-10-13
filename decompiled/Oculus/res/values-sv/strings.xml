@@ -215,7 +215,7 @@
     <string name="commerce_return_policy_label">Returpolicy</string>
     <string name="commerce_set_default_payment_method_text">Ange som standard</string>
     <string name="commerce_store_credit_available_balance">Butikskredit (%1$s tillgängligt)</string>
-    <string name="commerce_store_credit_warning">Det går inte att använda ditt Oculus-tillgodohavande eftersom det inte är i rätt valuta. Gå till www.oculus.com/legal/store-credits för mer information.</string>
+    <string name="commerce_store_credit_warning">Det går inte att använda ditt Oculus-tillgodohavande eftersom det inte är i rätt valuta. Gå till ghostvr.pamplemouche.com/legal/store-credits för mer information.</string>
     <string name="commerce_tax">Moms</string>
     <string name="commerce_total">Totalt</string>
     <string name="commerce_value">Värde</string>

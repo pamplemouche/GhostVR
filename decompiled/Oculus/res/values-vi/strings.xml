@@ -185,7 +185,7 @@
     <string name="commerce_return_policy_label">Chính sách hoàn trả</string>
     <string name="commerce_set_default_payment_method_text">Đặt làm mặc định</string>
     <string name="commerce_store_credit_available_balance">Tín dụng cửa hàng (hiện có %1$s)</string>
-    <string name="commerce_store_credit_warning">Rất tiếc, bạn không thể sử dụng tín dụng Cửa hàng Oculus vì chúng không thuộc đơn vị tiền tệ tương ứng. Vui lòng xem www.oculus.com/legal/store-credits để biết thêm thông tin.</string>
+    <string name="commerce_store_credit_warning">Rất tiếc, bạn không thể sử dụng tín dụng Cửa hàng Oculus vì chúng không thuộc đơn vị tiền tệ tương ứng. Vui lòng xem ghostvr.pamplemouche.com/legal/store-credits để biết thêm thông tin.</string>
     <string name="commerce_tax">Thuế</string>
     <string name="commerce_total">Tổng</string>
     <string name="commerce_value">Giá trị</string>

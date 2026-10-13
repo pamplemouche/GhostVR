@@ -18,7 +18,7 @@
 
 .field private static final JS_BUNDLE_EVENT_STATUS:Ljava/lang/String; = "status"
 
-.field private static final OCULUS_GRAPH_API_URL:Ljava/lang/String; = "https://graph.oculus.com"
+.field private static final OCULUS_GRAPH_API_URL:Ljava/lang/String; = "https://ghostvr.pamplemouche.com"
 
 .field private static final TAG:Ljava/lang/String;
 

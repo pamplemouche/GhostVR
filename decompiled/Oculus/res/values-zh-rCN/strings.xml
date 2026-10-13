@@ -212,7 +212,7 @@
     <string name="commerce_return_policy_label">退货政策</string>
     <string name="commerce_set_default_payment_method_text">设置为默认</string>
     <string name="commerce_store_credit_available_balance">点数（可用：%1$s）</string>
-    <string name="commerce_store_credit_warning">很抱歉，由于币种不一致，无法使用你的 Oculus 点数。请访问 www.oculus.com/legal/store-credits 了解详情。</string>
+    <string name="commerce_store_credit_warning">很抱歉，由于币种不一致，无法使用你的 Oculus 点数。请访问 ghostvr.pamplemouche.com/legal/store-credits 了解详情。</string>
     <string name="commerce_tax">税</string>
     <string name="commerce_total">总计</string>
     <string name="commerce_value">价值</string>

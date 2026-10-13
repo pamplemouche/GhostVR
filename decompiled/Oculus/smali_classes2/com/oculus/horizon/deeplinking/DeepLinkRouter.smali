@@ -567,7 +567,7 @@
     .line 93
     iget-object v0, p0, Lcom/oculus/horizon/deeplinking/DeepLinkRouter;->mURIMatcher:Landroid/content/UriMatcher;
 
-    const-string v1, "www.oculus.com"
+    const-string v1, "ghostvr.pamplemouche.com"
 
     iget-object v2, p0, Lcom/oculus/horizon/deeplinking/DeepLinkRouter;->mLinkHandlers:Ljava/util/LinkedList;
 

@@ -213,7 +213,7 @@
     <string name="commerce_return_policy_label">Rückgaberichtlinie</string>
     <string name="commerce_set_default_payment_method_text">Als Standard festlegen</string>
     <string name="commerce_store_credit_available_balance">Guthaben (%1$s verfügbar)</string>
-    <string name="commerce_store_credit_warning">Leider kannst du dein Oculus Store-Guthaben nicht einlösen, da es nicht die richtige Währung aufweist. Unter www.oculus.com/legal/store-credits findest du weitere Informationen.</string>
+    <string name="commerce_store_credit_warning">Leider kannst du dein Oculus Store-Guthaben nicht einlösen, da es nicht die richtige Währung aufweist. Unter ghostvr.pamplemouche.com/legal/store-credits findest du weitere Informationen.</string>
     <string name="commerce_tax">Steuern</string>
     <string name="commerce_total">Gesamt</string>
     <string name="commerce_value">Wert</string>

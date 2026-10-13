@@ -192,7 +192,7 @@
     <string name="commerce_return_policy_label">Politica de returnare</string>
     <string name="commerce_set_default_payment_method_text">Setează ca implicită</string>
     <string name="commerce_store_credit_available_balance">Credit în magazin (disponibil: %1$s)</string>
-    <string name="commerce_store_credit_warning">Ne pare rău, creditele pentru Magazinul Oculus nu pot fi folosite, deoarece nu sunt în moneda corespunzătoare. Pentru mai multe informaţii, te rugăm să accesezi www.oculus.com/legal/store-credits.</string>
+    <string name="commerce_store_credit_warning">Ne pare rău, creditele pentru Magazinul Oculus nu pot fi folosite, deoarece nu sunt în moneda corespunzătoare. Pentru mai multe informaţii, te rugăm să accesezi ghostvr.pamplemouche.com/legal/store-credits.</string>
     <string name="commerce_tax">Taxe</string>
     <string name="commerce_value">Valoare</string>
     <string name="common_agree_and_continue">De acord şi continuă</string>

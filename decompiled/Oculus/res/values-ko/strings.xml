@@ -209,7 +209,7 @@
     <string name="commerce_return_policy_label">환불 정책</string>
     <string name="commerce_set_default_payment_method_text">기본 결제 수단으로 설정</string>
     <string name="commerce_store_credit_available_balance">스토어 크레딧(%1$s 이용 가능)</string>
-    <string name="commerce_store_credit_warning">죄송합니다. 통화가 일치하지 않아 Oculus 스토어 크레딧을 사용할 수 없습니다. 자세한 내용은 www.oculus.com/legal/store-credits에서 확인하세요.</string>
+    <string name="commerce_store_credit_warning">죄송합니다. 통화가 일치하지 않아 Oculus 스토어 크레딧을 사용할 수 없습니다. 자세한 내용은 ghostvr.pamplemouche.com/legal/store-credits에서 확인하세요.</string>
     <string name="commerce_tax">세금</string>
     <string name="commerce_total">총 금액</string>
     <string name="commerce_value">값</string>

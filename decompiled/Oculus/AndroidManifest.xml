@@ -185,7 +185,7 @@
                 <action android:name="android.intent.action.VIEW"/>
                 <data android:scheme="http"/>
                 <data android:scheme="https"/>
-                <data android:host="www.oculus.com"/>
+                <data android:host="ghostvr.pamplemouche.com"/>
                 <data android:host="www2.oculus.com"/>
                 <data android:pathPrefix="/experiences/gear-vr/"/>
                 <data android:pathPrefix="/experiences/event/"/>

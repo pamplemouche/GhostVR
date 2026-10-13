@@ -88,7 +88,7 @@
     invoke-static {v0, v1, v2}, Lcom/oculus/logging/legacy/OculusLogger;->reportEvent(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 93
-    const-string v0, "https://graph.oculus.com"
+    const-string v0, "https://ghostvr.pamplemouche.com"
 
     invoke-static {v0}, Lokhttp3/HttpUrl;->parse(Ljava/lang/String;)Lokhttp3/HttpUrl;
 

@@ -217,7 +217,7 @@
     <string name="commerce_return_policy_label">退貨政策</string>
     <string name="commerce_set_default_payment_method_text">設為預設</string>
     <string name="commerce_store_credit_available_balance">商店購物金（%1$s可用）</string>
-    <string name="commerce_store_credit_warning">很抱歉，你的 Oculus 商店購物金無法使用，因為購物金的幣別不相符。請查看 www.oculus.com/legal/store-credits 以瞭解更多資訊。</string>
+    <string name="commerce_store_credit_warning">很抱歉，你的 Oculus 商店購物金無法使用，因為購物金的幣別不相符。請查看 ghostvr.pamplemouche.com/legal/store-credits 以瞭解更多資訊。</string>
     <string name="commerce_tax">稅金</string>
     <string name="commerce_total">總計</string>
     <string name="commerce_value">價值</string>

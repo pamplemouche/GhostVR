@@ -249,7 +249,7 @@
 
     move-result-object v0
 
-    const-string v1, "graph.facebook.com"
+    const-string v1, "ghostvr.pamplemouche.com"
 
     .line 316
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
@@ -304,7 +304,7 @@
 
     move-result-object v0
 
-    const-string v1, "graph.facebook.com"
+    const-string v1, "ghostvr.pamplemouche.com"
 
     .line 325
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
@@ -426,7 +426,7 @@
 
     move-result-object v0
 
-    const-string v2, "graph.facebook.com"
+    const-string v2, "ghostvr.pamplemouche.com"
 
     .line 341
     invoke-virtual {v0, v2}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;

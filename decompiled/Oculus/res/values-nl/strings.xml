@@ -212,7 +212,7 @@
     <string name="commerce_return_policy_label">Retourbeleid</string>
     <string name="commerce_set_default_payment_method_text">Als standaard instellen</string>
     <string name="commerce_store_credit_available_balance">Winkeltegoed (%1$s beschikbaar)</string>
-    <string name="commerce_store_credit_warning">Je Oculus-winkeltegoed kan niet worden gebruikt omdat het niet de overeenkomende munteenheid heeft. Raadpleeg www.oculus.com/legal/store-credits voor meer informatie.</string>
+    <string name="commerce_store_credit_warning">Je Oculus-winkeltegoed kan niet worden gebruikt omdat het niet de overeenkomende munteenheid heeft. Raadpleeg ghostvr.pamplemouche.com/legal/store-credits voor meer informatie.</string>
     <string name="commerce_tax">Btw</string>
     <string name="commerce_total">Totaal</string>
     <string name="commerce_value">Waarde</string>

@@ -204,7 +204,7 @@
     <string name="commerce_return_policy_label">Política de Devolução</string>
     <string name="commerce_set_default_payment_method_text">Definir como padrão</string>
     <string name="commerce_store_credit_available_balance">Crédito na loja (valor de %1$s disponível)</string>
-    <string name="commerce_store_credit_warning">Seus créditos da Loja Oculus não podem ser usados porque eles não estão na moeda correspondente. Consulte www.oculus.com/legal/store-credits para obter mais informações.</string>
+    <string name="commerce_store_credit_warning">Seus créditos da Loja Oculus não podem ser usados porque eles não estão na moeda correspondente. Consulte ghostvr.pamplemouche.com/legal/store-credits para obter mais informações.</string>
     <string name="commerce_tax">Imposto</string>
     <string name="commerce_value">Valor</string>
     <string name="common_agree_and_continue">Concordar e continuar</string>

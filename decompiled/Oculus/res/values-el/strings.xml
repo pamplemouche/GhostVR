@@ -206,7 +206,7 @@
     <string name="commerce_return_policy_label">Πολιτική επιστροφών</string>
     <string name="commerce_set_default_payment_method_text">Ορισμός ως προεπιλογής</string>
     <string name="commerce_store_credit_available_balance">Πίστωση στο κατάστημα (%1$s διαθέσιμο υπόλοιπο)</string>
-    <string name="commerce_store_credit_warning">Δυστυχώς, δεν μπορείτε να χρησιμοποιήσετε τις μονάδες του Oculus Store, επειδή δεν είναι στο αντίστοιχο νόμισμα. Για περισσότερες πληροφορίες, ανατρέξτε στη διεύθυνση www.oculus.com/legal/store-credits.</string>
+    <string name="commerce_store_credit_warning">Δυστυχώς, δεν μπορείτε να χρησιμοποιήσετε τις μονάδες του Oculus Store, επειδή δεν είναι στο αντίστοιχο νόμισμα. Για περισσότερες πληροφορίες, ανατρέξτε στη διεύθυνση ghostvr.pamplemouche.com/legal/store-credits.</string>
     <string name="commerce_tax">Φόρος</string>
     <string name="commerce_total">Σύνολο</string>
     <string name="commerce_value">Αξία</string>

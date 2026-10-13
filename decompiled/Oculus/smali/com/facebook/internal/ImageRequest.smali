@@ -14,7 +14,7 @@
 
 
 # static fields
-.field private static final AUTHORITY:Ljava/lang/String; = "graph.facebook.com"
+.field private static final AUTHORITY:Ljava/lang/String; = "ghostvr.pamplemouche.com"
 
 .field private static final HEIGHT_PARAM:Ljava/lang/String; = "height"
 
@@ -162,7 +162,7 @@
 
     move-result-object v2
 
-    const-string v3, "graph.facebook.com"
+    const-string v3, "ghostvr.pamplemouche.com"
 
     invoke-virtual {v2, v3}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
 

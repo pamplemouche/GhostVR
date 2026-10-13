@@ -501,7 +501,7 @@
 
     .line 251
     :cond_1
-    const-string v3, "graph.oculus.com"
+    const-string v3, "ghostvr.pamplemouche.com"
 
     invoke-virtual {v2}, Ljava/net/URL;->getHost()Ljava/lang/String;
 

@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final FB_GRAPHAPI_ENDPOINT:Ljava/lang/String; = "https://graph.facebook.com"
+.field private static final FB_GRAPHAPI_ENDPOINT:Ljava/lang/String; = "https://ghostvr.pamplemouche.com"
 
 .field private static final HORIZON_FB_APP_TOKEN:Ljava/lang/String; = "1437758943160428|3d88b3e2a4e039224c5377a3fcd71d38"
 
@@ -785,7 +785,7 @@
     invoke-static {v3, v4, v5}, Lcom/oculus/logging/legacy/OculusLogger;->reportEvent(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 328
-    const-string v3, "https://graph.facebook.com"
+    const-string v3, "https://ghostvr.pamplemouche.com"
 
     invoke-static {v3}, Lokhttp3/HttpUrl;->parse(Ljava/lang/String;)Lokhttp3/HttpUrl;
 

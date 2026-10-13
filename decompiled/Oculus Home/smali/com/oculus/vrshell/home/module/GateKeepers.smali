@@ -14,7 +14,7 @@
 
 .field private static MODULE_NAME:Ljava/lang/String; = null
 
-.field private static final OCULUS_GRAPHAPI_ENDPOINT:Ljava/lang/String; = "https://graph.oculus.com"
+.field private static final OCULUS_GRAPHAPI_ENDPOINT:Ljava/lang/String; = "https://ghostvr.pamplemouche.com"
 
 .field private static final TAG:Ljava/lang/String;
 
@@ -1236,7 +1236,7 @@
     invoke-static {v3, v4, v5}, Lcom/oculus/logging/legacy/OculusLogger;->reportEvent(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 368
-    const-string v3, "https://graph.oculus.com"
+    const-string v3, "https://ghostvr.pamplemouche.com"
 
     invoke-static {v3}, Lokhttp3/HttpUrl;->parse(Ljava/lang/String;)Lokhttp3/HttpUrl;
 
