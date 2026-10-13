@@ -92,7 +92,7 @@
     goto :goto_0
 
     :cond_3
-    const-string p0, "Working around action mode LG Email bug in WebView (http://crbug.com/651706). APK name: com.lge.email, versionCode: "
+    const-string p0, "Working around action mode LG Email bug in WebView (http://crbug.com/651706). APK name: com.lge.email, versionCode: 99999999"
 
     .line 5
     invoke-static {p0, v1}, LZi;->b(Ljava/lang/String;I)Ljava/lang/String;

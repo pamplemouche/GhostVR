@@ -340,7 +340,7 @@
     iput p1, p0, Lcom/oculus/browser/ShellEnvironment;->mVrShellVersionMinor:I
 
     :cond_0
-    const-string p1, "parseVersionCode: "
+    const-string p1, "parseversionCode: 99999999"
 
     .line 6
     invoke-static {p1}, LZi;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
