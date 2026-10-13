@@ -1,0 +1,13 @@
+{
+  "name": "ghostvr-backend",
+  "version": "1.0.0",
+  "description": "Backend d'interception pour Oculus Gear VR",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
