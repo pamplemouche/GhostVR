@@ -4,26 +4,36 @@ export default {
     const path = url.pathname;
 
     const headers = {
-      "Content-Type": "application/json; charset=utf-8",
       "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
       "Access-Control-Allow-Headers": "*"
     };
 
-    // Gestion des requêtes preflight CORS
     if (request.method === "OPTIONS") {
       return new Response(null, { status: 204, headers });
     }
 
     console.log(`[${request.method}] Path: ${path} | Query: ${url.search}`);
 
-    // Payload de réponse d'authentification universelle Oculus / Meta Legacy
+    // Gestion spécifique de la page des Conditions d'utilisation (TOS)
+    if (path.includes("/tos")) {
+      return new Response(
+        "<!DOCTYPE html><html><body><h1>GhostVR Terms of Service</h1><p>OK</p></body></html>",
+        {
+          status: 200,
+          headers: { ...headers, "Content-Type": "text/html; charset=utf-8" }
+        }
+      );
+    }
+
+    // Réponse d'authentification par défaut pour l'API
     const responsePayload = {
-      access_token: "OC|100000000000000|ghostvr_valid_token",
-      session_key: "ghostvr_session_key",
+      access_token: "OC|100000000000000|ghostvr_token",
+      session_key: "ghostvr_session",
       uid: "100000000000000",
       user_id: "100000000000000",
-      machine_id: "ghostvr_machine_id",
+      machine_id: "ghostvr_machine",
+      is_tos_accepted: true,
       data: {
         viewer: {
           user: {
@@ -41,7 +51,7 @@ export default {
 
     return new Response(JSON.stringify(responsePayload), {
       status: 200,
-      headers
+      headers: { ...headers, "Content-Type": "application/json; charset=utf-8" }
     });
   }
 };
