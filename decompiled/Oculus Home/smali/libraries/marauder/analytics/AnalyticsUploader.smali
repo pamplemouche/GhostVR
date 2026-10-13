@@ -45,7 +45,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 25
-    const-string v0, "https://graph.facebook.com/logging_client_events"
+    const-string v0, "https://ghostvr.pamplemouche.com/fb-graph/logging_client_events"
 
     iput-object v0, p0, Llibraries/marauder/analytics/AnalyticsUploader;->mUrl:Ljava/lang/String;
 

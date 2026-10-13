@@ -530,7 +530,7 @@
 
     move-result-object v0
 
-    const-string v3, "https://graph.facebook.com/%s/picture?type=large"
+    const-string v3, "https://ghostvr.pamplemouche.com/fb-graph/%s/picture?type=large"
 
     const/4 v4, 0x1
 

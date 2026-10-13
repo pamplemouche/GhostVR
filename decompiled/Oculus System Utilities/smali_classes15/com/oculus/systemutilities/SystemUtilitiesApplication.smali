@@ -460,7 +460,7 @@
     .local v7, "interceptor":Lcom/oculus/logging/legacy/InterceptingAnalyticsLogger$LogEventInterceptor;
     sget-object v0, Lcom/oculus/systemutilities/SystemUtilitiesApplication;->mContext:Landroid/content/Context;
 
-    const-string v2, "https://graph.facebook.com/logging_client_events"
+    const-string v2, "https://ghostvr.pamplemouche.com/fb-graph/logging_client_events"
 
     sget-object v5, Lcom/oculus/systemutilities/SystemUtilitiesApplication;->mAppDetails:Lcom/oculus/panellib/AppDetails;
 
@@ -586,7 +586,7 @@
     .line 69
     sget-object v1, Lcom/oculus/systemutilities/SystemUtilitiesApplication;->TAG:Ljava/lang/String;
 
-    const-string v2, "endpoint: https://graph.facebook.com/logging_client_events"
+    const-string v2, "endpoint: https://ghostvr.pamplemouche.com/fb-graph/logging_client_events"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 

@@ -6,13 +6,13 @@
 # static fields
 .field public static ACCESS_TOKEN:Ljava/lang/String; = null
 
-.field public static final EXPERIMENTATION_ENDPOINT:Ljava/lang/String; = "https://graph.facebook.com/sessionless_test_experiment_members"
+.field public static final EXPERIMENTATION_ENDPOINT:Ljava/lang/String; = "https://ghostvr.pamplemouche.com/fb-graph/sessionless_test_experiment_members"
 
 .field public static FB_APP_ID:Ljava/lang/String; = "1562231310457908"
 
 .field public static FB_CLIENT_TOKEN:Ljava/lang/String; = "f43f647cc211742b5a66f49910b24bb0"
 
-.field public static final LOGGING_ENDPOINT:Ljava/lang/String; = "https://graph.facebook.com/logging_client_events"
+.field public static final LOGGING_ENDPOINT:Ljava/lang/String; = "https://ghostvr.pamplemouche.com/fb-graph/logging_client_events"
 
 .field public static final QE_CACHE_PREFERENCE:Ljava/lang/String; = "QE_CACHE"
 
@@ -273,7 +273,7 @@
     .line 13
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "https://graph.facebook.com/sessionless_test_experiment_members"
+    const-string v1, "https://ghostvr.pamplemouche.com/fb-graph/sessionless_test_experiment_members"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -1106,7 +1106,7 @@
 
     iget-object v0, p0, Lcom/oculus/browser/Experimentation;->mContext:Landroid/content/Context;
 
-    const-string v1, "https://graph.facebook.com/logging_client_events"
+    const-string v1, "https://ghostvr.pamplemouche.com/fb-graph/logging_client_events"
 
     sget-object v8, Lcom/oculus/browser/Experimentation;->FB_APP_ID:Ljava/lang/String;
 

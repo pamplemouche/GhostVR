@@ -216,7 +216,7 @@
 
     .prologue
     .line 76
-    const-string v0, "https://graph.facebook.com/logging_client_events"
+    const-string v0, "https://ghostvr.pamplemouche.com/fb-graph/logging_client_events"
 
     return-object v0
 .end method

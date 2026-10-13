@@ -196,7 +196,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "https://graph.facebook.com/me/live_videos?privacy=%7B%22value%22%3A%22"
+    const-string v1, "https://ghostvr.pamplemouche.com/fb-graph/me/live_videos?privacy=%7B%22value%22%3A%22"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -387,7 +387,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "https://graph.facebook.com/"
+    const-string v1, "https://ghostvr.pamplemouche.com/fb-graph/"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

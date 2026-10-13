@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final LOGGING_ENDPOINT:Ljava/lang/String; = "https://graph.facebook.com/logging_client_events"
+.field public static final LOGGING_ENDPOINT:Ljava/lang/String; = "https://ghostvr.pamplemouche.com/fb-graph/logging_client_events"
 
 
 # virtual methods

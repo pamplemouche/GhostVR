@@ -87,7 +87,7 @@
 
     .prologue
     .line 35
-    const-string v0, "https://api.facebook.com/"
+    const-string v0, "https://ghostvr.pamplemouche.com/fb-api/"
 
     return-object v0
 .end method
@@ -102,7 +102,7 @@
 
     .prologue
     .line 29
-    const-string v0, "https://graph.facebook.com/"
+    const-string v0, "https://ghostvr.pamplemouche.com/fb-graph/"
 
     return-object v0
 .end method

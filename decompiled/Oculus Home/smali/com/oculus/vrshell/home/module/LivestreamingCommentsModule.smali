@@ -261,7 +261,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "https://graph.facebook.com/graphql?doc="
+    const-string v5, "https://ghostvr.pamplemouche.com/fb-graph/graphql?doc="
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

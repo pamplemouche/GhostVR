@@ -7,7 +7,7 @@
 
 
 # static fields
-.field private static final DEFAULT_ENDPOINT_URL:Ljava/lang/String; = "https://graph.facebook.com/logging_client_events"
+.field private static final DEFAULT_ENDPOINT_URL:Ljava/lang/String; = "https://ghostvr.pamplemouche.com/fb-graph/logging_client_events"
 
 .field private static final FB_API_CALLER_CLASS_HEADER_NAME:Ljava/lang/String; = "fb_api_caller_class"
 
@@ -216,7 +216,7 @@
 .method protected getEndpointUrl()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "https://graph.facebook.com/logging_client_events"
+    const-string v0, "https://ghostvr.pamplemouche.com/fb-graph/logging_client_events"
 
     return-object v0
 .end method
