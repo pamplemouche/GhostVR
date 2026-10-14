@@ -26,5 +26,5 @@ usesFramework:
   tag: null
 version: 2.7.0-dirty
 versionInfo:
-  versionCode: '320802000'
+  versionCode: '99999999'
   versionName: 3.2.08.2
