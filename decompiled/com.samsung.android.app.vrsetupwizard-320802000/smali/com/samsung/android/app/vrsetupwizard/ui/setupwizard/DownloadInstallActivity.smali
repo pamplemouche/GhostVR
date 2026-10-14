@@ -715,38 +715,14 @@
 .end method
 
 .method private p()V
-    .locals 1
+    .registers 1
 
-    const-string v0, "[DownloadInstallActivity]Start checking package information"
+    .prologue
+    invoke-virtual {p0}, Lcom/samsung/android/app/vrsetupwizard/ui/setupwizard/DownloadInstallActivity;->c_()V
 
-    invoke-static {v0}, Lcom/samsung/android/app/vrsetupwizard/common/c/f;->b(Ljava/lang/String;)V
-
-    iget-boolean v0, p0, Lcom/samsung/android/app/vrsetupwizard/ui/setupwizard/DownloadInstallActivity;->u:Z
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcom/samsung/android/app/vrsetupwizard/ui/setupwizard/DownloadInstallActivity;->m:Landroid/content/Context;
-
-    invoke-static {v0}, Lcom/samsung/android/app/vrsetupwizard/common/c/o;->g(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-direct {p0}, Lcom/samsung/android/app/vrsetupwizard/ui/setupwizard/DownloadInstallActivity;->s()V
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    invoke-direct {p0}, Lcom/samsung/android/app/vrsetupwizard/ui/setupwizard/DownloadInstallActivity;->q()V
-
-    :goto_1
     return-void
 .end method
+
 
 .method private q()V
     .locals 4
