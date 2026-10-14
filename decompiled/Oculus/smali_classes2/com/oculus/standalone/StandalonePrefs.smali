@@ -298,7 +298,7 @@
 
     const-string v1, "setup_complete"
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
