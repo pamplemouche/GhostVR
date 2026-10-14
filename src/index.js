@@ -1,21 +1,45 @@
-// 1. Définition des entêtes HTTP globaux
-const JSON_HEADERS = {
+// En-têtes HTTP globaux
+const HEADERS = {
   "Content-Type": "application/json; charset=utf-8",
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
   "Access-Control-Allow-Headers": "*"
 };
 
-// 2. Table des routes exactes
+// Réponse d'authentification valide (Token & Profil)
+const AUTH_SUCCESS_PAYLOAD = {
+  access_token: "OC|100000000000000|ghostvr_token",
+  session_key: "ghostvr_session",
+  uid: "100000000000000",
+  user_id: "100000000000000",
+  machine_id: "ghostvr_machine",
+  is_tos_accepted: true,
+  user: {
+    id: "100000000000000",
+    name: "GhostVR User",
+    email: "ghostvr@pamplemouche.com"
+  },
+  data: {
+    viewer: {
+      user: {
+        id: "100000000000000",
+        name: "GhostVR User",
+        is_tos_accepted: true
+      }
+    }
+  }
+};
+
+// Table de routage exact
 const routes = {
-  // Conditions d'utilisation
+  "/oculus/login": () => AUTH_SUCCESS_PAYLOAD,
+
   "/oculus/tos": () => ({
     is_tos_accepted: true,
     terms_of_service: { id: "1", text: "OK" },
     success: true
   }),
 
-  // Vérification du compte et de l'adresse e-mail
   "/oculus/user_checks": () => ({
     is_eligible: true,
     has_password: true,
@@ -26,14 +50,12 @@ const routes = {
     }
   }),
 
-  // Compatibility check
   "/oculus/required_mobile_versions": () => ({
     is_update_required: false,
     minimum_supported_version: "1.0",
     status: "OK"
   }),
 
-  // Requêtes Profil / GraphQL
   "/oculus/graphql": () => ({
     data: {
       viewer: {
@@ -52,40 +74,71 @@ const routes = {
   })
 };
 
-// 3. Handlers d'exécution du Worker
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const path = url.pathname;
 
-    // Gestion du Preflight CORS
+    // Preflight CORS
     if (request.method === "OPTIONS") {
-      return new Response(null, { status: 204, headers: JSON_HEADERS });
+      return new Response(null, { status: 204, headers: HEADERS });
     }
 
-    console.log(`[${request.method}] Path demandé : ${path}`);
+    console.log(`[${request.method}] ${path}${url.search}`);
 
-    // Recherche de la route exacte
-    const routeHandler = routes[path];
+    // Ignorer ou neutraliser les checks d'environnement comme .git/config
+    if (path.includes(".git")) {
+      return new Response(JSON.stringify({}), { status: 404, headers: HEADERS });
+    }
 
-    if (routeHandler) {
-      const responseData = routeHandler();
-      return new Response(JSON.stringify(responseData), {
+    // 1. Recherche par route exacte
+    if (routes[path]) {
+      return new Response(JSON.stringify(routes[path]()), {
         status: 200,
-        headers: JSON_HEADERS
+        headers: HEADERS
       });
     }
 
-    // Si la route n'est pas encore déclarée dans le serveur : 404 explicite
-    console.warn(`[404] Route manquante : ${path}`);
-    return new Response(JSON.stringify({
-      error: "Route non déclarée sur le serveur GhostVR",
-      path_requested: path,
-      query_params: url.search
-    }), {
-      status: 404,
-      headers: JSON_HEADERS
+    // 2. Fallbacks par sous-chaîne pour requêtes avec paramètres
+    if (path.includes("login")) {
+      return new Response(JSON.stringify(routes["/oculus/login"]()), {
+        status: 200,
+        headers: HEADERS
+      });
+    }
+
+    if (path.includes("tos")) {
+      return new Response(JSON.stringify(routes["/oculus/tos"]()), {
+        status: 200,
+        headers: HEADERS
+      });
+    }
+
+    if (path.includes("user_checks")) {
+      return new Response(JSON.stringify(routes["/oculus/user_checks"]()), {
+        status: 200,
+        headers: HEADERS
+      });
+    }
+
+    if (path.includes("required_mobile_versions")) {
+      return new Response(JSON.stringify(routes["/oculus/required_mobile_versions"]()), {
+        status: 200,
+        headers: HEADERS
+      });
+    }
+
+    if (path.includes("graphql")) {
+      return new Response(JSON.stringify(routes["/oculus/graphql"]()), {
+        status: 200,
+        headers: HEADERS
+      });
+    }
+
+    // 3. Authentification fallback générale
+    return new Response(JSON.stringify(AUTH_SUCCESS_PAYLOAD), {
+      status: 200,
+      headers: HEADERS
     });
   }
 };
-
