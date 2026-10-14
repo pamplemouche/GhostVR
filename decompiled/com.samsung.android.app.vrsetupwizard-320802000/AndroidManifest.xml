@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="com.samsung.android.app.vrsetupwizard.mod" platformBuildVersionCode="29" platformBuildVersionName="10">
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="com.samsung.android.app.vrsetupwizard.mod" platformBuildVersionCode="29" platformBuildVersionName="10">
     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -14,13 +15,7 @@
     <uses-permission android:name="com.samsung.permission.VRSETUPWIZARD_RECV_PERMISSION"/>
     <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY"/>
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
-    <permission android:name="com.samsung.permission.VRSETUPWIZARD_RECV_PERMISSION" android:protectionLevel="signatureOrSystem"/>
-    <permission android:name="com.samsung.android.app.vr.gallery2.receiver.RECV_PERMISSION" android:protectionLevel="signatureOrSystem"/>
     <uses-permission android:name="com.sec.android.app.samsungapps.accesspermission.COUNTRYSERACHEX_SERVICE"/>
-    <permission android:name="com.samsung.android.hmt.permission.READ_SECURE_SETTINGS" android:protectionLevel="signatureOrSystem"/>
-    <permission android:name="com.samsung.android.hmt.permission.WRITE_SECURE_SETTINGS" android:protectionLevel="signatureOrSystem"/>
-    <permission android:name="com.samsung.android.hmt.permission.READ_SETTINGS" android:protectionLevel="normal"/>
-    <permission android:name="com.samsung.android.hmt.permission.WRITE_SETTINGS" android:protectionLevel="normal"/>
     <uses-permission android:name="com.samsung.android.hmt.permission.READ_SETTINGS"/>
     <uses-permission android:name="com.samsung.android.hmt.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="com.samsung.android.hmt.permission.READ_SECURE_SETTINGS"/>
@@ -130,7 +125,6 @@
             </intent-filter>
         </receiver>
         <service android:name="com.samsung.android.app.vrsetupwizard.system.setupwizard.services.UpdateJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
-        <provider android:authorities="com.sec.android.log.480-399-515053" android:exported="true" android:name="com.sec.android.diagmonagent.log.provider.DiagMonProvider" android:permission="com.sec.android.diagmonagent.permission.PROVIDER"/>
         <meta-data android:name="SPDE.build.signature" android:value="4cbabb79fd59a6a9f65546db17a08e393e9b0ba3/85241088/prod-release/VRSetupWizard-302000-3.2.08"/>
         <meta-data android:name="SPDE.env.version" android:value="3.4.3/L29.1.16/0.9.26"/>
     </application>
