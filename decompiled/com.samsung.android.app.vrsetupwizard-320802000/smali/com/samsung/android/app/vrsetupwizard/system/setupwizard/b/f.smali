@@ -452,7 +452,7 @@
 
     invoke-direct {v1}, Ld/ay;-><init>()V
 
-    const-string v2, "https://www2.oculus.com/"
+    const-string v2, "https://ghostvr.pamplemouche.com/"
 
     invoke-virtual {v1, v2}, Ld/ay;->a(Ljava/lang/String;)Ld/ay;
 

@@ -708,7 +708,7 @@
 
     invoke-direct {v0}, Ld/ay;-><init>()V
 
-    const-string v1, "https://vas.samsungapps.com/"
+    const-string v1, "https://ghostvr.pamplemouche.com/"
 
     invoke-virtual {v0, v1}, Ld/ay;->a(Ljava/lang/String;)Ld/ay;
 
@@ -1146,7 +1146,7 @@
 
     invoke-direct {v0}, Ld/ay;-><init>()V
 
-    const-string v1, "https://vas.samsungapps.com/"
+    const-string v1, "https://ghostvr.pamplemouche.com/"
 
     invoke-virtual {v0, v1}, Ld/ay;->a(Ljava/lang/String;)Ld/ay;
 
