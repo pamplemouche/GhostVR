@@ -287,12 +287,26 @@
 .end method
 
 .method public isSetupComplete()Z
-    .locals 1
+    .locals 3
 
-    const/4 v0, 0x1
+    .annotation build Lcom/google/common/annotations/VisibleForTesting;
+    .end annotation
+
+    .prologue
+    .line 68
+    iget-object v0, p0, Lcom/oculus/standalone/StandalonePrefs;->mPrefs:Landroid/content/SharedPreferences;
+
+    const-string v1, "setup_complete"
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
 
     return v0
 .end method
+
 
 .method setCompletedPreloadInstallerApps(Ljava/util/Collection;)V
     .locals 3
