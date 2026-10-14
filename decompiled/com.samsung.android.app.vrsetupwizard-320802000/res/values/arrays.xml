@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="oculus_vr_app_list_china">
+        <item>com.samsung.android.app.vrsetupwizard;Gear VR SetupWizard;samsung;initial</item>
+        <item>com.samsung.android.hmt.vrsvc;Gear VR Service;samsung;initial</item>
+        <item>com.sec.android.app.samsungapps;Galaxy Apps;samsung;initial</item>
+        <item>com.oculus.systemactivities;Oculus System Activities;samsung;initial</item>
+        <item>com.oculus.systemdriver;Oculus System Driver;samsung;initial</item>
+        <item>com.samsung.android.app.vr.home;Gear VR Home;samsung;initial</item>
+        <item>com.samsung.android.app.vr.gallery2;Samsung Gallery;samsung;basic</item>
+        <item>com.sec.android.app.svrbrowser;Samsung Internet;samsung;basic</item>
+    </string-array>
+    <string-array name="oculus_vr_app_list_china_eng">
+        <item>com.oculus.systemactivities;Oculus System Activities;samsung;initial</item>
+        <item>com.oculus.systemdriver;Oculus System Driver;samsung;initial</item>
+    </string-array>
+    <string-array name="oculus_vr_app_list_global">
+        <item>com.samsung.android.app.vrsetupwizard;Gear VR SetupWizard;samsung;initial</item>
+        <item>com.samsung.android.hmt.vrsvc;Gear VR Service;samsung;initial</item>
+        <item>com.facebook.system;Facebook App Installer;samsung;initial</item>
+        <item>com.samsung.android.app.vr.gallery2;Samsung Gallery;samsung;basic</item>
+        <item>com.samsung.vrvideo;Samsung VR;samsung;basic</item>
+        <item>com.sec.android.app.svrbrowser;Samsung Internet;samsung;basic</item>
+        <item>com.facebook.appmanager;Facebook App Manager;oculus;initial</item>
+        <item>com.oculus.systemdriver;Oculus System Driver;oculus;initial</item>
+        <item>com.oculus.systemactivities;Oculus System Activities;oculus;initial</item>
+        <item>com.oculus.horizon;Oculus;oculus;initial</item>
+        <item>com.oculus.home;Oculus VR;oculus;initial</item>
+        <item>com.oculus.vrshell.home;Oculus Home;oculus;initial</item>
+        <item>com.oculus.vrshell;Oculus App Runtime;oculus;initial</item>
+        <item>com.oculus.mediaplayer;Oculus Media Plugin;oculus;initial</item>
+        <item>com.oculus.browser;Oculus Browser;oculus;initial</item>
+        <item>com.oculus.ocms;Oculus Core Mobile Services;oculus;initial</item>
+        <item>com.oculus.systemutilities;Oculus System Utilities;oculus;initial</item>
+    </string-array>
+    <string-array name="pkg_name_list_to_be_removed">
+        <item>com.samsung.android.hmt.vrshell</item>
+        <item>com.samsung.android.hmt.vrsvc</item>
+        <item>com.samsung.android.hmt.vrsystem</item>
+        <item>com.samsung.android.app.vr.input.service</item>
+        <item>com.samsung.android.app.vrsetupwizardstub</item>
+        <item>com.samsung.android.app.vrsetupwizard</item>
+        <item>com.facebook.appmanager</item>
+        <item>com.oculus.horizon</item>
+        <item>com.oculus.home</item>
+        <item>com.oculus.systemactivities</item>
+        <item>com.oculus.systemservices</item>
+        <item>com.oculus.systemdriver</item>
+        <item>com.oculus.gearchina</item>
+        <item>com.oculus.rooms</item>
+        <item>com.oculus.mediaplayer</item>
+        <item>com.oculus.prologue</item>
+        <item>com.oculus.vrshell</item>
+        <item>com.oculus.vrshell.home</item>
+        <item>com.sec.android.app.sbrowser</item>
+        <item>com.samsung.android.app.vr.home</item>
+        <item>com.oculus.systemutilities</item>
+        <item>com.oculus.browser</item>
+    </string-array>
+    <string-array name="update_check_preference_entry">
+        <item>@string/update_check_entry_always</item>
+        <item>@string/update_check_entry_wifionly</item>
+        <item>@string/update_check_entry_never</item>
+    </string-array>
+</resources>

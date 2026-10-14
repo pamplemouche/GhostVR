@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="24.0dip" android:paddingEnd="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/permission_dialog_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/allow_permissions_title" style="@style/VRLauncher.Dialog.TitleText" />
+    <TextView android:id="@id/permission_dialog_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" style="@style/VRLauncher.Dialog.Desciprtion" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_marginBottom="24.0dip">
+        <ImageView android:id="@id/permission_icon" android:layout_width="32.0dip" android:layout_height="32.0dip" />
+        <TextView android:layout_gravity="center_vertical" android:id="@id/permission_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" style="@style/VRLauncher.Dialog.SubItemText" />
+    </LinearLayout>
+</LinearLayout>

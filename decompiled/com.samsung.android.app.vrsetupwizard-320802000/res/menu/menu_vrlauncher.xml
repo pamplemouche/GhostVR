@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/vr_appbar_ic_reminder" android:id="@id/action_no_alert" android:title="" app:showAsAction="always|collapseActionView" />
+    <item android:id="@id/vr_launcher_settings" android:title="@string/toolbar_settings" android:showAsAction="never" />
+</menu>

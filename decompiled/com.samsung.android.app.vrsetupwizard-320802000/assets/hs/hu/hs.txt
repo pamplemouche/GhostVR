@@ -1,0 +1,74 @@
+g* A pontosság illetőleg a teljesség érdekében, jelen Biztonsági Figyelmeztetéseket rendszeresen felülvizsgáljuk. Kérjük tekintse meg a legutolsó verziót az oculus.com/warnings honlapon.
+
+BIZTONSÁGI FIGYELMEZTETÉS: a személyi sérülések, rossz közérzet illetőleg vagyoni károk megelőzése érdekében kérjük, győződjön meg arról, hogy a Gear VR minden használója figyelmesen végigolvasta a biztonsági figyelmezetéseket a Gear VR használata előtt.
+
+A Gear VR használatát megelőzően: 
+• Olvassa el és kövesse a Gear VR termékhez melléklet telepítési és felhasználási utasításokat. 
+• Tekintse át a Gear VR használatához javasolt hardver és szoftver követelményeket. A kellemetlenségek előfordulása gyakoribb lehet, amennyiben nem a javasolt hardvert és szoftvert használja. 
+• A Gear VR nem használható nem támogatott eszközökkel, kiegészítőkkel és/vagy szoftverekkel. A nem támogatott eszközök, kiegészítők és/vagy szoftverek használata sérülést okozhat Önnek illetőleg másoknak, valamint hibát és kárt okozhat a rendszer és a járulékos szolgáltatások teljesítményében.
+• A kényelmes virtuális valóság élményéhez kifogástalan mozgási és egyensúlyozási képességre van szükség. Ne használja a Gear VR terméket, ha fáradt, alvásra van szüksége, alkohol vagy kábítószer befolyása alatt áll, másnapos, emésztési zavarai vannak, érzelmi stressz vagy szorongás hatása alatt áll, megfázott, náthás, fejfájása, migrénje vagy fülfájása van, mivel a Gear VR használata növelheti a fogékonyságát a kedvezőtlen tünetek kialakulására.  
+• Javasoljuk, hogy kérdezze meg orvosát a Gear VR használatát megelőzően, amennyiben Ön terhes, idős, korábban már voltak binokuláris látási vagy pszichiátriai rendellenességei vagy szívproblémája, illetőleg egyéb súlyos egészségügyi problémája van.
+
+Rohamok: A villogó fények és mintázatok hatására néhányan (kb. 4000-ből 1 ember) TV nézés közben, video játékok használata során, valamint a virtuális valóság észlelésekor súlyos szédülést, rohamot, epilepsziás rohamot kaphat illetőleg elvesztheti az eszméletét, akkor is, ha korábban nála még nem fordult elő roham vagy eszméletvesztés illetőleg, ha nincs rohamokkal vagy epilepsziával kapcsolatos kórelőzménye. Az ilyen rohamok sokkal gyakoribban a gyermekek illetőleg a 20 év alatti fiatalok körében. Akinek korábban volt már rohama, tudatvesztése vagy egyéb epilepsziával kapcsolatba hozható tünete, keresse fel orvosát a Gear VR használatát megelőzően. 
+
+Gyermekek: A vizuális fejlődés szempontjából a gyermekek kritikus időszakban vannak, ezért a Gear VR-t 13 éves kor alatti gyermekek nem használhatják. Az alább bemutatott bármely tünet felismerése érdekében a felnőtteknek figyelemmel kell kísérniük a (13 éves vagy annál idősebb) gyerekeket, akik használják vagy használták a Gear VR terméket és korlátozni kell azt az időt, amit a gyermek a Gear VR használatával tölt, valamint biztosítani, hogy tartson szünetet a Gear VR használata közben. Kerülje az elhúzódó használatot, mivel az negatív hatással lehet a szem-kéz koordinációjára, az egyensúlyozási, illetőleg a több feladat ellátására való képességre. A felnőtteknek alaposan ellenőrizni kell a gyermekeket a Gear VR használata során, valamint a használatot követően, hogy ellenőrizhessék a fenti képességek esetleges csökkenését.
+
+Általános elővigyázatosság: A sérülésveszély illetőleg a kényelmetlenségek csökkentése érdekében kérjük, hogy mindig kövesse ezeket az utasításokat és a Gear VR használata során tartsa be az elővigyázatossági intézkedéseket.
+
+Használat kizárólag biztonságos környezetben: A Gear VR olyan elmélyült,  erős virtuális valóságérzetet teremt, amely elvonja figyelmét az aktuális környezetétől és teljesen elzárja az arra való rálátást.
+o Mindig legyen tudatában a környezetének a Gear VR használata előtt illetőleg annak használata során. Legyen óvatos, hogy elkerülje a sérüléseket.
+o A Gear VR használata egyensúlyvesztést okozhat.
+o Vegye figyelembe, hogy a tárgyak, amiket a virtuális környezetben lát, nem léteznek a valóságban, ezért azokra ne üljön vagy álljon rá, illetőleg ne használja azokat támaszként. 
+o A legbiztonságosabb használat érdekében kérjük maradjon ülve vagy mozdulatlanul a Gear VR használat alatt. 
+o Súlyos sérülésekkel járhat, ha a falakban, bútorokban vagy más tárgyakban elbotlik, illetőleg nekifut vagy beleütközik azokba. 
+o Fordítson fokozott figyelmet arra, hogy más személyek, tárgyak, lépcső, erkély, nyitott ajtó, ablakok, bútorok, nyílt láng, mennyezeti ventilátorok vagy lámpák illetőleg más tárgyak akikbe/amikbe a Gear VR használata során, illetőleg közvetlenül a használatot követően beleütközhet, vagy akiket/amiket megüthet ne legyenek a közelében.
+o A Gear VR használata előtt távolítson el a területről minden olyan tárgyat, amiben elbotolhat.
+o Emlékezzen rá, hogy a Gear VR használata alatt - anélkül, hogy észrevenné - emberek és háziállatok kerülhetnek a közvetlen közelébe. 
+o A Gear VR használata alatt ne tartson a kezében éles vagy más egyéb módon veszélyes tárgyakat.
+o Soha ne használja a Gear VR terméket olyan helyzetekben, ami odafigyelést kíván, így például séta, biciklizés vagy vezetés közben.
+• Biztosítsa, hogy a Gear VR kényelmesen, vízszintesen van rögzítve az Ön fején és, hogy Ön egyetlen és tiszta képet lát. 
+• Fokozatosan kezdje meg a Gear VR használatát, engedje, hogy a teste hozzászokjon ahhoz. Első alkalommal csak néhány percig használja és csak fokozatosan, a virtuális valósághoz való hozzászokás arányában növelje a Gear VR használásának időtartamát. A körülnézés és a jelbeviteli eszköz használata segíthet a virtuális valóságba történő első belépéskor Önnek, hogy hozzászokjon minden apró különbséghez a valóságban végrehajtott mozgása és annak a virtuális valóságban okozott élménye között.
+• A Gear VR használata hajlamosíthatja a kedvezőtlen tünetek kialakulására, ezért ne használja a Gear VR készüléket amikor mozgó járművön tartózkodik, így például autóban, buszon vagy vonaton van.
+• 30 perc elteltével mindig tartson 10 - 15 perc szünetet még akkor is, ha úgy érzi, hogy nincs rá szüksége. Minden ember különböző, ezért, ha kényelmetlenül érzi magát tartson többszöri és hosszabb szüneteket. Döntse el, hogy melyik a legjobb megoldás az Ön számára.
+• A Geat VR készülék rendelkezhet “áthatolási” funkcióval, amely lehetővé teszi Önnek, hogy átmenetileg lássa a környezetét, a valódi világgal való rövid kapcsolatba lépés érdekében. Mindig vegye le a Gear VR készüléket olyan helyzetekben, amelyek odafigyelést vagy koordinációt kívánnak. 
+• A hangos zenehallgatás helyrehozhatatlan károsodást okozhat a hallásában. A háttérzajnak és a magas hangerőnek való folyamatos kitettség miatt a hangokat a valóságnál halkabbnak érzékelheti. A virtuális valóság immerzív természete miatt, ne használja a Gear VR készüléket magas hangerővel és így képes lesz tudatában maradni környezetének, valamint csökkenti a halláskárosodás veszélyét is.
+
+ Kényelmetlenség
+• Azonnal fejezze be a használatot, amennyiben a Gear VR bármely használójánál a következő tünetek valamelyike jelentkezik: rohamok; belátási képesség elvesztése; szemfájdalom; szem-, vagy izomrángás; akaratlan mozdulatok; látászavar, homályos, vagy kettős látás, vagy más vizuális rendellenességek; szédülés; tájékozódási zavar; egyensúlyzavar; kéz-szem koordináció zavara; túlzott izzadás; fokozott nyálelválasztás; émelygés; szédülés; diszkomfort vagy fej-, vagy szemfájdalom; aluszékonyság; fáradtság; vagy bármilyen, mozgás/utazási betegséghez hasonló tünet.
+• Hasonlóan a tünetekhez, az emberek úgy is érezhetik magukat, mint egy tengerjáró hajóról való leszálláskor, a virtuális valóságnak való kitettség tünetei fennmaradhatnak és fokozottabbá válhatnak a használatot követő néhány órán belül. A használat utáni tünetek a fenti tüneteket is magukba foglalhatják, ideértve a túlzott álmosságot, és a több feladat ellátására való képesség csökkenését. Ezek a tünetek növelhetik a való világban végzett mindennapi tevékenységek folytatása közbeni sérülés bekövetkezésének kockázatát.
+• Ne vezessen, kezeljen gépeket, vagy vegyen részt más, fizikailag vagy vizuálisan megterhelő tevékenységben, amik súlyos következményeket vonhatnak maguk után (azaz olyan tevékenységek, amelyek során valamely tünet jelentkezése halálhoz, személyi sérüléshez, vagy anyagi kárhoz vezethet), vagy más olyan tevékenységben, amely kifogástalan egyensúlyt és kéz-szem koordinációt igényel, (úgymint sporttevékenységek folytatása vagy kerékpározás, stb.) amíg teljesen fel nem épült a tünetekből.
+• Ne használja a Gear VR-t, amíg valamennyi tünet legalább több órára alább nem hagyott. Győződjön meg róla, hogy a használat folytatása előtt megfelelően konfigurálta a Gear VR-t. 
+• Vegye figyelembe az Ön által a tünetek jelentkezése előtt használt tartalom típusát, mert Ön hajlamos lehet a tartalomtól függő tünetek produkálására. 
+• Forduljon orvoshoz, ha súlyos, és/vagy tartósan fennálló tüneteket észlel.
+
+Ismétlődő stressz okozta sérülések: A Gear VR használata az izmaiban, ízületeiben, vagy bőrén jelentkező fájdalmat okozhat. Amennyiben bármely testrésze elfáradna, vagy megfájdulna a Gear VR használata közben, vagy bizsergő érzést, zsibbadtságot, égő vagy merevség-érzést tapasztal, hagyjon fel a Gear VR használatával, és pihenjen több órát, mielőtt újra használná a Gear VR-t. Amennyiben a használat után továbbra is bármilyen, a fentiekben felsorolt tünetet vagy diszkomfort-érzést tapasztal, hagyja abba a használatot, és forduljon orvoshoz.
+
+Orvosi eszközökre gyakorolt hatás: A Gear VR fülhallgatókat tartalmaz, amelyekben mágnes található, és rádióhullámok kibocsátására képes. Ezek a készülékek képesek befolyásolni a közelükben lévő elektronikus berendezések működését, ideértve a szívritmus-szabályozó készülékeket, a hallókészülékeket, és a defibrillátorokat is. Amennyiben szívritmus-szabályozóval vagy más, beültetett orvosi készülékkel rendelkezik, ne használja a Gear VR-t az orvosával és az orvosi készülék gyártójával folytatott előzetes konzultáció nélkül. Tartson biztonságos távolságot az orvosi készülékek és a Gear VR között, és hagyjon fel a Gear VR használatával, ha tartós zavart tapasztal az orvosi készülékében. 
+
+Kontroller:
+• Lehetséges, hogy az Ön Gear VR-je egy harmadik személy által használható kontrollerrel rendelkezik.
+• A kontrollerrel kapcsolatos egészségügyi és biztonsági figyelmeztetésekről konzultáljon a gyártóval.
+• Mindig használja a kontrollerhez tartozó csuklópántokat a kontrollernek a csuklójához való biztosítása érdekében.
+
+Áramütés: Az áramütés veszélyének csökkentése érdekében:
+• Ne változtassa meg, vagy nyissa fel a tartozékokat és alkatrészeket.
+• Ne használja a terméket, ha bármely kábel sérült, vagy bármely drót láthatóvá válik.
+
+Amennyiben töltő adapter is tartozik a termékhez:
+• Ne tegye ki a töltő adaptert folyadéknak, vagy nedvességnek.
+• Tisztítás előtt húzza ki a töltő adaptert, és kizárólag száraz törlőkendővel tisztítsa azt.
+• Tartsa távol a töltő adaptert nyílt lángtól vagy más hőforrástól.
+• Kizárólag a Gear VR-hez tartozó töltőt használja.
+
+Sérült vagy hibás készülék:
+• Ne használja a készüléket, ha annak bármely része sérült vagy hibás.
+• Ne kísérelje meg a készülék bármely részét saját maga megjavítani. A javítási munkálatokat kizárólag a hivatalos szervizek jogosultak elvégezni.
+
+Fertőző betegségek: A fertőző betegségek terjedésének elkerülése érdekében (úgymint kötőhártya-gyulladás), ne használja a Gear VR-t fertőző betegségben szenvedő személyekkel megosztva, különös tekintettel a szem-, bőr- és a fejbőr betegségeire. A használatok között a Gear VR bőrbarát antibakteriális törlőkendővel való tisztítása és mikroszálas törlőkendővel való megszárítása (különös tekintettel a lencsékre) javasolt.
+
+Bőrirritáció: A Gear VR viselése közvetlenül a bőrön és a fejbőrön történik. Hagyjon fel a használattal, ha duzzanatot, viszketést, vagy más irritációt tapasztal. Amennyiben a tünetek tartósan fennállnak, keressen fel egy orvost. 
+
+A Gear VR-ben bekövetkező károsodás elkerülése:
+• Ne hagyja a Gear VR-t közvetlen napfényen. A Gear VR közvetlen napsugárzásnak való kitétele kárt tehet a Gear VR-ben.
+• Ne tegye ki a Gear VR lencséjét lézer-, vagy más külső fényforrás közvetlen fényének, mert az kárt tehet a képernyőben.
+• Amikor nem használja a készüléket, tartsa az alkatrészeket a tároló dobozukban a véletlen károk, vagy környezeti hatások által okozott károk bekövetkezésének elkerülése érdekében.

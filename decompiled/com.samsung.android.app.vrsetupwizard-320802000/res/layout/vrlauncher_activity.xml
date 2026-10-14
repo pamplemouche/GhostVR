@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/background_color_black" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar android:theme="@style/Basic.Toolbar" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="56.0dip" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.samsung.android.app.vrsetupwizard.common.ui.launcher.DraggableGridViewPager android:id="@id/draggable_grid_view_pager" android:focusable="true" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="center_horizontal" android:id="@id/layout_circle_indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/circle_indicator_layout_margin_top">
+            <com.samsung.android.app.vrsetupwizard.common.ui.launcher.CircleIndicator android:id="@id/indicator" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="noHideDescendants" android:layoutDirection="ltr" app:ci_drawable="@drawable/vr_launcher_navigator_on" app:ci_drawable_unselected="@drawable/vr_launcher_navigator_off" app:ci_height="@dimen/circle_indicator_height" app:ci_margin="6.0dip" app:ci_new_drawable="@drawable/vr_launcher_navigator_on" app:ci_new_drawable_unselected="@drawable/vr_launcher_navigator_off" app:ci_width="10.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/button_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="64.0dip" android:layout_alignParentBottom="true">
+        <Button android:id="@id/button_galaxy_apps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/go_to_galaxy_apps" style="@style/Basic.Button" />
+    </LinearLayout>
+</LinearLayout>

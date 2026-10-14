@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.preference.PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.preference.PreferenceCategory android:title="@string/settings_title_manage_data" android:key="key_category_clear_data">
+        <android.support.v7.preference.Preference android:persistent="false" android:title="@string/settings_title_clear_data" android:key="key_clear_data" />
+    </android.support.v7.preference.PreferenceCategory>
+    <android.support.v7.preference.PreferenceCategory android:title="@string/settings_title_version" android:key="key_category_version">
+        <android.support.v7.preference.Preference android:persistent="false" android:title="@string/settings_title_version" android:key="key_version" />
+    </android.support.v7.preference.PreferenceCategory>
+    <android.support.v7.preference.PreferenceCategory android:title="@string/settings_title_open_source_licenses" android:key="key_category_open_source_licenses">
+        <android.support.v7.preference.Preference android:title="@string/settings_title_open_source_licenses" android:key="key_open_source_licenses" />
+    </android.support.v7.preference.PreferenceCategory>
+    <android.support.v7.preference.PreferenceCategory android:title="@string/device_main_menu_subheader_app" android:key="key_category_app">
+        <android.support.v7.preference.Preference android:persistent="false" android:title="@string/update" android:key="key_category_app_update" />
+    </android.support.v7.preference.PreferenceCategory>
+</android.support.v7.preference.PreferenceScreen>

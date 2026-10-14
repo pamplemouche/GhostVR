@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="com.samsung.android.app.vrsetupwizard" platformBuildVersionCode="29" platformBuildVersionName="10">
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.DELETE_PACKAGES"/>
+    <uses-permission android:name="android.permission.STATUS_BAR"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
+    <uses-permission android:name="com.samsung.permission.VRSETUPWIZARD_RECV_PERMISSION"/>
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <permission android:name="com.samsung.permission.VRSETUPWIZARD_RECV_PERMISSION" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.samsung.android.app.vr.gallery2.receiver.RECV_PERMISSION" android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="com.sec.android.app.samsungapps.accesspermission.COUNTRYSERACHEX_SERVICE"/>
+    <permission android:name="com.samsung.android.hmt.permission.READ_SECURE_SETTINGS" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.samsung.android.hmt.permission.WRITE_SECURE_SETTINGS" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.samsung.android.hmt.permission.READ_SETTINGS" android:protectionLevel="normal"/>
+    <permission android:name="com.samsung.android.hmt.permission.WRITE_SETTINGS" android:protectionLevel="normal"/>
+    <uses-permission android:name="com.samsung.android.hmt.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.samsung.android.hmt.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.samsung.android.hmt.permission.READ_SECURE_SETTINGS"/>
+    <uses-permission android:name="com.samsung.android.hmt.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="com.samsung.android.hmt.permission.WRITE_LOGS"/>
+    <uses-permission android:name="com.sec.spp.permission.TOKEN_5a7c97782513e183029f8fd84baa9fc7dbb4974f3e2af12286cb20bd7206bcfe2d15dad026a3a4abb63ad7b9b999d3b9ea65ebd166e599b489e6b635cdc3f8b08dd617813e2da2410a5a99d6c10cfdfbb5bd4e5864f599e18f95f69f8013a3067a282922f488a19cc974d39f5aec2e9396519cd216d5ecbe8b93988a4903ca48"/>
+    <uses-permission android:name="com.sec.android.diagmonagent.permission.DIAGMON"/>
+    <uses-permission android:name="com.sec.android.diagmonagent.permission.PROVIDER"/>
+    <uses-permission android:name="android.permission.MANAGE_USERS"/>
+    <uses-permission android:name="com.sec.spp.permission.TOKEN_c36895579c16b3f3627fbe26a5b5ed6714e5f0921728145f837a5694de27234f858edfa852a169a63b29da8c286b8751c87ac9765881bc8516fe54879c136f5e7894ee8be4e1aae8c74bbebb72072007b30db9ae931246406e7a4d4aa713a7a60f87ae0d5d373145fdb51908de66181d51e5d5f7649437dadb8d2d0db8f0d4e5"/>
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.GRANT_RUNTIME_PERMISSIONS"/>
+    <uses-permission android:name="com.samsung.android.app.vr.input.service.receiver.RECV_PERMISSION"/>
+    <application android:allowBackup="false" android:debuggable="false" android:icon="@drawable/default_icon" android:label="@string/fake_app_name" android:launchMode="singleTop" android:manageSpaceActivity=".ui.settings.StorageManageActivity" android:supportsPictureInPicture="false" android:supportsRtl="true" android:theme="@android:style/Theme.DeviceDefault" android:usesCleartextTraffic="true">
+        <meta-data android:name="com.samsung.android.vr.application.mode" android:value="dual"/>
+        <meta-data android:name="android.max_aspect" android:value="2.1"/>
+        <activity android:configChanges="orientation|screenSize|smallestScreenSize|uiMode" android:launchMode="singleTop" android:name="com.samsung.android.app.vrsetupwizard.ui.VRSetupWizard" android:resizeableActivity="false" android:screenOrientation="portrait" android:theme="@style/Theme.SetupWizard">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation|screenSize|smallestScreenSize" android:exported="true" android:label="@string/vrlauncher_name" android:launchMode="singleTop" android:name="com.samsung.android.app.vrsetupwizard.ui.LaunchActivity" android:resizeableActivity="false" android:screenOrientation="portrait" android:taskAffinity="com.samsung.android.app.vrsetupwizard.ui.LaunchActivity" android:theme="@style/Theme.SetupWizard">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.INFO"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation|screenSize|smallestScreenSize" android:enabled="false" android:exported="true" android:label="@string/vrlauncher_name" android:launchMode="singleTop" android:name="com.samsung.android.app.vrsetupwizard.ui.IconActivity" android:resizeableActivity="false" android:screenOrientation="portrait" android:taskAffinity="com.samsung.android.app.vrsetupwizard.ui.IconActivity" android:theme="@style/Theme.SetupWizard">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation|screenSize|smallestScreenSize|uiMode" android:exported="false" android:launchMode="singleTop" android:name="com.samsung.android.app.vrsetupwizard.ui.setupwizard.CompatibleWarningActivity" android:resizeableActivity="false" android:screenOrientation="portrait" android:theme="@style/Theme.AppBaseTheme">
+            <meta-data android:name="com.samsung.android.vr.setupwizard" android:value="oobe"/>
+        </activity>
+        <activity android:configChanges="orientation|screenSize|smallestScreenSize|uiMode" android:exported="false" android:launchMode="singleTop" android:name="com.samsung.android.app.vrsetupwizard.ui.setupwizard.WarningAgreeActivity" android:resizeableActivity="false" android:screenOrientation="portrait" android:theme="@style/Theme.AppBaseTheme">
+            <meta-data android:name="com.samsung.android.vr.setupwizard" android:value="oobe"/>
+        </activity>
+        <activity android:configChanges="orientation|screenSize|smallestScreenSize|uiMode" android:exported="false" android:launchMode="singleTop" android:name="com.samsung.android.app.vrsetupwizard.ui.setupwizard.DownloadInstallActivity" android:resizeableActivity="false" android:screenOrientation="portrait" android:theme="@style/Theme.AppBaseTheme">
+            <meta-data android:name="com.samsung.android.vr.setupwizard" android:value="oobe"/>
+        </activity>
+        <activity android:configChanges="orientation|screenSize|smallestScreenSize|uiMode" android:exported="false" android:launchMode="singleTop" android:name="com.samsung.android.app.vrsetupwizard.ui.setupwizard.FinishActivity" android:resizeableActivity="false" android:screenOrientation="portrait" android:theme="@style/Theme.AppBaseTheme">
+            <meta-data android:name="com.samsung.android.vr.setupwizard" android:value="oobe"/>
+        </activity>
+        <activity android:configChanges="orientation|screenSize|smallestScreenSize|uiMode" android:exported="false" android:launchMode="singleTop" android:name="com.samsung.android.app.vrsetupwizard.ui.settings.StorageManageActivity" android:resizeableActivity="false" android:screenOrientation="portrait" android:theme="@style/VRLauncher.Theme.Preference">
+            <meta-data android:name="com.samsung.android.vr.setupwizard" android:value="normal"/>
+        </activity>
+        <activity android:configChanges="orientation|screenSize|smallestScreenSize|uiMode" android:exported="false" android:launchMode="singleTop" android:name="com.samsung.android.app.vrsetupwizard.ui.settings.UpdateSettingActivity" android:resizeableActivity="false" android:screenOrientation="portrait" android:theme="@style/Theme.PreferenceTheme">
+            <meta-data android:name="com.samsung.android.vr.setupwizard" android:value="normal"/>
+        </activity>
+        <activity android:configChanges="orientation|screenSize" android:exported="true" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.samsung.android.app.vrsetupwizard.ui.launcher.VRLauncherActivity" android:screenOrientation="portrait" android:theme="@style/VRLauncher.Theme.Launcher">
+            <meta-data android:name="com.samsung.android.vr.setupwizard" android:value="normal"/>
+        </activity>
+        <activity android:configChanges="orientation|screenSize|smallestScreenSize" android:exported="false" android:launchMode="singleTop" android:name="com.samsung.android.app.vrsetupwizard.ui.launcher.NoAlertHelpActivity" android:resizeableActivity="false" android:screenOrientation="portrait" android:theme="@style/VRLauncher.Theme.Basic">
+            <meta-data android:name="com.samsung.android.vr.setupwizard" android:value="normal"/>
+        </activity>
+        <activity android:configChanges="orientation|screenSize|smallestScreenSize" android:exported="false" android:launchMode="singleTop" android:name="com.samsung.android.app.vrsetupwizard.ui.settings.SettingsActivity" android:parentActivityName="com.samsung.android.app.vrsetupwizard.ui.launcher.VRLauncherActivity" android:resizeableActivity="false" android:screenOrientation="portrait" android:theme="@style/VRLauncher.Theme.Preference">
+            <meta-data android:name="com.samsung.android.vr.setupwizard" android:value="normal"/>
+        </activity>
+        <activity android:configChanges="orientation|screenSize|smallestScreenSize" android:exported="false" android:launchMode="singleTop" android:name="com.samsung.android.app.vrsetupwizard.ui.controller.ManageControllerActivity" android:parentActivityName="com.samsung.android.app.vrsetupwizard.ui.settings.SettingsActivity" android:resizeableActivity="false" android:screenOrientation="portrait" android:theme="@style/VRLauncher.Theme.Basic">
+            <meta-data android:name="com.samsung.android.vr.setupwizard" android:value="normal"/>
+        </activity>
+        <activity android:configChanges="orientation|screenSize|smallestScreenSize" android:exported="false" android:launchMode="singleTop" android:name="com.samsung.android.app.vrsetupwizard.ui.controller.HandednessActivity" android:parentActivityName="com.samsung.android.app.vrsetupwizard.ui.settings.SettingsActivity" android:resizeableActivity="false" android:screenOrientation="portrait" android:theme="@style/VRLauncher.Theme.Basic">
+            <meta-data android:name="com.samsung.android.vr.setupwizard" android:value="normal"/>
+        </activity>
+        <activity android:configChanges="orientation|screenSize|smallestScreenSize" android:exported="false" android:launchMode="singleTop" android:name="com.samsung.android.app.vrsetupwizard.ui.settings.OpenSourceActivity" android:parentActivityName="com.samsung.android.app.vrsetupwizard.ui.settings.SettingsActivity" android:resizeableActivity="false" android:screenOrientation="portrait" android:theme="@style/VRLauncher.Theme.Basic">
+            <meta-data android:name="com.samsung.android.vr.setupwizard" android:value="normal"/>
+        </activity>
+        <activity android:configChanges="orientation|screenSize|smallestScreenSize" android:exported="false" android:launchMode="singleTop" android:name="com.samsung.android.app.vrsetupwizard.ui.controller.ControllerPairNewActivity" android:parentActivityName="com.samsung.android.app.vrsetupwizard.ui.controller.ManageControllerActivity" android:resizeableActivity="false" android:screenOrientation="portrait" android:theme="@style/VRLauncher.Theme.Basic">
+            <meta-data android:name="com.samsung.android.vr.setupwizard" android:value="normal"/>
+        </activity>
+        <activity android:configChanges="orientation|screenSize|smallestScreenSize" android:exported="false" android:launchMode="singleTop" android:name="com.samsung.android.app.vrsetupwizard.ui.setupwizard.ControllerOOBEActivity" android:parentActivityName="com.samsung.android.app.vrsetupwizard.ui.controller.ManageControllerActivity" android:resizeableActivity="false" android:screenOrientation="portrait" android:theme="@style/VRLauncher.Theme.Basic">
+            <meta-data android:name="com.samsung.android.vr.setupwizard" android:value="oobe"/>
+        </activity>
+        <activity android:configChanges="orientation|screenSize|smallestScreenSize" android:exported="false" android:launchMode="singleTop" android:name="com.samsung.android.app.vrsetupwizard.ui.controller.ControllerDetailActivity" android:parentActivityName="com.samsung.android.app.vrsetupwizard.ui.controller.ManageControllerActivity" android:resizeableActivity="false" android:screenOrientation="portrait" android:theme="@style/VRLauncher.Theme.Basic">
+            <meta-data android:name="com.samsung.android.vr.setupwizard" android:value="normal"/>
+        </activity>
+        <activity android:configChanges="orientation|screenSize|smallestScreenSize" android:exported="false" android:launchMode="singleTop" android:name="com.samsung.android.app.vrsetupwizard.ui.controller.ControllerFotaActivity" android:parentActivityName="com.samsung.android.app.vrsetupwizard.ui.controller.ControllerDetailActivity" android:resizeableActivity="false" android:screenOrientation="portrait" android:theme="@style/VRLauncher.Theme.Basic">
+            <meta-data android:name="com.samsung.android.vr.setupwizard" android:value="normal"/>
+        </activity>
+        <receiver android:name="com.samsung.android.app.vrsetupwizard.system.receivers.PackageIntentReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.samsung.android.app.vrsetupwizard.system.receivers.AppLinkerIntentReceiver">
+            <intent-filter android:priority="0">
+                <action android:name="com.sec.android.app.applinker.APP_START"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.samsung.android.app.vrsetupwizard.system.receivers.UpdateCheckIntentReceiver" android:permission="com.samsung.permission.VRSETUPWIZARD_RECV_PERMISSION">
+            <intent-filter android:priority="0">
+                <action android:name="com.samsung.android.app.vrsetupwizard.action.REQUEST_VR_APP_UPDATE_VRSW"/>
+                <action android:name="com.samsung.intent.action.REQUEST_VR_APP_UPDATE"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.samsung.android.app.vrsetupwizard.system.controller.FirmwareUpdateNotificationReceiver">
+            <intent-filter android:priority="0">
+                <action android:name="com.samsung.android.app.vr.input.service.receiver.action.BLUETOOTH_FWUPDATE_NOTI"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.samsung.android.app.vrsetupwizard.system.setupwizard.services.UpdateJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <provider android:authorities="com.sec.android.log.480-399-515053" android:exported="true" android:name="com.sec.android.diagmonagent.log.provider.DiagMonProvider" android:permission="com.sec.android.diagmonagent.permission.PROVIDER"/>
+        <meta-data android:name="SPDE.build.signature" android:value="4cbabb79fd59a6a9f65546db17a08e393e9b0ba3/85241088/prod-release/VRSetupWizard-302000-3.2.08"/>
+        <meta-data android:name="SPDE.env.version" android:value="3.4.3/L29.1.16/0.9.26"/>
+    </application>
+</manifest>

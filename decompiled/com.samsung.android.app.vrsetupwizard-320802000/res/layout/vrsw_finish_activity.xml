@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:background="@color/background_color_black" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/layout_text" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="45.0dip" android:layout_weight="1.0" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" app:layout_constraintBottom_toTopOf="@id/go_to_vrlauncher" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <TextView android:gravity="start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="41.0dip" android:text="@string/vr_setup_complete" style="@style/SetupWizard.Finish.Title" />
+        <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:gravity="start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/setup_complete_description" style="@style/SetupWizard.Finish.Description" />
+                <TextView android:gravity="start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/setup_complete_description_more" style="@style/SetupWizard.Finish.Description" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <Button android:gravity="center" android:id="@id/go_to_vrlauncher" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="41.0dip" android:text="@string/move_gear_vr_launcher" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/layout_text" style="@style/Basic.Button" />
+</android.support.constraint.ConstraintLayout>

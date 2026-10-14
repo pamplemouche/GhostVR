@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/background_color_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="45.0dip" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip">
+        <TextView android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/device_controller_title" android:maxLines="2" style="@style/VRController.OOBE.TitleText" />
+    </LinearLayout>
+    <ScrollView android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:id="@id/textview_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:text="@string/device_oobe_pairing_description" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" style="@style/VRController.OOBE.DescriptionText" />
+            <FrameLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip">
+        <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="end|center" android:orientation="vertical" android:id="@id/skip_button_area" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginEnd="24.0dip">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/device_oobe_skip" style="@style/VRController.OOBE.FlatButton" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

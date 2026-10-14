@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/background_color_black" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar android:theme="@style/Basic.Toolbar" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="56.0dip" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+        <LinearLayout android:orientation="vertical" android:id="@id/layout_vrcontroller_info" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/device_controller_list_paired" style="@style/VRController.Main.SubHeaderText" />
+            <LinearLayout android:orientation="vertical" android:background="@drawable/roundcorner_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:layout_marginBottom="18.0dip" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip">
+                    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:id="@id/selected_vrcontroller" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VRController.Main.SelectedControllerText" />
+                    </LinearLayout>
+                    <ImageView android:id="@id/button_controller_detail" android:layout_width="32.0dip" android:layout_height="32.0dip" android:foreground="?android:selectableItemBackground" android:src="@drawable/vr_list_ic_settings" android:tint="#ff4297ff" />
+                </LinearLayout>
+                <Button android:layout_gravity="center_horizontal" android:id="@id/pair_new_controller" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="25.0dip" android:text="@string/device_controller_pair_new_controller" style="@style/Basic.Button" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layout_no_vrcontroller_found" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/device_oobe_no_device" style="@style/VRController.Main.NoControllerText" />
+            <Button android:id="@id/pair_new_controller2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/device_controller_pair_new_controller" style="@style/Basic.Button" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

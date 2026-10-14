@@ -1,0 +1,73 @@
+* Aşağıdaki sağlık ve güvenlik uyarıları, doğru ve eksiksiz olmaları için düzenli olarak güncellenmektedir. En güncel haline oculus.com/warnings adresinden erişebilirsiniz.
+
+SAĞLIK & GÜVENLİK UYARILARI: Fiziksel yaralanma, rahatsızlık veya mala zarar gelmesi riskini azaltmak için, lütfen tüm Gear VR kullanıcılarının Gear VR’yi kullanmadan önce aşağıdaki uyarıları dikkatlice okumasını sağlayın.
+
+Gear VR’yi Kullanmadan Önce:
+•	Gear VR ile birlikte verilen tüm kurulum ve kullanma talimatlarını okuyun ve bunlara uyun.
+•	Gear VR kullanımı için verilen donanım ve yazılım önerilerini inceleyiniz. Önerilen donanım ve yazılımın kullanılmaması halinde rahatsızlık riski artabilir.
+•	Gear VR’niz uyumlu olmayan cihaz, aksesuar ve/veya yazılımlar ile kullanım için tasarlanmamıştır. Uyumlu olmayan cihaz, aksesuar ve/veya yazılımların kullanılması, yaralanmanız veya bir başkasının yaralanması, performans sorunları veya sisteminiz ve ilgili özelliklerinin zarar görmesi ile sonuçlanabilir.
+•	Keyifli bir sanal gerçeklik deneyimi yaşamanız için, hareket ve denge hissinizin sekteye uğramaması gerekmektedir. Yorgun, uykusuz, alkol veya uyuşturucu etkisi altında veya akşamdan kalmayken, sindirim sorunlarınız varken, duygusal stres altında veya gerginken veya soğuk algınlığı, gribal enfeksiyon, baş ağrısı, migren veya kulak ağrınız varken, bu durumlar olumsuz etkilere yatkınlığınızı artırabileceğinden, Gear VR’yi kullanmayınız. 
+•	Hamilelik, yaşlılık, önceden var olan binoküler görme bozuklukları veya psikiyatrik rahatsızlıklarının olması veya kalp rahatsızlığı veya başka ciddi bir sağlık probleminin söz konusu olması halinde, Gear VR’yi kullanmadan önce doktorunuza danışmanızı tavsiye ederiz.
+  
+Nöbetler: Bazı insanlar (yaklaşık her 4000 kişiden 1’i), daha önce hiç nöbet veya baygınlık geçirmemiş olsa veya nöbet veya epilepsi geçmişleri olmasa dahi, televizyon izlerken, bilgisayar oyunu oynarken veya sanal gerçeklik deneyimi yaşarken, ışık parlaması veya düzeninden kaynaklanan ciddi baş dönmesi, nöbet, epileptik nöbet veya baygınlık geçirmektedir. Bu nöbetler 20 yaş altı gençler ve çocuklarda daha sık görülmektedir. Nöbet geçiren, bilinç kaybı yaşayan veya epileptik soruna bağlı belirtiler gösteren kişiler Gear VR kullanmadan önce bir doktora danışmalıdır.
+
+Çocuklar: Gear VR, küçük çocukların görsel gelişimi açısından kritik bir dönem olduğundan, 13 yaş altı çocuklar tarafından kullanılmamalıdır. Yetişkinler, Gear VR kullanmış veya kullanmakta olan çocukların (13 yaş ve üstü) yukarı anlatılan belirtileri gösterip göstermediğini takip etmeli, çocukların Gear VR kullanma süresini sınırlandırmalı ve kullanım sırasında ara vermelerini sağlamalıdır. El göz koordinasyonu, denge ve birden fazla işi aynı anda yapabilme yeteneği olumsuz etkilenebileceğinden, uzun süreli kullanımdan kaçınılmalıdır. Yetişkinler, söz konusu yeteneklerde herhangi bir gerileme olup olmadığının tespit edilebilmesi için Gear VR kullanımı sırasında ve sonrasında çocukları yakından takip etmelidir.
+
+Genel Önlemler: Yaralanma veya rahatsızlık riskini azaltmak için, bu talimatlara her zaman uyulmalı ve Gear VR kullanımı sırasında bu önlemler alınmalıdır:
+•	Yalnızca Güvenli Bir Ortamda Kullanınız: Gear VR sizi gerçek çevrenizden uzaklaştıran ve görüş alanınızı tamamen kapatan çevreleyici bir sanal gerçeklik denetimi yaratmaktadır. 
+o	Gear VR kullanmaya başlamadan önce ve kullanım sırasında her zaman etrafınızda bulunanların farkında olun. Yaralanmalardan kaçınmak için dikkatli kullanın.
+o	Gear VR kullanımı denge kaybına yol açabilir.
+o	Sanal ortamda gördüğünüz nesnelerin gerçek ortamda bulunmadığını unutmayın ve bunların üzerine oturmayın, üzerlerine çıkmayın veya bunları destek olarak kullanmayın. 
+o	En güvenli deneyim için, Gear VR’yi oturarak veya sabit pozisyonda kullanın.
+o	Sendelemek, duvara, mobilyalara ve diğer nesnelere doğru koşmak veya bunlara çarpmak ciddi yaralanmalara yol açabilir, dolayısıyla, Gear VR’yi kullanmadan önce, güvenli kullanım için alanı boşaltın.
+o	Gear VR kullanımı sırasında veya kullanımdan hemen sonra diğer insanların, nesnelerin, merdiven, balkon, kapı aralığı, pencere, mobilya, ateş, tavan pervanesi veya avize veya devirebileceğiniz veya çarpabileceğiniz diğer objelerin etrafında bulunmadığınızdan özellikle emin olun.
+o	Gear VR kullanmadan önce takılıp düşme tehlikesi yaratabilecek her türlü nesneyi alandan kaldırın.
+o	Gear VR kullanırken insanların ve evcil hayvanların bulunduğunuz alana girebileceğinin farkında olmayabilirsiniz.
+o	Gear VR kullanırken keskin veya her halde tehlikeli nesneleri üzerinizde bulundurmayın.
+o	Yürümek, bisiklete binmek veya araç sürmek gibi dikkatinizi toplamanız gereken hallerde Gear VR’yi kesinlikle takmayın.
+•	Gear VR’nin başınızda rahat bir şekilde dengeli ve güvenli durduğundan ve tek bir net görüntü aldığınızdan emin olun.
+•	Vücudunuzun adapte olabilmesi için Gear VR’yi yavaşça ve dikkatlice kullanmaya başlayın; ilk başta her seferinde sadece birkaç dakika kullanın ve Gear VR kullanım sürenizi sanal gerçekliğe alışmaya başladıkça kademeli olarak artırın. İlk kez sanal gerçekliğe girerken etrafınıza bakmak ve giriş aygıtını kullanmak, gerçek hayattaki hareketleriniz ile ortaya çıkan sanal gerçeklik tecrübeniz arasındaki küçük farklara adapte olmanıza yardımcı olur.
+•	Olumsuz etkilere yatkınlığı artırabileceğinden, Gear VR’yi araba, otobüs veya tren gibi hareket halindeki bir araçta kullanmayın.
+•	Her 30 dakikada bir, ihtiyacınız olmadığını düşünseniz dahi, en az 10-15 dakikalık molalar verin. Herkesin bünyesi farklılık gösterdiğinden, rahatsızlık yaşadığınız takdirde daha sık ve uzun aralar verin. Sizin için en uygun olana kendiniz karar vermelisiniz.
+•	Gear VR’ye, gerçek dünya ile kısa süreli etkileşim amacıyla geçici olarak etrafınızdakileri görmenize olanak veren, “doğrudangörüş” (“passthrough”) özelliği takılabilir. Gear VR’yi dikkat veya koordinasyon gerektiren her türlü durumda çıkarmalısınız.
+•	Yüksek ses düzeyine maruz kalmak, işitme duyunuzda geri dönüşü olmayan hasara yol açabilir. Çevre gürültüsünün yanı sıra yüksek ses düzeyine sürekli olarak maruz kalmak, sesleri gerçekte olduğundan daha düşük seviyede algılamanıza yol açabilir. Sanal gerçeklik deneyiminin çevreleyici doğası gereği, çevrenizdekilerin farkında olmaya devam edebilmeniz ve işitsel zarar riskini azaltabilmeniz için Gear VR’yi yüksek ses düzeyi ile kullanmayın.
+
+Rahatsızlık
+•	Gear VR kullanan birinde aşağıdaki belirtilerden herhangi birinin görülmesi halinde, Gear VR kullanımına derhal son veriniz: nöbet; bilinç kaybı; göz yorgunluğu; göz veya kas seğirmesi; istemsiz hareketler; bozuk, bulanık veya çift görme veya diğer görsel bozukluklar; baş dönmesi; çevreye uyum sağlayamama; dengede bozukluk; göz-el koordinasyonunda bozukluk; aşırı terleme; aşırı tükürük salgılama; bulantı; bayılma hissi; rahatsızlık veya baş veya gözde ağrı; sersemlik; yorgunluk; veya yol tutması benzeri her türlü belirti.
+•	Uzun yol gemisinden karaya çıkan insanların yaşadıkları gibi, sanal gerçekliğe maruz kalmanın belirtileri de kullanımdan saatler sonra devam edebilir ve daha belirgin bir hal alabilir.  Bu kullanım sonrası belirtiler arasında aşırı sersemlik ve birden fazla işi aynı anda yapabilme yeteneğinde gerilemenin yanı sıra yukarıda sıralanan belirtiler de olabilir. Bu belirtiler, gerçek hayatta olağan işleriniz ile ilgilenirken yaralanma riskinizi artırabilir.
+•	Tüm belirtiler tamamen geçene kadar, araba sürmeyin, iş makinesi kullanmayın veya görsel veya fiziksel çaba gerektiren ve ciddi sonuçlara yol açabilecek işlerden (örn. gerçekleştirirken herhangi bir belirtinin görülmesi halinde ölüm, fiziksel yaralanma veya malvarlığında zarara yol açabilecek işler) veya sekteye uğramamış denge ve el-göz koordinasyonu gerektiren işlerden (spor yapmak veya bisiklete binmek vb.) kaçının. 
+•	Tüm belirtiler birkaç saat boyunca görülmeyene kadar Gear VR kullanmayın. Kullanmaya devam etmeden önce Gear VR'yi düzgün ayarladığınızdan emin olun.
+•	Kullanmakta olduğunuz içerikten kaynaklanan belirtilere daha yatkın olabileceğiniz için, herhangi bir belirtinin ortaya çıkmasından önce kullandığınız içeriğin türüne dikkat edin.
+•	Ciddi ve/veya sürekli belirtiler görülmesi halinde, bir doktora danışınız.
+
+Strese Bağlı Tekrar Eden Yaralanmalar: Gear VR’yi kullanmak kaslarınıza, eklemlerinize veya cildinize zarar verebilir. Gear VR’yi kullanırken vücudunuzun herhangi bir bölümünün yorulması veya ağrıması halinde veya karıncalanma, uyuşukluk, yanma veya sertleşme gibi belirtiler hissetmeniz halinde, durun ve Gear VR’yi tekrar kullanmaya başlamadan önce birkaç saat dinlenin. Yukarıdaki belirtilerden herhangi birinin devam etmesi veya kullanım sırasında veya sonrasında başka rahatsızlıklar yaşamanız halinde Gear VR’yi kullanmayı bırakın ve bir doktora danışın.
+
+Tıbbi Cihazlar ile Etkileşim: Gear VR içeriğinde, içinde mıknatıslar bulunan ve radyo dalgası gönderebilen bir kulaklık bulunmaktadır. Bu, kalp pili, işitme cihazı ve kalp ritmi düzenleyiciler dâhil olmak üzere, çevredeki elektronik cihazların işleyişini etkileyebilir. Kalp piliniz veya vücudunuzun içine yerleştirilmiş başka bir tıbbi cihaz olması halinde, doktorunuza veya tıbbi cihazınızın üreticisine danışmadan, Gear VR’ı kullanmayınız. Gear VR ve tıbbi cihazınız arasında güvenli bir mesafe bulundurun ve tıbbi cihazınızla sürekli bir etkileşim fark etmeniz halinde Gear VR’yi kullanmayı bırakın.
+
+Kontrol Cihazı:
+•	Gear VR’ınız dışarıdan bir kontrol cihazı ile birlikte gelebilir.
+•	Kontrol cihazının sağlık ve güvenlik uyarıları için üretici firmaya danışın.
+•	Kullanım sırasında kontrol cihazını güvenli bir şekilde bileğinize sabitlemek için her zaman içeriğe dâhil olan bileklik ipini kullanın. 
+
+Elektrik Çarpması: Elektrik çarpması riskini azaltmak için:
+•	Temin edilen parçalardan hiçbirini açmayın veya bunlar üzerinde değişiklik yapmayın.
+•	Kablolardan herhangi biri zarar görmüş veya teller açığa çıkmış ise ürünü kullanmayın.
+
+Güç adaptörü temin edilmiş ise:
+•	Güç adaptörünü sıvıya veya nemli ortama maruz bırakmayın.
+•	Güç adaptörünü temizlemeden önce prizden çıkarın ve sadece kuru bez ile temizleyin.
+•	Güç adaptörünü ateşten ve diğer ısı kaynaklarından uzak tutun.
+•	Sadece Gear VR ile birlikte verilen güç adaptörünü kullanın.
+
+Zarar Görmüş veya Bozulmuş Cihaz:
+•	Herhangi bir parçanın zarar görmesi veya bozulması halinde cihazı kullanmayın.
+•	Cihazın herhangi bir parçasını kendi başınıza tamir etmeyi denemeyin. Tamiratlar sadece yetkili servis tarafından yapılmalıdır.
+
+Bulaşıcı Rahatsızlıklar: Bulaşıcı rahatsızlıkların (göz kanlanması gibi) geçişinin önlenmesi için, Gear VR’yi özellikle gözde, ciltte veya kafa derisinde bulaşıcı rahatsızlığı, enfeksiyonu veya hastalığı bulunan insanlar ile ortak kullanmayın. Gear VR her kullanım sonrası cilt dostu anti bakteriyel mendil ile temizlenmeli (özellikle lensler) ve mikro fiber bez ile kurulanmalıdır. 
+
+Cilt İritasyonu: Gear VR cildinize ve başınıza temas edecek şekilde takılır. Şişme, kaşıntı veya başka iritasyonları farketmeniz halinde Gear VR’yi kullanmayı bırakın. Belirtilerin devam etmesi halinde, doktorunuz ile iletişime geçin.
+
+Gear VR’ye zarar gelmesinin önlenmesi için:
+•	Gear VR’yi doğrudan güneş ışığında bırakmayın. Doğrudan güneş ışığına maruz kalmak Gear VR’ye zarar verebilir.
+•	Ekrana zarar verebileceğinden, lenslere doğru lazer veya harici bir ışık kaynağı doğrultmayın.
+•	İstem dışı zarar görmemesi veya çevresel etkilere maruz kalmaması için, kullanmadığınız zamanlarda parçaları kendi saklama kutularında muhafaza edin.

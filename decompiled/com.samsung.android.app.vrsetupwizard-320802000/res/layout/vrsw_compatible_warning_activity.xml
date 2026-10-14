@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/background_color_black" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="45.0dip" android:layout_weight="1.0" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip">
+        <TextView android:gravity="start" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/notice" style="@style/SetupWizard.Compatible.Title" />
+        <TextView android:gravity="start" android:id="@id/compatible_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/compatible_description" style="@style/SetupWizard.Compatible.Description" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:minHeight="56.0dip">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <LinearLayout android:gravity="end|center" android:orientation="vertical" android:id="@id/next_btn_area" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="24.0dip">
+                <TextView android:id="@id/next_btn_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/next" style="@style/Basic.FlatButton.Text" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

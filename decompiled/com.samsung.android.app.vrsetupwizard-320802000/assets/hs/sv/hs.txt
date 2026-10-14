@@ -1,0 +1,73 @@
+* De här hälso- och säkerhetsvarningar uppdateras regelbundet för att säkerställa deras riktighet och fullständighet. Besök oculus.com/warnings för den senaste versionen.
+
+HÄLSO- OCH SÄKERHETSVARNINGAR: Se till att alla som använder Gear VR noggrant läser varningarna nedan innan de använder Gear VR för att minska risken för personskador, obehag eller skada på egendom.
+
+Innan du använde din Gear VR:
+•	Läs och följ alla inställnings- och bruksanvisningar som medföljer din Gear VR. 
+•	Granska rekommendationerna angående hårdvara och mjukvara för användning av din Gear VR. Risk för obehag kan öka om rekommenderad hårdvara och mjukvara inte används.
+•	Din Gear VR är inte avsedd för att användas med icke-tillhörande utrustning, tillbehör och/eller mjukvara. Användning av icke-tillhörande utrustning, tillbehör och/eller mjukvara kan skada dig eller andra och kan orsaka funktionsstörningar eller skada på ditt system och tillhörande tjänster. 
+•	En bekväm virtuell verklighetsupplevelse kräver en oförminskad känsla för rörelse och balans. Använd inte din Gear VR när du är trött, behöver sova, är under påverkan av alkohol eller droger, är bakfull, har matsmältningsproblem, är under känslomässig stress eller ångest, eller när som lider av förkylning, influensa, huvudvärk, migrän, eller öronvärk, eftersom detta kan öka din känslighet för negativa symptom.
+•	Vi rekommenderar att du besöker en läkare innan du använder din Gear VR om du är gravid, äldre, har konstaterats ha ett avvikande binokulärseende eller psykiska störningar, eller lider av hjärtproblem eller andra allvarliga medicinska tillstånd.
+
+Anfall: Hos en del personer (ca 1 på 4000) kan blinkande ljus eller mönster leda till svår yrsel, anfall, epileptiska anfall eller tillfällig medvetslöshet, och detta kan inträffa medan de ser på TV, spelar videospel eller upplever en virtuell verklighet, även om de inte tidigare har haft ett anfall eller varit medvetslösa eller om de inte har någon historik av anfall eller epilepsi. Sådana anfall är vanligare hos barn och ungdomar under 20 år. Alla som har haft anfall, medvetslöshet eller andra symtom som kan kopplas till epilepsi bör besöka en läkare innan de använder Gear VR.
+
+Barn: Gear VR ska inte användas av barn under 13 år, eftersom små barn är i en kritisk period för visuell utveckling. Vuxna bör övervaka barn (13 år och äldre) som använder eller har använt en Gear VR för att upptäcka de symptom som nämns nedan, och bör begränsa den tid barn använder Gear VR och se till att de tar pauser under användningen. Långvarig användning bör undvikas, eftersom detta kan inverka negativt på kordinationen mellan handen och ögat, balansen och förmågan att göra flera saker samtidigt. Vuxna bör övervaka barn noggrant under och efter användningen av Gear VR för att upptäcka försämringar i dessa förmågor. 
+
+Allmänna försiktighetsåtgärder: För att minska risken för skada eller obehag bör du alltid följa dessa instruktioner och iaktta dessa försiktighetsåtgärder när du använder din Gear VR: 
+•	Använd endast på en säker plats: Din Gear VR ger en fördjupad virtuell verklighetsupplevelse som distraherar dig från och helt blockerar din syn av din faktiska omgivning.
+o	Var alltid medveten om din omgivning innan du använder och när du använder din Gear VR. Var försiktig för att undvika skador. 
+o	Användning av Gear VR kan få dig att tappa balansen. 
+o	Kom ihåg att de objekt som du ser i den virtuella miljön inte finns i den verkliga miljön, så sitt eller stå inte på dem och använd inte dem för stöd.
+o	För den säkraste upplevelsen, förbli sittande eller stillastående när du använder Gear VR.
+o	Allvarliga skador kan uppstå från att snubbla över, att springa in i eller att slå väggar, möbler eller andra föremål, så förbered ett område för säker användning innan du använder din Gear VR. 
+o	Se särskilt till att du inte är i närheten av andra personer, föremål, trappor, balkonger, öppna dörrar, fönster, möbler, öppen eld, takfläktar eller lampor eller andra objekt som du kan stöta emot eller stöta omkull när du använder eller omedelbart efter användningen av din Gear VR.
+o	Ta bort alla varor i området som kan medföra en risk för snavande innan du använder din Gear VR. 
+o	Kom ihåg att när du använder din Gear VR kan du vara omedveten om att människor och husdjur kan komma in i ditt närområde.
+o	Hantera inte vassa eller på annat sätt farliga föremål när du använder din Gear VR. 
+o	Använda aldrig din Gear VR i situationer som kräver uppmärksamhet, t.ex. när du går, cyklar eller kör.
+•	Se till att din Gear VR är vågrät och sitter bekvämt på ditt huvud och att du ser en enda tydlig bild.
+•	Vänj din kropp genom att öka användningen av din Gear VR gradvis. Använd endast några minuter åt gången i början och öka användningstiden gradvis först när du har vant dig vid den virtuella verklighetsupplevelsen. Om du ser dig omkring första gången du använder virtuell verklighet kan det hjälpa dig att vänja dig vid små skillnader mellan dina riktiga rörelser och hur de rörelserna upplevs i den virtuella verkligheten.
+•	Använd inte din Gear VR medan du är i ett rörligt fordon såsom en bil, buss, eller tåg, eftersom detta kan öka din känslighet för negativa symptom.
+•	Ta en paus på åtminstone 10–15 minuter varje 30 minut, även om du inte anser att du behöver det. Alla är olika, så längre pauser oftare om du känner obehag. Du bestämmer vad som fungerar bäst för dig.
+•	Din Gear VR kan vara utrustad med en "genomströmnings"-funktion som gör att du tillfälligt kan se din omgivning och få en kort upplevelse av den verkliga världen. Du ska alltid ta av dig din Gear VR för varje situation som kräver din uppmärksamhet eller koordination. 
+•	Att lyssna på ljud på hög volym kan orsaka obotliga skador på hörseln. Bakgrundsljud, samt att kontinuerligt utsättas för hög volym, kan göra att ljudet verkar tystare än det egentligen är. Använd inte din Gear VR med ljudet på hög volym, på grund av den virtuella verklighetsupplevelsens uppslukande karaktär, så att du kan upprätthålla medvetandet om din omgivning och minska risken för hörselskador.
+
+Obehag
+•	Sluta användningen omedelbart om någon som använder din Gear VR upplever något av följande symtom: anfall; medvetslöshet; ögontrötthet; ögon- eller muskelryckningar; ofrivilliga rörelser; ändrat, suddigt eller dubbelt seende eller andra visuella avvikelser; yrsel; desorientering; nedsatt balans; försämrad koordination mellan hand och öga; överdriven svettning; ökad salivutsöndring; illamående; yrsel; obehag eller smärta i huvudet eller ögonen; dåsighet; trötthet; eller symptom som liknar åksjuka.
+•	Precis som med symptom människor kan uppleva när de landstigit från ett kryssningsfartyg kan symtomen efter en virtuell verklighetsupplevelse kvarstå och bli mer tydliga några timmar efter användningen. De symptom som kan uppstå efter andvändning kan omfatta symptomen ovan samt överdriven sömnighet och minskad förmåga att göra flera saker samtidigt. Dessa symtom kan ökad risken för skador när du deltar i normal verksamhet i den verkliga världen.
+•	Kör inte bil, använd inte maskiner och delta inte i andra visuellt eller fysiskt krävande aktiviteter som kan få allvarliga konsekvenser (t.ex. verksamhet där symptomen kan leda till dödsfall, personskador eller skador på egendom), eller andra aktiviteter som kräver oförminskad balans och koordination mellan hand och öga (t.ex. idrott eller cykling etc.) tills du har återhämtat dig helt från symptomen.  
+•	Använd inte din Gear VR innan alla symptom är fullständigt borta under flera timmar. Se till att du har ställt in din Gear VR korrekt innan du fortsätter användningen. 
+•	Var uppmärksam på den typ av innehåll som du använde innan symptomen började eftersom du kan ha lättare att drabbas av symptom utifrån det innehåll som används.  
+•	Uppsök en läkare om du har allvarliga och/eller ihållande symtom.
+
+Skador på grund av repetitiv belastning: Användning av Gear VR kan orsaka smärta i dina muskler, leder eller din hud. Om någon del av din kropp blir trött eller öm när du använder Gear VR eller om du känner symtom som stickningar, domningar, brännande eller stelhet ska du sluta användningen och vila i flera timmar innan du fortsätter användningen av Gear VR. Om något av de ovanstående symtomen fortsätter eller om du känner annat obehag under eller efter användningen ska du sluta användningen av Gear VR och besöka en läkare. 
+
+Störningar i medicinska produkter: Din Gear VR har försetts med hörlurar som innehåller magneter och som kan avge radiovågor. Dessa kan påverka användningen av närliggande elektronik, inklusive pacemakrar (hjärtstimulatorer), hörapparater och defibrillatorer. Om du har en pacemaker eller någon annan implanterad medicinsk produkt, använd inte din Gear VR utan att först rådfråga din läkare eller tillverkaren av den medicinska produkten. Håll ett säkert avstånd mellan din Gear VR och dina medicinska produkter och sluta använda din Gear VR om du upptäcker en bestående störning i den medicinska produkten. 
+
+Styrenhet: 
+•	Din Gear VR kan ha försetts med en tredje parts styrenhet. 
+•	Kontakta tillverkaren för att få styrenhetens hälso- och säkerhetsvarningar. 
+•	Använd alltid de medföljande handledsbanden med styrenheten för att fästa den till din handled under användningen. 
+
+Elektrisk stöt: För att minska risken för elstötar: 
+•	Modifiera inte och plocka inte isär någon av de medföljande komponenterna. 
+•	Använd inte produkten om någon kabel är sönder eller om någon elledning är synlig.
+
+Om produkten har försetts med en strömadapter:
+• Utsätt inte strömadaptern för vätska eller fukt.
+• Koppla ur strömadaptern före rengöring och rengör endast med en torr trasa.
+• Håll strömadaptern borta från öppen eld och andra värmekällor.
+• Använd endast den strömadapter som medföljer din Gear VR. 
+
+Skadad eller trasig produkt: 
+•	Använd inte enheten om någon del är trasig eller skadad. 
+•	Försök inte reparera någon del av enheten själv. Reparationer ska endast utföras av en auktoriserad servicetekniker. 
+
+Smittsamma sjukdomar: För att undvika överföring smittsamma sjukdomar (som ögoninflammation), dela inte din Gear VR med personer med smittsamma tillstånd, infektioner eller sjukdomar, särskilt i ögon, hud eller hårbotten. Rengör din Gear VR mellan varje användning med hudvänliga desinficerande vätskeservetter (särskilt objektiven) och torkas med en mikrofiberduk. 
+
+Hudirritation: Din Gear VR är i kontakt hud och hårbotten. Sluta använda din Gear VR om du märker svullnad, klåda eller annan irritation. Kontakta läkaren om symptomen kvarstår. 
+
+För att undvika skador på din Gear VR: 
+•	Lämna inte din Gear VR i direkt solljus. Exponering för direkt solljus kan skada din Gear VR. 
+•	Rikta inte en laser eller en extern ljuskälla genom linserna eftersom detta kan skada skärmen. 
+•	Förvara komponenterna i deras förvaringsväska när de inte används för att minimera oavsiktliga skador eller utsättning för miljöpåverkningar.

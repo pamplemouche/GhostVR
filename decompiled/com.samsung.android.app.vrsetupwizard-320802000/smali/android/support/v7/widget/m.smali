@@ -1,0 +1,87 @@
+.class Landroid/support/v7/widget/m;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic a:Landroid/support/v7/widget/ActionMenuPresenter;
+
+.field private b:Landroid/support/v7/widget/p;
+
+
+# direct methods
+.method public constructor <init>(Landroid/support/v7/widget/ActionMenuPresenter;Landroid/support/v7/widget/p;)V
+    .locals 0
+
+    iput-object p1, p0, Landroid/support/v7/widget/m;->a:Landroid/support/v7/widget/ActionMenuPresenter;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Landroid/support/v7/widget/m;->b:Landroid/support/v7/widget/p;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 2
+
+    iget-object v0, p0, Landroid/support/v7/widget/m;->a:Landroid/support/v7/widget/ActionMenuPresenter;
+
+    invoke-static {v0}, Landroid/support/v7/widget/ActionMenuPresenter;->h(Landroid/support/v7/widget/ActionMenuPresenter;)Landroid/support/v7/view/menu/p;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/m;->a:Landroid/support/v7/widget/ActionMenuPresenter;
+
+    invoke-static {v0}, Landroid/support/v7/widget/ActionMenuPresenter;->i(Landroid/support/v7/widget/ActionMenuPresenter;)Landroid/support/v7/view/menu/p;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/support/v7/view/menu/p;->f()V
+
+    :cond_0
+    iget-object v0, p0, Landroid/support/v7/widget/m;->a:Landroid/support/v7/widget/ActionMenuPresenter;
+
+    invoke-static {v0}, Landroid/support/v7/widget/ActionMenuPresenter;->j(Landroid/support/v7/widget/ActionMenuPresenter;)Landroid/support/v7/view/menu/ah;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Landroid/support/v7/widget/m;->b:Landroid/support/v7/widget/p;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/p;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Landroid/support/v7/widget/m;->a:Landroid/support/v7/widget/ActionMenuPresenter;
+
+    iget-object v1, p0, Landroid/support/v7/widget/m;->b:Landroid/support/v7/widget/p;
+
+    iput-object v1, v0, Landroid/support/v7/widget/ActionMenuPresenter;->h:Landroid/support/v7/widget/p;
+
+    :cond_1
+    iget-object v0, p0, Landroid/support/v7/widget/m;->a:Landroid/support/v7/widget/ActionMenuPresenter;
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Landroid/support/v7/widget/ActionMenuPresenter;->j:Landroid/support/v7/widget/m;
+
+    return-void
+.end method

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/background_color_black" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar android:theme="@style/Theme.AppCompat" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="56.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip">
+        <TextView android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="62.0dip" android:text="@string/warning" android:textAllCaps="true" style="@style/SetupWizard.Warnings.Title" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:scrollbarStyle="outsideInset" android:gravity="start" android:id="@id/hs_agree_msg" android:scrollbars="vertical" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textIsSelectable="true" style="@style/SetupWizard.Warnings.Description" />
+            </ScrollView>
+        </LinearLayout>
+        <TextView android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="62.0dip" android:layout_marginTop="20.0dip" android:text="@string/eula" style="@style/SetupWizard.Warnings.Title" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:scrollbarStyle="outsideInset" android:id="@id/eula_agree_msg" android:scrollbars="vertical" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textIsSelectable="true" style="@style/SetupWizard.Warnings.Description" />
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="64.0dip" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip">
+        <LinearLayout android:orientation="horizontal" android:id="@id/linear_eula_agree_confirm" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <CheckBox android:id="@id/eula_agree_confirm_checkbox" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SetupWizard.Warnings.CheckBox" />
+            <TextView android:id="@id/eula_agree_confirm_text_view" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/agree" android:drawableTop="@drawable/shape_line" android:layout_marginStart="5.0dip" style="@style/SetupWizard.Warnings.CheckBoxText" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:baselineAligned="false" android:minHeight="56.0dip">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <LinearLayout android:gravity="end|center" android:orientation="vertical" android:id="@id/next_btn_area" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="24.0dip">
+                <TextView android:id="@id/next_btn_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/next" style="@style/Basic.FlatButton.Text" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,74 @@
+* Näitä terveys- ja turvallisuusvaroituksia päivitetään säännöllisin väliajoin paikkansapitävyyden ja aukottomuuden varmistamiseksi. Tuorein versio löytyy osoitteesta oculus.com/warnings.
+
+TERVEYS- JA TURVALLISUUSVAROITUKSET: Vähentääksesi henkilövamman, epämukavuuden tunteen tai omaisuuden vahingoittumisen riskiä, ole hyvä ja varmista, että kaikki Gear VR:n käyttäjät lukevat alla olevat varoitukset huolellisesti ennen Gear VR:n käyttämistä.
+
+Ennen Gear VR:n käyttöä:
+
+•	Lue ja seuraa kaikkia Gear VR:n mukana tulleita asennus- ja käyttöohjeita. 
+•	Tarkista Gear VR:n käyttöä koskevat laitteisto- ja ohjelmistosuositukset. Epämukavuuden tunteen riski saattaa nousta, jos suositeltua laitteistoa ja ohjelmistoa ei käytetä.
+•	Gear VR:ää ei ole suunniteltu käytettäväksi minkään sopimattoman laitteen, lisäosan ja/tai ohjelmiston kanssa. Sopimattoman laitteen, lisäosan ja/tai ohjelmiston käyttäminen saattaa aiheuttaa vammoja sinulle tai muille ja saattaa aiheuttaa suoritusongelmia tai vahingoittaa järjestelmääsi ja siihen liittyviä palveluita.
+•	Miellyttävä virtuaalitodellisuuden kokeminen vaatii heikentymättömän liikkeen ja tasapainon tajun. Älä käytä Gear VR:ää, kun olet väsynyt, unentarpeessa, alkoholin tai huumeiden vaikutuksen alaisena, krapulassa, kärsit ruoansulatusongelmista, henkisestä stressistä tai ahdistuksesta tai kun kärsit flunssasta, päänsärystä, migreeneistä tai korvasärystä, sillä nämä saattavat lisätä haittakokemusten todennäköisyyttä.
+•	Suosittelemme lääkärin vastaanotolla käyntiä ennen Gear VR:n käyttöä, jos olet raskaana, iäkäs, sinulla on todettu ennestään epänormaaliutta kahden silmän yhteisnäössä tai psykiatrinen sairaus tai kärsit sydänsairaudesta tai muusta vakavasta lääketieteellisestä tilasta.
+
+Kohtaukset: Jotkut henkilöt (noin yksi 4000:sta) saattavat kokea voimakasta huimausta, kohtauksia, epileptisiä kohtauksia tai tajunnanmenetyksiä, jonka valon välähdykset tai kuviot saattavat laukaista ja tämä saattaa tapahtua katsottaessa TV:tä, pelattaessa videopelejä tai koettaessa virtuaalitodellisuus, vaikka henkilöllä ei olisi aiemmin ollut kohtauksia, tajunnanmenetyksiä tai epilepsiaoireita. Kyseiset kohtaukset ovat yleisempiä lapsilla ja alle 20-vuotiailla nuorilla. Jokaisen, jolla on ollut kohtaus, tajunnanmenetys tai muu oire, joka viittaa epilepsiaan, tulisi neuvotella lääkärin kanssa ennen Gear VR:n käyttämistä.
+
+Lapset: Alle 13-vuotiaiden lasten ei tulisi käyttää Gear VR:ää, koska he ovat kriittisessä vaiheessa näön kehittymisen kannalta. Aikuisten tulisi valvoa lapsia (13-vuotiaita ja sitä vanhempia), jotka käyttävät tai ovat käyttäneet Gear VR:ää alla mainittujen oireiden varalta ja tulisi rajoittaa aikaa, jolloin lapset käyttävät Gear VR:ää ja varmistaa riittävät tauot käytön lomassa. Pitkittynyttä käyttöä tulisi välttää, koska tämä saattaa vaikuttaa negatiivisesti käsien ja silmien väliseen koordinaatioon, tasapainoon ja useampien asioiden samanaikaiseen tekemiseen. Aikuisten tulisi seurata lapsia tarkasti Gear VR:n käytön aikana ja sen jälkeen näiden kykyjen heikentymisen huomaamiseksi. 
+
+Yleiset varotoimet: Loukkaantumisen ja epämukavuuden riskin välttämiseksi, sinun tulee aina seurata näitä ohjeita ja noudattaa näitä varoituksia käyttäessäsi Gear VR:ää: 
+•	Käytä ainoastaan turvallisessa ympäristössä: Gear VR tuottaa erittäin todentuntuisen kokemuksen virtuaalitodellisuudesta, joka kääntää huomiosi pois ja estää kokonaan näköyhteytesi todelliseen ympäristöösi. 
+o	Ole aina tietoinen ympäristöstäsi ennen kuin alat käyttää Gear VR:ää sekä Gear VR:n käytön aikana. Noudata varovaisuutta vammojen välttämiseksi.
+o	Gear VR:n käyttäminen saattaa aiheuttaa tasapainon menetyksen.
+o	Muista, että virtuaalitodellisuudessa näkemäsi esineet eivät ole olemassa oikeasti, joten älä istu tai seiso millään niistä tai käytä niitä tukeaksesi itseäsi. 
+o	Turvallisimman kokemuksen varmistamiseksi, istu tai pysy paikoillasi Gear VR:ää käyttäessäsi. 
+o	Seiniin, huonekaluihin tai muihin esineisiin kompastuminen, törmääminen tai niihin iskeytyminen saattaa aiheuttaa vakavia vahinkoja, joten tyhjennä tila Gear VR:n turvallista käyttöä varten.
+o	Varmista erityisesti, että et ole toisten ihmisten, esineiden, portaiden, parvekkeiden, avointen ovien, ikkunoiden, huonekalujen, avotulen, kattotuulettimien tai valaisinten tai muiden kohteiden läheisyydessä, joihin saatat törmätä tai jotka saatat kaataa käyttäessäsi Gear VR:ää tai sen käytön jälkeen. 
+o	Poista kaikki kompastumisvaaraa aiheuttavat esineet tilasta ennen kuin alat käyttää Gear VR:ää. 
+o	Muista, että Gear VR:ää käyttäessäsi saatat olla tietämätön siitä, että ihmisiä tai lemmikkejä saattaa tulla käyttämääsi tilaan. 
+o	Älä käsittele teräviä tai muuten vaarallisia esineitä, kun käytät Gear VR:ää. 
+o	Älä koskaan käytä Gear VR:ää tilanteissa, jotka vaativat välitöntä huomiotasi, kuten esimerkiksi kävely, pyöräily tai ajaminen. 
+•	Varmista, että Gear VR on vaaka-asennossa ja kiinnitetty turvallisesti päähäsi ja että näet yhden, selkeän kuvan. 
+•	Totuttele Gear VR:n käyttöä vähitellen ja anna kehosi sopeutua siihen. Käytä Gear VR:ää aluksi vain muutamia minuutteja kerrallaan ja pidennä käyttöaikaa vain asteittain, kun totut virtuaalitodellisuuteen. Kun käytät virtuaalitodellisuutta ensimmäistä kertaa, voit ympärillesi katselemalla totutella todellisten liikkeidesi ja niiden virtuaalitodellisuuselämykseen aiheuttamien vaikutusten pieniin eroihin.
+•	Älä käytä Gear VR:ää ollessasi liikkuvassa ajoneuvossa, kuten autossa, bussissa tai junassa, koska tämä saattaa lisätä mahdollisuuttasi kokea haittavaikutuksia. 
+•	Pidä ainakin 10–15 minuutin tauko puolentunnin välein, vaikka sinusta tuntuisi, ettet tarvitse sitä. Jokainen on erilainen, joten pidä pidempiä taukoja tai pidä taukoja useammin, jos tunnet epämukavuuden tunnetta. Sinä päätät itse, mikä on parasta sinulle. 
+•	Gear VR:si saattaa olla varustettu ”läpikatsomisominaisuudella”, jonka avulla pystyt väliaikaisesti näkemään todellisen ympäristösi. Sinun tulisi aina poistaa Gear VR käytöstäsi tilanteessa, joka vaatii huomiotasi tai koordinaatiota.
+•	Äänien kuunteleminen suurella äänenvoimakkuudella saattaa aiheuttaa pysyvää vahinkoa kuuloosi. Taustaäänet sekä jatkuva altistuminen korkeille äänitasoille saattaa tehdä äänistä hiljaisempia kuin ne oikeasti ovat. Virtuaalitodellisuuden todenmukaisuuden vuoksi, älä käytä Gear VR:ää siten, että sen äänet kuuluvat korkeimmalla volyymilla, jotta voit säilyttää käsityksen ympäristöstäsi ja alentaa kuulovaurion riskiä. 
+
+Epämukavuuden tunne
+•	Lopeta käyttö välittömästi, jos joku Gear VR:n käyttäjä kokee mitä tahansa seuraavista oireista: kohtaukset, tajunnanmenetys, silmien rasittuminen, silmien tai lihasten nykiminen, tahattomat liikkeet, muuttunut tai sumentunut näkö, kaksoiskuva tai muu epänormaali näköaistimus, huimaus, sekavuus, heikentynyt tasapainoaisti, heikentynyt käsien ja silmien koordinaatio, voimakas hikoilu, lisääntynyt syljeneritys, pahoinvointi, pyörrytys, epämukavuuden tunne tai kipu päässä tai silmissä, uneliaisuus, väsymys tai mitkä tahansa matkapahoinvointia muistuttavat oireet.
+•	Kuten oireissa, joita ihmiset kokevat noustuaan maihin laivasta, myös virtuaalitodellisuuden aiheuttamat oireet voivat kestää tai tulla voimakkaammiksi lähituntien kuluessa käytön jälkeen. Nämä käytön jälkeiset oireet saattavat sisältää yllämainittuja oireita sekä liiallista uneliaisuutta ja alentunutta kykyä tehdä useaa tehtävää samaan aikaan. Nämä oireet saattavat asettaa sinut korkeampaan riskiin loukkaantua normaaleissa askareissa todellisessa ympäristössä. 
+•	Älä aja, käytä koneita tai osallistu muuten visuaalisesti tai fyysisesti vaativiin tehtäviin, joilla saattaa mahdollisesti olla vakavia seurauksia (esimerkiksi tehtävät, joissa oireiden kokeminen saattaisi johtaa kuolemaan, loukkaantumiseen tai omaisuuden vahingoittamiseen) tai muihin tehtäviin, jotka vaativat heikentymätöntä tasapainoa ja käsien ja silmien koordinaatiota (kuten muun muassa urheileminen tai pyörällä ajaminen) ennen kuin olet täysin toipunut kaikista kokemistasi oireista.
+•	Älä käytä Gear VR:ää ennen kuin kaikki oireet ovat olleet täysin poissa useita tunteja. Varmista, että olet määrittänyt Gear VR:n asetukset oikein ennen käytön jatkamista.
+•	Kiinnitä huomiota siihen, minkä tyyppistä sisältöä käytit ennen oireiden ilmaantumista, sillä tietyntyyppiset sisällöt voivat aiheuttaa sinulle oireita muita helpommin.
+•	Hakeudu lääkärin vastaanotolle, jos sinulla on vakavia ja/tai jatkuvia oireita.
+
+Toistuvasta rasituksesta aiheutuvat vammat: Gear VR:n käyttäminen saattaa tehdä lihaksesi, nivelesi tai ihosi kipeäksi. Jos mikä tahansa osa kehostasi väsyy tai kipeytyy käyttäessäsi Gear VR:ää tai mikäli tunnet oireita, kuten esimerkiksi kihelmöintiä, tunnottomuutta, kuumotusta tai jäykkyyttä, lopeta ja lepää useita tunteja ennen kuin jatkat Gear VR:n käyttöä. Mikäli mikä tahansa yllämainituista oireista tai muu epämukavuuden tunne jatkuu käyttäessäsi laitetta tai sen käyttämisen jälkeen, lopeta Gear VR:n käyttö ja hakeudu lääkärin vastaanotolle.
+
+Häiriöt lääkinnällisissä laitteissa: Gear VR sisältää kuulokkeet, joissa on magneetit ja ne saattavat säteillä radioaaltoja. Tämä saattaa vaikuttaa lähellä olevien elektronisten laitteiden toimintaan, kuten sydämentahdistimiin, kuulokoneisiin ja defibrillaattoreihin. Mikäli sinulla on sydämentahdistin tai muu kehoon implantoitu lääkinnällinen laite, älä käytä Gear VR:ää konsultoimatta ensin lääkäriäsi tai lääkinnällisen laitteesi valmistajaa. Säilytä turvallinen etäisyys Gear VR:n ja lääkinnällisen laitteesi välillä ja lopeta Gear VR:n käyttö, mikäli havaitset jatkuvaa häiriötä lääkinnällisen laitteesi kanssa. 
+
+Ohjain:  
+•	Gear VR:si on saatettu toimittaa kolmannen osapuolen ohjaimen kanssa. 
+•	Konsultoi valmistajaa ohjaimen terveys- ja turvallisuusvaroituksista. 
+•	Käytä aina mukana tullutta rannelenkkiä ohjaimessa, jotta se pysyy kiinni ranteessasi käytön aikana. 
+
+Sähköisku: Vähentääksesi sähköiskun vaaraa:
+•	Älä muuta tai pura mitään toimitettuja osia.
+•	Älä käytä tuotetta, jos jokin kaapeli on vahingoittunut tai näkyvissä on paljaita johtimia.
+
+Mikäli tuotteessa on adapteri:
+•	Älä altista adapteria nesteelle tai kosteudelle.
+•	Irrota adapteri ennen puhdistamista ja puhdista se ainoastaan kuivalla liinalla.
+•	Pidä adapteri erossa avoimesta tulesta ja muista lämmönlähteistä. 
+•	Käytä ainoastaan Gear VR:n mukana tullutta adapteria. 
+
+Vahingoittunut tai rikkoutunut tuote:
+•	Älä käytä laitettasi, mikäli sen jokin osa on rikki tai vahingoittunut.
+•	Älä yritä korjata mitään tuotteen osaa itse. Korjaukset tulisi suorittaa ainoastaan valtuutetussa huollossa. 
+
+Tarttuvat sairaudet: Tarttuvien sairauksien (esimerkiksi sidekalvontulehdus) tartuttamisen estämiseksi älä jaa Gear VR:ää sellaisten henkilöiden kanssa, joilla on tarttuva tila, tulehdus tai sairaus erityisesti silmissä, iholla tai päänahassa. Gear VR tulisi puhdistaa jokaisen käyttökerran välissä ihoystävällisellä desinfioivalla kosteusliinalla (erityisesti linssit) ja kuivata mikrokuituliinalla. 
+
+Ihoärsytys: Gear VR on sitä käytettäessä kosketuksissa ihoosi ja päänahkaasi. Lopeta Gear VR:n käyttö, jos huomaat turpoamista, kutinaa tai muuta ärsytystä. Jos oireet jatkuvat, ota yhteys lääkäriin.
+
+Välttääksesi Gear VR:n vahingoittumisen:  
+•	Älä jätä Gear VR:ää suoraan auringonvaloon. Suoralle auringonvalolle altistuminen saattaa vahingoittaa Gear VR:ää.
+•	Älä osoita linssejä laserilla tai ulkoisella valonlähteellä, koska se saattaa vahingoittaa näyttöä. 
+•	Säilytä Gear VR:n osia näiden säilytyslaatikossa, kun ne eivät ole käytössä tahattoman vahingon tai ympäristöstä aiheutuvan vahingoittumisen välttämiseksi.

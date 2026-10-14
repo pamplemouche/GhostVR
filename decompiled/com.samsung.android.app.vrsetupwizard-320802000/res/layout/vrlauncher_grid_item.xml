@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@android:color/transparent" android:focusable="true" android:layout_width="@dimen/grid_item_width" android:layout_height="@dimen/grid_item_height" android:foreground="@drawable/background_focused_item_game" android:hapticFeedbackEnabled="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/imageview_item_icon" android:background="@android:color/transparent" android:visibility="visible" android:layout_width="@dimen/grid_item_icon_size" android:layout_height="@dimen/grid_item_icon_size" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" android:scaleType="fitXY" />
+    <TextView android:ellipsize="end" android:gravity="center|top" android:id="@id/textview_item_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:includeFontPadding="false" android:fontFamily="sec-roboto-condensed" style="@style/VRLauncher.Grid.Item.Text" />
+</LinearLayout>

@@ -1,0 +1,30 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.samsung.android.app.vrsetupwizard-320802000.apk
+compressionType: false
+doNotCompress:
+- resources.arsc
+- png
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '21'
+  targetSdkVersion: '29'
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  publicsuffixes.gz: '8'
+  SEC-INF/buildConfirm.crt: '8'
+  SEC-INF/buildinfo.xml: '8'
+  com/msc/sa/aidl/ISACallback.aidl: '8'
+  com/msc/sa/aidl/ISAService.aidl: '8'
+  com/samsung/android/deviceidservice/IDeviceIdService.aidl: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.7.0-dirty
+versionInfo:
+  versionCode: '320802000'
+  versionName: 3.2.08.2

@@ -1,0 +1,73 @@
+* Estes avisos de saúde e segurança são periodicamente atualizados para fins de exatidão e integralidade das informações. Verifique oculus.com/warnings para acessar a versão mais recente.
+
+AVISOS DE SEGURANÇA E SAÚDE: Para reduzir o risco de lesões corporais, desconforto e danos materiais, por favor, assegure que todos os utilizadores do Gear VR leiam cuidadosamente os avisos abaixo antes de utilizar o Gear VR.
+
+Antes de Utilizar o Gear VR:
+•	Leia e siga todas as instruções de configuração e utilização fornecidas com o Gear VR.
+•	Reveja as recomendações de hardware e software para utilização do Gear VR. Risco de desconforto pode aumentar, caso o hardware e software recomendados não sejam utilizados.
+•	Seu Gear VR não é projetado para utilização com qualquer dispositivo, acessório e/ou software inelegível. A utilização de um dispositivo, acessório e/ou software inelegível poderá resultar em lesões a você ou outros, e poderá causar problemas de desempenho ou danos ao seu sistema e serviços relacionados.
+•	Uma experiência de realidade virtual confortável requer um senso de movimento e equilíbrio inalterado. Não utilize o Gear VR quando você estiver cansado, com sono, sob a influência de álcool ou drogas, de ressaca, tenha problemas digestivos, esteja emocionalmente estressado ou ansioso, ou quando esteja com resfriado, gripe, dor de cabeça, enxaqueca, ou dor de ouvido, pois isso pode aumentar sua suscetibilidade a sintomas adversos. 
+•	Recomendamos que um médico seja consultado antes de utilizar o Gear VR, caso você esteja grávida, seja idoso, tenha anomalias de visão binocular pré-existentes ou distúrbios psiquiátricos, ou sofra de uma doença cardíaca ou de outra condição médica grave. 
+
+Convulsões: Algumas pessoas (cerca de 1 em 4000) podem sofrer tonturas severas, convulsões, convulsões epilépticas ou desmaios provocados por flashes de luz ou ruídos ao assistir TV, jogar videogames ou vivenciar realidade virtual, mesmo que nunca tenham tido convulsões ou desmaios antes, ou não tenham histórico de convulsões ou epilepsia. Essas convulsões são mais comuns em crianças e jovens com menos de 20 anos de idade. Qualquer pessoa que tenha tido uma convulsão, perda de consciência, ou outro sintoma relacionado a uma condição epiléptica, deve consultar um médico antes de utilizar o Gear VR.
+
+Crianças: O Gear VR não deve ser utilizado por crianças com menos de 13 anos de idade, já que crianças menores estão em um período crítico de desenvolvimento visual. Adultos devem monitorar crianças (com 13 anos ou mais) que utilizam ou tenham utilizado o Gear VR em relação a quaisquer dos sintomas descritos acima, e devem limitar o tempo que crianças passa utilizando o Gear VR e assegurar que elas façam pausas durante a utilização. Utilização prolongada deve ser evitada, pois pode impactar negativamente a coordenação entre mãos e olhos, equilíbrio, e capacidade multifuncional. Adultos devem monitorar crianças de perto durante e após a utilização do Gear VR em relação a qualquer diminuição dessas habilidades. 
+
+Precauções Gerais: Para reduzir o risco de lesão ou desconforto, você deve sempre seguir essas instruções e observar essas precauções ao utilizar o Gear VR:
+•	Utilize Somente Em Um Ambiente Seguro: O Gear VR produz uma experiência de realidade virtual imersiva que distrai e completamente bloqueia sua visão do seu entorne real. 
+o	Sempre esteja ciente do seu entorno antes de iniciar a utilização e enquanto utiliza o Gear VR. Tenha cuidado para evitar lesões.
+o	A utilização do Gear VR poderá causar perda de equilíbrio. 
+o	Lembre-se que os objetos que você vê no ambiente virtual não existem no ambiente real; por isso, não sente ou fique sobre esses objetos, ou os utilize para suporte. 
+o	Para a experiência mais segura, permaneça sentado ou parado ao utilizar o Gear VR. 
+o	Lesões sérias podem ocorrer em função de tropeços, colisões ou esbarrões com paredes, móveis ou outros objetos; por isso, arrume a área para utilização segura antes de utilizar o Gear VR. 
+o	Tome especial cuidado para garantir que você não esteja perto de outras pessoas, objetos, escadas, varandas, portas abertas, janelas, móveis, chamas, ventiladores ou luminárias de teto, ou outros itens contra os quais você possa se chocar ou derrubar ao utilizar – ou imediatamente após utilizar – o Gear VR.
+o	Remova quaisquer riscos de tropeço da área antes de utilizar o Gear VR. 
+o	Lembre-se que ao utilizar o Gear VR você pode não saber que pessoas e animais de estimação podem adentrar suas imediações. 
+o	Não manipule objetos pontiagudos ou perigosos ao utilizar o Gear VR.
+o	Nunca utilize o Gear VR em situações que requeiram atenção, tais como, andar, andar de bicicleta, ou dirigir. 
+•	Certifique-se que o Gear VR esteja nivelado e ajustado confortavelmente à sua cabeça, e que você veja uma única e clara imagem. 
+•	Inicie gradativamente a utilização do Gear VR para permitir que seu corpo se adapte; utilize apenas por alguns minutos no início, e somente aumento a quantidade de tempo utilizando o Gear VR gradualmente, conforme você se acostume mais com a realidade virtual. Olhar ao redor e utilizar o dispositivo de introdução ao entrar pela primeira vez na realidade virtual pode ajudá-lo a ajustar a quaisquer pequenas diferenças entre seus movimentos no mundo real e a resultante experiência de realidade virtual. 
+•	Não utilize o Gear VR enquanto estiver em veículos em movimento, tais como um carro, autocarro, ou comboio, pois isso pode aumentar sua suscetibilidade a sintomas adversos.
+•	A cada 30 minutos faça pausas de pelo menos 10 a 15 minutos, mesmo que você acredite não precisar. Cada pessoa é diferente, então faça pausas mais frequentes e longas, caso você sinta desconforto. Você deve decidir o que melhor funciona para você
+•	O Gear VR pode vir equipado com um recurso “de passagem” (“passthrough”), que permite que você veja temporariamente seu arredor para uma breve interação com o mundo real. Você deve sempre remover o Gear VR para qualquer situação que requeira atenção ou coordenação.
+•	Ouvir sons em altos volumes pode causar danos irreparáveis à sua audição. Ruído de fundo, assim como exposição continuada a níveis elevados de volume pode fazer com que sons pareçam mais baixos do que realmente são. Devido à natureza imersiva da experiência de realidade virtual, não utilize o Gear VR com o som em um volume alto, para que você possa manter a consciência sobre o seu arredor e reduzir o risco de danos auditivos. 
+
+Desconforto
+•	Interrompa imediatamente a utilização, casa qualquer pessoa utilizando o Gear VR apresente quaisquer dos seguintes sintomas: convulsões; perda de consciência; vista cansada; espasmos oculares ou musculares; movimentos involuntários; visão alterada, turva, ou dupla, ou outras anomalias visuais; tontura; desorientação; equilíbrio prejudicado; coordenação entre mãos e olhos prejudicada; sudorese excessiva; aumento da salivação; náusea; vertigens; desconforto ou dor na cabeça ou olhos; sonolência; fadiga; ou quaisquer sintomas similares a enjoo por movimento.
+•	Assim como os sintomas que as pessoas podem experimentar após desembarcar de um navio de cruzeiro, os sintomas da exposição à realidade virtual podem persistir e se tornar mais perceptíveis horas após a utilização. Esses sintomas pós-utilização podem incluir os sintomas acima, assim como sonolência excessiva e diminuição na capacidade multifuncional. Esses sintomas podem colocá-lo em uma situação de risco de lesão maior ao se envolver em atividades normais no mundo real. 
+•	Não dirija, opere máquinas, ou se envolva em outras atividades visualmente ou fisicamente exigentes, que tem potencialmente graves consequências (ou seja, atividade nas quais apresentar quaisquer sintomas pode levar a morte, lesão corporal, ou dano material), ou outras atividades que exijam equilíbrio e coordenação entre mãos e olhos inalterados (tais como, praticar exportes ou andar de bicicleta, etc.), até que você tenha se recuperado completamente de quaisquer sintomas. 
+•	Não utilize o Gear VR até que todos os sintomas tenham desaparecido completamente por várias horas. Certifique-se que você tenha configurado adequadamente o Gear VR antes de utilizá-lo novamente.  
+•	Esteja atento ao tipo de conteúdo que você estava utilizando antes do início de quaisquer sintomas, pois você pode ser mais propenso a sintomas dependendo do conteúdo sendo utilizado. 
+•	Consulte um médico, caso você tenha sintomas sérios e/ou persistentes. 
+
+Lesão por Esforço Repetitivo: Utilizar o Gear VR pode fazer com que seus músculos, articulações e pele doam. Caso qualquer parte do seu corpo fique cansada ou dolorida ao utilizar o Gear VR, ou caso você sinta sintomas, tais como, formigamento, dormência, queimação ou rigidez, pare e descanse por várias horas antes de utilizar o Gear VR novamente. Caso você continue apresentando quaisquer dos sintomas acima ou sinta outro desconforto durante ou após a utilização, pare de utilizar o Gear VR e consulte um médico.
+
+Interferência com Dispositivos Médicos: O Gear VR inclui fones de ouvido que contém ímãs e podem emitir ondas de rádio. Estes podem afetar a operação de eletrônicos nas proximidades, incluindo marca-passos cardíacos, aparelhos auditivos e desfibriladores. Caso você tenha um marca-passo cardíaco ou outro dispositivo médico implantado, não utilize o Gear VR sem antes consultar seu médico ou o fabricante do seu dispositivo médico. Mantenha uma distância segura entre o Gear VR e seus dispositivos médicos, e para de utilizar o Gear VR, caso você observe uma interferência persistente com o seu dispositivo médico. 
+
+Controle:
+•	Seu Gear VR pode ter vindo com um controle de terceiro.
+•	Consulte o fabricante para avisos de saúde e segurança para o controle. 
+•	Sempre utilize a pulseira incluída com controles para manter o controle junto ao seu pulso quando em utilização.
+
+Choque Elétrico: Para reduzir o risco de choque elétrico:
+•	Não modifique ou abra quaisquer dos componentes fornecidos. 
+•	Não utilize o produto, caso quaisquer cabos estejam danificados ou quaisquer fios estejam expostos.
+ 
+Caso um adaptador de energia seja fornecido:
+•	Não exponha o adaptador de energia a líquidos ou humidade.
+•	Desconecte o adaptador de energia antes de limpá-lo, e limpe somente com um pano seco. 
+•	Mantenha o adaptador de energia longe de chamas e outras fontes de energia. 
+•	Utilize somente o adaptador de energia fornecido com o Gear VR.  
+
+Dispositivo Danificado ou Quebrado:
+•	Não utilize seu dispositivo, caso qualquer parte esteja quebrada ou danificada.
+•	Não tente você mesmo consertar qualquer parte do seu dispositivo. Consertos devem ser realizados somente por um prestador de serviço autorizado.
+
+Condições Contagiosas: Para evitar a transferência de condições contagiosas (como conjuntivite), não compartilhe o Gear VR com pessoas com condições, infecções ou doenças contagiosas, especialmente dos olhos, pele ou couro cabeludo. O Gear VR deve ser limpo entre cada utilização com panos de limpeza antibacterianos não agressivos à pele (especialmente as lentes) e seco com um pano de microfibra. 
+
+Irritação na Pele: O Gear VR é usado próximo a sua pelo e couro cabeludo. Para de utilizar o Gear VR caso você note inchaço, coceira, ou outra irritação. Caso quaisquer sintomas persistam, consulte um médico.
+
+Para evitar danos ao Gear VR:
+•	Não deixe o Gear VR sob luz solar direta. Exposição direta ao sol pode danificar o Gear VR. 
+•	Não aponte um laser ou fonte de luz externa através das lentes, pois pode danificar a tela.
+•	Guarde os componentes em seu estojo de armazenamento quando não estiverem em uso para minimizar dano não intencional ou exposição ambiental. 

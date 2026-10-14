@@ -1,0 +1,32 @@
+.class Landroid/support/v4/widget/bt;
+.super Landroid/support/v4/widget/bs;
+
+
+# direct methods
+.method constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Landroid/support/v4/widget/bs;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    .locals 0
+
+    invoke-virtual {p1, p2, p3, p4, p5}, Landroid/widget/TextView;->setCompoundDrawablesRelative(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
+.method public a(Landroid/widget/TextView;)[Landroid/graphics/drawable/Drawable;
+    .locals 0
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getCompoundDrawablesRelative()[Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    return-object p1
+.end method

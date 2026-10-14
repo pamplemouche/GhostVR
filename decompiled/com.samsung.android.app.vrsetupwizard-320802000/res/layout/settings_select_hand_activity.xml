@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/background_color_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar android:theme="@style/Theme.AppCompat" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="56.0dip" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/device_oobe_select_hand_main_description" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" style="@style/VRController.SelectHand.DescriptionText" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/roundcorner_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+        <ImageView android:layout_width="312.0dip" android:layout_height="181.0dip" android:layout_marginTop="12.0dip" android:src="@drawable/help_img_controller3" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+        <Button android:id="@id/button_left_handed" android:layout_width="270.0dip" android:layout_height="wrap_content" android:layout_marginTop="28.0dip" android:text="@string/device_oobe_select_hand_left" style="@style/Basic.Button" />
+        <Button android:id="@id/button_right_handed" android:layout_width="270.0dip" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginBottom="25.0dip" android:text="@string/device_oobe_select_hand_right" style="@style/Basic.Button" />
+    </LinearLayout>
+</LinearLayout>

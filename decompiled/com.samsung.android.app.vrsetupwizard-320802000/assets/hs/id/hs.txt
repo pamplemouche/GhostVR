@@ -1,0 +1,72 @@
+*Peringatan terkait kesehatan dan keselamatan ini diperbarui dari waktu ke waktu dengan tujuan menambah ketepatan dan kelengkapannya. Mohon periksa oculus.com/warnings untuk melihat versi yang terbaru.
+ 
+ PERINGATAN KESEHATAN DAN KESELAMATAN: Untuk mengurangi risiko cedera pribadi, ketidaknyamanan atau kerusakan harta benda, mohon pastikan bahwa seluruh pengguna Gear VR telah membaca peringatan-peringatan di bawah ini secara saksama sebelum menggunakan Gear VR. 
+ 
+ Sebelum Menggunakan Gear VR:
+• Mohon baca dan ikuti seluruh panduan penyusunan dan pengoperasian yang diberikan bersama dengan Gear VR.
+• Mohon tinjau rekomendasi perangkat keras dan perangkat lunak untuk penggunaan Gear VR. Risiko ketidaknyamanan dapat bertambah apabila perangkat keras dan perangkat lunak yang direkomendasikan tidak digunakan.
+• Gear VR Anda tidak dirancang untuk digunakan dengan alat, aksesoris, dan/atau perangkat lunak yang tidak sesuai. Penggunaan alat, aksesoris dan/atau perangkat lunak yang tidak sesuai dapat mengakibatkan cedera terhadap Anda atau pihak lainnya, dan dapat mengakibatkan masalah terkait performa atau kerusakan terhadap sistem Anda dan layanan-layanan yang terkait.
+• Penggunaan realitas maya yang nyaman memerlukan gerakan dan keseimbangan yang tidak terganggu. Jangan gunakan Gear VR saat Anda lelah, membutuhkan tidur, dalam pengaruh alkohol atau obat-obatan, mengalami rasa sakit setelah mabuk, memiliki masalah pencernaan, dalam kondisi stres emosional atau kecemasan, atau sedang mengalami penyakit pilek, flu, sakit kepala, migrain atau sakit telinga, karena hal-hal tersebut dapat meningkatkan kemungkinan Anda mengalami gejala-gejala yang negatif.
+• Kami merekomendasikan Anda untuk berkonsultasi dengan dokter sebelum menggunakan Gear VR apabila Anda sedang hamil, dalam usia lanjut, atau mempunyai kelainan pandangan binokuler (binocular vision abnormalities) yang sudah ada sebelumnya atau kelainan psikiatris, atau memiliki penyakit jantung atau kondisi medis lainnya yang serius.
+ 
+ Kejang (Seizure):  Sebagian orang (sekitar 1 dalam 4000 orang) dapat mengalami pusing yang hebat, kejang, kejang epilepsi, atau kehilangan kesadaran yang diakibatkan oleh kedipan atau pola cahaya, dan hal ini dapat terjadi saat mereka menonton televisi, bermain video game, atau menggunakan realitas maya, bahkan ketika mereka belum pernah mengalami kejang atau hilang kesadaran sebelumnya atau tidak memiliki rekam medis kejang atau epilepsi. Kejang tersebut lebih umum ditemukan pada anak-anak dan orang-orang muda berusia di bawah 20 tahun. Siapapun yang pernah mengalami kejang, hilang kesadaran, atau gejala lainnya yang terkait dengan kondisi epilepsi harus berkonsultasi terlebih dahulu dengan dokter sebelum menggunakan Gear VR.
+ 
+ Anak-anak: Gear VR tidak boleh digunakan oleh anak-anak di bawah usia 13 tahun, karena anak-anak dengan usia muda tersebut sedang dalam periode kritis dalam perkembangan visual. Orang dewasa harus memantau anak-anak (berusia 13 tahun ke atas) yang sedang atau pernah menggunakan Gear VR atas gejala-gejala yang disebutkan di bawah, dan harus membatasi waktu penggunaan Gear VR oleh anak-anak tersebut dan memastikan bahwa anak-anak tersebut beristirahat dari waktu ke waktu saat menggunakan Gear VR. Penggunaan berkepanjangan harus dihindari, karena hal tersebut dapat mempengaruhi secara negatif koordinasi tangan dengan mata, keseimbangan, dan kemampuan melakukan beberapa hal secara bersamaan (multi-tasking). Orang dewasa harus memantau anak-anak saat dan setelah menggunakan Gear VR atas penurunan kemampuan tersebut.
+ 
+ Pencegahan Umum: Untuk mengurangi risiko cedera atau ketidaknyamanan Anda harus selalu mengikuti instruksi-instruksi berikut ini dan melaksanakan pencegahan berikut ini saat menggunakan Gear VR.
+• Gunakan Gear VR Hanya Dalam Kondisi Aman: Gear VR menciptakan realitas maya yang mendalam (immersive) yang akan mengalihkan perhatian Anda dari dan sepenuhnya menutupi kondisi sekeliling Anda yang sebenarnya.
+o Selalu sadari kondisi sekeliling Anda sebelum mulai menggunakan dan saat menggunakan Gear VR. Berhati-hatilah agar terhindar dari cedera.
+o Penggunaan Gear VR dapat mengakibatkan kurangnya keseimbangan.
+o Ingatlah bahwa benda-benda yang Anda lihat dalam lingkungan maya tidak ada di lingkungan yang sebenarnya, jadi janganlah duduk atau berdiri diatasnya atau menggunakan benda-benda tersebut sebagai sandaran.
+o Untuk penggunaan yang paling aman, tetaplah dalam kondisi duduk atau tidak bergerak saat menggunakan Gear VR.
+o Cedera serius dapat diakibatkan oleh tersandung, menerjang atau menabrak dinding, perabotan atau benda-benda lainnya, sehingga mohon kosongkan area agar dapat digunakan dengan aman sebelum menggunakan Gear VR.
+o Berhati-hatilah agar Anda tidak berdekatan dengan orang lain, benda-benda, tangga, balkon, pintu yang terbuka, jendela, perabot, api yang menyala, kipas angin yang terpasang di langit-langit atau lampu atau barang-barang lainnya yang dapat Anda tabrak atau jatuhkan saat menggunakan -- atau langsung setelah menggunakan -- Gear VR.
+o Kosongkan area dari hal-hal yang dapat menyebabkan Anda tersandung sebelum menggunakan Gear VR.
+o Ingat bahwa saat Anda menggunakan Gear VR Anda dapat tidak menyadari bahwa orang-orang atau binatang peliharaan dapat memasuki area dekat Anda.
+o Mohon jangan gunakan benda-benda tajam atau berbahaya lainnya saat menggunakan Gear VR.
+o Jangan pernah menggunakan Gear VR dalam situasi yang membutuhkan perhatian penuh Anda, seperti berjalan, naik sepeda, atau mengemudi.
+• Pastikan bahwa Gear VR Anda sejajar dan terpasang dengan nyaman di kepala Anda, dan Anda melihat tampilan tunggal yang jelas.
+• Gunakan Gear VR secara perlahan pada awalnya agar badan Anda dapat berdaptasi terlebih dahulu; gunakan hanya untuk beberapa menit dahulu pada awalnya, dan hanya tingkatkan waktu penggunaan Gear VR secara bertahap seiring dengan terbiasanya Anda menggunakan realitas maya. Melihat sekeliling dan menggunakan perangkat masukan (input device) saat Anda memasuki realitas maya untuk pertama kalinya dapat membantu Anda beradaptasi dengan perbedaan-perbedaan kecil antara gerakan Anda yang sebenarnya di dunia nyata dan pengalaman realitas maya yang dihasilkan.
+• Jangan gunakan Gear VR saat berada dalam kendaraan yang sedang berjalan seperti mobil, bis, atau kereta karena hal tersebut dapat meningkatkan kerentanan Anda terhadap gejala-gejala yang negatif.
+• Mohon istirahat selama 10 sampai 15 menit setelah menggunakan Gear VR selama 30 menit, bahkan ketika Anda pikir Anda tidak butuh untuk istirahat. Tiap orang berbeda, jadi mohon istirahat lebih sering dan lebih lama apabila Anda merasa tidak nyaman. Anda harus memutuskan tindakan apa yang terbaik bagi Anda.
+• Gear VR dapat dilengkapi dengan fitur "pass-through" (tembusan) yang memungkinkan Anda untuk sementara melihat sekeliling Anda untuk berinteraksi singkat di dunia nyata. Anda harus selalu melepaskan Gear VR untuk situasi apapun yang membutuhkan perhatian atau koordinasi Anda.
+• Mendengarkan suara dengan volume tinggi dapat mengakibatkan kerusakan yang tidak dapat diperbaiki terhadap pendengaran Anda. Suara-suara latar, dan juga paparan terhadap suara dalam volume yang tinggi, dapat membuat bunyi-bunyi terkesan lebih sunyi daripada kenyataannya. Karena sifat realitas maya yang mendalam (immersive), jangan gunakan Gear VR dengan aturan suara volume tinggi, sehingga Anda dapat tetap sadar akan keadaan sekeliling Anda dan mengurangi risiko kerusakan pendengaran.
+ 
+ Ketidanyamanan
+• Langsung hentikan penggunaan apabila seseorang yang sedang menggunakan Gear VR mengalami gejala-gejala sebagai berikut: kejang; hilang kesadaran; ketegangan pada mata; kedutan pada mata atau otot; pergerakan yang terjadi tanpa disadari; pandangan yang berubah, kabur, ganda atau kelainan pandangan lainnya; pusing; disorientasi; keseimbangan yang terganggu; koordinasi tangan dan mata yang terganggu; keringat berlebih; produksi liur yang bertambah; mual; lemas; ketidaknyamanan atau rasa sakit di kepala atau mata; perasaan mengantuk (drowsiness); kelelahan; atau gejala lainnya yang serupa dengan mabuk akibat pergerakan.
+• Seperti halnya gejala yang dapat dialami setelah turun dari kapal, gejala pemaparan realitas maya dapat terus berlangsung dan terasa lebih jelas beberapa jam setelah penggunaan. Gejala setelah penggunaan ini dapat mencakup gejala yang disebutkan diatas, dan juga perasaan mengantuk yang sangat berat (excessive drowsiness) dan berkurangnya kemampuan melakukan beberapa hal secara bersamaan (multi-tasking). Gejala-gejala ini dapat meningkatkan risiko cedera Anda saat melakukan aktivitas di dunia nyata.
+• Jangan mengemudi, mengoperasikan mesin, atau melakukan aktivitas lainnya yang menuntut usaha penglihatan atau fisik yang memiliki potensi konsekuensi yang serius (contohnya aktivitas dimana mengalami gejala apapun dapat mengakibatkan kematian, cedera pribadi, atau kerusakan harta benda), atau aktivitas lainnya yang menuntut keseimbangan dan koordinasi tangan dan mata yang tidak terganggu (seperti berolahraga atau naik sepeda, dll.) hingga Anda telah pulih sepenuhnya dari gejala apapun.
+• Jangan menggunakan Gear VR hingga beberapa jam setelah seluruh gejala telah berhenti sepenuhnya. Pastikan bahwa Anda telah mengatur Gear VR dengan sesuai sebelum melanjutkan penggunaan.
+• Perhatikan tipe konten yang Anda gunakan sebelum mengalami gejala apapun karena Anda mungkin lebih rentan terhadap gejala tersebut berdasarkan konten yang digunakan.
+• Kunjungi dokter apabila Anda mengalami gejala yang serius dan/atau berkelanjutan.
+ 
+ Cedera Tekanan Berulang (Repetitive Stress Injury): Menggunakan Gear VR dapat menimbulkan rasa sakit terhadap otot, sendi atau kulit Anda. Apabila bagian manapun dari tubuh Anda mengalami kelelahan atau nyeri saat menggunakan Gear VR, atau apabila Anda merasakan gejala seperti kesemutan, mati rasa, panas atau kekakuan, berhentilah dan beristirahat untuk beberapa jam sebelum menggunakan Gear VR lagi. Apabila Anda tetap mengalami gejala di atas atau ketidaknyamanan lainnya saat atau setelah penggunaan, hentikan penggunaan Gear VR dan kunjungi dokter.
+ 
+ Gangguan Terhadap Alat Kesehatan: Gear VR mencakup alat pendengar yang berisi magnet dan dapat memancarkan gelombang radio. Hal-hal tersebut dapat mempengaruhi penggunaan dari alat elektronik yang berada di dekatnya, termasuk alat pacu jantung, alat bantuan pendengaran dan defibrillator. Apabila Anda memiliki alat pacu jantung atau alat kesehatan lainnya yang dipasang dalam tubuh Anda, jangan gunakan Gear VR sebelum berkonsultasi dengan dokter Anda atau produsen alat kesehatan Anda. Jaga jarak yang aman antara Gear VR dan alat kesehatan Anda, dan hentikan penggunaan Gear VR apabila Anda melihat adanya gangguan yang berkelanjutan terhadap alat kesehatan Anda.
+ 
+ Pengendali (Controller):
+• Gear VR Anda dapat termasuk pengendali (controller) yang diproduksi pihak ketiga.
+• Mohon berkonsultasi dengan produsen tersebut untuk mengetahui peringatan kesehatan dan keselamatan bagi pengendali (controller) tersebut.
+• Selalu gunakan tali pergelangan tangan yang diberikan bersama pengendali (controller) untuk menjaga agar pengendali (controller) tetap pada pergelangan tangan Anda saat digunakan.
+ 
+ Sengatan Listrik: Untuk mengurangi risiko sengatan listrik:
+• Jangan memodifikasi atau membuka komponen yang diberikan.
+• Jangan menggunakan produk apabila ada kabel manapun yang rusak atau ada kawat apapun yang terlihat.
+Apabila ada adaptor daya yang diberikan:
+• Jangan biarkan adaptor daya terkena air atau kelembaban.
+• Lepaskan adaptor daya dari sumber listrik sebelum dibersihkan, dan bersihkan hanya dengan kain yang kering.
+• Jauhkan adaptor daya dari api yang menyala dan sumber panas lainnya.
+• Hanya gunakan adaptor daya yang diberikan bersama Gear VR.
+ 
+ Alat yang Rusak:
+• Jangan gunakan alat Anda apabila ada bagian manapun darinya yang rusak.
+• Jangan mencoba untuk memperbaiki bagian apapun dari alat Anda sendiri. Perbaikan hanya boleh dilakukan oleh penyedia jasa yang memiliki izin.
+ 
+ Kondisi yang Menular: Untuk mencegah penularan kondisi yang menular (contohnya iritasi mata), jangan berbagi Gear VR dengan orang-orang yang mengalami kondisi, infeksi atau penyakit yang menular, khususnya yang mempengaruhi mata, kulit, atau kulit kepala. Gear VR (khususnya lensa) harus dibersihkan antara tiap penggunaan dengan tisu anti bakteri yang aman digunakan pada kulit dan dikeringkan dengan kain microfiber.
+ 
+ Iritasi Kulit: Gear VR dipakai menempel dengan kulit dan kulit kepala Anda. Hentikan penggunaan Gear VR apabila Anda menyadari adanya pembengkakan, rasa gatal, atau iritasi lainnya. Apabila gejala berlanjut, hubungi dokter.
+ 
+ Untuk menghindari kerusakan pada Gear VR:
+• Jangan letakkan Gear VR di tempat yang terkena sinar matahari langsung. Paparan sinar matahari langsung dapat merusak Gear VR.
+• Jangan sinari laser atau sumber cahaya eksternal melalui lensa karena hal tersebut dapat merusak layar.
+• Simpan komponen dalam kotak penyimpanan mereka saat tidak digunakan untuk memperkecil kerusakan yang tidak disengaja atau paparan terhadap lingkungan. 
