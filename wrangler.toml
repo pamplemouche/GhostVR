@@ -6,4 +6,3 @@ routes = [
   { pattern = "ghostvr.pamplemouche.com/*", zone_name = "pamplemouche.com" }
 ]
 
-assets = {directory = "./public"}
