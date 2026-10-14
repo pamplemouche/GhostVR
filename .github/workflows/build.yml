@@ -6,6 +6,9 @@ on:
       - 'compiled/*.apk'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   decompile:
     runs-on: ubuntu-latest
@@ -41,4 +44,4 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add decompiled/
           git commit -m "chore: auto-decompile APKs from /compiled" || exit 0
-          git push
+          git push origin HEAD:${{ github.ref_name }}
