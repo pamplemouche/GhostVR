@@ -1,67 +1,44 @@
-name: Decompile Gear VR Package
+name: Decompile APKs
 
 on:
+  push:
+    paths:
+      - 'compiled/*.apk'
   workflow_dispatch:
-    inputs:
-      zip_url:
-        description: "URL du fichier ZIP d'APKs"
-        required: true
-        default: 'https://vault.gearvr.net/Oculus/Oculus_Install_Files.zip'
-
-permissions:
-  contents: write
 
 jobs:
-  decompile-zip:
+  decompile:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout du dépôt
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: Configuration de Java JDK 17
+      - name: Set up Java
         uses: actions/setup-java@v4
         with:
-          distribution: 'zulu'
           java-version: '17'
+          distribution: 'temurin'
 
-      - name: Installation d'Apktool
+      - name: Install Apktool
         run: |
-          sudo apt-get update && sudo apt-get install -y unzip
-          APKTOOL_VERSION="2.9.3"
-          sudo curl -sL "https://github.com/iBotPeaches/Apktool/releases/download/v${APKTOOL_VERSION}/apktool_${APKTOOL_VERSION}.jar" -o /usr/local/bin/apktool.jar
-          sudo chmod +r /usr/local/bin/apktool.jar
-          echo '#!/bin/sh' | sudo tee /usr/local/bin/apktool
-          echo 'exec java -jar /usr/local/bin/apktool.jar "$@"' | sudo tee -a /usr/local/bin/apktool
-          sudo chmod +x /usr/local/bin/apktool
+          sudo apt-get update
+          sudo apt-get install -y apktool
 
-      - name: Téléchargement et extraction du fichier ZIP
-        run: |
-          mkdir -p temp_zip temp_apks
-          curl -sL "${{ github.event.inputs.zip_url }}" -o temp_zip/oculus_pack.zip
-          unzip -o temp_zip/oculus_pack.zip -d temp_apks/
-
-      - name: Décompilation automatique de tous les APKs
+      - name: Decompile APKs
         run: |
           mkdir -p decompiled
-          find temp_apks -type f -name "*.apk" | while read -r apk_file; do
-            filename=$(basename "$apk_file" .apk)
-            echo "--------------------------------------------------"
-            echo "Décompilation de : $filename"
-            echo "--------------------------------------------------"
-            apktool d "$apk_file" -o "decompiled/$filename" -f
+          for apk in compiled/*.apk; do
+            if [ -f "$apk" ]; then
+              filename=$(basename "$apk" .apk)
+              echo "Decompiling $filename..."
+              apktool d "$apk" -o "decompiled/$filename" -f
+            fi
           done
 
-      - name: Nettoyage des fichiers temporaires
+      - name: Commit and Push decompiled files
         run: |
-          rm -rf temp_zip temp_apks
-
-      - name: Commit et Push des dossiers décompilés
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add decompiled/
-          git commit -m "chore: décompilation automatique des APKs Oculus" || echo "Aucun changement à commiter"
+          git commit -m "chore: auto-decompile APKs from /compiled" || exit 0
           git push
