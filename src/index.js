@@ -105,8 +105,19 @@ export default {
 
     console.log(`[${request.method}] Path: ${url.pathname} | Params: ${url.search}`);
 
-    // Découpage et formatage des requêtes GraphQL longues pour l'affichage mobile Cloudflare
-    const qRaw = url.searchParams.get("q");
+    // Extraction de la requête GraphQL (support GET ?q=... et POST body JSON)
+    let qRaw = url.searchParams.get("q") || "";
+
+    if (request.method === "POST" && !qRaw) {
+      try {
+        const body = await request.clone().json();
+        qRaw = body.query || body.q || (typeof body === "string" ? body : "");
+      } catch (e) {
+        // Body non JSON ou vide
+      }
+    }
+
+    // Formatage et découpage dans les logs Cloudflare
     if (qRaw) {
       console.log("=== NOUVELLE QUERY GRAPHQL ===");
       try {
