@@ -105,6 +105,19 @@ export default {
 
     console.log(`[${request.method}] Path: ${url.pathname} | Params: ${url.search}`);
 
+    // Découpage et formatage des requêtes GraphQL longues pour l'affichage mobile Cloudflare
+    const qRaw = url.searchParams.get("q");
+    if (qRaw) {
+      console.log("=== NOUVELLE QUERY GRAPHQL ===");
+      try {
+        decodeURIComponent(qRaw)
+          .split(" ")
+          .forEach(line => console.log(line));
+      } catch (e) {
+        console.log("Q (raw):", qRaw);
+      }
+    }
+
     // 1. Ignorer / Valider les requêtes système et de télémétrie
     if (path.includes(".git") || path.includes("telemetry") || path.includes("logging") || path.includes("ping")) {
       return new Response(JSON.stringify({ status: "OK", success: true }), { status: 200, headers: HEADERS });
@@ -143,7 +156,7 @@ export default {
 
     // 5. Endpoint GraphQL
     if (path.includes("graphql")) {
-      const q = (url.searchParams.get("q") || "").toLowerCase();
+      const q = (qRaw || "").toLowerCase();
       let responseData = { ...GRAPHQL_UNIVERSAL_PAYLOAD.data };
 
       // Interception dynamique AddPushTokenRequest exigeant l'objet token { id }
