@@ -37,7 +37,11 @@ const GRAPHQL_UNIVERSAL_PAYLOAD = {
       user: USER_DATA,
       actor: USER_DATA,
       me: USER_DATA,
-      primary_user: USER_DATA
+      primary_user: USER_DATA,
+      update_response: {
+        is_update_required: false,
+        is_update_available: false
+      }
     },
     me: USER_DATA,
     user: USER_DATA,
@@ -127,8 +131,8 @@ export default {
       }), { status: 200, headers: HEADERS });
     }
 
-    // 4. Vérification des versions
-    if (path.includes("required_mobile_versions") || path.includes("version")) {
+    // 4. Vérification des versions et mises à jour
+    if (path.includes("required_mobile_versions") || path.includes("version") || path.includes("update")) {
       return new Response(JSON.stringify({
         is_update_required: false,
         minimum_supported_version: "1.0",
@@ -139,7 +143,21 @@ export default {
 
     // 5. Endpoint GraphQL
     if (path.includes("graphql")) {
-      return new Response(JSON.stringify(GRAPHQL_UNIVERSAL_PAYLOAD), {
+      const q = (url.searchParams.get("q") || "").toLowerCase();
+      let responseData = { ...GRAPHQL_UNIVERSAL_PAYLOAD.data };
+
+      // Interception dynamique des mutations (Push Token, enregistrement d'appareil, etc.)
+      if (q.includes("pushtoken") || q.includes("addpushtoken") || q.includes("register")) {
+        responseData.add_push_token = { success: true };
+        responseData.push_token_add = { success: true };
+        responseData.register_push_token = { success: true };
+        responseData.client_mutation_id = "1";
+      }
+
+      return new Response(JSON.stringify({
+        data: responseData,
+        extensions: {}
+      }), {
         status: 200,
         headers: HEADERS
       });
@@ -160,7 +178,7 @@ export default {
       });
     }
 
-    // 7. Fallback universel pour TOUTE autre route (y compris les GET avec paramètres de recherche longs)
+    // 7. Fallback universel pour TOUTE autre route
     return new Response(JSON.stringify(AUTH_FULL_PAYLOAD), {
       status: 200,
       headers: HEADERS
