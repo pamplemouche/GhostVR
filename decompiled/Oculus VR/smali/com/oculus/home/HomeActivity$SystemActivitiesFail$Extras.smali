@@ -43,7 +43,7 @@
     iput-object v0, p0, Lcom/oculus/home/HomeActivity$SystemActivitiesFail$Extras;->Tag:Ljava/lang/String;
 
     .line 64
-    const-string v0, "true"
+    const-string v0, "false"
 
     iput-object v0, p0, Lcom/oculus/home/HomeActivity$SystemActivitiesFail$Extras;->RequiresUpdate:Ljava/lang/String;
 
