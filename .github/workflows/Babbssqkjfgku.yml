@@ -22,22 +22,22 @@ jobs:
 
           echo "## 1. Endpoints REST et URLs détectées" >> $OUT
           echo "\`\`\`" >> $OUT
-          grep -rnE "https?://[a-zA-Z0-9./_-]+" smali/ | cut -d: -f2- | sort -u | head -n 200 >> $OUT || true
+          grep -rnE --include="*.smali" "https?://[a-zA-Z0-9./_-]+" . | cut -d: -f2- | sort -u | head -n 200 >> $OUT || true
           echo "\`\`\`" >> $OUT
 
           echo "## 2. Endpoints d'Authentification (OAuth, Login, Token)" >> $OUT
           echo "\`\`\`" >> $OUT
-          grep -rnE "oauth|login|access_token|auth_token|session|user_checks|device_auth" smali/ >> $OUT || true
+          grep -rnE --include="*.smali" "oauth|login|access_token|auth_token|session|user_checks|device_auth" . >> $OUT || true
           echo "\`\`\`" >> $OUT
 
           echo "## 3. Requêtes GraphQL & doc_id" >> $OUT
           echo "\`\`\`" >> $OUT
-          grep -rnE "doc_id|query\s+|graphql" smali/ >> $OUT || true
+          grep -rnE --include="*.smali" "doc_id|query\s+|graphql" . >> $OUT || true
           echo "\`\`\`" >> $OUT
 
           echo "## 4. Activités d'Authentification et WebViews (Origine des popups)" >> $OUT
           echo "\`\`\`" >> $OUT
-          grep -rnE "AuthActivity|LoginActivity|WebAuth|OAuth2|authorize" smali/ >> $OUT || true
+          grep -rnE --include="*.smali" "AuthActivity|LoginActivity|WebAuth|OAuth2|authorize" . >> $OUT || true
           echo "\`\`\`" >> $OUT
 
       - name: Commit result
