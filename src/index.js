@@ -1,10 +1,18 @@
-// En-têtes HTTP globaux
+// En-têtes HTTP globaux pour CORS & JSON
 const HEADERS = {
   "Content-Type": "application/json; charset=utf-8",
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, DELETE",
   "Access-Control-Allow-Headers": "*"
 };
+
+// Helper pour retourner une réponse JSON standardisée
+function jsonResponse(data, status = 200) {
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: HEADERS
+  });
+}
 
 // Données utilisateur centralisées
 const USER_DATA = {
@@ -93,105 +101,146 @@ const AUTH_FULL_PAYLOAD = {
   ...GRAPHQL_UNIVERSAL_PAYLOAD
 };
 
+// Analyseur universel du corps de requête (JSON, URL-Encoded / Form-Data & Raw)
+async function parseRequestBody(request) {
+  if (request.method === "GET" || request.method === "HEAD") {
+    return { rawText: "", parsed: {} };
+  }
+
+  try {
+    const text = await request.text();
+    if (!text) return { rawText: "", parsed: {} };
+
+    const contentType = (request.headers.get("content-type") || "").toLowerCase();
+
+    // 1. Traitement JSON
+    if (contentType.includes("application/json")) {
+      try {
+        return { rawText: text, parsed: JSON.parse(text) };
+      } catch (e) {
+        return { rawText: text, parsed: {} };
+      }
+    }
+
+    // 2. Traitement URL-Encoded (très fréquent chez Oculus / Meta Tigon Network)
+    if (contentType.includes("application/x-www-form-urlencoded")) {
+      const params = new URLSearchParams(text);
+      const parsed = {};
+      for (const [key, value] of params.entries()) {
+        parsed[key] = value;
+      }
+      return { rawText: text, parsed };
+    }
+
+    // 3. Fallback générique
+    try {
+      return { rawText: text, parsed: JSON.parse(text) };
+    } catch (e) {
+      const params = new URLSearchParams(text);
+      const parsed = {};
+      let count = 0;
+      for (const [key, value] of params.entries()) {
+        parsed[key] = value;
+        count++;
+      }
+      if (count > 0) return { rawText: text, parsed };
+      return { rawText: text, parsed: {} };
+    }
+  } catch (err) {
+    return { rawText: "", parsed: {} };
+  }
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const path = url.pathname.toLowerCase();
 
-    // Preflight CORS
+    // 1. Requêtes CORS Preflight (OPTIONS)
     if (request.method === "OPTIONS") {
       return new Response(null, { status: 204, headers: HEADERS });
     }
 
-    console.log(`[${request.method}] Path: ${url.pathname} | Params: ${url.search}`);
+    // 2. Extraire et analyser le corps de la requête
+    const { rawText, parsed: bodyData } = await parseRequestBody(request);
 
-    // Extraction de la requête GraphQL (support GET ?q=... et POST body JSON)
-    let qRaw = url.searchParams.get("q") || "";
+    // Extraction des paramètres de requête GraphQL (?q=, ?query=, body.doc_id, body.q, etc.)
+    const qFromParam = url.searchParams.get("q") || url.searchParams.get("query") || "";
+    const qFromBody = bodyData.query || bodyData.q || bodyData.doc_id || bodyData.query_params || "";
+    const fullQueryString = (qFromParam || qFromBody || rawText || "").toString();
 
-    if (request.method === "POST" && !qRaw) {
-      try {
-        const body = await request.clone().json();
-        qRaw = body.query || body.q || (typeof body === "string" ? body : "");
-      } catch (e) {
-        // Body non JSON ou vide
-      }
+    // Console logs dans Cloudflare
+    console.log(`[${request.method}] ${url.pathname}${url.search}`);
+    if (fullQueryString) {
+      console.log(`[Query/Payload]`, fullQueryString.slice(0, 300));
     }
 
-    // Formatage et découpage dans les logs Cloudflare
-    if (qRaw) {
-      console.log("=== NOUVELLE QUERY GRAPHQL ===");
-      try {
-        decodeURIComponent(qRaw)
-          .split(" ")
-          .forEach(line => console.log(line));
-      } catch (e) {
-        console.log("Q (raw):", qRaw);
-      }
+    // --- ROUTES ET ENDPOINTS ---
+
+    // A. Télémétrie, Pings et Check Réseau
+    if (
+      path.includes(".git") ||
+      path.includes("telemetry") ||
+      path.includes("logging") ||
+      path.includes("ping") ||
+      path.includes("network_check")
+    ) {
+      return jsonResponse({ status: "OK", success: true });
     }
 
-    // 1. Ignorer / Valider les requêtes système et de télémétrie
-    if (path.includes(".git") || path.includes("telemetry") || path.includes("logging") || path.includes("ping")) {
-      return new Response(JSON.stringify({ status: "OK", success: true }), { status: 200, headers: HEADERS });
-    }
-
-    // 2. Conditions d'utilisation (TOS)
-    if (path.includes("tos") || path.includes("terms")) {
-      return new Response(JSON.stringify({
+    // B. Conditions d'utilisation (TOS & Terms)
+    if (path.includes("tos") || path.includes("terms") || path.includes("legal")) {
+      return jsonResponse({
         is_tos_accepted: true,
         terms_of_service: { id: "1", text: "OK" },
         success: true,
         status: "OK"
-      }), { status: 200, headers: HEADERS });
+      });
     }
 
-    // 3. Vérification de compte
+    // C. Vérification d'utilisateur (User Checks)
     if (path.includes("user_checks") || path.includes("check_user")) {
-      return new Response(JSON.stringify({
+      return jsonResponse({
         is_eligible: true,
         has_password: true,
         user_exists: true,
         user: USER_DATA,
         status: "OK"
-      }), { status: 200, headers: HEADERS });
+      });
     }
 
-    // 4. Vérification des versions et mises à jour
+    // D. Vérification de version Android & Mises à jour
     if (path.includes("required_mobile_versions") || path.includes("version") || path.includes("update")) {
-      return new Response(JSON.stringify({
+      return jsonResponse({
         is_update_required: false,
         minimum_supported_version: "1.0",
         current_version: "1.0",
         status: "OK"
-      }), { status: 200, headers: HEADERS });
-    }
-
-    // 5. Endpoint GraphQL
-    if (path.includes("graphql")) {
-      const q = (qRaw || "").toLowerCase();
-      let responseData = { ...GRAPHQL_UNIVERSAL_PAYLOAD.data };
-
-      // Interception dynamique AddPushTokenRequest exigeant l'objet token { id }
-      if (q.includes("pushtoken") || q.includes("addpushtoken")) {
-        responseData.add_push_token = {
-          token: {
-            id: "100000000000000"
-          },
-          client_mutation_id: "1"
-        };
-      } else if (q.includes("register")) {
-        responseData.register_push_token = { success: true };
-      }
-
-      return new Response(JSON.stringify({
-        data: responseData,
-        extensions: {}
-      }), {
-        status: 200,
-        headers: HEADERS
       });
     }
 
-    // 6. Login / Auth / Registration / Session
+    // E. Endpoint GraphQL principal
+    if (path.includes("graphql")) {
+      const qLower = fullQueryString.toLowerCase();
+      let responseData = JSON.parse(JSON.stringify(GRAPHQL_UNIVERSAL_PAYLOAD.data));
+
+      // Mutations spécifiques (Push Notifications, Enregistrement de jeton)
+      if (qLower.includes("pushtoken") || qLower.includes("addpushtoken")) {
+        responseData.add_push_token = {
+          token: { id: USER_DATA.id },
+          client_mutation_id: "1"
+        };
+      } else if (qLower.includes("register")) {
+        responseData.register_push_token = { success: true };
+      }
+
+      return jsonResponse({
+        data: responseData,
+        extensions: {}
+      });
+    }
+
+    // F. Authentification, Connexion, Inscription, Session
     if (
       path.includes("login") ||
       path.includes("auth") ||
@@ -200,16 +249,10 @@ export default {
       path.includes("device") ||
       path.includes("session")
     ) {
-      return new Response(JSON.stringify(AUTH_FULL_PAYLOAD), {
-        status: 200,
-        headers: HEADERS
-      });
+      return jsonResponse(AUTH_FULL_PAYLOAD);
     }
 
-    // 7. Fallback universel pour TOUTE autre route
-    return new Response(JSON.stringify(AUTH_FULL_PAYLOAD), {
-      status: 200,
-      headers: HEADERS
-    });
+    // G. Fallback universel
+    return jsonResponse(AUTH_FULL_PAYLOAD);
   }
 };
