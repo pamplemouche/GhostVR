@@ -1,4 +1,3 @@
-// En-têtes HTTP globaux pour CORS & JSON
 const HEADERS = {
   "Content-Type": "application/json; charset=utf-8",
   "Access-Control-Allow-Origin": "*",
@@ -6,15 +5,6 @@ const HEADERS = {
   "Access-Control-Allow-Headers": "*"
 };
 
-// Helper pour retourner une réponse JSON standardisée
-function jsonResponse(data, status = 200) {
-  return new Response(JSON.stringify(data), {
-    status,
-    headers: HEADERS
-  });
-}
-
-// Données utilisateur centralisées
 const USER_DATA = {
   id: "100000000000000",
   oculus_id: "100000000000000",
@@ -32,61 +22,20 @@ const USER_DATA = {
   has_password: true,
   user_exists: true,
   is_castability_enabled: true,
-  profile_photo: {
-    uri: "https://ghostvr.pamplemouche.com/avatar.png"
-  },
+  profile_photo: { uri: "https://ghostvr.pamplemouche.com/avatar.png" },
   avatar_url: "https://ghostvr.pamplemouche.com/avatar.png"
 };
 
-// Payload universel GraphQL (satisfait la quasi-totalité des requêtes GraphQL de Meta/Oculus)
 const GRAPHQL_UNIVERSAL_PAYLOAD = {
   data: {
-    viewer: {
-      user: USER_DATA,
-      actor: USER_DATA,
-      me: USER_DATA,
-      primary_user: USER_DATA,
-      update_response: {
-        is_update_required: false,
-        is_update_available: false
-      }
-    },
+    viewer: { user: USER_DATA, actor: USER_DATA, me: USER_DATA, primary_user: USER_DATA },
     me: USER_DATA,
     user: USER_DATA,
-    node: {
-      __typename: "User",
-      ...USER_DATA
-    },
-    nodes: [
-      {
-        __typename: "User",
-        ...USER_DATA
-      }
-    ],
-    // Tutoriel et onboarding (NUX)
-    nux: {
-      is_nux_complete: true,
-      nux_state: "COMPLETED"
-    },
-    // Bibliothèque d'applications / Titres
-    user_entitlements: {
-      nodes: [],
-      edges: [],
-      page_info: { has_next_page: false, end_cursor: null }
-    },
-    // Appareils / Casque Gear VR
-    devices: {
-      nodes: [],
-      edges: []
-    },
-    // Notifications & Fil d'actualité
-    notifications: { nodes: [], edges: [] },
-    feed: { nodes: [], edges: [] }
+    node: { __typename: "User", ...USER_DATA }
   },
   extensions: {}
 };
 
-// Payload universel de Fallback (REST + GraphQL combinés)
 const AUTH_FULL_PAYLOAD = {
   access_token: "OC|100000000000000|ghostvr_token",
   session_key: "ghostvr_session",
@@ -101,54 +50,72 @@ const AUTH_FULL_PAYLOAD = {
   ...GRAPHQL_UNIVERSAL_PAYLOAD
 };
 
-// Analyseur universel du corps de requête (JSON, URL-Encoded / Form-Data & Raw)
+function jsonResponse(data, status = 200) {
+  return new Response(JSON.stringify(data), { status, headers: HEADERS });
+}
+
 async function parseRequestBody(request) {
   if (request.method === "GET" || request.method === "HEAD") {
     return { rawText: "", parsed: {} };
   }
-
   try {
     const text = await request.text();
     if (!text) return { rawText: "", parsed: {} };
 
     const contentType = (request.headers.get("content-type") || "").toLowerCase();
 
-    // 1. Traitement JSON
     if (contentType.includes("application/json")) {
-      try {
-        return { rawText: text, parsed: JSON.parse(text) };
-      } catch (e) {
-        return { rawText: text, parsed: {} };
-      }
+      try { return { rawText: text, parsed: JSON.parse(text) }; } catch (e) { return { rawText: text, parsed: {} }; }
     }
-
-    // 2. Traitement URL-Encoded (très fréquent chez Oculus / Meta Tigon Network)
     if (contentType.includes("application/x-www-form-urlencoded")) {
       const params = new URLSearchParams(text);
       const parsed = {};
-      for (const [key, value] of params.entries()) {
-        parsed[key] = value;
-      }
+      for (const [key, value] of params.entries()) parsed[key] = value;
       return { rawText: text, parsed };
     }
-
-    // 3. Fallback générique
-    try {
-      return { rawText: text, parsed: JSON.parse(text) };
-    } catch (e) {
-      const params = new URLSearchParams(text);
-      const parsed = {};
-      let count = 0;
-      for (const [key, value] of params.entries()) {
-        parsed[key] = value;
-        count++;
-      }
-      if (count > 0) return { rawText: text, parsed };
-      return { rawText: text, parsed: {} };
-    }
+    return { rawText: text, parsed: {} };
   } catch (err) {
     return { rawText: "", parsed: {} };
   }
+}
+
+async function sendEmailLog(env, method, path, bodyData, rawText) {
+  const apiKey = env.RESEND_API_KEY;
+  const destination = env.DESTINATION_EMAIL || "Noam.pamplemouchetech@gmail.com";
+
+  if (!apiKey) return;
+
+  const contentFormatted = Object.keys(bodyData).length > 0 
+    ? `<pre style="background: #1e1e1e; color: #d4d4d4; padding: 12px; border-radius: 6px; font-family: monospace;">${JSON.stringify(bodyData, null, 2)}</pre>`
+    : `<pre style="background: #1e1e1e; color: #d4d4d4; padding: 12px; border-radius: 6px; font-family: monospace;">${rawText || "Corps vide"}</pre>`;
+
+  const html = `
+    <div style="font-family: system-ui, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px;">
+      <h2 style="color: #2563eb; margin-top: 0;">🚨 Requête GhostVR reçue</h2>
+      <p><strong>Heure :</strong> ${new Date().toLocaleTimeString("fr-FR")}</p>
+      <p><strong>Méthode :</strong> <code style="background: #edf2f7; padding: 2px 6px; border-radius: 4px;">${method}</code></p>
+      <p><strong>Route (Path) :</strong> <code style="background: #edf2f7; padding: 2px 6px; border-radius: 4px;">${path}</code></p>
+      <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 16px 0;" />
+      <h3 style="color: #1e293b;">Payload / Corps de la requête :</h3>
+      ${contentFormatted}
+    </div>
+  `;
+
+  try {
+    await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${apiKey}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        from: "GhostVR <onboarding@resend.dev>",
+        to: [destination],
+        subject: `[GhostVR] ${method} ${path}`,
+        html: html
+      })
+    });
+  } catch (err) {}
 }
 
 export default {
@@ -156,103 +123,39 @@ export default {
     const url = new URL(request.url);
     const path = url.pathname.toLowerCase();
 
-    // 1. Requêtes CORS Preflight (OPTIONS)
     if (request.method === "OPTIONS") {
       return new Response(null, { status: 204, headers: HEADERS });
     }
 
-    // 2. Extraire et analyser le corps de la requête
+    // Gestion des images / avatars
+    if (path.endsWith(".png") || path.endsWith(".jpg") || path.includes("avatar")) {
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="#2d3748"/></svg>`;
+      return new Response(svg, { status: 200, headers: { "Content-Type": "image/svg+xml", "Access-Control-Allow-Origin": "*" } });
+    }
+
     const { rawText, parsed: bodyData } = await parseRequestBody(request);
 
-    // Extraction des paramètres de requête GraphQL (?q=, ?query=, body.doc_id, body.q, etc.)
-    const qFromParam = url.searchParams.get("q") || url.searchParams.get("query") || "";
-    const qFromBody = bodyData.query || bodyData.q || bodyData.doc_id || bodyData.query_params || "";
-    const fullQueryString = (qFromParam || qFromBody || rawText || "").toString();
-
-    // Console logs dans Cloudflare
-    console.log(`[${request.method}] ${url.pathname}${url.search}`);
-    if (fullQueryString) {
-      console.log(`[Query/Payload]`, fullQueryString.slice(0, 300));
+    // Envoi du mail en arrière-plan sans ralentir la réponse donnée au téléphone
+    if (ctx && ctx.waitUntil) {
+      ctx.waitUntil(sendEmailLog(env, request.method, path, bodyData, rawText));
+    } else {
+      sendEmailLog(env, request.method, path, bodyData, rawText);
     }
 
-    // --- ROUTES ET ENDPOINTS ---
-
-    // A. Télémétrie, Pings et Check Réseau
-    if (
-      path.includes(".git") ||
-      path.includes("telemetry") ||
-      path.includes("logging") ||
-      path.includes("ping") ||
-      path.includes("network_check")
-    ) {
-      return jsonResponse({ status: "OK", success: true });
-    }
-
-    // B. Conditions d'utilisation (TOS & Terms)
-    if (path.includes("tos") || path.includes("terms") || path.includes("legal")) {
-      return jsonResponse({
-        is_tos_accepted: true,
-        terms_of_service: { id: "1", text: "OK" },
-        success: true,
-        status: "OK"
-      });
-    }
-
-    // C. Vérification d'utilisateur (User Checks)
-    if (path.includes("user_checks") || path.includes("check_user")) {
-      return jsonResponse({
-        is_eligible: true,
-        has_password: true,
-        user_exists: true,
-        user: USER_DATA,
-        status: "OK"
-      });
-    }
-
-    // D. Vérification de version Android & Mises à jour
-    if (path.includes("required_mobile_versions") || path.includes("version") || path.includes("update")) {
-      return jsonResponse({
-        is_update_required: false,
-        minimum_supported_version: "1.0",
-        current_version: "1.0",
-        status: "OK"
-      });
-    }
-
-    // E. Endpoint GraphQL principal
+    // Requêtes GraphQL
     if (path.includes("graphql")) {
-      const qLower = fullQueryString.toLowerCase();
-      let responseData = JSON.parse(JSON.stringify(GRAPHQL_UNIVERSAL_PAYLOAD.data));
-
-      // Mutations spécifiques (Push Notifications, Enregistrement de jeton)
-      if (qLower.includes("pushtoken") || qLower.includes("addpushtoken")) {
-        responseData.add_push_token = {
-          token: { id: USER_DATA.id },
-          client_mutation_id: "1"
-        };
-      } else if (qLower.includes("register")) {
-        responseData.register_push_token = { success: true };
-      }
-
-      return jsonResponse({
-        data: responseData,
-        extensions: {}
-      });
+      return jsonResponse(GRAPHQL_UNIVERSAL_PAYLOAD);
     }
 
-    // F. Authentification, Connexion, Inscription, Session
-    if (
-      path.includes("login") ||
-      path.includes("auth") ||
-      path.includes("oauth") ||
-      path.includes("register") ||
-      path.includes("device") ||
-      path.includes("session")
-    ) {
+    // Authentification & Login
+    if (path.includes("login") || path.includes("auth") || path.includes("oauth") || path.includes("session")) {
       return jsonResponse(AUTH_FULL_PAYLOAD);
     }
 
-    // G. Fallback universel
+    if (request.method === "GET") {
+      return jsonResponse({ status: "OK", data: {} });
+    }
+
     return jsonResponse(AUTH_FULL_PAYLOAD);
   }
 };
