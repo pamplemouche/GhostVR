@@ -9,3 +9,10 @@ routes = [
 
 [vars]
 DESTINATION_EMAIL = "Noam.pamplemouchetech@gmail.com"
+
+[observability.logs]
+enabled = true
+invocation_logs = true
+
+[observability.traces]
+enabled = false
