@@ -16,6 +16,11 @@ export default {
       return new Response(null, { headers, status: 204 });
     }
 
+    // Filtrer le bruit des bots web/WordPress
+    if (path.includes("wp") || path.includes("wordpress") || path.includes("xmlrpc")) {
+      return new Response("Not Found", { status: 404 });
+    }
+
     // 1. Authentification (/oculus/login)
     if (path.endsWith("/oculus/login")) {
       return new Response(
@@ -37,13 +42,13 @@ export default {
       );
     }
 
-    // 2. Feature Flags / Gatekeepers (/oculus/features)
+    // 2. Feature Flags (/oculus/features)
     if (path.endsWith("/oculus/features")) {
-      const projectsParam = url.searchParams.get("projects");
+      const projectsParam = url.searchParams.get("projects") || url.searchParams.get("projects[]");
       const featureMap = {};
 
       if (projectsParam) {
-        const projects = projectsParam.split(",");
+        const projects = Array.isArray(projectsParam) ? projectsParam : projectsParam.split(",");
         projects.forEach((proj) => {
           featureMap[proj] = { enabled: true };
         });
@@ -57,7 +62,6 @@ export default {
       let doc = url.searchParams.get("doc") || "";
       let q = url.searchParams.get("q") || "";
 
-      // Lecture du corps HTTP en POST (x-www-form-urlencoded ou JSON)
       if (method === "POST") {
         try {
           const contentType = request.headers.get("content-type") || "";
@@ -78,26 +82,40 @@ export default {
 
       const queryStr = `${doc} ${q}`.toLowerCase();
 
-      // A. DRM & Entitlements (active_android_entitlements)
-      if (queryStr.includes("active_android_entitlements") || queryStr.includes("machine_id")) {
+      // A. DRM & Entitlements (gestion de l'alias entitlements: me)
+      if (queryStr.includes("active_android_entitlements") || queryStr.includes("entitlements:")) {
+        const entitlementNode = {
+          id: "entitlement_ghostvr_master",
+          is_viewer_entitled: true,
+          signed_token: "GHOSTVR_VALID_MOCK_TOKEN",
+          item: {
+            grouping: { id: "group_ghostvr" },
+            iap_entitlements: [],
+          },
+          latest_supported_binary: {
+            package_name: "com.oculus.horizon",
+            version_code: 900257473,
+            uri: "",
+            obb_binary: null,
+          },
+        };
+
         return new Response(
           JSON.stringify({
             data: {
+              entitlements: {
+                active_android_entitlements: {
+                  nodes: [entitlementNode],
+                },
+              },
+              me: {
+                active_android_entitlements: {
+                  nodes: [entitlementNode],
+                },
+              },
               viewer: {
                 active_android_entitlements: {
-                  nodes: [
-                    {
-                      id: "entitlement_ghostvr_master",
-                      is_viewer_entitled: true,
-                      signed_token: "GHOSTVR_VALID_MOCK_TOKEN",
-                      latest_supported_binary: {
-                        package_name: "com.oculus.horizon",
-                        version_code: 900257473,
-                        uri: "",
-                        obb_binary: null,
-                      },
-                    },
-                  ],
+                  nodes: [entitlementNode],
                 },
               },
             },
@@ -106,23 +124,56 @@ export default {
         );
       }
 
-      // B. Polling Profil & Notifications (viewer())
-      if (queryStr.includes("viewer")) {
+      // B. Profile, Viewer & Linked Accounts
+      if (queryStr.includes("viewer") || queryStr.includes("linked_accounts_info")) {
         return new Response(
           JSON.stringify({
             data: {
               viewer: {
                 user: {
                   id: "100000000000001",
+                  email: "ghostvr@pamplemouche.com",
                   name: "GhostVR User",
                   alias: "GhostVR",
+                  account_creation_time: 1500000000,
                   is_pin_set: true,
+                  profile_photo: {
+                    name: "photo",
+                    uri: "https://ghostvr.pamplemouche.com/avatar.png",
+                    width: 360,
+                    height: 360,
+                  },
+                  avatar_image: {
+                    name: "avatar",
+                    uri: "https://ghostvr.pamplemouche.com/avatar.png",
+                    width: 360,
+                    height: 360,
+                  },
+                  friend_requests_received_2: { count: 0 },
+                  friends: { count: 0 },
+                  current_room: { nodes: [] },
+                  payment_methods: { nodes: [] },
+                  all_payment_methods: { nodes: [] },
+                  client_preference_data: [],
+                  reachability_data: [],
                 },
                 notifications: {
                   nodes: [],
-                  page_info: {
-                    has_next_page: false,
-                    end_cursor: null,
+                  page_info: { has_next_page: false, end_cursor: null },
+                },
+                privacy_audience_options: {
+                  identity_in_search_state: "EVERYONE",
+                  edges: [],
+                },
+                privacy_real_world_identity: { edges: [] },
+                privacy_current_activity: { edges: [] },
+                privacy_friends: { edges: [] },
+                linked_accounts_info: {
+                  facebook_account: {
+                    access_token: "FB_MOCK_TOKEN",
+                    facebook_id: "100000000000001",
+                    friend_policy: "EVERYONE",
+                    needs_password_to_unlink: false,
                   },
                 },
               },
@@ -137,10 +188,7 @@ export default {
         JSON.stringify({
           data: {
             viewer: {
-              user: {
-                id: "100000000000001",
-                alias: "GhostVR",
-              },
+              user: { id: "100000000000001", alias: "GhostVR" },
             },
           },
         }),
@@ -148,7 +196,7 @@ export default {
       );
     }
 
-    // 4. Analytics & Logging Client (/fb-graph/logging_client_events)
+    // 4. Analytics & Logs Client (/fb-graph/logging_client_events)
     if (path.endsWith("/fb-graph/logging_client_events")) {
       return new Response(JSON.stringify({ success: true }), { headers });
     }
