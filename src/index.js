@@ -1,176 +1,153 @@
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
+    const path = url.pathname;
     const method = request.method;
 
-    // En-têtes CORS universels pour l'application Android Horizon
-    const corsHeaders = {
+    // En-têtes CORS pour autoriser l'application Android
+    const headers = {
+      "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, DELETE",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
       "Access-Control-Allow-Headers": "*",
-      "Content-Type": "application/json; charset=utf-8"
     };
 
-    // Gestion des requêtes de pré-vol CORS (OPTIONS)
     if (method === "OPTIONS") {
-      return new Response(null, { headers: corsHeaders });
+      return new Response(null, { headers, status: 204 });
     }
 
-    const jsonResponse = (data, status = 200) => {
-      return new Response(JSON.stringify(data), {
-        status,
-        headers: corsHeaders
-      });
-    };
-
-    // --- 1. MOCK API GRAPH FACEBOOK ---
-    if (url.pathname.includes("/oauth/access_token")) {
-      return jsonResponse({
-        access_token: "EAAB_ghostvr_facebook_mock_token",
-        token_type: "bearer",
-        expires_in: 3600000
-      });
+    // 1. Authentification (/oculus/login)
+    if (path.endsWith("/oculus/login")) {
+      return new Response(
+        JSON.stringify({
+          access_token: "GHOSTVR_MOCK_ACCESS_TOKEN",
+          user_id: "100000000000001",
+          session_id: "ghostvr-session-active",
+        }),
+        { headers }
+      );
     }
 
-    if (url.pathname.includes("/me") || url.pathname.startsWith("/v2.") || url.pathname.startsWith("/v3.")) {
-      return jsonResponse({
-        id: "100000000000000",
-        name: "GhostVR User",
-        first_name: "GhostVR",
-        last_name: "User",
-        email: "ghostvr@pamplemouche.com",
-        picture: {
-          data: {
-            url: "https://ghostvr.pamplemouche.com/avatar.png",
-            is_silhouette: false
+    // 2. Feature Flags / Gatekeepers (/oculus/features)
+    if (path.endsWith("/oculus/features")) {
+      const projectsParam = url.searchParams.get("projects");
+      const featureMap = {};
+
+      if (projectsParam) {
+        const projects = projectsParam.split(",");
+        projects.forEach((proj) => {
+          featureMap[proj] = { enabled: true };
+        });
+      }
+
+      return new Response(JSON.stringify(featureMap), { headers });
+    }
+
+    // 3. Traitement GraphQL (/oculus/graphql)
+    if (path.endsWith("/oculus/graphql")) {
+      let doc = url.searchParams.get("doc") || "";
+      let q = url.searchParams.get("q") || "";
+
+      // Extraction si les arguments sont envoyés dans le corps HTTP (POST)
+      if (method === "POST") {
+        try {
+          const contentType = request.headers.get("content-type") || "";
+          if (contentType.includes("application/x-www-form-urlencoded")) {
+            const bodyText = await request.text();
+            const bodyParams = new URLSearchParams(bodyText);
+            doc = doc || bodyParams.get("doc") || "";
+            q = q || bodyParams.get("q") || "";
+          } else if (contentType.includes("application/json")) {
+            const jsonBody = await request.json();
+            doc = doc || jsonBody.doc || jsonBody.query || "";
+            q = q || jsonBody.q || "";
           }
+        } catch (e) {
+          // Poursuite avec les paramètres d'URL en cas d'erreur de parsing
         }
-      });
-    }
+      }
 
-    // --- 2. ENDPOINT LOGIN OCULUS ---
-    if (url.pathname.endsWith("/oculus/login") || url.pathname.endsWith("/login")) {
-      return jsonResponse({
-        access_token: "OC|100000000000000|ghostvr_token",
-        session_key: "ghostvr_session",
-        uid: "100000000000000",
-        user_id: "100000000000000",
-        status: "OK",
-        success: true,
-        user: {
-          id: "100000000000000",
-          oculus_id: "100000000000000",
-          fbid: "100000000000000",
-          name: "GhostVR User",
-          alias: "GhostVR",
-          username: "ghostvr",
-          email: "ghostvr@pamplemouche.com",
-          gender: "N/A",
-          locale: "fr_FR",
-          timezone: "Europe/Paris",
-          presence: "ONLINE",
-          is_tos_accepted: true,
-          is_eligible: true,
-          has_password: true,
-          user_exists: true,
-          is_pin_set: true,
-          is_castability_enabled: true,
-          profile_photo: {
-            name: "avatar",
-            uri: "https://ghostvr.pamplemouche.com/avatar.png",
-            width: 360,
-            height: 360
-          },
-          avatar_image: {
-            name: "avatar",
-            uri: "https://ghostvr.pamplemouche.com/avatar.png",
-            width: 360,
-            height: 360
-          }
-        }
-      });
-    }
+      const queryStr = `${doc} ${q}`.toLowerCase();
 
-    // --- 3. ENDPOINT FEATURES OCULUS ---
-    if (url.pathname.endsWith("/oculus/features") || url.pathname.endsWith("/features")) {
-      return jsonResponse({
-        oculus_is_trusted_user: { enabled: true },
-        oculus_horizon_library_redesign2: { enabled: true },
-        oculus_gearvr_support: { enabled: true }
-      });
-    }
-
-    // --- 4. ENDPOINT GRAPHQL OCULUS ---
-    if (url.pathname.endsWith("/oculus/graphql") || url.pathname.endsWith("/graphql")) {
-      return jsonResponse({
-        data: {
-          viewer: {
-            __typename: "Viewer",
-            user: {
-              __typename: "User",
-              id: "100000000000000",
-              oculus_id: "100000000000000",
-              fbid: "100000000000000",
-              name: "GhostVR User",
-              alias: "GhostVR",
-              username: "ghostvr",
-              email: "ghostvr@pamplemouche.com",
-              gender: "N/A",
-              locale: "fr_FR",
-              timezone: "Europe/Paris",
-              presence: {
-                __typename: "UserPresence",
-                status: "ONLINE",
-                activity: null
+      // A. DRM & Entitlements (active_android_entitlements)
+      if (queryStr.includes("active_android_entitlements") || queryStr.includes("machine_id")) {
+        return new Response(
+          JSON.stringify({
+            data: {
+              viewer: {
+                active_android_entitlements: {
+                  nodes: [
+                    {
+                      id: "entitlement_ghostvr_master",
+                      is_viewer_entitled: true,
+                      signed_token: "GHOSTVR_VALID_MOCK_TOKEN",
+                      latest_supported_binary: {
+                        package_name: "com.oculus.horizon",
+                        version_code: 900257473,
+                        uri: "",
+                        obb_binary: null,
+                      },
+                    },
+                  ],
+                },
               },
-              is_tos_accepted: true,
-              is_eligible: true,
-              has_password: true,
-              user_exists: true,
-              is_pin_set: true,
-              is_castability_enabled: true,
-              profile_photo: {
-                __typename: "ProfilePicture",
-                name: "avatar",
-                uri: "https://ghostvr.pamplemouche.com/avatar.png",
-                width: 360,
-                height: 360
-              },
-              account_creation_time: 1500000000,
-              notifications: { __typename: "NotificationConnection", nodes: [] },
-              unread_count: 0,
-              active_android_entitlements: {
-                __typename: "AndroidEntitlementsConnection",
-                nodes: []
-              }
             },
-            friends: { __typename: "UserFriendsConnection", count: 0 },
-            friend_requests_received_2: { __typename: "FriendRequestsConnection", count: 0 },
-            current_room: { __typename: "RoomConnection", nodes: [] },
-            payment_methods: { __typename: "PaymentMethodConnection", nodes: [] },
-            all_payment_methods: { __typename: "PaymentMethodConnection", nodes: [] },
-            client_preference_data: [],
-            reachability_data: [],
-            privacy_real_world_identity: { __typename: "PrivacyAudienceOption" },
-            privacy_friends: { __typename: "PrivacyAudienceOption" },
-            identity_in_search_state: "EVERYONE",
-            edges: [],
-            linked_accounts_info: {
-              __typename: "LinkedAccountsInfo",
-              facebook_account: {
-                __typename: "FacebookAccount",
-                access_token: "EAAB_ghostvr_facebook_mock_token",
-                facebook_id: "100000000000000",
-                friend_policy: "MUTUAL",
-                needs_password_to_unlink: false
-              }
-            }
-          }
-        }
-      });
+          }),
+          { headers }
+        );
+      }
+
+      // B. Polling Profil & Notifications (viewer())
+      if (queryStr.includes("viewer")) {
+        return new Response(
+          JSON.stringify({
+            data: {
+              viewer: {
+                user: {
+                  id: "100000000000001",
+                  name: "GhostVR User",
+                  alias: "GhostVR",
+                  is_pin_set: true,
+                },
+                notifications: {
+                  nodes: [],
+                  page_info: {
+                    has_next_page: false,
+                    end_cursor: null,
+                  },
+                },
+              },
+            },
+          }),
+          { headers }
+        );
+      }
+
+      // Reponse GraphQL fallback générique
+      return new Response(
+        JSON.stringify({
+          data: {
+            viewer: {
+              user: {
+                id: "100000000000001",
+                alias: "GhostVR",
+              },
+            },
+          },
+        }),
+        { headers }
+      );
     }
 
-    // Fallback par défaut
-    return jsonResponse({ status: "OK", message: "GhostVR API Server Active" });
-  }
+    // 4. Analytics & Logging Client (/fb-graph/logging_client_events)
+    if (path.endsWith("/fb-graph/logging_client_events")) {
+      return new Response(JSON.stringify({ success: true }), { headers });
+    }
+
+    // Fallback pour toute autre route
+    return new Response(
+      JSON.stringify({ status: "ok", service: "GhostVR Mock Server" }),
+      { headers, status: 200 }
+    );
+  },
 };
