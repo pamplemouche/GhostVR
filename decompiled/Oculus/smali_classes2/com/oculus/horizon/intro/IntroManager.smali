@@ -364,67 +364,10 @@
 .end method
 
 .method public shouldShowIntroScreen()Z
-    .locals 6
+    .locals 1
 
     .prologue
     const/4 v0, 0x0
 
-    const/4 v1, 0x1
-
-    .line 49
-    iget-boolean v2, p0, Lcom/oculus/horizon/intro/IntroManager;->mDidShowIntro:Z
-
-    if-eqz v2, :cond_0
-
-    .line 67
-    :goto_0
     return v0
-
-    .line 54
-    :cond_0
-    invoke-virtual {p0}, Lcom/oculus/horizon/intro/IntroManager;->shouldFetchInitialConfig()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    move v0, v1
-
-    .line 55
-    goto :goto_0
-
-    .line 58
-    :cond_1
-    invoke-direct {p0}, Lcom/oculus/horizon/intro/IntroManager;->getCurrentBootMs()J
-
-    move-result-wide v2
-
-    .line 59
-    invoke-direct {p0}, Lcom/oculus/horizon/intro/IntroManager;->getLastKnownBoot()J
-
-    move-result-wide v4
-
-    .line 61
-    sub-long v2, v4, v2
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->abs(J)J
-
-    move-result-wide v2
-
-    const-wide/16 v4, 0x2710
-
-    cmp-long v2, v2, v4
-
-    if-gez v2, :cond_2
-
-    .line 64
-    iput-boolean v1, p0, Lcom/oculus/horizon/intro/IntroManager;->mDidShowIntro:Z
-
-    goto :goto_0
-
-    :cond_2
-    move v0, v1
-
-    .line 67
-    goto :goto_0
 .end method
