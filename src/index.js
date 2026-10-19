@@ -45,7 +45,18 @@ const PRIVACY_OPTION = {
 function handleGraphQLQuery(urlStr, rawText = "") {
   const combined = (decodeURIComponent(urlStr) + " " + rawText).toLowerCase();
 
-  // 1. Mutation Push Token
+  // 1. Mutation FacebookReauth (Correctif clé pour le relaunch jump)
+  if (combined.includes("facebookreauth") || combined.includes("facebook_reauth")) {
+    return {
+      data: {
+        facebook_reauth: {
+          facebook_account: LINKED_ACCOUNTS.facebook_account
+        }
+      }
+    };
+  }
+
+  // 2. Mutation Push Token
   if (combined.includes("addpushtoken") || combined.includes("push_token")) {
     return {
       data: {
@@ -57,23 +68,33 @@ function handleGraphQLQuery(urlStr, rawText = "") {
     };
   }
 
-  // 2. Query Binaires et Updates Apps
-  if (combined.includes("app_binary_info") || combined.includes("app_binary_updates")) {
+  // 3. Query App Binary Updates (Correction de la structure AppBinaryUpdateList)
+  if (combined.includes("app_binary_updates")) {
     return {
       data: {
-        app_binary_info: { nodes: [] },
-        app_binary_updates: { nodes: [] }
+        app_binary_updates: {
+          updates: []
+        }
       }
     };
   }
 
-  // 3. Query Entitlements (Licences d'applications)
+  // 4. Query App Binary Info
+  if (combined.includes("app_binary_info")) {
+    return {
+      data: {
+        app_binary_info: {
+          nodes: []
+        }
+      }
+    };
+  }
+
+  // 5. Query Entitlements (Licences d'applications)
   if (combined.includes("entitlements")) {
     return {
       data: {
         entitlements: {
-          nodes: [],
-          page_info: { has_next_page: false, end_cursor: null },
           active_android_entitlements: { nodes: [] }
         },
         me: {
@@ -83,7 +104,7 @@ function handleGraphQLQuery(urlStr, rawText = "") {
     };
   }
 
-  // 4. Query Linked Accounts
+  // 6. Query Linked Accounts
   if (combined.includes("linked_accounts_info")) {
     return {
       data: {
@@ -95,7 +116,7 @@ function handleGraphQLQuery(urlStr, rawText = "") {
     };
   }
 
-  // 5. Query Viewer / Profil complet au démarrage
+  // 7. Query Viewer / Profil complet au démarrage
   return {
     data: {
       viewer: {
@@ -215,16 +236,26 @@ export default {
       return jsonResponse({ status: "SUCCESS", presence: "ONLINE" });
     }
 
-    // Feature Flags Oculus
+    // Feature Flags Oculus (Rend dynamique selon les projets demandés)
     if (path.includes("features")) {
-      return jsonResponse({
-        oculus_is_trusted_user: true,
-        oculus_horizon_library_redesign2: true,
-        horizon_v2: true,
-        oculus_horizon_disable_auto_updates: false,
-        data: {},
-        features: {}
+      const requestedProjects = url.searchParams.getAll("projects[]");
+      const disabledRoadblocks = [
+        "oculus_horizon_enable_terms_of_service",
+        "oculus_horizon_qp_privacy_roadblock",
+        "oculus_horizon_insufficient_space_warning"
+      ];
+
+      const featureResponse = {};
+      requestedProjects.forEach(project => {
+        featureResponse[project] = !disabledRoadblocks.includes(project);
       });
+
+      // Garantit les clés indispensables
+      featureResponse["oculus_is_trusted_user"] = true;
+      featureResponse["oculus_horizon_library_redesign2"] = true;
+      featureResponse["horizon_v2"] = true;
+
+      return jsonResponse(featureResponse);
     }
 
     // Requêtes GraphQL
