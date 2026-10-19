@@ -28,7 +28,9 @@ const USER_DATA = {
 };
 
 const LINKED_ACCOUNTS = {
+  __typename: "LinkedAccountsInfo",
   facebook_account: {
+    __typename: "FacebookAccount",
     access_token: "OC|100000000000000|ghostvr_token",
     facebook_id: "100000000000000",
     friend_policy: "MUTUAL",
@@ -37,19 +39,21 @@ const LINKED_ACCOUNTS = {
 };
 
 const PRIVACY_OPTION = {
+  __typename: "PrivacyAudienceOption",
   identity_in_search_state: "EVERYONE",
   edges: []
 };
 
-// Traitement dynamique des requêtes GraphQL (analyse URL + Body)
+// Traitement dynamique des requêtes GraphQL
 function handleGraphQLQuery(urlStr, rawText = "") {
   const combined = (decodeURIComponent(urlStr) + " " + rawText).toLowerCase();
 
-  // 1. Mutation FacebookReauth (Correctif clé pour le relaunch jump)
+  // 1. Mutation FacebookReauth
   if (combined.includes("facebookreauth") || combined.includes("facebook_reauth")) {
     return {
       data: {
         facebook_reauth: {
+          __typename: "FacebookReauthResponsePayload",
           facebook_account: LINKED_ACCOUNTS.facebook_account
         }
       }
@@ -61,6 +65,7 @@ function handleGraphQLQuery(urlStr, rawText = "") {
     return {
       data: {
         add_push_token: {
+          __typename: "AddPushTokenResponsePayload",
           token: { id: "push_token_ghostvr" },
           success: true
         }
@@ -68,11 +73,12 @@ function handleGraphQLQuery(urlStr, rawText = "") {
     };
   }
 
-  // 3. Query App Binary Updates (Correction de la structure AppBinaryUpdateList)
+  // 3. Query App Binary Updates
   if (combined.includes("app_binary_updates")) {
     return {
       data: {
         app_binary_updates: {
+          __typename: "AppBinaryUpdateList",
           updates: []
         }
       }
@@ -84,21 +90,30 @@ function handleGraphQLQuery(urlStr, rawText = "") {
     return {
       data: {
         app_binary_info: {
+          __typename: "AppBinaryInfoList",
           nodes: []
         }
       }
     };
   }
 
-  // 5. Query Entitlements (Licences d'applications)
+  // 5. Query Entitlements (Correction de l'alias `entitlements: me`)
   if (combined.includes("entitlements")) {
     return {
       data: {
         entitlements: {
-          active_android_entitlements: { nodes: [] }
+          __typename: "User",
+          active_android_entitlements: {
+            __typename: "AndroidEntitlementsConnection",
+            nodes: []
+          }
         },
         me: {
-          active_android_entitlements: { nodes: [] }
+          __typename: "User",
+          active_android_entitlements: {
+            __typename: "AndroidEntitlementsConnection",
+            nodes: []
+          }
         }
       }
     };
@@ -109,6 +124,7 @@ function handleGraphQLQuery(urlStr, rawText = "") {
     return {
       data: {
         viewer: {
+          __typename: "Viewer",
           linked_accounts_info: LINKED_ACCOUNTS
         },
         linked_accounts_info: LINKED_ACCOUNTS
@@ -120,17 +136,19 @@ function handleGraphQLQuery(urlStr, rawText = "") {
   return {
     data: {
       viewer: {
+        __typename: "Viewer",
         user: {
+          __typename: "User",
           ...USER_DATA,
           account_creation_time: 1500000000,
-          profile_picture: { uri: USER_DATA.profile_photo.uri },
-          presence: { status: "ONLINE", activity: null },
-          notifications: { nodes: [], unread_count: 0 },
-          friend_requests_received_2: { count: 0 },
-          friends: { count: 0 },
-          current_room: { nodes: [] },
-          payment_methods: { nodes: [] },
-          all_payment_methods: { nodes: [] },
+          profile_picture: { __typename: "ProfilePicture", uri: USER_DATA.profile_photo.uri },
+          presence: { __typename: "UserPresence", status: "ONLINE", activity: null },
+          notifications: { __typename: "NotificationConnection", nodes: [], unread_count: 0 },
+          friend_requests_received_2: { __typename: "FriendRequestsConnection", count: 0 },
+          friends: { __typename: "UserFriendsConnection", count: 0 },
+          current_room: { __typename: "RoomConnection", nodes: [] },
+          payment_methods: { __typename: "PaymentMethodConnection", nodes: [] },
+          all_payment_methods: { __typename: "PaymentMethodConnection", nodes: [] },
           client_preference_data: [],
           reachability_data: []
         },
@@ -139,8 +157,11 @@ function handleGraphQLQuery(urlStr, rawText = "") {
         privacy_friends: PRIVACY_OPTION,
         linked_accounts_info: LINKED_ACCOUNTS,
         entitlements: {
-          nodes: [],
-          page_info: { has_next_page: false, end_cursor: null }
+          __typename: "User",
+          active_android_entitlements: {
+            __typename: "AndroidEntitlementsConnection",
+            nodes: []
+          }
         }
       }
     }
@@ -217,7 +238,6 @@ export default {
       return new Response(null, { status: 204, headers: HEADERS });
     }
 
-    // Gestion des avatars
     if (path.endsWith(".png") || path.endsWith(".jpg") || path.includes("avatar")) {
       const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="#2d3748"/></svg>`;
       return new Response(svg, { status: 200, headers: { "Content-Type": "image/svg+xml", "Access-Control-Allow-Origin": "*" } });
@@ -231,12 +251,10 @@ export default {
       sendEmailLog(env, request.method, path, bodyData, rawText);
     }
 
-    // Heartbeat utilisateur
     if (path.includes("heartbeat")) {
       return jsonResponse({ status: "SUCCESS", presence: "ONLINE" });
     }
 
-    // Feature Flags Oculus (Rend dynamique selon les projets demandés)
     if (path.includes("features")) {
       const requestedProjects = url.searchParams.getAll("projects[]");
       const disabledRoadblocks = [
@@ -250,7 +268,6 @@ export default {
         featureResponse[project] = !disabledRoadblocks.includes(project);
       });
 
-      // Garantit les clés indispensables
       featureResponse["oculus_is_trusted_user"] = true;
       featureResponse["oculus_horizon_library_redesign2"] = true;
       featureResponse["horizon_v2"] = true;
@@ -258,12 +275,10 @@ export default {
       return jsonResponse(featureResponse);
     }
 
-    // Requêtes GraphQL
     if (path.includes("graphql")) {
       return jsonResponse(handleGraphQLQuery(request.url, rawText));
     }
 
-    // Authentification & Login
     if (path.includes("login") || path.includes("auth") || path.includes("oauth") || path.includes("session")) {
       return jsonResponse({
         access_token: "OC|100000000000000|ghostvr_token",
