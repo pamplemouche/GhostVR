@@ -4,7 +4,7 @@ export default {
     const path = url.pathname;
     const method = request.method;
 
-    // En-têtes CORS pour autoriser l'application Android
+    // En-têtes CORS
     const headers = {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",
@@ -20,9 +20,18 @@ export default {
     if (path.endsWith("/oculus/login")) {
       return new Response(
         JSON.stringify({
-          access_token: "GHOSTVR_MOCK_ACCESS_TOKEN",
+          access_token: "OC|100000000000001|ghostvr_session_valid_token",
+          token_type: "bearer",
           user_id: "100000000000001",
+          uid: "100000000000001",
+          id: "100000000000001",
           session_id: "ghostvr-session-active",
+          expires_in: 315360000,
+          user: {
+            id: "100000000000001",
+            name: "GhostVR User",
+            alias: "GhostVR",
+          },
         }),
         { headers }
       );
@@ -48,7 +57,7 @@ export default {
       let doc = url.searchParams.get("doc") || "";
       let q = url.searchParams.get("q") || "";
 
-      // Extraction si les arguments sont envoyés dans le corps HTTP (POST)
+      // Lecture du corps HTTP en POST (x-www-form-urlencoded ou JSON)
       if (method === "POST") {
         try {
           const contentType = request.headers.get("content-type") || "";
@@ -63,7 +72,7 @@ export default {
             q = q || jsonBody.q || "";
           }
         } catch (e) {
-          // Poursuite avec les paramètres d'URL en cas d'erreur de parsing
+          // Fallback sur les paramètres d'URL
         }
       }
 
@@ -76,78 +85,4 @@ export default {
             data: {
               viewer: {
                 active_android_entitlements: {
-                  nodes: [
-                    {
-                      id: "entitlement_ghostvr_master",
-                      is_viewer_entitled: true,
-                      signed_token: "GHOSTVR_VALID_MOCK_TOKEN",
-                      latest_supported_binary: {
-                        package_name: "com.oculus.horizon",
-                        version_code: 900257473,
-                        uri: "",
-                        obb_binary: null,
-                      },
-                    },
-                  ],
-                },
-              },
-            },
-          }),
-          { headers }
-        );
-      }
-
-      // B. Polling Profil & Notifications (viewer())
-      if (queryStr.includes("viewer")) {
-        return new Response(
-          JSON.stringify({
-            data: {
-              viewer: {
-                user: {
-                  id: "100000000000001",
-                  name: "GhostVR User",
-                  alias: "GhostVR",
-                  is_pin_set: true,
-                },
-                notifications: {
-                  nodes: [],
-                  page_info: {
-                    has_next_page: false,
-                    end_cursor: null,
-                  },
-                },
-              },
-            },
-          }),
-          { headers }
-        );
-      }
-
-      // Reponse GraphQL fallback générique
-      return new Response(
-        JSON.stringify({
-          data: {
-            viewer: {
-              user: {
-                id: "100000000000001",
-                alias: "GhostVR",
-              },
-            },
-          },
-        }),
-        { headers }
-      );
-    }
-
-    // 4. Analytics & Logging Client (/fb-graph/logging_client_events)
-    if (path.endsWith("/fb-graph/logging_client_events")) {
-      return new Response(JSON.stringify({ success: true }), { headers });
-    }
-
-    // Fallback pour toute autre route
-    return new Response(
-      JSON.stringify({ status: "ok", service: "GhostVR Mock Server" }),
-      { headers, status: 200 }
-    );
-  },
-};
+                  
