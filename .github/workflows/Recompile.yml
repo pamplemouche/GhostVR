@@ -1,0 +1,60 @@
+name: Recompile and Sign APKs
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'decompiled/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Install Apktool and Uber-APK-Signer
+        run: |
+          mkdir -p tools
+          curl -s https://api.github.com/repos/iBotPeaches/Apktool/releases/latest \
+            | grep "browser_download_url.*\.jar" \
+            | cut -d : -f 2,3 \
+            | tr -d \" \
+            | wget -qi - -O tools/apktool.jar
+
+          curl -s https://api.github.com/repos/patrickfav/uber-apk-signer/releases/latest \
+            | grep "browser_download_url.*\.jar" \
+            | cut -d : -f 2,3 \
+            | tr -d \" \
+            | wget -qi - -O tools/uber-apk-signer.jar
+
+      - name: Recompile APKs
+        run: |
+          mkdir -p output/unsigned
+          for dir in decompiled/*/; do
+            if [ -d "$dir" ]; then
+              app_name=$(basename "$dir")
+              echo "Recompilation de $app_name..."
+              java -jar tools/apktool.jar b "$dir" -o "output/unsigned/${app_name}-unsigned.apk"
+            fi
+          done
+
+      - name: Sign APKs
+        run: |
+          mkdir -p output/signed
+          java -jar tools/uber-apk-signer.jar --apks output/unsigned --out output/signed
+
+      - name: Upload Signed APKs Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: GhostVR-Signed-APKs
+          path: output/signed/*.apk
