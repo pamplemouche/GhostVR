@@ -16,7 +16,7 @@ const USER_DATA = {
   gender: "N/A",
   locale: "fr_FR",
   timezone: "Europe/Paris",
-  presence: "OFFLINE",
+  presence: "ONLINE",
   is_tos_accepted: true,
   is_eligible: true,
   has_password: true,
@@ -41,26 +41,39 @@ const PRIVACY_OPTION = {
   edges: []
 };
 
-// Traitement dynamique des requêtes GraphQL
-function handleGraphQLQuery(urlStr) {
-  const decodedUrl = decodeURIComponent(urlStr);
+// Traitement dynamique des requêtes GraphQL (analyse URL + Body)
+function handleGraphQLQuery(urlStr, rawText = "") {
+  const combined = (decodeURIComponent(urlStr) + " " + rawText).toLowerCase();
 
   // 1. Mutation Push Token
-  if (decodedUrl.includes("AddPushTokenRequest")) {
+  if (combined.includes("addpushtoken") || combined.includes("push_token")) {
     return {
       data: {
         add_push_token: {
-          token: { id: "push_token_ghostvr" }
+          token: { id: "push_token_ghostvr" },
+          success: true
         }
       }
     };
   }
 
-  // 2. Query Entitlements (Licences d'applications)
-  if (decodedUrl.includes("entitlements")) {
+  // 2. Query Binaires et Updates Apps
+  if (combined.includes("app_binary_info") || combined.includes("app_binary_updates")) {
+    return {
+      data: {
+        app_binary_info: { nodes: [] },
+        app_binary_updates: { nodes: [] }
+      }
+    };
+  }
+
+  // 3. Query Entitlements (Licences d'applications)
+  if (combined.includes("entitlements")) {
     return {
       data: {
         entitlements: {
+          nodes: [],
+          page_info: { has_next_page: false, end_cursor: null },
           active_android_entitlements: { nodes: [] }
         },
         me: {
@@ -70,8 +83,8 @@ function handleGraphQLQuery(urlStr) {
     };
   }
 
-  // 3. Query Linked Accounts
-  if (decodedUrl.includes("linked_accounts_info")) {
+  // 4. Query Linked Accounts
+  if (combined.includes("linked_accounts_info")) {
     return {
       data: {
         viewer: {
@@ -82,14 +95,16 @@ function handleGraphQLQuery(urlStr) {
     };
   }
 
-  // 4. Query Viewer / Profil complet au démarrage
+  // 5. Query Viewer / Profil complet au démarrage
   return {
     data: {
       viewer: {
         user: {
           ...USER_DATA,
           account_creation_time: 1500000000,
-          notifications: { nodes: [] },
+          profile_picture: { uri: USER_DATA.profile_photo.uri },
+          presence: { status: "ONLINE", activity: null },
+          notifications: { nodes: [], unread_count: 0 },
           friend_requests_received_2: { count: 0 },
           friends: { count: 0 },
           current_room: { nodes: [] },
@@ -101,7 +116,11 @@ function handleGraphQLQuery(urlStr) {
         privacy_real_world_identity: PRIVACY_OPTION,
         privacy_current_activity: PRIVACY_OPTION,
         privacy_friends: PRIVACY_OPTION,
-        linked_accounts_info: LINKED_ACCOUNTS
+        linked_accounts_info: LINKED_ACCOUNTS,
+        entitlements: {
+          nodes: [],
+          page_info: { has_next_page: false, end_cursor: null }
+        }
       }
     }
   };
@@ -191,14 +210,26 @@ export default {
       sendEmailLog(env, request.method, path, bodyData, rawText);
     }
 
+    // Heartbeat utilisateur
+    if (path.includes("heartbeat")) {
+      return jsonResponse({ status: "SUCCESS", presence: "ONLINE" });
+    }
+
     // Feature Flags Oculus
     if (path.includes("features")) {
-      return jsonResponse({ data: {}, features: {} });
+      return jsonResponse({
+        oculus_is_trusted_user: true,
+        oculus_horizon_library_redesign2: true,
+        horizon_v2: true,
+        oculus_horizon_disable_auto_updates: false,
+        data: {},
+        features: {}
+      });
     }
 
     // Requêtes GraphQL
     if (path.includes("graphql")) {
-      return jsonResponse(handleGraphQLQuery(request.url));
+      return jsonResponse(handleGraphQLQuery(request.url, rawText));
     }
 
     // Authentification & Login
