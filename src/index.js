@@ -66,14 +66,28 @@ function handleGraphQLQuery(urlStr, rawText = "") {
       data: {
         add_push_token: {
           __typename: "AddPushTokenResponsePayload",
-          token: { id: "push_token_ghostvr" },
-          success: true
+          token: {
+            __typename: "PushToken",
+            id: "push_token_ghostvr"
+          }
         }
       }
     };
   }
 
-  // 3. Query App Binary Updates
+  // 3. Query App Binary Info (Correction : info doit être un tableau)
+  if (combined.includes("app_binary_info")) {
+    return {
+      data: {
+        app_binary_info: {
+          __typename: "AppBinaryInfoResponse",
+          info: []
+        }
+      }
+    };
+  }
+
+  // 4. Query App Binary Updates
   if (combined.includes("app_binary_updates")) {
     return {
       data: {
@@ -85,20 +99,8 @@ function handleGraphQLQuery(urlStr, rawText = "") {
     };
   }
 
-  // 4. Query App Binary Info
-  if (combined.includes("app_binary_info")) {
-    return {
-      data: {
-        app_binary_info: {
-          __typename: "AppBinaryInfoList",
-          nodes: []
-        }
-      }
-    };
-  }
-
-  // 5. Query Entitlements (Correction de l'alias `entitlements: me`)
-  if (combined.includes("entitlements")) {
+  // 5. Query Entitlements / Me
+  if (combined.includes("entitlements") || combined.includes("active_android_entitlements")) {
     return {
       data: {
         entitlements: {
@@ -141,7 +143,20 @@ function handleGraphQLQuery(urlStr, rawText = "") {
           __typename: "User",
           ...USER_DATA,
           account_creation_time: 1500000000,
-          profile_picture: { __typename: "ProfilePicture", uri: USER_DATA.profile_photo.uri },
+          profile_photo: {
+            __typename: "ProfilePicture",
+            name: "avatar",
+            uri: USER_DATA.profile_photo.uri,
+            width: 360,
+            height: 360
+          },
+          avatar_image: {
+            __typename: "ProfilePicture",
+            name: "avatar",
+            uri: USER_DATA.avatar_image.uri,
+            width: 360,
+            height: 360
+          },
           presence: { __typename: "UserPresence", status: "ONLINE", activity: null },
           notifications: { __typename: "NotificationConnection", nodes: [], unread_count: 0 },
           friend_requests_received_2: { __typename: "FriendRequestsConnection", count: 0 },
