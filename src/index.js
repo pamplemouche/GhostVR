@@ -85,4 +85,78 @@ export default {
             data: {
               viewer: {
                 active_android_entitlements: {
-                  
+                  nodes: [
+                    {
+                      id: "entitlement_ghostvr_master",
+                      is_viewer_entitled: true,
+                      signed_token: "GHOSTVR_VALID_MOCK_TOKEN",
+                      latest_supported_binary: {
+                        package_name: "com.oculus.horizon",
+                        version_code: 900257473,
+                        uri: "",
+                        obb_binary: null,
+                      },
+                    },
+                  ],
+                },
+              },
+            },
+          }),
+          { headers }
+        );
+      }
+
+      // B. Polling Profil & Notifications (viewer())
+      if (queryStr.includes("viewer")) {
+        return new Response(
+          JSON.stringify({
+            data: {
+              viewer: {
+                user: {
+                  id: "100000000000001",
+                  name: "GhostVR User",
+                  alias: "GhostVR",
+                  is_pin_set: true,
+                },
+                notifications: {
+                  nodes: [],
+                  page_info: {
+                    has_next_page: false,
+                    end_cursor: null,
+                  },
+                },
+              },
+            },
+          }),
+          { headers }
+        );
+      }
+
+      // Fallback GraphQL
+      return new Response(
+        JSON.stringify({
+          data: {
+            viewer: {
+              user: {
+                id: "100000000000001",
+                alias: "GhostVR",
+              },
+            },
+          },
+        }),
+        { headers }
+      );
+    }
+
+    // 4. Analytics & Logging Client (/fb-graph/logging_client_events)
+    if (path.endsWith("/fb-graph/logging_client_events")) {
+      return new Response(JSON.stringify({ success: true }), { headers });
+    }
+
+    // Fallback global
+    return new Response(
+      JSON.stringify({ status: "ok", service: "GhostVR Mock Server" }),
+      { headers, status: 200 }
+    );
+  },
+};
