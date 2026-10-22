@@ -186,7 +186,7 @@
                 <data android:scheme="http"/>
                 <data android:scheme="https"/>
                 <data android:host="ghostvr.pamplemouche.com"/>
-                <data android:host="ghostvr.pamplemouche.com/support"/>
+                <data android:host="ghostvr.pamplemouche.com"/>
                 <data android:pathPrefix="/experiences/gear-vr/"/>
                 <data android:pathPrefix="/experiences/event/"/>
                 <data android:pathPrefix="/experiences/section/gear-vr/"/>
