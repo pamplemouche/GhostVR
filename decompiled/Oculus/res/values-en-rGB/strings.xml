@@ -94,7 +94,7 @@
     <string name="commerce_request_refund_status_scheduled">Refund requested</string>
     <string name="commerce_return_policy_label">Returns Policy</string>
     <string name="commerce_store_credit_available_balance">Store credit (%1$s available)</string>
-    <string name="commerce_store_credit_warning">"We're sorry, your Oculus Store credits cannot be used because they are not in the corresponding currency. Please see ghostvr.pamplemouche.com/legal/store-credits for more information."</string>
+    <string name="commerce_store_credit_warning">"We're sorry, your Oculus Store credits cannot be used because they are not in the corresponding currency. Please see ghostvr.pamplemouche.com/www/legal/store-credits for more information."</string>
     <string name="common_delimiter">,</string>
     <string name="common_download_progress">%1$s/%2$s</string>
     <string name="common_download_wifi_warning_description">"You aren't on Wi-Fi, so you'll use your mobile data network to download. Do you wish to continue?"</string>
@@ -151,7 +151,7 @@
     <string name="help_report_a_bug_error_text">There was an error with creating your bug report</string>
     <string name="hsw_video_children_title">3. Designed for ages 13+.</string>
     <string name="hsw_video_comfort_title">4. Choose comfortable content.</string>
-    <string name="hsw_video_confirmation_find_video">You can find this video again and re-enable periodic reminders in Settings. Read our complete health and safety warnings at oculus.com/warnings.</string>
+    <string name="hsw_video_confirmation_find_video">You can find this video again and re-enable periodic reminders in Settings. Read our complete health and safety warnings at ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
     <string name="hsw_video_confirmation_notice">"Health and safety warnings are important for anyone using Gear VR. We'll periodically repeat brief reminder warnings. If you understand the warnings, agree to show them to other users and don't want to be reminded, tap Acknowledge. To leave the reminders enabled, tap Decline."</string>
     <string name="hsw_video_description_friend_reminder">If you share this device with your friends, you can find this video again in the Settings area of your Oculus app</string>
     <string name="hsw_video_surroundings_title">2. Be aware of your surroundings.</string>

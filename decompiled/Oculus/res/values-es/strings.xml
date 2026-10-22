@@ -216,7 +216,7 @@
     <string name="commerce_return_policy_label">Política de devoluciones</string>
     <string name="commerce_set_default_payment_method_text">Establecer como predeterminado</string>
     <string name="commerce_store_credit_available_balance">Crédito en la tienda (%1$s disponibles)</string>
-    <string name="commerce_store_credit_warning">Tus créditos de la tienda de Oculus no se pueden usar porque no están en la divisa que corresponde. Consulta ghostvr.pamplemouche.com/legal/store-credits para obtener más información.</string>
+    <string name="commerce_store_credit_warning">Tus créditos de la tienda de Oculus no se pueden usar porque no están en la divisa que corresponde. Consulta ghostvr.pamplemouche.com/www/legal/store-credits para obtener más información.</string>
     <string name="commerce_tax">Impuestos</string>
     <string name="commerce_value">Valor</string>
     <string name="common_agree_and_continue">Aceptar y continuar</string>
@@ -394,7 +394,7 @@
     <string name="hsw_video_comfort_description">Elige el contenido más apropiado para ti según las calificaciones de intensidad.</string>
     <string name="hsw_video_comfort_title">4. Elige contenido cómodo</string>
     <string name="hsw_video_confirmation_button">Aceptar</string>
-    <string name="hsw_video_confirmation_find_video">Podrás volver a encontrar este video y reactivar los recordatorios periódicos en la configuración. Consulta todas nuestras advertencias sobre salud y seguridad en oculus.com/warnings.</string>
+    <string name="hsw_video_confirmation_find_video">Podrás volver a encontrar este video y reactivar los recordatorios periódicos en la configuración. Consulta todas nuestras advertencias sobre salud y seguridad en ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
     <string name="hsw_video_confirmation_notice">Las advertencias sobre salud y seguridad son importantes para cualquier persona que use Gear VR. Enviaremos breves recordatorios de estas advertencias de forma periódica. Si entiendes las advertencias, aceptas mostrárselas a otros usuarios y no quieres recibir recordatorios, toca \"Aceptar\". Para dejar los recordatorios activados, toca \"Rechazar\".</string>
     <string name="hsw_video_decline_link">Rechazar</string>
     <string name="hsw_video_description_friend_reminder">Si compartes este dispositivo con tus amigos, puedes encontrar este video de nuevo en la configuración de tu app de Oculus</string>

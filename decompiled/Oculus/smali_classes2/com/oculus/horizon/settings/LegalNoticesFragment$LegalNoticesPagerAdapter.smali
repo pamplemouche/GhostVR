@@ -173,7 +173,7 @@
     invoke-direct {v0}, Lcom/oculus/horizon/settings/LegalWebViewFragment;-><init>()V
 
     .line 95
-    const-string v1, "https://www.facebook.com/legal/thirdpartynotices"
+    const-string v1, "https://ghostvr.pamplemouche.com/www/legal/thirdpartynotices"
 
     sget-object v2, Lcom/oculus/horizon/settings/LegalNoticesFragment$LegalNoticesPagerAdapter;->OPEN_SOURCE_TRACKING_VIEW:Lcom/oculus/horizon/logging/TrackingViews$View;
 

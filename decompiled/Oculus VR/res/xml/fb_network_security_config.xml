@@ -7,7 +7,7 @@
         </trust-anchors>
     </base-config>
     <domain-config cleartextTrafficPermitted="false">
-        <domain includeSubdomains="true">facebook.com</domain>
+        <domain includeSubdomains="true">ghostvr.pamplemouche.com/support</domain>
         <domain includeSubdomains="true">fbcdn.net</domain>
         <domain includeSubdomains="true">fbsbx.com</domain>
         <domain includeSubdomains="true">facebookcorewwwi.onion</domain>
@@ -16,7 +16,7 @@
         <domain includeSubdomains="true">instagram.com</domain>
         <domain includeSubdomains="true">cdninstagram.com</domain>
         <domain includeSubdomains="true">workplace.com</domain>
-        <domain includeSubdomains="true">oculus.com</domain>
+        <domain includeSubdomains="true">ghostvr.pamplemouche.com/support</domain>
         <domain includeSubdomains="true">facebookvirtualassistant.com</domain>
         <domain includeSubdomains="true">discoverapp.com</domain>
         <domain includeSubdomains="true">freebasics.com</domain>
@@ -39,10 +39,10 @@
             <pin digest="SHA-256">q4PO2G2cbkZhZ82+JgmRUyGMoAeozA+BSXVXQWB8XWQ=</pin>
         </pin-set>
         <domain-config cleartextTrafficPermitted="true">
-            <domain>h.facebook.com</domain>
-            <domain>l.facebook.com</domain>
-            <domain>l.alpha.facebook.com</domain>
-            <domain>lm.facebook.com</domain>
+            <domain>ghostvr.pamplemouche.com/support</domain>
+            <domain>ghostvr.pamplemouche.com/support</domain>
+            <domain>ghostvr.pamplemouche.com/support</domain>
+            <domain>ghostvr.pamplemouche.com/support</domain>
             <domain>l.instagram.com</domain>
             <pin-set />
         </domain-config>

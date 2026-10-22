@@ -41,7 +41,7 @@
 
     .prologue
     .line 45
-    const-string v5, "facebook.com"
+    const-string v5, "ghostvr.pamplemouche.com"
 
     const-string v6, "graph"
 

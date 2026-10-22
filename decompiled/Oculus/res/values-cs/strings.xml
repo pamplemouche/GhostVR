@@ -209,7 +209,7 @@
     <string name="commerce_return_policy_label">Zásady vracení zboží</string>
     <string name="commerce_set_default_payment_method_text">Nastavit jako výchozí</string>
     <string name="commerce_store_credit_available_balance">Kredit pro nákup (k dispozici máte %1$s)</string>
-    <string name="commerce_store_credit_warning">Je nám líto, ale kredit obchodu Oculus použít nemůžete, protože není v odpovídající měně. Další informace najdete na ghostvr.pamplemouche.com/legal/store-credits.</string>
+    <string name="commerce_store_credit_warning">Je nám líto, ale kredit obchodu Oculus použít nemůžete, protože není v odpovídající měně. Další informace najdete na ghostvr.pamplemouche.com/www/legal/store-credits.</string>
     <string name="commerce_tax">Daň</string>
     <string name="commerce_total">Celkem</string>
     <string name="commerce_value">Hodnota</string>
@@ -392,7 +392,7 @@
     <string name="hsw_video_comfort_description">Vyberte si takový obsah, který vám na základě hodnocení komfortu vyhovuje nejvíc.</string>
     <string name="hsw_video_comfort_title">4. Vyberte si vhodný obsah.</string>
     <string name="hsw_video_confirmation_button">Rozumím</string>
-    <string name="hsw_video_confirmation_find_video">Tohle video si můžete znovu vyhledat a v nastaveních zapnout pravidelné zobrazování připomenutí. Přečtěte si úplná zdravotní a bezpečnostní varování na adrese oculus.com/warnings.</string>
+    <string name="hsw_video_confirmation_find_video">Tohle video si můžete znovu vyhledat a v nastaveních zapnout pravidelné zobrazování připomenutí. Přečtěte si úplná zdravotní a bezpečnostní varování na adrese ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
     <string name="hsw_video_confirmation_notice">Zdravotní a bezpečnostní varování jsou důležitá pro všechny uživatele brýlí Gear VR. Stručná varování vám budeme pravidelně připomínat. Pokud je vezmete na vědomí, uveďte, že je ukážete i ostatním uživatelům. Jestliže už nechcete varování vídat, klepněte na Rozumím. Pokud chcete varování vídat i nadále, klepněte na Odmítnout.</string>
     <string name="hsw_video_decline_link">Odmítnout</string>
     <string name="hsw_video_description_friend_reminder">Pokud zařízení sdílíte s přáteli, najdete tohle video v nastaveních aplikace Oculus.</string>

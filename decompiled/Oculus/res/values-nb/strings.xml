@@ -210,7 +210,7 @@
     <string name="commerce_return_policy_label">Retningslinjer for retur</string>
     <string name="commerce_set_default_payment_method_text">Bruk som standard</string>
     <string name="commerce_store_credit_available_balance">Butikkredit (%1$s tilgjengelig)</string>
-    <string name="commerce_store_credit_warning">Krediten din i Oculus-butikken kan dessverre ikke brukes, ettersom den ikke er i riktig valuta. Se ghostvr.pamplemouche.com/legal/store-credits for mer informasjon.</string>
+    <string name="commerce_store_credit_warning">Krediten din i Oculus-butikken kan dessverre ikke brukes, ettersom den ikke er i riktig valuta. Se ghostvr.pamplemouche.com/www/legal/store-credits for mer informasjon.</string>
     <string name="commerce_tax">Avgifter</string>
     <string name="commerce_total">Totalt</string>
     <string name="commerce_value">Beløp</string>
@@ -391,7 +391,7 @@
     <string name="hsw_video_comfort_description">Velg innholdet som passer best for deg, ved å ta utgangspunkt i våre komfortvurderinger.</string>
     <string name="hsw_video_comfort_title">4. Velg komfortabelt innhold</string>
     <string name="hsw_video_confirmation_button">Bekreft</string>
-    <string name="hsw_video_confirmation_find_video">Du kan finne denne videoen igjen og aktivere de regelmessige påminnelsene på nytt i innstillingene. Les våre komplette helse- og sikkerhetsadvarsler på oculus.com/warnings.</string>
+    <string name="hsw_video_confirmation_find_video">Du kan finne denne videoen igjen og aktivere de regelmessige påminnelsene på nytt i innstillingene. Les våre komplette helse- og sikkerhetsadvarsler på ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
     <string name="hsw_video_confirmation_notice">Helse- og sikkerhetsadvarslene er viktige for alle som bruker Gear VR. Vi kommer med jevne mellomrom til å gjenta korte advarsler. Hvis du forstår disse advarslene, godtar å vise dem til andre brukere og ikke ønsker påminnelser, trykker du på Bekreft. Trykk på Avslå hvis du vil at påminnelsene skal være aktivert.</string>
     <string name="hsw_video_decline_link">Avslå</string>
     <string name="hsw_video_description_friend_reminder">Hvis du deler denne enheten med vennene dine, kan du finne videoen igjen i innstillingene for Oculus-appen din</string>

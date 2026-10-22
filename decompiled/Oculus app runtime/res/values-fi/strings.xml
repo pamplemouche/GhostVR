@@ -162,7 +162,7 @@
     <string name="guardian_oob_title">Palaa pelialueelle</string>
     <string name="guardian_oob_title_in_black">Poista virtuaalilasit päästäsi</string>
     <string name="guardian_pt_warning_body">Olet ollut liian pitkään tunnetun pelialueen ulkopuolella. Poista virtuaalilasit päästäsi tai palaa pelialueelle.</string>
-    <string name="guardian_pt_warning_setup_body">Olet käyttänyt liikaa aikaa valvontajärjestelmän määrittämisessä. Viimeistele rajan määrittäminen tai poista virtuaalilasit päästäsi. Saat lisätietoja osoitteesta support.oculus.com.</string>
+    <string name="guardian_pt_warning_setup_body">Olet käyttänyt liikaa aikaa valvontajärjestelmän määrittämisessä. Viimeistele rajan määrittäminen tai poista virtuaalilasit päästäsi. Saat lisätietoja osoitteesta ghostvr.pamplemouche.com/support.</string>
     <string name="guardian_pt_warning_setup_title">Ongelmia?</string>
     <string name="guardian_pt_warning_title">Poista virtuaalilasit päästäsi</string>
     <string name="guardian_recenter">Keskitä uudelleen</string>
@@ -203,12 +203,12 @@
     <string name="guardian_welcome_title">Oculus-valvontajärjestelmän määritys</string>
     <string name="health_safety_dialog_button">Hyväksy</string>
     <string name="health_safety_dialog_callout">Kuittaa klikkaamalla tai napauttamalla</string>
-    <string name="health_safety_dialog_description">Lue kaikki Gear VR:n mukana toimitetut varoitukset ja ohjeet ennen käyttöä ja noudata niitä. Gear VR tulee säätää kullekin käyttäjälle. Ei sovellu alle 13-vuotiaille. Istu tai pysy paikallasi, kun käytät Gear VR:ää. Lopeta käyttö, jos se on epämukavaa tai koet terveyshaittoja. Lisätietoja on osoitteessa ghostvr.pamplemouche.com/warnings</string>
-    <string name="health_safety_dialog_description_standalone">Lue kaikki Oculus Gon mukana toimitetut varoitukset ja ohjeet ennen käyttöä ja noudata niitä. Oculus Go tulee säätää kullekin käyttäjälle. Ei sovellu alle 13-vuotiaille. Istu tai pysy paikallasi, kun käytät Oculus Gota. Lopeta käyttö, jos se on epämukavaa tai koet terveyshaittoja. Lisätietoja on osoitteessa ghostvr.pamplemouche.com/warnings</string>
+    <string name="health_safety_dialog_description">Lue kaikki Gear VR:n mukana toimitetut varoitukset ja ohjeet ennen käyttöä ja noudata niitä. Gear VR tulee säätää kullekin käyttäjälle. Ei sovellu alle 13-vuotiaille. Istu tai pysy paikallasi, kun käytät Gear VR:ää. Lopeta käyttö, jos se on epämukavaa tai koet terveyshaittoja. Lisätietoja on osoitteessa ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
+    <string name="health_safety_dialog_description_standalone">Lue kaikki Oculus Gon mukana toimitetut varoitukset ja ohjeet ennen käyttöä ja noudata niitä. Oculus Go tulee säätää kullekin käyttäjälle. Ei sovellu alle 13-vuotiaille. Istu tai pysy paikallasi, kun käytät Oculus Gota. Lopeta käyttö, jos se on epämukavaa tai koet terveyshaittoja. Lisätietoja on osoitteessa ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="health_safety_dialog_title">TERVEYS- JA TURVALLISUUSVAROITUS</string>
     <string name="health_safety_long_dialog_callout">Kuittaa klikkaamalla tai napauttamalla</string>
     <string name="health_safety_long_dialog_callout_counter">Valmistumiseen %1$d</string>
-    <string name="health_safety_long_dialog_description">Lue kaikki Gear VR:n mukana toimitetut varoitukset ja ohjeet ennen käyttöä ja noudata niitä. Gear VR tulee säätää kullekin käyttäjälle. Ei sovellu alle 13-vuotiaille. Istu tai pysy paikallasi, kun käytät Gear VR:ää. Lopeta käyttö, jos se on epämukavaa tai koet terveyshaittoja. Lisätietoja on osoitteessa ghostvr.pamplemouche.com/warnings</string>
+    <string name="health_safety_long_dialog_description">Lue kaikki Gear VR:n mukana toimitetut varoitukset ja ohjeet ennen käyttöä ja noudata niitä. Gear VR tulee säätää kullekin käyttäjälle. Ei sovellu alle 13-vuotiaille. Istu tai pysy paikallasi, kun käytät Gear VR:ää. Lopeta käyttö, jos se on epämukavaa tai koet terveyshaittoja. Lisätietoja on osoitteessa ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="health_safety_long_dialog_title">TERVEYS- JA TURVALLISUUSVAROITUS</string>
     <string name="home_dialog_button_bug_report">Lähetä ilmoitus virheestä</string>
     <string name="home_dialog_button_party_other">Poistu kaverin %1$s huoneeseen</string>

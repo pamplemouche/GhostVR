@@ -2,3 +2,7 @@ node_modules/
 .wrangler/
 .dev.vars
 dist/
+
+# Python bytecode
+__pycache__/
+*.pyc

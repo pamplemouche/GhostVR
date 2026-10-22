@@ -305,7 +305,7 @@
     move-result-object v1
 
     .line 99
-    const-string v2, "fbcdn.net"
+    const-string v2, "ghostvr.pamplemouche.com"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 

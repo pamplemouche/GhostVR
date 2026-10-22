@@ -157,7 +157,7 @@
     <string name="guardian_oob_title">Gå tillbaka till spelområdet</string>
     <string name="guardian_oob_title_in_black">Ta av headsetet</string>
     <string name="guardian_pt_warning_body">Du har varit utanför ett känt spelområde för länge. Ta bort headsetet eller gå tillbaka till spelområdet.</string>
-    <string name="guardian_pt_warning_setup_body">Du har varit i Guardian-konfigurationen för länge. Skapa en gräns eller ta bort headsetet. Du hittar mer information på support.oculus.com.</string>
+    <string name="guardian_pt_warning_setup_body">Du har varit i Guardian-konfigurationen för länge. Skapa en gräns eller ta bort headsetet. Du hittar mer information på ghostvr.pamplemouche.com/support.</string>
     <string name="guardian_pt_warning_setup_title">Har du problem?</string>
     <string name="guardian_pt_warning_title">Ta bort headset</string>
     <string name="guardian_recenter">Centrera om</string>
@@ -198,12 +198,12 @@
     <string name="guardian_welcome_title">Oculus Guardian-konfiguration</string>
     <string name="health_safety_dialog_button">Bekräfta</string>
     <string name="health_safety_dialog_callout">Klicka eller tryck för att bekräfta</string>
-    <string name="health_safety_dialog_description">Läs och följ alla varningar och instruktioner som medföljer Gear VR före användning. Gear VR ska justeras efter varje användare. Får ej användas av barn under 13 år. Sitt ned eller stå still när du använder Gear VR. Avbryt användningen om du upplever någon form av obehag eller hälsobesvär. Läs mer på ghostvr.pamplemouche.com/warnings</string>
+    <string name="health_safety_dialog_description">Läs och följ alla varningar och instruktioner som medföljer Gear VR före användning. Gear VR ska justeras efter varje användare. Får ej användas av barn under 13 år. Sitt ned eller stå still när du använder Gear VR. Avbryt användningen om du upplever någon form av obehag eller hälsobesvär. Läs mer på ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="health_safety_dialog_description_standalone">Läs och följ alla varningar och instruktioner som medföljer Oculus Go före användning. Oculus Go ska anpassas för varje användare. Får ej användas av barn under 13. Sitt ned eller stå stilla när du använder Oculus Go. Avbryt användningen om du upplever obehag eller besvär. Mer info finns på www.oculus/warnings</string>
     <string name="health_safety_dialog_title">HÄLSO- OCH SÄKERHETSVARNING!</string>
     <string name="health_safety_long_dialog_callout">Klicka eller tryck för att bekräfta</string>
     <string name="health_safety_long_dialog_callout_counter">Klart om %1$d</string>
-    <string name="health_safety_long_dialog_description">Läs och följ alla varningar och instruktioner som medföljer Gear VR före användning. Gear VR ska justeras efter varje användare. Får ej användas av barn under 13 år. Sitt ned eller stå still när du använder Gear VR. Avbryt användningen om du upplever någon form av obehag eller hälsobesvär. Läs mer på ghostvr.pamplemouche.com/warnings</string>
+    <string name="health_safety_long_dialog_description">Läs och följ alla varningar och instruktioner som medföljer Gear VR före användning. Gear VR ska justeras efter varje användare. Får ej användas av barn under 13 år. Sitt ned eller stå still när du använder Gear VR. Avbryt användningen om du upplever någon form av obehag eller hälsobesvär. Läs mer på ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="health_safety_long_dialog_title">HÄLSO- OCH SÄKERHETSVARNING!</string>
     <string name="home_dialog_button_bug_report">Skicka felanmälan</string>
     <string name="home_dialog_button_party_other">Avsluta och gå till %1$ss rum</string>

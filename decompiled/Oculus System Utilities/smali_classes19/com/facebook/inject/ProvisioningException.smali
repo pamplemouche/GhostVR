@@ -202,7 +202,7 @@
 
     move-result-object v4
 
-    const-string v5, "relevant DI module to the test rule, see https://fburl.com/wiki/24nviijj for "
+    const-string v5, "relevant DI module to the test rule, see https://ghostvr.pamplemouche.com/wiki/24nviijj for "
 
     .line 53
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;

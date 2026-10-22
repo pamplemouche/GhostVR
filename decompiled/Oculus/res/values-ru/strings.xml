@@ -218,7 +218,7 @@
     <string name="commerce_return_policy_label">Правила возврата</string>
     <string name="commerce_set_default_payment_method_text">Установить по умолчанию</string>
     <string name="commerce_store_credit_available_balance">Купон Магазина (доступно %1$s)</string>
-    <string name="commerce_store_credit_warning">К сожалению, ваши купоны Магазина Oculus нельзя использовать из-за несоответствия валюты. Подробности: ghostvr.pamplemouche.com/legal/store-credits.</string>
+    <string name="commerce_store_credit_warning">К сожалению, ваши купоны Магазина Oculus нельзя использовать из-за несоответствия валюты. Подробности: ghostvr.pamplemouche.com/www/legal/store-credits.</string>
     <string name="commerce_tax">Налог</string>
     <string name="commerce_total">Всего</string>
     <string name="commerce_value">Ценность</string>
@@ -403,7 +403,7 @@
     <string name="hsw_video_comfort_description">При выборе контента учитывайте уровень комфорта.</string>
     <string name="hsw_video_comfort_title">4. Выбирайте комфортный контент</string>
     <string name="hsw_video_confirmation_button">ОК</string>
-    <string name="hsw_video_confirmation_find_video">Еще раз посмотреть это видео и включить периодические напоминания можно в настройках. Полные правила техники безопасности см. на сайте oculus.com/warnings.</string>
+    <string name="hsw_video_confirmation_find_video">Еще раз посмотреть это видео и включить периодические напоминания можно в настройках. Полные правила техники безопасности см. на сайте ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
     <string name="hsw_video_confirmation_notice">Правила техники безопасности важны для всех пользователей Gear VR. Мы будем периодически отображать краткие напоминания о них. Если вы понимаете эти правила и согласны показать их другим пользователям, а также не хотите, чтобы вам про них напоминали, коснитесь кнопки «Принять». Если вы не хотите отключать напоминания, коснитесь «Отклонить».</string>
     <string name="hsw_video_decline_link">Отклонить</string>
     <string name="hsw_video_description_friend_reminder">Если устройство будут также использовать ваши друзья, то это видео доступно в настройках приложения Oculus.</string>

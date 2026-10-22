@@ -211,7 +211,7 @@
     <string name="commerce_return_policy_label">İade İlkesi</string>
     <string name="commerce_set_default_payment_method_text">Varsayılan olarak ayarla</string>
     <string name="commerce_store_credit_available_balance">Mağaza Kredisi (%1$s mevcut)</string>
-    <string name="commerce_store_credit_warning">Üzgünüz, Oculus Mağazası kredilerin aynı para biriminde olmadığı için kullanılamıyor. Daha fazla bilgi için lütfen ghostvr.pamplemouche.com/legal/store-credits adresine bak.</string>
+    <string name="commerce_store_credit_warning">Üzgünüz, Oculus Mağazası kredilerin aynı para biriminde olmadığı için kullanılamıyor. Daha fazla bilgi için lütfen ghostvr.pamplemouche.com/www/legal/store-credits adresine bak.</string>
     <string name="commerce_tax">Vergi</string>
     <string name="commerce_total">Toplam</string>
     <string name="commerce_value">Değer</string>
@@ -389,7 +389,7 @@
     <string name="hsw_video_comfort_description">Konfor puanlarımız doğrultusunda sizin için en uygun olan içeriği seçin.</string>
     <string name="hsw_video_comfort_title">4. Konforlu içerikleri seçin</string>
     <string name="hsw_video_confirmation_button">Kabul Et</string>
-    <string name="hsw_video_confirmation_find_video">Ayarlar bölümünde bu videoyu tekrar bulabilir ve düzenli hatırlatmaları tekrar etkinleştirebilirsiniz. Sağlık ve güvenlikle ilgili uyarılarımızın tamamını oculus.com/warnings adresinde okuyun.</string>
+    <string name="hsw_video_confirmation_find_video">Ayarlar bölümünde bu videoyu tekrar bulabilir ve düzenli hatırlatmaları tekrar etkinleştirebilirsiniz. Sağlık ve güvenlikle ilgili uyarılarımızın tamamını ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings adresinde okuyun.</string>
     <string name="hsw_video_confirmation_notice">"Sağlık ve güvenlik uyarıları Gear VR'ı kullanan herkes için önemlidir. Hatırlatma amaçlı kısa uyarıları düzenli aralıklarla tekrarlayacağız. Uyarıları anladıysanız, diğer kullanıcılara göstermeyi kabul ediyorsanız ve bu uyarıların tekrar hatırlatılmasını istemiyorsanız, Kabul Et seçeneğine dokunun. Hatırlatmaların etkin kalmaya devam etmesi için, Reddet seçeneğine dokunun."</string>
     <string name="hsw_video_decline_link">Reddet</string>
     <string name="hsw_video_description_friend_reminder">Bu cihazı arkadaşlarınızla paylaşıyorsanız, Oculus uygulamanızın ayarlar bölümünde bu videoyu tekrar bulabilirsiniz</string>

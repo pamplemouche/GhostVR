@@ -166,7 +166,7 @@
     <string name="guardian_oob_title">플레이 공간으로 돌아가기</string>
     <string name="guardian_oob_title_in_black">헤드셋 분리</string>
     <string name="guardian_pt_warning_body">지정된 플레이 공간을 너무 오래 벗어나 있었습니다. 헤드셋을 벗거나 플레이 공간으로 돌아오세요.</string>
-    <string name="guardian_pt_warning_setup_body">안전 보호 설정이 너무 오래 걸립니다. 경계 만들기를 완료하거나 헤드셋을 벗으세요. 자세한 내용은 support.oculus.com에서 확인하세요.</string>
+    <string name="guardian_pt_warning_setup_body">안전 보호 설정이 너무 오래 걸립니다. 경계 만들기를 완료하거나 헤드셋을 벗으세요. 자세한 내용은 ghostvr.pamplemouche.com/support에서 확인하세요.</string>
     <string name="guardian_pt_warning_setup_title">문제가 있나요?</string>
     <string name="guardian_pt_warning_title">헤드셋 벗기</string>
     <string name="guardian_recenter">중간점 조정</string>
@@ -207,12 +207,12 @@
     <string name="guardian_welcome_title">Oculus 안전 보호 설정</string>
     <string name="health_safety_dialog_button">확인</string>
     <string name="health_safety_dialog_callout">확인했다면 클릭하거나 눌러서 닫으세요</string>
-    <string name="health_safety_dialog_description">Gear VR을 사용하기 전에 Gear VR 제품에 포함된 모든 경고 문구와 주의 사항을 반드시 읽고 숙지한 후 사용해주세요. Gear VR은 귀하의 신체적 특성에 따라 조정할 필요가 있습니다. 만 13세 미만의 어린이는 사용할 수 없습니다. Gear VR을 사용할 때에는 앉거나 고정된 상태를 유지해야 하며, 사용 전 주변의 장애물을 치우세요. 사용 시 불편함을 느끼거나 건강에 이상 징후가 발생한 경우 즉시 사용을 중단하세요. 자세한 내용은 ghostvr.pamplemouche.com/warnings에서 확인하실 수 있습니다.</string>
-    <string name="health_safety_dialog_description_standalone">Oculus Go를 사용하기 전에 Oculus Go 제품에 포함된 모든 경고 문구와 주의 사항을 반드시 읽고 숙지한 후 사용해주세요. Oculus Go는 귀하의 신체적 특성에 따라 조정할 필요가 있습니다. 만 13세 미만의 어린이는 사용할 수 없습니다. Oculus Go를 사용할 때에는 앉거나 고정된 상태를 유지해야 하며, 사용 전 주변의 장애물을 치우세요. 사용 시 불편함을 느끼거나 건강에 이상 징후가 발생한 경우 즉시 사용을 중단하세요. 자세한 내용은 ghostvr.pamplemouche.com/warnings에서 확인하실 수 있습니다.</string>
+    <string name="health_safety_dialog_description">Gear VR을 사용하기 전에 Gear VR 제품에 포함된 모든 경고 문구와 주의 사항을 반드시 읽고 숙지한 후 사용해주세요. Gear VR은 귀하의 신체적 특성에 따라 조정할 필요가 있습니다. 만 13세 미만의 어린이는 사용할 수 없습니다. Gear VR을 사용할 때에는 앉거나 고정된 상태를 유지해야 하며, 사용 전 주변의 장애물을 치우세요. 사용 시 불편함을 느끼거나 건강에 이상 징후가 발생한 경우 즉시 사용을 중단하세요. 자세한 내용은 ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings에서 확인하실 수 있습니다.</string>
+    <string name="health_safety_dialog_description_standalone">Oculus Go를 사용하기 전에 Oculus Go 제품에 포함된 모든 경고 문구와 주의 사항을 반드시 읽고 숙지한 후 사용해주세요. Oculus Go는 귀하의 신체적 특성에 따라 조정할 필요가 있습니다. 만 13세 미만의 어린이는 사용할 수 없습니다. Oculus Go를 사용할 때에는 앉거나 고정된 상태를 유지해야 하며, 사용 전 주변의 장애물을 치우세요. 사용 시 불편함을 느끼거나 건강에 이상 징후가 발생한 경우 즉시 사용을 중단하세요. 자세한 내용은 ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings에서 확인하실 수 있습니다.</string>
     <string name="health_safety_dialog_title">안전을 위한 주의 사항</string>
     <string name="health_safety_long_dialog_callout">확인했다면 클릭하거나 눌러서 닫으세요</string>
     <string name="health_safety_long_dialog_callout_counter">%1$d초 후 시작합니다</string>
-    <string name="health_safety_long_dialog_description">Gear VR을 사용하기 전에 Gear VR 제품에 포함된 모든 경고 문구와 주의 사항을 반드시 읽고 숙지한 후 사용해주세요. Gear VR은 귀하의 신체적 특성에 따라 조정할 필요가 있습니다. 만 13세 미만의 어린이는 사용할 수 없습니다. Gear VR을 사용할 때에는 앉거나 고정된 상태를 유지해야 하며, 사용 전 주변의 장애물을 치우세요. 사용 시 불편함을 느끼거나 건강에 이상 징후가 발생한 경우 즉시 사용을 중단하세요. 자세한 내용은 ghostvr.pamplemouche.com/warnings에서 확인하실 수 있습니다.</string>
+    <string name="health_safety_long_dialog_description">Gear VR을 사용하기 전에 Gear VR 제품에 포함된 모든 경고 문구와 주의 사항을 반드시 읽고 숙지한 후 사용해주세요. Gear VR은 귀하의 신체적 특성에 따라 조정할 필요가 있습니다. 만 13세 미만의 어린이는 사용할 수 없습니다. Gear VR을 사용할 때에는 앉거나 고정된 상태를 유지해야 하며, 사용 전 주변의 장애물을 치우세요. 사용 시 불편함을 느끼거나 건강에 이상 징후가 발생한 경우 즉시 사용을 중단하세요. 자세한 내용은 ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings에서 확인하실 수 있습니다.</string>
     <string name="health_safety_long_dialog_title">안전을 위한 주의 사항</string>
     <string name="home_dialog_button_bug_report">버그 신고 제출</string>
     <string name="home_dialog_button_party_other">%1$s님의 룸으로 이동</string>

@@ -209,7 +209,7 @@
     <string name="commerce_return_policy_label">返品ポリシー</string>
     <string name="commerce_set_default_payment_method_text">デフォルトに指定</string>
     <string name="commerce_store_credit_available_balance">ストアポイント(利用可能:%1$s)</string>
-    <string name="commerce_store_credit_warning">対応する通貨のものではないため、このOculusストアポイントはご利用いただけません。詳細はghostvr.pamplemouche.com/legal/store-creditsをご覧ください。</string>
+    <string name="commerce_store_credit_warning">対応する通貨のものではないため、このOculusストアポイントはご利用いただけません。詳細はghostvr.pamplemouche.com/www/legal/store-creditsをご覧ください。</string>
     <string name="commerce_tax">税</string>
     <string name="commerce_total">合計</string>
     <string name="commerce_value">クーポン額</string>
@@ -388,7 +388,7 @@
     <string name="hsw_video_comfort_description">自分に合った快適性のコンテンツを選択してください。</string>
     <string name="hsw_video_comfort_title">4. 快適なコンテンツを選びましょう</string>
     <string name="hsw_video_confirmation_button">同意する</string>
-    <string name="hsw_video_confirmation_find_video">[設定]でこの動画をもう一度確認したり、定期的なリマインダーをもう一度オンにできます。「安全に関するご注意」の全文は、oculus.com/warningsをご覧ください。</string>
+    <string name="hsw_video_confirmation_find_video">[設定]でこの動画をもう一度確認したり、定期的なリマインダーをもう一度オンにできます。「安全に関するご注意」の全文は、ghostvr.pamplemouche.com/www/legal/health-and-safety-warningsをご覧ください。</string>
     <string name="hsw_video_confirmation_notice">「安全に関するご注意」はGear VRを利用するうえで重要であるため、リマインダーが定期的に表示されます。注意の内容を理解し、これを他のユーザーにも伝えることに同意し、今後この注意を表示したくない場合は、[同意する]をタップしてください。リマインダーを今後も表示したい場合は、[閉じる]をタップしてください。</string>
     <string name="hsw_video_decline_link">閉じる</string>
     <string name="hsw_video_description_friend_reminder">友達と一緒にこの機器を利用するために、この動画をもう一度見たい場合は、Oculusアプリの設定からご覧いただけます。</string>

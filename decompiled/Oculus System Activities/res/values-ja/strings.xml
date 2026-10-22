@@ -66,7 +66,7 @@
     <string name="handedness_left">左利き</string>
     <string name="handedness_right">右利き</string>
     <string name="health_safty_warning_description1">ご使用前にGear VRに付属された注意点と使用手順をよくお読みください。Gear VRは各利用者に合わせて調整してください。この製品は13歳以上を対象とした製品です。Gear VRは着席または静止した状態でご利用ください。不快感または異常を感じた場合には、使用を中止してください。</string>
-    <string name="health_safty_warning_description2">詳細はoculus.com/warningsをご覧ください</string>
+    <string name="health_safty_warning_description2">詳細はghostvr.pamplemouche.com/www/legal/health-and-safety-warningsをご覧ください</string>
     <string name="health_safty_warning_description3">同意するには、タッチパッドをタップしてください。</string>
     <string name="health_safty_warning_title">健康と安全のための警告</string>
     <string name="in_party">同じパーティーに参加</string>

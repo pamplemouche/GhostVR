@@ -409,7 +409,7 @@
     .line 69
     iget-object v0, p0, Lcom/oculus/horizon/deeplinking/DeepLinkRouter;->mURIMatcher:Landroid/content/UriMatcher;
 
-    const-string v1, "oculus.com"
+    const-string v1, "ghostvr.pamplemouche.com"
 
     const-string v2, "*"
 
@@ -424,7 +424,7 @@
     .line 70
     iget-object v0, p0, Lcom/oculus/horizon/deeplinking/DeepLinkRouter;->mURIMatcher:Landroid/content/UriMatcher;
 
-    const-string v1, "oculus.com"
+    const-string v1, "ghostvr.pamplemouche.com"
 
     const-string v2, "*/*"
 
@@ -439,7 +439,7 @@
     .line 71
     iget-object v0, p0, Lcom/oculus/horizon/deeplinking/DeepLinkRouter;->mURIMatcher:Landroid/content/UriMatcher;
 
-    const-string v1, "oculus.com"
+    const-string v1, "ghostvr.pamplemouche.com"
 
     const-string v2, "*/*/*"
 
@@ -454,7 +454,7 @@
     .line 72
     iget-object v0, p0, Lcom/oculus/horizon/deeplinking/DeepLinkRouter;->mURIMatcher:Landroid/content/UriMatcher;
 
-    const-string v1, "oculus.com"
+    const-string v1, "ghostvr.pamplemouche.com"
 
     const-string v2, "*/*/*/*"
 
@@ -469,7 +469,7 @@
     .line 75
     iget-object v0, p0, Lcom/oculus/horizon/deeplinking/DeepLinkRouter;->mURIMatcher:Landroid/content/UriMatcher;
 
-    const-string v1, "support.oculus.com"
+    const-string v1, "ghostvr.pamplemouche.com"
 
     const-string v2, "*"
 
@@ -484,7 +484,7 @@
     .line 76
     iget-object v0, p0, Lcom/oculus/horizon/deeplinking/DeepLinkRouter;->mURIMatcher:Landroid/content/UriMatcher;
 
-    const-string v1, "support.oculus.com"
+    const-string v1, "ghostvr.pamplemouche.com"
 
     const-string v2, "*/*"
 
@@ -499,7 +499,7 @@
     .line 77
     iget-object v0, p0, Lcom/oculus/horizon/deeplinking/DeepLinkRouter;->mURIMatcher:Landroid/content/UriMatcher;
 
-    const-string v1, "support.oculus.com"
+    const-string v1, "ghostvr.pamplemouche.com"
 
     const-string v2, "*/*/*"
 
@@ -516,7 +516,7 @@
     .line 79
     iget-object v0, p0, Lcom/oculus/horizon/deeplinking/DeepLinkRouter;->mURIMatcher:Landroid/content/UriMatcher;
 
-    const-string v1, "support.oculus.com"
+    const-string v1, "ghostvr.pamplemouche.com"
 
     const-string v2, "*/*/*/*"
 

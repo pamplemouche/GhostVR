@@ -722,7 +722,7 @@
     goto :goto_0
 
     :cond_0
-    const-string v3, "android-app://m.facebook.com"
+    const-string v3, "android-app://ghostvr.pamplemouche.com"
 
     .line 18
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -766,7 +766,7 @@
 
     move-result-object p0
 
-    const-string v0, "http://m.facebook.com"
+    const-string v0, "https://ghostvr.pamplemouche.com"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

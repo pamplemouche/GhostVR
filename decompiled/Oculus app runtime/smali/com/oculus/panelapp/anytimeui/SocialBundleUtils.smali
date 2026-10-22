@@ -4,11 +4,11 @@
 
 
 # static fields
-.field private static final FACEBOOK_DATA_POLICY_LINK:Ljava/lang/String; = "https://www.facebook.com/policy"
+.field private static final FACEBOOK_DATA_POLICY_LINK:Ljava/lang/String; = "https://ghostvr.pamplemouche.com/legal/privacy-policy"
 
 .field private static final FACEBOOK_DATA_POLICY_PLACEHOLDER:Ljava/lang/String; = "[[Facebook Data Policy Link]]"
 
-.field private static final FAQ_LINK:Ljava/lang/String; = "https://support.oculus.com/424208161507635/"
+.field private static final FAQ_LINK:Ljava/lang/String; = "https://ghostvr.pamplemouche.com/support"
 
 .field private static final FAQ_PLACEHOLDER:Ljava/lang/String; = "[[FAQ Link]]"
 
@@ -138,7 +138,7 @@
 
     const-string v1, "[[Facebook Data Policy Link]]"
 
-    const-string v2, "https://www.facebook.com/policy"
+    const-string v2, "https://ghostvr.pamplemouche.com/legal/privacy-policy"
 
     .line 41
     invoke-static {v0, v1, v2, p0, p2}, Lcom/oculus/panelapp/anytimeui/SocialBundleUtils;->linkifySpan(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/text/SpannableStringBuilder;Lcom/oculus/panelapp/anytimeui/AnytimeUIAndroidPanelAppBase;)Landroid/text/SpannableStringBuilder;
@@ -155,7 +155,7 @@
 
     const-string v0, "[[FAQ Link]]"
 
-    const-string v1, "https://support.oculus.com/424208161507635/"
+    const-string v1, "https://ghostvr.pamplemouche.com/support"
 
     .line 48
     invoke-static {p1, v0, v1, p0, p2}, Lcom/oculus/panelapp/anytimeui/SocialBundleUtils;->linkifySpan(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/text/SpannableStringBuilder;Lcom/oculus/panelapp/anytimeui/AnytimeUIAndroidPanelAppBase;)Landroid/text/SpannableStringBuilder;

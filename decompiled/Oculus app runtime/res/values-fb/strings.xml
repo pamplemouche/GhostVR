@@ -169,7 +169,7 @@
     <string name="guardian_oob_title">[Return to Play Area#764ddd7f4002a0764cb17017809c24b7:1]</string>
     <string name="guardian_oob_title_in_black">[Remove Headset#9b0d58f6cb04e9074f5e49d7500b7258:1]</string>
     <string name="guardian_pt_warning_body">"[You've spent too long outside of a known play area. Please remove your headset or return to your play area.#5714faf607a1da7db4590e610674bcc3:1]"</string>
-    <string name="guardian_pt_warning_setup_body">"[You've spent too long in Guardian setup. Please finish creating a boundary or remove your headset. Visit support.oculus.com for more info.#1589720c47a159d2482466db676dbd2b:1]"</string>
+    <string name="guardian_pt_warning_setup_body">"[You've spent too long in Guardian setup. Please finish creating a boundary or remove your headset. Visit ghostvr.pamplemouche.com/support for more info.#1589720c47a159d2482466db676dbd2b:1]"</string>
     <string name="guardian_pt_warning_setup_title">[Having Trouble?#a68973ae1a2491dba205a3b8d8a17fae:1]</string>
     <string name="guardian_pt_warning_title">[Remove Headset#3084e756369c13580f72fc818174129d:1]</string>
     <string name="guardian_recenter">[Recenter#4209f384749de78d49c6109d8bcb7550:1]</string>
@@ -210,12 +210,12 @@
     <string name="guardian_welcome_title">[Oculus Guardian Setup#a746ef9abb694e0ebb19b4fa5aba817f:1]</string>
     <string name="health_safety_dialog_button">[Acknowledge#7996aa810ba1a47681e59021a76760f9:1]</string>
     <string name="health_safety_dialog_callout">[Click or tap to acknowledge#9949157cb61f2387563e85654c702d5c:1]</string>
-    <string name="health_safety_dialog_description">[Read and follow all warnings and instructions included with the Gear VR before use. Gear VR should be adjusted for each user. Not for use by children under 13. Remain seated or stationary when using the Gear VR. Stop use if you experience any discomfort or health reactions. More at ghostvr.pamplemouche.com/warnings#9881d9dd0e34048922bea64eeca33a12:1]</string>
-    <string name="health_safety_dialog_description_standalone">[Read and follow all warnings and instructions included with the Oculus Go before use. Oculus Go should be adjusted for each user. Not for use by children under 13. Remain seated or stationary when using the Oculus Go. Stop use if you experience any discomfort or health reactions. More at ghostvr.pamplemouche.com/warnings#aae2630164097737c97c96f3a35963ce:1]</string>
+    <string name="health_safety_dialog_description">[Read and follow all warnings and instructions included with the Gear VR before use. Gear VR should be adjusted for each user. Not for use by children under 13. Remain seated or stationary when using the Gear VR. Stop use if you experience any discomfort or health reactions. More at ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings#9881d9dd0e34048922bea64eeca33a12:1]</string>
+    <string name="health_safety_dialog_description_standalone">[Read and follow all warnings and instructions included with the Oculus Go before use. Oculus Go should be adjusted for each user. Not for use by children under 13. Remain seated or stationary when using the Oculus Go. Stop use if you experience any discomfort or health reactions. More at ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings#aae2630164097737c97c96f3a35963ce:1]</string>
     <string name="health_safety_dialog_title">[HEALTH &amp; SAFETY WARNING!#c58dc9b2e43023a3d6277b575dceb0da:1]</string>
     <string name="health_safety_long_dialog_callout">[Click or tap to acknowledge#9949157cb61f2387563e85654c702d5c:1]</string>
     <string name="health_safety_long_dialog_callout_counter">[Ready in %1$d#1eaf284c112a99149897e1717742e48b:1]</string>
-    <string name="health_safety_long_dialog_description">[Read and follow all warnings and instructions included with the Gear VR before use. Gear VR should be adjusted for each user. Not for use by children under 13. Remain seated or stationary when using the Gear VR. Stop use if you experience any discomfort or health reactions. More at ghostvr.pamplemouche.com/warnings#9881d9dd0e34048922bea64eeca33a12:1]</string>
+    <string name="health_safety_long_dialog_description">[Read and follow all warnings and instructions included with the Gear VR before use. Gear VR should be adjusted for each user. Not for use by children under 13. Remain seated or stationary when using the Gear VR. Stop use if you experience any discomfort or health reactions. More at ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings#9881d9dd0e34048922bea64eeca33a12:1]</string>
     <string name="health_safety_long_dialog_title">[HEALTH &amp; SAFETY WARNING!#c58dc9b2e43023a3d6277b575dceb0da:1]</string>
     <string name="home_dialog_button_bug_report">[Submit a Bug Report#8e9c18cd4c20529a8c0e45a8ef41a694:1]</string>
     <string name="home_dialog_button_party_other">"[Exit to %1$s's Room#d1a2dea269c5f0316f66cac871660a0a:1]"</string>

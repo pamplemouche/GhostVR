@@ -65,7 +65,7 @@
     <string name="handedness_left">Sol El</string>
     <string name="handedness_right">Sağ El</string>
     <string name="health_safty_warning_description1">"Kullanmadan önce Gear VR ile verilen tüm uyarıları ve talimatları okumalı ve bunlara uymalısın. Gear VR'da her kullanıcı için ayrı kalibrasyon yapılmalıdır. 13 yaşından küçük çocukların kullanımına uygun değildir. Gear VR'ı kullanırken oturur konumda veya hareketsiz durulmalıdır. Kendini rahatsız hisseder veya bir sağlık sorunu yaşarsan kullanımı bırakmalısın."</string>
-    <string name="health_safty_warning_description2">Daha fazla bilgi: oculus.com/warnings</string>
+    <string name="health_safty_warning_description2">Daha fazla bilgi: ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="health_safty_warning_description3">Okuduğunu bildirmek için dokunmatik yüzeye dokun.</string>
     <string name="health_safty_warning_title">SAĞLIK VE EMNİYET UYARISI!</string>
     <string name="in_party">Aynı ekipte</string>

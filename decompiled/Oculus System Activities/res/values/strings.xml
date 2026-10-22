@@ -66,7 +66,7 @@
     <string name="handedness_left">Left Handed</string>
     <string name="handedness_right">Right Handed</string>
     <string name="health_safty_warning_description1">Read and follow all warnings and instructions included with the Gear VR before use. Gear VR should be calibrated for each user. Not for use by children under 13. Remain seated or stationary when using the Gear VR. Stop use if you experience any discomfort or health reactions.</string>
-    <string name="health_safty_warning_description2">More at oculus.com/warnings</string>
+    <string name="health_safty_warning_description2">More at ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="health_safty_warning_description3">Tap the touchpad to acknowledge.</string>
     <string name="health_safty_warning_title">HEALTH &amp; SAFETY WARNING!</string>
     <string name="in_party">In a party together</string>

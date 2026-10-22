@@ -164,7 +164,7 @@
     <string name="commerce_return_policy_label">Política de Devoluções</string>
     <string name="commerce_set_default_payment_method_text">Predefinir</string>
     <string name="commerce_store_credit_available_balance">Crédito da loja (%1$s disponível)</string>
-    <string name="commerce_store_credit_warning">Infelizmente, os teus créditos da Loja Oculus não podem ser usados porque não estão na moeda correspondente. Consulta ghostvr.pamplemouche.com/legal/store-credits para mais informações.</string>
+    <string name="commerce_store_credit_warning">Infelizmente, os teus créditos da Loja Oculus não podem ser usados porque não estão na moeda correspondente. Consulta ghostvr.pamplemouche.com/www/legal/store-credits para mais informações.</string>
     <string name="commerce_tax">IVA</string>
     <string name="common_are_you_sure_title">Tens a certeza?</string>
     <string name="common_claim">Reclamar</string>
@@ -298,7 +298,7 @@
     <string name="hsw_video_children_title">3. Concebido para maiores de 13 anos</string>
     <string name="hsw_video_comfort_description">Escolhe os melhores conteúdos para ti com base nas classificações de conforto.</string>
     <string name="hsw_video_comfort_title">4. Escolhe conteúdos que te pareçam confortáveis</string>
-    <string name="hsw_video_confirmation_find_video">Nas Definições, podes voltar a encontrar este vídeo e reativar os lembretes periódicos. Lê os nossos avisos de saúde e segurança em oculus.com/warnings.</string>
+    <string name="hsw_video_confirmation_find_video">Nas Definições, podes voltar a encontrar este vídeo e reativar os lembretes periódicos. Lê os nossos avisos de saúde e segurança em ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
     <string name="hsw_video_confirmation_notice">Os avisos de saúde e segurança são importantes para as pessoas que usam o Gear VR. Periodicamente, vamos repetir breves lembretes. Se entenderes os avisos, aceitares mostrá-los a outros utilizadores e não quiseres voltar a receber lembretes, toca em Aceitar. Para manter os lembretes ativados, toca em Recusar.</string>
     <string name="hsw_video_description_friend_reminder">Se partilhares este dispositivo com os teus amigos, podes voltar a encontrar este vídeo na área de definições da tua app Oculus</string>
     <string name="hsw_video_intro_description">Vamos mostrar-te as várias formas de te manteres em segurança e de obteres a melhor experiência com o teu Gear VR.</string>

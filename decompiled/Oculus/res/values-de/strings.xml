@@ -213,7 +213,7 @@
     <string name="commerce_return_policy_label">Rückgaberichtlinie</string>
     <string name="commerce_set_default_payment_method_text">Als Standard festlegen</string>
     <string name="commerce_store_credit_available_balance">Guthaben (%1$s verfügbar)</string>
-    <string name="commerce_store_credit_warning">Leider kannst du dein Oculus Store-Guthaben nicht einlösen, da es nicht die richtige Währung aufweist. Unter ghostvr.pamplemouche.com/legal/store-credits findest du weitere Informationen.</string>
+    <string name="commerce_store_credit_warning">Leider kannst du dein Oculus Store-Guthaben nicht einlösen, da es nicht die richtige Währung aufweist. Unter ghostvr.pamplemouche.com/www/legal/store-credits findest du weitere Informationen.</string>
     <string name="commerce_tax">Steuern</string>
     <string name="commerce_total">Gesamt</string>
     <string name="commerce_value">Wert</string>
@@ -391,7 +391,7 @@
     <string name="hsw_video_comfort_description">Wähle Inhalte aus, die basierend auf unserer Bewertung zur Benutzerfreundlichkeit (Komfort-Stufe) am besten für dich geeignet sind.</string>
     <string name="hsw_video_comfort_title">4. Wähle einen Inhalt mit der Komfort-Stufe „Angenehm“ aus</string>
     <string name="hsw_video_confirmation_button">Bestätigen</string>
-    <string name="hsw_video_confirmation_find_video">In den Einstellungen kannst du dieses Video jederzeit erneut ansehen und die regelmäßigen Warnhinweise ein- und ausschalten. Lies unsere vollständigen Gesundheits- und Sicherheitshinweise unter oculus.com/warnings.</string>
+    <string name="hsw_video_confirmation_find_video">In den Einstellungen kannst du dieses Video jederzeit erneut ansehen und die regelmäßigen Warnhinweise ein- und ausschalten. Lies unsere vollständigen Gesundheits- und Sicherheitshinweise unter ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
     <string name="hsw_video_confirmation_notice">Gesundheits- und Sicherheitshinweise sind für alle Personen wichtig, die Gear VR verwenden. Deshalb werden regelmäßig Warnhinweise angezeigt. Wenn du die Warnhinweise sorgfältig gelesen und verstanden hast, erkläre sie anderen Benutzern. Wenn du keine weiteren Warnhinweise erhalten möchtest, tippe auf „Bestätigen“. Um die Warnhinweise aktiv zu lassen, tippe auf „Ablehnen“.</string>
     <string name="hsw_video_decline_link">Ablehnen</string>
     <string name="hsw_video_description_friend_reminder">Für den Fall, dass mehrere Personen dieses Gerät nutzen, kannst du dieses Video in den Einstellungen deiner Oculus-App erneut ansehen.</string>

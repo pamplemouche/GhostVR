@@ -192,7 +192,7 @@
     <string name="commerce_return_policy_label">Politica de returnare</string>
     <string name="commerce_set_default_payment_method_text">Setează ca implicită</string>
     <string name="commerce_store_credit_available_balance">Credit în magazin (disponibil: %1$s)</string>
-    <string name="commerce_store_credit_warning">Ne pare rău, creditele pentru Magazinul Oculus nu pot fi folosite, deoarece nu sunt în moneda corespunzătoare. Pentru mai multe informaţii, te rugăm să accesezi ghostvr.pamplemouche.com/legal/store-credits.</string>
+    <string name="commerce_store_credit_warning">Ne pare rău, creditele pentru Magazinul Oculus nu pot fi folosite, deoarece nu sunt în moneda corespunzătoare. Pentru mai multe informaţii, te rugăm să accesezi ghostvr.pamplemouche.com/www/legal/store-credits.</string>
     <string name="commerce_tax">Taxe</string>
     <string name="commerce_value">Valoare</string>
     <string name="common_agree_and_continue">De acord şi continuă</string>
@@ -362,7 +362,7 @@
     <string name="hsw_video_comfort_description">Alege conţinut potrivit pentru tine, în funcţie de ratingurile de confort.</string>
     <string name="hsw_video_comfort_title">4. Alege conţinut cu care te simţi confortabil</string>
     <string name="hsw_video_confirmation_button">Confirmă</string>
-    <string name="hsw_video_confirmation_find_video">Poţi găsi din nou acest clip video şi poţi reactiva mementourile periodice din Setări. Citeşte toate avertizările noastre privind sănătatea şi siguranţa la adresa oculus.com/warnings.</string>
+    <string name="hsw_video_confirmation_find_video">Poţi găsi din nou acest clip video şi poţi reactiva mementourile periodice din Setări. Citeşte toate avertizările noastre privind sănătatea şi siguranţa la adresa ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
     <string name="hsw_video_confirmation_notice">Avertizările privind sănătatea şi siguranţa sunt importante pentru toţi cei care folosesc Gear VR. Vom repeta periodic scurte avertizări. Dacă înţelegi avertizările, dacă te angajezi să le prezinţi şi altor utilizatori şi dacă nu doreşti să ţi le reamintim, atinge Confirmă. Pentru a lăsa mementourile activate, atinge Refuză.</string>
     <string name="hsw_video_decline_link">Refuză</string>
     <string name="hsw_video_description_friend_reminder">Dacă foloseşti acest dispozitiv împreună cu prietenii tăi, poţi găsi din nou acest clip video în zona de setări a aplicaţiei Oculus</string>

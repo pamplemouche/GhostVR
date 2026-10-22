@@ -562,7 +562,7 @@
 
     move-result-object v0
 
-    const-string v4, "https://support.oculus.com/"
+    const-string v4, "https://ghostvr.pamplemouche.com/"
 
     .line 287
     invoke-static {v4}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;

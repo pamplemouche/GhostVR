@@ -204,7 +204,7 @@
     <string name="commerce_return_policy_label">Política de Devolução</string>
     <string name="commerce_set_default_payment_method_text">Definir como padrão</string>
     <string name="commerce_store_credit_available_balance">Crédito na loja (valor de %1$s disponível)</string>
-    <string name="commerce_store_credit_warning">Seus créditos da Loja Oculus não podem ser usados porque eles não estão na moeda correspondente. Consulte ghostvr.pamplemouche.com/legal/store-credits para obter mais informações.</string>
+    <string name="commerce_store_credit_warning">Seus créditos da Loja Oculus não podem ser usados porque eles não estão na moeda correspondente. Consulte ghostvr.pamplemouche.com/www/legal/store-credits para obter mais informações.</string>
     <string name="commerce_tax">Imposto</string>
     <string name="commerce_value">Valor</string>
     <string name="common_agree_and_continue">Concordar e continuar</string>
@@ -368,7 +368,7 @@
     <string name="hsw_video_comfort_description">Escolha o conteúdo que seja melhor para você com base nas nossas classificações de conforto.</string>
     <string name="hsw_video_comfort_title">4. Escolha conteúdos confortáveis</string>
     <string name="hsw_video_confirmation_button">Aceitar</string>
-    <string name="hsw_video_confirmation_find_video">Você pode encontrar este vídeo novamente e reativar os lembretes periódicos nas Configurações. Leia nossos avisos de saúde e segurança completos em oculus.com/warnings.</string>
+    <string name="hsw_video_confirmation_find_video">Você pode encontrar este vídeo novamente e reativar os lembretes periódicos nas Configurações. Leia nossos avisos de saúde e segurança completos em ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
     <string name="hsw_video_confirmation_notice">Os avisos de saúde e segurança são importantes para qualquer pessoa que use o Gear VR. Repetiremos breves avisos de lembrete periodicamente. Se você entende os avisos, concorda em mostrá-los a outros usuários e não deseja ser lembrado, toque em Aceitar. Para deixar os lembretes ativados, toque em Recusar.</string>
     <string name="hsw_video_decline_link">Recusar</string>
     <string name="hsw_video_description_friend_reminder">Se você compartilha este dispositivo com seus amigos, pode encontrar este vídeo novamente na área de configurações do seu aplicativo Oculus</string>

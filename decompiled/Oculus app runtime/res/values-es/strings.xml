@@ -161,7 +161,7 @@
     <string name="guardian_oob_title">Volver a la zona de juego</string>
     <string name="guardian_oob_title_in_black">Eliminar visor</string>
     <string name="guardian_pt_warning_body">Estuviste demasiado tiempo fuera de la zona de juego delimitada. Quítate el visor o vuelve a la zona de juego.</string>
-    <string name="guardian_pt_warning_setup_body">Demoraste demasiado en configurar el sistema guardián. Termina de crear los límites o quítate el visor. Consulta support.oculus.com para obtener más información.</string>
+    <string name="guardian_pt_warning_setup_body">Demoraste demasiado en configurar el sistema guardián. Termina de crear los límites o quítate el visor. Consulta ghostvr.pamplemouche.com/support para obtener más información.</string>
     <string name="guardian_pt_warning_setup_title">¿Tienes problemas?</string>
     <string name="guardian_pt_warning_title">Eliminar visor</string>
     <string name="guardian_recenter">Volver a centrar</string>
@@ -202,12 +202,12 @@
     <string name="guardian_welcome_title">Configuración del sistema guardián de Oculus</string>
     <string name="health_safety_dialog_button">De acuerdo</string>
     <string name="health_safety_dialog_callout">Haz clic o toca para aceptar</string>
-    <string name="health_safety_dialog_description">Lee y sigue todas las advertencias e instrucciones que se incluyen con el visor Gear VR antes de usarlo. El Gear VR se debe calibrar para cada usuario. No es adecuado para menores de 13 años. Permanece sentado o quieto al usar el Gear VR e interrumpe su uso si notas alguna molestia o reacción. Más información en ghostvr.pamplemouche.com/warnings</string>
-    <string name="health_safety_dialog_description_standalone">Lee y sigue todas las advertencias e instrucciones incluidas con Oculus Go antes de usarlo. El visor Oculus Go debe ajustarse para cada usuario. No es adecuado para menores de 13 años. Permanece sentado o quieto al usar el Oculus Go. Interrumpe su uso si notas alguna molestia o reacción física. Más información en ghostvr.pamplemouche.com/warnings</string>
+    <string name="health_safety_dialog_description">Lee y sigue todas las advertencias e instrucciones que se incluyen con el visor Gear VR antes de usarlo. El Gear VR se debe calibrar para cada usuario. No es adecuado para menores de 13 años. Permanece sentado o quieto al usar el Gear VR e interrumpe su uso si notas alguna molestia o reacción. Más información en ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
+    <string name="health_safety_dialog_description_standalone">Lee y sigue todas las advertencias e instrucciones incluidas con Oculus Go antes de usarlo. El visor Oculus Go debe ajustarse para cada usuario. No es adecuado para menores de 13 años. Permanece sentado o quieto al usar el Oculus Go. Interrumpe su uso si notas alguna molestia o reacción física. Más información en ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="health_safety_dialog_title">ADVERTENCIA DE SALUD Y SEGURIDAD</string>
     <string name="health_safety_long_dialog_callout">Haz clic o toca para aceptar</string>
     <string name="health_safety_long_dialog_callout_counter">Espera %1$d</string>
-    <string name="health_safety_long_dialog_description">Lee y sigue todas las advertencias e instrucciones que se incluyen con el visor Gear VR antes de usarlo. El Gear VR se debe calibrar para cada usuario. No es adecuado para menores de 13 años. Permanece sentado o quieto al usar el Gear VR e interrumpe su uso si notas alguna molestia o reacción. Más información en ghostvr.pamplemouche.com/warnings</string>
+    <string name="health_safety_long_dialog_description">Lee y sigue todas las advertencias e instrucciones que se incluyen con el visor Gear VR antes de usarlo. El Gear VR se debe calibrar para cada usuario. No es adecuado para menores de 13 años. Permanece sentado o quieto al usar el Gear VR e interrumpe su uso si notas alguna molestia o reacción. Más información en ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="health_safety_long_dialog_title">ADVERTENCIA DE SALUD Y SEGURIDAD</string>
     <string name="home_dialog_button_bug_report">Presentar un informe de error</string>
     <string name="home_dialog_button_party_other">Ir a la sala de %1$s</string>

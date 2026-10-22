@@ -80,7 +80,7 @@
 
     if-nez v2, :cond_0
 
-    const-string v2, "@oculus.com"
+    const-string v2, "@ghostvr.pamplemouche.com"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 

@@ -212,7 +212,7 @@
     <string name="commerce_return_policy_label">Retourbeleid</string>
     <string name="commerce_set_default_payment_method_text">Als standaard instellen</string>
     <string name="commerce_store_credit_available_balance">Winkeltegoed (%1$s beschikbaar)</string>
-    <string name="commerce_store_credit_warning">Je Oculus-winkeltegoed kan niet worden gebruikt omdat het niet de overeenkomende munteenheid heeft. Raadpleeg ghostvr.pamplemouche.com/legal/store-credits voor meer informatie.</string>
+    <string name="commerce_store_credit_warning">Je Oculus-winkeltegoed kan niet worden gebruikt omdat het niet de overeenkomende munteenheid heeft. Raadpleeg ghostvr.pamplemouche.com/www/legal/store-credits voor meer informatie.</string>
     <string name="commerce_tax">Btw</string>
     <string name="commerce_total">Totaal</string>
     <string name="commerce_value">Waarde</string>
@@ -382,7 +382,7 @@
     <string name="hsw_video_comfort_description">Kies voor inhoud die het beste bij je past op basis van onze comfortscore.</string>
     <string name="hsw_video_comfort_title">4. Kies geschikte inhoud</string>
     <string name="hsw_video_confirmation_button">Accepteren</string>
-    <string name="hsw_video_confirmation_find_video">Je kunt deze video opnieuw opzoeken en de periodieke herinneringen opnieuw inschakelen in Instellingen. Lees al onze waarschuwingen over gezondheid en veiligheid op oculus.com/waarschuwingen.</string>
+    <string name="hsw_video_confirmation_find_video">Je kunt deze video opnieuw opzoeken en de periodieke herinneringen opnieuw inschakelen in Instellingen. Lees al onze waarschuwingen over gezondheid en veiligheid op ghostvr.pamplemouche.com/waarschuwingen.</string>
     <string name="hsw_video_confirmation_notice">Waarschuwingen over gezondheid en veiligheid zijn belangrijk voor iedereen die Gear VR gebruikt. We herhalen korte herinneringen voor waarschuwingen om de zoveel tijd. Als je de waarschuwingen begrijpt, ermee akkoord gaat dat ze aan andere gebruikers worden getoond en geen herinneringen wilt ontvangen, tik je op Bevestigen. Als je de herinneringen ingeschakeld wilt houden, tik je op Weigeren.</string>
     <string name="hsw_video_decline_link">Weigeren</string>
     <string name="hsw_video_description_friend_reminder">Als je dit apparaat deelt met je vrienden, kun je deze video opnieuw vinden in de instellingen van je Oculus-app.</string>

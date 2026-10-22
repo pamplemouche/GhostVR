@@ -207,7 +207,7 @@
     <string name="commerce_return_policy_label">Politik om returnering</string>
     <string name="commerce_set_default_payment_method_text">Angiv som standard</string>
     <string name="commerce_store_credit_available_balance">Tilgodehavende (%1$s tilgængelige)</string>
-    <string name="commerce_store_credit_warning">Din kredit i Oculus-butikken kan desværre ikke bruges, fordi den ikke er i den samme valuta. Se ghostvr.pamplemouche.com/legal/store-credits for at få flere oplysninger.</string>
+    <string name="commerce_store_credit_warning">Din kredit i Oculus-butikken kan desværre ikke bruges, fordi den ikke er i den samme valuta. Se ghostvr.pamplemouche.com/www/legal/store-credits for at få flere oplysninger.</string>
     <string name="commerce_tax">Skat</string>
     <string name="commerce_total">I alt</string>
     <string name="commerce_value">Værdi</string>
@@ -381,7 +381,7 @@
     <string name="hsw_video_comfort_description">Vælg det indhold, der er bedst for dig, ud fra vores komfortniveauer.</string>
     <string name="hsw_video_comfort_title">4. Vælg komfortabelt indhold</string>
     <string name="hsw_video_confirmation_button">Anerkend</string>
-    <string name="hsw_video_confirmation_find_video">Du kan finde tilbage til denne video og slå de regelmæssige påmindelser til igen i indstillingerne. Læs alle advarsler om helbred og sikkerhed på oculus.com/warnings.</string>
+    <string name="hsw_video_confirmation_find_video">Du kan finde tilbage til denne video og slå de regelmæssige påmindelser til igen i indstillingerne. Læs alle advarsler om helbred og sikkerhed på ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
     <string name="hsw_video_confirmation_notice">Advarsler om helbred og sikkerhed er vigtige for alle, der bruger Gear VR. Du vil regelmæssigt få vist nogle korte påmindelser om disse advarsler. Hvis du forstår advarslerne, accepterer at videregive dem til andre brugere og ikke ønsker at modtage påmindelserne, skal du trykke på Anerkend. Hvis du fortsat vil have påmindelserne slået til, skal du trykke på Afvis.</string>
     <string name="hsw_video_decline_link">Afvis</string>
     <string name="hsw_video_description_friend_reminder">Hvis du deler denne enhed med dine venner, kan du finde denne video igen i indstillingerne i Oculus-appen.</string>

@@ -159,7 +159,7 @@
     <string name="guardian_oob_title">Návrat do herní oblasti</string>
     <string name="guardian_oob_title_in_black">Odebrat headset</string>
     <string name="guardian_pt_warning_body">Jste moc dlouho mimo herní oblast. Sundejte si headset, nebo se do herní oblasti vraťte.</string>
-    <string name="guardian_pt_warning_setup_body">Nastavení ochranného systému už trvá moc dlouho. Vytvořte hranici nebo si headset sundejte. Víc se dozvíte na support.oculus.com.</string>
+    <string name="guardian_pt_warning_setup_body">Nastavení ochranného systému už trvá moc dlouho. Vytvořte hranici nebo si headset sundejte. Víc se dozvíte na ghostvr.pamplemouche.com/support.</string>
     <string name="guardian_pt_warning_setup_title">Máte potíže?</string>
     <string name="guardian_pt_warning_title">Sundejte si headset</string>
     <string name="guardian_recenter">Vycentrovat</string>
@@ -200,12 +200,12 @@
     <string name="guardian_welcome_title">Nastavení ochranného systému Oculus</string>
     <string name="health_safety_dialog_button">Rozumím</string>
     <string name="health_safety_dialog_callout">Kliknutím nebo klepnutím zavřete dialogové okno</string>
-    <string name="health_safety_dialog_description">Než Gear VR použijete, přečtěte si všechna upozornění a pokyny, které u něj jsou, a řiďte se jimi. Gear VR je třeba pro každého uživatele upravit. Není určen pro děti mladší 13 let. Při používání Gear VR zůstaňte sedět nebo se nehýbejte. Pokud vám něco bude nepříjemné nebo se u vás objeví nějaké zdravotní reakce, přestaňte zařízení používat. Víc se dozvíte na ghostvr.pamplemouche.com/warnings.</string>
-    <string name="health_safety_dialog_description_standalone">Než Oculus Go použijete, přečtěte si všechna upozornění a pokyny, které u něj jsou, a řiďte se jimi. Oculus Go je třeba pro každého uživatele upravit. Není určen pro děti mladší 13 let. Při používání Oculus Go zůstaňte sedět nebo se nehýbejte. Pokud vám něco bude nepříjemné nebo se u vás objeví nějaké zdravotní reakce, přestaňte zařízení používat. Víc se dozvíte na ghostvr.pamplemouche.com/warnings.</string>
+    <string name="health_safety_dialog_description">Než Gear VR použijete, přečtěte si všechna upozornění a pokyny, které u něj jsou, a řiďte se jimi. Gear VR je třeba pro každého uživatele upravit. Není určen pro děti mladší 13 let. Při používání Gear VR zůstaňte sedět nebo se nehýbejte. Pokud vám něco bude nepříjemné nebo se u vás objeví nějaké zdravotní reakce, přestaňte zařízení používat. Víc se dozvíte na ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
+    <string name="health_safety_dialog_description_standalone">Než Oculus Go použijete, přečtěte si všechna upozornění a pokyny, které u něj jsou, a řiďte se jimi. Oculus Go je třeba pro každého uživatele upravit. Není určen pro děti mladší 13 let. Při používání Oculus Go zůstaňte sedět nebo se nehýbejte. Pokud vám něco bude nepříjemné nebo se u vás objeví nějaké zdravotní reakce, přestaňte zařízení používat. Víc se dozvíte na ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
     <string name="health_safety_dialog_title">ZDRAVOTNÍ A BEZPEČNOSTNÍ UPOZORNĚNÍ</string>
     <string name="health_safety_long_dialog_callout">Kliknutím nebo klepnutím zavřete dialogové okno</string>
     <string name="health_safety_long_dialog_callout_counter">Bude připraveno za %1$d</string>
-    <string name="health_safety_long_dialog_description">Než Gear VR použijete, přečtěte si všechna upozornění a pokyny, které u něj jsou, a řiďte se jimi. Gear VR je třeba pro každého uživatele upravit. Není určen pro děti mladší 13 let. Při používání Gear VR zůstaňte sedět nebo se nehýbejte. Pokud vám něco bude nepříjemné nebo se u vás objeví nějaké zdravotní reakce, přestaňte zařízení používat. Víc se dozvíte na ghostvr.pamplemouche.com/warnings.</string>
+    <string name="health_safety_long_dialog_description">Než Gear VR použijete, přečtěte si všechna upozornění a pokyny, které u něj jsou, a řiďte se jimi. Gear VR je třeba pro každého uživatele upravit. Není určen pro děti mladší 13 let. Při používání Gear VR zůstaňte sedět nebo se nehýbejte. Pokud vám něco bude nepříjemné nebo se u vás objeví nějaké zdravotní reakce, přestaňte zařízení používat. Víc se dozvíte na ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
     <string name="health_safety_long_dialog_title">ZDRAVOTNÍ A BEZPEČNOSTNÍ UPOZORNĚNÍ</string>
     <string name="home_dialog_button_bug_report">Nahlásit chybu</string>
     <string name="home_dialog_button_party_other">Vrátit se do místnosti %1$s</string>

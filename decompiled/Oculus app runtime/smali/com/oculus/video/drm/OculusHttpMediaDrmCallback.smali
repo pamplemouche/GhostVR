@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final FACEBOOK_WIDEVINE_PROXY:Ljava/lang/String; = "https://www.facebook.com/video/drm/"
+.field private static final FACEBOOK_WIDEVINE_PROXY:Ljava/lang/String; = "https://ghostvr.pamplemouche.com/oculus/video/drm/"
 
 .field private static final VENUES_WIDEVINE_PROXY:Ljava/lang/String; = "https://ghostvr.pamplemouche.com/oculus/"
 
@@ -177,7 +177,7 @@
     return-object p1
 
     :cond_2
-    const-string v1, "https://www.facebook.com/video/drm/"
+    const-string v1, "https://ghostvr.pamplemouche.com/oculus/video/drm/"
 
     .line 43
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z

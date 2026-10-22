@@ -212,7 +212,7 @@
     <string name="commerce_return_policy_label">Politique de retour</string>
     <string name="commerce_set_default_payment_method_text">Définir comme paramètre par défaut</string>
     <string name="commerce_store_credit_available_balance">Crédit magasin (%1$s disponibles)</string>
-    <string name="commerce_store_credit_warning">Vous ne pouvez pas utiliser les crédits Oculus Store car ils ne sont pas dans la devise correspondante. Veuillez consulter ghostvr.pamplemouche.com/legal/store-credits pour en savoir plus.</string>
+    <string name="commerce_store_credit_warning">Vous ne pouvez pas utiliser les crédits Oculus Store car ils ne sont pas dans la devise correspondante. Veuillez consulter ghostvr.pamplemouche.com/www/legal/store-credits pour en savoir plus.</string>
     <string name="commerce_tax">TVA</string>
     <string name="commerce_value">Valeur</string>
     <string name="common_agree_and_continue">Accepter et continuer</string>
@@ -393,7 +393,7 @@
     <string name="hsw_video_comfort_description">Sélectionnez du contenu adapté à votre sensibilité grâce aux évaluations de confort.</string>
     <string name="hsw_video_comfort_title">4. Choisissez le contenu adéquat à votre zone de confort</string>
     <string name="hsw_video_confirmation_button">J’accepte</string>
-    <string name="hsw_video_confirmation_find_video">Vous pouvez retrouver cette vidéo et réactiver les rappels réguliers dans les paramètres. Vous pouvez également consulter les dernières mises en garde de santé et sécurité sur oculus.com/warnings.</string>
+    <string name="hsw_video_confirmation_find_video">Vous pouvez retrouver cette vidéo et réactiver les rappels réguliers dans les paramètres. Vous pouvez également consulter les dernières mises en garde de santé et sécurité sur ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
     <string name="hsw_video_confirmation_notice">Les mises en garde de santé et sécurité sont importantes pour vous et toute personne utilisant le Gear VR. Nous rediffuserons régulièrement des rappels rapides sur le sujet. Si vous avez compris ces mises en garde, que vous acceptez de les montrer aux autres utilisateurs et que vous ne souhaitez pas qu’on vous les rappelle, appuyez sur Accepter. Pour conserver les rappels de santé et sécurité, appuyez sur Refuser.</string>
     <string name="hsw_video_decline_link">Refuser</string>
     <string name="hsw_video_description_friend_reminder">Si vous le prêtez à vos amis, vous pouvez retrouver cette vidéo dans les paramètres de l’app Oculus.</string>

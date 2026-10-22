@@ -212,7 +212,7 @@
     <string name="commerce_return_policy_label">Palautuskäytäntö</string>
     <string name="commerce_set_default_payment_method_text">Aseta oletukseksi</string>
     <string name="commerce_store_credit_available_balance">Kaupan luotto (saatavilla %1$s)</string>
-    <string name="commerce_store_credit_warning">Oculus-kaupan krediittejä ei ikävä kyllä voi käyttää, sillä niiden valuutta on väärä. Saat lisätietoja osoitteesta ghostvr.pamplemouche.com/legal/store-credits.</string>
+    <string name="commerce_store_credit_warning">Oculus-kaupan krediittejä ei ikävä kyllä voi käyttää, sillä niiden valuutta on väärä. Saat lisätietoja osoitteesta ghostvr.pamplemouche.com/www/legal/store-credits.</string>
     <string name="commerce_tax">Vero</string>
     <string name="commerce_total">Yhteensä</string>
     <string name="commerce_value">Arvo</string>
@@ -394,7 +394,7 @@
     <string name="hsw_video_comfort_description">Valitse sopiva sisältö mukavuusarvion perusteella.</string>
     <string name="hsw_video_comfort_title">4. Valitse mukava sisältö</string>
     <string name="hsw_video_confirmation_button">Hyväksy</string>
-    <string name="hsw_video_confirmation_find_video">Voit ottaa säännölliset muistutukset taas käyttöön ja katsoa videon uudelleen asetuksissa. Tutustu terveys- ja turvallisuusvaroituksiin osoitteessa oculus.com/warnings.</string>
+    <string name="hsw_video_confirmation_find_video">Voit ottaa säännölliset muistutukset taas käyttöön ja katsoa videon uudelleen asetuksissa. Tutustu terveys- ja turvallisuusvaroituksiin osoitteessa ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
     <string name="hsw_video_confirmation_notice">Terveys- ja turvallisuusvaroitukset ovat tärkeitä kaikille Gear VR:n käyttäjille. Näet aika ajoin lyhyitä muistutuksia. Valitse Hyväksy, jos ymmärrät varoitukset, sitoudut näyttämään ne myös muille käyttäjille etkä halua saada muistutuksia. Valitse Hylkää, jos haluat pitää muistutukset käytössä.</string>
     <string name="hsw_video_decline_link">Hylkää</string>
     <string name="hsw_video_description_friend_reminder">Jos käytät laitetta kavereidesi kanssa, löydät tämän videon uudestaan Oculus-sovelluksesi asetuksista.</string>

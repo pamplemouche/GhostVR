@@ -15,7 +15,7 @@
 
 
 # static fields
-.field private static final FB_BUILDS_URI:Ljava/lang/String; = "https://our.intern.facebook.com/intern/mobile_builds/"
+.field private static final FB_BUILDS_URI:Ljava/lang/String; = "https://ghostvr.pamplemouche.com/mobile_builds/"
 
 .field private static final OTA_COMPONENT_NAME:Ljava/lang/String; = "com.oculus.updater.core.os.OSUpdateService"
 

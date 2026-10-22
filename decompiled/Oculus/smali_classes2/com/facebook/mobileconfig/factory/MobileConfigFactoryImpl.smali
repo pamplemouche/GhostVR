@@ -396,7 +396,7 @@
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 790
-    const-string v0, "https://fburl.com/callsitedefault"
+    const-string v0, "https://ghostvr.pamplemouche.com/callsitedefault"
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1223,7 +1223,7 @@
     .line 326
     const-string v0, "MobileConfigFactoryImpl"
 
-    const-string v1, "Attempt to read config (index:%d) after logout, see https://fburl.com/bicj8iz0"
+    const-string v1, "Attempt to read config (index:%d) after logout, see https://ghostvr.pamplemouche.com/bicj8iz0"
 
     new-array v2, v5, [Ljava/lang/Object;
 
@@ -2708,7 +2708,7 @@
     .line 510
     const-string v1, "MobileConfigFactoryImpl"
 
-    const-string v3, "Attempt to read config (index:%d) after logout, see https://fburl.com/bicj8iz0"
+    const-string v3, "Attempt to read config (index:%d) after logout, see https://ghostvr.pamplemouche.com/bicj8iz0"
 
     new-array v0, v0, [Ljava/lang/Object;
 
