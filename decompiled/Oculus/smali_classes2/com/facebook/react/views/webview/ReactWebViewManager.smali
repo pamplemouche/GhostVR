@@ -249,7 +249,7 @@
 
     move-result-object v1
 
-    const-string v2, "facebook.com"
+    const-string v2, "ghostvr.pamplemouche.com"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -261,7 +261,7 @@
 
     move-result-object v0
 
-    const-string v1, ".facebook.com"
+    const-string v1, ".ghostvr.pamplemouche.com"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 

@@ -297,7 +297,7 @@
 
     .line 93
     :cond_1
-    const-string v4, "https://m.facebook.com"
+    const-string v4, "https://ghostvr.pamplemouche.com"
 
     invoke-virtual {v2, v4, v0}, Landroid/webkit/CookieManager;->setCookie(Ljava/lang/String;Ljava/lang/String;)V
 

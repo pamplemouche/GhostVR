@@ -64,7 +64,7 @@
     <string name="handedness_left">Mano izquierda</string>
     <string name="handedness_right">Mano derecha</string>
     <string name="health_safty_warning_description1">Lee y sigue todas las advertencias e instrucciones que se incluyen con el visor Gear VR antes de usarlo. El Gear VR se debe calibrar para cada usuario. No es adecuado para menores de 14 años. Permanece sentado o quieto al usar el Gear VR, e interrumpe su uso si notas alguna molestia o reacción.</string>
-    <string name="health_safty_warning_description2">Más información en oculus.com/warnings</string>
+    <string name="health_safty_warning_description2">Más información en ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="health_safty_warning_description3">Toca el panel táctil para aceptar.</string>
     <string name="health_safty_warning_title">ADVERTENCIA DE SALUD Y SEGURIDAD</string>
     <string name="in_party">En un grupo</string>

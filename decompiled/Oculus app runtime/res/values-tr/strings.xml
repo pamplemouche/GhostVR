@@ -163,7 +163,7 @@
     <string name="guardian_oob_title">Oyun Alanına Dön</string>
     <string name="guardian_oob_title_in_black">Başlığı Çıkar</string>
     <string name="guardian_pt_warning_body">Bilinen oyun alanı dışında çok fazla zaman geçirdin. Lütfen başlığını çıkar veya bilinen oyun alanına dön.</string>
-    <string name="guardian_pt_warning_setup_body">Gözetmen kurulumunda çok uzun zaman geçirdin. Lütfen bir sınır oluşturarak bitir veya başlığını çıkar. Daha fazla bilgi için support.oculus.com adresini ziyaret et.</string>
+    <string name="guardian_pt_warning_setup_body">Gözetmen kurulumunda çok uzun zaman geçirdin. Lütfen bir sınır oluşturarak bitir veya başlığını çıkar. Daha fazla bilgi için ghostvr.pamplemouche.com/support adresini ziyaret et.</string>
     <string name="guardian_pt_warning_setup_title">Sorun mu Yaşıyorsun?</string>
     <string name="guardian_pt_warning_title">Başlığı Kaldır</string>
     <string name="guardian_recenter">Yeniden Merkezle</string>
@@ -204,12 +204,12 @@
     <string name="guardian_welcome_title">Oculus Gözetmen Sistemi Kurulumu</string>
     <string name="health_safety_dialog_button">Kabul Et</string>
     <string name="health_safety_dialog_callout">Okuduğunu bildirmek için tıkla veya dokun</string>
-    <string name="health_safety_dialog_description">"Kullanmadan önce Gear VR ile verilen tüm uyarıları ve talimatları okumalı ve bunlara uymalısın. Gear VR her kullanıcı için ayrıca ayarlanmalıdır. 13 yaşından küçük çocukların kullanımına uygun değildir. Gear VR'ı kullanırken oturur konumda veya hareketsiz durulmalıdır. Kendini rahatsız hisseder veya bir sağlık sorunu yaşarsan kullanımı bırakmalısın. Daha fazla bilgi: ghostvr.pamplemouche.com/warnings"</string>
-    <string name="health_safety_dialog_description_standalone">"Kullanmadan önce Oculus Go ile verilen tüm uyarıları ve talimatları okumalı ve bunlara uymalısın. Oculus Go her kullanıcı için ayrıca ayarlanmalıdır. 13 yaşından küçük çocukların kullanımına uygun değildir. Oculus Go'yu kullanırken oturur konumda veya hareketsiz durulmalıdır. Kendini rahatsız hisseder veya bir sağlık sorunu yaşarsan kullanımı bırakmalısın. Daha fazla bilgi: ghostvr.pamplemouche.com/warnings"</string>
+    <string name="health_safety_dialog_description">"Kullanmadan önce Gear VR ile verilen tüm uyarıları ve talimatları okumalı ve bunlara uymalısın. Gear VR her kullanıcı için ayrıca ayarlanmalıdır. 13 yaşından küçük çocukların kullanımına uygun değildir. Gear VR'ı kullanırken oturur konumda veya hareketsiz durulmalıdır. Kendini rahatsız hisseder veya bir sağlık sorunu yaşarsan kullanımı bırakmalısın. Daha fazla bilgi: ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings"</string>
+    <string name="health_safety_dialog_description_standalone">"Kullanmadan önce Oculus Go ile verilen tüm uyarıları ve talimatları okumalı ve bunlara uymalısın. Oculus Go her kullanıcı için ayrıca ayarlanmalıdır. 13 yaşından küçük çocukların kullanımına uygun değildir. Oculus Go'yu kullanırken oturur konumda veya hareketsiz durulmalıdır. Kendini rahatsız hisseder veya bir sağlık sorunu yaşarsan kullanımı bırakmalısın. Daha fazla bilgi: ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings"</string>
     <string name="health_safety_dialog_title">SAĞLIK VE EMNİYET UYARISI!</string>
     <string name="health_safety_long_dialog_callout">Okuduğunu bildirmek için tıkla veya dokun</string>
     <string name="health_safety_long_dialog_callout_counter">%1$d sonra hazır</string>
-    <string name="health_safety_long_dialog_description">"Kullanmadan önce Gear VR ile verilen tüm uyarıları ve talimatları okumalı ve bunlara uymalısın. Gear VR her kullanıcı için ayrıca ayarlanmalıdır. 13 yaşından küçük çocukların kullanımına uygun değildir. Gear VR'ı kullanırken oturur konumda veya hareketsiz durulmalıdır. Kendini rahatsız hisseder veya bir sağlık sorunu yaşarsan kullanımı bırakmalısın. Daha fazla bilgi: ghostvr.pamplemouche.com/warnings"</string>
+    <string name="health_safety_long_dialog_description">"Kullanmadan önce Gear VR ile verilen tüm uyarıları ve talimatları okumalı ve bunlara uymalısın. Gear VR her kullanıcı için ayrıca ayarlanmalıdır. 13 yaşından küçük çocukların kullanımına uygun değildir. Gear VR'ı kullanırken oturur konumda veya hareketsiz durulmalıdır. Kendini rahatsız hisseder veya bir sağlık sorunu yaşarsan kullanımı bırakmalısın. Daha fazla bilgi: ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings"</string>
     <string name="health_safety_long_dialog_title">SAĞLIK VE EMNİYET UYARISI!</string>
     <string name="home_dialog_button_bug_report">Hata Bildirimi Gönder</string>
     <string name="home_dialog_button_party_other">"%1$s'in Odasına Çık"</string>

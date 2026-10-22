@@ -45,7 +45,7 @@
 
     const-string v1, "android.intent.action.VIEW"
 
-    const-string v2, "https://support.oculus.com/"
+    const-string v2, "https://ghostvr.pamplemouche.com/"
 
     invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 

@@ -77,7 +77,7 @@
     sput-boolean v0, Lcom/facebook/systrace/FbSystrace;->sIssuedSystraceWarning:Z
 
     .line 38
-    const-string v0, "fburl.com/fbsystrace"
+    const-string v0, "ghostvr.pamplemouche.com/fbsystrace"
 
     invoke-static {v2, v3, v0, v1}, Lcom/facebook/systrace/Systrace;->traceCounter(JLjava/lang/String;I)V
 

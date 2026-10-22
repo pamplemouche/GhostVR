@@ -165,7 +165,7 @@
     <string name="guardian_oob_title">Gå tilbake til spilleområdet</string>
     <string name="guardian_oob_title_in_black">Ta av deg VR-brillene</string>
     <string name="guardian_pt_warning_body">Du har brukt for mye tid utenfor et kjent spilleområde. Ta av deg VR-brillene, eller gå tilbake til spilleområdet ditt.</string>
-    <string name="guardian_pt_warning_setup_body">Du har brukt for lang tid på konfigureringen av vaktsystemet. Fullfør opprettingen av grenser, eller ta av deg VR-brillene. Gå til support.oculus.com hvis du vil ha mer informasjon.</string>
+    <string name="guardian_pt_warning_setup_body">Du har brukt for lang tid på konfigureringen av vaktsystemet. Fullfør opprettingen av grenser, eller ta av deg VR-brillene. Gå til ghostvr.pamplemouche.com/support hvis du vil ha mer informasjon.</string>
     <string name="guardian_pt_warning_setup_title">Har du problemer?</string>
     <string name="guardian_pt_warning_title">Ta av deg VR-brillene</string>
     <string name="guardian_recenter">Sentrer på nytt</string>
@@ -206,12 +206,12 @@
     <string name="guardian_welcome_title">Oppsett av Oculus-vaktsystem</string>
     <string name="health_safety_dialog_button">Bekreft</string>
     <string name="health_safety_dialog_callout">Klikk eller trykk for å bekrefte</string>
-    <string name="health_safety_dialog_description">Les og følg alle advarsler og instruksjoner som følger med Gear VR, før bruk. Gear VR skal justeres for hver bruker. Må ikke brukes av barn under 13 år. Forbli sittende eller hold deg i ro når du bruker Gear VR. Stopp bruken hvis du opplever ubehag eller andre helsemessige reaksjoner. Les mer på ghostvr.pamplemouche.com/warnings</string>
-    <string name="health_safety_dialog_description_standalone">Les og følg alle advarsler og instruksjoner som følger med Oculus Go, før bruk. Oculus Go skal justeres for hver bruker. Må ikke brukes av barn under 13 år. Forbli sittende eller hold deg i ro når du bruker Oculus Go. Stopp bruken hvis du opplever ubehag eller andre helsemessige reaksjoner. Les mer på ghostvr.pamplemouche.com/warnings</string>
+    <string name="health_safety_dialog_description">Les og følg alle advarsler og instruksjoner som følger med Gear VR, før bruk. Gear VR skal justeres for hver bruker. Må ikke brukes av barn under 13 år. Forbli sittende eller hold deg i ro når du bruker Gear VR. Stopp bruken hvis du opplever ubehag eller andre helsemessige reaksjoner. Les mer på ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
+    <string name="health_safety_dialog_description_standalone">Les og følg alle advarsler og instruksjoner som følger med Oculus Go, før bruk. Oculus Go skal justeres for hver bruker. Må ikke brukes av barn under 13 år. Forbli sittende eller hold deg i ro når du bruker Oculus Go. Stopp bruken hvis du opplever ubehag eller andre helsemessige reaksjoner. Les mer på ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="health_safety_dialog_title">HELSE- OG SIKKERHETSRELATERT ADVARSEL!</string>
     <string name="health_safety_long_dialog_callout">Klikk eller trykk for å bekrefte</string>
     <string name="health_safety_long_dialog_callout_counter">Klar om %1$d</string>
-    <string name="health_safety_long_dialog_description">Les og følg alle advarsler og instruksjoner som følger med Gear VR, før bruk. Gear VR skal justeres for hver bruker. Må ikke brukes av barn under 13 år. Forbli sittende eller hold deg i ro når du bruker Gear VR. Stopp bruken hvis du opplever ubehag eller andre helsemessige reaksjoner. Les mer på ghostvr.pamplemouche.com/warnings</string>
+    <string name="health_safety_long_dialog_description">Les og følg alle advarsler og instruksjoner som følger med Gear VR, før bruk. Gear VR skal justeres for hver bruker. Må ikke brukes av barn under 13 år. Forbli sittende eller hold deg i ro når du bruker Gear VR. Stopp bruken hvis du opplever ubehag eller andre helsemessige reaksjoner. Les mer på ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="health_safety_long_dialog_title">HELSE- OG SIKKERHETSRELATERT ADVARSEL!</string>
     <string name="home_dialog_button_bug_report">Send inn en feilrapport</string>
     <string name="home_dialog_button_party_other">Gå til %1$s sitt rom</string>

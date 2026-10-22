@@ -212,7 +212,7 @@
     <string name="commerce_return_policy_label">退货政策</string>
     <string name="commerce_set_default_payment_method_text">设置为默认</string>
     <string name="commerce_store_credit_available_balance">点数（可用：%1$s）</string>
-    <string name="commerce_store_credit_warning">很抱歉，由于币种不一致，无法使用你的 Oculus 点数。请访问 ghostvr.pamplemouche.com/legal/store-credits 了解详情。</string>
+    <string name="commerce_store_credit_warning">很抱歉，由于币种不一致，无法使用你的 Oculus 点数。请访问 ghostvr.pamplemouche.com/www/legal/store-credits 了解详情。</string>
     <string name="commerce_tax">税</string>
     <string name="commerce_total">总计</string>
     <string name="commerce_value">价值</string>
@@ -393,7 +393,7 @@
     <string name="hsw_video_comfort_description">根据舒适度评级选择最适合你的内容。</string>
     <string name="hsw_video_comfort_title">4. 选择适宜内容</string>
     <string name="hsw_video_confirmation_button">确认</string>
-    <string name="hsw_video_confirmation_find_video">您可以再次找到本视频，并在设置中重新启用定期提醒。请完整阅读我们的健康与安全警示：oculus.com/warnings。</string>
+    <string name="hsw_video_confirmation_find_video">您可以再次找到本视频，并在设置中重新启用定期提醒。请完整阅读我们的健康与安全警示：ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings。</string>
     <string name="hsw_video_confirmation_notice">健康与安全警示对于 Gear VR 用户至关重要。我们会定期重复显示简要的安全警示。如果您已理解警示内容，同意向其他用户展示，并决定不启用提醒，请点击“确认”。如需继续启用提醒，请点击“拒绝”。</string>
     <string name="hsw_video_decline_link">拒绝</string>
     <string name="hsw_video_description_friend_reminder">如果您与朋友共用此设备，您可以在 Oculus 应用的设置区再次找到本视频</string>

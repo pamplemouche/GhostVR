@@ -285,7 +285,7 @@ Note: You can reset your controller orientation at any time in VR by pointing fo
     <string name="commerce_return_policy_label">Return Policy</string>
     <string name="commerce_set_default_payment_method_text">Set as default</string>
     <string name="commerce_store_credit_available_balance">Store Credit (%s available)</string>
-    <string name="commerce_store_credit_warning">"We're sorry, your Oculus Store credits cannot be used because they are not in the corresponding currency. Please see ghostvr.pamplemouche.com/legal/store-credits for more info."</string>
+    <string name="commerce_store_credit_warning">"We're sorry, your Oculus Store credits cannot be used because they are not in the corresponding currency. Please see ghostvr.pamplemouche.com/www/legal/store-credits for more info."</string>
     <string name="commerce_tax">Tax</string>
     <string name="commerce_total">Total</string>
     <string name="commerce_value">Value</string>
@@ -497,7 +497,7 @@ Note: You can reset your controller orientation at any time in VR by pointing fo
     <string name="hsw_video_comfort_description">Choose content that is best for you based on our comfort ratings.</string>
     <string name="hsw_video_comfort_title">4. Choose comfortable content</string>
     <string name="hsw_video_confirmation_button">Acknowledge</string>
-    <string name="hsw_video_confirmation_find_video">You can find this video again and re-enable the periodic reminders in the Settings. Read our complete health and safety warnings at oculus.com/warnings.</string>
+    <string name="hsw_video_confirmation_find_video">You can find this video again and re-enable the periodic reminders in the Settings. Read our complete health and safety warnings at ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
     <string name="hsw_video_confirmation_notice">"Health and safety warnings are important for anyone using Gear VR. We'll periodically repeat brief reminder warnings. If you understand the warnings, agree to show them to other users, and don't want to be reminded, tap Acknowledge. To leave the reminders enabled, tap Decline."</string>
     <string name="hsw_video_decline_link">Decline</string>
     <string name="hsw_video_description_friend_reminder">If you share this device with your friends, you can find this video again in the settings area of your Oculus app</string>
@@ -945,7 +945,7 @@ Note: You can reset your controller orientation at any time in VR by pointing fo
     <string name="settings_broadcast_activity_notifications_to_friends_title">Send notifications</string>
     <string name="settings_change_password">Change Password</string>
     <string name="settings_change_platform_description">You can change it to prod, latest, intern, dev, or sandbox. Default to prod, unless on lighthouse, then it redirects to latest.</string>
-    <string name="settings_change_platform_input_error">Invalid api endpoint. It needs to start with https://graph and end with oculus.com</string>
+    <string name="settings_change_platform_input_error">Invalid api endpoint. It needs to start with https://graph and end with ghostvr.pamplemouche.com/support</string>
     <string name="settings_change_platform_success">Force close this app to see your changes</string>
     <string name="settings_change_platform_title">Change Platform URI</string>
     <string name="settings_check_app_versions_roadblock">Check Min App Versions (Roadblock)</string>
@@ -965,7 +965,7 @@ Note: You can reset your controller orientation at any time in VR by pointing fo
     <string name="settings_home_open_source_error">Error loading Home third party notices</string>
     <string name="settings_hsw_description">Set to &lt;b>OFF&lt;/b> to disable health and safety notifications when entering VR, and &lt;b>ON&lt;/b> to view them each time.</string>
     <string name="settings_hsw_extra_information">You can always access the latest safety information at %s.</string>
-    <string name="settings_hsw_link">oculus.com/warnings</string>
+    <string name="settings_hsw_link">ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="settings_hsw_options">Gear VR Safety</string>
     <string name="settings_hsw_play_button">Play Video Now</string>
     <string name="settings_internal">Internal Settings</string>

@@ -581,22 +581,22 @@
 
     .prologue
     .line 718
-    const-string v0, "facebook.com"
+    const-string v0, "ghostvr.pamplemouche.com"
 
     invoke-static {p0, v0}, Lcom/facebook/internal/Utility;->clearCookiesForDomain(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 719
-    const-string v0, ".facebook.com"
+    const-string v0, ".ghostvr.pamplemouche.com"
 
     invoke-static {p0, v0}, Lcom/facebook/internal/Utility;->clearCookiesForDomain(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 720
-    const-string v0, "https://facebook.com"
+    const-string v0, "https://ghostvr.pamplemouche.com"
 
     invoke-static {p0, v0}, Lcom/facebook/internal/Utility;->clearCookiesForDomain(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 721
-    const-string v0, "https://.facebook.com"
+    const-string v0, "https://.ghostvr.pamplemouche.com"
 
     invoke-static {p0, v0}, Lcom/facebook/internal/Utility;->clearCookiesForDomain(Landroid/content/Context;Ljava/lang/String;)V
 

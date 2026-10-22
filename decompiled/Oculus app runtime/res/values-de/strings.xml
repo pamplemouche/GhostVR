@@ -149,7 +149,7 @@
     <string name="guardian_oob_title">Gehe zurück in den Spielbereich</string>
     <string name="guardian_oob_title_in_black">Headset abnehmen</string>
     <string name="guardian_pt_warning_body">Du hast dich zu lange außerhalb eines bekannten Spielbereichs aufgehalten. Bitte nimm dein Headset ab oder gehe zurück in deinen Spielbereich.</string>
-    <string name="guardian_pt_warning_setup_body">Die Guardian-Einrichtung dauert zu lange. Bitte erstelle eine Begrenzung oder nimm dein Headset ab. Auf support.oculus.com erhältst du weitere Informationen.</string>
+    <string name="guardian_pt_warning_setup_body">Die Guardian-Einrichtung dauert zu lange. Bitte erstelle eine Begrenzung oder nimm dein Headset ab. Auf ghostvr.pamplemouche.com/support erhältst du weitere Informationen.</string>
     <string name="guardian_pt_warning_setup_title">Gibt es ein Problem?</string>
     <string name="guardian_pt_warning_title">Headset entfernen</string>
     <string name="guardian_recenter">Neu zentrieren</string>
@@ -190,12 +190,12 @@
     <string name="guardian_welcome_title">Oculus Guardian-Setup</string>
     <string name="health_safety_dialog_button">Bestätigen</string>
     <string name="health_safety_dialog_callout">Zum Bestätigen klicken oder tippen</string>
-    <string name="health_safety_dialog_description">Bitte lies dir vor der Verwendung der Gear VR sämtliche Warnungen und Anweisungen durch und befolge diese. Die Gear VR sollte für jede Person angepasst werden. Nicht für Kinder unter 13 Jahre geeignet. Nutze die Gear VR im Sitzen oder ruhig stehend. Verwende sie nicht, wenn Unbehagen oder gesundheitliche Beschwerden auftreten. Weitere Informationen findest du unter ghostvr.pamplemouche.com/warnings.</string>
-    <string name="health_safety_dialog_description_standalone">Bitte lies dir vor der Verwendung von Oculus Go sämtliche Warnungen und Anweisungen durch und befolge diese. Oculus Go sollte für jede Person angepasst werden. Nicht für Kinder unter 13 Jahre geeignet. Bleib sitzen oder ruhig stehen, wenn du Oculus Go verwendest. Beende die Verwendung, wenn Unbehagen oder gesundheitliche Beschwerden auftreten. Weitere Informationen findest du unter ghostvr.pamplemouche.com/warnings.</string>
+    <string name="health_safety_dialog_description">Bitte lies dir vor der Verwendung der Gear VR sämtliche Warnungen und Anweisungen durch und befolge diese. Die Gear VR sollte für jede Person angepasst werden. Nicht für Kinder unter 13 Jahre geeignet. Nutze die Gear VR im Sitzen oder ruhig stehend. Verwende sie nicht, wenn Unbehagen oder gesundheitliche Beschwerden auftreten. Weitere Informationen findest du unter ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
+    <string name="health_safety_dialog_description_standalone">Bitte lies dir vor der Verwendung von Oculus Go sämtliche Warnungen und Anweisungen durch und befolge diese. Oculus Go sollte für jede Person angepasst werden. Nicht für Kinder unter 13 Jahre geeignet. Bleib sitzen oder ruhig stehen, wenn du Oculus Go verwendest. Beende die Verwendung, wenn Unbehagen oder gesundheitliche Beschwerden auftreten. Weitere Informationen findest du unter ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
     <string name="health_safety_dialog_title">GESUNDHEITS- UND SICHERHEITSWARNUNG!</string>
     <string name="health_safety_long_dialog_callout">Zum Bestätigen klicken oder tippen</string>
     <string name="health_safety_long_dialog_callout_counter">Bereit in %1$d</string>
-    <string name="health_safety_long_dialog_description">Bitte lies dir vor der Verwendung der Gear VR sämtliche Warnungen und Anweisungen durch und befolge diese. Die Gear VR sollte für jede Person angepasst werden. Nicht für Kinder unter 13 Jahre geeignet. Nutze die Gear VR im Sitzen oder ruhig stehend. Verwende sie nicht, wenn Unbehagen oder gesundheitliche Beschwerden auftreten. Weitere Informationen findest du unter ghostvr.pamplemouche.com/warnings.</string>
+    <string name="health_safety_long_dialog_description">Bitte lies dir vor der Verwendung der Gear VR sämtliche Warnungen und Anweisungen durch und befolge diese. Die Gear VR sollte für jede Person angepasst werden. Nicht für Kinder unter 13 Jahre geeignet. Nutze die Gear VR im Sitzen oder ruhig stehend. Verwende sie nicht, wenn Unbehagen oder gesundheitliche Beschwerden auftreten. Weitere Informationen findest du unter ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
     <string name="health_safety_long_dialog_title">GESUNDHEITS- UND SICHERHEITSWARNUNG!</string>
     <string name="home_dialog_button_bug_report">Fehlerbericht senden</string>
     <string name="home_dialog_button_party_other">Zu %1$ss Raum</string>

@@ -165,7 +165,7 @@
     if-nez v1, :cond_1
 
     .line 84
-    const-string v0, "Invalid api endpoint. It needs to start with https://graph and end with oculus.com"
+    const-string v0, "Invalid api endpoint. It needs to start with https://graph and end with ghostvr.pamplemouche.com"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 

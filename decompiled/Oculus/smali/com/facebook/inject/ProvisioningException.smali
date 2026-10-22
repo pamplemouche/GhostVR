@@ -152,7 +152,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v2, "relevant DI module to the test rule, see https://fburl.com/wiki/24nviijj for "
+    const-string/jumbo v2, "relevant DI module to the test rule, see https://ghostvr.pamplemouche.com/wiki/24nviijj for "
 
     .line 53
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;

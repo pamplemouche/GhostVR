@@ -64,7 +64,7 @@
     <string name="handedness_left">Obsługa leworęczna</string>
     <string name="handedness_right">Obsługa praworęczna</string>
     <string name="health_safty_warning_description1">Zanim użyjesz zestawu Gear VR, przeczytaj dołączone ostrzeżenia i instrukcje i postępuj zgodnie z nimi. Zestaw Gear VR powinien zostać skonfigurowany indywidualnie dla każdego użytkownika. Urządzenie nie jest przeznaczone do użytku przez dzieci w wieku poniżej 13 lat. Podczas korzystania z Gear VR zachowaj pozycję siedzącą lub nieruchomą. W przypadku wystąpienia uczucia dyskomfortu lub niepokojących reakcji organizmu przerwij użytkowanie.</string>
-    <string name="health_safty_warning_description2">Więcej informacji pod adresem oculus.com/warnings</string>
+    <string name="health_safty_warning_description2">Więcej informacji pod adresem ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="health_safty_warning_description3">Dotknij panelu dotykowego, aby potwierdzić.</string>
     <string name="health_safty_warning_title">INFORMACJE DOTYCZĄCE BEZPIECZEŃSTWA UŻYTKOWANIA!</string>
     <string name="in_party">Razem w ekipie</string>

@@ -95,7 +95,7 @@
 
     move-result-object v4
 
-    const-string v5, "oculus.com"
+    const-string v5, "ghostvr.pamplemouche.com"
 
     const-string v6, "graph"
 

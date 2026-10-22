@@ -206,7 +206,7 @@
     <string name="commerce_return_policy_label">Πολιτική επιστροφών</string>
     <string name="commerce_set_default_payment_method_text">Ορισμός ως προεπιλογής</string>
     <string name="commerce_store_credit_available_balance">Πίστωση στο κατάστημα (%1$s διαθέσιμο υπόλοιπο)</string>
-    <string name="commerce_store_credit_warning">Δυστυχώς, δεν μπορείτε να χρησιμοποιήσετε τις μονάδες του Oculus Store, επειδή δεν είναι στο αντίστοιχο νόμισμα. Για περισσότερες πληροφορίες, ανατρέξτε στη διεύθυνση ghostvr.pamplemouche.com/legal/store-credits.</string>
+    <string name="commerce_store_credit_warning">Δυστυχώς, δεν μπορείτε να χρησιμοποιήσετε τις μονάδες του Oculus Store, επειδή δεν είναι στο αντίστοιχο νόμισμα. Για περισσότερες πληροφορίες, ανατρέξτε στη διεύθυνση ghostvr.pamplemouche.com/www/legal/store-credits.</string>
     <string name="commerce_tax">Φόρος</string>
     <string name="commerce_total">Σύνολο</string>
     <string name="commerce_value">Αξία</string>
@@ -385,7 +385,7 @@
     <string name="hsw_video_comfort_description">Επιλέξτε περιεχόμενο που σας ταιριάζει καλύτερα με βάση τις βαθμολογίες άνεσης.</string>
     <string name="hsw_video_comfort_title">4. Επιλέξτε περιεχόμενο με υψηλό επίπεδο άνεσης</string>
     <string name="hsw_video_confirmation_button">Επιβεβαίωση</string>
-    <string name="hsw_video_confirmation_find_video">Μπορείτε να βρείτε αυτό το βίντεο ξανά και να επανενεργοποιήσετε τις περιοδικές υπενθυμίσεις από τις ρυθμίσεις. Διαβάστε τις αναλυτικές προειδοποιήσεις για την υγεία και την ασφάλεια στη διεύθυνση oculus.com/warnings.</string>
+    <string name="hsw_video_confirmation_find_video">Μπορείτε να βρείτε αυτό το βίντεο ξανά και να επανενεργοποιήσετε τις περιοδικές υπενθυμίσεις από τις ρυθμίσεις. Διαβάστε τις αναλυτικές προειδοποιήσεις για την υγεία και την ασφάλεια στη διεύθυνση ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
     <string name="hsw_video_confirmation_notice">Οι προειδοποιήσεις υγείας και ασφάλειας είναι σημαντικές για όλους όσους χρησιμοποιούν το VR. Περιοδικά θα επαναλαμβάνουμε σύντομες υπενθυμίσεις προειδοποίησης. Αν κατανοείτε αυτές τις προειδοποιήσεις, συμφωνείτε να τις δείχνουμε σε άλλους χρήστες και δεν θέλετε να βλέπετε υπενθύμιση, πατήστε \"Επιβεβαίωση\". Για να αφήσετε τις υπενθυμίσεις ενεργοποιημένες, πατήστε \"Απόρριψη\".</string>
     <string name="hsw_video_decline_link">Απόρριψη</string>
     <string name="hsw_video_description_friend_reminder">Αν μοιράζεστε αυτή τη συσκευή με τους φίλους σας, μπορείτε να βρείτε αυτό το βίντεο ξανά στην περιοχή ρυθμίσεων της εφαρμογής Oculus</string>

@@ -8,7 +8,7 @@
 
 .field public static final MAX_REPORTS_SENT_PER_DAY:I = 0x64
 
-.field public static final URI_UPLOAD_CRASH:Ljava/lang/String; = "https://www.facebook.com/mobile/generic_android_crash_logs/"
+.field public static final URI_UPLOAD_CRASH:Ljava/lang/String; = "https://ghostvr.pamplemouche.com/mobile/generic_android_crash_logs/"
 
 
 # instance fields
@@ -417,7 +417,7 @@
 
     .prologue
     .line 197
-    const-string v0, "https://www.facebook.com/mobile/generic_android_crash_logs/"
+    const-string v0, "https://ghostvr.pamplemouche.com/mobile/generic_android_crash_logs/"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 

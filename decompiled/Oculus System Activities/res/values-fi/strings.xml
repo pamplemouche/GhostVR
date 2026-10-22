@@ -65,7 +65,7 @@
     <string name="handedness_left">Vasenkätinen</string>
     <string name="handedness_right">Oikeakätinen</string>
     <string name="health_safty_warning_description1">Lue kaikki Gear VR:n mukana toimitetut varoitukset ja ohjeet ennen käyttöä ja noudata niitä. Gear VR on kalibroitava kullekin käyttäjälle erikseen. Alle 13-vuotiaat eivät saa käyttää sitä. Istu tai pysy paikallasi Gear VR:n käytön aikana. Lopeta käyttö, jos olosi ei tunnu hyvältä.</string>
-    <string name="health_safty_warning_description2">Saat lisätietoja osoitteesta oculus.com/warnings</string>
+    <string name="health_safty_warning_description2">Saat lisätietoja osoitteesta ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="health_safty_warning_description3">Hyväksy napauttamalla kosketuslevyä.</string>
     <string name="health_safty_warning_title">TERVEYS- JA TURVALLISUUSVAROITUS</string>
     <string name="in_party">Ryhmässä yhdessä</string>

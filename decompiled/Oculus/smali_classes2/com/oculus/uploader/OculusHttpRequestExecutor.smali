@@ -163,7 +163,7 @@
 
     .prologue
     .line 90
-    const-string v0, "facebook.com"
+    const-string v0, "ghostvr.pamplemouche.com"
 
     return-object v0
 .end method

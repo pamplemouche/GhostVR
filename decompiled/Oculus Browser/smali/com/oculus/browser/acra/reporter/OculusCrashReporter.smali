@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final URI_UPLOAD_CRASH:Ljava/lang/String; = "https://www.facebook.com/mobile/generic_android_crash_logs/"
+.field public static final URI_UPLOAD_CRASH:Ljava/lang/String; = "https://ghostvr.pamplemouche.com/mobile/generic_android_crash_logs/"
 
 .field public static final VERIFY_SSL_CERTS:Z = true
 
@@ -22,7 +22,7 @@
 .method public static getErrorUploadURI()Landroid/net/Uri;
     .locals 2
 
-    const-string v0, "https://www.facebook.com/mobile/generic_android_crash_logs/"
+    const-string v0, "https://ghostvr.pamplemouche.com/mobile/generic_android_crash_logs/"
 
     .line 1
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;

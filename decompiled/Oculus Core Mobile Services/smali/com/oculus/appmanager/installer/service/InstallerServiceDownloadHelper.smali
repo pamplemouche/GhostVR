@@ -189,7 +189,7 @@
 
     const/4 v1, 0x1
 
-    const-string v2, ".fbcdn.net"
+    const-string v2, ".ghostvr.pamplemouche.com"
 
     aput-object v2, v0, v1
 
@@ -390,7 +390,7 @@
 
     .line 109
     :cond_3
-    const-string v0, "securecdn.oculus.com"
+    const-string v0, "ghostvr.pamplemouche.com"
 
     invoke-virtual {v2}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 

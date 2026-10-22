@@ -98,7 +98,7 @@
     .line 185
     const-string v0, "host_name_v6"
 
-    const-string v1, "mqtt-mini.facebook.com"
+    const-string v1, "ghostvr.pamplemouche.com"
 
     invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -120,7 +120,7 @@
     .line 187
     const-string v0, "analytics_endpoint"
 
-    const-string v1, "https://b-api.facebook.com/method/logging.clientevent"
+    const-string v1, "https://ghostvr.pamplemouche.com/method/logging.clientevent"
 
     invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 

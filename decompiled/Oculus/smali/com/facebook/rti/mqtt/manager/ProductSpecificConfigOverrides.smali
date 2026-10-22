@@ -93,7 +93,7 @@
     .line 42
     if-eqz p1, :cond_0
 
-    const-string v0, ".facebook.com"
+    const-string v0, ".ghostvr.pamplemouche.com"
 
     .line 43
     invoke-virtual {p1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z

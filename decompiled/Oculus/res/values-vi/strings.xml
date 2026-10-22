@@ -185,7 +185,7 @@
     <string name="commerce_return_policy_label">Chính sách hoàn trả</string>
     <string name="commerce_set_default_payment_method_text">Đặt làm mặc định</string>
     <string name="commerce_store_credit_available_balance">Tín dụng cửa hàng (hiện có %1$s)</string>
-    <string name="commerce_store_credit_warning">Rất tiếc, bạn không thể sử dụng tín dụng Cửa hàng Oculus vì chúng không thuộc đơn vị tiền tệ tương ứng. Vui lòng xem ghostvr.pamplemouche.com/legal/store-credits để biết thêm thông tin.</string>
+    <string name="commerce_store_credit_warning">Rất tiếc, bạn không thể sử dụng tín dụng Cửa hàng Oculus vì chúng không thuộc đơn vị tiền tệ tương ứng. Vui lòng xem ghostvr.pamplemouche.com/www/legal/store-credits để biết thêm thông tin.</string>
     <string name="commerce_tax">Thuế</string>
     <string name="commerce_total">Tổng</string>
     <string name="commerce_value">Giá trị</string>
@@ -350,7 +350,7 @@
     <string name="hsw_video_comfort_description">Chọn nội dung phù hợp nhất với bạn dựa vào xếp hạng sự thoải mái.</string>
     <string name="hsw_video_comfort_title">4. Chọn nội dung thoải mái</string>
     <string name="hsw_video_confirmation_button">Xác nhận</string>
-    <string name="hsw_video_confirmation_find_video">Bạn có thể tìm lại video này và bật lại lời nhắc định kỳ trong Cài đặt. Hãy đọc cảnh báo sức khỏe và an toàn đầy đủ của chúng tôi tại oculus.com/warnings.</string>
+    <string name="hsw_video_confirmation_find_video">Bạn có thể tìm lại video này và bật lại lời nhắc định kỳ trong Cài đặt. Hãy đọc cảnh báo sức khỏe và an toàn đầy đủ của chúng tôi tại ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
     <string name="hsw_video_confirmation_notice">Cảnh báo sức khỏe và an toàn rất quan trọng với bất kỳ ai sử dụng Gear VR. Chúng tôi sẽ lặp lại các cảnh báo lời nhắc ngắn theo định kỳ. Nếu bạn hiểu cảnh báo, đồng ý chỉ chúng cho những người dùng khác và nếu bạn không muốn được nhắc, hãy nhấn vào Xác nhận. Để vẫn bật lời nhắc, nhấn vào Từ chối.</string>
     <string name="hsw_video_decline_link">Từ chối</string>
     <string name="hsw_video_description_friend_reminder">Nếu bạn chia sẻ thiết bị này với bạn bè, bạn có thể tìm thấy video lại trong khu vực cài đặt của ứng dụng Oculus</string>

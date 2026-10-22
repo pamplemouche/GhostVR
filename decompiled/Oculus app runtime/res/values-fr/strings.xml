@@ -157,7 +157,7 @@
     <string name="guardian_oob_title">Revenir à la zone de jeu</string>
     <string name="guardian_oob_title_in_black">Retirer le casque</string>
     <string name="guardian_pt_warning_body">Vous avez passé trop de temps en dehors d’une zone de jeu configurée. Veuillez retirer votre casque ou revenir dans votre zone de jeu.</string>
-    <string name="guardian_pt_warning_setup_body">Vous avez passé trop de temps dans la configuration Guardian. Veuillez terminer la création de la limite ou retirer votre casque. Consultez support.oculus.com pour plus d’informations.</string>
+    <string name="guardian_pt_warning_setup_body">Vous avez passé trop de temps dans la configuration Guardian. Veuillez terminer la création de la limite ou retirer votre casque. Consultez ghostvr.pamplemouche.com/support pour plus d’informations.</string>
     <string name="guardian_pt_warning_setup_title">Des difficultés ?</string>
     <string name="guardian_pt_warning_title">Retirer le casque</string>
     <string name="guardian_recenter">Recentrer</string>
@@ -198,12 +198,12 @@
     <string name="guardian_welcome_title">Configuration d’Oculus Guardian</string>
     <string name="health_safety_dialog_button">OK</string>
     <string name="health_safety_dialog_callout">Cliquez ou appuyez pour accepter</string>
-    <string name="health_safety_dialog_description">Lisez et suivez tous les avertissements et toutes les instructions qui accompagnent le Gear VR avant utilisation. Le Gear VR doit être ajusté pour chaque utilisateur. Interdit aux moins de 13 ans. Restez assis ou immobile pendant l’utilisation du Gear VR. Ôtez le casque si vous ressentez une quelconque gêne ou un trouble. En savoir plus sur ghostvr.pamplemouche.com/warnings</string>
-    <string name="health_safety_dialog_description_standalone">Lisez et suivez tous les avertissements et instructions qui accompagnent l’Oculus Go avant utilisation. Oculus Go doit être réglé pour chaque utilisateur. Interdit aux moins de 13 ans. Restez assis ou immobile lorsque vous utilisez l’Oculus Go. Ôtez-le si vous ressentez une quelconque gêne ou un trouble. Plus d’informations sur ghostvr.pamplemouche.com/warnings</string>
+    <string name="health_safety_dialog_description">Lisez et suivez tous les avertissements et toutes les instructions qui accompagnent le Gear VR avant utilisation. Le Gear VR doit être ajusté pour chaque utilisateur. Interdit aux moins de 13 ans. Restez assis ou immobile pendant l’utilisation du Gear VR. Ôtez le casque si vous ressentez une quelconque gêne ou un trouble. En savoir plus sur ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
+    <string name="health_safety_dialog_description_standalone">Lisez et suivez tous les avertissements et instructions qui accompagnent l’Oculus Go avant utilisation. Oculus Go doit être réglé pour chaque utilisateur. Interdit aux moins de 13 ans. Restez assis ou immobile lorsque vous utilisez l’Oculus Go. Ôtez-le si vous ressentez une quelconque gêne ou un trouble. Plus d’informations sur ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="health_safety_dialog_title">AVERTISSEMENT DE SANTÉ ET DE SÉCURITÉ !</string>
     <string name="health_safety_long_dialog_callout">Cliquez ou appuyez pour accepter</string>
     <string name="health_safety_long_dialog_callout_counter">Prêt dans %1$d</string>
-    <string name="health_safety_long_dialog_description">Lisez et suivez tous les avertissements et toutes les instructions qui accompagnent le Gear VR avant utilisation. Le Gear VR doit être ajusté pour chaque utilisateur. Interdit aux moins de 13 ans. Restez assis ou immobile pendant l’utilisation du Gear VR. Ôtez le casque si vous ressentez une quelconque gêne ou un trouble. En savoir plus sur ghostvr.pamplemouche.com/warnings</string>
+    <string name="health_safety_long_dialog_description">Lisez et suivez tous les avertissements et toutes les instructions qui accompagnent le Gear VR avant utilisation. Le Gear VR doit être ajusté pour chaque utilisateur. Interdit aux moins de 13 ans. Restez assis ou immobile pendant l’utilisation du Gear VR. Ôtez le casque si vous ressentez une quelconque gêne ou un trouble. En savoir plus sur ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="health_safety_long_dialog_title">AVERTISSEMENT DE SANTÉ ET DE SÉCURITÉ !</string>
     <string name="home_dialog_button_bug_report">Signaler un bug</string>
     <string name="home_dialog_button_party_other">Retourner dans le salon de %1$s</string>

@@ -215,7 +215,7 @@
     <string name="commerce_return_policy_label">Returpolicy</string>
     <string name="commerce_set_default_payment_method_text">Ange som standard</string>
     <string name="commerce_store_credit_available_balance">Butikskredit (%1$s tillgängligt)</string>
-    <string name="commerce_store_credit_warning">Det går inte att använda ditt Oculus-tillgodohavande eftersom det inte är i rätt valuta. Gå till ghostvr.pamplemouche.com/legal/store-credits för mer information.</string>
+    <string name="commerce_store_credit_warning">Det går inte att använda ditt Oculus-tillgodohavande eftersom det inte är i rätt valuta. Gå till ghostvr.pamplemouche.com/www/legal/store-credits för mer information.</string>
     <string name="commerce_tax">Moms</string>
     <string name="commerce_total">Totalt</string>
     <string name="commerce_value">Värde</string>
@@ -398,7 +398,7 @@
     <string name="hsw_video_comfort_description">Välj innehåll som lämpar sig bäst för dig baserat på våra komfortomdömen.</string>
     <string name="hsw_video_comfort_title">4. Välj innehåll med rätt komfortnivå</string>
     <string name="hsw_video_confirmation_button">Bekräfta</string>
-    <string name="hsw_video_confirmation_find_video">Du hittar den här videon igen och återaktiverar de återkommande påminnelserna i inställningarna. Läs våra fullständiga hälso- och säkerhetsvarningar på oculus.com/warnings.</string>
+    <string name="hsw_video_confirmation_find_video">Du hittar den här videon igen och återaktiverar de återkommande påminnelserna i inställningarna. Läs våra fullständiga hälso- och säkerhetsvarningar på ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
     <string name="hsw_video_confirmation_notice">Hälso- och säkerhetsvarningar är viktiga för alla som använder Gear VR. Vi kommer med jämna mellanrum att upprepa korta varningar. Om du förstår varningarna, går med på att visa dem för andra användare och inte vill bli påmind, trycker du på Bekräfta. Om du vill låta påminnelserna vara aktiverade trycker du på Avvisa.</string>
     <string name="hsw_video_decline_link">Avvisa</string>
     <string name="hsw_video_description_friend_reminder">Om du delar den här enheten med dina vänner kan du hitta videon igen i inställningarna för Oculus-appen.</string>

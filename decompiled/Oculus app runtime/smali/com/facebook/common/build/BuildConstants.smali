@@ -491,12 +491,12 @@
 
     if-eqz v0, :cond_0
 
-    const-string v0, "https://m.facebook.com/mobile_builds"
+    const-string v0, "https://ghostvr.pamplemouche.com/mobile_builds/"
 
     goto :goto_0
 
     :cond_0
-    const-string v0, "https://market.android.com/details?id=com.facebook.katana"
+    const-string v0, "https://ghostvr.pamplemouche.com/apps/companion"
 
     :goto_0
     return-object v0

@@ -167,7 +167,7 @@
     <string name="guardian_oob_title">返回游戏区</string>
     <string name="guardian_oob_title_in_black">移除头戴设备</string>
     <string name="guardian_pt_warning_body">你在已知游戏区外停留时间过长。请摘下头戴设备，或返回游戏区。</string>
-    <string name="guardian_pt_warning_setup_body">你在设置防护系统时耗时过长。请完成边界创建，或摘下头戴设备。如需更多信息，请访问 support.oculus.com。</string>
+    <string name="guardian_pt_warning_setup_body">你在设置防护系统时耗时过长。请完成边界创建，或摘下头戴设备。如需更多信息，请访问 ghostvr.pamplemouche.com/support。</string>
     <string name="guardian_pt_warning_setup_title">遇到问题？</string>
     <string name="guardian_pt_warning_title">摘下头戴设备</string>
     <string name="guardian_recenter">重新置中</string>
@@ -208,12 +208,12 @@
     <string name="guardian_welcome_title">Oculus 防护设置</string>
     <string name="health_safety_dialog_button">知道了</string>
     <string name="health_safety_dialog_callout">点击或轻触确认</string>
-    <string name="health_safety_dialog_description">使用前，请阅读并遵守 Gear VR 附带的警示信息和操作说明。Gear VR 应针对每位用户进行调节。未满 13 岁的儿童不宜使用。使用 Gear VR 时请保持坐姿或原地不动。如果感到任何不适或身体反应，请停止使用。详情请见：ghostvr.pamplemouche.com/warnings</string>
-    <string name="health_safety_dialog_description_standalone">使用前，请阅读并遵守 Oculus Go 附带的警示信息和操作说明。Oculus Go 应针对每位用户进行调节。未满 13 岁的儿童不宜使用。使用 Oculus Go 时请保持坐姿或原地不动。如果感到任何不适或身体反应，请停止使用。详情请见：ghostvr.pamplemouche.com/warnings</string>
+    <string name="health_safety_dialog_description">使用前，请阅读并遵守 Gear VR 附带的警示信息和操作说明。Gear VR 应针对每位用户进行调节。未满 13 岁的儿童不宜使用。使用 Gear VR 时请保持坐姿或原地不动。如果感到任何不适或身体反应，请停止使用。详情请见：ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
+    <string name="health_safety_dialog_description_standalone">使用前，请阅读并遵守 Oculus Go 附带的警示信息和操作说明。Oculus Go 应针对每位用户进行调节。未满 13 岁的儿童不宜使用。使用 Oculus Go 时请保持坐姿或原地不动。如果感到任何不适或身体反应，请停止使用。详情请见：ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="health_safety_dialog_title">健康与安全警告！</string>
     <string name="health_safety_long_dialog_callout">点击或轻触确认</string>
     <string name="health_safety_long_dialog_callout_counter">%1$d后就绪</string>
-    <string name="health_safety_long_dialog_description">使用前，请阅读并遵守 Gear VR 附带的警示信息和操作说明。Gear VR 应针对每位用户进行调节。未满 13 岁的儿童不宜使用。使用 Gear VR 时请保持坐姿或原地不动。如果感到任何不适或身体反应，请停止使用。详情请见：ghostvr.pamplemouche.com/warnings</string>
+    <string name="health_safety_long_dialog_description">使用前，请阅读并遵守 Gear VR 附带的警示信息和操作说明。Gear VR 应针对每位用户进行调节。未满 13 岁的儿童不宜使用。使用 Gear VR 时请保持坐姿或原地不动。如果感到任何不适或身体反应，请停止使用。详情请见：ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="health_safety_long_dialog_title">健康与安全警告！</string>
     <string name="home_dialog_button_bug_report">提交漏洞报告</string>
     <string name="home_dialog_button_party_other">退出%1$s的虚拟间</string>

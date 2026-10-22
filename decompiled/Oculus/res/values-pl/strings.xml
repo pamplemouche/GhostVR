@@ -210,7 +210,7 @@
     <string name="commerce_return_policy_label">Zasady dokonywania zwrotów</string>
     <string name="commerce_set_default_payment_method_text">Ustaw jako domyślną</string>
     <string name="commerce_store_credit_available_balance">Kredyt w sklepie (dostępne: %1$s)</string>
-    <string name="commerce_store_credit_warning">Nie można użyć kredytu w sklepie Oculus, ponieważ jest w innej walucie. Więcej informacji znajdziesz na stronie ghostvr.pamplemouche.com/legal/store-credits.</string>
+    <string name="commerce_store_credit_warning">Nie można użyć kredytu w sklepie Oculus, ponieważ jest w innej walucie. Więcej informacji znajdziesz na stronie ghostvr.pamplemouche.com/www/legal/store-credits.</string>
     <string name="commerce_tax">Podatek</string>
     <string name="commerce_total">Suma</string>
     <string name="commerce_value">Wartość</string>
@@ -391,7 +391,7 @@
     <string name="hsw_video_comfort_description">Wybierz odpowiednią dla siebie zawartość w oparciu o nasze oceny poczucia komfortu.</string>
     <string name="hsw_video_comfort_title">4. Wybierz odpowiednią zawartość</string>
     <string name="hsw_video_confirmation_button">Rozumiem</string>
-    <string name="hsw_video_confirmation_find_video">Możesz jeszcze raz odnaleźć ten film i włączyć ponownie okresowe przypomnienia w Ustawieniach. Wszystkie ostrzeżenia dotyczące zdrowia i bezpieczeństwa są dostępne na stronie oculus.com/warnings.</string>
+    <string name="hsw_video_confirmation_find_video">Możesz jeszcze raz odnaleźć ten film i włączyć ponownie okresowe przypomnienia w Ustawieniach. Wszystkie ostrzeżenia dotyczące zdrowia i bezpieczeństwa są dostępne na stronie ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings.</string>
     <string name="hsw_video_confirmation_notice">Ostrzeżenia dotyczące zdrowia i bezpieczeństwa są istotne dla każdego użytkownika zestawu Gear VR. Będziemy okresowo powtarzać krótkie ostrzeżenia w celu ich przypomnienia. Jeśli rozumiesz ostrzeżenia, wyrażasz zgodę na wyświetlenie ich innym użytkownikom i nie chcesz by Ci o nich przypominano, dotknij przycisku Rozumiem. Aby nadal otrzymywać przypomnienia, dotknij przycisku Odrzuć.</string>
     <string name="hsw_video_decline_link">Odrzuć</string>
     <string name="hsw_video_description_friend_reminder">Jeśli udostępniasz to urządzenie znajomym, możesz ponownie odnaleźć ten film w obszarze ustawień aplikacji Oculus</string>

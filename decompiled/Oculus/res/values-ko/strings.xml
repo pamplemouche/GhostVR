@@ -209,7 +209,7 @@
     <string name="commerce_return_policy_label">환불 정책</string>
     <string name="commerce_set_default_payment_method_text">기본 결제 수단으로 설정</string>
     <string name="commerce_store_credit_available_balance">스토어 크레딧(%1$s 이용 가능)</string>
-    <string name="commerce_store_credit_warning">죄송합니다. 통화가 일치하지 않아 Oculus 스토어 크레딧을 사용할 수 없습니다. 자세한 내용은 ghostvr.pamplemouche.com/legal/store-credits에서 확인하세요.</string>
+    <string name="commerce_store_credit_warning">죄송합니다. 통화가 일치하지 않아 Oculus 스토어 크레딧을 사용할 수 없습니다. 자세한 내용은 ghostvr.pamplemouche.com/www/legal/store-credits에서 확인하세요.</string>
     <string name="commerce_tax">세금</string>
     <string name="commerce_total">총 금액</string>
     <string name="commerce_value">값</string>
@@ -391,7 +391,7 @@
     <string name="hsw_video_comfort_description">편안함 등급에 따라 적합한 콘텐츠를 선택하세요.</string>
     <string name="hsw_video_comfort_title">4. 편안한 콘텐츠 선택</string>
     <string name="hsw_video_confirmation_button">확인</string>
-    <string name="hsw_video_confirmation_find_video">설정에서 이 동영상을 다시 보고 주기적 알림을 다시 설정할 수 있습니다. oculus.com/warnings에서 건강 및 안전 경고에 대한 전체 내용을 읽어보세요.</string>
+    <string name="hsw_video_confirmation_find_video">설정에서 이 동영상을 다시 보고 주기적 알림을 다시 설정할 수 있습니다. ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings에서 건강 및 안전 경고에 대한 전체 내용을 읽어보세요.</string>
     <string name="hsw_video_confirmation_notice">"건강 및 안전 경고는 Gear VR을 사용하는 모든 사람이 준수해야 합니다. 주기적으로 짧은 경고가 반복되어 표시됩니다. 경고 내용을 이해하고, 다른 사용자에게 경고를 표시하는 데 동의하고, 알림을 원하지 않는다면 '확인'을 누르세요. 알림을 계속해서 활성화하려면 '거부'를 누르세요."</string>
     <string name="hsw_video_decline_link">거부</string>
     <string name="hsw_video_description_friend_reminder">기기를 친구와 함께 사용하는 경우 Oculus 앱의 설정 영역에서 이 동영상을 다시 볼 수 있습니다</string>

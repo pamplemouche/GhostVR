@@ -43,7 +43,7 @@
     .end annotation
 .end field
 
-.field private static final FACEBOOK_COM:Ljava/lang/String; = "facebook.com"
+.field private static final FACEBOOK_COM:Ljava/lang/String; = "ghostvr.pamplemouche.com"
 
 .field private static final LOCK:Ljava/lang/Object;
 
@@ -138,7 +138,7 @@
     sput-object v0, Lcom/facebook/FacebookSdk;->loggingBehaviors:Ljava/util/HashSet;
 
     .line 71
-    const-string v0, "facebook.com"
+    const-string v0, "ghostvr.pamplemouche.com"
 
     sput-object v0, Lcom/facebook/FacebookSdk;->facebookDomain:Ljava/lang/String;
 

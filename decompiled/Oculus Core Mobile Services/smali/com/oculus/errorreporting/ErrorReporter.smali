@@ -98,7 +98,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "https://www.facebook.com/mobile/generic_android_crash_logs/"
+    const-string v1, "https://ghostvr.pamplemouche.com/mobile/generic_android_crash_logs/"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

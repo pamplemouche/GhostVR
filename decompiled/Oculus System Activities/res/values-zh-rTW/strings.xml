@@ -66,7 +66,7 @@
     <string name="handedness_left">慣用左手</string>
     <string name="handedness_right">慣用右手</string>
     <string name="health_safty_warning_description1">使用前請先閱讀並遵守 Gear VR 隨附的所有警告與說明。請務必針對各個用戶調整 Gear VR。不適用於 13 歲以下兒童。使用 Gear VR 時請勿離座，或請留在原地不動。如果感到任何不適或體力不濟，請停止使用。</string>
-    <string name="health_safty_warning_description2">查看更多：oculus.com/warnings</string>
+    <string name="health_safty_warning_description2">查看更多：ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="health_safty_warning_description3">點按觸控板以確認。</string>
     <string name="health_safty_warning_title">健康與安全警告！</string>
     <string name="in_party">一起加入虛擬趴</string>

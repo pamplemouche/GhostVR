@@ -140,7 +140,7 @@
 
     invoke-direct {v0}, Lretrofit/RestAdapter$Builder;-><init>()V
 
-    const-string v2, "https://www.secure.facebook.com"
+    const-string v2, "https://ghostvr.pamplemouche.com"
 
     .line 68
     invoke-virtual {v0, v2}, Lretrofit/RestAdapter$Builder;->setEndpoint(Ljava/lang/String;)Lretrofit/RestAdapter$Builder;

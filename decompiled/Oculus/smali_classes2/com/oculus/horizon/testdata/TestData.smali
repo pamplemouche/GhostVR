@@ -79,7 +79,7 @@
 
     .line 43
     :cond_0
-    const-string v0, "+0@oculus.com"
+    const-string v0, "+0@ghostvr.pamplemouche.com"
 
     goto :goto_0
 

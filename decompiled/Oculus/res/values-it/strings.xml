@@ -211,7 +211,7 @@
     <string name="commerce_return_policy_label">Normativa sui resi</string>
     <string name="commerce_set_default_payment_method_text">Imposta come opzione predefinita</string>
     <string name="commerce_store_credit_available_balance">Credito dello store (disponibilità: %1$s)</string>
-    <string name="commerce_store_credit_warning">Siamo spiacenti, impossibile usare il tuo credito dello store di Oculus perché non è nella valuta corrispondente. Per maggiori informazioni, consulta ghostvr.pamplemouche.com/legal/store-credits.</string>
+    <string name="commerce_store_credit_warning">Siamo spiacenti, impossibile usare il tuo credito dello store di Oculus perché non è nella valuta corrispondente. Per maggiori informazioni, consulta ghostvr.pamplemouche.com/www/legal/store-credits.</string>
     <string name="commerce_tax">Imposta</string>
     <string name="commerce_total">Totale</string>
     <string name="commerce_value">Valore</string>
@@ -392,7 +392,7 @@
     <string name="hsw_video_comfort_description">Scegli i contenuti più adatti a te sulla base delle nostre valutazioni del comfort.</string>
     <string name="hsw_video_comfort_title">4. Scegli contenuti con un buon livello di comfort</string>
     <string name="hsw_video_confirmation_button">Conferma</string>
-    <string name="hsw_video_confirmation_find_video">"Puoi trovare di nuovo questo video e riattivare i promemoria periodici nelle Impostazioni. Leggi le nostre avvertenze complete su salute e sicurezza all'indirizzo oculus.com/warnings."</string>
+    <string name="hsw_video_confirmation_find_video">"Puoi trovare di nuovo questo video e riattivare i promemoria periodici nelle Impostazioni. Leggi le nostre avvertenze complete su salute e sicurezza all'indirizzo ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings."</string>
     <string name="hsw_video_confirmation_notice">Le avvertenze su salute e sicurezza sono importanti per chiunque usi Gear VR. Invieremo periodicamente brevi promemoria sulle avvertenze. Se conosci le avvertenze, accetti di mostrarle ad altri utenti e non desideri ricevere promemoria, tocca Conferma. Per mantenere attivi i promemoria, tocca Rifiuta.</string>
     <string name="hsw_video_decline_link">Rifiuta</string>
     <string name="hsw_video_description_friend_reminder">Se condividi questo dispositivo con i tuoi amici, puoi trovare di nuovo questo video nella sezione impostazioni della tua app Oculus.</string>

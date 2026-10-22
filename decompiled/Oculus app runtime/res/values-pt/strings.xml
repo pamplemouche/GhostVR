@@ -159,7 +159,7 @@
     <string name="guardian_oob_title">Retornar à área de jogo</string>
     <string name="guardian_oob_title_in_black">Remover headset</string>
     <string name="guardian_pt_warning_body">Você passou muito tempo fora de uma área de jogo conhecida. Remova o headset ou retorne à sua área de jogo.</string>
-    <string name="guardian_pt_warning_setup_body">Você passou muito tempo na configuração do Guardião. Conclua a criação de um limite ou remova o headset. Acesse support.oculus.com para obter mais informações.</string>
+    <string name="guardian_pt_warning_setup_body">Você passou muito tempo na configuração do Guardião. Conclua a criação de um limite ou remova o headset. Acesse ghostvr.pamplemouche.com/support para obter mais informações.</string>
     <string name="guardian_pt_warning_setup_title">Está tendo problemas?</string>
     <string name="guardian_pt_warning_title">Remover headset</string>
     <string name="guardian_recenter">Recentralizar</string>
@@ -200,12 +200,12 @@
     <string name="guardian_welcome_title">Configuração do Guardião Oculus</string>
     <string name="health_safety_dialog_button">Aceitar</string>
     <string name="health_safety_dialog_callout">Clique ou toque para aceitar</string>
-    <string name="health_safety_dialog_description">Leia e siga todos os avisos e instruções que acompanham o Gear VR antes do uso. O Gear VR deve ser ajustado para cada usuário. Não é próprio para crianças menores de 13 anos. Permaneça sentado ou parado ao usar o Gear VR. Interrompa o uso se sentir algum desconforto ou reação adversa. Veja mais em ghostvr.pamplemouche.com/warnings</string>
-    <string name="health_safety_dialog_description_standalone">Leia e siga todos os avisos e instruções que acompanham o Oculus Go antes do uso. O Oculus Go deve ser ajustado para cada usuário. Não é próprio para crianças menores de 13 anos. Permaneça sentado ou parado ao usar o Oculus Go. Interrompa o uso se sentir algum desconforto ou reação adversa. Veja mais em ghostvr.pamplemouche.com/warnings</string>
+    <string name="health_safety_dialog_description">Leia e siga todos os avisos e instruções que acompanham o Gear VR antes do uso. O Gear VR deve ser ajustado para cada usuário. Não é próprio para crianças menores de 13 anos. Permaneça sentado ou parado ao usar o Gear VR. Interrompa o uso se sentir algum desconforto ou reação adversa. Veja mais em ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
+    <string name="health_safety_dialog_description_standalone">Leia e siga todos os avisos e instruções que acompanham o Oculus Go antes do uso. O Oculus Go deve ser ajustado para cada usuário. Não é próprio para crianças menores de 13 anos. Permaneça sentado ou parado ao usar o Oculus Go. Interrompa o uso se sentir algum desconforto ou reação adversa. Veja mais em ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="health_safety_dialog_title">AVISO DE SAÚDE E SEGURANÇA</string>
     <string name="health_safety_long_dialog_callout">Clique ou toque para aceitar</string>
     <string name="health_safety_long_dialog_callout_counter">Pronto em %1$d</string>
-    <string name="health_safety_long_dialog_description">Leia e siga todos os avisos e instruções que acompanham o Gear VR antes do uso. O Gear VR deve ser ajustado para cada usuário. Não é próprio para crianças menores de 13 anos. Permaneça sentado ou parado ao usar o Gear VR. Interrompa o uso se sentir algum desconforto ou reação adversa. Veja mais em ghostvr.pamplemouche.com/warnings</string>
+    <string name="health_safety_long_dialog_description">Leia e siga todos os avisos e instruções que acompanham o Gear VR antes do uso. O Gear VR deve ser ajustado para cada usuário. Não é próprio para crianças menores de 13 anos. Permaneça sentado ou parado ao usar o Gear VR. Interrompa o uso se sentir algum desconforto ou reação adversa. Veja mais em ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="health_safety_long_dialog_title">AVISO DE SAÚDE E SEGURANÇA</string>
     <string name="home_dialog_button_bug_report">Enviar um relatório de erro</string>
     <string name="home_dialog_button_party_other">Ir para a sala de %1$s</string>

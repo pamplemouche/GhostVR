@@ -159,7 +159,7 @@
     <string name="guardian_oob_title">Regressa à área de jogo</string>
     <string name="guardian_oob_title_in_black">Remover óculos</string>
     <string name="guardian_pt_warning_body">Passaste demasiado tempo fora dos limites de uma área de jogo normal. Remove os teus óculos ou regressa à tua área de jogo.</string>
-    <string name="guardian_pt_warning_setup_body">Demoraste demasiado tempo a fazer a configuração do Guardião. Conclui a configuração dos limites ou remove os óculos. Para mais informações, visita support.oculus.com.</string>
+    <string name="guardian_pt_warning_setup_body">Demoraste demasiado tempo a fazer a configuração do Guardião. Conclui a configuração dos limites ou remove os óculos. Para mais informações, visita ghostvr.pamplemouche.com/support.</string>
     <string name="guardian_pt_warning_setup_title">Estás a ter problemas?</string>
     <string name="guardian_pt_warning_title">Remover óculos</string>
     <string name="guardian_recenter">Centrar Novamente</string>
@@ -200,12 +200,12 @@
     <string name="guardian_welcome_title">Configuração do Guardião do Oculus</string>
     <string name="health_safety_dialog_button">Confirmar</string>
     <string name="health_safety_dialog_callout">Clica ou toca para confirmares</string>
-    <string name="health_safety_dialog_description">Lê e segue todas as advertências e instruções fornecidas com o Gear VR antes da primeira utilização. O Gear VR deve ser ajustado a cada utilizador. Não deve ser utilizado por crianças com idade inferior a 13 anos. Mantém-te sentado/a ou imóvel ao utilizares o Gear VR. Interrompe a utilização se sentires algum desconforto ou reações adversas. Mais informações em ghostvr.pamplemouche.com/warnings</string>
-    <string name="health_safety_dialog_description_standalone">Lê e segue todas as advertências e instruções fornecidas com o Oculus Go antes da primeira utilização. O Oculus Go deve ser ajustado a cada utilizador. Não deve ser utilizado por crianças com idade inferior a 13 anos. Mantém-te sentado/a ou imóvel ao utilizares o Oculus Go. Interrompe a utilização se sentires algum desconforto ou reações adversas. Mais informações em ghostvr.pamplemouche.com/warnings</string>
+    <string name="health_safety_dialog_description">Lê e segue todas as advertências e instruções fornecidas com o Gear VR antes da primeira utilização. O Gear VR deve ser ajustado a cada utilizador. Não deve ser utilizado por crianças com idade inferior a 13 anos. Mantém-te sentado/a ou imóvel ao utilizares o Gear VR. Interrompe a utilização se sentires algum desconforto ou reações adversas. Mais informações em ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
+    <string name="health_safety_dialog_description_standalone">Lê e segue todas as advertências e instruções fornecidas com o Oculus Go antes da primeira utilização. O Oculus Go deve ser ajustado a cada utilizador. Não deve ser utilizado por crianças com idade inferior a 13 anos. Mantém-te sentado/a ou imóvel ao utilizares o Oculus Go. Interrompe a utilização se sentires algum desconforto ou reações adversas. Mais informações em ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="health_safety_dialog_title">AVISO DE SAÚDE E SEGURANÇA!</string>
     <string name="health_safety_long_dialog_callout">Clica ou toca para confirmares</string>
     <string name="health_safety_long_dialog_callout_counter">Pronto em %1$d</string>
-    <string name="health_safety_long_dialog_description">Lê e segue todas as advertências e instruções fornecidas com o Gear VR antes da primeira utilização. O Gear VR deve ser ajustado a cada utilizador. Não deve ser utilizado por crianças com idade inferior a 13 anos. Mantém-te sentado/a ou imóvel ao utilizares o Gear VR. Interrompe a utilização se sentires algum desconforto ou reações adversas. Mais informações em ghostvr.pamplemouche.com/warnings</string>
+    <string name="health_safety_long_dialog_description">Lê e segue todas as advertências e instruções fornecidas com o Gear VR antes da primeira utilização. O Gear VR deve ser ajustado a cada utilizador. Não deve ser utilizado por crianças com idade inferior a 13 anos. Mantém-te sentado/a ou imóvel ao utilizares o Gear VR. Interrompe a utilização se sentires algum desconforto ou reações adversas. Mais informações em ghostvr.pamplemouche.com/www/legal/health-and-safety-warnings</string>
     <string name="health_safety_long_dialog_title">AVISO DE SAÚDE E SEGURANÇA!</string>
     <string name="home_dialog_button_bug_report">Enviar um relatório de falhas</string>
     <string name="home_dialog_button_party_other">Sair para a sala de %1$s</string>
