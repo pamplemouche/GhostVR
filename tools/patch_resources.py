@@ -51,6 +51,31 @@ _CANONICALISE = re.compile(rf"({HOST})(\\*)/([A-Za-z0-9_/-]+){_BOUNDARY}")
 _SUPPORT = re.compile(rf"({META_HOST}){_BOUNDARY}")
 _SCHEME = re.compile(rf"https://(?:www\.)?({META_HOST})/")
 
+# Android's network-security-config `<domain>` accepts a bare hostname only.
+# Rewriting `oculus.com` inside such an element must not append a path, or the
+# platform fails to parse the file and the app aborts at startup.
+_DOMAIN_ELEMENT = re.compile(rf"(<domain[^>]*>)([^<]*)(</domain>)")
+
+# `android:host` likewise takes a bare hostname. A path belongs in a sibling
+# `android:pathPrefix`/`android:path` attribute, so move it there instead of
+# producing `android:host="host/path"`, which the platform rejects.
+_HOST_ATTR = re.compile(
+    rf'android:host="(?:https?://)?(?:[A-Za-z0-9-]+\.)*({META_HOST})(/[^"]*)?"'
+)
+
+
+def _host_attr(match: re.Match) -> str:
+    path = match.group(2)
+    if path:
+        return f'android:host="{HOST}" android:pathPrefix="{path}"'
+    return f'android:host="{HOST}"'
+
+
+def _domain_body(match: re.Match) -> str:
+    inner = re.sub(rf"https?://(?:www\.)?({META_HOST})/?", HOST, match.group(2))
+    inner = re.sub(rf"(?:[A-Za-z0-9-]+\.)*({META_HOST}){_BOUNDARY}", HOST, inner)
+    return f"{match.group(1)}{inner}{match.group(3)}"
+
 
 def _canonical(match: re.Match) -> str:
     host, slashes, path = match.group(1), match.group(2), match.group(3)
@@ -65,6 +90,10 @@ def _support(_match: re.Match) -> str:
 
 
 RULES = [
+    # Must run before _LINK/_SUPPORT so `<domain>` bodies and `android:host`
+    # attributes stay bare hostnames.
+    (_DOMAIN_ELEMENT, _domain_body),
+    (_HOST_ATTR, _host_attr),
     (_LINK, _canonical),
     (_CANONICALISE, _canonical),
     (_SUPPORT, _support),

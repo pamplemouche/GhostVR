@@ -55,6 +55,17 @@ DEFAULT_BUNDLES = sorted(
 MIN_ACCEPTED = 0.98
 
 
+def span(is_utf16: int, length: int) -> int:
+    """Bytes occupied by an entry.
+
+    `length` in the string table counts UTF-16 code units, not bytes, so a
+    UTF-16 entry occupies twice the storage an ASCII entry of the same length
+    does. Treating the two alike under-runs every range computation, which
+    silently clobbers the neighbouring UTF-16 strings.
+    """
+    return length * 2 if is_utf16 else length
+
+
 class Bundle:
     """A Hermes container's header, string table and string storage.
 
@@ -137,8 +148,8 @@ class Bundle:
             if field >= self.overflow_count:
                 return [is_utf16, None, 0, field]
             offset, length = struct.unpack_from("<II", self.data, self.overflow_off + field * 8)
-            return [is_utf16, offset, length, field]
-        return [is_utf16, field, length, None]
+            return [is_utf16, offset, span(is_utf16, length), field]
+        return [is_utf16, field, span(is_utf16, length), None]
 
     def blob(self, index: int, data: bytes | None = None) -> bytes:
         _is_utf16, offset, length, _overflow = self.entries[index]
@@ -148,20 +159,26 @@ class Bundle:
         return bytes(source[self.storage_off + offset : self.storage_off + offset + length])
 
     def write_entry(self, data: bytearray, index: int) -> None:
+        """Write an entry back, converting the byte length to table units.
+
+        `entries` carries byte lengths so every range computation is uniform;
+        the table itself stores UTF-16 lengths in code units.
+        """
         is_utf16, offset, length, overflow = self.entries[index]
         if offset is None:
             return
+        units = length // 2 if is_utf16 else length
         if overflow is None:
             struct.pack_into(
                 "<I", data, self.table_off + index * 4,
-                (is_utf16 & 1) | (offset << 1) | (length << 24),
+                (is_utf16 & 1) | (offset << 1) | (units << 24),
             )
         else:
             struct.pack_into(
                 "<I", data, self.table_off + index * 4,
                 (is_utf16 & 1) | (overflow << 1) | (0xFF << 24),
             )
-            struct.pack_into("<II", data, self.overflow_off + overflow * 8, offset, length)
+            struct.pack_into("<II", data, self.overflow_off + overflow * 8, offset, units)
 
 
 def rewrite(text: bytes) -> bytes:
@@ -275,7 +292,12 @@ def patch_bundle(path: Path, dry_run: bool) -> str:
             progress = True
 
         if not progress:
-            raise SystemExit(f"{path.name}: stuck with {len(pending)} strings")
+            raise ValueError(
+                f"cannot relocate {len(pending)} strings: the string arena is "
+                f"full ({bundle.storage_size} bytes, no free run), and the "
+                f"bytecode that follows uses absolute offsets, so the arena "
+                f"cannot grow in place"
+            )
 
     for i in range(bundle.string_count):
         bundle.write_entry(data, i)

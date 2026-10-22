@@ -173,6 +173,16 @@ function loginResponse() {
     id: USER_ID,
     user_id: USER_ID,
     session_id: 'ghostvr-session-active',
+    // FBLoginResponse deserializes these into non-null String fields; the
+    // native session builder reads session_key/secret/machine_id downstream, so
+    // they must be present rather than absent.
+    session_key: 'ghostvr-session-key',
+    secret: 'ghostvr-secret',
+    machine_id: 'ghostvr-machine',
+    identifier: USER_EMAIL,
+    error_code: null,
+    error_msg: null,
+    error_data: null,
     expires_in: 315360000,
     token_type: 'bearer',
     user: viewerUser(),
