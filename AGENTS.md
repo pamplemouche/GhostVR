@@ -155,6 +155,27 @@ get wrong:
 - The router matches paths by prefix, so `/graphql` is checked after
   `/graphqlbatch`. Reordering those two silently misroutes every batch.
 
+## Onboarding roadblocks
+
+`RoadblocksHelper` in the `Oculus` tree gates the main screen. `MainActivity
+.onPostResume()` calls `checkRoadblocks()` on every resume, and the helper
+returns early the moment one roadblock applies. Two consequences:
+
+- `shouldShowPinRoadblock()` reads `MeManager.me().is_pin_set`, which
+  `MeManager.reloadFromPersistentStore()` rebuilds from the **server** response
+  on every refresh. The PIN step does persist `setPinSet(true)` locally
+  (`UserRoadblockIntroActivity.onActivityResult`), but the next `refresh()`
+  overwrites it, so an unset `is_pin_set` re-shows the "Create Oculus PIN"
+  screen forever.
+- Every roadblock *after* the PIN one was unreachable while the PIN gate always
+  fired. `UserRoadblockHSWShowChecker.shouldShowRoadblock()` returns `true` by
+  default, so clearing only the PIN gate just moves the loop to the HSW /
+  controller roadblock. `checkRoadblocks()` is a no-op here, and
+  `shouldShowPinRoadblock()` returns `false`, so setup lands on `MainActivity`.
+
+The backend also flips `is_pin_set` to `true` after `POST /change_pin` so a
+fresh install does not depend on the client patch alone.
+
 ## Environment notes
 
 - The patchers are memory hungry on the large bundles; run them under
