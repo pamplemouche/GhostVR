@@ -596,7 +596,7 @@
     invoke-static {p0, v0}, Lcom/facebook/internal/Utility;->clearCookiesForDomain(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 721
-    const-string v0, "https://.ghostvr.pamplemouche.com"
+    const-string v0, "https://ghostvr.pamplemouche.com"
 
     invoke-static {p0, v0}, Lcom/facebook/internal/Utility;->clearCookiesForDomain(Landroid/content/Context;Ljava/lang/String;)V
 

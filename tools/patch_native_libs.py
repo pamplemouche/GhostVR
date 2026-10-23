@@ -19,6 +19,7 @@ Run from the repository root:  python3 tools/patch_native_libs.py [--dry-run]
 from __future__ import annotations
 
 import bisect
+import re
 import struct
 import sys
 from pathlib import Path
@@ -31,6 +32,19 @@ ROOT = Path(__file__).resolve().parent.parent
 LIBDIR = ROOT / "decompiled" / "Oculus" / "lib" / "armeabi-v7a"
 
 MOBILECONFIG = "libxplat_mobileconfig_FBMobileConfigCore_FBMobileConfigCoreAndroid.so"
+
+# Hosts that name a Meta service.  `s3.amazonaws.com/o.oculuscdn.com/...` is an
+# S3 bucket path, not a Meta server, so a string carrying that prefix is left
+# alone.  `git-ro.vip.facebook.com` is build metadata baked into the compiler
+# banner; rewriting it would corrupt a `--version` string for no benefit.
+_META_LABELS = (
+    rb"oculus|facebook|fbcdn|fbsbx|fburl|oculuscdn|instagram|workplace"
+    rb"|camera-app|facebook-program|onavo|expresswifi|internet"
+)
+_META_HOST_RE = re.compile(
+    rb"(?:[A-Za-z0-9-]+\.)*(?:" + _META_LABELS + rb")\.(?:com|net|org)"
+)
+_IGNORE_NEEDLES = (b"s3.amazonaws.com/", b"git-ro.vip.facebook.com", b"in3.facebook.com")
 
 STUN = f"stun:stun.{HOST}:3478"
 DASHBOARD_HINT = (
@@ -66,12 +80,6 @@ PATCHES = [
 
 # Packed run of graph hosts with no reachable entry; refilled in place.
 SPAN_FILLS = [(MOBILECONFIG, 0x66BFA, 0x66CB2, 7)]
-
-META_DOMAINS = (
-    b"oculus.com", b"facebook.com", b"fbcdn.net", b"fbsbx.com",
-    b"oculuscdn.com", b"fburl.com", b"edge-mqtt", b"flash-graph",
-)
-BUILD_METADATA = b"git-ro.vip.facebook.com"
 
 POINTER_TABLE_SECTIONS = (".data.rel.ro", ".data.rel.ro.local")
 
@@ -243,17 +251,60 @@ def free_runs(data: bytes, sections, reachable: set[int], min_length: int):
 
 
 def meta_strings(data: bytes) -> list[tuple[int, bytes]]:
+    """Every string in `data` that still names a Meta host."""
     found = set()
-    for needle in META_DOMAINS:
-        pos = 0
-        while (pos := data.find(needle, pos)) >= 0:
-            start = data.rfind(b"\x00", 0, pos) + 1
-            end = data.find(b"\x00", pos)
-            text = bytes(data[start:end])
-            if BUILD_METADATA not in text:
-                found.add((start, text))
-            pos = end
+    for match in _META_HOST_RE.finditer(data):
+        start = data.rfind(b"\x00", 0, match.start()) + 1
+        end = data.find(b"\x00", match.start())
+        if end < 0:
+            continue
+        text = bytes(data[start:end])
+        if not any(skip in text for skip in _IGNORE_NEEDLES):
+            found.add((start, text))
     return sorted(found)
+
+
+def discover_patches(path: Path) -> list[tuple[int, str, str]]:
+    """Every Meta host string in `path`, as (vaddr, replacement, original).
+
+    Used for the libraries that have no hand-written table entry.  The
+    replacement is padded to the original length when it is shorter, so the
+    patch stays inside the string and can never reach a neighbour.
+    """
+    data = path.read_bytes()
+    _is64, loads, _sections = elf_layout(data)
+    found: dict[int, tuple[str, str]] = {}
+    for match in _META_HOST_RE.finditer(data):
+        start = data.rfind(b"\x00", 0, match.start()) + 1
+        end = data.find(b"\x00", match.start())
+        if end < 0:
+            continue
+        original = bytes(data[start:end]).decode("latin1")
+        if any(skip.decode() in original for skip in _IGNORE_NEEDLES):
+            continue
+        replacement = original.replace(match.group(0).decode("latin1"), HOST)
+        if replacement == original:
+            continue
+        if len(replacement) < len(original):
+            replacement += "\x00" * (len(original) - len(replacement))
+        try:
+            vaddr = _vaddr_of(loads, start)
+        except ValueError:
+            continue
+        found[vaddr] = (replacement, original)
+    return [(v, found[v][0], found[v][1]) for v in sorted(found)]
+
+
+def scan() -> int:
+    """Report the Meta host strings still embedded in each native library."""
+    for so in sorted((ROOT / "decompiled").rglob("*.so")):
+        entries = discover_patches(so)
+        if not entries:
+            continue
+        print(f"{so.relative_to(ROOT)}")
+        for _vaddr, replacement, original in entries:
+            print(f"    {original}  ->  {replacement.rstrip(chr(0))}")
+    return 0
 
 
 # ---------------------------------------------------------------------------
@@ -358,12 +409,27 @@ def _vaddr_of(loads, file_offset: int) -> int:
 
 def main() -> int:
     dry = "--dry-run" in sys.argv
-    for lib in sorted({p[0] for p in PATCHES} | {f[0] for f in SPAN_FILLS}):
+    if "--scan" in sys.argv:
+        return scan()
+    table_libs = {p[0] for p in PATCHES} | {f[0] for f in SPAN_FILLS}
+    for lib in sorted(table_libs):
         patches = [(v, p) for (l, v, p) in PATCHES if l == lib]
         fills = [f for f in SPAN_FILLS if f[0] == lib]
         print(lib)
         for line in patch_library(LIBDIR / lib, patches, fills, dry):
             print(line)
+
+    # Every other library, in every app, is patched from the strings it carries.
+    for so in sorted((ROOT / "decompiled").rglob("*.so")):
+        if so == LIBDIR / so.name:
+            continue  # already handled by the table above
+        patches = [(v, replacement) for (v, replacement, _old) in discover_patches(so)]
+        if not patches:
+            continue
+        print(so.relative_to(ROOT))
+        for line in patch_library(so, patches, [], dry):
+            print(line)
+
     print(f"\n{'[dry-run] ' if dry else ''}native libraries patched")
     return 0
 

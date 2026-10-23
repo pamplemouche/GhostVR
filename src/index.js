@@ -245,6 +245,35 @@ async function handleGraphql(request, url) {
   return json(graphqlResponse(await readParams(request, url)));
 }
 
+/**
+ * Relay batches several operations into one POST.  The client accepts a bare
+ * array of `{ data }` envelopes, one per operation, so answer with as many as
+ * it sent.  Each entry is reshaped into the query-string form `graphqlResponse`
+ * already understands.
+ */
+async function handleGraphqlBatch(request) {
+  let body = [];
+  try {
+    body = await request.json();
+  } catch (error) {
+    body = [];
+  }
+  if (!Array.isArray(body)) return json(graphqlResponse(asQueryParams(body)));
+  return json(body.map((entry) => graphqlResponse(asQueryParams(entry))));
+}
+
+/** Flatten a Relay batch entry into the parameter names the router matches on. */
+function asQueryParams(entry) {
+  const params = new URLSearchParams();
+  if (entry && typeof entry === 'object') {
+    for (const key of ['q', 'query', 'doc', 'doc_id', 'query_params']) {
+      const value = entry[key];
+      if (value != null) params.set(key, typeof value === 'string' ? value : JSON.stringify(value));
+    }
+  }
+  return params;
+}
+
 // ---------------------------------------------------------------------------
 // Auth REST
 // ---------------------------------------------------------------------------
@@ -497,6 +526,9 @@ function handleGenericOculus() {
 function match(pathname, method, patterns) {
   for (const [wantedMethod, fragment] of patterns) {
     if (wantedMethod && wantedMethod !== method) continue;
+    // Suffix match covers both the plain form and the version-prefixed one
+    // (`/v3.1/graphql`): the subdomain a client builds lives in the host, so
+    // it never appears in the path.
     if (pathname.endsWith(fragment)) return true;
   }
   return false;
@@ -506,6 +538,7 @@ async function route(request, url) {
   const path = url.pathname;
   const method = request.method;
 
+  if (match(path, method, [[null, '/graphqlbatch']])) return handleGraphqlBatch(request);
   if (match(path, method, [[null, '/graphql']])) return handleGraphql(request, url);
   if (match(path, method, [[null, '/features']])) return handleFeatures(request, url);
   if (match(path, method, [[null, '/mobileconfig']])) return handleMobileConfig(request, url);

@@ -97,7 +97,7 @@
 
     const-string v5, "ghostvr.pamplemouche.com"
 
-    const-string v6, "graph"
+    const-string v6, ""
 
     invoke-direct/range {v0 .. v6}, Lcom/facebook/catalyst/modules/fbauth/RelayAPIConfigModule;-><init>(Lcom/facebook/react/bridge/ReactApplicationContext;Ljava/lang/String;Ljava/lang/String;Lcom/facebook/common/locale/ILocales;Ljava/lang/String;Ljava/lang/String;)V
 

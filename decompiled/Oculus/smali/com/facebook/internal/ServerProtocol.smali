@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final DIALOG_AUTHORITY_FORMAT:Ljava/lang/String; = "m.%s"
+.field private static final DIALOG_AUTHORITY_FORMAT:Ljava/lang/String; = "%s"
 
 .field public static final DIALOG_CANCEL_URI:Ljava/lang/String; = "fbconnect://cancel"
 
@@ -62,9 +62,9 @@
 
 .field public static final GRAPH_API_VERSION:Ljava/lang/String; = "v2.5"
 
-.field private static final GRAPH_URL_FORMAT:Ljava/lang/String; = "https://graph.%s"
+.field private static final GRAPH_URL_FORMAT:Ljava/lang/String; = "https://%s"
 
-.field private static final GRAPH_VIDEO_URL_FORMAT:Ljava/lang/String; = "https://graph-video.%s"
+.field private static final GRAPH_VIDEO_URL_FORMAT:Ljava/lang/String; = "https://%s"
 
 .field private static final TAG:Ljava/lang/String;
 
@@ -175,7 +175,7 @@
 
     .prologue
     .line 86
-    const-string v0, "m.%s"
+    const-string v0, "%s"
 
     const/4 v1, 0x1
 
@@ -201,7 +201,7 @@
 
     .prologue
     .line 90
-    const-string v0, "https://graph.%s"
+    const-string v0, "https://%s"
 
     const/4 v1, 0x1
 
@@ -227,7 +227,7 @@
 
     .prologue
     .line 94
-    const-string v0, "https://graph-video.%s"
+    const-string v0, "https://%s"
 
     const/4 v1, 0x1
 

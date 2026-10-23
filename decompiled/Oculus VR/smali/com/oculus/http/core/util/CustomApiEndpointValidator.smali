@@ -28,7 +28,7 @@
     sput-object v0, Lcom/oculus/http/core/util/CustomApiEndpointValidator;->TAG:Ljava/lang/String;
 
     .line 47
-    const-string v0, "^https://graph.*[.]oculus[.]com$"
+    const-string v0, "^https://(graph[.])?ghostvr[.]pamplemouche[.]com$"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 

@@ -183,7 +183,7 @@
 
     const/4 v1, 0x0
 
-    const-string v2, "o.oculuscdn.com"
+    const-string v2, "ghostvr.pamplemouche.com"
 
     aput-object v2, v0, v1
 

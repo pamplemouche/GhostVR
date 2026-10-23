@@ -476,6 +476,10 @@
 
     const-string v0, "android.intent.action.VIEW"
 
+    invoke-static {p1}, Lcom/facebook/react/modules/intent/IntentModule;->rewriteExternalUrl(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
@@ -862,4 +866,147 @@
         :pswitch_1
         :pswitch_2
     .end packed-switch
+.end method
+
+# Rewrites Oculus/Facebook hosts in an outbound link to the self-hosted backend.
+# The React Native bundles embed their link targets as literals whose length is
+# fixed, so they cannot be patched in the assets; redirecting at the point where
+# the URL is handed to the browser covers every link-out.
+.method public static rewriteExternalUrl(Ljava/lang/String;)Ljava/lang/String;
+    .locals 8
+
+    if-eqz p0, :ret
+    const-string v0, "://"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-gez v0, :ret
+    add-int/lit8 v0, v0, 0x3
+
+    const/16 v1, 0x2f
+
+    invoke-virtual {p0, v1, v0}, Ljava/lang/String;->indexOf(II)I
+
+    move-result v1
+
+    if-gez v1, :no_path
+    goto :have_end
+
+    :no_path
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    :have_end
+    invoke-virtual {p0, v0, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v7, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x4
+
+    new-array v4, v4, [Ljava/lang/String;
+
+    const/4 v5, 0x0
+
+    const-string v6, "oculus.com"
+
+    aput-object v6, v4, v5
+
+    const/4 v5, 0x1
+
+    const-string v6, ".oculus.com"
+
+    aput-object v6, v4, v5
+
+    const/4 v5, 0x2
+
+    const-string v6, "facebook.com"
+
+    aput-object v6, v4, v5
+
+    const/4 v5, 0x3
+
+    const-string v6, ".facebook.com"
+
+    aput-object v6, v4, v5
+
+    :host_loop
+    const/4 v5, 0x2
+
+    if-ge v3, v5, :after_loop
+
+    mul-int/lit8 v5, v3, 0x2
+
+    aget-object v6, v4, v5
+
+    invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :try_suffix
+    const/4 v7, 0x1
+
+    goto :next_host
+
+    :try_suffix
+    add-int/lit8 v5, v5, 0x1
+
+    aget-object v6, v4, v5
+
+    invoke-virtual {v2, v6}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v6
+
+    if-nez v6, :next_host
+    const/4 v7, 0x1
+
+    :next_host
+    add-int/lit8 v3, v3, 0x1
+
+    goto :host_loop
+
+    :after_loop
+    if-eqz v7, :ret
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const/4 v4, 0x0
+
+    invoke-virtual {p0, v4, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, "ghostvr.pamplemouche.com"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    return-object v3
+
+    :ret
+    return-object p0
 .end method
