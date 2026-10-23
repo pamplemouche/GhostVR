@@ -98,6 +98,11 @@ function profilePhoto(name) {
   return { name, uri: USER_PHOTO, width: '360', height: '360' };
 }
 
+// Set by a successful /change_pin so the viewer stops reporting an unset PIN.
+// Without this the client persists the flag locally, MeManager.refresh()
+// overwrites it from this response, and the PIN roadblock re-appears forever.
+let pinIsSet = false;
+
 function viewerUser() {
   return {
     id: USER_ID,
@@ -107,7 +112,7 @@ function viewerUser() {
     presence: 'ONLINE',
     presence_status: 'ONLINE',
     friend_status: 'NONE',
-    is_pin_set: false,
+    is_pin_set: pinIsSet,
     profile_photo: profilePhoto('photo'),
     avatar: profilePhoto('avatar'),
     avatar_image: profilePhoto('avatar'),
@@ -337,6 +342,7 @@ async function handleRegister(request, url) {
 
 /** POST /oculus/change_pin */
 function handleChangePin() {
+  pinIsSet = true;
   return json({ success: true });
 }
 

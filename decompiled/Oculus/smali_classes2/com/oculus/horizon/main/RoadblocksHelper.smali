@@ -846,40 +846,15 @@
 .end method
 
 .method private shouldShowPinRoadblock()Z
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 224
-    iget-object v0, p0, Lcom/oculus/horizon/main/RoadblocksHelper;->mMeManager:Lcom/oculus/horizon/legacy/social/MeManager;
-
-    invoke-virtual {v0}, Lcom/oculus/horizon/legacy/social/MeManager;->me()Lcom/oculus/horizon/api/common/user/User;
-
-    move-result-object v0
-
-    .line 225
-    if-eqz v0, :cond_0
-
-    iget-object v1, v0, Lcom/oculus/horizon/api/common/user/User;->is_pin_set:Ljava/lang/Boolean;
-
-    if-eqz v1, :cond_0
-
-    iget-object v0, v0, Lcom/oculus/horizon/api/common/user/User;->is_pin_set:Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
+    # GhostVR: the self-hosted backend never reports is_pin_set=true, and
+    # MeManager.refresh() resets the locally-persisted flag on every resume,
+    # so this roadblock re-appeared forever. Skip it.
     const/4 v0, 0x0
 
-    goto :goto_0
+    return v0
 .end method
 
 .method private showPaymentMethodsRoadblock()V
@@ -1010,221 +985,14 @@
 .end method
 
 .method checkRoadblocks()V
-    .locals 5
+    .locals 0
 
     .prologue
-    const/4 v4, 0x1
-
-    .line 140
-    invoke-direct {p0}, Lcom/oculus/horizon/main/RoadblocksHelper;->shouldShowPinRoadblock()Z
-
-    move-result v0
-
-    .line 141
-    invoke-direct {p0}, Lcom/oculus/horizon/main/RoadblocksHelper;->shouldCheckMinAppVersion()Z
-
-    move-result v1
-
-    .line 143
-    if-eqz v0, :cond_1
-
-    .line 144
-    invoke-direct {p0}, Lcom/oculus/horizon/main/RoadblocksHelper;->showPinRoadblock()V
-
-    .line 217
-    :cond_0
-    :goto_0
+    # GhostVR: skipping the PIN step alone exposed the other roadblocks that
+    # used to be short-circuited (HSW shows by default, Malibu/controller and
+    # payment follow). Skip the whole onboarding sequence so setup lands on the
+    # main screen.
     return-void
-
-    .line 145
-    :cond_1
-    const/4 v0, 0x3
-
-    sget v2, Lcom/oculus/horizon/HorizonModule$UL_id;->$ul_$xXXcom_oculus_horizon_roadblock_ui_UserRoadblockPaymentMethodChecker$xXXBINDING_ID:I
-
-    iget-object v3, p0, Lcom/oculus/horizon/main/RoadblocksHelper;->$ul_mInjectionContext:Lcom/facebook/inject/InjectionContext;
-
-    invoke-static {v0, v2, v3}, Lcom/facebook/inject/FbInjector;->lazyInstance(IILcom/facebook/inject/InjectionContext;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/oculus/horizon/roadblock/ui/UserRoadblockPaymentMethodChecker;
-
-    invoke-virtual {v0}, Lcom/oculus/horizon/roadblock/ui/UserRoadblockPaymentMethodChecker;->shouldShowRoadblock()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 146
-    invoke-direct {p0}, Lcom/oculus/horizon/main/RoadblocksHelper;->showPaymentMethodsRoadblock()V
-
-    goto :goto_0
-
-    .line 147
-    :cond_2
-    if-eqz v1, :cond_3
-
-    .line 148
-    const/4 v0, 0x2
-
-    sget v1, Lcom/oculus/coreapps/CoreappsModule$UL_id;->$ul_$xXXcom_oculus_coreapps_CoreAppManager$xXXBINDING_ID:I
-
-    iget-object v2, p0, Lcom/oculus/horizon/main/RoadblocksHelper;->$ul_mInjectionContext:Lcom/facebook/inject/InjectionContext;
-
-    invoke-static {v0, v1, v2}, Lcom/facebook/inject/FbInjector;->lazyInstance(IILcom/facebook/inject/InjectionContext;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/oculus/coreapps/CoreAppManager;
-
-    new-instance v1, Lcom/oculus/horizon/main/RoadblocksHelper$2;
-
-    invoke-direct {v1, p0}, Lcom/oculus/horizon/main/RoadblocksHelper$2;-><init>(Lcom/oculus/horizon/main/RoadblocksHelper;)V
-
-    invoke-virtual {v0, v1}, Lcom/oculus/coreapps/CoreAppManager;->fetchRequiredCoreAppsForUpdate(Lcom/oculus/http/core/base/ApiCallback;)V
-
-    goto :goto_0
-
-    .line 165
-    :cond_3
-    sget v0, Lcom/oculus/horizon/HorizonModule$UL_id;->$ul_$xXXcom_oculus_horizon_roadblock_ui_UserRoadblockMalibuShowChecker$xXXBINDING_ID:I
-
-    iget-object v1, p0, Lcom/oculus/horizon/main/RoadblocksHelper;->$ul_mInjectionContext:Lcom/facebook/inject/InjectionContext;
-
-    invoke-static {v4, v0, v1}, Lcom/facebook/inject/FbInjector;->lazyInstance(IILcom/facebook/inject/InjectionContext;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/oculus/horizon/roadblock/ui/UserRoadblockMalibuShowChecker;
-
-    invoke-virtual {v0}, Lcom/oculus/horizon/roadblock/ui/UserRoadblockMalibuShowChecker;->shouldShowRoadblock()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    .line 166
-    new-array v0, v4, [Lcom/oculus/horizon/roadblock/model/Roadblock;
-
-    const/4 v1, 0x0
-
-    new-instance v2, Lcom/oculus/horizon/roadblock/model/Roadblock;
-
-    sget-object v3, Lcom/oculus/horizon/roadblock/model/Roadblock$Type;->MALIBU_CONTROLLER:Lcom/oculus/horizon/roadblock/model/Roadblock$Type;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v2, v3, v4}, Lcom/oculus/horizon/roadblock/model/Roadblock;-><init>(Lcom/oculus/horizon/roadblock/model/Roadblock$Type;Landroid/os/Bundle;)V
-
-    aput-object v2, v0, v1
-
-    invoke-virtual {p0, v0}, Lcom/oculus/horizon/main/RoadblocksHelper;->showRoadblocks([Lcom/oculus/horizon/roadblock/model/Roadblock;)V
-
-    goto :goto_0
-
-    .line 167
-    :cond_4
-    const/4 v0, 0x4
-
-    sget v1, Lcom/oculus/horizon/profile/UserProfileModule$UL_id;->$ul_$xXXcom_oculus_horizon_profile_UserProfileHelper$xXXBINDING_ID:I
-
-    iget-object v2, p0, Lcom/oculus/horizon/main/RoadblocksHelper;->$ul_mInjectionContext:Lcom/facebook/inject/InjectionContext;
-
-    invoke-static {v0, v1, v2}, Lcom/facebook/inject/FbInjector;->lazyInstance(IILcom/facebook/inject/InjectionContext;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/oculus/horizon/profile/UserProfileHelper;
-
-    invoke-virtual {v0}, Lcom/oculus/horizon/profile/UserProfileHelper;->hasSeenSocialNux()Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    .line 169
-    iget-object v0, p0, Lcom/oculus/horizon/main/RoadblocksHelper;->mSocialMethods:Lcom/oculus/horizon/social/SocialMethods;
-
-    new-instance v1, Lcom/oculus/horizon/main/RoadblocksHelper$3;
-
-    invoke-direct {v1, p0}, Lcom/oculus/horizon/main/RoadblocksHelper$3;-><init>(Lcom/oculus/horizon/main/RoadblocksHelper;)V
-
-    invoke-virtual {v0, v1}, Lcom/oculus/horizon/social/SocialMethods;->checkUserHasSeenSocialNux(Lretrofit/Callback;)V
-
-    goto :goto_0
-
-    .line 189
-    :cond_5
-    invoke-direct {p0}, Lcom/oculus/horizon/main/RoadblocksHelper;->shouldCheckActivityPrivacyUpdateRoadblock()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    .line 190
-    iget-object v0, p0, Lcom/oculus/horizon/main/RoadblocksHelper;->mSocialMethods:Lcom/oculus/horizon/social/SocialMethods;
-
-    new-instance v1, Lcom/oculus/horizon/main/RoadblocksHelper$4;
-
-    invoke-direct {v1, p0}, Lcom/oculus/horizon/main/RoadblocksHelper$4;-><init>(Lcom/oculus/horizon/main/RoadblocksHelper;)V
-
-    invoke-virtual {v0, v1}, Lcom/oculus/horizon/social/SocialMethods;->checkUserHasSeenActivityPrivacyUpdateRoadblock(Lretrofit/Callback;)V
-
-    goto :goto_0
-
-    .line 211
-    :cond_6
-    iget-object v0, p0, Lcom/oculus/horizon/main/RoadblocksHelper;->mStoresManager:Lcom/oculus/horizon/store/StoresManager;
-
-    invoke-virtual {v0}, Lcom/oculus/horizon/store/StoresManager;->getStoreModel()Lcom/oculus/horizon/store/StoreModel;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_7
-
-    iget-object v0, p0, Lcom/oculus/horizon/main/RoadblocksHelper;->mStoresManager:Lcom/oculus/horizon/store/StoresManager;
-
-    .line 212
-    invoke-virtual {v0}, Lcom/oculus/horizon/store/StoresManager;->getStoreModel()Lcom/oculus/horizon/store/StoreModel;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/oculus/horizon/store/StoreModel;->storeWideOffers:Ljava/util/List;
-
-    invoke-static {v0}, Lcom/oculus/util/collection/CollectionUtil;->isNotNullOrEmpty(Ljava/util/Collection;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_7
-
-    .line 213
-    iget-object v0, p0, Lcom/oculus/horizon/main/RoadblocksHelper;->mStoresManager:Lcom/oculus/horizon/store/StoresManager;
-
-    invoke-virtual {v0}, Lcom/oculus/horizon/store/StoresManager;->getStoreModel()Lcom/oculus/horizon/store/StoreModel;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/oculus/horizon/store/StoreModel;->storeWideOffers:Ljava/util/List;
-
-    invoke-direct {p0, v0}, Lcom/oculus/horizon/main/RoadblocksHelper;->checkShouldShowSpecialOfferRoadblocks(Ljava/util/List;)V
-
-    goto/16 :goto_0
-
-    .line 214
-    :cond_7
-    iget-object v0, p0, Lcom/oculus/horizon/main/RoadblocksHelper;->mRoadblocksTimer:Lcom/oculus/horizon/main/RoadblocksTimer;
-
-    invoke-virtual {v0}, Lcom/oculus/horizon/main/RoadblocksTimer;->shouldUpdate()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 215
-    invoke-direct {p0}, Lcom/oculus/horizon/main/RoadblocksHelper;->checkTermsOfService()V
-
-    goto/16 :goto_0
 .end method
 
 .method varargs showRoadblocks([Lcom/oculus/horizon/roadblock/model/Roadblock;)V
