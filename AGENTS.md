@@ -59,8 +59,9 @@ fine: none of the Meta URLs left inside them are on a request path.
 
 Link-outs are instead rewritten at runtime, in
 `com/facebook/react/modules/intent/IntentModule.rewriteExternalUrl`. It is
-called from `openURL`, the single funnel the `IntentAndroid` module exposes to
-the bundles, and replaces an `oculus.com` / `facebook.com` host (bare or as a
+called from `openURL` (the funnel the `IntentAndroid` module exposes to the
+bundles) and from `NetworkingModule.sendRequestInternal` (the funnel for fetch
+and XHR), and replaces an `oculus.com` / `facebook.com` host (bare or as a
 subdomain) with the self-hosted host while preserving scheme, path and query.
 Note the matcher tests the *host component*, not a substring: a substring test
 for `.oculus.com` also rewrites `our.intern.facebook.com` and would let the

@@ -1359,6 +1359,10 @@
 
     .prologue
     .line 266
+    invoke-static {p2}, Lcom/facebook/react/modules/intent/IntentModule;->rewriteExternalUrl(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
     invoke-direct {p0}, Lcom/facebook/react/modules/network/NetworkingModule;->getEventEmitter()Lcom/facebook/react/modules/core/DeviceEventManagerModule$RCTDeviceEventEmitter;
 
     move-result-object v5
