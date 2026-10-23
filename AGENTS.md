@@ -65,6 +65,77 @@ hard parse failure that aborts the app at startup. `patch_resources.py` keeps
 filters) bare, moving any path to a sibling `android:pathPrefix`. Do not let a
 plain host rewrite rule append `/support` inside those positions.
 
+## Subdomain templates in smali
+
+Some hosts are assembled at runtime rather than stored whole, so rewriting the
+host literal alone leaves a dead subdomain in front of it:
+
+- `ServerProtocol.getDialogAuthority()` formatted `m.%s`, and
+  `getGraphUrlBase()`/`getGraphVideoUrlBase()` formatted `https://graph.%s`.
+  With `FacebookSdk.FACEBOOK_COM` pointing at the self-hosted host these
+  produced `m.ghostvr.pamplemouche.com` and `graph.ghostvr.pamplemouche.com`,
+  neither of which resolves. The OAuth dialog is built from the first one, so
+  the sign-in page silently failed to load. Both are now `%s`.
+- `RelayAPIConfigModule.getGraphURI` prepends a `mGraphSubdomain` field plus a
+  literal `.` to the host. Emptying the field is not enough: the builder still
+  emits `https://.ghostvr.pamplemouche.com/...`, and a leading-dot label makes
+  the name unresolvable (the same failure `getDialogAuthority()` had). The
+  method now appends `mGraphDomain` directly. `HorizonReactPackage$22` passes an
+  empty subdomain, so both the `/graphql` and `/graphqlbatch` URIs it hands to
+  the React Native bundles are correct.
+
+That method is the only source of the Relay endpoint for the Hermes bundles:
+every `reactnative.*.bcbundle` and `HorizonBundle.js.hbc` reads `graphURI` /
+`graphBatchURI` out of the `RelayAPIConfig` native module rather than storing a
+host of its own. Fixing it redirects the whole JS GraphQL surface, so the Meta
+hosts that remain inside those bundles (a `graph.{tier}.oculus.com` template and
+several marketing/legal links) are not on the request path.
+
+When adding a host, grep the smali for `%s`-style templates and for fields named
+`*Subdomain` / `*_FORMAT` before assuming the rewrite is complete. Dead
+`private static final` format fields still matter: they are real string
+constants that a rebuild keeps in the dex, and a future call site would pick
+them up.
+
+## Native library patching
+
+`tools/patch_native_libs.py` patches two ways:
+
+- A hand-written `PATCHES` table of `(library, vaddr, replacement)` for the
+  libraries whose strings grow (the OVR Platform SDK and avatar SDK). Growth is
+  safe only when the neighbours are unreachable, which the script proves by
+  checking relocation slots, pointer tables and pc-relative references, moving
+  any reachable neighbour into spare `.rodata`.
+- `--scan` plus automatic discovery for every other `.so` in every app. The
+  replacement here is padded to the original length, so it can never spill into
+  a neighbour and needs no reachability analysis. This is what covers the
+  OCMS and `x86` copies, which the table alone missed.
+
+`--scan` is the source of truth for what is left; the run asserts on it at the
+end. The regex has to cover the whole Meta label set, not just
+`oculus`/`facebook`: `flash-graph.camera-app.net`, `graph.onavo.com`,
+`z-graph.expresswifi.com` and `graph.facebook-program.com` sit in the same
+mobileconfig host list. A too-narrow regex lets the assertion pass while a Meta
+host survives.
+
+Two strings are deliberately left alone: `s3.amazonaws.com/o.oculuscdn.com/...`
+is an S3 bucket path rather than a Meta server, and `git-ro.vip.facebook.com` is
+build metadata inside a compiler banner. Re-running the patcher must be a no-op;
+confirm with `md5sum` over `decompiled/**/*.so` before and after.
+
+## Backend routes
+
+`src/index.js` serves the self-hosted endpoint. Two details that are easy to
+get wrong:
+
+- Relay batches operations into a single `POST /graphqlbatch` with a JSON
+  **array** body. `graphqlResponse` expects the parameter-shaped object that
+  `readParams` produces, so each entry has to be flattened through
+  `asQueryParams` first; passing the raw entry throws `params.get is not a
+  function`.
+- The router matches paths by prefix, so `/graphql` is checked after
+  `/graphqlbatch`. Reordering those two silently misroutes every batch.
+
 ## Environment notes
 
 - The patchers are memory hungry on the large bundles; run them under
