@@ -48,6 +48,24 @@ Two traps have already shipped a corrupt bundle once:
   function header. The tool now refuses to write instead of corrupting the
   file. Repointing that bundle needs a real recompile of the JS, not a patch.
 
+Neither bundle can be repointed by rewriting its string table, and that is
+fine: none of the Meta URLs left inside them are on a request path.
+
+- The bundles do not store a GraphQL host. They read `graphURI` /
+  `graphBatchURI` out of the `RelayAPIConfig` native module, so patching
+  `RelayAPIConfigModule` redirects all of their Relay traffic.
+- The remaining literals are link-out targets (marketing, legal, support). Our
+  host is longer than Meta's, so they cannot be patched in place either.
+
+Link-outs are instead rewritten at runtime, in
+`com/facebook/react/modules/intent/IntentModule.rewriteExternalUrl`. It is
+called from `openURL`, the single funnel the `IntentAndroid` module exposes to
+the bundles, and replaces an `oculus.com` / `facebook.com` host (bare or as a
+subdomain) with the self-hosted host while preserving scheme, path and query.
+Note the matcher tests the *host component*, not a substring: a substring test
+for `.oculus.com` also rewrites `our.intern.facebook.com` and would let the
+path of `nfe.prefeitura.sp.gov.br` masquerade as a host.
+
 The container header (`BytecodeFileHeader`) is 97 bytes and is padded to a
 64-byte boundary before the function headers:
 
