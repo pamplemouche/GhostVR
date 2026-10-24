@@ -23,6 +23,7 @@ to its default file list.
 | `tools/patch_native_libs.py` | hosts inside `lib/**/*.so` |
 | `tools/patch_certificate_pinning.py` | network security config / pinning |
 | `tools/patch_hermes_bundle.py` | React Native Hermes bundles |
+| `tools/check_graphql_payload.py` | `/graphql` answers vs. client models |
 
 ## Hermes bundles
 
@@ -176,6 +177,29 @@ returns early the moment one roadblock applies. Two consequences:
 The backend also flips `is_pin_set` to `true` after `POST /change_pin` so a
 fresh install does not depend on the client patch alone.
 
+## Gatekeeper refresh
+
+`GET /features` answers `ConfigUpdater.fetchAsync()`, which `afterLoginAsync()`
+runs right after login and which `forceUpdateConfigAsync()` runs on every
+config refresh. The response body is `{ data: [ { results: [...] } ] }` and
+`RefreshGatekeepersResponse$Data.results` is a positional `List<Boolean>`, one
+entry per requested `projects[]` value - not a map keyed by gatekeeper name.
+
+`ConfigUpdater.onRefreshGatekeepers()` asserts
+`values.size() == names.size()` (`Preconditions.checkArgument`) while iterating
+the names, and the Retrofit callback executor is
+`retrofit/android/MainThreadExecutor`, so a short list throws on the UI thread
+and takes the process down. The handler used to return an empty `results` for
+every request, which is exactly that crash on the first post-login refresh.
+`handleFeatures` now echoes one boolean per requested project.
+
+Values matter as much as the count: `ConfigController.getGatekeeper(name)`
+defaults to `false` for anything the server does not set, and
+`FragmentFactoryImpl.newDefaultFragment()` opens the feed fragment only when
+`oculus_horizon_feed_default` is true - otherwise the home screen becomes the
+store. `ENABLED_GATEKEEPERS` therefore turns the two feed gates on and leaves
+every other gate at its default.
+
 ## GraphQL response envelope
 
 `ApiResponseConverter` (`com/oculus/http/core/ApiResponseConverter`) decides the
@@ -228,6 +252,25 @@ Verify with the invariants, not by eye:
 Some fields are genuinely nullable and every consumer null-guards them:
 `current_party` (`PlatformPluginManager$5`, `PartyCallManagerImpl$6`) and
 `default_digital_payment_method`. Those stay `null` rather than empty objects.
+
+The same "concrete POJO, no null check" rule applies to types, not just keys,
+and a wrong type is as fatal as a missing key. Gson throws
+`JsonSyntaxException` when a scalar lands on an object field (or the reverse),
+and that surfaces as the same generic error screen. `GRAPHQL_PAYLOAD` used to
+carry several such mismatches - `user_quality_rating` as the string `"UNKNOWN"`
+where `Item$AndroidBinary` declares `Item$QualityRating`, `notifications` as an
+array where `User` declares `User$GameInviteList`, `app_binary_info` as an
+array where the field is `AppBinaryInfo`, `cloud_file_wildcards` and
+`app_binary_updates` as objects missing their nested key, `query_map_from_uuid`
+and `mutation_upload_map` as arrays where the fields are objects. Every value
+now matches its declared type, and the nullable ones (`user_quality_rating`,
+`head_tracking`) are `null` so no nested object has to be invented.
+
+Check this with `tools/check_graphql_payload.py`, not by eye: for every
+`/graphql` response class it walks the payload the same way the client
+deserializes it and asserts each value's JSON kind against the declared field
+type (enums must be one of the enum's constants, lists must be arrays, objects
+must recurse). It exits non-zero on any mismatch.
 
 ## Is the Home UI server-served?
 
