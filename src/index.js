@@ -17,6 +17,7 @@ const USER_ALIAS = 'GhostVR';
 const USER_NAME = 'GhostVR User';
 const USER_EMAIL = 'ghostvr@pamplemouche.com';
 const USER_PHOTO = 'https://ghostvr.pamplemouche.com/assets/avatar.png';
+const DEVICE_SECRET = 'ghostvr_device_secret';
 const ACCESS_TOKEN = `OC|${USER_ID}|ghostvr_session_valid_token`;
 
 // ---------------------------------------------------------------------------
@@ -113,18 +114,23 @@ function viewerUser() {
     presence_status: 'ONLINE',
     friend_status: 'NONE',
     is_pin_set: pinIsSet,
+    device_secret: DEVICE_SECRET,
     profile_photo: profilePhoto('photo'),
     avatar: profilePhoto('avatar'),
     avatar_image: profilePhoto('avatar'),
     current_room: { nodes: [] },
+    current_party: null,
     presence_status_updated_at: 0,
     online_platforms: [],
-    friend_requests_received_2: { count: 0 },
-    friends: { count: 0, nodes: [] },
-    notifications: { nodes: [], page_info: { has_next_page: false, end_cursor: null } },
+    friend_requests_received_2: connection([]),
+    friends: connection([]),
+    blocked_users: connection([]),
+    notifications: connection([]),
     mutual_friends: null,
-    all_payment_methods: { nodes: [] },
+    all_payment_methods: connection([]),
+    payment_methods: connection([]),
     client_preference_data: [],
+    eligible_promotions: connection([]),
   };
 }
 
@@ -139,6 +145,21 @@ const LINKED_ACCOUNTS = {
 
 const PRIVACY_EDGES = { edges: [], identity_in_search_state: 'EVERYONE' };
 
+/**
+ * Relay connection envelope. The generated response models hold these fields
+ * as concrete `ArrayList`s and iterate them directly, so an absent key is an
+ * NPE rather than an empty list.
+ */
+function connection(nodes, extra = {}) {
+  return {
+    nodes,
+    edges: [],
+    count: nodes.length,
+    page_info: { has_next_page: false, has_previous_page: false, end_cursor: null, start_cursor: null },
+    ...extra,
+  };
+}
+
 /** Full viewer object: the shape getMyUserProfile / getViewer expect. */
 function viewerWithProfile() {
   return {
@@ -148,7 +169,42 @@ function viewerWithProfile() {
     privacy_current_activity: PRIVACY_EDGES,
     privacy_friends: PRIVACY_EDGES,
     privacy_real_world_identity: PRIVACY_EDGES,
-    user: viewerUser(),
+    // The home screen is FeedFragment and calls Feed.fromResponse(), which
+    // dereferences viewer.feed.nodes with no null checks. A viewer without
+    // `feed` crashes the main screen the moment it opens.
+    feed: connection([]),
+    saved: connection([]),
+    payment_account: paymentAccount(),
+    is_oculus_developer_blocked: false,
+    is_oculus_developer: false,
+    device_secret: DEVICE_SECRET,
+    default_digital_payment_method: null,
+    all_device_manifests: connection([], { device_wipe_status: 'NONE' }),
+    user: {
+      ...viewerUser(),
+      notifications: connection([], { unseen_count: 0 }),
+      notification_opt_out_preferences_list: [],
+      dev_notif_opt_out_preferences_list: [],
+      current_party: null,
+      is_oculus_developer_blocked: false,
+      is_oculus_developer: false,
+    },
+  };
+}
+
+/**
+ * `me()` and `viewer()` share the generated commerce models, which declare
+ * `payment_account` and the nested connections as concrete types. Both order
+ * queries (digital_orders and stored_credit) read them without a guard.
+ */
+function paymentAccount() {
+  return {
+    digital_orders: connection([]),
+    stored_credit: {
+      id: 'ghostvr_stored_credit',
+      balance: { amount_in_hundredths: 0, currency: 'USD', formatted_amount: '$0.00' },
+      subcredits: { nodes: [] },
+    },
   };
 }
 
@@ -209,41 +265,66 @@ function graphqlResponse(params) {
     firstParam(params, 'query_params') || ''
   }`.toLowerCase();
 
+  // The same generated models are reached through both roots depending on the
+  // caller, and an absent root is an NPE, so both are always present.
+  const base = { viewer: viewerWithProfile(), me: viewerWithProfile() };
+
+  if (haystack.includes('node(') || haystack.includes('friends.orderby')) {
+    return { data: { ...base, node: nodeUser() } };
+  }
+
   if (haystack.includes('entitlement') || haystack.includes('iap') || haystack.includes('drm')) {
     const node = entitlementNode();
     const edges = { active_android_entitlements: { nodes: [node] } };
     return { data: { entitlements: edges, me: edges, viewer: edges } };
   }
 
-  if (
-    haystack.includes('linked_accounts_info') ||
-    haystack.includes('privacy_') ||
-    haystack.includes('myuserprofile')
-  ) {
-    return { data: { viewer: viewerWithProfile() } };
+  if (haystack.includes('default_apps_nux_config')) {
+    return { data: { ...base, default_apps_nux_config: { hi_pri_apps_wait_timeout: 0 } } };
   }
 
-  if (haystack.includes('notification') || haystack.includes('friend_request')) {
-    return {
-      data: {
-        viewer: {
-          notifications: { nodes: [], page_info: { has_next_page: false, end_cursor: null } },
-          friend_requests_received_2: { count: 0 },
-        },
-      },
-    };
+  if (haystack.includes('sync_device_manifest')) {
+    return { data: { ...base, sync_device_manifest: { client_mutation_id: 'ghostvr' } } };
   }
 
-  if (haystack.includes('library') || haystack.includes('applications')) {
-    return {
-      data: {
-        viewer: viewerWithProfile(),
-        applications: { nodes: [], page_info: { has_next_page: false, end_cursor: null } },
-      },
-    };
+  // `mutation_upload_map` / `query_map_from_uuid` both key their payload by the
+  // operation name, which is the mutation/query root field itself.
+  if (haystack.includes('mutation_upload_map')) {
+    return { data: { ...base, mutation_upload_map: mapEnvelope() } };
   }
 
-  return { data: { viewer: viewerWithProfile() } };
+  if (haystack.includes('query_map_from_uuid')) {
+    return { data: { ...base, query_map_from_uuid: mapEnvelope() } };
+  }
+
+  if (haystack.includes('notifications_mark_all_seen')) {
+    return { data: { ...base, notifications_mark_all_seen: { client_mutation_id: 'ghostvr' } } };
+  }
+
+  if (haystack.includes('applications') || haystack.includes('library')) {
+    return { data: { ...base, applications: connection([]) } };
+  }
+
+  return { data: base };
+}
+
+/**
+ * `node(user_id)` root. fetchPartyInvitableUsersSync reads `friends` and
+ * `current_party` straight off it.
+ */
+function nodeUser() {
+  return {
+    ...viewerUser(),
+    friends: connection([]),
+    current_party: null,
+    profile_photo: profilePhoto('photo'),
+    avatar_image: profilePhoto('avatar'),
+  };
+}
+
+/** Payload shared by the guardian map upload / lookup mutations. */
+function mapEnvelope() {
+  return { uuid: 'ghostvr_map', id: 'ghostvr_map', map_download_uri: '', guardian_info: null };
 }
 
 async function handleGraphql(request, url) {
@@ -522,7 +603,7 @@ function handleHeartbeat() {
 
 /** Catch-all for an API-prefixed path we did not anticipate. */
 function handleGenericOculus() {
-  return json({ data: { viewer: viewerWithProfile() }, success: true, status: 'ok' });
+  return json({ data: { viewer: viewerWithProfile(), me: viewerWithProfile() }, success: true, status: 'ok' });
 }
 
 // ---------------------------------------------------------------------------

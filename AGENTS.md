@@ -176,6 +176,59 @@ returns early the moment one roadblock applies. Two consequences:
 The backend also flips `is_pin_set` to `true` after `POST /change_pin` so a
 fresh install does not depend on the client patch alone.
 
+## Home screen crash: unguarded response models
+
+Clearing the roadblocks lands on `MainActivity`, whose default fragment is the
+legacy feed (`FragmentFactoryImpl.newDefaultFragment` returns `FeedFragment`
+unless the `feed_as_default` gatekeeper is off). `FeedFragment.fetchFeed()`
+calls `FeedMethods.getFeed()` with a `viewer() { feed { nodes { ... } } }`
+query, and the response callback runs `Feed.fromResponse()`:
+
+```smali
+iget-object v0, p0, FeedResponse;->viewer
+iget-object v0, v0, FeedResponse$Viewer;->feed
+iget-object v0, v0, FeedResponse$Viewer$Feed;->nodes
+invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()
+```
+
+There is no null check anywhere on that chain, so a `viewer` object without a
+`feed` key throws an NPE on the UI thread the instant the home screen opens.
+That is the systematic crash: the backend used to answer every unrecognised
+GraphQL operation with a bare `viewer`, and the feed query was one of them.
+
+The generated response models are Jackson-mapped POJOs that declare nested
+collections as concrete `ArrayList`s, so a *missing key* is not an empty list,
+it is a null field. Any query whose response lacks a selected connection can
+crash the screen that reads it. `viewerWithProfile()` therefore always carries
+the fields the known call sites select, via the `connection()` helper (which
+emits `nodes`, `edges`, `count` and `page_info` together).
+
+`me()` is the other root: `ApiDispatcher`, `SocialMethods` and the commerce
+screens query `me()`, and an absent `me` key is the same NPE. `graphqlResponse`
+returns both roots on every branch.
+
+The `node(user_id)` root (`SocialMethods.fetchPartyInvitableUsersSync`) reads
+`friends` and `current_party` directly, so it has its own `nodeUser()` shape.
+
+Some fields are genuinely nullable and every consumer null-guards them:
+`current_party` (`PlatformPluginManager$5`, `PartyCallManagerImpl$6`) and
+`default_digital_payment_method`. Those stay `null` rather than empty objects.
+
+## Is the Home UI server-served?
+
+No. The VR shell (`Oculus Home`) ships its React Native and ReactVR surfaces as
+local assets (`assets/src/...`, `reactnative.HOME.bcbundle`,
+`reactnative.STORE.bcbundle`) and `Oculus Home/smali` contains no remote bundle
+URL. The phone app is the same: `HorizonBundle.js.hbc` is local. Neither shell
+fetches its UI from a server.
+
+What *is* server-driven is the data those surfaces render. The bundles hold no
+GraphQL host; they read `graphURI` / `graphBatchURI` from the `RelayAPIConfig`
+native module, so pointing that module at the backend redirects every Relay
+call. The remaining Meta URLs inside the bundles are link-outs, not data
+fetches. There is therefore nothing to re-host for the UI itself - the app
+already renders its own screens and only needs the endpoints to answer.
+
 ## Environment notes
 
 - The patchers are memory hungry on the large bundles; run them under
