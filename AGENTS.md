@@ -176,39 +176,54 @@ returns early the moment one roadblock applies. Two consequences:
 The backend also flips `is_pin_set` to `true` after `POST /change_pin` so a
 fresh install does not depend on the client patch alone.
 
-## Home screen crash: unguarded response models
+## GraphQL response envelope
 
-Clearing the roadblocks lands on `MainActivity`, whose default fragment is the
-legacy feed (`FragmentFactoryImpl.newDefaultFragment` returns `FeedFragment`
-unless the `feed_as_default` gatekeeper is off). `FeedFragment.fetchFeed()`
-calls `FeedMethods.getFeed()` with a `viewer() { feed { nodes { ... } } }`
-query, and the response callback runs `Feed.fromResponse()`:
+`ApiResponseConverter` (`com/oculus/http/core/ApiResponseConverter`) decides the
+envelope, and it has two modes:
 
-```smali
-iget-object v0, p0, FeedResponse;->viewer
-iget-object v0, v0, FeedResponse$Viewer;->feed
-iget-object v0, v0, FeedResponse$Viewer$Feed;->nodes
-invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()
-```
+- The target type is annotated `@SingleEntryMapResponse` (`UserInfoResponse`,
+  `FeedResponse`'s siblings, `UniversalSearchResponse`, ...). The body is
+  deserialized as a `Map<String, T>`, and `getObjectFromJsonMapResponse` then
+  requires **exactly one** entry and returns its value. The key itself is
+  discarded, so the name does not matter - only that there is one.
+- The target type is not annotated. The body is deserialized straight onto the
+  class, so the JSON keys must be the class's own `@SerializedName` values.
 
-There is no null check anywhere on that chain, so a `viewer` object without a
-`feed` key throws an NPE on the UI thread the instant the home screen opens.
-That is the systematic crash: the backend used to answer every unrecognised
-GraphQL operation with a bare `viewer`, and the feed query was one of them.
+A body of `{<rootField>: VALUE}` satisfies both at once:
 
-The generated response models are Jackson-mapped POJOs that declare nested
-collections as concrete `ArrayList`s, so a *missing key* is not an empty list,
-it is a null field. Any query whose response lacks a selected connection can
-crash the screen that reads it. `viewerWithProfile()` therefore always carries
-the fields the known call sites select, via the `connection()` helper (which
-emits `nodes`, `edges`, `count` and `page_info` together).
+- plain class      -> `VALUE` is read off the field named `<rootField>`
+- annotated class  -> the single key is dropped and `VALUE` becomes the class
 
-`me()` is the other root: `ApiDispatcher`, `SocialMethods` and the commerce
-screens query `me()`, and an absent `me` key is the same NPE. `graphqlResponse`
-returns both roots on every branch.
+`graphqlResponse()` therefore returns `{ [root]: GRAPHQL_PAYLOAD }`, where
+`GRAPHQL_PAYLOAD` is a superset built from every `/graphql` response class in
+the decompiled trees (fields, nested types and enum defaults). The root field
+comes from `rootFieldOf()`, which handles both shapes the app emits:
+`query { viewer { .. } }` and the call-style `me() { .. }` / `node(<id>) { .. }`.
 
-The `node(user_id)` root (`SocialMethods.fetchPartyInvitableUsersSync`) reads
-`friends` and `current_party` directly, so it has its own `nodeUser()` shape.
+Two envelope bugs were fixed here, and both produced the same user-visible
+failure - every screen fell into its error branch and rendered
+`common_error_generic_title` ("Une erreur s'est produite."):
+
+- The old body was `{data: {...}}`. Annotated classes unwrapped to `{...}`
+  (the inner object), which then lacked the root key; plain classes read a
+  non-existent `data` field. Neither matched.
+- The old `graphqlResponse` keyword-matched the query and returned only the
+  roots it recognised, so a `viewer` object could arrive without `feed`.
+
+Because the payload is one module-level literal, a per-request field like
+`is_pin_set` has to be applied at read time. `applyPinState()` walks the object
+and flips `is_pin_set` when `pinIsSet` is set; without it `MeManager.refresh()`
+would overwrite the local pin flag from a frozen `false` and re-show the
+"Create Oculus PIN" roadblock forever.
+
+Verify with the invariants, not by eye:
+
+- every `/graphql` response class has exactly one public field whose
+  `@SerializedName` exists as a top-level key in `GRAPHQL_PAYLOAD`;
+- for a plain (non-annotated) class the payload key must equal that class's own
+  root field, because the body is mapped directly onto it;
+- no plain class declares more than one field (otherwise a single-key body
+  could not satisfy it).
 
 Some fields are genuinely nullable and every consumer null-guards them:
 `current_party` (`PlatformPluginManager$5`, `PartyCallManagerImpl$6`) and

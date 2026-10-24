@@ -208,24 +208,6 @@ function paymentAccount() {
   };
 }
 
-function entitlementNode() {
-  return {
-    id: 'entitlement_ghostvr_master',
-    is_viewer_entitled: true,
-    signed_token: 'GHOSTVR_VALID_MOCK_TOKEN',
-    item: {
-      id: 'ghostvr_app',
-      grouping: { id: 'group_ghostvr' },
-      iap_entitlements: [],
-      latest_supported_binary: {
-        package_name: 'com.oculus.horizon',
-        version_code: 900257473,
-        uri: '',
-        obb_binary: null,
-      },
-    },
-  };
-}
 
 function loginResponse() {
   return {
@@ -256,75 +238,67 @@ function loginResponse() {
 // ---------------------------------------------------------------------------
 
 /**
- * The app sends the operation text in `q` (with `doc`/`doc_id` for persisted
- * queries). Keyword matching is enough because every branch returns the keys
- * the caller reads; unknown operations fall back to a generic viewer.
+ * Superset payload for every `/graphql` response class in the decompiled tree.
+ *
+ * ApiResponseConverter maps the response body straight onto the generated
+ * response class. For the classes annotated `@SingleEntryMapResponse` it first
+ * unwraps the body's single top-level entry. A body of `{<root>: VALUE}` is the
+ * one shape that satisfies both:
+ *
+ *   - plain class      -> VALUE is read off the class field named `<root>`
+ *   - annotated class  -> the key is discarded, VALUE is read as the class
+ *
+ * The previous `{data: {...}}` envelope satisfied neither, so every feed page
+ * rejected the response and fell into its error branch, which renders
+ * `common_error_generic_title` ("Une erreur s'est produite.").
  */
-function graphqlResponse(params) {
-  const haystack = `${firstParam(params, 'q', 'query', 'doc', 'doc_id') || ''} ${
-    firstParam(params, 'query_params') || ''
-  }`.toLowerCase();
+const GRAPHQL_PAYLOAD = {"accepted_friend_requester":{"all_payment_methods":{"nodes":[]},"avatar_image":{"height":"","name":"","uri":"","width":""},"client_preference_data":[],"current_room":{"nodes":[]},"email":"","friend_requests_received_2":{"edges":[]},"friends":{},"is_pin_set":false,"notifications":[],"presence":"","profile_photo":{"height":"","name":"","uri":"","width":""}},"active_android_entitlements":{"nodes":[]},"add_credit_card":{},"all_device_manifests":{"nodes":[]},"all_items":{},"all_payment_methods":{"nodes":[]},"alternative_items":[],"app_binary_info":[],"app_binary_updates":{},"app_entitlements":[],"app_redeem_coupon":{},"app_store":{"sections":{"nodes":[]},"store_assets":{"edges":[]},"store_wide_offers":[],"style_theme":""},"avatar_image":{"height":"","name":"","uri":"","width":""},"billing_agreement_id":"","blocked_user":{"alias":"","id":""},"blocked_users":{"nodes":[]},"challenge_tos":"","client_preference_data":[],"cloud_file_wildcards":{},"confirm_order":{},"cover_landscape_image":{"uri":""},"current_party":{"id":"","party_invited_users":{"nodes":[]},"party_users":{"nodes":[]}},"current_room":{"nodes":[]},"default_applications":[],"default_apps_nux_config":{},"default_digital_payment_method":{"__typename":"","balance":{"formatted_amount":""},"card_type":"","display_name":"","email":"","id":"","last4":"","paypal_context":""},"default_item":{"__typename":"","age_rating":{"category_name":"","descriptors":[]},"app_viewer_id":"","banner_target":{"__typename":"","assets":{"edges":[]},"content_type":"","display_long_description":"","display_post_description":"","display_post_title":"","display_short_description":"","display_terms":"","display_title":"","id":"","section_name":"","sort_options":[],"style_theme":""},"bundle_items":{"nodes":[]},"category":"","category_name":"","cinema_video":{"format":"","purchasable_items":[],"rating":""},"comfort_rating":"","comfort_rating_name":"","cover_landscape_image":{"name":"","uri":""},"cover_square_image":{"name":"","uri":""},"current_offer":{"id":"","price":{"formatted":""},"price_without_proration":{"amount_with_offset":""},"promo_benefit":"","strikethrough_price":{"formatted":""},"viewer":{"user":{"payment_account":{"stored_credit":{"balance":{"formatted_amount":""},"id":"","subcredits":{"nodes":[]}}}}}},"developer_filtered_livestreaming_status":"","developer_name":"","developer_privacy_policy_url":"","developer_terms_of_service_url":"","display_long_description":"","display_name":"","display_short_description":"","entitlement":{"item":{},"signed_token":""},"extra_buy_box_section":{"content":"","link_text":"","link_uri":""},"genre_names":[],"grouping":{"iap_items_2":{"nodes":[]},"id":""},"iarc_cert":{"iarc_rating":{"age_rating_image_large":{"uri":""},"age_rating_image_small":{"uri":""},"age_rating_text":"","descriptors":[],"interactive_elements":[],"rating_definition_uri":""}},"id":"","internet_connection":"","internet_connection_name":"","is_demo_of":{"id":""},"latest_supported_binary":{"external_signatures":[],"head_tracking":"UNKNOWN","id":"","obb_binary":{"id":"","uri":""},"package_name":"","permissions":[],"uri":"","user_quality_rating":"UNKNOWN","version":""},"metadata_for_user":{"poster_image":{"name":"","uri":""}},"microphone_usage":"","organization":{"name":""},"parent_application":{},"platform":"","publisher_name":"","purchasable_items":[],"quality_rating_histogram_aggregate":[],"quality_ratings_by_viewer":[],"screenshots":[],"share_capabilities":[],"small_landscape_image":{"name":"","uri":""},"store_wide_offers":[],"style_theme":"","supported_binaries":{"nodes":[]},"supported_in_app_languages":[],"supported_input_devices_list":[],"supported_player_modes":[],"thumbnail":{"name":"","uri":""},"user_interaction_mode_names":[],"user_reviews2":{"nodes":[],"page_info":{"end_cursor":""}},"video_trailer":{"name":"","type":"","uri":""},"website_url":""},"device_secret":"","display_name":"","eligible_promotions":{"nodes":[]},"email":"","entitle_user":{},"entitlement":{"item":{"__typename":"","age_rating":{"category_name":"","descriptors":[]},"app_viewer_id":"","banner_target":{"__typename":"","assets":{"edges":[]},"content_type":"","display_long_description":"","display_post_description":"","display_post_title":"","display_short_description":"","display_terms":"","display_title":"","id":"","section_name":"","sort_options":[],"style_theme":""},"bundle_items":{"nodes":[]},"category":"","category_name":"","cinema_video":{"format":"","purchasable_items":[],"rating":""},"comfort_rating":"","comfort_rating_name":"","cover_landscape_image":{"name":"","uri":""},"cover_square_image":{"name":"","uri":""},"current_offer":{"id":"","price":{"formatted":""},"price_without_proration":{"amount_with_offset":""},"promo_benefit":"","strikethrough_price":{"formatted":""},"viewer":{"user":{"payment_account":{"stored_credit":{"balance":{"formatted_amount":""},"id":"","subcredits":{"nodes":[]}}}}}},"developer_filtered_livestreaming_status":"","developer_name":"","developer_privacy_policy_url":"","developer_terms_of_service_url":"","display_long_description":"","display_name":"","display_short_description":"","entitlement":{},"extra_buy_box_section":{"content":"","link_text":"","link_uri":""},"genre_names":[],"grouping":{"iap_items_2":{"nodes":[]},"id":""},"iarc_cert":{"iarc_rating":{"age_rating_image_large":{"uri":""},"age_rating_image_small":{"uri":""},"age_rating_text":"","descriptors":[],"interactive_elements":[],"rating_definition_uri":""}},"id":"","internet_connection":"","internet_connection_name":"","is_demo_of":{"id":""},"latest_supported_binary":{"external_signatures":[],"head_tracking":"UNKNOWN","id":"","obb_binary":{"id":"","uri":""},"package_name":"","permissions":[],"uri":"","user_quality_rating":"UNKNOWN","version":""},"metadata_for_user":{"poster_image":{"name":"","uri":""}},"microphone_usage":"","organization":{"name":""},"parent_application":{},"platform":"","publisher_name":"","purchasable_items":[],"quality_rating_histogram_aggregate":[],"quality_ratings_by_viewer":[],"screenshots":[],"share_capabilities":[],"small_landscape_image":{"name":"","uri":""},"store_wide_offers":[],"style_theme":"","supported_binaries":{"nodes":[]},"supported_in_app_languages":[],"supported_input_devices_list":[],"supported_player_modes":[],"thumbnail":{"name":"","uri":""},"user_interaction_mode_names":[],"user_reviews2":{"nodes":[],"page_info":{"end_cursor":""}},"video_trailer":{"name":"","type":"","uri":""},"website_url":""},"signed_token":""},"entitlements":{"active_android_entitlements":{"nodes":[]}},"event":{"applications_for_viewer":[],"deeplink_message":"","description":"","id":"","joinability_for_viewer":"","landscape_image":{"uri":""},"subscribed_friends":{"nodes":[]},"temporal_info":{},"title":"","unjoinable_reason_string":""},"facebook_account":{"access_token":"","facebook_id":"","friend_policy":""},"featured_events":{"nodes":[]},"feed":{"nodes":[]},"filters":[],"friend_requests_received_2":{"edges":[]},"friends":{"nodes":[]},"grouping":{"achievement_definitions":{"nodes":[]}},"iap_entitlements":[],"id":"","individual_events":{"nodes":[]},"is_pin_set":false,"linked_accounts_info":{"facebook_account":{"access_token":"","facebook_id":"","friend_policy":""},"facebook_friends_connected":{"nodes":[]}},"me":{"viewer":{"is_oculus_developer":false,"is_oculus_developer_blocked":false}},"mutation_upload_map":[],"node":{"default_applications":[]},"nodes":[],"notifications":{"nodes":[]},"order":{"app_store_item":{"current_offer":{"price":{"formatted":""},"price_without_proration":{"amount_with_offset":""},"viewer":{"user":{"payment_account":{"stored_credit":{"balance":{"formatted_amount":""},"id":"","subcredits":{"nodes":[]}}}}}}},"id":"","payment_method":{"__typename":"","balance":{"formatted_amount":""},"card_type":"","display_name":"","email":"","id":"","last4":"","paypal_context":""},"purchase":{"exemptions":{"formatted":"","offset_amount":""},"price":{"formatted":"","offset_amount":""},"purchase_time":"","tax":{"formatted":"","offset_amount":""},"terms_of_service":"","total":{"formatted":"","offset_amount":""},"usable_store_credit":{"formatted":"","offset_amount":""}}},"page_info":{"end_cursor":""},"party":{"id":"","party_users":{"nodes":[]}},"party_blocked_invited_users":{},"party_blocked_users":{},"party_invite_activity":{"application":{"id":"","package_name":""},"deeplink":"","id":"","image":{"uri":""},"subtitle":"","title":""},"party_invited_users":{},"party_users":{},"payment_account":{"digital_orders":{"nodes":[]},"stored_credit":{"balance":{"formatted_amount":""},"id":"","subcredits":{"nodes":[]}}},"payment_method":{"card_type":"","id":"","last4":""},"payment_methods":{"nodes":[]},"paypal_token":"","presence":"","previously_blocked_user_id":"","privacy_audience":{"base_state":"","included_users":{"nodes":[]}},"privacy_current_activity":{"edges":[],"identity_in_search_state":""},"privacy_friends":{"edges":[],"identity_in_search_state":""},"privacy_real_world_identity":{"edges":[],"identity_in_search_state":""},"profile_photo":{"height":"","name":"","uri":"","width":""},"query_map_from_uuid":[],"rejected_friend_requester":{"all_payment_methods":{"nodes":[]},"avatar_image":{"height":"","name":"","uri":"","width":""},"client_preference_data":[],"current_room":{"nodes":[]},"email":"","friend_requests_received_2":{"edges":[]},"friends":{},"is_pin_set":false,"notifications":[],"presence":"","profile_photo":{"height":"","name":"","uri":"","width":""}},"related_entitlements":[],"removed_friend":{"all_payment_methods":{"nodes":[]},"avatar_image":{"height":"","name":"","uri":"","width":""},"client_preference_data":[],"current_room":{"nodes":[]},"email":"","friend_requests_received_2":{"edges":[]},"friends":{},"is_pin_set":false,"notifications":[],"presence":"","profile_photo":{"height":"","name":"","uri":"","width":""}},"request_id":"","results":{"nodes":[],"page_info":{"end_cursor":""},"result_mode":""},"saved":{"edges":[],"nodes":[]},"search":{"typeahead_completions":{"completions":[],"prefix":""}},"sent_friend_requestee":{"all_payment_methods":{"nodes":[]},"avatar_image":{"height":"","name":"","uri":"","width":""},"client_preference_data":[],"current_room":{"nodes":[]},"email":"","friend_requests_received_2":{"edges":[]},"friends":{},"is_pin_set":false,"notifications":[],"presence":"","profile_photo":{"height":"","name":"","uri":"","width":""}},"sent_friend_requestee_search_result":{"user_id":""},"social_activity":{"application":{"package_name":""},"deeplink":"","image":{"height":"","name":"","uri":"","width":""},"subtitle":"","title":""},"social_settings_info":[],"stored_credits":[],"user":{"all_payment_methods":{"nodes":[]},"avatar_image":{"height":"","name":"","uri":"","width":""},"client_preference_data":[],"cloud_files":{"nodes":[]},"current_party":{"id":"","party_users":{"nodes":[]}},"current_room":{"nodes":[]},"dev_notif_opt_out_preferences_list":[],"email":"","friend_requests_received_2":{"edges":[]},"friends":{},"is_pin_set":false,"notification_opt_out_preferences_list":[],"notifications":{"nodes":[],"unseen_count":0},"presence":"","profile_photo":{"height":"","name":"","uri":"","width":""},"subscribed_events":{"nodes":[]}},"viewer":{"is_oculus_developer":false,"is_oculus_developer_blocked":false,"user":{"subscribed_events":{"nodes":[]}},"viewer":{"is_oculus_developer":false,"is_oculus_developer_blocked":false}}};
 
-  // The same generated models are reached through both roots depending on the
-  // caller, and an absent root is an NPE, so both are always present.
-  const base = { viewer: viewerWithProfile(), me: viewerWithProfile() };
-
-  if (haystack.includes('node(') || haystack.includes('friends.orderby')) {
-    return { data: { ...base, node: nodeUser() } };
+/** Root field of an operation, e.g. `query X { viewer { .. } }` -> `viewer`. */
+function rootFieldOf(raw) {
+  let q = String(raw || '').replace(/^\s*(query|mutation)\b/, '').trim();
+  q = q.replace(/^\s*\([^)]*\)/, '');
+  if (q.startsWith('{')) {
+    const braced = /^\s*\{\s*(?:(\w+)\s*:\s*)?([A-Za-z_]\w*)/.exec(q);
+    return braced ? braced[1] || braced[2] : null;
   }
-
-  if (haystack.includes('entitlement') || haystack.includes('iap') || haystack.includes('drm')) {
-    const node = entitlementNode();
-    const edges = { active_android_entitlements: { nodes: [node] } };
-    return { data: { entitlements: edges, me: edges, viewer: edges } };
-  }
-
-  if (haystack.includes('default_apps_nux_config')) {
-    return { data: { ...base, default_apps_nux_config: { hi_pri_apps_wait_timeout: 0 } } };
-  }
-
-  if (haystack.includes('sync_device_manifest')) {
-    return { data: { ...base, sync_device_manifest: { client_mutation_id: 'ghostvr' } } };
-  }
-
-  // `mutation_upload_map` / `query_map_from_uuid` both key their payload by the
-  // operation name, which is the mutation/query root field itself.
-  if (haystack.includes('mutation_upload_map')) {
-    return { data: { ...base, mutation_upload_map: mapEnvelope() } };
-  }
-
-  if (haystack.includes('query_map_from_uuid')) {
-    return { data: { ...base, query_map_from_uuid: mapEnvelope() } };
-  }
-
-  if (haystack.includes('notifications_mark_all_seen')) {
-    return { data: { ...base, notifications_mark_all_seen: { client_mutation_id: 'ghostvr' } } };
-  }
-
-  if (haystack.includes('applications') || haystack.includes('library')) {
-    return { data: { ...base, applications: connection([]) } };
-  }
-
-  return { data: base };
+  // The app mostly sends call-style roots: `me() { .. }`, `node(<id>) { .. }`.
+  const call = /^\s*([A-Za-z_]\w*)\s*\(/.exec(q);
+  return call ? call[1] : null;
 }
 
 /**
- * `node(user_id)` root. fetchPartyInvitableUsersSync reads `friends` and
- * `current_party` straight off it.
+ * The table is a module-level literal, so a pin change has to be reflected at
+ * read time. `MeManager.refresh()` rebuilds `is_pin_set` from every response,
+ * so a frozen `false` re-shows the "Create Oculus PIN" roadblock forever.
+ * Only clones when the flag is actually set, so the common path stays cheap.
  */
-function nodeUser() {
-  return {
-    ...viewerUser(),
-    friends: connection([]),
-    current_party: null,
-    profile_photo: profilePhoto('photo'),
-    avatar_image: profilePhoto('avatar'),
-  };
+function applyPinState(node) {
+  if (!pinIsSet || node === null || typeof node !== 'object') return node;
+  if (Array.isArray(node)) return node.map(applyPinState);
+  const out = {};
+  for (const [key, value] of Object.entries(node)) {
+    out[key] = key === 'is_pin_set' ? true : applyPinState(value);
+  }
+  return out;
 }
 
-/** Payload shared by the guardian map upload / lookup mutations. */
-function mapEnvelope() {
-  return { uuid: 'ghostvr_map', id: 'ghostvr_map', map_download_uri: '', guardian_info: null };
+function graphqlResponse(params) {
+  const raw = `${firstParam(params, 'q', 'query', 'doc', 'doc_id') || ''} ${
+    firstParam(params, 'query_params') || ''
+  }`;
+  const haystack = raw.toLowerCase();
+  const root = rootFieldOf(firstParam(params, 'q', 'query', 'doc', 'doc_id') || '') || 'viewer';
+
+  // Mutations the query text names only inside their arguments.
+  if (haystack.includes('sync_device_manifest')) {
+    return { sync_device_manifest: { client_mutation_id: 'ghostvr' } };
+  }
+  if (haystack.includes('notifications_mark_all_seen')) {
+    return { notifications_mark_all_seen: { client_mutation_id: 'ghostvr' } };
+  }
+
+  return { [root]: applyPinState(GRAPHQL_PAYLOAD) };
 }
 
 async function handleGraphql(request, url) {
@@ -333,8 +307,8 @@ async function handleGraphql(request, url) {
 
 /**
  * Relay batches several operations into one POST.  The client accepts a bare
- * array of `{ data }` envelopes, one per operation, so answer with as many as
- * it sent.  Each entry is reshaped into the query-string form `graphqlResponse`
+ * array with one response envelope per operation, so answer with as many as it
+ * sent.  Each entry is reshaped into the query-string form `graphqlResponse`
  * already understands.
  */
 async function handleGraphqlBatch(request) {
@@ -603,7 +577,7 @@ function handleHeartbeat() {
 
 /** Catch-all for an API-prefixed path we did not anticipate. */
 function handleGenericOculus() {
-  return json({ data: { viewer: viewerWithProfile(), me: viewerWithProfile() }, success: true, status: 'ok' });
+  return json({ viewer: viewerWithProfile(), me: viewerWithProfile(), success: true, status: 'ok' });
 }
 
 // ---------------------------------------------------------------------------
