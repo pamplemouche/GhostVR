@@ -29,27 +29,25 @@
 
     .prologue
     .line 23
-    sget-object v0, Landroid/util/Patterns;->EMAIL_ADDRESS:Ljava/util/regex/Pattern;
+    if-eqz p0, :invalid
 
-    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :invalid
 
-    .line 24
-    sget-object v0, Lcom/oculus/horizon/util/validators/EmailValidator$Error;->WrongFormat:Lcom/oculus/horizon/util/validators/EmailValidator$Error;
-
-    .line 26
-    :goto_0
-    return-object v0
-
-    :cond_0
     const/4 v0, 0x0
 
-    goto :goto_0
+    goto :done
+
+    :invalid
+    sget-object v0, Lcom/oculus/horizon/util/validators/EmailValidator$Error;->WrongFormat:Lcom/oculus/horizon/util/validators/EmailValidator$Error;
+
+    :done
+    return-object v0
 .end method

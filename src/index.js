@@ -20,6 +20,32 @@ const USER_PHOTO = 'https://ghostvr.pamplemouche.com/assets/avatar.png';
 const DEVICE_SECRET = 'ghostvr_device_secret';
 const ACCESS_TOKEN = `OC|${USER_ID}|ghostvr_session_valid_token`;
 
+// The real accounts live on the Pamplemouche backend, which authenticates a
+// pseudo and a password (`POST /api/login {username, password}`). The Oculus
+// client only knows "email + password", so the pseudo is submitted in the email
+// field and forwarded here. The signed-in identity is kept module-level, the
+// same way `pinIsSet` is, so the viewer payload reflects the actual user.
+const ARC_BASE = 'https://arc.pamplemouche.com';
+
+let currentUser = null;
+
+/** Identity used to build every viewer/profile payload. */
+function identity() {
+  if (!currentUser) {
+    return { id: USER_ID, alias: USER_ALIAS, name: USER_NAME, email: USER_EMAIL };
+  }
+  return {
+    id: currentUser.id,
+    alias: currentUser.username,
+    name: currentUser.username,
+    email: currentUser.email || `${currentUser.username}@pamplemouche.com`,
+  };
+}
+
+function accessToken() {
+  return currentUser ? `OC|${currentUser.id}|ghostvr_session_valid_token` : ACCESS_TOKEN;
+}
+
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
@@ -104,15 +130,28 @@ function profilePhoto(name) {
 // overwrites it from this response, and the PIN roadblock re-appears forever.
 let pinIsSet = false;
 
+/**
+ * Canonical shape of the signed-in user.
+ *
+ * `SocialUtils`/`ProfileHeaderViewHolder` read `name`, `profile_photo.uri`,
+ * `avatar_image.uri`, `online_platforms`, `friend_status` and `presence_status`
+ * straight off this object, so all of them are always present. `current_room`
+ * is concrete because `isUserInRoom()` dereferences `current_room.nodes`
+ * without a guard; `current_party` stays null because every consumer
+ * (`PlatformPluginManager$5`, `PartyCallManagerImpl$6`) null-guards it and a
+ * non-null empty party would read as "in a party with no members".
+ */
 function viewerUser() {
+  const who = identity();
   return {
-    id: USER_ID,
-    alias: USER_ALIAS,
-    name: USER_NAME,
-    email: USER_EMAIL,
+    id: who.id,
+    alias: who.alias,
+    name: who.name,
+    email: who.email,
     presence: 'ONLINE',
     presence_status: 'ONLINE',
     friend_status: 'NONE',
+    is_facebook_friend: false,
     is_pin_set: pinIsSet,
     device_secret: DEVICE_SECRET,
     profile_photo: profilePhoto('photo'),
@@ -126,11 +165,23 @@ function viewerUser() {
     friends: connection([]),
     blocked_users: connection([]),
     notifications: connection([]),
-    mutual_friends: null,
+    // `getMutualFriends()` null-guards this, but the getProfile query asks for
+    // `mutual_friends { count }` and the model deserializes into a concrete
+    // `MutualFriends`, so an absent key leaves it null rather than absent.
+    mutual_friends: { count: 0 },
     all_payment_methods: connection([]),
     payment_methods: connection([]),
+    // `me() { payment_account { stored_credit { ... } } }` reads balance and
+    // subcredits off a concrete object, so a null here is a null deref.
+    payment_account: paymentAccount(),
+    stored_credits: [],
+    all_device_manifests: connection([]),
     client_preference_data: [],
     eligible_promotions: connection([]),
+    cloud_files: connection([]),
+    subscribed_events: connection([]),
+    dev_notif_opt_out_preferences_list: [],
+    notification_opt_out_preferences_list: [],
   };
 }
 
@@ -143,7 +194,45 @@ const LINKED_ACCOUNTS = {
   },
 };
 
-const PRIVACY_EDGES = { edges: [], identity_in_search_state: 'EVERYONE' };
+/**
+ * Privacy edges for one concept.
+ *
+ * `MeManager.updateWithSelected()` parses `identity_in_search_state` through
+ * `SocialUtils.identityInSearchPrivacyState()`, which only knows the enum's
+ * three `graphQLName`s (ENABLED / DISABLED / IRRELEVANT); anything else throws
+ * and is swallowed, leaving the identity null. It then looks for an edge with
+ * `is_currently_selected`, falls back to the `is_default_option` edge, and only
+ * then builds a `CurrentPrivacyState`.
+ *
+ * With no edges at all neither lookup succeeds, yet the entry is still inserted
+ * into `mPrivacyMap` with a null `state`. `haveAllPrivacyStates()` then reports
+ * true (the map has one entry per concept), every null-guard on the returned
+ * `CurrentPrivacyState` passes, and the first `state.usesIncludedFriends` read
+ * throws - the Privacy Settings screen and the profile header both die there.
+ *
+ * So each concept needs one edge that is both selected and the default.
+ */
+function privacyEdges(identityInSearchState) {
+  return {
+    edges: [
+      {
+        is_currently_selected: true,
+        is_default_option: true,
+        node: {
+          base_state: 'ANYONE',
+          included_users: { count: 0, nodes: [] },
+        },
+      },
+    ],
+    identity_in_search_state: identityInSearchState,
+  };
+}
+
+// `PrivacyConcept.PROFILE` is the only concept with `usesIdentityInSearch`, so
+// it is the only one whose identity-in-search state is meaningful; the other
+// two report IRRELEVANT.
+const PRIVACY_EDGES = privacyEdges('IRRELEVANT');
+const PRIVACY_EDGES_PROFILE = privacyEdges('ENABLED');
 
 /**
  * Relay connection envelope. The generated response models hold these fields
@@ -165,10 +254,10 @@ function viewerWithProfile() {
   return {
     ...viewerUser(),
     linked_accounts_info: LINKED_ACCOUNTS,
-    privacy_audience_options: PRIVACY_EDGES,
+    privacy_audience_options: PRIVACY_EDGES_PROFILE,
     privacy_current_activity: PRIVACY_EDGES,
     privacy_friends: PRIVACY_EDGES,
-    privacy_real_world_identity: PRIVACY_EDGES,
+    privacy_real_world_identity: PRIVACY_EDGES_PROFILE,
     // The home screen is FeedFragment and calls Feed.fromResponse(), which
     // dereferences viewer.feed.nodes with no null checks. A viewer without
     // `feed` crashes the main screen the moment it opens.
@@ -185,7 +274,6 @@ function viewerWithProfile() {
       notifications: connection([], { unseen_count: 0 }),
       notification_opt_out_preferences_list: [],
       dev_notif_opt_out_preferences_list: [],
-      current_party: null,
       is_oculus_developer_blocked: false,
       is_oculus_developer: false,
     },
@@ -210,11 +298,12 @@ function paymentAccount() {
 
 
 function loginResponse() {
+  const who = identity();
   return {
-    access_token: ACCESS_TOKEN,
-    uid: USER_ID,
-    id: USER_ID,
-    user_id: USER_ID,
+    access_token: accessToken(),
+    uid: who.id,
+    id: who.id,
+    user_id: who.id,
     session_id: 'ghostvr-session-active',
     // FBLoginResponse deserializes these into non-null String fields; the
     // native session builder reads session_key/secret/machine_id downstream, so
@@ -222,7 +311,7 @@ function loginResponse() {
     session_key: 'ghostvr-session-key',
     secret: 'ghostvr-secret',
     machine_id: 'ghostvr-machine',
-    identifier: USER_EMAIL,
+    identifier: who.email,
     error_code: null,
     error_msg: null,
     error_data: null,
@@ -252,7 +341,7 @@ function loginResponse() {
  * rejected the response and fell into its error branch, which renders
  * `common_error_generic_title` ("Une erreur s'est produite.").
  */
-const GRAPHQL_PAYLOAD = {"accepted_friend_requester":{"all_payment_methods":{"nodes":[]},"avatar_image":{"height":"","name":"","uri":"","width":""},"client_preference_data":[],"current_room":{"nodes":[]},"email":"","friend_requests_received_2":{"edges":[]},"friends":{},"is_pin_set":false,"notifications":{"nodes":[]},"presence":"","profile_photo":{"height":"","name":"","uri":"","width":""}},"active_android_entitlements":{"nodes":[]},"add_credit_card":{},"all_device_manifests":{"nodes":[]},"all_items":{},"all_payment_methods":{"nodes":[]},"alternative_items":[],"app_binary_info":{"info":[]},"app_binary_updates":{"updates":[]},"app_entitlements":[],"app_redeem_coupon":{},"app_store":{"sections":{"nodes":[]},"store_assets":{"edges":[]},"store_wide_offers":[],"style_theme":""},"avatar_image":{"height":"","name":"","uri":"","width":""},"billing_agreement_id":"","blocked_user":{"alias":"","id":""},"blocked_users":{"nodes":[]},"challenge_tos":"","client_preference_data":[],"cloud_file_wildcards":{"nodes":[]},"confirm_order":{},"cover_landscape_image":{"uri":""},"current_party":{"id":"","party_invited_users":{"nodes":[]},"party_users":{"nodes":[]}},"current_room":{"nodes":[]},"default_applications":[],"default_apps_nux_config":{},"default_digital_payment_method":{"__typename":"","balance":{"formatted_amount":""},"card_type":"","display_name":"","email":"","id":"","last4":"","paypal_context":""},"default_item":{"__typename":"","age_rating":{"category_name":"","descriptors":[]},"app_viewer_id":"","banner_target":{"__typename":"","assets":{"edges":[]},"content_type":"","display_long_description":"","display_post_description":"","display_post_title":"","display_short_description":"","display_terms":"","display_title":"","id":"","section_name":"","sort_options":[],"style_theme":""},"bundle_items":{"nodes":[]},"category":"","category_name":"","cinema_video":{"format":"","purchasable_items":[],"rating":""},"comfort_rating":"","comfort_rating_name":"","cover_landscape_image":{"name":"","uri":""},"cover_square_image":{"name":"","uri":""},"current_offer":{"id":"","price":{"formatted":""},"price_without_proration":{"amount_with_offset":""},"promo_benefit":"","strikethrough_price":{"formatted":""},"viewer":{"user":{"payment_account":{"stored_credit":{"balance":{"formatted_amount":""},"id":"","subcredits":{"nodes":[]}}}}}},"developer_filtered_livestreaming_status":"","developer_name":"","developer_privacy_policy_url":"","developer_terms_of_service_url":"","display_long_description":"","display_name":"","display_short_description":"","entitlement":{"item":{},"signed_token":""},"extra_buy_box_section":{"content":"","link_text":"","link_uri":""},"genre_names":[],"grouping":{"iap_items_2":{"nodes":[]},"id":""},"iarc_cert":{"iarc_rating":{"age_rating_image_large":{"uri":""},"age_rating_image_small":{"uri":""},"age_rating_text":"","descriptors":[],"interactive_elements":[],"rating_definition_uri":""}},"id":"","internet_connection":"","internet_connection_name":"","is_demo_of":{"id":""},"latest_supported_binary":{"external_signatures":[],"head_tracking":"UNKNOWN","id":"","obb_binary":{"id":"","uri":""},"package_name":"","permissions":[],"uri":"","user_quality_rating":null,"version":""},"metadata_for_user":{"poster_image":{"name":"","uri":""}},"microphone_usage":"","organization":{"name":""},"parent_application":{},"platform":"","publisher_name":"","purchasable_items":[],"quality_rating_histogram_aggregate":[],"quality_ratings_by_viewer":[],"screenshots":[],"share_capabilities":[],"small_landscape_image":{"name":"","uri":""},"store_wide_offers":[],"style_theme":"","supported_binaries":{"nodes":[]},"supported_in_app_languages":[],"supported_input_devices_list":[],"supported_player_modes":[],"thumbnail":{"name":"","uri":""},"user_interaction_mode_names":[],"user_reviews2":{"nodes":[],"page_info":{"end_cursor":""}},"video_trailer":{"name":"","type":"","uri":""},"website_url":""},"device_secret":"","display_name":"","eligible_promotions":{"nodes":[]},"email":"","entitle_user":{},"entitlement":{"item":{"__typename":"","age_rating":{"category_name":"","descriptors":[]},"app_viewer_id":"","banner_target":{"__typename":"","assets":{"edges":[]},"content_type":"","display_long_description":"","display_post_description":"","display_post_title":"","display_short_description":"","display_terms":"","display_title":"","id":"","section_name":"","sort_options":[],"style_theme":""},"bundle_items":{"nodes":[]},"category":"","category_name":"","cinema_video":{"format":"","purchasable_items":[],"rating":""},"comfort_rating":"","comfort_rating_name":"","cover_landscape_image":{"name":"","uri":""},"cover_square_image":{"name":"","uri":""},"current_offer":{"id":"","price":{"formatted":""},"price_without_proration":{"amount_with_offset":""},"promo_benefit":"","strikethrough_price":{"formatted":""},"viewer":{"user":{"payment_account":{"stored_credit":{"balance":{"formatted_amount":""},"id":"","subcredits":{"nodes":[]}}}}}},"developer_filtered_livestreaming_status":"","developer_name":"","developer_privacy_policy_url":"","developer_terms_of_service_url":"","display_long_description":"","display_name":"","display_short_description":"","entitlement":{},"extra_buy_box_section":{"content":"","link_text":"","link_uri":""},"genre_names":[],"grouping":{"iap_items_2":{"nodes":[]},"id":""},"iarc_cert":{"iarc_rating":{"age_rating_image_large":{"uri":""},"age_rating_image_small":{"uri":""},"age_rating_text":"","descriptors":[],"interactive_elements":[],"rating_definition_uri":""}},"id":"","internet_connection":"","internet_connection_name":"","is_demo_of":{"id":""},"latest_supported_binary":{"external_signatures":[],"head_tracking":"UNKNOWN","id":"","obb_binary":{"id":"","uri":""},"package_name":"","permissions":[],"uri":"","user_quality_rating":null,"version":""},"metadata_for_user":{"poster_image":{"name":"","uri":""}},"microphone_usage":"","organization":{"name":""},"parent_application":{},"platform":"","publisher_name":"","purchasable_items":[],"quality_rating_histogram_aggregate":[],"quality_ratings_by_viewer":[],"screenshots":[],"share_capabilities":[],"small_landscape_image":{"name":"","uri":""},"store_wide_offers":[],"style_theme":"","supported_binaries":{"nodes":[]},"supported_in_app_languages":[],"supported_input_devices_list":[],"supported_player_modes":[],"thumbnail":{"name":"","uri":""},"user_interaction_mode_names":[],"user_reviews2":{"nodes":[],"page_info":{"end_cursor":""}},"video_trailer":{"name":"","type":"","uri":""},"website_url":""},"signed_token":""},"entitlements":{"active_android_entitlements":{"nodes":[]}},"event":{"applications_for_viewer":[],"deeplink_message":"","description":"","id":"","joinability_for_viewer":"","landscape_image":{"uri":""},"subscribed_friends":{"nodes":[]},"temporal_info":{},"title":"","unjoinable_reason_string":""},"facebook_account":{"access_token":"","facebook_id":"","friend_policy":""},"featured_events":{"nodes":[]},"feed":{"nodes":[]},"filters":[],"friend_requests_received_2":{"edges":[]},"friends":{"nodes":[]},"grouping":{"achievement_definitions":{"nodes":[]}},"iap_entitlements":[],"id":"","individual_events":{"nodes":[]},"is_pin_set":false,"linked_accounts_info":{"facebook_account":{"access_token":"","facebook_id":"","friend_policy":""},"facebook_friends_connected":{"nodes":[]}},"me":{"viewer":{"is_oculus_developer":false,"is_oculus_developer_blocked":false}},"mutation_upload_map":{"uuid":""},"node":{"default_applications":[]},"nodes":[],"notifications":{"nodes":[]},"order":{"app_store_item":{"current_offer":{"price":{"formatted":""},"price_without_proration":{"amount_with_offset":""},"viewer":{"user":{"payment_account":{"stored_credit":{"balance":{"formatted_amount":""},"id":"","subcredits":{"nodes":[]}}}}}}},"id":"","payment_method":{"__typename":"","balance":{"formatted_amount":""},"card_type":"","display_name":"","email":"","id":"","last4":"","paypal_context":""},"purchase":{"exemptions":{"formatted":"","offset_amount":""},"price":{"formatted":"","offset_amount":""},"purchase_time":"","tax":{"formatted":"","offset_amount":""},"terms_of_service":"","total":{"formatted":"","offset_amount":""},"usable_store_credit":{"formatted":"","offset_amount":""}}},"page_info":{"end_cursor":""},"party":{"id":"","party_users":{"nodes":[]}},"party_blocked_invited_users":{},"party_blocked_users":{},"party_invite_activity":{"application":{"id":"","package_name":""},"deeplink":"","id":"","image":{"uri":""},"subtitle":"","title":""},"party_invited_users":{},"party_users":{},"payment_account":{"digital_orders":{"nodes":[]},"stored_credit":{"balance":{"formatted_amount":""},"id":"","subcredits":{"nodes":[]}}},"payment_method":{"card_type":"","id":"","last4":""},"payment_methods":{"nodes":[]},"paypal_token":"","presence":"","previously_blocked_user_id":"","privacy_audience":{"base_state":"","included_users":{"nodes":[]}},"privacy_current_activity":{"edges":[],"identity_in_search_state":""},"privacy_friends":{"edges":[],"identity_in_search_state":""},"privacy_real_world_identity":{"edges":[],"identity_in_search_state":""},"profile_photo":{"height":"","name":"","uri":"","width":""},"query_map_from_uuid":{"guardian_info":"","map_download_uri":"","uuid":""},"rejected_friend_requester":{"all_payment_methods":{"nodes":[]},"avatar_image":{"height":"","name":"","uri":"","width":""},"client_preference_data":[],"current_room":{"nodes":[]},"email":"","friend_requests_received_2":{"edges":[]},"friends":{},"is_pin_set":false,"notifications":{"nodes":[]},"presence":"","profile_photo":{"height":"","name":"","uri":"","width":""}},"related_entitlements":[],"removed_friend":{"all_payment_methods":{"nodes":[]},"avatar_image":{"height":"","name":"","uri":"","width":""},"client_preference_data":[],"current_room":{"nodes":[]},"email":"","friend_requests_received_2":{"edges":[]},"friends":{},"is_pin_set":false,"notifications":{"nodes":[]},"presence":"","profile_photo":{"height":"","name":"","uri":"","width":""}},"request_id":"","results":{"nodes":[],"page_info":{"end_cursor":""},"result_mode":""},"saved":{"edges":[],"nodes":[]},"search":{"typeahead_completions":{"completions":[],"prefix":""}},"sent_friend_requestee":{"all_payment_methods":{"nodes":[]},"avatar_image":{"height":"","name":"","uri":"","width":""},"client_preference_data":[],"current_room":{"nodes":[]},"email":"","friend_requests_received_2":{"edges":[]},"friends":{},"is_pin_set":false,"notifications":{"nodes":[]},"presence":"","profile_photo":{"height":"","name":"","uri":"","width":""}},"sent_friend_requestee_search_result":{"user_id":""},"social_activity":{"application":{"package_name":""},"deeplink":"","image":{"height":"","name":"","uri":"","width":""},"subtitle":"","title":""},"social_settings_info":{"has_seen_nux_on_android":false},"stored_credits":[],"user":{"all_payment_methods":{"nodes":[]},"avatar_image":{"height":"","name":"","uri":"","width":""},"client_preference_data":[],"cloud_files":{"nodes":[]},"current_party":{"id":"","party_users":{"nodes":[]}},"current_room":{"nodes":[]},"dev_notif_opt_out_preferences_list":[],"email":"","friend_requests_received_2":{"edges":[]},"friends":{},"is_pin_set":false,"notification_opt_out_preferences_list":[],"notifications":{"nodes":[],"unseen_count":0},"presence":"","profile_photo":{"height":"","name":"","uri":"","width":""},"subscribed_events":{"nodes":[]}},"viewer":{"is_oculus_developer":false,"is_oculus_developer_blocked":false,"user":{"subscribed_events":{"nodes":[]}},"viewer":{"is_oculus_developer":false,"is_oculus_developer_blocked":false}}};
+const GRAPHQL_PAYLOAD = {"accepted_friend_requester":{"all_payment_methods":{"nodes":[]},"avatar_image":{"height":"","name":"","uri":"","width":""},"client_preference_data":[],"current_room":{"nodes":[]},"email":"","friend_requests_received_2":{"edges":[]},"friends":{},"is_pin_set":false,"notifications":{"nodes":[]},"presence":"","profile_photo":{"height":"","name":"","uri":"","width":""}},"active_android_entitlements":{"nodes":[]},"add_credit_card":{},"all_device_manifests":{"nodes":[]},"all_items":{},"all_payment_methods":{"nodes":[]},"alternative_items":[],"app_binary_info":{"info":[]},"app_binary_updates":{"updates":[]},"app_entitlements":[],"app_redeem_coupon":{},"app_store":{"sections":{"nodes":[]},"store_assets":{"edges":[]},"store_wide_offers":[],"style_theme":""},"avatar_image":{"height":"","name":"","uri":"","width":""},"billing_agreement_id":"","blocked_user":{"alias":"","id":""},"blocked_users":{"nodes":[]},"challenge_tos":"","client_preference_data":[],"cloud_file_wildcards":{"nodes":[]},"confirm_order":{},"cover_landscape_image":{"uri":""},"current_party":{"id":"","party_invited_users":{"nodes":[]},"party_users":{"nodes":[]}},"current_room":{"nodes":[]},"default_applications":[],"default_apps_nux_config":{},"default_digital_payment_method":{"__typename":"","balance":{"formatted_amount":""},"card_type":"","display_name":"","email":"","id":"","last4":"","paypal_context":""},"default_item":{"__typename":"","age_rating":{"category_name":"","descriptors":[]},"app_viewer_id":"","banner_target":{"__typename":"","assets":{"edges":[]},"content_type":"","display_long_description":"","display_post_description":"","display_post_title":"","display_short_description":"","display_terms":"","display_title":"","id":"","section_name":"","sort_options":[],"style_theme":""},"bundle_items":{"nodes":[]},"category":"","category_name":"","cinema_video":{"format":"","purchasable_items":[],"rating":""},"comfort_rating":"","comfort_rating_name":"","cover_landscape_image":{"name":"","uri":""},"cover_square_image":{"name":"","uri":""},"current_offer":{"id":"","price":{"formatted":""},"price_without_proration":{"amount_with_offset":""},"promo_benefit":"","strikethrough_price":{"formatted":""},"viewer":{"user":{"payment_account":{"stored_credit":{"balance":{"formatted_amount":""},"id":"","subcredits":{"nodes":[]}}}}}},"developer_filtered_livestreaming_status":"","developer_name":"","developer_privacy_policy_url":"","developer_terms_of_service_url":"","display_long_description":"","display_name":"","display_short_description":"","entitlement":{"item":{},"signed_token":""},"extra_buy_box_section":{"content":"","link_text":"","link_uri":""},"genre_names":[],"grouping":{"iap_items_2":{"nodes":[]},"id":""},"iarc_cert":{"iarc_rating":{"age_rating_image_large":{"uri":""},"age_rating_image_small":{"uri":""},"age_rating_text":"","descriptors":[],"interactive_elements":[],"rating_definition_uri":""}},"id":"","internet_connection":"","internet_connection_name":"","is_demo_of":{"id":""},"latest_supported_binary":{"external_signatures":[],"head_tracking":"UNKNOWN","id":"","obb_binary":{"id":"","uri":""},"package_name":"","permissions":[],"uri":"","user_quality_rating":null,"version":""},"metadata_for_user":{"poster_image":{"name":"","uri":""}},"microphone_usage":"","organization":{"name":""},"parent_application":{},"platform":"","publisher_name":"","purchasable_items":[],"quality_rating_histogram_aggregate":[],"quality_ratings_by_viewer":[],"screenshots":[],"share_capabilities":[],"small_landscape_image":{"name":"","uri":""},"store_wide_offers":[],"style_theme":"","supported_binaries":{"nodes":[]},"supported_in_app_languages":[],"supported_input_devices_list":[],"supported_player_modes":[],"thumbnail":{"name":"","uri":""},"user_interaction_mode_names":[],"user_reviews2":{"nodes":[],"page_info":{"end_cursor":""}},"video_trailer":{"name":"","type":"","uri":""},"website_url":""},"device_secret":"","display_name":"","eligible_promotions":{"nodes":[]},"email":"","entitle_user":{},"entitlement":{"item":{"__typename":"","age_rating":{"category_name":"","descriptors":[]},"app_viewer_id":"","banner_target":{"__typename":"","assets":{"edges":[]},"content_type":"","display_long_description":"","display_post_description":"","display_post_title":"","display_short_description":"","display_terms":"","display_title":"","id":"","section_name":"","sort_options":[],"style_theme":""},"bundle_items":{"nodes":[]},"category":"","category_name":"","cinema_video":{"format":"","purchasable_items":[],"rating":""},"comfort_rating":"","comfort_rating_name":"","cover_landscape_image":{"name":"","uri":""},"cover_square_image":{"name":"","uri":""},"current_offer":{"id":"","price":{"formatted":""},"price_without_proration":{"amount_with_offset":""},"promo_benefit":"","strikethrough_price":{"formatted":""},"viewer":{"user":{"payment_account":{"stored_credit":{"balance":{"formatted_amount":""},"id":"","subcredits":{"nodes":[]}}}}}},"developer_filtered_livestreaming_status":"","developer_name":"","developer_privacy_policy_url":"","developer_terms_of_service_url":"","display_long_description":"","display_name":"","display_short_description":"","entitlement":{},"extra_buy_box_section":{"content":"","link_text":"","link_uri":""},"genre_names":[],"grouping":{"iap_items_2":{"nodes":[]},"id":""},"iarc_cert":{"iarc_rating":{"age_rating_image_large":{"uri":""},"age_rating_image_small":{"uri":""},"age_rating_text":"","descriptors":[],"interactive_elements":[],"rating_definition_uri":""}},"id":"","internet_connection":"","internet_connection_name":"","is_demo_of":{"id":""},"latest_supported_binary":{"external_signatures":[],"head_tracking":"UNKNOWN","id":"","obb_binary":{"id":"","uri":""},"package_name":"","permissions":[],"uri":"","user_quality_rating":null,"version":""},"metadata_for_user":{"poster_image":{"name":"","uri":""}},"microphone_usage":"","organization":{"name":""},"parent_application":{},"platform":"","publisher_name":"","purchasable_items":[],"quality_rating_histogram_aggregate":[],"quality_ratings_by_viewer":[],"screenshots":[],"share_capabilities":[],"small_landscape_image":{"name":"","uri":""},"store_wide_offers":[],"style_theme":"","supported_binaries":{"nodes":[]},"supported_in_app_languages":[],"supported_input_devices_list":[],"supported_player_modes":[],"thumbnail":{"name":"","uri":""},"user_interaction_mode_names":[],"user_reviews2":{"nodes":[],"page_info":{"end_cursor":""}},"video_trailer":{"name":"","type":"","uri":""},"website_url":""},"signed_token":""},"entitlements":{"active_android_entitlements":{"nodes":[]}},"event":{"applications_for_viewer":[],"deeplink_message":"","description":"","id":"","joinability_for_viewer":"","landscape_image":{"uri":""},"subscribed_friends":{"nodes":[]},"temporal_info":{},"title":"","unjoinable_reason_string":""},"facebook_account":{"access_token":"","facebook_id":"","friend_policy":""},"featured_events":{"nodes":[]},"feed":{"nodes":[]},"filters":[],"friend_requests_received_2":{"edges":[]},"friends":{"nodes":[]},"grouping":{"achievement_definitions":{"nodes":[]}},"iap_entitlements":[],"id":"","individual_events":{"nodes":[]},"is_pin_set":false,"linked_accounts_info":{"facebook_account":{"access_token":"","facebook_id":"","friend_policy":""},"facebook_friends_connected":{"nodes":[]}},"me":{"viewer":{"is_oculus_developer":false,"is_oculus_developer_blocked":false}},"mutation_upload_map":{"uuid":""},"node":{"cover_landscape_image":{"uri":""},"default_applications":[],"display_name":"GhostVR","grouping":{"achievement_definitions":{"count":0,"edges":[],"nodes":[]},"secret_achievement_count_earned_by_user_but_not_viewer":0,"unearned_secret_achievement_count":0}},"nodes":[],"notifications":{"nodes":[]},"order":{"app_store_item":{"current_offer":{"price":{"formatted":""},"price_without_proration":{"amount_with_offset":""},"viewer":{"user":{"payment_account":{"stored_credit":{"balance":{"formatted_amount":""},"id":"","subcredits":{"nodes":[]}}}}}}},"id":"","payment_method":{"__typename":"","balance":{"formatted_amount":""},"card_type":"","display_name":"","email":"","id":"","last4":"","paypal_context":""},"purchase":{"exemptions":{"formatted":"","offset_amount":""},"price":{"formatted":"","offset_amount":""},"purchase_time":"","tax":{"formatted":"","offset_amount":""},"terms_of_service":"","total":{"formatted":"","offset_amount":""},"usable_store_credit":{"formatted":"","offset_amount":""}}},"page_info":{"end_cursor":""},"party":{"id":"","party_users":{"nodes":[]}},"party_blocked_invited_users":{},"party_blocked_users":{},"party_invite_activity":{"application":{"id":"","package_name":""},"deeplink":"","id":"","image":{"uri":""},"subtitle":"","title":""},"party_invited_users":{},"party_users":{},"payment_account":{"digital_orders":{"nodes":[]},"stored_credit":{"balance":{"formatted_amount":""},"id":"","subcredits":{"nodes":[]}}},"payment_method":{"card_type":"","id":"","last4":""},"payment_methods":{"nodes":[]},"paypal_token":"","presence":"","previously_blocked_user_id":"","privacy_audience":{"base_state":"","included_users":{"nodes":[]}},"privacy_audience_options":{"edges":[{"is_currently_selected":true,"is_default_option":true,"node":{"base_state":"ANYONE","included_users":{"count":0,"nodes":[]}}}],"identity_in_search_state":"ENABLED"},"privacy_current_activity":{"edges":[{"is_currently_selected":true,"is_default_option":true,"node":{"base_state":"ANYONE","included_users":{"count":0,"nodes":[]}}}],"identity_in_search_state":"IRRELEVANT"},"privacy_friends":{"edges":[{"is_currently_selected":true,"is_default_option":true,"node":{"base_state":"ANYONE","included_users":{"count":0,"nodes":[]}}}],"identity_in_search_state":"IRRELEVANT"},"privacy_real_world_identity":{"edges":[{"is_currently_selected":true,"is_default_option":true,"node":{"base_state":"ANYONE","included_users":{"count":0,"nodes":[]}}}],"identity_in_search_state":"ENABLED"},"profile_photo":{"height":"","name":"","uri":"","width":""},"query_map_from_uuid":{"guardian_info":"","map_download_uri":"","uuid":""},"rejected_friend_requester":{"all_payment_methods":{"nodes":[]},"avatar_image":{"height":"","name":"","uri":"","width":""},"client_preference_data":[],"current_room":{"nodes":[]},"email":"","friend_requests_received_2":{"edges":[]},"friends":{},"is_pin_set":false,"notifications":{"nodes":[]},"presence":"","profile_photo":{"height":"","name":"","uri":"","width":""}},"related_entitlements":[],"removed_friend":{"all_payment_methods":{"nodes":[]},"avatar_image":{"height":"","name":"","uri":"","width":""},"client_preference_data":[],"current_room":{"nodes":[]},"email":"","friend_requests_received_2":{"edges":[]},"friends":{},"is_pin_set":false,"notifications":{"nodes":[]},"presence":"","profile_photo":{"height":"","name":"","uri":"","width":""}},"request_id":"","results":{"nodes":[],"page_info":{"end_cursor":""},"result_mode":""},"saved":{"edges":[],"nodes":[]},"search":{"typeahead_completions":{"completions":[],"prefix":""}},"sent_friend_requestee":{"all_payment_methods":{"nodes":[]},"avatar_image":{"height":"","name":"","uri":"","width":""},"client_preference_data":[],"current_room":{"nodes":[]},"email":"","friend_requests_received_2":{"edges":[]},"friends":{},"is_pin_set":false,"notifications":{"nodes":[]},"presence":"","profile_photo":{"height":"","name":"","uri":"","width":""}},"sent_friend_requestee_search_result":{"user_id":""},"social_activity":{"application":{"package_name":""},"deeplink":"","image":{"height":"","name":"","uri":"","width":""},"subtitle":"","title":""},"social_settings_info":{"has_seen_nux_on_android":false},"stored_credits":[],"user":{"all_payment_methods":{"nodes":[]},"avatar_image":{"height":"","name":"","uri":"","width":""},"client_preference_data":[],"cloud_files":{"nodes":[]},"current_party":{"id":"","party_users":{"nodes":[]}},"current_room":{"nodes":[]},"dev_notif_opt_out_preferences_list":[],"email":"","friend_requests_received_2":{"edges":[]},"friends":{},"is_pin_set":false,"notification_opt_out_preferences_list":[],"notifications":{"nodes":[],"unseen_count":0},"presence":"","profile_photo":{"height":"","name":"","uri":"","width":""},"subscribed_events":{"nodes":[]}},"viewer":{"is_oculus_developer":false,"is_oculus_developer_blocked":false,"user":{"subscribed_events":{"nodes":[]}},"viewer":{"is_oculus_developer":false,"is_oculus_developer_blocked":false}}};
 
 /** Root field of an operation, e.g. `query X { viewer { .. } }` -> `viewer`. */
 function rootFieldOf(raw) {
@@ -283,6 +372,32 @@ function applyPinState(node) {
   return out;
 }
 
+/**
+ * The roots that address the signed-in user. They must answer with a user
+ * object, not the whole table: `SocialMethods.getProfile()` issues
+ * `node(<user_id>) {id,name,alias,friend_status,...}` and hands the result to
+ * `ProfileFragment`, whose header view holder dereferences `name` and the photo
+ * URIs. `getAchievements()` instead wants `node(<application_id>) {
+ * display_name, cover_landscape_image, grouping }`, so the table's `node`
+ * subtree is merged in underneath - the client reads whichever field it asked
+ * for. Same for `me() { ... }` and `user(...)`, which query the viewer.
+ */
+const USER_ROOTS = new Set(['viewer', 'me', 'user', 'node']);
+
+/**
+ * Fields that only make sense on the `viewer` root. They are carried over from
+ * the table so the privacy payload survives the user-shape merge, while `node`
+ * and `user` (which never ask for them) are left clean.
+ */
+const VIEWER_ONLY_FIELDS = [
+  'linked_accounts_info',
+  'privacy_audience_options',
+  'privacy_current_activity',
+  'privacy_friends',
+  'privacy_real_world_identity',
+  'feed',
+];
+
 function graphqlResponse(params) {
   const raw = `${firstParam(params, 'q', 'query', 'doc', 'doc_id') || ''} ${
     firstParam(params, 'query_params') || ''
@@ -298,7 +413,23 @@ function graphqlResponse(params) {
     return { notifications_mark_all_seen: { client_mutation_id: 'ghostvr' } };
   }
 
-  return { [root]: applyPinState(GRAPHQL_PAYLOAD) };
+  const payload = applyPinState(GRAPHQL_PAYLOAD);
+  if (!USER_ROOTS.has(root)) return { [root]: payload };
+
+  // Table extras first (the `node`/`user`/`me` subtrees carry the app and
+  // friends/party fields those queries ask for), then the canonical user shape
+  // on top, then the viewer-only privacy/feed block for `viewer`.
+  const answer = { ...(payload[root] || {}), ...payload.user };
+  Object.assign(answer, viewerUser());
+  if (root === 'viewer') {
+    for (const field of VIEWER_ONLY_FIELDS) {
+      if (payload[field] !== undefined) answer[field] = payload[field];
+    }
+    // `MyUserProfileResponse.Viewer.user` is the profile screen's user and is
+    // deserialized as a concrete `User`, so it needs the full shape too.
+    answer.user = { ...(payload.viewer?.user || {}), ...viewerUser() };
+  }
+  return { [root]: answer };
 }
 
 async function handleGraphql(request, url) {
@@ -341,7 +472,9 @@ function asQueryParams(entry) {
 /** POST /oculus/login or /fb-api/method/auth.login (form-encoded). */
 async function handleAuthLogin(request, url) {
   const params = await readParams(request, url);
-  const email = firstParam(params, 'email') || USER_EMAIL;
+  // The client labels the field "email", but the Pamplemouche backend
+  // authenticates a pseudo, so whatever was typed is forwarded as `username`.
+  const identifier = firstParam(params, 'email', 'username') || USER_EMAIL;
   const password = firstParam(params, 'password');
   const fbAccessToken = firstParam(params, 'fb_access_token');
 
@@ -351,7 +484,44 @@ async function handleAuthLogin(request, url) {
       400,
     );
   }
-  return json({ ...loginResponse(), email, registered: true });
+
+  const user = await arcLogin(identifier, password);
+  if (user) currentUser = user;
+
+  return json({ ...loginResponse(), email: identifier, registered: true });
+}
+
+/**
+ * Authenticate against the Pamplemouche backend.
+ *
+ * `POST /api/login {username, password}` returns
+ * `{ok, token, username, loadout, coins, pamp, purchases, isAdmin}`. A failed
+ * login (`{ok: false}`) is not fatal: the app still needs a session so it can
+ * reach the offline surfaces, so the caller keeps the fallback identity.
+ */
+async function arcLogin(username, password) {
+  if (!username || !password) return null;
+  try {
+    const response = await fetch(`${ARC_BASE}/api/login`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ username, password }),
+    });
+    const body = await response.json();
+    if (!body || body.ok !== true) return null;
+    return {
+      id: String(body.userId || body.id || username),
+      username: body.username || username,
+      token: body.token || null,
+      isAdmin: body.isAdmin === true,
+      loadout: body.loadout || null,
+      coins: body.coins ?? 0,
+      pamp: body.pamp ?? 0,
+      purchases: body.purchases || [],
+    };
+  } catch (error) {
+    return null;
+  }
 }
 
 /** POST /oculus/fbauth — returns a login session plus prefilled account info. */
@@ -365,16 +535,17 @@ async function handleFbAuth(request) {
     }
   }
 
+  const who = identity();
   return json({
-    login_session: { access_token: ACCESS_TOKEN, userId: USER_ID },
+    login_session: { access_token: accessToken(), userId: who.id },
     prefilled_account_info: {
-      all_emails: [USER_EMAIL],
-      email: USER_EMAIL,
+      all_emails: [who.email],
+      email: who.email,
       fb_access_token: body.fb_access_token || 'GHOSTVR_FB_TOKEN',
-      facebook_id: USER_ID,
-      name: USER_NAME,
+      facebook_id: who.id,
+      name: who.name,
       profile_pic_uri: USER_PHOTO,
-      username_suggestions: [USER_ALIAS],
+      username_suggestions: [who.alias],
     },
     existing_email_conflict: null,
   });
@@ -382,6 +553,7 @@ async function handleFbAuth(request) {
 
 /** GET /oculus/logout */
 function handleLogout() {
+  currentUser = null;
   return json({ success: true, logged_out: true });
 }
 
@@ -426,17 +598,17 @@ function handleUserChecks() {
 
 /** POST /oculus/authenticate_application — app-scoped platform token. */
 function handleAuthenticateApplication() {
-  return json({ access_token: ACCESS_TOKEN });
+  return json({ access_token: accessToken() });
 }
 
 /** GET /oculus/method/auth.getSessionForApp — SSO session handoff. */
 function handleSessionForApp(url) {
   return json({
-    uid: USER_ID,
+    uid: identity().id,
     machine_id: firstParam(url.searchParams, 'machine_id') || 'ghostvr-machine',
     error_msg: null,
     session_cookies: [],
-    access_token: ACCESS_TOKEN,
+    access_token: accessToken(),
   });
 }
 
@@ -465,7 +637,7 @@ function handleTwoFactorMethods() {
 }
 
 function handleTwoFactorVerify() {
-  return json({ access_token: ACCESS_TOKEN, uid: USER_ID });
+  return json({ access_token: accessToken(), uid: identity().id });
 }
 
 // ---------------------------------------------------------------------------
@@ -595,6 +767,64 @@ function handleGenericOculus() {
 }
 
 // ---------------------------------------------------------------------------
+// Pamplemouche passthrough (per-user library, coins, shop)
+// ---------------------------------------------------------------------------
+
+/**
+ * Proxy a request to the Pamplemouche backend using the signed-in session.
+ *
+ * The Oculus app has no concept of the Pamplemouche store, so these routes
+ * exist for the client-side surfaces that read the per-user loadout, coin
+ * balance and purchases. `/pamp/me` returns them in one shot; every other
+ * `/pamp/<path>` is forwarded verbatim so the shop can grow without a change
+ * here. Without a session the passthrough answers with the fallback identity so
+ * callers still get a well-formed body instead of an error.
+ */
+async function handlePamp(request, url) {
+  const suffix = url.pathname.replace(/^.*?\/pamp\/?/, '');
+  if (!suffix || suffix === 'me') {
+    const who = identity();
+    return json({
+      ok: true,
+      username: who.alias,
+      userId: who.id,
+      authenticated: currentUser !== null,
+      loadout: currentUser ? currentUser.loadout : null,
+      coins: currentUser ? currentUser.coins : 0,
+      pamp: currentUser ? currentUser.pamp : 0,
+      purchases: currentUser ? currentUser.purchases : [],
+      isAdmin: currentUser ? currentUser.isAdmin : false,
+    });
+  }
+
+  const target = new URL(`${ARC_BASE}/api/${suffix}`);
+  for (const [key, value] of url.searchParams) target.searchParams.append(key, value);
+
+  const headers = { Accept: 'application/json' };
+  if (currentUser && currentUser.token) headers.Authorization = `Bearer ${currentUser.token}`;
+  const contentType = request.headers.get('content-type');
+  if (contentType) headers['Content-Type'] = contentType;
+
+  try {
+    const upstream = await fetch(target.toString(), {
+      method: request.method,
+      headers,
+      body: ['GET', 'HEAD'].includes(request.method) ? undefined : await request.text(),
+    });
+    return new Response(upstream.body, {
+      status: upstream.status,
+      headers: {
+        'Content-Type': upstream.headers.get('content-type') || 'application/json; charset=utf-8',
+        'Access-Control-Allow-Origin': '*',
+        'Cache-Control': 'no-store',
+      },
+    });
+  } catch (error) {
+    return json({ ok: false, error: 'Pamplemouche backend unreachable' }, 502);
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Dispatch
 // ---------------------------------------------------------------------------
 
@@ -615,6 +845,7 @@ async function route(request, url) {
 
   if (match(path, method, [[null, '/graphqlbatch']])) return handleGraphqlBatch(request);
   if (match(path, method, [[null, '/graphql']])) return handleGraphql(request, url);
+  if (path.includes('/pamp/')) return handlePamp(request, url);
   if (match(path, method, [[null, '/features']])) return handleFeatures(request, url);
   if (match(path, method, [[null, '/mobileconfig']])) return handleMobileConfig(request, url);
   if (match(path, method, [[null, '/method/auth.login']])) return handleAuthLogin(request, url);
