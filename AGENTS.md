@@ -350,3 +350,37 @@ already renders its own screens and only needs the endpoints to answer.
   `ulimit -v` and keep them streaming/mmap based.
 - `hermes-dec` and `hbctool` (pip) are useful references for the v61 layout but
   do not parse v53 at all.
+
+## Hand-written smali: branch polarity
+
+Only two methods in the whole tree are hand-written rather than decompiler
+output - `EmailValidator.validate` and `IntentModule.rewriteExternalUrl`. A
+decompiler names its labels `:cond_N` / `:goto_N`; descriptive names
+(`:ret`, `:done`, `:invalid`, `:host_loop`) mean a human wrote it. To find them
+again, flag any method whose labels are not all `cond|goto|try_start|try_end|
+pswitch|sswitch|array|catch`.
+
+Both were written with the branch conditions inverted, which is easy to do
+because the mnemonics are backwards from the Java they replace:
+
+- `if-eqz` branches when the value **is zero/null**
+- `if-nez` branches when the value **is non-zero/non-null**
+- `if-gez` branches when the value is **`>= 0`**
+- `if-ltz` branches when the value is **`< 0`**
+
+`if-ltz`/`if-gez` are the trap: `lt`/`ge` describe the *fall-through* case, not
+the branch. The originals confirm it - `EmailValidator` used
+`if-nez` after `Matcher.matches()` to mean "did not match", and
+`CameraRollManager` uses `if-ltz` after `indexOf` to mean "not found". A
+reliable way to check an edit is to transcribe the method's opcodes into a
+throwaway interpreter and run the real inputs through it.
+
+The two bugs this caused were both silent and total:
+
+- `EmailValidator.validate` ended up rejecting *every* non-empty string, so
+  both a pseudo and a real address produced "Veuillez saisir une adresse e-mail
+  valide" with no way past the login screen.
+- `rewriteExternalUrl` returned its input unchanged for every URL, so the whole
+  runtime redirect (fetch/XHR via `NetworkingModule`, link-outs via
+  `IntentModule.openURL`) was dead while appearing installed.
+

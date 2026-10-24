@@ -882,7 +882,7 @@
 
     move-result v0
 
-    if-gez v0, :ret
+    if-ltz v0, :ret
     add-int/lit8 v0, v0, 0x3
 
     const/16 v1, 0x2f
@@ -891,7 +891,7 @@
 
     move-result v1
 
-    if-gez v1, :no_path
+    if-ltz v1, :no_path
     goto :have_end
 
     :no_path
@@ -949,7 +949,7 @@
 
     move-result v6
 
-    if-nez v6, :try_suffix
+    if-eqz v6, :try_suffix
     const/4 v7, 0x1
 
     goto :next_host
@@ -963,7 +963,7 @@
 
     move-result v6
 
-    if-nez v6, :next_host
+    if-eqz v6, :next_host
     const/4 v7, 0x1
 
     :next_host

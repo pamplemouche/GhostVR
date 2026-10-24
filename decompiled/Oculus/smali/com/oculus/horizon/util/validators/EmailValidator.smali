@@ -39,7 +39,7 @@
 
     move-result v0
 
-    if-nez v0, :invalid
+    if-eqz v0, :invalid
 
     const/4 v0, 0x0
 
