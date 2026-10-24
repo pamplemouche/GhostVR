@@ -82,8 +82,17 @@ RULES = [
 
 QUOTED = re.compile(r'"(?P<body>(?:[^"\\]|\\.)*)"')
 
+# Files that must keep their Meta host literals. `IntentModule` holds the
+# redirect table itself: it matches those hosts and rewrites the URL onto our
+# backend, so patching the table away would disable the redirect.
+SKIP_FILES = {
+    Path("Oculus/smali_classes2/com/facebook/react/modules/intent/IntentModule.smali"),
+}
+
 
 def patch_file(path: Path, dry_run: bool):
+    if path.relative_to(DECOMPILED) in SKIP_FILES:
+        return []
     original = path.read_text(encoding="utf-8", errors="surrogateescape")
     changes = []
 

@@ -25,6 +25,10 @@ to its default file list.
 | `tools/patch_hermes_bundle.py` | React Native Hermes bundles |
 | `tools/check_graphql_payload.py` | `/graphql` answers vs. client models |
 
+`patch_smali_hosts.py` skips `IntentModule.smali`: that file holds the runtime
+redirect table itself, so rewriting its `oculus.com` / `facebook.com` literals
+would disable the link-out redirect instead of extending it.
+
 ## Hermes bundles
 
 The React Native surfaces (Home, Store, Settings, ...) ship as Hermes bytecode
@@ -156,6 +160,33 @@ get wrong:
 - The router matches paths by prefix, so `/graphql` is checked after
   `/graphqlbatch`. Reordering those two silently misroutes every batch.
 
+## Authentication
+
+The real accounts live on the Pamplemouche backend (`arc.pamplemouche.com`,
+`POST /api/login {username, password}`). The Oculus client only knows
+"email + password", so the pseudo is typed into the email field and forwarded
+as `username`; `handleAuthLogin` calls `arcLogin()` and keeps the returned
+identity in a module-level `currentUser`, the same way `pinIsSet` works.
+`identity()` and `accessToken()` read it, so every viewer/profile payload and
+every token reflects the signed-in account; `handleLogout` clears it.
+
+A failed login is not fatal. The app still needs a session to reach its offline
+surfaces, so `arcLogin` returning `null` leaves the fallback identity in place
+rather than answering an error.
+
+Two client-side validators block a pseudo shorter than an email/8-char password
+before the request is ever sent, so both were relaxed:
+
+- `EmailValidator.validate` no longer runs `Patterns.EMAIL_ADDRESS`; it rejects
+  only null/blank, so a pseudo passes.
+- `PasswordValidator.validate` drops the minimum from 8 to 4 and drops the
+  `ContainsUsername` check, because a pseudo is not an email.
+
+`/pamp/` is the per-user passthrough to the Pamplemouche API. `/pamp/me`
+answers the identity, coin balance and loadout in one body; every other
+`/pamp/<path>` is forwarded verbatim to `${ARC_BASE}/api/<path>` with the
+session's bearer token, so the shop can grow without touching the Worker.
+
 ## Onboarding roadblocks
 
 `RoadblocksHelper` in the `Oculus` tree gates the main screen. `MainActivity
@@ -239,6 +270,32 @@ Because the payload is one module-level literal, a per-request field like
 and flips `is_pin_set` when `pinIsSet` is set; without it `MeManager.refresh()`
 would overwrite the local pin flag from a frozen `false` and re-show the
 "Create Oculus PIN" roadblock forever.
+
+The same literal is identity-free, so `graphqlResponse()` also has to fold in
+the signed-in user at read time. It is not enough to overlay four keys onto
+whatever subtree the payload happens to have: `viewer`, `me`, `user` and `node`
+all address the signed-in user, and each is deserialized into a different
+class, so each needs the full `viewerUser()` shape merged on top of its own
+fields:
+
+- `node(<user_id>)` (`SocialMethods.getProfile` -> `ProfileFragment`) is the
+  crash that mattered. Its result goes to `ProfileHeaderViewHolder`, which
+  dereferences `name`, `profile_photo.uri`, `avatar_image.uri`,
+  `online_platforms`, `friend_status`, `presence_status` and `mutual_friends`.
+  The payload's `node` entry used to hold only `{default_applications: []}`, so
+  every one of those reads was a null deref.
+- `node(<application_id>)` (`SocialMethods.getAchievements` ->
+  `AchievementsResponse`) wants `display_name`, `cover_landscape_image` and
+  `grouping.achievement_definitions.nodes` on the *same* root, so the table's
+  `node` subtree is merged in underneath the user shape and each query reads
+  only the keys it asked for.
+- `viewer` additionally keeps its privacy/feed block (`VIEWER_ONLY_FIELDS`);
+  merging the user shape over the whole payload would otherwise drop it.
+
+`viewer.user` needs the full shape too - `MyUserProfileResponse.Viewer.user` is
+a concrete `User`. Verify the whole thing by replaying the real query strings
+from `SocialMethods.smali` through `worker.fetch`, not with a synthetic
+`viewer { ... }`.
 
 Verify with the invariants, not by eye:
 
