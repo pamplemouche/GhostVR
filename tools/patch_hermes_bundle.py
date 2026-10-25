@@ -13,6 +13,18 @@ sharing entry into arena bytes that nothing currently reads, so no live string
 is ever corrupted.  The arena keeps its size, so no section in the file moves;
 only string-table and overflow-table entries are rewritten.
 
+Two limits are deliberate, and both end in "skip", never in a partial write:
+
+* A container whose string table does not decode cleanly is refused.  Guessing
+  at a layout would corrupt the bundle, and a corrupt React Native bundle is a
+  hard startup failure.  The `Oculus Home` bundles are Hermes bytecode version
+  53, whose header layout differs from the version 61 container this script
+  understands (`HorizonBundle.js.hbc`); they are skipped until that layout is
+  handled, and the hosts they still name are recorded in
+  `tools/patched_tree_baseline.txt`.
+* A container whose arena has no free run and cannot grow is refused, because
+  the bytecode that follows addresses the arena with absolute offsets.
+
 Run from the repository root:
     python3 tools/patch_hermes_bundle.py [--dry-run] [bundle ...]
 """

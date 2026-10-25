@@ -1,0 +1,72 @@
+name: Verify patched tree
+
+# The repatching scripts edit binaries in place.  A run with `capstone` missing
+# silently corrupted the OCMS mobileconfig libraries, and nothing in CI noticed
+# because no workflow invoked the scripts or checked their output.  This job
+# runs them on every change and then verifies the tree they produce, so the
+# same class of breakage cannot reach a build.
+
+on:
+  push:
+    paths:
+      - 'tools/**'
+      - 'src/**'
+      - 'decompiled/**'
+  pull_request:
+    paths:
+      - 'tools/**'
+      - 'src/**'
+      - 'decompiled/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python3 -m pip install -r tools/requirements.txt
+
+      - name: Verify the committed tree is not corrupted
+        run: python3 tools/check_patched_tree.py
+
+      - name: Exercise the worker's login gate
+        run: node tools/tests/test_backend.mjs
+
+      - name: Check the GraphQL payload against the generated models
+        run: python3 tools/check_graphql_payload.py
+
+      - name: Re-run every patcher idempotently
+        run: |
+          # Hash the tree as checked out, then hash it again after a full
+          # (NUL-delimited: `Oculus Home` has a space in its name).
+          # patcher pass.  Comparing to HEAD would also flag the committed
+          # repairs themselves, so the two hashes are taken around the run.
+          find decompiled -type f -print0 | sort -z | xargs -0 md5sum > /tmp/before.md5
+          python3 tools/patch_smali_hosts.py
+          python3 tools/patch_native_libs.py
+          python3 tools/patch_resources.py
+          python3 tools/patch_hermes_bundle.py
+          find decompiled -type f -print0 | sort -z | xargs -0 md5sum > /tmp/after.md5
+
+      - name: Fail if a patcher introduced new problems
+        run: python3 tools/check_patched_tree.py
+
+      - name: Fail if a patcher changed anything on a second pass
+        run: |
+          if ! diff -q /tmp/before.md5 /tmp/after.md5 > /dev/null; then
+            echo "::error::patchers are not idempotent; the tree changed:"
+            diff /tmp/before.md5 /tmp/after.md5 | head -40
+            exit 1
+          fi
+          echo "patchers are idempotent"

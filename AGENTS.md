@@ -384,3 +384,51 @@ The two bugs this caused were both silent and total:
   runtime redirect (fetch/XHR via `NetworkingModule`, link-outs via
   `IntentModule.openURL`) was dead while appearing installed.
 
+
+## Binary patchers: never patch in place without checking the result
+
+The repatching scripts rewrite host strings inside native libraries, and a host
+that is longer than the one it replaces overruns into whatever follows. In a
+packed `.rodata` run that neighbour is the *next* host string, which has no
+relocation entry, so the overrun silently fuses the two:
+`ghostvr.pamplemouchostvr.pamplemouche.com/`. That shipped once and caused a
+hard startup crash in OCMS.
+
+Two rules follow, and both are enforced by `tools/check_patched_tree.py`:
+
+- **A required dependency must not degrade to "skip the safety check".**
+  `capstone` was an optional import in `pc_relative_addresses()`; without it the
+  function returned an empty set, every constant looked unreachable, and the
+  corruption assertions compared against nothing. It is now a hard requirement
+  (`tools/requirements.txt`) and raises on import failure. When a check cannot
+  run, fail the build - do not return "nothing found".
+- **When a value grows, handle the next patch target, not just reachable
+  data.** `patch_library()` relocated *reachable* neighbours that a longer
+  value would overwrite, but a later patch target sitting in the same packed
+  run was neither reachable nor relocated, so its own write landed on top of
+  the new value. It is now dropped and its surviving tail blanked.
+
+`check_patched_tree.py` looks for the failure directly: a NUL-free run of 40+
+bytes naming the host twice. Run it after any patcher change. It also checks
+for Meta hosts left in `.so`, smali literals and Hermes bundles, with a
+per-file baseline in `tools/patched_tree_baseline.txt` so a *new* problem fails
+while the known backlog does not.
+
+## Hermes bundles: two layouts, only one handled
+
+`HorizonBundle.js.hbc` is bytecode version 61; the `Oculus Home` React Native
+bundles are version 53. `patch_hermes_bundle.py` parses v61 (header size 97,
+`sizeof(SmallFuncHeader)` 16, counts at file offset 40). The v53 header puts its
+counts elsewhere, and the layout could not be confirmed, so those bundles are
+skipped and their remaining hosts are baselined. Do not guess the v53 offsets -
+a wrong table offset corrupts the bundle, which is a hard startup failure.
+`hermes-dec`/`hbctool` do not parse v53 either.
+
+## Local account: there is none
+
+`src/index.js` used to fall back to a canned identity (`USER_ID`/`ACCESS_TOKEN`)
+whenever nobody was signed in, so a wrong password still returned a valid
+session and the login screen was decorative. The account now comes only from
+`POST https://arc.pamplemouche.com/api/login`; account surfaces answer 401
+without a session via `requireSession()`. If you add a viewer-shaped route, call
+`requireSession()` first - `identity()` returns `null` and will throw otherwise.

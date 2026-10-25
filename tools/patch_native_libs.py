@@ -187,8 +187,16 @@ def pc_relative_addresses(data: bytes, is64: bool, sections) -> set[int]:
     """Constants reached by `ldr rd, [pc, #imm]` / `add rd, pc, #imm`."""
     try:
         import capstone
-    except ImportError:  # pragma: no cover - optional accelerator
-        return set()
+    except ImportError as exc:
+        # Returning an empty set here is not a graceful degradation: every
+        # constant reached only by a pc-relative load would look unreachable, so
+        # `allocate()` could hand out .rodata that is still live and the
+        # corruption assertions below would have nothing to compare against.
+        # That is how the OCMS mobileconfig library shipped a fused string.
+        raise RuntimeError(
+            "capstone is required: without it the patcher cannot tell which "
+            ".rodata bytes are still referenced and will corrupt the library"
+        ) from exc
 
     section = sections.get(".text")
     if not section:
@@ -356,7 +364,11 @@ def patch_library(path: Path, patches, fills, dry_run: bool) -> list[str]:
             next_spare += 1
         raise ValueError(f"{path.name}: out of spare .rodata space")
 
-    for vaddr, payload in sorted(patches):
+    pending = sorted(patches)
+    i = 0
+    while i < len(pending):
+        vaddr, payload = pending[i]
+        i += 1
         foff = to_offset(loads, vaddr)
         encoded = payload.encode()
         overrun_end = vaddr + len(encoded)
@@ -374,6 +386,22 @@ def patch_library(path: Path, patches, fills, dry_run: bool) -> list[str]:
             log.append(f"    moved {text[:26]!r} {neighbour:#x} -> vaddr {_vaddr_of(loads, dest):#x}")
             reachable.discard(neighbour)
             baseline.pop(neighbour, None)
+
+        # A longer value can also swallow a *later patch target*.  Those sit in
+        # packed host runs with no reachable entry, so the loop above never
+        # moves them.  Applying one afterwards would write it at its stale
+        # offset, on top of this value, and fuse the two strings - the
+        # corruption seen in the OCMS mobileconfig library.  Drop the swallowed
+        # target and blank whatever part of it survives the write.
+        swallowed = [(v, p) for v, p in pending[i:] if vaddr < v < overrun_end]
+        for other_vaddr, _other in swallowed:
+            pending.remove((other_vaddr, _other))
+            ooff = to_offset(loads, other_vaddr)
+            otext = cstr(original, ooff)
+            tail = max(ooff + len(otext) - max(ooff, foff + len(encoded) + 1), 0)
+            if tail:
+                data[foff + len(encoded) + 1 : ooff + len(otext)] = b"\x00" * tail
+            log.append(f"    absorbed pending target {otext[:26]!r} {other_vaddr:#x}")
 
         old = cstr(original, foff)
         data[foff : foff + len(encoded) + 1] = encoded + b"\x00"
@@ -394,6 +422,16 @@ def patch_library(path: Path, patches, fills, dry_run: bool) -> list[str]:
         off = to_offset(loads, addr)
         if bytes(data[off : off + len(text)]) != text:
             raise ValueError(f"{path.name}: corrupted reachable constant at {addr:#x}: {text[:40]!r}")
+
+    # A string that lost its NUL terminator shows up as one long NUL-free run
+    # carrying our host more than once.  The baseline check above cannot see it:
+    # the fused neighbour was never reachable, so it was never recorded.
+    host = HOST.encode()
+    for run in re.finditer(rb"[^\x00]{40,}", bytes(data)):
+        if run.group(0).count(host) > 1:
+            raise ValueError(
+                f"{path.name}: fused string at {run.start():#x}: {run.group(0)[:60]!r}"
+            )
 
     if not dry_run:
         path.write_bytes(bytes(data))

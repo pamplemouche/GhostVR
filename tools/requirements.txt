@@ -1,0 +1,7 @@
+# Used by tools/patch_native_libs.py.
+#
+# capstone is required, not optional: it is what tells the patcher which
+# .rodata bytes a `ldr rd, [pc, #imm]` still references.  Without it the
+# patcher cannot distinguish live storage from free space, and a run with it
+# missing silently corrupted the OCMS mobileconfig libraries.
+capstone>=5.0
