@@ -432,3 +432,29 @@ session and the login screen was decorative. The account now comes only from
 `POST https://arc.pamplemouche.com/api/login`; account surfaces answer 401
 without a session via `requireSession()`. If you add a viewer-shaped route, call
 `requireSession()` first - `identity()` returns `null` and will throw otherwise.
+
+## The bundle hosts are mostly cosmetic, not reachable
+
+Before treating a Meta host left in a Hermes bundle as a live leak, check
+whether the runtime redirect already covers it. `IntentModule.rewriteExternalUrl`
+rewrites any host equal to, or ending in, `.oculus.com` / `.facebook.com`, and
+it is called from both network paths:
+
+- `NetworkingModule.sendRequestInternal` - every JS `fetch`/XHR.
+- `IntentModule.openURL` - every link-out.
+
+So a JS request to `graph.oculus.com` never leaves for Meta even though the
+bundle still names it. `tools/check_bundle_coverage.py` splits the remaining
+hosts into "rewritten at runtime" and "not covered" so the backlog is not
+re-read by hand. As of this writing: 15 distinct hosts, 14 rewritten, and only
+`fburl.com` uncovered - and that one appears solely in user-facing help and
+developer-doc text, not as a request target.
+
+Two consequences:
+
+- The unpatched v53 bundles are **not** a functional blocker. Native-side
+  requests are covered by the `.so`/smali patching (the tree is clean there).
+- `rewriteExternalUrl` is hand-written and had inverted branches once already.
+  Its host array is fixed at 4 and its loop bound is hard-coded at 2, so adding
+  a host means changing both. Do not touch it to close a cosmetic text-link
+  leak; the risk is to the redirect everything else depends on.

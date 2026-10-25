@@ -46,6 +46,9 @@ jobs:
       - name: Check the GraphQL payload against the generated models
         run: python3 tools/check_graphql_payload.py
 
+      - name: Report which bundle hosts the runtime redirect still covers
+        run: python3 tools/check_bundle_coverage.py
+
       - name: Re-run every patcher idempotently
         run: |
           # Hash the tree as checked out, then hash it again after a full
