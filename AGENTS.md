@@ -504,3 +504,72 @@ Two consequences:
   Its host array is fixed at 4 and its loop bound is hard-coded at 2, so adding
   a host means changing both. Do not touch it to close a cosmetic text-link
   leak; the risk is to the redirect everything else depends on.
+
+## The store is served from a generated catalogue, not the static table
+
+`src/store_data.js` is generated from `data/vault_catalogue.json` by
+`tools/build_store_payload.py` and imported by the worker. It holds every Gear
+VR title the vault knows about (562 as of this writing), keyed by a `gv:<id>`
+item id. Regenerate it after refreshing the catalogue:
+
+    python3 tools/fetch_vault_catalogue.py      # -> data/vault_catalogue.json
+    python3 tools/build_store_payload.py        # -> src/store_data.js
+
+The store's three GraphQL surfaces are answered from it in `graphqlResponse`:
+
+- `viewer() { app_store { sections } }` - `appStorePayload()`. Note the static
+  `GRAPHQL_PAYLOAD` has `app_store` at the *top level*, but the query asks for it
+  under `viewer`, and the viewer branch only carries `VIEWER_ONLY_FIELDS`; so it
+  has to be rebuilt here or the store home renders no sections at all.
+- `node(<category>) { all_items.first(n).after(c) }` - `storeSectionResponse()`.
+  Cursors are plain offsets; `.first()`/`.after()` must be honoured or the first
+  request pulls a whole section and `has_next_page` lies.
+- `app_binary_update(app_id: <id>) { new_binary { uri } }` - the install URI.
+
+APK hosting: the binaries are ~100 MB each and there are hundreds, so they
+cannot live in git (100 MB per-file limit). The URI handed out is the vault URL
+(`https://vault.gearvr.net/APK/<pkg>.apk`) unless `apk_base` is set in
+`src/store_data.js`, in which case that origin wins. The client accepts any
+HTTPS origin: `fb_network_security_config.xml` trusts the system store and
+allows cleartext, and the store download does not go through the
+certificate-pinning helper. To self-host, pass `--apk-base` to the builder.
+
+Item nodes must satisfy `Item.isValidApplication()`, which the store's
+`StoreUtils.filterForSupportedItems` calls before rendering: `__typename` must
+be exactly `"Application"` and `latest_supported_binary.package_name` must be
+non-null. A node failing that check is silently dropped, so a wrong `__typename`
+looks exactly like an empty store.
+
+## Gatekeepers: the Home menu is gated, and the request shape matters
+
+`oculus_vrshell_enable_system_utilities` is the gatekeeper behind the Home
+pull-out menu (`HorizonGatekeeperFetcherModule.getSystemUtilitiesEnabled()`).
+It is served to the shell by the phone app's `GatekeeperContentProvider`, which
+reads it from `/features`.
+
+The VR shell does **not** use the Retrofit `projects[]` spelling. It builds its
+own request (`GateKeepers.gkList` + `GK_API_PATH = "features"`):
+
+    /features?projects[0]=<gk>&projects[1]=<gk>&...
+
+and parses the reply as `data[0].results[i]` with `JSONArray.getBoolean(i)`
+(`GateKeepers$3`). Matching only `projects[]` therefore saw zero projects,
+answered an empty `results`, and `getBoolean(i)` threw - which left *every*
+gatekeeper false, including the menu. `gatekeeperProjects()` now accepts
+`projects[N]`, `projects[]` and comma-joined values.
+
+The enabled set is a deliberate allow-list, not "everything": turning on a
+feature whose backend does not exist swaps a hidden surface for a crash.
+Live-video, messenger, party calls, Skyline multi-device and Worlds stay off.
+
+## Crash reports are the only diagnostic for on-device failures
+
+There is no debugger on the headset. The client's bug reporter POSTs to
+`/oculus/report_bug`, and on a crash it includes the stack trace.
+`handleBugReport()` logs the body to the Worker invocation log, so it is
+recoverable with `wrangler tail`. When a surface crashes, reproduce it and read
+the trace there before guessing at the response shape.
+
+A JSON body on an *image* path is not "no picture" - it is an undecodable
+stream and the image loader throws. `profile_photo.uri`, `avatar_image.uri` and
+the store's cover art must all resolve to real PNG bytes (`handleAvatar()`).

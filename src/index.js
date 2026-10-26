@@ -11,6 +11,12 @@
  * Retrofit appends each interface path to its base, so routes are matched by
  * suffix (`/oculus/graphql`, `/fb-api/method/auth.login`, ...).
  */
+// The Gear VR back catalogue, built from vault.gearvr.net by
+// `tools/build_store_payload.py`. The store asks the backend for it through
+// GraphQL (`node(<category>) { all_items... }`) and for the install URI through
+// `app_binary_update`; both are answered from this table.
+import { STORE } from './store_data.js';
+
 
 // The only asset the client asks for before an account exists. Everything else
 // about the viewer comes from the Pamplemouche backend, so there is no local
@@ -26,9 +32,18 @@ const DEVICE_SECRET = 'ghostvr_device_secret';
 // session cookie so it survives across isolates; see the session block below.
 const ARC_BASE = 'https://arc.pamplemouche.com';
 
+// The store's own size for an APK binary. The vault serves ~100 MB per title;
+// this is the `size` the install progress bar counts against. It is deliberately
+// generous: understating it makes the bar hit 100% before the download ends.
+const STORE_BINARY_SIZE = 200 * 1024 * 1024;
+
+// The download origin handed out for an install. The vault is the source today
+// because the binaries cannot live in git (562 x ~100 MB); a self-hosted mirror
+// is a config change: set `apk_base` in `src/store_data.js` and it wins.
+const APK_ORIGIN = 'https://vault.gearvr.net/APK';
+
 /**
  * The signed-in session lives in a signed cookie, not in module state.
- *
  * A Worker module is not a process: each request may be served by any isolate,
  * isolates are evicted on a whim, and there are many of them at once. A login
  * that set a module-level `currentUser` therefore only took effect on the one
@@ -320,6 +335,13 @@ function viewerUser(session) {
     // `mutual_friends { count }` and the model deserializes into a concrete
     // `MutualFriends`, so an absent key leaves it null rather than absent.
     mutual_friends: { count: 0 },
+    // The profile screen's photo picker asks for
+    // `premade_profile_photos(first:5)` (see `HorizonBundle.js.hbc`). It is a
+    // connection on the viewer; leaving the key out makes the field undefined in
+    // the Relay store, and the picker reads `.nodes` off it. An empty connection
+    // renders an empty grid instead of throwing.
+    premade_profile_photos: connection([]),
+    friends_count: 0,
     all_payment_methods: connection([]),
     payment_methods: connection([]),
     // `me() { payment_account { stored_credit { ... } } }` reads balance and
@@ -556,12 +578,295 @@ const VIEWER_ONLY_FIELDS = [
   'feed',
 ];
 
+// ---------------------------------------------------------------------------
+// Store
+// ---------------------------------------------------------------------------
+
+/**
+ * `app_binary_update` is the query the store sends right before an install:
+ *
+ *   app_binary_update(app_id: <id>) { new_binary { id, uri, size,
+ *                                                obb_binary { id, uri, size } } }
+ *
+ * It is answered from the catalogue rather than the static table, because the
+ * `uri` has to be a real download. The installer follows that URI, so this is
+ * the one place that decides where a Gear VR APK actually comes from.
+ */
+function binaryUpdateResponse(params) {
+  const itemId = appIdOf(params);
+  const item = STORE.items[itemId];
+  if (!item) return { app_binary_update: { new_binary: null, patch: null } };
+  return {
+    app_binary_update: {
+      new_binary: {
+        id: itemId,
+        uri: apkUri(item),
+        size: STORE_BINARY_SIZE,
+        // No OBB in the vault catalogue; the field is concrete on the model, so
+        // it is null rather than absent. `obb_binary { uri }` is null-guarded
+        // everywhere it is read.
+        obb_binary: null,
+      },
+      // A patch would have to describe the delta from the installed version.
+      // There is none, so the client does a full download.
+      patch: null,
+    },
+  };
+}
+
+/**
+ * `node(<category>) { all_items.after(<cursor>).first(<count>) { nodes {...}
+ * page_info { end_cursor has_next_page } } }`.
+ *
+ * The store pages a section as the user scrolls, so `first`/`after` have to be
+ * honoured: answering all 400 games at once on the first request would make the
+ * client render the whole section up front, and a `page_info` that claims
+ * `has_next_page: false` while more exist stops the list short.
+ */
+function storeSectionResponse(params) {
+  const query = firstParam(params, 'q', 'query', 'doc', 'doc_id') || '';
+  const sectionId = nodeIdOf(query);
+  const ids = storeSectionIds(sectionId);
+
+  // Cursors are the offset into the section, which is stable because the
+  // catalogue is generated in sorted order and never mutated at runtime. The
+  // paging values arrive both inlined in the query (`.first(20)`) and as
+  // top-level params (`count=20`, `cursor=20`); either spelling is accepted.
+  const afterRaw = graphqlArg(query, 'after') || firstParam(params, 'cursor') || '0';
+  const firstRaw = graphqlArg(query, 'first') || firstParam(params, 'count') || '';
+  const after = Number.parseInt(afterRaw, 10);
+  const start = Number.isFinite(after) && after > 0 ? after : 0;
+  const requested = Number.parseInt(firstRaw, 10);
+  const pageSize = Number.isFinite(requested) && requested > 0 ? requested : ids.length;
+
+  const page = ids.slice(start, start + pageSize);
+  const nodes = page.map((id) => storeItemNode(STORE.items[id])).filter(Boolean);
+  const end = start + nodes.length;
+  const hasNext = end < ids.length;
+
+  return {
+    node: {
+      id: sectionId,
+      section_name: storeSectionName(sectionId),
+      all_items: {
+        nodes,
+        count: ids.length,
+        page_info: {
+          start_cursor: String(start),
+          end_cursor: hasNext ? String(end) : '',
+          has_next_page: hasNext,
+        },
+      },
+    },
+  };
+}
+
+/**
+ * `node(<item_id>) { ... }` for the product detail page. Only ids that exist in
+ * the catalogue are answered here; everything else (a user id, an application
+ * id) falls through to the user-shape merge further down.
+ */
+function storeItemResponse(params) {
+  const itemId = nodeIdOf(firstParam(params, 'q', 'query', 'doc', 'doc_id') || '');
+  const item = STORE.items[itemId];
+  if (!item) return { node: {} };
+  return { node: storeItemNode(item, { full: true }) };
+}
+
+/**
+ * The node shape the store's `Item` model deserializes into. Every field is
+ * present because the model declares them concrete; the optional ones are
+ * `null` where the client null-guards them (`user_quality_rating`,
+ * `head_tracking`) and empty objects/lists otherwise.
+ */
+function storeItemNode(item, options = {}) {
+  if (!item) return null;
+  const images = storeImages();
+  const binary = {
+    id: item.id,
+    package_name: item.package_name,
+    version: '1.0',
+    version_code: 1,
+    target_android_sdk_version: 21,
+    external_signatures: [],
+    size: STORE_BINARY_SIZE,
+    permissions: [],
+    user_quality_rating: null,
+    head_tracking: 'UNKNOWN',
+    uri: apkUri(item),
+    can_use_external_storage: true,
+    obb_binary: null,
+  };
+  const node = {
+    __typename: 'Application',
+    id: item.id,
+    display_name: item.display_name,
+    display_short_description: item.display_short_description,
+    display_long_description: item.display_long_description,
+    category: item.category_name,
+    category_name: item.category_name,
+    grouping: { id: item.id, cloud_file_is_enabled: false, iap_items_2: { nodes: [] } },
+    latest_supported_binary: binary,
+    supported_binaries: { nodes: [binary] },
+    // `is_viewer_entitled` is what turns the PDP's button from "buy" into
+    // "install". Everything in the catalogue is free, so it is always true.
+    is_viewer_entitled: true,
+    app_viewer_id: item.id,
+    entitlement: { id: item.id, last_used: '', signed_token: '' },
+    developer_name: item.developer_name,
+    publisher_name: item.developer_name,
+    organization: { id: 'ghostvr', name: 'GhostVR' },
+    internet_connection: 'REQUIRED',
+    internet_connection_name: 'Required',
+    comfort_rating: 'COMFORTABLE',
+    comfort_rating_name: 'Comfortable',
+    user_interaction_modes: [],
+    user_interaction_mode_names: [],
+    supported_in_app_languages: [],
+    supported_input_devices_list: [],
+    required_input_device: null,
+    supported_player_modes: [],
+    genre_names: [],
+    // `quality_rating_aggregate` is a float on the model, so it must be a JSON
+    // number and not the `[]` the histogram uses.
+    quality_rating_aggregate: 4.5,
+    platform: 'ANDROID',
+    min_recommended_version_code: 0,
+    min_required_version_code: 0,
+    release_date: 0,
+    age_rating: null,
+    quality_ratings_by_viewer: [],
+    quality_rating_histogram_aggregate: [],
+    user_reviews2: { nodes: [], count: 0, page_info: { end_cursor: '' } },
+    screenshots: [],
+    video_trailer: null,
+    store_wide_offers: [],
+    bundle_items: { nodes: [] },
+    parent_application: null,
+    is_demo_of: null,
+    ...images,
+  };
+  // The list query and the PDP ask for different depths; the shallow one only
+  // needs what the tile renders, which keeps the catalogue response small.
+  if (!options.full) {
+    delete node.supported_binaries;
+    delete node.required_input_device;
+  }
+  return node;
+}
+
+/** Cover art. The client decodes these with an image loader, so they must be
+ *  real PNG bytes - `handleAvatar()` serves that, and the same image is reused
+ *  for every tile rather than one request per app. */
+function storeImages() {
+  const image = (name) => ({ name, uri: AVATAR_URI, width: '720', height: '405' });
+  return {
+    cover_landscape_image: image('cover_landscape'),
+    cover_square_image: image('cover_square'),
+    small_landscape_image: image('small_landscape'),
+    thumbnail: image('thumbnail'),
+  };
+}
+
+function apkUri(item) {
+  return `${STORE.apk_base || APK_ORIGIN}/${item.apk}`;
+}
+
+function isStoreId(value) {
+  return typeof value === 'string' && value.startsWith('gv:');
+}
+
+/** `node(<category>)` / `node(<item_id>)` -> the argument, unquoted. */
+function nodeIdOf(query) {
+  const match = /node\(\s*([^)]+?)\s*\)/.exec(query || '');
+  return match ? match[1].replace(/^["']|["']$/g, '') : '';
+}
+
+/**
+ * The value of `.name(<value>)` in a query - used for the store's pagination
+ * arguments (`.first(20)`, `.after(20)`) and filters. Returns '' when absent.
+ */
+function graphqlArg(query, name) {
+  const found = new RegExp(`\\.${name}\\(\\s*([^)]*?)\\s*\\)`).exec(query || '');
+  return found ? found[1].replace(/^["']|["']$/g, '') : '';
+}
+
+/** `app_binary_update(app_id: <id>)` -> the id, unquoted. */
+function appIdOf(params) {
+  const raw = `${firstParam(params, 'q', 'query', 'doc', 'doc_id') || ''} ${
+    firstParam(params, 'query_params') || ''
+  }`;
+  // The id ends at the closing paren, a comma, a brace or whitespace, and may
+  // be quoted depending on how the client encoded the params.
+  const match = /app_id\s*:\s*["']?([^,}\s)"']+)/.exec(raw);
+  if (!match) return '';
+  return match[1];
+}
+
+function storeSectionIds(sectionId) {
+  const section = STORE.sections.find((entry) => entry.id === sectionId);
+  // An unknown category (the store's own "featured", say) falls back to
+  // everything, so the store still renders instead of showing an empty page.
+  if (!section) return STORE.sections.flatMap((entry) => entry.item_ids);
+  return section.item_ids;
+}
+
+function storeSectionName(sectionId) {
+  const section = STORE.sections.find((entry) => entry.id === sectionId);
+  return section ? section.name : 'Store';
+}
+
+function pageInfo(count) {
+  return { start_cursor: '', end_cursor: '', has_next_page: false, count };
+}
+
+/**
+ * `viewer() { app_store { sections { nodes { id, section_name, ... } } } }` is
+ * the store home. `GRAPHQL_PAYLOAD` has `app_store` at the top level, but the
+ * query asks for it under `viewer`, and the viewer branch only carries over
+ * `VIEWER_ONLY_FIELDS` - so the key was dropped and the store home had no
+ * sections to render. It is rebuilt here from the catalogue instead, which also
+ * keeps the section ids in step with what `node(<section>) { all_items }`
+ * answers.
+ */
+function appStorePayload() {
+  return {
+    id: 'ghostvr_store',
+    name: 'GhostVR Store',
+    style_theme: 'DARK',
+    sections: connection(
+      STORE.sections.map((section) => ({
+        id: section.id,
+        section_name: section.name,
+        layout: 'CAROUSEL',
+        content_type: 'APPS',
+        sort_options: [],
+        assets: { edges: [] },
+        style_theme: 'DARK',
+        end_time: null,
+        show_timer: false,
+      })),
+    ),
+    store_assets: { edges: [] },
+    store_wide_offers: [],
+  };
+}
+
 function graphqlResponse(params, session) {
   const raw = `${firstParam(params, 'q', 'query', 'doc', 'doc_id') || ''} ${
     firstParam(params, 'query_params') || ''
   }`;
   const haystack = raw.toLowerCase();
-  const root = rootFieldOf(firstParam(params, 'q', 'query', 'doc', 'doc_id') || '') || 'viewer';
+  const query = firstParam(params, 'q', 'query', 'doc', 'doc_id') || '';
+  const root = rootFieldOf(query) || 'viewer';
+
+  // Store: the download URI for one item, asked right before an install.
+  if (haystack.includes('app_binary_update')) return binaryUpdateResponse(params);
+
+  // Store: the catalogue. `node(<category>) { all_items... }` and
+  // `node(<item_id>) { ... }` both land here; the argument decides which.
+  if (haystack.includes('all_items')) return storeSectionResponse(params);
+  if (root === 'node' && isStoreId(nodeIdOf(query))) return storeItemResponse(params);
 
   // Mutations the query text names only inside their arguments.
   if (haystack.includes('sync_device_manifest')) {
@@ -583,6 +888,9 @@ function graphqlResponse(params, session) {
     for (const field of VIEWER_ONLY_FIELDS) {
       if (payload[field] !== undefined) answer[field] = payload[field];
     }
+    // The store home asks for `viewer { app_store }`; the static table holds it
+    // at the top level, so it is rebuilt from the catalogue here.
+    answer.app_store = appStorePayload();
     // `MyUserProfileResponse.Viewer.user` is the profile screen's user and is
     // deserialized as a concrete `User`, so it needs the full shape too.
     answer.user = { ...(payload.viewer?.user || {}), ...viewerUser(session) };
@@ -841,7 +1149,7 @@ function handleTwoFactorVerify(session) {
 // ---------------------------------------------------------------------------
 
 /**
- * GET /oculus/features?projects[]=...&projects[]=...
+ * GET /oculus/features?projects[0]=...&projects[1]=...
  *
  * ConfigUpdater.onRefreshGatekeepers() asserts that the number of returned
  * booleans equals the number of requested projects
@@ -850,17 +1158,86 @@ function handleTwoFactorVerify(session) {
  * immediate crash rather than a failed request. One boolean per requested
  * project is therefore mandatory.
  *
- * An unset gatekeeper resolves to `false`, and `oculus_horizon_feed_default`
- * false makes MainActivity open the store fragment instead of the feed, so the
- * navigation gates are switched on explicitly.
+ * The VR shell asks for 133 of them at once
+ * (`Oculus Home/.../module/GateKeepers.gkList`) and reads the answers
+ * positionally; the phone app serves the shell its own copy through
+ * `GatekeeperContentProvider`. Both reach this endpoint.
+ *
+ * The enabled list is an allow-list, not "everything": a gatekeeper that is on
+ * makes the app show a surface that then calls for data we do not serve, so
+ * turning on a feature whose backend does not exist swaps a hidden menu for a
+ * crash. The entries here are the ones whose data this worker already answers -
+ * system utilities (the Home menu), the store, the library, search, profile and
+ * the social panel. Live-video, messenger, party calls, Skyline multi-device
+ * and Worlds are deliberately absent: they need live Meta infrastructure.
  */
 const ENABLED_GATEKEEPERS = new Set([
   'oculus_horizon_feed',
   'oculus_horizon_feed_default',
+  'oculus_social_feed',
+  'oculus_social_hub_enabled_in_vr',
+  'oculus_social_panel_v2_mobile',
+  'oculus_social_panel_v2_friend_finder',
+  // The Home menu itself. `HorizonGatekeeperFetcherModule` reads this through
+  // `getSystemUtilitiesEnabled()` and the shell shows the pull-out menu - the
+  // one that never appeared - only when it is true.
+  'oculus_vrshell_enable_system_utilities',
+  'oculus_vrshell_enable_system_utilities_extra_cmds',
+  'oculus_vrshell_enable_system_utilities_anytimeui',
+  'oculus_vrshell_home_storage_button',
+  'oculus_vrshell_home_unknown_sources',
+  'oculus_mobile_home_storage_manager',
+  'oculus_dash_panel_pullout',
+  'oculus_dash_panel_context_menu',
+  // Store and library.
+  'oculus_store_content_disco',
+  'oculus_store_disco_filtering_vr',
+  'oculus_store_backend_purchase_alerts',
+  'oculus_store_platform_tags_backend_purchase_alerts',
+  'oculus_store_search_button_in_chrome',
+  'oculus_vrshell_store_environments',
+  'oculus_vrshell_store_backend_purchase_alerts',
+  'oculus_vrshell_store_redesign_autoscroll',
+  'oculus_vrshell_purchase_history',
+  'oculus_vrshell_wishlists',
+  'oculus_home2_wishlists',
+  'oculus_mobile_home_library_demos',
+  'oculus_mobile_home_library_tutorials',
+  'oculus_mobile_home_library_back_button_disco',
+  'oculus_mobile_home_library_abuse_policy',
+  'oculus_search_typeahead',
+  'oculus_mobile_search_bar_v2',
+  'oculus_explore_pagination',
+  'oculus_explore_collection_loading_back_button',
+  'oculus_gallery_smart_folder_navigation',
+  'oculus_profile_block',
+  'oculus_user_account_exp',
 ]);
 
+/**
+ * The shell sends `projects[0]=a&projects[1]=b&...` (one indexed key per
+ * project, see `GateKeepers.fetchAndCacheGKs`), while the phone app sends
+ * `projects[]=` and may join with commas. Matching only `projects[]` missed the
+ * shell's form entirely, so the worker saw zero projects, answered an empty
+ * `results`, and the shell's positional `getBoolean(i)` threw - which left
+ * every gatekeeper false, including the menu. All three spellings are read.
+ */
+function gatekeeperProjects(params) {
+  const values = [];
+  for (const key of params.keys()) {
+    if (!/^projects(\[\d*\])?$/.test(key)) continue;
+    for (const value of params.getAll(key)) {
+      values.push(...value.split(',').filter(Boolean));
+    }
+  }
+  return values;
+}
+
 async function handleFeatures(request, url) {
-  const projects = allParams(await readParams(request, url), 'projects');
+  const projects = gatekeeperProjects(await readParams(request, url));
+  // One boolean per requested project, in the order asked. The shell indexes
+  // `results` by the position of `gkList`, so the length has to match exactly;
+  // a short array throws rather than defaulting to false.
   return json({
     data: [{ results: projects.map((project) => ENABLED_GATEKEEPERS.has(project)) }],
   });
@@ -975,8 +1352,32 @@ function handleAvatar() {
 // Misc endpoints
 // ---------------------------------------------------------------------------
 
-/** POST /oculus/{app_id}/bugs and /oculus/report_bug */
-function handleBugReport() {
+/**
+ * POST /oculus/{app_id}/bugs, /oculus/report_bug and /oculus/bugs.
+ *
+ * The client's bug reporter posts here, and on a crash it includes the stack
+ * trace. Meta's endpoint stored that; ours used to drop it, which left a crash
+ * with no diagnostic at all. It is logged to the Worker's invocation log (see
+ * `observability.logs` in wrangler.toml) so the report is recoverable from
+ * `wrangler tail` instead of being discarded.
+ */
+async function handleBugReport(request, url) {
+  let body = '';
+  try {
+    body = (await request.text()).slice(0, 20000);
+  } catch (error) {
+    body = '';
+  }
+  if (body) {
+    console.log(
+      JSON.stringify({
+        event: 'bug_report',
+        path: url.pathname,
+        query: url.search.slice(0, 500),
+        body,
+      }),
+    );
+  }
   return json({ success: true, id: 'ghostvr-bug-1' });
 }
 
@@ -1113,7 +1514,7 @@ async function route(request, url, session) {
     return json({ success: true });
   }
 
-  if (match(path, method, [[null, '/report_bug'], [null, '/bugs']])) return handleBugReport();
+  if (match(path, method, [[null, '/report_bug'], [null, '/bugs']])) return handleBugReport(request, url);
   if (match(path, method, [[null, '/logging_client_events'], [null, '/method/logging.clientevent']])) {
     return handleLogging();
   }

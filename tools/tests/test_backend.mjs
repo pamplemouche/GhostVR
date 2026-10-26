@@ -21,10 +21,13 @@ globalThis.fetch = async (url, init) => {
 };
 
 // The worker is an ES module with a default export, so it is imported from a
-// copy under a temp name rather than evaluated as a string.
+// copy under a temp name rather than evaluated as a string. `store_data.js` is
+// imported by the worker, so it is copied alongside it.
 const src = readFileSync('src/index.js', 'utf8');
-const workerPath = join(mkdtempSync(join(tmpdir(), 'ghostvr-')), 'worker.mjs');
+const workerDir = mkdtempSync(join(tmpdir(), 'ghostvr-'));
+const workerPath = join(workerDir, 'worker.mjs');
 writeFileSync(workerPath, src);
+writeFileSync(join(workerDir, 'store_data.js'), readFileSync('src/store_data.js', 'utf8'));
 const { default: worker } = await import(workerPath);
 
 // A fresh module instance stands in for "a different Worker isolate". The whole
@@ -222,6 +225,121 @@ console.log('\n--- the browser cookie path also authenticates ---');
   const cb = await rc.json();
   check('cookie-only request is authenticated', cb.authenticated === true, JSON.stringify(cb));
   check('cookie-only request has the right user', cb.username === 'alice', String(cb.username));
+}
+
+console.log('\n--- crash reports are captured, not dropped ---');
+{
+  // The client's bug reporter posts the stack trace here. The worker must
+  // accept it (the client retries forever otherwise) and log it, so a crash on
+  // the headset leaves something recoverable in the invocation log.
+  const seen = [];
+  const original = console.log;
+  console.log = (...args) => { seen.push(args.join(' ')); };
+  const r = await call('/oculus/report_bug', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ stack: 'java.lang.NullPointerException at Foo.bar' }),
+  });
+  const b = await r.json();
+  console.log = original;
+  check('report_bug accepted', r.status === 200 && b.success === true, JSON.stringify(b));
+  check('the stack trace was logged', seen.some((line) => line.includes('NullPointerException')),
+    seen.join(' | ').slice(0, 200));
+}
+
+console.log('\n--- gatekeepers: the VR shell fetches 133 of them at once ---');
+{
+  // The shell sends one indexed key per project (`projects[0]=a&projects[1]=b`)
+  // and reads `results` positionally with getBoolean(i). A short array throws
+  // and leaves every gatekeeper false - the Home menu never appears.
+  const gk = [
+    'oculus_vrshell_enable_system_utilities',
+    'oculus_horizon_feed',
+    'oculus_oculus_does_not_exist',
+  ];
+  const qs = gk.map((p, i) => `projects[${i}]=${p}`).join('&');
+  const rf = await call(`/oculus/features?${qs}&access_token=x`);
+  const bf = await rf.json();
+  check('features answers an envelope', Array.isArray(bf.data) && Array.isArray(bf.data[0].results),
+    JSON.stringify(bf));
+  check('one boolean per requested project (length must match exactly)',
+    bf.data[0].results.length === gk.length,
+    `got ${bf.data[0].results?.length}, want ${gk.length}`);
+  check('system utilities (the Home menu) is ON', bf.data[0].results[0] === true);
+  check('the feed gatekeeper is ON', bf.data[0].results[1] === true);
+  check('an unknown gatekeeper is OFF', bf.data[0].results[2] === false);
+
+  // The bracket form the phone app uses must keep working.
+  const rb = await call('/oculus/features?projects[]=oculus_horizon_feed');
+  const bb = await rb.json();
+  check('projects[]= spelling still works', bb.data[0].results[0] === true, JSON.stringify(bb));
+}
+
+console.log('\n--- store: the vault catalogue is served ---');
+{
+  const rSec = await call('/oculus/graphql?q=' + encodeURIComponent(
+    'node(games) { section_name, all_items { nodes { id, display_name, latest_supported_binary { uri } } } }'));
+  const bSec = await rSec.json();
+  const nodes = bSec.node?.all_items?.nodes || [];
+  check('games section has items', nodes.length > 0, `got ${nodes.length}`);
+  check('items carry a display name', Boolean(nodes[0]?.display_name), JSON.stringify(nodes[0] || {}).slice(0, 200));
+  const firstId = nodes[0]?.id;
+  check('item ids are prefixed', typeof firstId === 'string' && firstId.startsWith('gv:'), String(firstId));
+
+  // The install URI. The store sends this right before downloading.
+  const rBin = await call('/oculus/graphql?q=' + encodeURIComponent(
+    `app_binary_update(app_id: ${firstId}) { new_binary { id, uri, size } }`));
+  const bBin = await rBin.json();
+  const nb = bBin.app_binary_update?.new_binary;
+  check('app_binary_update returns a binary', Boolean(nb), JSON.stringify(bBin).slice(0, 200));
+  check('the binary uri is a real apk download', /\.apk$/.test(nb?.uri || ''), String(nb?.uri));
+  check('the binary uri points at the vault or our mirror',
+    /^https:\/\/(vault\.gearvr\.net|ghostvr\.pamplemouche\.com)\//.test(nb?.uri || ''), String(nb?.uri));
+  check('the binary declares a size', typeof nb?.size === 'number' && nb.size > 0, String(nb?.size));
+
+  // The PDP asks for the full node shape.
+  const rPdp = await call('/oculus/graphql?q=' + encodeURIComponent(
+    `node(${firstId}) { id, display_name, latest_supported_binary { uri }, is_viewer_entitled }`));
+  const bPdp = await rPdp.json();
+  check('PDP node resolves', bPdp.node?.id === firstId, JSON.stringify(bPdp).slice(0, 200));
+  check('catalogue items are entitled (so the button says install)', bPdp.node?.is_viewer_entitled === true);
+
+  // A user node must NOT be swallowed by the store branch.
+  const rUser = await call('/oculus/graphql?q=' + encodeURIComponent('node(999) { id, name, alias }'));
+  const bUser = await rUser.json();
+  check('a non-store node still answers as a user', typeof bUser.node?.name === 'string',
+    JSON.stringify(bUser).slice(0, 200));
+
+  // The store pages a section as the user scrolls; `first` must be honoured or
+  // the first request pulls the entire section and `has_next_page` lies.
+  const rPage = await call('/oculus/graphql?q=' + encodeURIComponent(
+    'node(games) { all_items.first(5) { nodes { id }, page_info { end_cursor, has_next_page } } }'));
+  const bPage = await rPage.json();
+  const pageNodes = bPage.node?.all_items?.nodes || [];
+  check('first(5) returns exactly 5', pageNodes.length === 5, `got ${pageNodes.length}`);
+  check('page_info says there is a next page',
+    bPage.node?.all_items?.page_info?.has_next_page === true,
+    JSON.stringify(bPage.node?.all_items?.page_info));
+
+  const cursor = bPage.node?.all_items?.page_info?.end_cursor;
+  const rPage2 = await call('/oculus/graphql?q=' + encodeURIComponent(
+    `node(games) { all_items.first(5).after(${cursor}) { nodes { id } } }`));
+  const bPage2 = await rPage2.json();
+  const secondIds = (bPage2.node?.all_items?.nodes || []).map((n) => n.id);
+  const firstIds = pageNodes.map((n) => n.id);
+  check('the second page is disjoint from the first',
+    secondIds.length === 5 && !secondIds.some((id) => firstIds.includes(id)),
+    JSON.stringify({ firstIds, secondIds }).slice(0, 300));
+
+  // The store home asks for `viewer { app_store { sections } }`.
+  const rHome = await call('/oculus/graphql?q=' + encodeURIComponent(
+    'viewer() { app_store { sections { nodes { id, section_name } } } }'));
+  const bHome = await rHome.json();
+  const sections = bHome.viewer?.app_store?.sections?.nodes || [];
+  check('viewer.app_store is served with sections', sections.length > 0,
+    JSON.stringify(bHome.viewer?.app_store || {}).slice(0, 200));
+  check('the games section is advertised', sections.some((s) => s.id === 'games'),
+    JSON.stringify(sections).slice(0, 200));
 }
 
 console.log('\n--- logout ---');
