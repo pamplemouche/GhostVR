@@ -22,43 +22,178 @@ const DEVICE_SECRET = 'ghostvr_device_secret';
 // The real accounts live on the Pamplemouche backend, which authenticates a
 // pseudo and a password (`POST /api/login {username, password}`). The Oculus
 // client only knows "email + password", so the pseudo is submitted in the email
-// field and forwarded here. The signed-in identity is kept module-level, the
-// same way `pinIsSet` is, so the viewer payload reflects the actual user.
+// field and forwarded here. The resulting identity is carried in a signed
+// session cookie so it survives across isolates; see the session block below.
 const ARC_BASE = 'https://arc.pamplemouche.com';
 
-let currentUser = null;
-
 /**
- * Identity used to build every viewer/profile payload.
+ * The signed-in session lives in a signed cookie, not in module state.
  *
- * Signed out, this is an empty identity rather than a canned account.  The
- * client always receives the full viewer shape - changing that shape is its
- * own startup risk - but with no id, alias or token, so nothing reads as a
- * real signed-in user and the login screen still has to be completed.
+ * A Worker module is not a process: each request may be served by any isolate,
+ * isolates are evicted on a whim, and there are many of them at once. A login
+ * that set a module-level `currentUser` therefore only took effect on the one
+ * isolate that happened to serve it - every later request landed elsewhere,
+ * saw "signed out", and sent the client back to the login screen. That is the
+ * resync loop, and no amount of response shaping fixes it.
+ *
+ * The cookie is HMAC-signed so the client cannot mint a session by editing it,
+ * and it carries the identity plus the small amount of per-account state the
+ * payloads need (the PIN flag, the token).
  */
+const SESSION_COOKIE = 'ghostvr_session';
+const SESSION_TTL_SECONDS = 30 * 24 * 60 * 60;
+
+// `env.SESSION_SECRET` should be set in wrangler.toml. The fallback keeps a
+// self-hosted deployment working out of the box, at the cost of a forgeable
+// cookie - acceptable here because the session only unlocks a local shop, but
+// it is the first thing to configure.
+let sessionSecret = 'ghostvr-local-session-key';
+
 const EMPTY_IDENTITY = { id: '', alias: '', name: '', email: '' };
 
-function identity() {
-  if (!currentUser) return { ...EMPTY_IDENTITY };
+const b64url = (bytes) =>
+  btoa(String.fromCharCode(...bytes)).replace(/=+$/, '').replace(/\+/g, '-').replace(/\//g, '_');
+const unb64url = (text) =>
+  Uint8Array.from(atob(text.replace(/-/g, '+').replace(/_/g, '/')), (c) => c.charCodeAt(0));
+
+async function signSession(payload) {
+  const key = await crypto.subtle.importKey(
+    'raw',
+    new TextEncoder().encode(sessionSecret),
+    { name: 'HMAC', hash: 'SHA-256' },
+    false,
+    ['sign'],
+  );
+  const sig = await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(payload));
+  return b64url(new Uint8Array(sig));
+}
+
+function cookieValue(request, name) {
+  const header = request.headers.get('Cookie') || '';
+  for (const part of header.split(';')) {
+    const eq = part.indexOf('=');
+    if (eq < 0) continue;
+    if (part.slice(0, eq).trim() === name) return part.slice(eq + 1).trim();
+  }
+  return null;
+}
+
+/** Decode the session cookie. It carries the signed token, nothing else. */
+async function sessionFromRequest(request) {
+  const raw = cookieValue(request, SESSION_COOKIE);
+  if (!raw) return null;
+  try {
+    return await sessionFromToken(decodeURIComponent(raw));
+  } catch (error) {
+    return null;
+  }
+}
+
+/**
+ * The browser carrier is just the token in a cookie, so the two carriers always
+ * resolve to the same session and the cookie cannot grow past the size limit as
+ * per-account data is added to the payload.
+ */
+async function sessionCookie(session, maxAge = SESSION_TTL_SECONDS) {
+  if (maxAge <= 0) {
+    return `${SESSION_COOKIE}=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0`;
+  }
+  return `${SESSION_COOKIE}=${encodeURIComponent(session.token)}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${maxAge}`;
+}
+
+/**
+ * The token the client stores and echoes back.
+ *
+ * The app never reads cookies: `OculusAuthorizationInterceptor.getAuthorization()`
+ * pulls the access token out of its own credential store and
+ * `Authorization.generate()` sends it as `Bearer <token>`. The client also never
+ * parses the token - `AccessTokenUtils` only *builds* the logged-out form
+ * `OC|appId|loginToken` - so the value is opaque to it and can carry the session
+ * itself. Signing it means the worker can rebuild the session from the header
+ * alone, which is what survives an isolate switch and an app restart.
+ *
+ * A token we did not sign (including the client's own logged-out token) simply
+ * does not verify, so it reads as anonymous.
+ */
+const TOKEN_PREFIX = 'OC';
+
+async function mintToken(payload) {
+  const body = b64url(new TextEncoder().encode(JSON.stringify(payload)));
+  return `${TOKEN_PREFIX}|${body}|${await signSession(body)}`;
+}
+
+async function sessionFromToken(header) {
+  if (!header) return null;
+  const value = header.replace(/^Bearer\s+/i, '').trim();
+  const first = value.indexOf('|');
+  const last = value.lastIndexOf('|');
+  if (first < 0 || last <= first) return null;
+  if (value.slice(0, first) !== TOKEN_PREFIX) return null;
+  const body = value.slice(first + 1, last);
+  if ((await signSession(body)) !== value.slice(last + 1)) return null;
+  try {
+    const data = JSON.parse(new TextDecoder().decode(unb64url(body)));
+    if (!data || !data.id) return null;
+    if (data.exp && Date.now() > data.exp) return null;
+    return { ...data, token: value };
+  } catch (error) {
+    return null;
+  }
+}
+
+/** The fields the token carries: the identity and nothing bulky. */
+function tokenPayload(session) {
   return {
-    id: currentUser.id,
-    alias: currentUser.username,
-    name: currentUser.username,
-    email: currentUser.email || `${currentUser.username}@pamplemouche.com`,
+    id: session.id,
+    username: session.username,
+    email: session.email,
+    pin: Boolean(session.pin),
+    exp: session.exp,
   };
 }
 
-function isSignedIn() {
-  return currentUser !== null;
+/** Re-issue a session after a change (e.g. the PIN flag), token included. */
+async function refreshSession(session, changes = {}) {
+  const merged = { ...session, ...changes };
+  return { ...merged, token: await mintToken(tokenPayload(merged)) };
 }
 
-/**
- * No token while signed out.  A canned token here is what let a wrong password
- * return a usable session: the client saw a token and skipped the login.
- */
-function accessToken() {
-  if (!currentUser) return null;
-  return `OC|${currentUser.id}|ghostvr_session_valid_token`;
+/** Build the session a successful login persists. */
+async function newSession(user, identifier) {
+  const base = {
+    id: user.id,
+    username: user.username,
+    email: user.email || identifier,
+    pin: false,
+    exp: Date.now() + SESSION_TTL_SECONDS * 1000,
+  };
+  return {
+    ...base,
+    token: await mintToken(base),
+    loadout: user.loadout,
+    coins: user.coins,
+    pamp: user.pamp,
+    purchases: user.purchases,
+    isAdmin: user.isAdmin,
+  };
+}
+
+function identity(session) {
+  if (!session) return { ...EMPTY_IDENTITY };
+  return {
+    id: session.id,
+    alias: session.username,
+    name: session.username,
+    email: session.email || `${session.username}@pamplemouche.com`,
+  };
+}
+
+function isSignedIn(session) {
+  return Boolean(session && session.id);
+}
+
+function pinSet(session) {
+  return Boolean(session && session.pin);
 }
 
 // ---------------------------------------------------------------------------
@@ -143,7 +278,8 @@ function profilePhoto(name) {
 // Set by a successful /change_pin so the viewer stops reporting an unset PIN.
 // Without this the client persists the flag locally, MeManager.refresh()
 // overwrites it from this response, and the PIN roadblock re-appears forever.
-let pinIsSet = false;
+// It lives in the session cookie rather than module state: a module-level flag
+// is per-isolate and would be lost between the change_pin call and the refresh.
 
 /**
  * Canonical shape of the signed-in user.
@@ -156,8 +292,8 @@ let pinIsSet = false;
  * (`PlatformPluginManager$5`, `PartyCallManagerImpl$6`) null-guards it and a
  * non-null empty party would read as "in a party with no members".
  */
-function viewerUser() {
-  const who = identity();
+function viewerUser(session) {
+  const who = identity(session);
   return {
     id: who.id,
     alias: who.alias,
@@ -167,7 +303,7 @@ function viewerUser() {
     presence_status: 'ONLINE',
     friend_status: 'NONE',
     is_facebook_friend: false,
-    is_pin_set: pinIsSet,
+    is_pin_set: pinSet(session),
     device_secret: DEVICE_SECRET,
     profile_photo: profilePhoto('photo'),
     avatar: profilePhoto('avatar'),
@@ -204,8 +340,8 @@ function viewerUser() {
  * The linked Facebook account mirrors the signed-in user, so it has to be
  * built per request rather than frozen at module load.
  */
-function linkedAccounts() {
-  const who = identity();
+function linkedAccounts(session) {
+  const who = identity(session);
   return {
     facebook_account: {
       access_token: 'GHOSTVR_FB_LINKED_TOKEN',
@@ -272,10 +408,10 @@ function connection(nodes, extra = {}) {
 }
 
 /** Full viewer object: the shape getMyUserProfile / getViewer expect. */
-function viewerWithProfile() {
+function viewerWithProfile(session) {
   return {
-    ...viewerUser(),
-    linked_accounts_info: linkedAccounts(),
+    ...viewerUser(session),
+    linked_accounts_info: linkedAccounts(session),
     privacy_audience_options: PRIVACY_EDGES_PROFILE,
     privacy_current_activity: PRIVACY_EDGES,
     privacy_friends: PRIVACY_EDGES,
@@ -292,7 +428,7 @@ function viewerWithProfile() {
     default_digital_payment_method: null,
     all_device_manifests: connection([], { device_wipe_status: 'NONE' }),
     user: {
-      ...viewerUser(),
+      ...viewerUser(session),
       notifications: connection([], { unseen_count: 0 }),
       notification_opt_out_preferences_list: [],
       dev_notif_opt_out_preferences_list: [],
@@ -319,10 +455,10 @@ function paymentAccount() {
 }
 
 
-function loginResponse() {
-  const who = identity();
+function loginResponse(session) {
+  const who = identity(session);
   return {
-    access_token: accessToken(),
+    access_token: session ? session.token : null,
     uid: who.id,
     id: who.id,
     user_id: who.id,
@@ -339,8 +475,8 @@ function loginResponse() {
     error_data: null,
     expires_in: 315360000,
     token_type: 'bearer',
-    user: viewerUser(),
-    viewer: viewerWithProfile(),
+    user: viewerUser(session),
+    viewer: viewerWithProfile(session),
   };
 }
 
@@ -384,12 +520,12 @@ function rootFieldOf(raw) {
  * so a frozen `false` re-shows the "Create Oculus PIN" roadblock forever.
  * Only clones when the flag is actually set, so the common path stays cheap.
  */
-function applyPinState(node) {
-  if (!pinIsSet || node === null || typeof node !== 'object') return node;
-  if (Array.isArray(node)) return node.map(applyPinState);
+function applyPinState(node, session) {
+  if (!pinSet(session) || node === null || typeof node !== 'object') return node;
+  if (Array.isArray(node)) return node.map((entry) => applyPinState(entry, session));
   const out = {};
   for (const [key, value] of Object.entries(node)) {
-    out[key] = key === 'is_pin_set' ? true : applyPinState(value);
+    out[key] = key === 'is_pin_set' ? true : applyPinState(value, session);
   }
   return out;
 }
@@ -420,7 +556,7 @@ const VIEWER_ONLY_FIELDS = [
   'feed',
 ];
 
-function graphqlResponse(params) {
+function graphqlResponse(params, session) {
   const raw = `${firstParam(params, 'q', 'query', 'doc', 'doc_id') || ''} ${
     firstParam(params, 'query_params') || ''
   }`;
@@ -435,27 +571,27 @@ function graphqlResponse(params) {
     return { notifications_mark_all_seen: { client_mutation_id: 'ghostvr' } };
   }
 
-  const payload = applyPinState(GRAPHQL_PAYLOAD);
+  const payload = applyPinState(GRAPHQL_PAYLOAD, session);
   if (!USER_ROOTS.has(root)) return { [root]: payload };
 
   // Table extras first (the `node`/`user`/`me` subtrees carry the app and
   // friends/party fields those queries ask for), then the canonical user shape
   // on top, then the viewer-only privacy/feed block for `viewer`.
   const answer = { ...(payload[root] || {}), ...payload.user };
-  Object.assign(answer, viewerUser());
+  Object.assign(answer, viewerUser(session));
   if (root === 'viewer') {
     for (const field of VIEWER_ONLY_FIELDS) {
       if (payload[field] !== undefined) answer[field] = payload[field];
     }
     // `MyUserProfileResponse.Viewer.user` is the profile screen's user and is
     // deserialized as a concrete `User`, so it needs the full shape too.
-    answer.user = { ...(payload.viewer?.user || {}), ...viewerUser() };
+    answer.user = { ...(payload.viewer?.user || {}), ...viewerUser(session) };
   }
   return { [root]: answer };
 }
 
-async function handleGraphql(request, url) {
-  return json(graphqlResponse(await readParams(request, url)));
+async function handleGraphql(request, url, session) {
+  return json(graphqlResponse(await readParams(request, url), session));
 }
 
 /**
@@ -464,15 +600,15 @@ async function handleGraphql(request, url) {
  * sent.  Each entry is reshaped into the query-string form `graphqlResponse`
  * already understands.
  */
-async function handleGraphqlBatch(request) {
+async function handleGraphqlBatch(request, session) {
   let body = [];
   try {
     body = await request.json();
   } catch (error) {
     body = [];
   }
-  if (!Array.isArray(body)) return json(graphqlResponse(asQueryParams(body)));
-  return json(body.map((entry) => graphqlResponse(asQueryParams(entry))));
+  if (!Array.isArray(body)) return json(graphqlResponse(asQueryParams(body), session));
+  return json(body.map((entry) => graphqlResponse(asQueryParams(entry), session)));
 }
 
 /** Flatten a Relay batch entry into the parameter names the router matches on. */
@@ -492,7 +628,7 @@ function asQueryParams(entry) {
 // ---------------------------------------------------------------------------
 
 /** POST /oculus/login or /fb-api/method/auth.login (form-encoded). */
-async function handleAuthLogin(request, url) {
+async function handleAuthLogin(request, url, session) {
   const params = await readParams(request, url);
   // The client labels the field "email", but the Pamplemouche backend
   // authenticates a pseudo, so whatever was typed is forwarded as `username`.
@@ -530,8 +666,12 @@ async function handleAuthLogin(request, url) {
     );
   }
 
-  currentUser = user;
-  return json({ ...loginResponse(), email: identifier, registered: true });
+  const fresh = await newSession(user, identifier);
+  return json(
+    { ...loginResponse(fresh), email: identifier, registered: true },
+    200,
+    { 'Set-Cookie': await sessionCookie(fresh) },
+  );
 }
 
 /**
@@ -568,7 +708,7 @@ async function arcLogin(username, password) {
 }
 
 /** POST /oculus/fbauth — returns a login session plus prefilled account info. */
-async function handleFbAuth(request) {
+async function handleFbAuth(request, session) {
   let body = {};
   if (request.method === 'POST') {
     try {
@@ -578,11 +718,11 @@ async function handleFbAuth(request) {
     }
   }
 
-  const who = identity();
+  const who = identity(session);
   // Signed out, `who` is an empty identity, so this reports no session
   // (`access_token` is null) while keeping the shape the client deserializes.
   return json({
-    login_session: isSignedIn() ? { access_token: accessToken(), userId: who.id } : null,
+    login_session: isSignedIn(session) ? { access_token: session.token, userId: who.id } : null,
     prefilled_account_info: {
       all_emails: [who.email],
       email: who.email,
@@ -597,9 +737,10 @@ async function handleFbAuth(request) {
 }
 
 /** GET /oculus/logout */
-function handleLogout() {
-  currentUser = null;
-  return json({ success: true, logged_out: true });
+async function handleLogout() {
+  return json({ success: true, logged_out: true }, 200, {
+    'Set-Cookie': await sessionCookie(null, 0),
+  });
 }
 
 /** GET /oculus/register — account creation lives on the Pamplemouche backend. */
@@ -618,9 +759,14 @@ async function handleRegister() {
 }
 
 /** POST /oculus/change_pin */
-function handleChangePin() {
-  pinIsSet = true;
-  return json({ success: true });
+async function handleChangePin(session) {
+  if (!session) return json({ success: false }, 401);
+  const updated = await refreshSession(session, { pin: true });
+  return json(
+    { success: true, access_token: updated.token },
+    200,
+    { 'Set-Cookie': await sessionCookie(updated) },
+  );
 }
 
 /** GET /oculus/tos and /oculus/countries */
@@ -647,18 +793,18 @@ function handleUserChecks() {
 }
 
 /** POST /oculus/authenticate_application — app-scoped platform token. */
-function handleAuthenticateApplication() {
-  return json({ access_token: accessToken() });
+function handleAuthenticateApplication(session) {
+  return json({ access_token: session ? session.token : null });
 }
 
 /** GET /oculus/method/auth.getSessionForApp — SSO session handoff. */
-function handleSessionForApp(url) {
+function handleSessionForApp(url, session) {
   return json({
-    uid: identity().id,
+    uid: identity(session).id,
     machine_id: firstParam(url.searchParams, 'machine_id') || 'ghostvr-machine',
     error_msg: null,
     session_cookies: [],
-    access_token: accessToken(),
+    access_token: session ? session.token : null,
   });
 }
 
@@ -686,8 +832,8 @@ function handleTwoFactorMethods() {
   });
 }
 
-function handleTwoFactorVerify() {
-  return json({ access_token: accessToken(), uid: identity().id });
+function handleTwoFactorVerify(session) {
+  return json({ access_token: session ? session.token : null, uid: identity(session).id });
 }
 
 // ---------------------------------------------------------------------------
@@ -740,6 +886,14 @@ const ONE_PIXEL_PNG = Uint8Array.from(
   (c) => c.charCodeAt(0),
 );
 
+// The profile header decodes `profile_photo.uri` with an image loader. A JSON
+// body there is not "no picture" - it is an undecodable stream, and the header
+// crashes on it. Every avatar path must therefore answer real PNG bytes.
+const AVATAR_PNG = Uint8Array.from(
+  atob('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAFklEQVR42mPQ1jcjCTGMahjVMHw1AACE9JABnwSskAAAAABJRU5ErkJggg=='),
+  (c) => c.charCodeAt(0),
+);
+
 /** Minimal HTML page, so a webview link resolves to something readable. */
 function htmlPage(title, body) {
   return new Response(
@@ -774,9 +928,44 @@ function handleMobileBuilds() {
   return json({ success: true, builds: [], latest: null });
 }
 
+/**
+ * Samsung DI (device registration / telemetry) endpoints.
+ *
+ * The setup wizard's analytics SDK registers the headset with Samsung and
+ * fetches a policy document from `regi.di.atlas.samsung.com` before the wizard
+ * can finish. That service is retired, so the call can only time out and the
+ * wizard retries it - a loop the user sees as "OCMS restarts every couple of
+ * seconds". The smali patcher now points those hosts here; these handlers
+ * answer with the shape the SDK parses.
+ *
+ * The policy parser (`com.samsung.a.a.a.a.e.a`) reads `rc` and requires it to
+ * equal 1000 (0x3e8) for success, then pulls every field below with an
+ * unguarded `getInt`/`getString`, so all of them must be present. Omitting one
+ * throws inside the parser rather than failing the request.
+ */
+function handleSamsungPolicy() {
+  return json({
+    rc: 1000,
+    rint: 0,
+    lgt: 'wifi',
+    dom: 'https://ghostvr.pamplemouche.com',
+    uri: 'https://ghostvr.pamplemouche.com',
+    'bat-uri': 'https://ghostvr.pamplemouche.com',
+    'dq-w': 0,
+    'oq-w': 0,
+    'dq-3g': 0,
+    'oq-3g': 0,
+  });
+}
+
+/** Samsung DI registration / quota / delete. `rc` 1000 means accepted. */
+function handleSamsungDi() {
+  return json({ rc: 1000, result: 'success' });
+}
+
 /** Avatar lookup for /fb-graph/{id}/picture. */
 function handleAvatar() {
-  return new Response(ONE_PIXEL_PNG, {
+  return new Response(AVATAR_PNG, {
     status: 200,
     headers: { 'Content-Type': 'image/png', 'Cache-Control': 'public, max-age=86400' },
   });
@@ -812,8 +1001,13 @@ function handleHeartbeat() {
 }
 
 /** Catch-all for an API-prefixed path we did not anticipate. */
-function handleGenericOculus() {
-  return json({ viewer: viewerWithProfile(), me: viewerWithProfile(), success: true, status: 'ok' });
+function handleGenericOculus(session) {
+  return json({
+    viewer: viewerWithProfile(session),
+    me: viewerWithProfile(session),
+    success: true,
+    status: 'ok',
+  });
 }
 
 // ---------------------------------------------------------------------------
@@ -830,20 +1024,20 @@ function handleGenericOculus() {
  * here. Without a session both forms answer 401, so the shop cannot be browsed
  * as an anonymous account.
  */
-async function handlePamp(request, url) {
+async function handlePamp(request, url, session) {
   const suffix = url.pathname.replace(/^.*?\/pamp\/?/, '');
   if (!suffix || suffix === 'me') {
-    const who = identity();
+    const who = identity(session);
     return json({
       ok: true,
       username: who.alias,
       userId: who.id,
-      authenticated: isSignedIn(),
-      loadout: currentUser ? currentUser.loadout : null,
-      coins: currentUser ? currentUser.coins ?? 0 : 0,
-      pamp: currentUser ? currentUser.pamp ?? 0 : 0,
-      purchases: currentUser ? currentUser.purchases || [] : [],
-      isAdmin: currentUser ? currentUser.isAdmin === true : false,
+      authenticated: isSignedIn(session),
+      loadout: session ? session.loadout : null,
+      coins: session ? session.coins ?? 0 : 0,
+      pamp: session ? session.pamp ?? 0 : 0,
+      purchases: session ? session.purchases || [] : [],
+      isAdmin: session ? session.isAdmin === true : false,
     });
   }
 
@@ -851,7 +1045,7 @@ async function handlePamp(request, url) {
   for (const [key, value] of url.searchParams) target.searchParams.append(key, value);
 
   const headers = { Accept: 'application/json' };
-  if (currentUser && currentUser.token) headers.Authorization = `Bearer ${currentUser.token}`;
+  if (session && session.token) headers.Authorization = `Bearer ${session.token}`;
   const contentType = request.headers.get('content-type');
   if (contentType) headers['Content-Type'] = contentType;
 
@@ -889,32 +1083,32 @@ function match(pathname, method, patterns) {
   return false;
 }
 
-async function route(request, url) {
+async function route(request, url, session) {
   const path = url.pathname;
   const method = request.method;
 
-  if (match(path, method, [[null, '/graphqlbatch']])) return handleGraphqlBatch(request);
-  if (match(path, method, [[null, '/graphql']])) return handleGraphql(request, url);
-  if (path.includes('/pamp/')) return handlePamp(request, url);
+  if (match(path, method, [[null, '/graphqlbatch']])) return handleGraphqlBatch(request, session);
+  if (match(path, method, [[null, '/graphql']])) return handleGraphql(request, url, session);
+  if (path.includes('/pamp/')) return handlePamp(request, url, session);
   if (match(path, method, [[null, '/features']])) return handleFeatures(request, url);
   if (match(path, method, [[null, '/mobileconfig']])) return handleMobileConfig(request, url);
-  if (match(path, method, [[null, '/method/auth.login']])) return handleAuthLogin(request, url);
-  if (match(path, method, [[null, '/fbauth']])) return handleFbAuth(request);
-  if (match(path, method, [[null, '/login']])) return handleAuthLogin(request, url);
+  if (match(path, method, [[null, '/method/auth.login']])) return handleAuthLogin(request, url, session);
+  if (match(path, method, [[null, '/fbauth']])) return handleFbAuth(request, session);
+  if (match(path, method, [[null, '/login']])) return handleAuthLogin(request, url, session);
   if (match(path, method, [[null, '/logout']])) return handleLogout();
   if (match(path, method, [[null, '/register']])) return handleRegister(request, url);
-  if (match(path, method, [[null, '/change_pin']])) return handleChangePin();
+  if (match(path, method, [[null, '/change_pin']])) return handleChangePin(session);
   if (match(path, method, [[null, '/check_approved_machine']])) return handleCheckApprovedMachine();
-  if (match(path, method, [[null, '/authenticate_application']])) return handleAuthenticateApplication();
-  if (match(path, method, [[null, '/method/auth.getSessionForApp']])) return handleSessionForApp(url);
+  if (match(path, method, [[null, '/authenticate_application']])) return handleAuthenticateApplication(session);
+  if (match(path, method, [[null, '/method/auth.getSessionForApp']])) return handleSessionForApp(url, session);
   if (match(path, method, [[null, '/required_mobile_versions']])) return handleRequiredVersions();
   if (match(path, method, [[null, '/user_checks']])) return handleUserChecks();
   if (match(path, method, [[null, '/tos'], [null, '/countries']])) return handleTosAndCountries(url);
   if (match(path, method, [[null, '/upload_user_profile_photo']])) return json({ success: true });
 
   if (match(path, method, [[null, '/two_factor_methods']])) return handleTwoFactorMethods();
-  if (match(path, method, [[null, '/two_factor_verify_code']])) return handleTwoFactorVerify();
-  if (match(path, method, [[null, '/login_checkpoint_verify']])) return handleTwoFactorVerify();
+  if (match(path, method, [[null, '/two_factor_verify_code']])) return handleTwoFactorVerify(session);
+  if (match(path, method, [[null, '/login_checkpoint_verify']])) return handleTwoFactorVerify(session);
   if (match(path, method, [[null, '/two_factor_send_code'], [null, '/resend_delta_pin'], [null, '/twofacsms']])) {
     return json({ success: true });
   }
@@ -934,7 +1128,19 @@ async function route(request, url) {
 
   // Auxiliary feeds and the informational pages the webviews link to.
   if (path.includes('/mobile_builds')) return handleMobileBuilds();
+  // Samsung DI endpoints, reached after the smali patch rewrites the atlas
+  // hosts onto this worker. `/v1/quotas` is the policy document; `/app/delete`
+  // is the data-delete call and `/logs_v2` the DLS log upload.
+  if (path.endsWith('/v1/quotas')) return handleSamsungPolicy();
+  if (path.includes('/app/delete') || path.includes('/logs_v2')) return handleSamsungDi();
   if (path.endsWith('/picture') || path.includes('/picture?')) return handleAvatar();
+  // `profile_photo.uri` / `avatar_image.uri` point at /assets/avatar.png, and
+  // the upload path at /assets/<something>. Any of them that falls through to
+  // the JSON envelope is an undecodable image, which is the crash.
+  if (path.startsWith('/assets/') || path.endsWith('/avatar.png')) return handleAvatar();
+  // The Facebook SDK's picture aliases. OCMS references /profile, /photo and
+  // /display_photo; all three are image endpoints and must not answer JSON.
+  if (/\/(profile|photo|display_photo)$/.test(path)) return handleAvatar();
   if (PAGE_KEYWORDS.some((keyword) => path.includes(keyword))) return handlePage(url);
 
   return null;
@@ -944,6 +1150,13 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const path = url.pathname;
+
+    if (env && env.SESSION_SECRET) sessionSecret = env.SESSION_SECRET;
+    // The app authenticates with a bearer token; the cookie is only there for
+    // a browser. Either one rebuilds the same session.
+    const session =
+      (await sessionFromToken(request.headers.get('Authorization'))) ||
+      (await sessionFromRequest(request));
 
     if (request.method === 'OPTIONS') {
       return new Response(null, {
@@ -962,7 +1175,7 @@ export default {
     }
 
     try {
-      const handled = await route(request, url);
+      const handled = await route(request, url, session);
       if (handled) return handled;
     } catch (error) {
       return json(
@@ -974,7 +1187,7 @@ export default {
     // Any other API-prefixed call answers with a benign envelope instead of a
     // 404, so the client never hard-fails on a route we did not anticipate.
     if (path.startsWith('/oculus/') || path.startsWith('/fb-api/') || path.startsWith('/fb-graph/')) {
-      return handleGenericOculus();
+      return handleGenericOculus(session);
     }
 
     return json({ status: 'ok', service: 'GhostVR backend' });
