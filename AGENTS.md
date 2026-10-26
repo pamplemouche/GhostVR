@@ -121,6 +121,13 @@ When adding a host, grep the smali for `%s`-style templates and for fields named
 constants that a rebuild keeps in the dex, and a future call site would pick
 them up.
 
+Validation patterns count as hosts too. `CustomApiEndpointValidator` compiled
+three regexes in its static initializer, two of which still pinned the
+`graph.<tier>.oculus.com` dev tiers for the "disable certificate check" path.
+`isDisabledUriValid()`/`isDisableHostNameValid()` have no callers left in this
+build, so they are inert, but the pattern is a real string constant and now
+points at the self-hosted host like the others.
+
 ## Native library patching
 
 `tools/patch_native_libs.py` patches two ways:
@@ -230,6 +237,33 @@ defaults to `false` for anything the server does not set, and
 `oculus_horizon_feed_default` is true - otherwise the home screen becomes the
 store. `ENABLED_GATEKEEPERS` therefore turns the two feed gates on and leaves
 every other gate at its default.
+
+## GraphQL queries arrive with `<placeholder>` tokens, not values
+
+The client never interpolates its own documents. `ApiDispatcher.smali` holds the
+query literals with `<placeholder>` tokens intact and sends the values in a
+sibling `query_params` field, which `GraphQLParamsHelper.encodeParams()` builds
+from the request's `getParams()` map. The real server expands them; a self-hosted
+one has to as well.
+
+`substitutePlaceholders()` in the worker does that before anything reads the
+query. Without it the section id was the literal `<category>`, so `nodeIdOf()`
+matched nothing, the store fell back to the whole catalogue, and every paging
+request answered all 562 items at once - `.first(<count>)` and `.after(<cursor>)`
+were both invisible.
+
+Two shapes matter:
+
+- A flat string value (`category`, `count`, `cursor`, `pic_dimension`, ...) is
+  substituted verbatim.
+- A nested map is inlined as JSON. `app_binary_update(<params>)` carries
+  `params = {app_id, installed_version_code}`, so the expanded document contains
+  `{"app_id":"gv:.."}` and the key is **quoted** - the readers that pull values
+  out of it have to accept `"app_id"` as well as `app_id`.
+
+`appIdOf()`, `storeSectionResponse()` and `storeItemResponse()` each expand the
+document themselves, because `graphqlResponse()` dispatches to them before it
+has the expanded query in hand.
 
 ## GraphQL response envelope
 
@@ -601,6 +635,14 @@ and parses the reply as `data[0].results[i]` with `JSONArray.getBoolean(i)`
 answered an empty `results`, and `getBoolean(i)` threw - which left *every*
 gatekeeper false, including the menu. `gatekeeperProjects()` now accepts
 `projects[N]`, `projects[]` and comma-joined values.
+
+The phone app's `projects[]` spelling repeats the key, one entry per project.
+`URLSearchParams.keys()` yields a repeated key once per occurrence, so iterating
+it and calling `getAll()` returned the values N times and `results` grew to N*N
+entries. The client zips `results` positionally against the names it asked for,
+so the extra entries were read as values for projects that were never requested.
+`gatekeeperProjects()` de-duplicates the keys and orders indexed keys by their
+index rather than by query-string order.
 
 The enabled set is a deliberate allow-list, not "everything": turning on a
 feature whose backend does not exist swaps a hidden surface for a crash.

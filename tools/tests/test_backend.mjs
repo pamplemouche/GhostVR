@@ -284,6 +284,68 @@ console.log('\n--- gatekeepers: the VR shell fetches 133 of them at once ---');
   const rb = await call('/oculus/features?projects[]=oculus_horizon_feed');
   const bb = await rb.json();
   check('projects[]= spelling still works', bb.data[0].results[0] === true, JSON.stringify(bb));
+
+  // The phone app's `projects[]` form may repeat the key. `keys()` yields it
+  // once per occurrence, so reading it per key returned the values N times and
+  // `results` grew to N*N entries; the client zips it positionally and read the
+  // duplicates as extra projects.
+  const rr = await call('/oculus/features?projects[]=oculus_horizon_feed&projects[]=oculus_oculus_does_not_exist');
+  const br = await rr.json();
+  check('repeated projects[] does not duplicate results',
+    br.data[0].results.length === 2, `got ${br.data[0].results.length}: ${JSON.stringify(br.data[0].results)}`);
+  check('repeated projects[] keeps the order', br.data[0].results[0] === true && br.data[0].results[1] === false,
+    JSON.stringify(br.data[0].results));
+
+  // Indexed keys must be read in index order, not in query-string order.
+  const rq = await call('/oculus/features?projects[1]=oculus_oculus_does_not_exist&projects[0]=oculus_horizon_feed');
+  const bq = await rq.json();
+  check('indexed projects are ordered by index',
+    bq.data[0].results.length === 2 && bq.data[0].results[0] === true && bq.data[0].results[1] === false,
+    JSON.stringify(bq.data[0].results));
+}
+
+console.log('\n--- graphql: <placeholder> tokens are expanded from query_params ---');
+{
+  // ApiDispatcher sends the document with `<placeholder>` tokens intact and the
+  // values in a sibling `query_params` JSON object. Without expansion the
+  // section id was the literal `<category>`, so every page fell back to the
+  // whole catalogue and answered all 562 items at once.
+  const doc = 'node(<category>) { section_name, all_items.after(<cursor>).first(<count>) { '
+    + 'nodes { id, display_name }, page_info { end_cursor, has_next_page } } }';
+  const params = (over) => encodeURIComponent(JSON.stringify(over));
+  const rp = await call('/oculus/graphql?q=' + encodeURIComponent(doc)
+    + '&query_params=' + params({ category: 'games', cursor: '0', count: '20' }));
+  const bp = await rp.json();
+  const page = bp.node?.all_items;
+  check('the section id is resolved (not the literal placeholder)',
+    bp.node?.section_name === 'Games', JSON.stringify(bp.node?.section_name));
+  check('first(<count>) caps the page', page?.nodes?.length === 20, `got ${page?.nodes?.length}`);
+  check('the page is smaller than the whole catalogue', page?.count > page?.nodes?.length,
+    `count=${page?.count} page=${page?.nodes?.length}`);
+  check('page_info reports more pages', page?.page_info?.has_next_page === true,
+    JSON.stringify(page?.page_info));
+
+  const r2 = await call('/oculus/graphql?q=' + encodeURIComponent(doc)
+    + '&query_params=' + params({ category: 'games', cursor: '20', count: '20' }));
+  const b2 = await r2.json();
+  check('after(<cursor>) offsets the page', b2.node?.all_items?.page_info?.start_cursor === '20',
+    JSON.stringify(b2.node?.all_items?.page_info));
+  const ids1 = new Set((page?.nodes || []).map((n) => n.id));
+  check('consecutive pages are disjoint',
+    (b2.node?.all_items?.nodes || []).every((n) => !ids1.has(n.id)));
+
+  // The install query carries its arguments in a nested `params` map, which the
+  // expansion inlines as JSON; the id has to be found inside it.
+  const binDoc = 'app_binary_update(<params>) { new_binary { id, uri, size } }';
+  const rbin = await call('/oculus/graphql?q=' + encodeURIComponent(binDoc)
+    + '&query_params=' + params({ params: { app_id: page?.nodes?.[0]?.id, installed_version_code: '0' } }));
+  const bbin = await rbin.json();
+  check('a nested <params> map resolves the app id',
+    bbin.app_binary_update?.new_binary?.id === page?.nodes?.[0]?.id,
+    JSON.stringify(bbin.app_binary_update?.new_binary));
+  check('the nested <params> id yields a real apk uri',
+    String(bbin.app_binary_update?.new_binary?.uri || '').endsWith('.apk'),
+    String(bbin.app_binary_update?.new_binary?.uri));
 }
 
 console.log('\n--- store: the vault catalogue is served ---');

@@ -37,7 +37,7 @@
     sput-object v0, Lcom/oculus/http/core/util/CustomApiEndpointValidator;->SAFE_URI_PATTERN:Ljava/util/regex/Pattern;
 
     .line 49
-    const-string v0, "^graph[.]((\\w+[.]sb)|dev)[.]oculus[.]com$"
+    const-string v0, "^graph[.]ghostvr[.]pamplemouche[.]com$"
 
     .line 50
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -47,7 +47,7 @@
     sput-object v0, Lcom/oculus/http/core/util/CustomApiEndpointValidator;->DISABLE_CERT_CHECK_HOSTNAME_PATTERN:Ljava/util/regex/Pattern;
 
     .line 52
-    const-string v0, "^https://graph[.]((\\w+[.]sb)|dev)[.]oculus[.]com$"
+    const-string v0, "^https://graph[.]ghostvr[.]pamplemouche[.]com$"
 
     .line 53
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;

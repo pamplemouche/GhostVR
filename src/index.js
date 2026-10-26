@@ -624,7 +624,10 @@ function binaryUpdateResponse(params) {
  * `has_next_page: false` while more exist stops the list short.
  */
 function storeSectionResponse(params) {
-  const query = firstParam(params, 'q', 'query', 'doc', 'doc_id') || '';
+  const query = substitutePlaceholders(
+    firstParam(params, 'q', 'query', 'doc', 'doc_id') || '',
+    firstParam(params, 'query_params') || '',
+  );
   const sectionId = nodeIdOf(query);
   const ids = storeSectionIds(sectionId);
 
@@ -667,7 +670,12 @@ function storeSectionResponse(params) {
  * id) falls through to the user-shape merge further down.
  */
 function storeItemResponse(params) {
-  const itemId = nodeIdOf(firstParam(params, 'q', 'query', 'doc', 'doc_id') || '');
+  const itemId = nodeIdOf(
+    substitutePlaceholders(
+      firstParam(params, 'q', 'query', 'doc', 'doc_id') || '',
+      firstParam(params, 'query_params') || '',
+    ),
+  );
   const item = STORE.items[itemId];
   if (!item) return { node: {} };
   return { node: storeItemNode(item, { full: true }) };
@@ -814,6 +822,37 @@ function nodeIdOf(query) {
 }
 
 /**
+ * The client never interpolates its own queries. `ApiDispatcher` sends the
+ * document with `<placeholder>` tokens intact and the values in a sibling
+ * `query_params` JSON object (`GraphQLParamsHelper.encodeParams` serializes the
+ * request's `getParams()` map), and the real GraphQL server expands them.
+ *
+ * Without expansion the worker saw literal `<category>`/`<count>`, so
+ * `nodeIdOf` matched nothing, the section fell back to the whole catalogue, and
+ * every paging request answered all 562 items at once. Substituting first is
+ * what makes `.first(<count>)`/`.after(<cursor>)` - and therefore the store's
+ * scrolling - actually work.
+ */
+function substitutePlaceholders(query, queryParamsRaw) {
+  if (!query || !query.includes('<')) return query || '';
+  let values;
+  try {
+    values = JSON.parse(queryParamsRaw || '{}');
+  } catch (error) {
+    return query;
+  }
+  if (!values || typeof values !== 'object') return query;
+  return query.replace(/<([a-z_][a-z0-9_]*)>/g, (token, name) => {
+    if (!Object.prototype.hasOwnProperty.call(values, name)) return token;
+    const value = values[name];
+    if (value === null || value === undefined) return '';
+    // A nested map (e.g. `app_binary_update(<params>)`) is inlined as JSON so
+    // the argument regexes can still read the keys out of it.
+    return typeof value === 'string' ? value : JSON.stringify(value);
+  });
+}
+
+/**
  * The value of `.name(<value>)` in a query - used for the store's pagination
  * arguments (`.first(20)`, `.after(20)`) and filters. Returns '' when absent.
  */
@@ -824,12 +863,16 @@ function graphqlArg(query, name) {
 
 /** `app_binary_update(app_id: <id>)` -> the id, unquoted. */
 function appIdOf(params) {
-  const raw = `${firstParam(params, 'q', 'query', 'doc', 'doc_id') || ''} ${
-    firstParam(params, 'query_params') || ''
-  }`;
+  // The id arrives inside `query_params.params`, which the placeholder
+  // expansion inlines as a JSON object, so the key may be quoted
+  // (`{"app_id":"gv:.."}`) as well as bare (`app_id: gv:..`).
+  const raw = substitutePlaceholders(
+    firstParam(params, 'q', 'query', 'doc', 'doc_id') || '',
+    firstParam(params, 'query_params') || '',
+  );
   // The id ends at the closing paren, a comma, a brace or whitespace, and may
   // be quoted depending on how the client encoded the params.
-  const match = /app_id\s*:\s*["']?([^,}\s)"']+)/.exec(raw);
+  const match = /["']?app_id["']?\s*:\s*["']?([^,}\s)"']+)/.exec(raw);
   if (!match) return '';
   return match[1];
 }
@@ -888,7 +931,13 @@ function graphqlResponse(params, session) {
     firstParam(params, 'query_params') || ''
   }`;
   const haystack = raw.toLowerCase();
-  const query = firstParam(params, 'q', 'query', 'doc', 'doc_id') || '';
+  // The document arrives with `<placeholder>` tokens and its values alongside in
+  // `query_params`; expanding them is what lets the argument readers below see
+  // a real section id, count and cursor.
+  const query = substitutePlaceholders(
+    firstParam(params, 'q', 'query', 'doc', 'doc_id') || '',
+    firstParam(params, 'query_params') || '',
+  );
   const root = rootFieldOf(query) || 'viewer';
 
   // Store: the download URI for one item, asked right before an install.
@@ -1252,16 +1301,33 @@ const ENABLED_GATEKEEPERS = new Set([
  * shell's form entirely, so the worker saw zero projects, answered an empty
  * `results`, and the shell's positional `getBoolean(i)` threw - which left
  * every gatekeeper false, including the menu. All three spellings are read.
+ *
+ * `URLSearchParams.keys()` yields a repeated key once per occurrence, so
+ * iterating it and calling `getAll` returned the same values N times: three
+ * `projects[]` entries produced nine results. The client zips `results`
+ * positionally against the names it asked for, so the trailing duplicates were
+ * read as values for projects that were never requested. Keys are therefore
+ * de-duplicated, and indexed keys are ordered by their index rather than by the
+ * order they happen to appear in the query string.
  */
 function gatekeeperProjects(params) {
-  const values = [];
+  const indexed = [];
+  const plain = [];
+  const seen = new Set();
   for (const key of params.keys()) {
     if (!/^projects(\[\d*\])?$/.test(key)) continue;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    const values = [];
     for (const value of params.getAll(key)) {
       values.push(...value.split(',').filter(Boolean));
     }
+    const index = /\[(\d+)\]/.exec(key);
+    if (index) indexed.push([Number(index[1]), values]);
+    else plain.push(...values);
   }
-  return values;
+  indexed.sort((a, b) => a[0] - b[0]);
+  return [...indexed.flatMap(([, values]) => values), ...plain];
 }
 
 async function handleFeatures(request, url) {
