@@ -46,6 +46,9 @@ jobs:
       - name: Check the GraphQL payload against the generated models
         run: python3 tools/check_graphql_payload.py
 
+      - name: Test the binary-patch corruption guards
+        run: python3 tools/tests/test_patch_guards.py
+
       - name: Report which bundle hosts the runtime redirect still covers
         run: python3 tools/check_bundle_coverage.py
 

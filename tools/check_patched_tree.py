@@ -97,6 +97,17 @@ def check_fused(path: Path, findings: list[str]) -> None:
                 f"{_label(path)}: fused host string at {run.start():#x}: "
                 f"{run.group(0)[:70]!r}"
             )
+    # The run rule above needs the host to survive *twice*.  When a longer
+    # replacement overruns the next string and the following write lands on top
+    # of it, only one intact copy is left and the run holds a mangled prefix
+    # instead - which the count test misses.  Any `ghostvr` that is not the
+    # start of the full host is such a fragment.
+    for match in re.finditer(b"ghostvr", data):
+        if data[match.start() : match.start() + len(HOST)] != HOST:
+            findings.append(
+                f"{_label(path)}: truncated host fragment at {match.start():#x}: "
+                f"{data[match.start() : match.start() + 40]!r}"
+            )
 
 
 def check_meta_hosts(path: Path, findings: list[str]) -> None:
