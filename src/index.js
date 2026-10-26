@@ -78,30 +78,27 @@ function cookieValue(request, name) {
   return null;
 }
 
-/** Decode and verify the session cookie. Returns null when absent or forged. */
+/** Decode the session cookie. It carries the signed token, nothing else. */
 async function sessionFromRequest(request) {
   const raw = cookieValue(request, SESSION_COOKIE);
   if (!raw) return null;
-  const dot = raw.lastIndexOf('.');
-  if (dot <= 0) return null;
-  const payload = raw.slice(0, dot);
-  if ((await signSession(payload)) !== raw.slice(dot + 1)) return null;
   try {
-    const data = JSON.parse(new TextDecoder().decode(unb64url(payload)));
-    if (!data || !data.id) return null;
-    if (data.exp && Date.now() > data.exp) return null;
-    return data;
+    return await sessionFromToken(decodeURIComponent(raw));
   } catch (error) {
     return null;
   }
 }
 
+/**
+ * The browser carrier is just the token in a cookie, so the two carriers always
+ * resolve to the same session and the cookie cannot grow past the size limit as
+ * per-account data is added to the payload.
+ */
 async function sessionCookie(session, maxAge = SESSION_TTL_SECONDS) {
   if (maxAge <= 0) {
     return `${SESSION_COOKIE}=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0`;
   }
-  const payload = b64url(new TextEncoder().encode(JSON.stringify(session)));
-  return `${SESSION_COOKIE}=${payload}.${await signSession(payload)}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${maxAge}`;
+  return `${SESSION_COOKIE}=${encodeURIComponent(session.token)}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${maxAge}`;
 }
 
 /**
