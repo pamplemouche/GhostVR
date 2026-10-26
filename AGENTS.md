@@ -496,6 +496,13 @@ re-read by hand. As of this writing: 15 distinct hosts, 14 rewritten, and only
 `fburl.com` uncovered - and that one appears solely in user-facing help and
 developer-doc text, not as a request target.
 
+The same split holds for the 203 findings in `tools/patched_tree_baseline.txt`:
+re-derived by host, all but the 13 `fburl.com` hits name a host the runtime rule
+rewrites. The `fburl.com` hits are literal "Internal Only: ... see
+fburl.com/TestReport" strings in report-abuse dialogs. So the backlog is
+cosmetic in full, and the baseline carries that note so it is not re-opened as
+a leak.
+
 Two consequences:
 
 - The unpatched v53 bundles are **not** a functional blocker. Native-side
