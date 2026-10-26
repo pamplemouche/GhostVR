@@ -540,6 +540,43 @@ be exactly `"Application"` and `latest_supported_binary.package_name` must be
 non-null. A node failing that check is silently dropped, so a wrong `__typename`
 looks exactly like an empty store.
 
+### Checking that every requested field is answered
+
+A field the client selects and the worker does not return is `undefined` in the
+Relay store, and the screen that reads it throws rather than degrading - which
+on-device shows up as a blank screen or a crash with no useful log. The client's
+own documents are the specification, and they are all present in the tree:
+
+    python3 tools/check_query_coverage.py                      # against production
+    python3 tools/check_query_coverage.py --base http://127.0.0.1:8791
+
+It extracts the long query literals from `ApiDispatcher.smali`, substitutes the
+`<placeholder>` arguments, posts each to the worker and walks the response
+alongside the parsed query, reporting every requested field that came back
+missing. Two Oculus-specific spellings need care and the parser handles them:
+`field.arg(value)` is an argument (not a child selection) and `... as alias`
+renames one.
+
+It reports `0 missing field(s)` as of this writing. The allow-list
+`NOT_IN_MODEL` holds the three names the client asks for but has no class field
+to deserialize into (`sku`, `account_creation_time`, `reachability_data`), so
+nothing can read them; each entry is annotated with where it was checked.
+
+Fields worth knowing about, because each one is a crash rather than a blank:
+
+- `current_offer` - `StoreUtils.createStoreItemModel` reads
+  `current_offer.price` with **no null check on `current_offer`**, so a null
+  there is a NullPointerException while building every tile in the list. It must
+  be a real object; the catalogue is free, so it is priced at zero.
+- `cinema_video` - read as an object by the detail view; a missing key throws.
+- `required_input_device` - selected by the list query. It was being deleted
+  from the shallow list response to save bytes, which is not worth it for a
+  single null: the field went undefined in the store.
+- `linked_accounts_info.facebook_account.needs_password_to_unlink` - the static
+  `GRAPHQL_PAYLOAD` also carries `linked_accounts_info` and wins over
+  `linkedAccounts()`, so the table copy has to hold every `FBConnectAccount`
+  field too.
+
 ## Gatekeepers: the Home menu is gated, and the request shape matters
 
 `oculus_vrshell_enable_system_utilities` is the gatekeeper behind the Home

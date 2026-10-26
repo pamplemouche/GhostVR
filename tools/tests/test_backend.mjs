@@ -150,6 +150,17 @@ for (const path of ['/assets/avatar.png', '/fb-graph/1/picture', '/photo', '/pro
   const img = await call(new URL(uri).pathname);
   check('that uri serves an image', (img.headers.get('content-type') || '').startsWith('image/'),
     `got ${img.headers.get('content-type')}`);
+
+  // The profile screen's `MyUserProfileResponse.Viewer` deserializes
+  // `linked_accounts_info` into `LinkedAccounts`, whose `facebook_account` is
+  // an `FBConnectAccount`. The static table also carries this key and wins over
+  // the builder, so it has to hold every field the model declares.
+  const rLinked = await call('/oculus/graphql?q=' + encodeURIComponent(
+    'viewer() { linked_accounts_info { facebook_account { needs_password_to_unlink } } }'));
+  const bLinked = await rLinked.json();
+  check('linked_accounts_info carries needs_password_to_unlink (FBConnectAccount field)',
+    typeof bLinked.viewer?.linked_accounts_info?.facebook_account?.needs_password_to_unlink === 'boolean',
+    JSON.stringify(bLinked.viewer?.linked_accounts_info));
 }
 
 console.log('\n--- Samsung DI endpoints (setup wizard) ---');
@@ -303,6 +314,35 @@ console.log('\n--- store: the vault catalogue is served ---');
   const bPdp = await rPdp.json();
   check('PDP node resolves', bPdp.node?.id === firstId, JSON.stringify(bPdp).slice(0, 200));
   check('catalogue items are entitled (so the button says install)', bPdp.node?.is_viewer_entitled === true);
+
+  // `StoreUtils.createStoreItemModel` reads `current_offer.price` without a
+  // null check on `current_offer`, so a null here is a NullPointerException
+  // while building every tile in the list. The other fields are selected by the
+  // list query on the `Application` fragment of a union; a missing one is
+  // `undefined` in the Relay store rather than null.
+  const rTile = await call('/oculus/graphql?q=' + encodeURIComponent(
+    `node(games) { all_items.first(3) { nodes { current_offer { price { formatted } },`
+    + ' cinema_video { rating }, term_in_sec, style_theme, required_input_device { tag, name },'
+    + ' microphone_usage, developer_filtered_livestreaming_status,'
+    + ' livestreaming_audio_hooking_enabled, chromecast_audio_enabled, banner_target { id } } } }'));
+  const bTile = await rTile.json();
+  const tile = (bTile.node?.all_items?.nodes || [])[0] || {};
+  check('a tile carries a non-null current_offer (StoreUtils NPEs otherwise)',
+    tile.current_offer !== null && tile.current_offer !== undefined && typeof tile.current_offer.price === 'object',
+    JSON.stringify(tile.current_offer));
+  check('the offer price is a formatted string', typeof tile.current_offer?.price?.formatted === 'string',
+    JSON.stringify(tile.current_offer?.price));
+  check('cinema_video is an object, not null', tile.cinema_video !== null && typeof tile.cinema_video === 'object',
+    JSON.stringify(tile.cinema_video));
+  check('term_in_sec is a number', typeof tile.term_in_sec === 'number', JSON.stringify(tile.term_in_sec));
+  check('style_theme is a string', typeof tile.style_theme === 'string', JSON.stringify(tile.style_theme));
+  check('required_input_device is present as a key (null is fine)',
+    'required_input_device' in tile, JSON.stringify(Object.keys(tile)));
+  check('banner_target is present as a key (null is fine)', 'banner_target' in tile,
+    JSON.stringify(Object.keys(tile)));
+  check('livestreaming flags are booleans',
+    typeof tile.livestreaming_audio_hooking_enabled === 'boolean'
+      && typeof tile.chromecast_audio_enabled === 'boolean', JSON.stringify(tile));
 
   // A user node must NOT be swallowed by the store branch.
   const rUser = await call('/oculus/graphql?q=' + encodeURIComponent('node(999) { id, name, alias }'));
