@@ -3,6 +3,22 @@
 # Regenerate after intentionally leaving or fixing hosts:
 #     python3 tools/check_patched_tree.py --write-baseline
 #
+# Every finding here is a *string*, not a live request. Verified split:
+#
+#   * All but `fburl.com` name a host that
+#     `IntentModule.rewriteExternalUrl` rewrites at runtime, because it
+#     matches `oculus.com`/`facebook.com` and any subdomain of either.
+#     That covers both network paths
+#     (`NetworkingModule.sendRequestInternal` and `IntentModule.openURL`),
+#     so a JS request to `graph.oculus.com` never leaves for Meta even
+#     though the bundle still names it.
+#   * The 13 `fburl.com` hits are literal 'Internal Only' help text
+#     ('see fburl.com/TestReport'), not request targets, and
+#     `rewriteExternalUrl` does not cover that host.
+#
+# Re-derive the split with `tools/check_bundle_coverage.py`, which applies
+# the same rule.
+#
 # The Oculus Home React Native bundles are Hermes bytecode version 53;
 # tools/patch_hermes_bundle.py only understands version 61 and refuses
 # to touch the others rather than corrupt them.  A *new* finding - a

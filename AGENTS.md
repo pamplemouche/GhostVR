@@ -496,6 +496,13 @@ re-read by hand. As of this writing: 15 distinct hosts, 14 rewritten, and only
 `fburl.com` uncovered - and that one appears solely in user-facing help and
 developer-doc text, not as a request target.
 
+The same split holds for the 203 findings in `tools/patched_tree_baseline.txt`:
+re-derived by host, all but the 13 `fburl.com` hits name a host the runtime rule
+rewrites. The `fburl.com` hits are literal "Internal Only: ... see
+fburl.com/TestReport" strings in report-abuse dialogs. So the backlog is
+cosmetic in full, and the baseline carries that note so it is not re-opened as
+a leak.
+
 Two consequences:
 
 - The unpatched v53 bundles are **not** a functional blocker. Native-side
@@ -504,3 +511,109 @@ Two consequences:
   Its host array is fixed at 4 and its loop bound is hard-coded at 2, so adding
   a host means changing both. Do not touch it to close a cosmetic text-link
   leak; the risk is to the redirect everything else depends on.
+
+## The store is served from a generated catalogue, not the static table
+
+`src/store_data.js` is generated from `data/vault_catalogue.json` by
+`tools/build_store_payload.py` and imported by the worker. It holds every Gear
+VR title the vault knows about (562 as of this writing), keyed by a `gv:<id>`
+item id. Regenerate it after refreshing the catalogue:
+
+    python3 tools/fetch_vault_catalogue.py      # -> data/vault_catalogue.json
+    python3 tools/build_store_payload.py        # -> src/store_data.js
+
+The store's three GraphQL surfaces are answered from it in `graphqlResponse`:
+
+- `viewer() { app_store { sections } }` - `appStorePayload()`. Note the static
+  `GRAPHQL_PAYLOAD` has `app_store` at the *top level*, but the query asks for it
+  under `viewer`, and the viewer branch only carries `VIEWER_ONLY_FIELDS`; so it
+  has to be rebuilt here or the store home renders no sections at all.
+- `node(<category>) { all_items.first(n).after(c) }` - `storeSectionResponse()`.
+  Cursors are plain offsets; `.first()`/`.after()` must be honoured or the first
+  request pulls a whole section and `has_next_page` lies.
+- `app_binary_update(app_id: <id>) { new_binary { uri } }` - the install URI.
+
+APK hosting: the binaries are ~100 MB each and there are hundreds, so they
+cannot live in git (100 MB per-file limit). The URI handed out is the vault URL
+(`https://vault.gearvr.net/APK/<pkg>.apk`) unless `apk_base` is set in
+`src/store_data.js`, in which case that origin wins. The client accepts any
+HTTPS origin: `fb_network_security_config.xml` trusts the system store and
+allows cleartext, and the store download does not go through the
+certificate-pinning helper. To self-host, pass `--apk-base` to the builder.
+
+Item nodes must satisfy `Item.isValidApplication()`, which the store's
+`StoreUtils.filterForSupportedItems` calls before rendering: `__typename` must
+be exactly `"Application"` and `latest_supported_binary.package_name` must be
+non-null. A node failing that check is silently dropped, so a wrong `__typename`
+looks exactly like an empty store.
+
+### Checking that every requested field is answered
+
+A field the client selects and the worker does not return is `undefined` in the
+Relay store, and the screen that reads it throws rather than degrading - which
+on-device shows up as a blank screen or a crash with no useful log. The client's
+own documents are the specification, and they are all present in the tree:
+
+    python3 tools/check_query_coverage.py                      # against production
+    python3 tools/check_query_coverage.py --base http://127.0.0.1:8791
+
+It extracts the long query literals from `ApiDispatcher.smali`, substitutes the
+`<placeholder>` arguments, posts each to the worker and walks the response
+alongside the parsed query, reporting every requested field that came back
+missing. Two Oculus-specific spellings need care and the parser handles them:
+`field.arg(value)` is an argument (not a child selection) and `... as alias`
+renames one.
+
+It reports `0 missing field(s)` as of this writing. The allow-list
+`NOT_IN_MODEL` holds the three names the client asks for but has no class field
+to deserialize into (`sku`, `account_creation_time`, `reachability_data`), so
+nothing can read them; each entry is annotated with where it was checked.
+
+Fields worth knowing about, because each one is a crash rather than a blank:
+
+- `current_offer` - `StoreUtils.createStoreItemModel` reads
+  `current_offer.price` with **no null check on `current_offer`**, so a null
+  there is a NullPointerException while building every tile in the list. It must
+  be a real object; the catalogue is free, so it is priced at zero.
+- `cinema_video` - read as an object by the detail view; a missing key throws.
+- `required_input_device` - selected by the list query. It was being deleted
+  from the shallow list response to save bytes, which is not worth it for a
+  single null: the field went undefined in the store.
+- `linked_accounts_info.facebook_account.needs_password_to_unlink` - the static
+  `GRAPHQL_PAYLOAD` also carries `linked_accounts_info` and wins over
+  `linkedAccounts()`, so the table copy has to hold every `FBConnectAccount`
+  field too.
+
+## Gatekeepers: the Home menu is gated, and the request shape matters
+
+`oculus_vrshell_enable_system_utilities` is the gatekeeper behind the Home
+pull-out menu (`HorizonGatekeeperFetcherModule.getSystemUtilitiesEnabled()`).
+It is served to the shell by the phone app's `GatekeeperContentProvider`, which
+reads it from `/features`.
+
+The VR shell does **not** use the Retrofit `projects[]` spelling. It builds its
+own request (`GateKeepers.gkList` + `GK_API_PATH = "features"`):
+
+    /features?projects[0]=<gk>&projects[1]=<gk>&...
+
+and parses the reply as `data[0].results[i]` with `JSONArray.getBoolean(i)`
+(`GateKeepers$3`). Matching only `projects[]` therefore saw zero projects,
+answered an empty `results`, and `getBoolean(i)` threw - which left *every*
+gatekeeper false, including the menu. `gatekeeperProjects()` now accepts
+`projects[N]`, `projects[]` and comma-joined values.
+
+The enabled set is a deliberate allow-list, not "everything": turning on a
+feature whose backend does not exist swaps a hidden surface for a crash.
+Live-video, messenger, party calls, Skyline multi-device and Worlds stay off.
+
+## Crash reports are the only diagnostic for on-device failures
+
+There is no debugger on the headset. The client's bug reporter POSTs to
+`/oculus/report_bug`, and on a crash it includes the stack trace.
+`handleBugReport()` logs the body to the Worker invocation log, so it is
+recoverable with `wrangler tail`. When a surface crashes, reproduce it and read
+the trace there before guessing at the response shape.
+
+A JSON body on an *image* path is not "no picture" - it is an undecodable
+stream and the image loader throws. `profile_photo.uri`, `avatar_image.uri` and
+the store's cover art must all resolve to real PNG bytes (`handleAvatar()`).
