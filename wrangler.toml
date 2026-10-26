@@ -7,8 +7,7 @@ routes = [
 ]
 # Conserve ici tes définitions de routes actuelles (ex: routes = [...] ou route = "...")
 
-[vars]
-DESTINATION_EMAIL = "Noam.pamplemouchetech@gmail.com"
+
 
 # The session signing key is a secret, not a plain var: set it once with
 #   wrangler secret put SESSION_SECRET
