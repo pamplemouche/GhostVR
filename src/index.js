@@ -12,13 +12,12 @@
  * suffix (`/oculus/graphql`, `/fb-api/method/auth.login`, ...).
  */
 
-const USER_ID = '100000000000001';
-const USER_ALIAS = 'GhostVR';
-const USER_NAME = 'GhostVR User';
-const USER_EMAIL = 'ghostvr@pamplemouche.com';
-const USER_PHOTO = 'https://ghostvr.pamplemouche.com/assets/avatar.png';
+// The only asset the client asks for before an account exists. Everything else
+// about the viewer comes from the Pamplemouche backend, so there is no local
+// account to fall back on: `USER_ID`/`ACCESS_TOKEN` used to stand in for one,
+// which let a wrong password through and made the login screen decorative.
+const AVATAR_URI = 'https://ghostvr.pamplemouche.com/assets/avatar.png';
 const DEVICE_SECRET = 'ghostvr_device_secret';
-const ACCESS_TOKEN = `OC|${USER_ID}|ghostvr_session_valid_token`;
 
 // The real accounts live on the Pamplemouche backend, which authenticates a
 // pseudo and a password (`POST /api/login {username, password}`). The Oculus
@@ -29,11 +28,18 @@ const ARC_BASE = 'https://arc.pamplemouche.com';
 
 let currentUser = null;
 
-/** Identity used to build every viewer/profile payload. */
+/**
+ * Identity used to build every viewer/profile payload.
+ *
+ * Signed out, this is an empty identity rather than a canned account.  The
+ * client always receives the full viewer shape - changing that shape is its
+ * own startup risk - but with no id, alias or token, so nothing reads as a
+ * real signed-in user and the login screen still has to be completed.
+ */
+const EMPTY_IDENTITY = { id: '', alias: '', name: '', email: '' };
+
 function identity() {
-  if (!currentUser) {
-    return { id: USER_ID, alias: USER_ALIAS, name: USER_NAME, email: USER_EMAIL };
-  }
+  if (!currentUser) return { ...EMPTY_IDENTITY };
   return {
     id: currentUser.id,
     alias: currentUser.username,
@@ -42,8 +48,17 @@ function identity() {
   };
 }
 
+function isSignedIn() {
+  return currentUser !== null;
+}
+
+/**
+ * No token while signed out.  A canned token here is what let a wrong password
+ * return a usable session: the client saw a token and skipped the login.
+ */
 function accessToken() {
-  return currentUser ? `OC|${currentUser.id}|ghostvr_session_valid_token` : ACCESS_TOKEN;
+  if (!currentUser) return null;
+  return `OC|${currentUser.id}|ghostvr_session_valid_token`;
 }
 
 // ---------------------------------------------------------------------------
@@ -122,7 +137,7 @@ function allParams(params, ...names) {
 // ---------------------------------------------------------------------------
 
 function profilePhoto(name) {
-  return { name, uri: USER_PHOTO, width: '360', height: '360' };
+  return { name, uri: AVATAR_URI, width: '360', height: '360' };
 }
 
 // Set by a successful /change_pin so the viewer stops reporting an unset PIN.
@@ -185,14 +200,21 @@ function viewerUser() {
   };
 }
 
-const LINKED_ACCOUNTS = {
-  facebook_account: {
-    access_token: 'GHOSTVR_FB_LINKED_TOKEN',
-    facebook_id: USER_ID,
-    friend_policy: 'EVERYONE',
-    needs_password_to_unlink: false,
-  },
-};
+/**
+ * The linked Facebook account mirrors the signed-in user, so it has to be
+ * built per request rather than frozen at module load.
+ */
+function linkedAccounts() {
+  const who = identity();
+  return {
+    facebook_account: {
+      access_token: 'GHOSTVR_FB_LINKED_TOKEN',
+      facebook_id: who.id,
+      friend_policy: 'EVERYONE',
+      needs_password_to_unlink: false,
+    },
+  };
+}
 
 /**
  * Privacy edges for one concept.
@@ -253,7 +275,7 @@ function connection(nodes, extra = {}) {
 function viewerWithProfile() {
   return {
     ...viewerUser(),
-    linked_accounts_info: LINKED_ACCOUNTS,
+    linked_accounts_info: linkedAccounts(),
     privacy_audience_options: PRIVACY_EDGES_PROFILE,
     privacy_current_activity: PRIVACY_EDGES,
     privacy_friends: PRIVACY_EDGES,
@@ -474,10 +496,19 @@ async function handleAuthLogin(request, url) {
   const params = await readParams(request, url);
   // The client labels the field "email", but the Pamplemouche backend
   // authenticates a pseudo, so whatever was typed is forwarded as `username`.
-  const identifier = firstParam(params, 'email', 'username') || USER_EMAIL;
+  const identifier = firstParam(params, 'email', 'username');
   const password = firstParam(params, 'password');
   const fbAccessToken = firstParam(params, 'fb_access_token');
 
+  if (!identifier) {
+    return json(
+      { error: { message: 'Missing credentials', type: 'OAuthException', code: 400 } },
+      400,
+    );
+  }
+
+  // A login without a password is not a login. Falling back to a canned
+  // identity here is what made any typed string connect.
   if (!password && !fbAccessToken) {
     return json(
       { error: { message: 'Missing credentials', type: 'OAuthException', code: 400 } },
@@ -486,8 +517,20 @@ async function handleAuthLogin(request, url) {
   }
 
   const user = await arcLogin(identifier, password);
-  if (user) currentUser = user;
+  if (!user) {
+    // Same shape the client already handles for a rejected Facebook login, so
+    // the login screen reports it instead of silently proceeding.
+    return json(
+      {
+        error_code: 1349003,
+        error_msg: 'Invalid credentials',
+        error: { message: 'Invalid credentials', type: 'OAuthException', code: 401 },
+      },
+      401,
+    );
+  }
 
+  currentUser = user;
   return json({ ...loginResponse(), email: identifier, registered: true });
 }
 
@@ -536,15 +579,17 @@ async function handleFbAuth(request) {
   }
 
   const who = identity();
+  // Signed out, `who` is an empty identity, so this reports no session
+  // (`access_token` is null) while keeping the shape the client deserializes.
   return json({
-    login_session: { access_token: accessToken(), userId: who.id },
+    login_session: isSignedIn() ? { access_token: accessToken(), userId: who.id } : null,
     prefilled_account_info: {
       all_emails: [who.email],
       email: who.email,
       fb_access_token: body.fb_access_token || 'GHOSTVR_FB_TOKEN',
       facebook_id: who.id,
       name: who.name,
-      profile_pic_uri: USER_PHOTO,
+      profile_pic_uri: AVATAR_URI,
       username_suggestions: [who.alias],
     },
     existing_email_conflict: null,
@@ -557,14 +602,19 @@ function handleLogout() {
   return json({ success: true, logged_out: true });
 }
 
-/** GET /oculus/register */
-async function handleRegister(request, url) {
-  const params = await readParams(request, url);
-  return json({
-    ...loginResponse(),
-    email: firstParam(params, 'email') || USER_EMAIL,
-    registered: true,
-  });
+/** GET /oculus/register — account creation lives on the Pamplemouche backend. */
+async function handleRegister() {
+  return json(
+    {
+      error: {
+        message: 'Registration is handled by the GhostVR website',
+        type: 'OAuthException',
+        code: 400,
+      },
+      registered: false,
+    },
+    400,
+  );
 }
 
 /** POST /oculus/change_pin */
@@ -777,8 +827,8 @@ function handleGenericOculus() {
  * exist for the client-side surfaces that read the per-user loadout, coin
  * balance and purchases. `/pamp/me` returns them in one shot; every other
  * `/pamp/<path>` is forwarded verbatim so the shop can grow without a change
- * here. Without a session the passthrough answers with the fallback identity so
- * callers still get a well-formed body instead of an error.
+ * here. Without a session both forms answer 401, so the shop cannot be browsed
+ * as an anonymous account.
  */
 async function handlePamp(request, url) {
   const suffix = url.pathname.replace(/^.*?\/pamp\/?/, '');
@@ -788,12 +838,12 @@ async function handlePamp(request, url) {
       ok: true,
       username: who.alias,
       userId: who.id,
-      authenticated: currentUser !== null,
+      authenticated: isSignedIn(),
       loadout: currentUser ? currentUser.loadout : null,
-      coins: currentUser ? currentUser.coins : 0,
-      pamp: currentUser ? currentUser.pamp : 0,
-      purchases: currentUser ? currentUser.purchases : [],
-      isAdmin: currentUser ? currentUser.isAdmin : false,
+      coins: currentUser ? currentUser.coins ?? 0 : 0,
+      pamp: currentUser ? currentUser.pamp ?? 0 : 0,
+      purchases: currentUser ? currentUser.purchases || [] : [],
+      isAdmin: currentUser ? currentUser.isAdmin === true : false,
     });
   }
 

@@ -1,0 +1,29 @@
+# Meta hosts still reachable in the patched tree, per file.
+#
+# Regenerate after intentionally leaving or fixing hosts:
+#     python3 tools/check_patched_tree.py --write-baseline
+#
+# The Oculus Home React Native bundles are Hermes bytecode version 53;
+# tools/patch_hermes_bundle.py only understands version 61 and refuses
+# to touch the others rather than corrupt them.  A *new* finding - a
+# fused string, or a host in a library we do patch - is still a failure.
+
+decompiled/Oculus Home/assets/reactnative.ACCOUNT_LINKING.bcbundle 4
+decompiled/Oculus Home/assets/reactnative.AVATAR_EDITOR.bcbundle 4
+decompiled/Oculus Home/assets/reactnative.EXPLORE.bcbundle 16
+decompiled/Oculus Home/assets/reactnative.FIRST_TIME_NUX.bcbundle 16
+decompiled/Oculus Home/assets/reactnative.HOME.bcbundle 17
+decompiled/Oculus Home/assets/reactnative.LIBRARY.bcbundle 14
+decompiled/Oculus Home/assets/reactnative.LIVESTREAMING.bcbundle 7
+decompiled/Oculus Home/assets/reactnative.SEARCH.bcbundle 17
+decompiled/Oculus Home/assets/reactnative.SOCIAL.bcbundle 14
+decompiled/Oculus Home/assets/reactnative.STORAGE_MANAGER.bcbundle 4
+decompiled/Oculus Home/assets/reactnative.STORE.bcbundle 13
+decompiled/Oculus Home/assets/reactnative.SYSTEM_OVERLAYS.bcbundle 4
+decompiled/Oculus Home/assets/reactnative.SYSTEM_UTILITIES.bcbundle 9
+decompiled/Oculus Home/assets/reactnative.TRANSCRIBE.bcbundle 4
+decompiled/Oculus Home/assets/reactnative.USER_ADMIN.bcbundle 4
+decompiled/Oculus Home/assets/reactnative.VRNUX.bcbundle 4
+decompiled/Oculus System Utilities/assets/reactnative.SETTINGS.bcbundle 4
+decompiled/Oculus/assets/HorizonBundle.js.hbc 44
+decompiled/Oculus/smali_classes2/com/facebook/react/modules/intent/IntentModule.smali 4
