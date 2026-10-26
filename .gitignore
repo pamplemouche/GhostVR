@@ -9,3 +9,6 @@ __pycache__/
 
 # apktool build output
 decompiled/*/build/
+
+# Mirror scratch space (tools/mirror_vault_apks.py)
+.mirror-cache/
