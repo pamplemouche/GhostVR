@@ -433,6 +433,15 @@ def patch_library(path: Path, patches, fills, dry_run: bool) -> list[str]:
                 f"{path.name}: fused string at {run.start():#x}: {run.group(0)[:60]!r}"
             )
 
+    # The run rule above needs the host to survive twice; an overrun that is
+    # itself overwritten leaves a single mangled prefix, which it misses.
+    for match in re.finditer(b"ghostvr", bytes(data)):
+        if bytes(data)[match.start() : match.start() + len(host)] != host:
+            raise ValueError(
+                f"{path.name}: truncated host fragment at {match.start():#x}: "
+                f"{bytes(data)[match.start() : match.start() + 40]!r}"
+            )
+
     if not dry_run:
         path.write_bytes(bytes(data))
     return log

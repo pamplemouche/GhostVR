@@ -448,6 +448,28 @@ for Meta hosts left in `.so`, smali literals and Hermes bundles, with a
 per-file baseline in `tools/patched_tree_baseline.txt` so a *new* problem fails
 while the known backlog does not.
 
+That "twice" test has a blind spot, and it hid a real corruption.
+`libchrome.so` in the `Oculus Browser` tree carried four adjacent Facebook
+hosts in one packed run (`https://facebook.com`, `https://staticxx.facebook.com`,
+`www.facebook.com`, `our.internmc.facebook.com`). The first write overran into
+the second, and the write for the third landed on top of the first's overrun,
+leaving a single mangled copy:
+
+```
+https://ghostvr.pamplhttps://ghostvr.pamplemouche.cghostvr.pamplemoughostvr.pamplemouche.com
+```
+
+Only one intact host survives in that run, so `count(HOST) > 1` is false and
+the checker reported a clean tree. Both the checker and the patcher's own
+assertions now also flag any `ghostvr` that is **not** the start of the full
+host - a truncated fragment. That rule is precise: it found exactly the three
+fragments in `libchrome.so` and nothing else across the tree. Note the earlier
+`capstone` hardening (a hard requirement, plus the "handle the next patch
+target" rule) means a fresh patcher run now produces the correct bytes; the
+committed file was simply stale output from before that fix. Regenerate rather
+than hand-editing when this class of corruption shows up.
+`tools/tests/test_patch_guards.py` pins the rule.
+
 ## Hermes bundles: two layouts, only one handled
 
 `HorizonBundle.js.hbc` is bytecode version 61; the `Oculus Home` React Native
