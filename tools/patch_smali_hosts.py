@@ -28,8 +28,12 @@ DECOMPILED = ROOT / "decompiled"
 HOST = "ghostvr.pamplemouche.com"
 
 # A Meta host with optional subdomains, plus the already-rewritten host so the
-# script is idempotent.
+# script is idempotent. Samsung's device-registration/telemetry service is
+# included because the setup wizard talks to it for registration and policy;
+# it is retired, so those calls only ever time out and retry.
 META_HOST = r"(?:[A-Za-z0-9_-]+\.)*(?:oculus|facebook)\.com|fbcdn\.net|fbsbx\.com|fburl\.com"
+SAMSUNG_HOST = r"(?:stg-api|regi|dc)\.di\.atlas\.samsung\.com"
+HOSTS = rf"(?:{META_HOST}|{SAMSUNG_HOST})"
 
 # Reject a host that is really part of a longer name: `oculus.companion` in
 # `com.oculus.companion.server`, `facebook.common` in a factory key.
@@ -50,10 +54,10 @@ PATH_MAP = {
 }
 
 # `https://<meta-host>/<path>` and the scheme-relative and bare forms.
-_SCHEME_LINK = re.compile(rf"https?://(?:[A-Za-z0-9_-]+\.)*({META_HOST})(\\*)/([A-Za-z0-9_/.-]*){_BOUNDARY}")
-_SCHEME_BARE = re.compile(rf"https?://(?:[A-Za-z0-9_-]+\.)*({META_HOST}){_BOUNDARY}")
-_BARE_LINK = re.compile(rf"({META_HOST})(\\*)/([A-Za-z0-9_/.-]+){_BOUNDARY}")
-_BARE_HOST = re.compile(rf"({META_HOST}){_BOUNDARY}")
+_SCHEME_LINK = re.compile(rf"https?://(?:[A-Za-z0-9_-]+\.)*({HOSTS})(\\*)/([A-Za-z0-9_/.-]*){_BOUNDARY}")
+_SCHEME_BARE = re.compile(rf"https?://(?:[A-Za-z0-9_-]+\.)*({HOSTS}){_BOUNDARY}")
+_BARE_LINK = re.compile(rf"({HOSTS})(\\*)/([A-Za-z0-9_/.-]+){_BOUNDARY}")
+_BARE_HOST = re.compile(rf"({HOSTS}){_BOUNDARY}")
 
 
 def _path_for(host: str, path: str) -> str:

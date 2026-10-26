@@ -10,6 +10,12 @@ routes = [
 [vars]
 DESTINATION_EMAIL = "Noam.pamplemouchetech@gmail.com"
 
+# The session signing key is a secret, not a plain var: set it once with
+#   wrangler secret put SESSION_SECRET
+# The worker falls back to a built-in development key when it is absent, which
+# keeps a local `wrangler dev` working but makes the session cookie and bearer
+# token forgeable. Set it before exposing the worker publicly.
+
 [observability.logs]
 enabled = true
 invocation_logs = true

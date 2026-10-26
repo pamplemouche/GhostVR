@@ -429,9 +429,55 @@ a wrong table offset corrupts the bundle, which is a hard startup failure.
 `src/index.js` used to fall back to a canned identity (`USER_ID`/`ACCESS_TOKEN`)
 whenever nobody was signed in, so a wrong password still returned a valid
 session and the login screen was decorative. The account now comes only from
-`POST https://arc.pamplemouche.com/api/login`; account surfaces answer 401
-without a session via `requireSession()`. If you add a viewer-shaped route, call
-`requireSession()` first - `identity()` returns `null` and will throw otherwise.
+`POST https://arc.pamplemouche.com/api/login`.
+
+## The session lives in the token, never in module state
+
+`currentUser` used to be a module-level variable. That is wrong on Workers: a
+module is not a process, so each request may be served by a different isolate
+and isolates are evicted at will. The login set the variable in one isolate and
+every later request landed elsewhere, read "signed out", and bounced the client
+back to login - the resync loop that made the core service look like it was
+crashing on a timer. Reproduced in `tools/tests/test_backend.mjs` by importing
+the worker twice and switching between the two instances.
+
+Two carriers now hold the session, both HMAC-signed with `SESSION_SECRET`:
+
+- the bearer token, which is what the app actually uses; and
+- a cookie, for the browser.
+
+The token matters most. `OculusAuthorizationInterceptor.getAuthorization()`
+reads the access token out of the app's own credential store and
+`Authorization.generate()` sends it as `Bearer <token>`; the app never sends or
+reads cookies for its API calls, and `AuthDatastore` is interface-only here, so
+nothing is persisted server-side. The token is also opaque to the client -
+`AccessTokenUtils` only *builds* the logged-out form `OC|appId|loginToken`, it
+never parses one - so the session rides inside it:
+
+```
+OC|<base64url(json payload)>|<hmac sha256>
+```
+
+`fetch` accepts either carrier (`sessionFromToken` then `sessionFromRequest`)
+and every handler takes the resulting `session` as its last argument. When you
+add a route that answers with a viewer or profile payload, thread `session`
+through the same way; there is no `requireSession()` helper, and reading module
+state again would reintroduce the loop.
+
+The PIN flag rides in the session too, because `change_pin` and the following
+`MeManager.refresh()` can land on different isolates.
+
+## Samsung's DI service is part of the setup wizard
+
+`com.samsung.android.app.vrsetupwizard` registers the headset with Samsung and
+fetches a policy document from `*.di.atlas.samsung.com` before the wizard
+completes. The service is retired, so the call could only time out and be
+retried. `patch_smali_hosts.py` rewrites those three hosts and
+`check_patched_tree.py` fails on any that remain. The policy parser
+(`com.samsung.a.a.a.a.e.a`) requires `rc == 1000` and then reads `rint`, `lgt`,
+`dom`, `uri`, `bat-uri`, `dq-w`, `oq-w`, `dq-3g`, `oq-3g` with unguarded
+accessors - a partial body throws inside the parser, so all of them must be
+present.
 
 ## The bundle hosts are mostly cosmetic, not reachable
 

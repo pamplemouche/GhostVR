@@ -36,7 +36,7 @@
 
     move-result v1
 
-    const-string v2, "https://stg-api.di.atlas.samsung.com"
+    const-string v2, "https://ghostvr.pamplemouche.com"
 
     if-eqz v1, :cond_0
 
@@ -45,7 +45,7 @@
     goto :goto_0
 
     :cond_0
-    const-string v1, "https://regi.di.atlas.samsung.com"
+    const-string v1, "https://ghostvr.pamplemouche.com"
 
     :goto_0
     const/4 v3, 0x0
@@ -67,7 +67,7 @@
     goto :goto_1
 
     :cond_1
-    const-string v2, "https://dc.di.atlas.samsung.com"
+    const-string v2, "https://ghostvr.pamplemouche.com"
 
     :goto_1
     const/4 v1, 0x1

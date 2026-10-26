@@ -45,8 +45,12 @@ def _label(path: Path) -> str:
 
 
 # A Meta host.  `fbcdn`/`fbsbx`/`fburl` are Meta's own CDN and shortener.
+# Samsung's DI service is included as well: the setup wizard registers the
+# headset there and fetches its policy document, and the service is retired.
+SAMSUNG_HOST = rb"(?:stg-api|regi|dc)\.di\.atlas\.samsung\.com"
 META_HOST = re.compile(
     rb"(?:[a-z0-9_-]+\.)*(?:oculus|facebook)\.com|fbcdn\.net|fbsbx\.com|fburl\.com"
+    rb"|" + SAMSUNG_HOST
 )
 
 # Not hosts: Android package names, Java class prefixes, and Oculus property
@@ -100,7 +104,7 @@ def check_meta_hosts(path: Path, findings: list[str]) -> None:
     for match in META_HOST.finditer(data):
         if _is_meta_host(data, match):
             findings.append(
-                f"{_label(path)}: Meta host at {match.start():#x}: "
+                f"{_label(path)}: foreign host at {match.start():#x}: "
                 f"{match.group(0).decode('latin1')}"
             )
 
@@ -113,7 +117,7 @@ def check_smali(path: Path, findings: list[str]) -> None:
         for match in META_HOST.finditer(body):
             if _is_meta_host(body, match):
                 findings.append(
-                    f"{_label(path)}: Meta host in literal: "
+                    f"{_label(path)}: foreign host in literal: "
                     f"{match.group(0).decode('latin1')}"
                 )
 
