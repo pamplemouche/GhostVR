@@ -444,6 +444,120 @@ console.log('\n--- store: the vault catalogue is served ---');
     JSON.stringify(sections).slice(0, 200));
 }
 
+console.log('\n--- OCMS: the library queries carry their arguments in `variables` ---');
+{
+  // OCMS's own documents, taken verbatim from the decompiled
+  // `LibraryMethods.smali`. It sends `doc` + `variables`; the VR app sends
+  // `q` + `query_params`. Both have to be understood.
+  const UPDATE_DOC = 'query($params: AppBinaryUpdatesArgs!) {app_binary_updates (args: $params) '
+    + '{  ... on AppBinaryUpdateList {    updates {      app_id,      new_binary {        '
+    + '... on AndroidBinary { id, uri, size,          version_code,          apk_cert_signature,'
+    + '          external_signatures,          obb_binary {            ... on OBBBinary { id, uri, size, },'
+    + '          },          asset_files {            edges {              node {                '
+    + '... on AssetFile { id, uri, size, file_name, is_required, },              },            },          },'
+    + '        },      },      patch { id, uri, size,        checksum_hash,        obb_patch {          '
+    + '... on AppBinaryPatch { id, uri, size,            checksum_hash,            },        },'
+    + '        asset_file_patches {          ... on AppBinaryPatch {            checksum_hash, id, uri, size,'
+    + '            source_binary {              ... on AssetFile {                file_name,'
+    + '                is_required,              },            },          },        },      },    },  },},}';
+  const ENTITLEMENT_DOC = 'query ($machine_id: ID){entitlements: me {  active_android_entitlements '
+    + '{    nodes {      grant_reason,      grant_time,      expiration_time,id, last_used, '
+    + 'signed_token(machine_id: $machine_id),      item {__typename,id,display_name}      }    }  }}}';
+
+  // A query with a real `<placeholder>` only resolves if `variables` is read:
+  // with the placeholder left literal, `nodeIdOf` matches nothing and the
+  // section falls back to the whole catalogue instead of paging.
+  const PAGED_DOC = 'query($params: GamesArgs!) { node(<category>) { '
+    + 'all_items.after(<cursor>).first(<count>) { nodes { id } page_info { end_cursor } } } }';
+  const rEnt = await call('/oculus/graphql?doc=' + encodeURIComponent(PAGED_DOC)
+    + '&variables=' + encodeURIComponent(JSON.stringify(
+      { category: 'games', cursor: '20', count: '20' })));
+  const bEnt = await rEnt.json();
+  const paged = bEnt.node?.all_items;
+  check('OCMS `variables` is read, not just `query_params`',
+    paged?.page_info?.start_cursor === '20', JSON.stringify(paged?.page_info));
+  check('the paged OCMS answer is one page, not the whole catalogue',
+    (paged?.nodes || []).length === 20, `got ${(paged?.nodes || []).length}`);
+
+  // The entitlements query returns the `entitlements` root the model reads,
+  // with the account's owned apps in the connection. `LibraryCacheRefresher`
+  // drops any entry whose `signed_token` is null, so the library would be empty
+  // without one.
+  const rEnt2 = await call('/oculus/graphql?doc=' + encodeURIComponent(ENTITLEMENT_DOC)
+    + '&variables=' + encodeURIComponent(JSON.stringify({ machine_id: 'test-device' })));
+  const bEnt2 = await rEnt2.json();
+  const entNodes = bEnt2.entitlements?.active_android_entitlements?.nodes;
+  check('the entitlements query answers the `entitlements` root',
+    Array.isArray(entNodes), JSON.stringify(bEnt2).slice(0, 160));
+  check('the library is populated from the catalogue', (entNodes || []).length > 0,
+    `got ${(entNodes || []).length}`);
+  check('every entitlement carries a signed_token (a null drops it client-side)',
+    (entNodes || []).every((n) => typeof n.signed_token === 'string' && n.signed_token.length > 0),
+    JSON.stringify(entNodes?.[0] || {}).slice(0, 200));
+  check('expiration_time is null (never expires), not 0 (already expired)',
+    (entNodes || []).every((n) => n.expiration_time === null),
+    JSON.stringify(entNodes?.[0]?.expiration_time));
+  check('every entitlement names a package (getPackageName throws otherwise)',
+    (entNodes || []).every((n) => typeof n.item?.latest_supported_binary?.package_name === 'string'
+      && n.item.latest_supported_binary.package_name.length > 0),
+    JSON.stringify(entNodes?.[0]?.item?.latest_supported_binary || {}).slice(0, 200));
+  check('every entitlement id is a store id',
+    (entNodes || []).every((n) => typeof n.id === 'string' && n.id.startsWith('gv:')),
+    JSON.stringify((entNodes || []).slice(0, 3).map((n) => n.id)));
+
+  // Pick a real catalogue id to ask an update for.
+  const rSec = await call('/oculus/graphql?doc=' + encodeURIComponent(
+    'query { node(games) { all_items { nodes { id } } } }'));
+  const appId = (await rSec.json()).node?.all_items?.nodes?.[0]?.id;
+  check('a catalogue id is available to ask an update for',
+    typeof appId === 'string' && appId.startsWith('gv:'), String(appId));
+
+  // The library/installer query. The args ride in `variables.params.app_params`,
+  // one entry per entitlement, with the id under `app_id`.
+  const vars = { params: { app_params: [{ app_id: appId, installed_version_code: '0' }] } };
+  const rUp = await call('/oculus/graphql?doc=' + encodeURIComponent(UPDATE_DOC)
+    + '&variables=' + encodeURIComponent(JSON.stringify(vars)));
+  const bUp = await rUp.json();
+
+  // The model field is `app_binary_updates`; the singular key would deserialize
+  // to null and make the installer report SERVER_RESPONSE_ERROR.
+  check('app_binary_updates is answered under its own (plural) key',
+    bUp.app_binary_updates !== undefined, JSON.stringify(bUp).slice(0, 200));
+  check('the singular key is not used for the plural query',
+    bUp.app_binary_update === undefined, JSON.stringify(bUp).slice(0, 200));
+
+  const updates = bUp.app_binary_updates?.updates;
+  check('updates is an array', Array.isArray(updates), JSON.stringify(updates));
+  check('the requested app is answered', updates?.[0]?.app_id === appId, JSON.stringify(updates));
+  check('the update carries a real apk uri',
+    /\.apk$/.test(updates?.[0]?.new_binary?.uri || ''), String(updates?.[0]?.new_binary?.uri));
+  check('the update declares a size',
+    typeof updates?.[0]?.new_binary?.size === 'number' && updates[0].new_binary.size > 0,
+    String(updates?.[0]?.new_binary?.size));
+  check('version_code is a number (the model declares long)',
+    typeof updates?.[0]?.new_binary?.version_code === 'number',
+    JSON.stringify(updates?.[0]?.new_binary?.version_code));
+
+  // An id the catalogue does not know must not be invented, and must not break
+  // the response either.
+  const rUnknown = await call('/oculus/graphql?doc=' + encodeURIComponent(UPDATE_DOC)
+    + '&variables=' + encodeURIComponent(JSON.stringify(
+      { params: { app_params: [{ app_id: 'gv:not-in-the-catalogue' }] } })));
+  const bUnknown = await rUnknown.json();
+  check('an unknown app id yields an empty updates array',
+    Array.isArray(bUnknown.app_binary_updates?.updates)
+    && bUnknown.app_binary_updates.updates.length === 0,
+    JSON.stringify(bUnknown).slice(0, 200));
+
+  // The singular query must keep answering the singular key - the routing fix
+  // must not have swapped the two.
+  const rSing = await call('/oculus/graphql?doc=' + encodeURIComponent(
+    `app_binary_update(app_id: ${appId}) { new_binary { id, uri, size } }`));
+  const bSing = await rSing.json();
+  check('the singular app_binary_update still answers its own key',
+    bSing.app_binary_update?.new_binary?.id === appId, JSON.stringify(bSing).slice(0, 200));
+}
+
 console.log('\n--- logout ---');
 r = await call('/oculus/logout');
 check('logout 200', r.status === 200);

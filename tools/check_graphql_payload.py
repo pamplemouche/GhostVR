@@ -32,8 +32,12 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+# Every decompiled tree that carries `/graphql` response models.  OCMS is its
+# own package with its own `/graphql` methods (`LibraryMethods$Methods`), so it
+# has to be listed here or its models are never checked against the payload.
 TREES = ("decompiled/Oculus/smali", "decompiled/Oculus/smali_classes2",
-         "decompiled/Oculus/smali_classes3")
+         "decompiled/Oculus/smali_classes3",
+         "decompiled/Oculus Core Mobile Services/smali")
 
 FIELD_RE = re.compile(
     r'^\.field public (\w+):(\[?L?[\w/$;]+);((?:\n[ \t].*)*)', re.M)

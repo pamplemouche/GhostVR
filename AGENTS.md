@@ -265,6 +265,49 @@ Two shapes matter:
 document themselves, because `graphqlResponse()` dispatches to them before it
 has the expanded query in hand.
 
+## OCMS speaks a different dialect from the VR app
+
+Both clients talk to the same worker, but they do not frame their requests the
+same way, and three of the differences silently broke OCMS.
+
+**The document and its values have different names.** The VR app
+(`ApiDispatcher`) sends `q` + `query_params`. OCMS declares its methods with
+Retrofit (`LibraryMethods`, `AssetsMethods`, `LibrarySyncMethods`) and sends
+`doc` + `variables`. `paramsJson()` reads either, because they are the same
+serialized argument map under two names. While only `query_params` was read,
+every OCMS placeholder stayed literal and every OCMS argument was invisible.
+
+**`app_binary_updates` is not `app_binary_update`.** The singular name is a
+prefix of the plural one, and the dispatcher matched with
+`haystack.includes('app_binary_update')`. OCMS's plural query therefore landed
+on the singular branch and got `{app_binary_update: {...}}` while its model
+field is `app_binary_updates` - so the field stayed null and
+`DownloadAndInstallApi` reported `SERVER_RESPONSE_ERROR` instead of installing.
+The plural branch is matched first now, and it answers `{app_binary_updates:
+{updates: [...]}}` with one entry per requested id. Those ids arrive in
+`variables.params.app_params` under `app_id` (`EntitlementIdentifier.itemId` is
+`@SerializedName("app_id")`); answering an id the client did not ask about makes
+`LibraryCacheRefresher` log "Unexpected null entitlement" and ignore the entry.
+
+**`active_android_entitlements` is an alias for `me`.** OCMS sends
+`entitlements: me { active_android_entitlements { nodes {...} } }`, so the
+response root is `entitlements` while the static table has its own
+`entitlements` subtree holding an empty connection - the table's copy shadowed
+the built one. It is now assembled after the table merge and only when the
+document selects it, because it costs a `storeItemNode()` per catalogue entry.
+
+Two details of that connection are load-bearing. A null `signed_token` makes
+`LibraryCacheRefresher` drop the entitlement (soft error, `goto` past it), so
+the token is a non-empty string - nothing decodes it locally. And
+`expiration_time` is a `Long` where null means "never expires" (the refresher
+maps it to -1), so a `0` would read as already expired. The `item` nodes come
+from `storeItemNode()`, which already guarantees the non-null
+`latest_supported_binary.package_name` that `Item.getPackageName()` asserts on.
+
+`CustomApiEndpointValidator` also accepts `graph.ghostvr.pamplemouche.com`. That
+is only a debug-override allowlist - it authorises disabling certificate checks
+for a host, it does not build an endpoint - so no DNS record is needed for it.
+
 ## GraphQL response envelope
 
 `ApiResponseConverter` (`com/oculus/http/core/ApiResponseConverter`) decides the
