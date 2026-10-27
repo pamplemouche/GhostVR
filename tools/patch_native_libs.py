@@ -442,6 +442,16 @@ def patch_library(path: Path, patches, fills, dry_run: bool) -> list[str]:
                 f"{bytes(data)[match.start() : match.start() + 40]!r}"
             )
 
+    # The patch is strictly in place: every write replaces a slice with a value
+    # of the same length, so the file keeps its original size and every offset
+    # in the section headers stays valid.  Assert it rather than assume it, so a
+    # future edit that grows a string cannot silently shift the whole library.
+    if len(data) != len(original):
+        raise ValueError(
+            f"{path.name}: patch changed the file size "
+            f"{len(original)} -> {len(data)}; replacements must stay in place"
+        )
+
     if not dry_run:
         path.write_bytes(bytes(data))
     return log
