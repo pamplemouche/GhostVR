@@ -289,6 +289,23 @@ The plural branch is matched first now, and it answers `{app_binary_updates:
 `@SerializedName("app_id")`); answering an id the client did not ask about makes
 `LibraryCacheRefresher` log "Unexpected null entitlement" and ignore the entry.
 
+**OCMS has three `/graphql` documents, and they share prefixes.** All three are
+declared with Retrofit as `@Query("doc")` + `@Query("variables")`, and two of
+them read the same argument map:
+
+| document | declared in | argument | response root |
+| --- | --- | --- | --- |
+| `app_binary_updates` | `library/net/LibraryMethods` | `variables.params.app_params` | `{updates: [...]}` |
+| `app_binary_info` | `appmanager/assets/AssetsMethods` | `variables.params.app_params` | `{info: [{binary}]}` |
+| `entitlements: me` | `library/net/LibraryMethods` | `variables.machine_id` | `{active_android_entitlements}` |
+
+`app_binary_info` is matched first because `app_binary_update` is a prefix of
+both `app_binary_info` and `app_binary_updates`; before the branch existed the
+document fell through to the user shape and answered `{viewer: {...}}`. It is
+unreachable in this build - nothing outside `com.oculus.appmanager.assets`
+references `AssetsMethods`, and `Assets.getAssetList()` reads a local SQLite
+table rather than the network - but it is answered for completeness.
+
 **`active_android_entitlements` is an alias for `me`.** OCMS sends
 `entitlements: me { active_android_entitlements { nodes {...} } }`, so the
 response root is `entitlements` while the static table has its own

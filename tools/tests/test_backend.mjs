@@ -463,6 +463,13 @@ console.log('\n--- OCMS: the library queries carry their arguments in `variables
   const ENTITLEMENT_DOC = 'query ($machine_id: ID){entitlements: me {  active_android_entitlements '
     + '{    nodes {      grant_reason,      grant_time,      expiration_time,id, last_used, '
     + 'signed_token(machine_id: $machine_id),      item {__typename,id,display_name}      }    }  }}}';
+  const ASSET_DOC = 'query ($params: AppBinaryInfoArgs!) {  app_binary_info(args: $params) {    info '
+    + '{      binary {        ... on AndroidBinary {          id          package_name          '
+    + 'asset_files {            edges {              node {                ... on AssetFile {          '
+    + '        id                  file_name                  metadata                  asset_file_type'
+    + '                  uri                  size                  is_required                  iap_item {'
+    + '                    is_viewer_entitled                  }                }              }            }'
+    + '          }        }      }    }  }}';
 
   // A query with a real `<placeholder>` only resolves if `variables` is read:
   // with the placeholder left literal, `nodeIdOf` matches nothing and the
@@ -556,6 +563,27 @@ console.log('\n--- OCMS: the library queries carry their arguments in `variables
   const bSing = await rSing.json();
   check('the singular app_binary_update still answers its own key',
     bSing.app_binary_update?.new_binary?.id === appId, JSON.stringify(bSing).slice(0, 200));
+
+  // `app_binary_info` is OCMS's third `/graphql` document
+  // (`AssetsMethods.getAssetListAndBinId`). It shares the `app_binary_` prefix
+  // with the update queries, so it has to be matched before them, and its
+  // `info[].binary` shape is nothing like `updates[]`.
+  const rInfo = await call('/oculus/graphql?doc=' + encodeURIComponent(ASSET_DOC)
+    + '&variables=' + encodeURIComponent(JSON.stringify(
+      { params: { app_params: [{ app_id: appId, version_code: '0' }] } })));
+  const bInfo = await rInfo.json();
+  check('app_binary_info is not swallowed by the app_binary_update routes',
+    bInfo.app_binary_info !== undefined && bInfo.app_binary_update === undefined
+    && bInfo.app_binary_updates === undefined, JSON.stringify(bInfo).slice(0, 200));
+  const info = bInfo.app_binary_info?.info;
+  check('app_binary_info answers one entry per requested app',
+    Array.isArray(info) && info.length === 1, JSON.stringify(info));
+  check('the app_binary_info entry names the binary',
+    info?.[0]?.binary?.id === appId && typeof info[0].binary.package_name === 'string',
+    JSON.stringify(info?.[0]?.binary || {}).slice(0, 200));
+  check('asset_files is an edges connection, not null',
+    Array.isArray(info?.[0]?.binary?.asset_files?.edges),
+    JSON.stringify(info?.[0]?.binary?.asset_files));
 }
 
 console.log('\n--- logout ---');
