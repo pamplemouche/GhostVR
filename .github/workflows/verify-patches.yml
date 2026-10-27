@@ -49,6 +49,15 @@ jobs:
       - name: Test the binary-patch corruption guards
         run: python3 tools/tests/test_patch_guards.py
 
+      - name: Validate the OCMS native libraries byte for byte
+        run: |
+          # Structural checks on the committed tree, then the regression tests
+          # that prove those checks fail on a fused or truncated string.  The
+          # `--baseline <rev>` size check is for local runs against the
+          # pre-patch revision; in CI the tree already equals HEAD.
+          python3 tools/validate_ocms_native.py
+          python3 tools/tests/test_validate_ocms_native.py
+
       - name: Report which bundle hosts the runtime redirect still covers
         run: python3 tools/check_bundle_coverage.py
 

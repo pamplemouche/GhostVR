@@ -265,6 +265,49 @@ Two shapes matter:
 document themselves, because `graphqlResponse()` dispatches to them before it
 has the expanded query in hand.
 
+## OCMS speaks a different dialect from the VR app
+
+Both clients talk to the same worker, but they do not frame their requests the
+same way, and three of the differences silently broke OCMS.
+
+**The document and its values have different names.** The VR app
+(`ApiDispatcher`) sends `q` + `query_params`. OCMS declares its methods with
+Retrofit (`LibraryMethods`, `AssetsMethods`, `LibrarySyncMethods`) and sends
+`doc` + `variables`. `paramsJson()` reads either, because they are the same
+serialized argument map under two names. While only `query_params` was read,
+every OCMS placeholder stayed literal and every OCMS argument was invisible.
+
+**`app_binary_updates` is not `app_binary_update`.** The singular name is a
+prefix of the plural one, and the dispatcher matched with
+`haystack.includes('app_binary_update')`. OCMS's plural query therefore landed
+on the singular branch and got `{app_binary_update: {...}}` while its model
+field is `app_binary_updates` - so the field stayed null and
+`DownloadAndInstallApi` reported `SERVER_RESPONSE_ERROR` instead of installing.
+The plural branch is matched first now, and it answers `{app_binary_updates:
+{updates: [...]}}` with one entry per requested id. Those ids arrive in
+`variables.params.app_params` under `app_id` (`EntitlementIdentifier.itemId` is
+`@SerializedName("app_id")`); answering an id the client did not ask about makes
+`LibraryCacheRefresher` log "Unexpected null entitlement" and ignore the entry.
+
+**`active_android_entitlements` is an alias for `me`.** OCMS sends
+`entitlements: me { active_android_entitlements { nodes {...} } }`, so the
+response root is `entitlements` while the static table has its own
+`entitlements` subtree holding an empty connection - the table's copy shadowed
+the built one. It is now assembled after the table merge and only when the
+document selects it, because it costs a `storeItemNode()` per catalogue entry.
+
+Two details of that connection are load-bearing. A null `signed_token` makes
+`LibraryCacheRefresher` drop the entitlement (soft error, `goto` past it), so
+the token is a non-empty string - nothing decodes it locally. And
+`expiration_time` is a `Long` where null means "never expires" (the refresher
+maps it to -1), so a `0` would read as already expired. The `item` nodes come
+from `storeItemNode()`, which already guarantees the non-null
+`latest_supported_binary.package_name` that `Item.getPackageName()` asserts on.
+
+`CustomApiEndpointValidator` also accepts `graph.ghostvr.pamplemouche.com`. That
+is only a debug-override allowlist - it authorises disabling certificate checks
+for a host, it does not build an endpoint - so no DNS record is needed for it.
+
 ## GraphQL response envelope
 
 `ApiResponseConverter` (`com/oculus/http/core/ApiResponseConverter`) decides the
@@ -681,3 +724,43 @@ the trace there before guessing at the response shape.
 A JSON body on an *image* path is not "no picture" - it is an undecodable
 stream and the image loader throws. `profile_photo.uri`, `avatar_image.uri` and
 the store's cover art must all resolve to real PNG bytes (`handleAvatar()`).
+
+## OCMS native libraries: audit result and the validator that keeps it true
+
+Audited every `.so` in `decompiled/Oculus Core Mobile Services` (86 in `lib/`,
+plus the identical 86 in `build/apk/lib/`). Findings, all measured, not assumed:
+
+- Only one library is patched: `libxplat_mobileconfig_FBMobileConfigCore_FBMobileConfigCoreAndroid.so`
+  (both ABIs). 84 libraries are byte-identical to the pre-patch revision.
+- The patch is strictly in place. Every library keeps its exact byte length
+  against `f1e5fd73`; the 164 changed bytes in the mobileconfig library are 10
+  host strings with 53 NULs of padding. No file grew, so no section offset moved.
+- Zero Meta hosts remain, apart from the compiler banner
+  (`git-ro.vip.facebook.com`, build metadata in every `.so`) and the S3 bucket
+  path. `patch_native_libs.py` now asserts `len(data) == len(original)` so a
+  future edit that grows a string fails loudly instead of shifting the library.
+
+`tools/validate_ocms_native.py` re-checks the result independently of the
+patcher: ELF parses, each host lives in a mapped segment, no NUL-free run
+carries two hosts (fusion), no mangled `ghostvr` prefix (truncation), no
+unexpected Meta host, and `--baseline <rev>` proves byte-length preservation.
+`tools/tests/test_validate_ocms_native.py` mutates a real library to prove the
+checks fail on a fused, truncated or Meta-bearing string. Both run in CI.
+
+A host string is *not* required to touch a NUL on both sides: the originals end
+in `/` (`graph.oculus.com/`) and start with `.` (`.facebook.com/`), so a rule
+that demands NUL adjacency reports false positives on every correct patch.
+
+The OCMS manifest declares no `android:networkSecurityConfig`. `res/xml/fb_network_security_config.xml`
+exists but is inert for this package, and `FbCertificatePinnerFactory` already
+returns `CertificatePinner.DEFAULT`. Pinning is not a live failure mode here.
+
+The boot path is already defensive: `MobileConfigInit.startMobileConfig()`
+catches `Exception` and reports a soft error, and every `JSONObject(String)`
+parse sits in a `catch JSONException` block. The no-argument `JSONObject()`
+constructors cannot throw. There is no unguarded parse to wrap.
+
+apktool does not carry `original/META-INF` into the rebuilt APK, so the rebuilt
+package has no `OCULUS.OSIG` and no v1 signature until `uber-apk-signer` adds
+its own. `apktool.yml` lists `META-INF/OCULUS.OSIG` under `doNotCompress`, which
+only stops compression if the file is present.

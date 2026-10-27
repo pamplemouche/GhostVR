@@ -42,6 +42,12 @@ const STORE_BINARY_SIZE = 200 * 1024 * 1024;
 // is a config change: set `apk_base` in `src/store_data.js` and it wins.
 const APK_ORIGIN = 'https://vault.gearvr.net/APK';
 
+// The `signed_token` handed out on every entitlement. `LibraryCacheRefresher`
+// only checks that it is non-null (a null makes it drop the entitlement and log
+// a soft error); nothing decodes it locally, so it only has to be a stable,
+// non-empty opaque string.
+const ENTITLEMENT_TOKEN = 'ghostvr-entitlement';
+
 /**
  * The signed-in session lives in a signed cookie, not in module state.
  * A Worker module is not a process: each request may be served by any isolate,
@@ -264,6 +270,24 @@ function firstParam(params, ...names) {
   }
   return null;
 }
+
+/**
+ * The JSON object holding a document's argument values, whatever the client
+ * called it. The VR app sends `query_params` (`ApiDispatcher`), while OCMS
+ * sends `variables` (`LibraryMethods` / `AssetsMethods` / `LibrarySyncMethods`
+ * declare a Retrofit `@Query("variables")`). Both are the same thing - the
+ * serialized argument map - so the placeholder expanders read whichever is
+ * present. Reading only `query_params` left every OCMS argument invisible.
+ */
+function paramsJson(params) {
+  return firstParam(params, 'query_params', 'variables') || '';
+}
+
+/**
+ * Every parameter name that can carry a GraphQL document. OCMS uses `doc` and
+ * the VR app uses `q`; `doc_id` is a persisted-query hash.
+ */
+const DOC_PARAMS = ['q', 'query', 'doc', 'doc_id'];
 
 /**
  * Retrofit serializes List parameters repeated (`projects[]=a&projects[]=b`).
@@ -615,6 +639,80 @@ function binaryUpdateResponse(params) {
 }
 
 /**
+ * The `app_binary_updates` query OCMS's library screen and installer send
+ * (`LibraryMethods.generateUpdateInfo`). It answers with the same binaries as
+ * `app_binary_update`, wrapped in the `updates` array its model declares:
+ *
+ *   query($params: AppBinaryUpdatesArgs!) {
+ *     app_binary_updates(args: $params) { ... on AppBinaryUpdateList {
+ *       updates { app_id, new_binary { id, uri, size, version_code } } } }
+ *
+ * The requested ids arrive in `variables.params.app_params`, one entry per
+ * entitlement with the id under `app_id` (`EntitlementIdentifier.itemId` is
+ * `@SerializedName("app_id")`). Only ids the catalogue knows are answered;
+ * answering an id the client never asked about makes it log "Unexpected null
+ * entitlement" and ignore the entry, and answering none of them makes the
+ * installer report SERVER_RESPONSE_ERROR.
+ */
+function libraryUpdateResponse(params) {
+  return { app_binary_updates: { updates: requestedAppIds(params).flatMap(updateForAppId) } };
+}
+
+/**
+ * The `app_id` values inside `variables.params.app_params`. The array is the
+ * serialized `ImmutableMap` of one `EntitlementIdentifier` per app, so the key
+ * is the model's `@SerializedName("app_id")` and the value is the store id.
+ */
+function requestedAppIds(params) {
+  const raw = paramsJson(params);
+  if (!raw) return [];
+  let values;
+  try {
+    values = JSON.parse(raw);
+  } catch (error) {
+    return [];
+  }
+  const params_ = values && typeof values === 'object' ? values.params : null;
+  const list = params_ && typeof params_ === 'object' ? params_.app_params : null;
+  if (!Array.isArray(list)) return [];
+  return list
+    .map((entry) => (entry && typeof entry === 'object' ? entry.app_id : null))
+    .filter((id) => typeof id === 'string' && id.length > 0);
+}
+
+/** One `updates[]` entry, or nothing when the id is not in the catalogue. */
+function updateForAppId(appId) {
+  const item = STORE.items[appId];
+  if (!item) return [];
+  return [
+    {
+      app_id: appId,
+      new_binary: {
+        id: appId,
+        uri: apkUri(item),
+        size: STORE_BINARY_SIZE,
+        // `AndroidBinary extends UpdateBinary`, and the installer puts the
+        // checksum and signature straight into `UpdateConfig`, so they are
+        // present-and-empty rather than null. `external_signatures` is declared
+        // `String` on the model even though the query aliases it as a list, so
+        // the empty string is the shape it can actually deserialize.
+        checksum_hash: '',
+        apk_cert_signature: '',
+        external_signatures: '',
+        version_code: 0,
+        // No OBB in the vault catalogue; the field is concrete on the model, so
+        // it is null rather than absent. `hasObbUpdate()` null-guards it.
+        obb_binary: null,
+        asset_files: null,
+      },
+      // A patch would have to describe the delta from the installed version.
+      // There is none, so the client does a full download.
+      patch: null,
+    },
+  ];
+}
+
+/**
  * `node(<category>) { all_items.after(<cursor>).first(<count>) { nodes {...}
  * page_info { end_cursor has_next_page } } }`.
  *
@@ -626,7 +724,7 @@ function binaryUpdateResponse(params) {
 function storeSectionResponse(params) {
   const query = substitutePlaceholders(
     firstParam(params, 'q', 'query', 'doc', 'doc_id') || '',
-    firstParam(params, 'query_params') || '',
+    paramsJson(params),
   );
   const sectionId = nodeIdOf(query);
   const ids = storeSectionIds(sectionId);
@@ -673,7 +771,7 @@ function storeItemResponse(params) {
   const itemId = nodeIdOf(
     substitutePlaceholders(
       firstParam(params, 'q', 'query', 'doc', 'doc_id') || '',
-      firstParam(params, 'query_params') || '',
+      paramsJson(params),
     ),
   );
   const item = STORE.items[itemId];
@@ -868,7 +966,7 @@ function appIdOf(params) {
   // (`{"app_id":"gv:.."}`) as well as bare (`app_id: gv:..`).
   const raw = substitutePlaceholders(
     firstParam(params, 'q', 'query', 'doc', 'doc_id') || '',
-    firstParam(params, 'query_params') || '',
+    paramsJson(params),
   );
   // The id ends at the closing paren, a comma, a brace or whitespace, and may
   // be quoted depending on how the client encoded the params.
@@ -926,21 +1024,53 @@ function appStorePayload() {
   };
 }
 
+/**
+ * The `active_android_entitlements` connection, listing every catalogue app as
+ * owned. Both clients ask for it - OCMS's library screen (`LibraryMethods`) and
+ * the VR app's library - and the response table ships it empty, so the library
+ * stayed blank and no app could be launched.
+ *
+ * Two details decide the shape:
+ *
+ *   - `LibraryCacheRefresher` drops an entry whose `signed_token` is null (it
+ *     reports a soft error and `goto`s past it), so the token is a non-empty
+ *     string. It is never decoded locally.
+ *   - `expiration_time` is a `Long`; null means "never expires", which is what
+ *     `LibraryCacheRefresher` turns into -1. A zero would read as already
+ *     expired, so the field is null rather than 0.
+ */
+function activeEntitlementsPayload() {
+  return {
+    nodes: Object.values(STORE.items).map((item) => ({
+      grant_reason: 'PAID_OFFER',
+      grant_time: 0,
+      expiration_time: null,
+      id: item.id,
+      last_used: 0,
+      signed_token: ENTITLEMENT_TOKEN,
+      item: storeItemNode(item),
+    })),
+  };
+}
+
 function graphqlResponse(params, session) {
-  const raw = `${firstParam(params, 'q', 'query', 'doc', 'doc_id') || ''} ${
-    firstParam(params, 'query_params') || ''
-  }`;
+  const raw = `${firstParam(params, ...DOC_PARAMS) || ''} ${paramsJson(params)}`;
   const haystack = raw.toLowerCase();
   // The document arrives with `<placeholder>` tokens and its values alongside in
-  // `query_params`; expanding them is what lets the argument readers below see
-  // a real section id, count and cursor.
-  const query = substitutePlaceholders(
-    firstParam(params, 'q', 'query', 'doc', 'doc_id') || '',
-    firstParam(params, 'query_params') || '',
-  );
+  // `query_params` (the VR app) or `variables` (OCMS); expanding them is what
+  // lets the argument readers below see a real section id, count and cursor.
+  const query = substitutePlaceholders(firstParam(params, ...DOC_PARAMS) || '', paramsJson(params));
   const root = rootFieldOf(query) || 'viewer';
 
-  // Store: the download URI for one item, asked right before an install.
+  // OCMS (`LibraryMethods.generateUpdateInfo`) asks for `app_binary_updates`,
+  // which returns `{updates: [...]}` and whose model field is
+  // `app_binary_updates`. The VR app (`ApiDispatcher`) asks for the singular
+  // `app_binary_update`, which returns `{new_binary, patch}`. The singular name
+  // is a prefix of the plural one, so the plural has to be matched first: a
+  // bare `includes('app_binary_update')` swallowed the plural query and
+  // answered the wrong key, leaving the client's field null. OCMS then reports
+  // SERVER_RESPONSE_ERROR and refuses to install.
+  if (haystack.includes('app_binary_updates')) return libraryUpdateResponse(params);
   if (haystack.includes('app_binary_update')) return binaryUpdateResponse(params);
 
   // Store: the catalogue. `node(<category>) { all_items... }` and
@@ -957,13 +1087,26 @@ function graphqlResponse(params, session) {
   }
 
   const payload = applyPinState(GRAPHQL_PAYLOAD, session);
-  if (!USER_ROOTS.has(root)) return { [root]: payload };
+  // The entitlement connection is per-account and built from the catalogue.
+  // Only a query that actually selects it pays for it - building all 562 nodes
+  // for every unrelated request would be a lot of wasted work.
+  const ownsEntitlements = haystack.includes('active_android_entitlements');
+  const entitlements = ownsEntitlements ? activeEntitlementsPayload() : null;
+  if (!USER_ROOTS.has(root)) {
+    if (!ownsEntitlements) return { [root]: payload };
+    return { [root]: { ...payload, active_android_entitlements: entitlements } };
+  }
 
   // Table extras first (the `node`/`user`/`me` subtrees carry the app and
   // friends/party fields those queries ask for), then the canonical user shape
   // on top, then the viewer-only privacy/feed block for `viewer`.
   const answer = { ...(payload[root] || {}), ...payload.user };
   Object.assign(answer, viewerUser(session));
+  // `entitlements` is an alias for `me` (`entitlements: me { ... }`), so the
+  // document's root is `entitlements` while the table's own `entitlements`
+  // subtree holds the empty connection. The real one is assigned afterwards so
+  // it wins over whatever the table shipped.
+  if (ownsEntitlements) answer.active_android_entitlements = entitlements;
   if (root === 'viewer') {
     for (const field of VIEWER_ONLY_FIELDS) {
       if (payload[field] !== undefined) answer[field] = payload[field];
@@ -1003,7 +1146,7 @@ async function handleGraphqlBatch(request, session) {
 function asQueryParams(entry) {
   const params = new URLSearchParams();
   if (entry && typeof entry === 'object') {
-    for (const key of ['q', 'query', 'doc', 'doc_id', 'query_params']) {
+    for (const key of ['q', 'query', 'doc', 'doc_id', 'query_params', 'variables']) {
       const value = entry[key];
       if (value != null) params.set(key, typeof value === 'string' ? value : JSON.stringify(value));
     }
