@@ -26,8 +26,10 @@ to its default file list.
 | `tools/check_graphql_payload.py` | `/graphql` answers vs. client models |
 
 `patch_smali_hosts.py` skips `IntentModule.smali`: that file holds the runtime
-redirect table itself, so rewriting its `oculus.com` / `facebook.com` literals
-would disable the link-out redirect instead of extending it.
+redirect table itself, so rewriting its `oculus.com` / `facebook.com` /
+`instagram.com` / `fburl.com` literals would disable the link-out redirect
+instead of extending it. The table and the loop bound that walks it are
+hand-maintained; `tools/tests/test_patch_guards.py` pins them.
 
 ## Hermes bundles
 
@@ -66,8 +68,9 @@ Link-outs are instead rewritten at runtime, in
 `com/facebook/react/modules/intent/IntentModule.rewriteExternalUrl`. It is
 called from `openURL` (the funnel the `IntentAndroid` module exposes to the
 bundles) and from `NetworkingModule.sendRequestInternal` (the funnel for fetch
-and XHR), and replaces an `oculus.com` / `facebook.com` host (bare or as a
-subdomain) with the self-hosted host while preserving scheme, path and query.
+and XHR), and replaces an `oculus.com` / `facebook.com` / `instagram.com` /
+`fburl.com` host (bare or as a subdomain) with the self-hosted host while
+preserving scheme, path and query.
 Note the matcher tests the *host component*, not a substring: a substring test
 for `.oculus.com` also rewrites `our.intern.facebook.com` and would let the
 path of `nfe.prefeitura.sp.gov.br` masquerade as a host.
@@ -288,6 +291,23 @@ The plural branch is matched first now, and it answers `{app_binary_updates:
 `variables.params.app_params` under `app_id` (`EntitlementIdentifier.itemId` is
 `@SerializedName("app_id")`); answering an id the client did not ask about makes
 `LibraryCacheRefresher` log "Unexpected null entitlement" and ignore the entry.
+
+**OCMS has three `/graphql` documents, and they share prefixes.** All three are
+declared with Retrofit as `@Query("doc")` + `@Query("variables")`, and two of
+them read the same argument map:
+
+| document | declared in | argument | response root |
+| --- | --- | --- | --- |
+| `app_binary_updates` | `library/net/LibraryMethods` | `variables.params.app_params` | `{updates: [...]}` |
+| `app_binary_info` | `appmanager/assets/AssetsMethods` | `variables.params.app_params` | `{info: [{binary}]}` |
+| `entitlements: me` | `library/net/LibraryMethods` | `variables.machine_id` | `{active_android_entitlements}` |
+
+`app_binary_info` is matched first because `app_binary_update` is a prefix of
+both `app_binary_info` and `app_binary_updates`; before the branch existed the
+document fell through to the user shape and answered `{viewer: {...}}`. It is
+unreachable in this build - nothing outside `com.oculus.appmanager.assets`
+references `AssetsMethods`, and `Assets.getAssetList()` reads a local SQLite
+table rather than the network - but it is answered for completeness.
 
 **`active_android_entitlements` is an alias for `me`.** OCMS sends
 `entitlements: me { active_android_entitlements { nodes {...} } }`, so the
@@ -513,6 +533,30 @@ committed file was simply stale output from before that fix. Regenerate rather
 than hand-editing when this class of corruption shows up.
 `tools/tests/test_patch_guards.py` pins the rule.
 
+## The scan covers file kinds no patcher rewrites
+
+`check_patched_tree.py` walks the four kinds a patcher edits (`.so`, `.hbc`,
+`.bcbundle`, `.smali`) and then sweeps *every other* file for named Meta hosts.
+The second pass exists because a host can sit in a payload no patcher touches,
+where a silent re-introduction was invisible to CI. It found two such places,
+both checked and left as-is:
+
+- `Oculus Browser/assets/resources.pak` (Chromium's resource bundle). The hits
+  are click-driven link-outs (a support page, the legal pages) and the new-tab
+  shortcut tiles for Facebook and Instagram. There is no `preconnect`,
+  `prefetch` or `prerender` list in the file, so nothing is fetched until the
+  user taps a tile - and the tiles are the point of a browser. Patching inside
+  the pak would mean rebuilding its offset table for no traffic change, so the
+  hosts are baselined with that reasoning instead.
+- `fb_network_security_config.xml` in OCMS and `Oculus VR`. The hits are the
+  `<domain>` entries of the network-security config; the pin-set already
+  expired in 2020 and our host is listed. The Meta domains set pinning scope,
+  not request targets.
+
+The shader comments in `Oculus/res/raw/*.glsl` named `facebook.com`; those are
+now rewritten by `patch_resources.py` (`.glsl` is a target suffix) rather than
+baselined, since they are plain text with no offset table to maintain.
+
 ## Hermes bundles: two layouts, only one handled
 
 `HorizonBundle.js.hbc` is bytecode version 61; the `Oculus Home` React Native
@@ -578,12 +622,12 @@ retried. `patch_smali_hosts.py` rewrites those three hosts and
 accessors - a partial body throws inside the parser, so all of them must be
 present.
 
-## The bundle hosts are mostly cosmetic, not reachable
+## The bundle hosts are all covered by the runtime redirect
 
 Before treating a Meta host left in a Hermes bundle as a live leak, check
 whether the runtime redirect already covers it. `IntentModule.rewriteExternalUrl`
-rewrites any host equal to, or ending in, `.oculus.com` / `.facebook.com`, and
-it is called from both network paths:
+rewrites any host equal to, or ending in, `.oculus.com` / `.facebook.com` /
+`.instagram.com` / `fburl.com`, and it is called from both network paths:
 
 - `NetworkingModule.sendRequestInternal` - every JS `fetch`/XHR.
 - `IntentModule.openURL` - every link-out.
@@ -591,25 +635,26 @@ it is called from both network paths:
 So a JS request to `graph.oculus.com` never leaves for Meta even though the
 bundle still names it. `tools/check_bundle_coverage.py` splits the remaining
 hosts into "rewritten at runtime" and "not covered" so the backlog is not
-re-read by hand. As of this writing: 15 distinct hosts, 14 rewritten, and only
-`fburl.com` uncovered - and that one appears solely in user-facing help and
-developer-doc text, not as a request target.
+re-read by hand. As of this writing: 17 distinct hosts, all 17 rewritten, none
+uncovered. The `instagram.com` and `fburl.com` hosts used to fall outside the
+rule; the table now covers them.
 
-The same split holds for the 203 findings in `tools/patched_tree_baseline.txt`:
-re-derived by host, all but the 13 `fburl.com` hits name a host the runtime rule
-rewrites. The `fburl.com` hits are literal "Internal Only: ... see
-fburl.com/TestReport" strings in report-abuse dialogs. So the backlog is
-cosmetic in full, and the baseline carries that note so it is not re-opened as
-a leak.
+The same split holds for the 214 findings in `tools/patched_tree_baseline.txt`:
+re-derived by host, every one names a host the runtime rule rewrites, or is the
+matcher's own table, or is dead certificate-pinning data. The `fburl.com` hits
+are literal "Internal Only: ... see fburl.com/TestReport" strings in
+report-abuse dialogs. So the backlog is cosmetic in full, and the baseline
+carries that note so it is not re-opened as a leak.
 
 Two consequences:
 
 - The unpatched v53 bundles are **not** a functional blocker. Native-side
   requests are covered by the `.so`/smali patching (the tree is clean there).
 - `rewriteExternalUrl` is hand-written and had inverted branches once already.
-  Its host array is fixed at 4 and its loop bound is hard-coded at 2, so adding
-  a host means changing both. Do not touch it to close a cosmetic text-link
-  leak; the risk is to the redirect everything else depends on.
+  Its host array and its loop bound must agree: the array holds the pairs and
+  the bound is the pair count. `tools/tests/test_patch_guards.py` reads both out
+  of the smali and fails if they drift, or if a host named in a bundle is not
+  covered. Extend the table only with a matching bound.
 
 ## The store is served from a generated catalogue, not the static table
 

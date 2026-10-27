@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DECOMPILED = ROOT / "decompiled"
 
 META_HOST = re.compile(
-    rb"(?:[a-z0-9_-]+\.)*(?:oculus|facebook)\.com|fbcdn\.net|fbsbx\.com|fburl\.com"
+    rb"(?:[a-z0-9_-]+\.)*(?:oculus|facebook|instagram)\.com|fbcdn\.net|fbsbx\.com|fburl\.com"
 )
 
 # Not hosts: package names and property keys.
@@ -35,10 +35,10 @@ NOT_A_HOST = (
 
 BOUNDARY = re.compile(rb"(?![A-Za-z0-9_-])(?!\.[A-Za-z0-9_-])")
 
-# The four literals in IntentModule.rewriteExternalUrl, tested as
+# The literals in IntentModule.rewriteExternalUrl, tested as
 # `host.equals(a) || host.endsWith(b)`.
-SUFFIXES = (".oculus.com", ".facebook.com")
-BARE = ("oculus.com", "facebook.com")
+SUFFIXES = (".oculus.com", ".facebook.com", ".instagram.com", "fburl.com")
+BARE = ("oculus.com", "facebook.com", "instagram.com", ".fburl.com")
 
 
 def is_rewritten(host: bytes) -> bool:

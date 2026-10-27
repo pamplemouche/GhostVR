@@ -908,7 +908,7 @@
 
     const/4 v3, 0x0
 
-    const/4 v4, 0x4
+    const/16 v4, 0x8
 
     new-array v4, v4, [Ljava/lang/String;
 
@@ -936,8 +936,32 @@
 
     aput-object v6, v4, v5
 
+    const/4 v5, 0x4
+
+    const-string v6, "instagram.com"
+
+    aput-object v6, v4, v5
+
+    const/4 v5, 0x5
+
+    const-string v6, ".instagram.com"
+
+    aput-object v6, v4, v5
+
+    const/4 v5, 0x6
+
+    const-string v6, ".fburl.com"
+
+    aput-object v6, v4, v5
+
+    const/4 v5, 0x7
+
+    const-string v6, "fburl.com"
+
+    aput-object v6, v4, v5
+
     :host_loop
-    const/4 v5, 0x2
+    const/4 v5, 0x4
 
     if-ge v3, v5, :after_loop
 

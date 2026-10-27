@@ -49,7 +49,7 @@ def _label(path: Path) -> str:
 # headset there and fetches its policy document, and the service is retired.
 SAMSUNG_HOST = rb"(?:stg-api|regi|dc)\.di\.atlas\.samsung\.com"
 META_HOST = re.compile(
-    rb"(?:[a-z0-9_-]+\.)*(?:oculus|facebook)\.com|fbcdn\.net|fbsbx\.com|fburl\.com"
+    rb"(?:[a-z0-9_-]+\.)*(?:oculus|facebook|instagram)\.com|fbcdn\.net|fbsbx\.com|fburl\.com"
     rb"|" + SAMSUNG_HOST
 )
 
@@ -133,6 +133,11 @@ def check_smali(path: Path, findings: list[str]) -> None:
                 )
 
 
+# File kinds the dedicated passes already walk.  The extra sweep skips them so
+# a finding is never counted twice; anything else is scanned there instead.
+PATCHED_SUFFIXES = {".so", ".hbc", ".bcbundle", ".smali"}
+
+
 def _collect() -> list[str]:
     findings: list[str] = []
     for path in sorted(DECOMPILED.rglob("*.so")):
@@ -146,6 +151,18 @@ def _collect() -> list[str]:
     # separately from the general sweep.
     for path in sorted(DECOMPILED.rglob("libxplat_mobileconfig_*.so")):
         check_fused(path, findings)
+    # The sweep above covers the file kinds the patchers rewrite.  A host can
+    # also sit in a payload no patcher touches (Chromium's `resources.pak`, a
+    # GLSL attribution comment, a resource XML), where a silent re-introduction
+    # would otherwise go unnoticed.  Scan the remainder for named hosts; these
+    # files hold no request path, so the finding is recorded, not treated as a
+    # fused string.
+    for path in sorted(DECOMPILED.rglob("*")):
+        if not path.is_file() or path.suffix.lower() in PATCHED_SUFFIXES:
+            continue
+        if "build" in path.parts:
+            continue
+        check_meta_hosts(path, findings)
     return findings
 
 
@@ -168,16 +185,29 @@ def write_baseline() -> int:
         "#",
         "# Every finding here is a *string*, not a live request. Verified split:",
         "#",
-        "#   * All but `fburl.com` name a host that",
-        "#     `IntentModule.rewriteExternalUrl` rewrites at runtime, because it",
-        "#     matches `oculus.com`/`facebook.com` and any subdomain of either.",
-        "#     That covers both network paths",
+        "#   * Every host named in a Hermes bundle is rewritten at runtime by",
+        "#     `IntentModule.rewriteExternalUrl`, which matches `oculus.com`,",
+        "#     `facebook.com`, `instagram.com` and `fburl.com` and any subdomain of",
+        "#     the first three. That covers both network paths",
         "#     (`NetworkingModule.sendRequestInternal` and `IntentModule.openURL`),",
         "#     so a JS request to `graph.oculus.com` never leaves for Meta even",
-        "#     though the bundle still names it.",
-        "#   * The 13 `fburl.com` hits are literal 'Internal Only' help text",
-        "#     ('see fburl.com/TestReport'), not request targets, and",
-        "#     `rewriteExternalUrl` does not cover that host.",
+        "#     though the bundle still names it. The bare `oculus.com`,",
+        "#     `facebook.com`, `instagram.com` and `fburl.com` literals in",
+        "#     `IntentModule` are the matcher's own table, not request targets.",
+        "#   * The `fburl.com` hits are literal 'Internal Only' help text",
+        "#     ('see fburl.com/TestReport'), not request targets. They are covered",
+        "#     by the rewrite too, so they would be redirected if ever fetched.",
+        "#   * The `FbCertificatePinnerFactory` hits are certificate-pinning data.",
+        "#     All three factory methods return `CertificatePinner.DEFAULT`, so no",
+        "#     host list is ever consulted; the names are dead data.",
+        "#   * The `Oculus Browser` hits are inside Chromium's `resources.pak`:",
+        "#     click-driven link-outs (support/legal pages) and the new-tab",
+        "#     shortcuts for Facebook/Instagram. There is no preconnect, prefetch",
+        "#     or prerender list, so nothing is fetched until the user taps a tile.",
+        "#   * The `fb_network_security_config.xml` hits are the `domain` entries",
+        "#     of the network-security config. The file already pins our host and",
+        "#     its pin-set expired in 2020; the Meta domains are pinning scope,",
+        "#     not request targets.",
         "#",
         "# Re-derive the split with `tools/check_bundle_coverage.py`, which applies",
         "# the same rule.",

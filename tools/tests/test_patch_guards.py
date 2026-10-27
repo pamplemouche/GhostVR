@@ -82,6 +82,109 @@ def test_leading_dot_host_is_not_flagged() -> None:
     assert _findings(blob) == [], _findings(blob)
 
 
+# --- The runtime rewrite table -------------------------------------------
+#
+# `IntentModule.rewriteExternalUrl` is the only thing that stops a JS request
+# to a Meta host from leaving the device: the bundles still name those hosts,
+# and they are Hermes bytecode that `patch_hermes_bundle.py` cannot rewrite.
+# The literals in the method are therefore load-bearing, and the coverage
+# checker in `check_bundle_coverage.py` has to mirror them exactly.  These
+# tests read both files and fail if they drift apart.
+
+import re as _re  # noqa: E402
+
+INTENT_MODULE = (
+    ROOT / "decompiled/Oculus/smali_classes2/com/facebook/react/modules/"
+    "intent/IntentModule.smali"
+)
+
+
+def _rewrite_body() -> str:
+    src = INTENT_MODULE.read_text(encoding="utf-8", errors="surrogateescape")
+    return _re.search(
+        r"\.method public static rewriteExternalUrl.*?\n(.*?)\n\.end method",
+        src, _re.S,
+    ).group(1)
+
+
+def _rewrite_table() -> tuple[list[str], list[str]]:
+    """The (bare, suffix) pairs the patched method tests, read from the smali."""
+    literals = _re.findall(r'const-string v6, "([^"]*)"', _rewrite_body())
+    return literals[0::2], literals[1::2]
+
+
+def test_rewrite_table_covers_every_bundle_host() -> None:
+    import check_bundle_coverage as coverage
+
+    bare, suffix = _rewrite_table()
+    assert coverage.BARE == tuple(bare), (coverage.BARE, bare)
+    assert coverage.SUFFIXES == tuple(suffix), (coverage.SUFFIXES, suffix)
+    for host in coverage.hosts_in_bundles():
+        assert coverage.is_rewritten(host), (
+            f"{host.decode()} is named in a bundle but the rewrite misses it"
+        )
+
+
+def test_rewrite_table_matches_its_array_size() -> None:
+    # A mismatch here means the loop would walk off the end of the array, or
+    # silently ignore the last pair.
+    body = _rewrite_body()
+    size = int(
+        _re.search(r"const/(?:4|16) v4, 0x([0-9a-f]+)", body).group(1), 16
+    )
+    bound = int(
+        _re.findall(r"const/4 v5, 0x([0-9a-f]+)\n\n    if-ge v3, v5", body)[-1], 16
+    )
+    bare, suffix = _rewrite_table()
+    assert len(bare) == len(suffix), (bare, suffix)
+    assert size == len(bare) + len(suffix), (size, bare, suffix)
+    assert bound == size // 2, (bound, size)
+
+
+def test_rewrite_covers_instagram_and_fburl() -> None:
+    # The hosts the coverage checker used to miss.
+    import check_bundle_coverage as coverage
+
+    for host in (b"api.instagram.com", b"www.instagram.com", b"fburl.com"):
+        assert coverage.is_rewritten(host), host
+
+
+def test_rewrite_leaves_foreign_hosts_alone() -> None:
+    import check_bundle_coverage as coverage
+
+    for host in (b"example.com", b"notinstagram.com.evil.com", b"github.com"):
+        assert not coverage.is_rewritten(host), host
+
+
+# --- The tree-wide scan coverage -----------------------------------------
+#
+# The sweep used to walk only the file kinds a patcher rewrites (`.so`, `.hbc`,
+# `.bcbundle`, `.smali`).  A Meta host can also sit in a payload no patcher
+# touches - Chromium's `resources.pak`, a resource XML - where a silent
+# re-introduction was invisible to CI.  These tests pin that the remainder is
+# scanned too, so the blind spot cannot come back.
+
+def test_scan_extends_beyond_patched_file_kinds() -> None:
+    # The declared set must not be everything, or the extra sweep is a no-op.
+    assert ".pak" not in checker.PATCHED_SUFFIXES
+    assert ".xml" not in checker.PATCHED_SUFFIXES
+
+
+def test_unpatched_file_kind_is_scanned() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        path = Path(tmp) / "resources.pak"
+        path.write_bytes(b"\x00https://www.facebook.com\x00")
+        findings: list[str] = []
+        checker.check_meta_hosts(path, findings)
+        assert findings, "a host in a .pak must be reported"
+
+
+def test_patched_kind_is_not_double_counted() -> None:
+    # A `.smali` host is reported once, by the smali pass.  The extra sweep
+    # must skip the patched kinds or every finding would count twice.
+    assert checker.PATCHED_SUFFIXES == {".so", ".hbc", ".bcbundle", ".smali"}
+
+
 def main() -> int:
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     failed = 0

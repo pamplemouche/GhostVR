@@ -100,7 +100,7 @@ RULES = [
     (_SCHEME, rf"https://{HOST}/"),
 ]
 
-TARGET_SUFFIXES = (".json", ".xml", ".txt")
+TARGET_SUFFIXES = (".json", ".xml", ".txt", ".glsl")
 
 
 def patch_file(path: Path, dry_run: bool):

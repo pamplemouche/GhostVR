@@ -659,6 +659,40 @@ function libraryUpdateResponse(params) {
 }
 
 /**
+ * `app_binary_info` (`AssetsMethods.getAssetListAndBinId`, the asset/obb
+ * listing). Its request is built by `GenerateAssetListAndBinIdRequest.getParams`
+ * and is identical to the update query's - `variables.params.app_params`, one
+ * `{app_id, version_code}` per app - so `requestedAppIds()` reads it unchanged.
+ *
+ * The response is `{info: [{binary: {id, package_name, asset_files: {edges}}}}]`,
+ * one entry per requested app, and every field is keyed the way
+ * `GenerateAssetListAndBinIdResponse` declares it. There are no asset files in
+ * the catalogue, so `edges` is empty rather than null (the model declares it
+ * `@Nullable`, but an empty list keeps `Assets` from having to null-check).
+ *
+ * The query is unreachable in this build - nothing references `AssetsMethods`
+ * outside its own package, and `Assets.getAssetList()` reads a local SQLite
+ * table - so this is here for completeness rather than to fix a live failure.
+ */
+function assetListResponse(params) {
+  return {
+    app_binary_info: {
+      info: requestedAppIds(params).flatMap((appId) => {
+        const item = STORE.items[appId];
+        if (!item) return [];
+        return [{
+          binary: {
+            id: appId,
+            package_name: item.package_name,
+            asset_files: { edges: [] },
+          },
+        }];
+      }),
+    },
+  };
+}
+
+/**
  * The `app_id` values inside `variables.params.app_params`. The array is the
  * serialized `ImmutableMap` of one `EntitlementIdentifier` per app, so the key
  * is the model's `@SerializedName("app_id")` and the value is the store id.
@@ -1070,6 +1104,10 @@ function graphqlResponse(params, session) {
   // bare `includes('app_binary_update')` swallowed the plural query and
   // answered the wrong key, leaving the client's field null. OCMS then reports
   // SERVER_RESPONSE_ERROR and refuses to install.
+  // OCMS (`AssetsMethods.getAssetListAndBinId`) asks for `app_binary_info`,
+  // the asset/obb listing. Matched before the `app_binary_update*` names below
+  // because it shares their prefix.
+  if (haystack.includes('app_binary_info')) return assetListResponse(params);
   if (haystack.includes('app_binary_updates')) return libraryUpdateResponse(params);
   if (haystack.includes('app_binary_update')) return binaryUpdateResponse(params);
 
