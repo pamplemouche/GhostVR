@@ -114,7 +114,7 @@ float linearRamp(float minVal, float maxVal, float value) {
 }
 
 // Acceptable ranges for strength are (-1, 1)
-// Sample output for strength = 0.4: https://www.latest.facebook.com/pxlcld/l743
+// Sample output for strength = 0.4: https://ghostvr.pamplemouche.com/pxlcld/l743
 // When approaching the 1/-1 value the curve approaches a step function
 // A negative strength produces an easeOutIn curve.
 float easeInOutSigmoid(float value, float strength) {

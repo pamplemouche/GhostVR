@@ -156,6 +156,35 @@ def test_rewrite_leaves_foreign_hosts_alone() -> None:
         assert not coverage.is_rewritten(host), host
 
 
+# --- The tree-wide scan coverage -----------------------------------------
+#
+# The sweep used to walk only the file kinds a patcher rewrites (`.so`, `.hbc`,
+# `.bcbundle`, `.smali`).  A Meta host can also sit in a payload no patcher
+# touches - Chromium's `resources.pak`, a resource XML - where a silent
+# re-introduction was invisible to CI.  These tests pin that the remainder is
+# scanned too, so the blind spot cannot come back.
+
+def test_scan_extends_beyond_patched_file_kinds() -> None:
+    # The declared set must not be everything, or the extra sweep is a no-op.
+    assert ".pak" not in checker.PATCHED_SUFFIXES
+    assert ".xml" not in checker.PATCHED_SUFFIXES
+
+
+def test_unpatched_file_kind_is_scanned() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        path = Path(tmp) / "resources.pak"
+        path.write_bytes(b"\x00https://www.facebook.com\x00")
+        findings: list[str] = []
+        checker.check_meta_hosts(path, findings)
+        assert findings, "a host in a .pak must be reported"
+
+
+def test_patched_kind_is_not_double_counted() -> None:
+    # A `.smali` host is reported once, by the smali pass.  The extra sweep
+    # must skip the patched kinds or every finding would count twice.
+    assert checker.PATCHED_SUFFIXES == {".so", ".hbc", ".bcbundle", ".smali"}
+
+
 def main() -> int:
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     failed = 0

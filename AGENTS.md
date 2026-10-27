@@ -533,6 +533,30 @@ committed file was simply stale output from before that fix. Regenerate rather
 than hand-editing when this class of corruption shows up.
 `tools/tests/test_patch_guards.py` pins the rule.
 
+## The scan covers file kinds no patcher rewrites
+
+`check_patched_tree.py` walks the four kinds a patcher edits (`.so`, `.hbc`,
+`.bcbundle`, `.smali`) and then sweeps *every other* file for named Meta hosts.
+The second pass exists because a host can sit in a payload no patcher touches,
+where a silent re-introduction was invisible to CI. It found two such places,
+both checked and left as-is:
+
+- `Oculus Browser/assets/resources.pak` (Chromium's resource bundle). The hits
+  are click-driven link-outs (a support page, the legal pages) and the new-tab
+  shortcut tiles for Facebook and Instagram. There is no `preconnect`,
+  `prefetch` or `prerender` list in the file, so nothing is fetched until the
+  user taps a tile - and the tiles are the point of a browser. Patching inside
+  the pak would mean rebuilding its offset table for no traffic change, so the
+  hosts are baselined with that reasoning instead.
+- `fb_network_security_config.xml` in OCMS and `Oculus VR`. The hits are the
+  `<domain>` entries of the network-security config; the pin-set already
+  expired in 2020 and our host is listed. The Meta domains set pinning scope,
+  not request targets.
+
+The shader comments in `Oculus/res/raw/*.glsl` named `facebook.com`; those are
+now rewritten by `patch_resources.py` (`.glsl` is a target suffix) rather than
+baselined, since they are plain text with no offset table to maintain.
+
 ## Hermes bundles: two layouts, only one handled
 
 `HorizonBundle.js.hbc` is bytecode version 61; the `Oculus Home` React Native

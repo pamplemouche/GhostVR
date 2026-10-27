@@ -20,6 +20,14 @@
 #   * The `FbCertificatePinnerFactory` hits are certificate-pinning data.
 #     All three factory methods return `CertificatePinner.DEFAULT`, so no
 #     host list is ever consulted; the names are dead data.
+#   * The `Oculus Browser` hits are inside Chromium's `resources.pak`:
+#     click-driven link-outs (support/legal pages) and the new-tab
+#     shortcuts for Facebook/Instagram. There is no preconnect, prefetch
+#     or prerender list, so nothing is fetched until the user taps a tile.
+#   * The `fb_network_security_config.xml` hits are the `domain` entries
+#     of the network-security config. The file already pins our host and
+#     its pin-set expired in 2020; the Meta domains are pinning scope,
+#     not request targets.
 #
 # Re-derive the split with `tools/check_bundle_coverage.py`, which applies
 # the same rule.
@@ -29,6 +37,8 @@
 # to touch the others rather than corrupt them.  A *new* finding - a
 # fused string, or a host in a library we do patch - is still a failure.
 
+decompiled/Oculus Browser/assets/resources.pak 31
+decompiled/Oculus Core Mobile Services/res/xml/fb_network_security_config.xml 5
 decompiled/Oculus Core Mobile Services/smali/com/facebook/netlite/certificatepinning/okhttp/FbCertificatePinnerFactory.smali 1
 decompiled/Oculus Home/assets/reactnative.ACCOUNT_LINKING.bcbundle 4
 decompiled/Oculus Home/assets/reactnative.AVATAR_EDITOR.bcbundle 4
@@ -47,6 +57,7 @@ decompiled/Oculus Home/assets/reactnative.TRANSCRIBE.bcbundle 4
 decompiled/Oculus Home/assets/reactnative.USER_ADMIN.bcbundle 4
 decompiled/Oculus Home/assets/reactnative.VRNUX.bcbundle 4
 decompiled/Oculus System Utilities/assets/reactnative.SETTINGS.bcbundle 4
+decompiled/Oculus VR/res/xml/fb_network_security_config.xml 5
 decompiled/Oculus VR/smali/com/facebook/netlite/certificatepinning/okhttp/FbCertificatePinnerFactory.smali 1
 decompiled/Oculus app runtime/smali/com/oculus/common/httpclient/FbCertificatePinnerFactory.smali 1
 decompiled/Oculus/assets/HorizonBundle.js.hbc 47

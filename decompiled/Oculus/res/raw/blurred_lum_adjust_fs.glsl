@@ -53,7 +53,7 @@ float powerBow(float inVal, float mag) {
 // the "non shadows area" by the gentle bow function.
 // the blurred luminance value is used to determing if we're in a "shadows area"
 // or "non shadows area"
-// the curves used are here: https://www.facebook.com/pxlcld/l7Dh
+// the curves used are here: https://ghostvr.pamplemouche.com/pxlcld/l7Dh
 float shadowsAdjust(float inLum, float inBlurredLum, float shadowsAmount) {
     float darkVal, brightVal;
     if (shadowsAmount > 0.0) {
@@ -73,7 +73,7 @@ float shadowsAdjust(float inLum, float inBlurredLum, float shadowsAmount) {
 // for a passed in luminance curve adjust it by the "highlights area" strong bow or
 // the "non highlights area" by the gentle bow function.
 // this mirrors the shadowsAdjust implmentation, by mirroring the curves used.
-// the curves used are here: https://www.facebook.com/pxlcld/l7Dh
+// the curves used are here: https://ghostvr.pamplemouche.com/pxlcld/l7Dh
 float highlightsAdjust(float inLum, float inBlurredLum, float highlightsAmount) {
     float darkVal, brightVal;
     if (highlightsAmount < 0.0) {
