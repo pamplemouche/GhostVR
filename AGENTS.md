@@ -681,3 +681,43 @@ the trace there before guessing at the response shape.
 A JSON body on an *image* path is not "no picture" - it is an undecodable
 stream and the image loader throws. `profile_photo.uri`, `avatar_image.uri` and
 the store's cover art must all resolve to real PNG bytes (`handleAvatar()`).
+
+## OCMS native libraries: audit result and the validator that keeps it true
+
+Audited every `.so` in `decompiled/Oculus Core Mobile Services` (86 in `lib/`,
+plus the identical 86 in `build/apk/lib/`). Findings, all measured, not assumed:
+
+- Only one library is patched: `libxplat_mobileconfig_FBMobileConfigCore_FBMobileConfigCoreAndroid.so`
+  (both ABIs). 84 libraries are byte-identical to the pre-patch revision.
+- The patch is strictly in place. Every library keeps its exact byte length
+  against `f1e5fd73`; the 164 changed bytes in the mobileconfig library are 10
+  host strings with 53 NULs of padding. No file grew, so no section offset moved.
+- Zero Meta hosts remain, apart from the compiler banner
+  (`git-ro.vip.facebook.com`, build metadata in every `.so`) and the S3 bucket
+  path. `patch_native_libs.py` now asserts `len(data) == len(original)` so a
+  future edit that grows a string fails loudly instead of shifting the library.
+
+`tools/validate_ocms_native.py` re-checks the result independently of the
+patcher: ELF parses, each host lives in a mapped segment, no NUL-free run
+carries two hosts (fusion), no mangled `ghostvr` prefix (truncation), no
+unexpected Meta host, and `--baseline <rev>` proves byte-length preservation.
+`tools/tests/test_validate_ocms_native.py` mutates a real library to prove the
+checks fail on a fused, truncated or Meta-bearing string. Both run in CI.
+
+A host string is *not* required to touch a NUL on both sides: the originals end
+in `/` (`graph.oculus.com/`) and start with `.` (`.facebook.com/`), so a rule
+that demands NUL adjacency reports false positives on every correct patch.
+
+The OCMS manifest declares no `android:networkSecurityConfig`. `res/xml/fb_network_security_config.xml`
+exists but is inert for this package, and `FbCertificatePinnerFactory` already
+returns `CertificatePinner.DEFAULT`. Pinning is not a live failure mode here.
+
+The boot path is already defensive: `MobileConfigInit.startMobileConfig()`
+catches `Exception` and reports a soft error, and every `JSONObject(String)`
+parse sits in a `catch JSONException` block. The no-argument `JSONObject()`
+constructors cannot throw. There is no unguarded parse to wrap.
+
+apktool does not carry `original/META-INF` into the rebuilt APK, so the rebuilt
+package has no `OCULUS.OSIG` and no v1 signature until `uber-apk-signer` adds
+its own. `apktool.yml` lists `META-INF/OCULUS.OSIG` under `doNotCompress`, which
+only stops compression if the file is present.
