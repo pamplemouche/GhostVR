@@ -49,7 +49,7 @@ def _label(path: Path) -> str:
 # headset there and fetches its policy document, and the service is retired.
 SAMSUNG_HOST = rb"(?:stg-api|regi|dc)\.di\.atlas\.samsung\.com"
 META_HOST = re.compile(
-    rb"(?:[a-z0-9_-]+\.)*(?:oculus|facebook)\.com|fbcdn\.net|fbsbx\.com|fburl\.com"
+    rb"(?:[a-z0-9_-]+\.)*(?:oculus|facebook|instagram)\.com|fbcdn\.net|fbsbx\.com|fburl\.com"
     rb"|" + SAMSUNG_HOST
 )
 
@@ -168,16 +168,21 @@ def write_baseline() -> int:
         "#",
         "# Every finding here is a *string*, not a live request. Verified split:",
         "#",
-        "#   * All but `fburl.com` name a host that",
-        "#     `IntentModule.rewriteExternalUrl` rewrites at runtime, because it",
-        "#     matches `oculus.com`/`facebook.com` and any subdomain of either.",
-        "#     That covers both network paths",
+        "#   * Every host named in a Hermes bundle is rewritten at runtime by",
+        "#     `IntentModule.rewriteExternalUrl`, which matches `oculus.com`,",
+        "#     `facebook.com`, `instagram.com` and `fburl.com` and any subdomain of",
+        "#     the first three. That covers both network paths",
         "#     (`NetworkingModule.sendRequestInternal` and `IntentModule.openURL`),",
         "#     so a JS request to `graph.oculus.com` never leaves for Meta even",
-        "#     though the bundle still names it.",
-        "#   * The 13 `fburl.com` hits are literal 'Internal Only' help text",
-        "#     ('see fburl.com/TestReport'), not request targets, and",
-        "#     `rewriteExternalUrl` does not cover that host.",
+        "#     though the bundle still names it. The bare `oculus.com`,",
+        "#     `facebook.com`, `instagram.com` and `fburl.com` literals in",
+        "#     `IntentModule` are the matcher's own table, not request targets.",
+        "#   * The `fburl.com` hits are literal 'Internal Only' help text",
+        "#     ('see fburl.com/TestReport'), not request targets. They are covered",
+        "#     by the rewrite too, so they would be redirected if ever fetched.",
+        "#   * The `FbCertificatePinnerFactory` hits are certificate-pinning data.",
+        "#     All three factory methods return `CertificatePinner.DEFAULT`, so no",
+        "#     host list is ever consulted; the names are dead data.",
         "#",
         "# Re-derive the split with `tools/check_bundle_coverage.py`, which applies",
         "# the same rule.",

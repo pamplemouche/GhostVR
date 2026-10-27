@@ -26,8 +26,10 @@ to its default file list.
 | `tools/check_graphql_payload.py` | `/graphql` answers vs. client models |
 
 `patch_smali_hosts.py` skips `IntentModule.smali`: that file holds the runtime
-redirect table itself, so rewriting its `oculus.com` / `facebook.com` literals
-would disable the link-out redirect instead of extending it.
+redirect table itself, so rewriting its `oculus.com` / `facebook.com` /
+`instagram.com` / `fburl.com` literals would disable the link-out redirect
+instead of extending it. The table and the loop bound that walks it are
+hand-maintained; `tools/tests/test_patch_guards.py` pins them.
 
 ## Hermes bundles
 
@@ -66,8 +68,9 @@ Link-outs are instead rewritten at runtime, in
 `com/facebook/react/modules/intent/IntentModule.rewriteExternalUrl`. It is
 called from `openURL` (the funnel the `IntentAndroid` module exposes to the
 bundles) and from `NetworkingModule.sendRequestInternal` (the funnel for fetch
-and XHR), and replaces an `oculus.com` / `facebook.com` host (bare or as a
-subdomain) with the self-hosted host while preserving scheme, path and query.
+and XHR), and replaces an `oculus.com` / `facebook.com` / `instagram.com` /
+`fburl.com` host (bare or as a subdomain) with the self-hosted host while
+preserving scheme, path and query.
 Note the matcher tests the *host component*, not a substring: a substring test
 for `.oculus.com` also rewrites `our.intern.facebook.com` and would let the
 path of `nfe.prefeitura.sp.gov.br` masquerade as a host.
@@ -595,12 +598,12 @@ retried. `patch_smali_hosts.py` rewrites those three hosts and
 accessors - a partial body throws inside the parser, so all of them must be
 present.
 
-## The bundle hosts are mostly cosmetic, not reachable
+## The bundle hosts are all covered by the runtime redirect
 
 Before treating a Meta host left in a Hermes bundle as a live leak, check
 whether the runtime redirect already covers it. `IntentModule.rewriteExternalUrl`
-rewrites any host equal to, or ending in, `.oculus.com` / `.facebook.com`, and
-it is called from both network paths:
+rewrites any host equal to, or ending in, `.oculus.com` / `.facebook.com` /
+`.instagram.com` / `fburl.com`, and it is called from both network paths:
 
 - `NetworkingModule.sendRequestInternal` - every JS `fetch`/XHR.
 - `IntentModule.openURL` - every link-out.
@@ -608,25 +611,26 @@ it is called from both network paths:
 So a JS request to `graph.oculus.com` never leaves for Meta even though the
 bundle still names it. `tools/check_bundle_coverage.py` splits the remaining
 hosts into "rewritten at runtime" and "not covered" so the backlog is not
-re-read by hand. As of this writing: 15 distinct hosts, 14 rewritten, and only
-`fburl.com` uncovered - and that one appears solely in user-facing help and
-developer-doc text, not as a request target.
+re-read by hand. As of this writing: 17 distinct hosts, all 17 rewritten, none
+uncovered. The `instagram.com` and `fburl.com` hosts used to fall outside the
+rule; the table now covers them.
 
-The same split holds for the 203 findings in `tools/patched_tree_baseline.txt`:
-re-derived by host, all but the 13 `fburl.com` hits name a host the runtime rule
-rewrites. The `fburl.com` hits are literal "Internal Only: ... see
-fburl.com/TestReport" strings in report-abuse dialogs. So the backlog is
-cosmetic in full, and the baseline carries that note so it is not re-opened as
-a leak.
+The same split holds for the 214 findings in `tools/patched_tree_baseline.txt`:
+re-derived by host, every one names a host the runtime rule rewrites, or is the
+matcher's own table, or is dead certificate-pinning data. The `fburl.com` hits
+are literal "Internal Only: ... see fburl.com/TestReport" strings in
+report-abuse dialogs. So the backlog is cosmetic in full, and the baseline
+carries that note so it is not re-opened as a leak.
 
 Two consequences:
 
 - The unpatched v53 bundles are **not** a functional blocker. Native-side
   requests are covered by the `.so`/smali patching (the tree is clean there).
 - `rewriteExternalUrl` is hand-written and had inverted branches once already.
-  Its host array is fixed at 4 and its loop bound is hard-coded at 2, so adding
-  a host means changing both. Do not touch it to close a cosmetic text-link
-  leak; the risk is to the redirect everything else depends on.
+  Its host array and its loop bound must agree: the array holds the pairs and
+  the bound is the pair count. `tools/tests/test_patch_guards.py` reads both out
+  of the smali and fails if they drift, or if a host named in a bundle is not
+  covered. Extend the table only with a matching bound.
 
 ## The store is served from a generated catalogue, not the static table
 
